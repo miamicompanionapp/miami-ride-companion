@@ -1,7 +1,7 @@
 // Miami Ride Companion — Service Worker
 // Version this string whenever you deploy a significant update.
 // Changing it forces all clients to re-cache everything fresh.
-const CACHE_VERSION = 'miami-ride-v1.2.0';
+const CACHE_VERSION = 'miami-ride-v1.3.0';
 
 // ─── Files to pre-cache on install ───────────────────────────────────────────
 // These are fetched and stored the moment the SW installs (first app open on Wi-Fi).
@@ -38,7 +38,9 @@ const PRECACHE_URLS = [
 // The editor should always load fresh — never serve a cached version.
 const NEVER_CACHE = [
   '/editor.html',
+  '/editor',
   '/analytics.json',
+  '/.netlify/functions/',
 ];
 
 // ─── Install: pre-cache everything ───────────────────────────────────────────

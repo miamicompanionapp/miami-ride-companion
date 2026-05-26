@@ -605,11 +605,9 @@
       </div>
       <div class="card">
         <div class="card-header"><div><div class="card-title">Claude AI Writing Assistant</div><div class="card-sub">Used for auto-translating descriptions</div></div></div>
-        <div class="field"><label>Anthropic API Key</label><input type="password" id="anthropic-key" placeholder="sk-ant-xxxxxxxxxxxx" autocomplete="off"></div>
-        <button class="btn btn-primary" onclick="saveAnthropicKey()"><i class="ti ti-check"></i>Save API Key</button>
-        <div class="info-box" style="margin-top:10px">
+        <div class="info-box">
           <i class="ti ti-info-circle"></i>
-          <span>Used only for auto-translating venue and event descriptions. Estimated cost: ~$1–2/month. Get a key at console.anthropic.com.</span>
+          <span>The API key is stored securely as a Netlify environment variable — not in the browser. To set it up: go to <strong>Netlify → Site settings → Environment variables → Add variable</strong>, set key name <strong>ANTHROPIC_API_KEY</strong> and paste your key from console.anthropic.com. Then redeploy. Estimated cost: ~$1–2/month.</span>
         </div>
       </div>
     </div>
@@ -1152,23 +1150,27 @@ function formatDuration(seconds) {
 // AI (Claude API)
 // ══════════════════════════════════════════════════════
 async function callClaude(prompt) {
-  const key = localStorage.getItem('anthropicKey');
-  if (!key) {
-    showToast('Add Anthropic API key in Settings first', 'error');
-    return null;
+  // Calls our Netlify proxy function which adds the API key server-side.
+  // This avoids CORS issues and keeps the key out of the browser.
+  try {
+    const res = await fetch('/.netlify/functions/claude-proxy', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }],
+      })
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: 'Unknown error' }));
+      throw new Error(err.error || 'HTTP ' + res.status);
+    }
+    const data = await res.json();
+    return data.content[0].text;
+  } catch (e) {
+    throw new Error(e.message);
   }
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 800,
-      messages: [{ role: 'user', content: prompt }]
-    })
-  });
-  if (!res.ok) throw new Error('API error ' + res.status);
-  const data = await res.json();
-  return data.content[0].text;
 }
 
 async function aiTranslateVenue() {
