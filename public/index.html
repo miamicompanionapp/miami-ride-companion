@@ -994,8 +994,8 @@
   <div class="qr-modal-box">
     <div class="qr-modal-title" id="qr-modal-title">Open on your phone</div>
     <div class="qr-modal-sub" id="qr-modal-sub">Scan to browse this guide on your own device — keep it after you leave</div>
-    <div class="qr-placeholder"><i class="ti ti-qrcode"></i></div>
-    <div class="qr-url" id="qr-url">miami-ride-companion.netlify.app</div>
+    <div id="qr-code-container" style="width:160px;height:160px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;background:white;border-radius:12px;padding:8px"></div>
+    <div class="qr-url" id="qr-url"></div>
     <button class="qr-close" onclick="closeQR()">Close</button>
   </div>
 </div>
@@ -1846,35 +1846,62 @@ function imgNext() { loadImgRound(); }
 // ════════════════════════════════════════════════════════════
 // QR MODAL
 // ════════════════════════════════════════════════════════════
+let qrInstance = null;
+
 function openQR(type, id) {
   const modal = document.getElementById('qr-modal');
   const title = document.getElementById('qr-modal-title');
   const sub = document.getElementById('qr-modal-sub');
-  const url = document.getElementById('qr-url');
-  const appUrl = window.location.hostname;
+  const urlEl = document.getElementById('qr-url');
+  let qrUrl = '';
 
   if (type === 'app') {
     title.textContent = t('guide.openOnPhone') || 'Open on your phone';
     sub.textContent = t('guide.qrHint') || 'Scan to browse this guide on your own device';
-    url.textContent = appUrl;
+    qrUrl = window.location.origin;
+    urlEl.textContent = window.location.hostname;
   } else if (type === 'venue' && CONTENT) {
     const v = CONTENT.guide.venues.find(x => x.id === id);
     if (v) {
       title.textContent = v.name;
       sub.textContent = v.address;
-      url.textContent = v.website || `maps.google.com/?q=${encodeURIComponent(v.address)}`;
+      qrUrl = v.website || `https://maps.google.com/?q=${encodeURIComponent(v.address)}`;
+      urlEl.textContent = v.website ? new URL(v.website).hostname : 'Open in Maps';
     }
   } else if (type === 'handyman' && CONTENT) {
-    title.textContent = CONTENT.ads.handyman.headline[lang] || 'Handyman';
-    sub.textContent = CONTENT.ads.handyman.phone;
-    url.textContent = CONTENT.ads.handyman.phone;
+    const h = CONTENT.ads.handyman;
+    title.textContent = h.headline[lang] || 'Handyman';
+    sub.textContent = 'Scan to call or save contact';
+    qrUrl = `tel:${h.phone.replace(/[^+\d]/g,'')}`;
+    urlEl.textContent = h.phone;
   } else if (type === 'event' && CONTENT) {
     const e = CONTENT.guide.events.find(x => x.id === id);
     if (e) {
       title.textContent = e.title[lang] || e.title.en;
       sub.textContent = e.venue;
-      url.textContent = e.url || appUrl;
+      qrUrl = e.url || window.location.origin;
+      urlEl.textContent = e.url ? new URL(e.url).hostname : window.location.hostname;
     }
+  }
+
+  // Generate real QR code
+  const container = document.getElementById('qr-code-container');
+  container.innerHTML = '';
+  if (qrUrl && typeof QRCode !== 'undefined') {
+    try {
+      qrInstance = new QRCode(container, {
+        text: qrUrl,
+        width: 144,
+        height: 144,
+        colorDark: '#0F2137',
+        colorLight: '#FFFFFF',
+        correctLevel: QRCode.CorrectLevel.M,
+      });
+    } catch (e) {
+      container.innerHTML = '<div style="font-size:11px;color:#7A8FA6;text-align:center;padding:20px">QR unavailable</div>';
+    }
+  } else {
+    container.innerHTML = '<div style="font-size:11px;color:#7A8FA6;text-align:center;padding:20px">Loading…</div>';
   }
 
   modal.classList.add('open');
@@ -1883,6 +1910,7 @@ function openQR(type, id) {
 
 function closeQR() {
   document.getElementById('qr-modal').classList.remove('open');
+  qrInstance = null;
 }
 
 // ════════════════════════════════════════════════════════════
@@ -2038,5 +2066,6 @@ function logTap(key) {
   tx.objectStore('taps').add({ key, time: Date.now(), lang });
 }
 </script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 </body>
 </html>

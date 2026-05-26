@@ -1,7 +1,7 @@
 // Miami Ride Companion — Service Worker
 // Version this string whenever you deploy a significant update.
 // Changing it forces all clients to re-cache everything fresh.
-const CACHE_VERSION = 'miami-ride-v1.3.0';
+const CACHE_VERSION = 'miami-ride-v1.4.0';
 
 // ─── Files to pre-cache on install ───────────────────────────────────────────
 // These are fetched and stored the moment the SW installs (first app open on Wi-Fi).
@@ -16,6 +16,8 @@ const PRECACHE_URLS = [
   // Tabler icons — pinned version for reliable caching
   'https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css',
   'https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/fonts/tabler-icons.woff2',
+  // QR code generator
+  'https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js',
   // Game images — stored locally, cached offline
   '/images/games/statue-of-liberty.jpg',
   '/images/games/eiffel-tower.jpg',
