@@ -11,8 +11,10 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="apple-touch-icon" href="/icons/icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
 
   <style>
     /* ── Reset & Root ─────────────────────────────────────────── */
@@ -1738,19 +1740,24 @@ function doSpin() {
 }
 
 // ── Guess the Image ───────────────────────────────────────
+// Images stored locally in /public/images/games/
+// Served from Netlify, cached by Service Worker — works fully offline
 const IMG_ROUNDS = [
-  { file:'statue-of-liberty.jpg', hint:'Located in New York Harbor', opts:['Eiffel Tower','Big Ben','Statue of Liberty','Colosseum'], a:2, explain:'The Statue of Liberty! A gift from France in 1886.' },
-  { file:'eiffel-tower.jpg', hint:'Located in Paris, France', opts:['Eiffel Tower','Empire State','Burj Khalifa','Big Ben'], a:0, explain:'The Eiffel Tower, built in 1889. Bonjour! 🇫🇷' },
-  { file:'colosseum.jpg', hint:'Ancient Roman amphitheater', opts:['Parthenon','Pantheon','Colosseum','Circus Maximus'], a:2, explain:'The Roman Colosseum — once hosted 50,000 spectators!' },
-  { file:'machu-picchu.jpg', hint:'Ancient Incan citadel in South America', opts:['Machu Picchu','Angkor Wat','Tikal','Chichen Itza'], a:0, explain:'Machu Picchu — the lost city of the Incas in Peru!' },
-  { file:'taj-mahal.jpg', hint:'Built by a Mughal emperor in India', opts:['Taj Mahal','Alhambra','Topkapi Palace','Red Fort'], a:0, explain:'The Taj Mahal — a monument to love, built in 1648.' },
-  { file:'sydney-opera.jpg', hint:'Iconic performing arts venue in Australia', opts:['Sydney Opera House','Walt Disney Concert Hall','La Scala','Royal Opera House'], a:0, explain:'The Sydney Opera House — one of the 20th century\'s greatest buildings.' },
-  { file:'golden-gate.jpg', hint:'Famous bridge in San Francisco', opts:['Brooklyn Bridge','Golden Gate','Sydney Harbour','Millau Viaduct'], a:1, explain:'The Golden Gate Bridge — opened in 1937 and still iconic! 🌁' },
-  { file:'big-ben.jpg', hint:'Iconic clock tower in London', opts:['Notre-Dame','Big Ben','Eiffel Tower','Sagrada Família'], a:1, explain:'Big Ben — officially the Elizabeth Tower, built in 1859.' },
-  { file:'sagrada-familia.jpg', hint:'Unfinished basilica in Barcelona', opts:['Notre-Dame','St. Peter\'s Basilica','Sagrada Família','Hagia Sophia'], a:2, explain:'Sagrada Família — Gaudí\'s masterpiece, still under construction since 1882!' },
-  { file:'christ-redeemer.jpg', hint:'Statue overlooking Rio de Janeiro', opts:['Statue of Liberty','Christ the Redeemer','Angel of the North','Motherland Calls'], a:1, explain:'Christ the Redeemer — 98 feet tall, overlooking Rio from Corcovado mountain.' },
-  { file:'great-wall.jpg', hint:'The world\'s longest wall, in Asia', opts:['Hadrian\'s Wall','Great Wall of China','Berlin Wall','Aurelian Wall'], a:1, explain:'The Great Wall of China — over 13,000 miles long!' },
-  { file:'wynwood-walls.jpg', hint:'Famous open-air mural park in Miami', opts:['Wynwood Walls','The High Line','Bowery Mural','MOCA Geffen'], a:0, explain:'Wynwood Walls — Miami\'s own world-class open-air street art museum!' },
+  { file:'statue-of-liberty.jpg', emoji:'🗽', hint:'Located in New York Harbor, USA', opts:['Eiffel Tower','Big Ben','Statue of Liberty','Colosseum'], a:2, explain:'The Statue of Liberty! A gift from France, unveiled in 1886.' },
+  { file:'eiffel-tower.jpg', emoji:'🗼', hint:'Located in Paris, France', opts:['Eiffel Tower','Empire State Building','Burj Khalifa','Big Ben'], a:0, explain:'The Eiffel Tower, built in 1889 by Gustave Eiffel. Bonjour! 🇫🇷' },
+  { file:'colosseum.jpg', emoji:'🏟️', hint:'Ancient amphitheater in Rome, Italy', opts:['Parthenon','Pantheon','Colosseum','Circus Maximus'], a:2, explain:'The Roman Colosseum — once hosted gladiator battles for 50,000 spectators!' },
+  { file:'machu-picchu.jpg', emoji:'🏔️', hint:'Ancient Incan citadel high in the Andes', opts:['Machu Picchu','Angkor Wat','Tikal','Chichen Itza'], a:0, explain:'Machu Picchu — the lost city of the Incas, high in the Peruvian mountains!' },
+  { file:'taj-mahal.jpg', emoji:'🕌', hint:'White marble mausoleum in Agra, India', opts:['Taj Mahal','Alhambra','Topkapi Palace','Red Fort'], a:0, explain:'The Taj Mahal — a monument to love, built in 1632 by Emperor Shah Jahan.' },
+  { file:'sydney-opera.jpg', emoji:'🎭', hint:'Iconic performing arts venue in Australia', opts:['Sydney Opera House','Walt Disney Concert Hall','La Scala','Royal Opera House'], a:0, explain:'The Sydney Opera House — one of the 20th century\'s greatest buildings.' },
+  { file:'golden-gate.jpg', emoji:'🌉', hint:'Famous red suspension bridge in California', opts:['Brooklyn Bridge','Golden Gate Bridge','Sydney Harbour Bridge','Millau Viaduct'], a:1, explain:'The Golden Gate Bridge — opened in 1937 and still one of the world\'s most iconic structures!' },
+  { file:'big-ben.jpg', emoji:'🕰️', hint:'Famous clock tower in London, England', opts:['Notre-Dame','Big Ben','Eiffel Tower','Sagrada Família'], a:1, explain:'Big Ben — officially the Elizabeth Tower. The bell has rung since 1859.' },
+  { file:'sagrada-familia.jpg', emoji:'⛪', hint:'Still-unfinished basilica in Barcelona, Spain', opts:['Notre-Dame','St. Peter\'s Basilica','Sagrada Família','Hagia Sophia'], a:2, explain:'Sagrada Família — Gaudí\'s masterpiece, under construction since 1882!' },
+  { file:'christ-redeemer.jpg', emoji:'✝️', hint:'Famous statue atop a mountain in Brazil', opts:['Statue of Liberty','Christ the Redeemer','Angel of the North','Motherland Calls'], a:1, explain:'Christ the Redeemer — 98 feet tall, overlooking Rio de Janeiro from Corcovado mountain.' },
+  { file:'great-wall.jpg', emoji:'🧱', hint:'The world\'s longest wall, in northern China', opts:['Hadrian\'s Wall','Great Wall of China','Berlin Wall','Aurelian Wall'], a:1, explain:'The Great Wall of China — stretches over 13,000 miles across northern China!' },
+  { file:'wynwood-walls.jpg', emoji:'🎨', hint:'Famous open-air street art museum in Miami', opts:['Wynwood Walls','The High Line','Bowery Mural','MOCA Geffen'], a:0, explain:'Wynwood Walls — Miami\'s own world-class open-air street art museum!' },
+  { file:'burj-khalifa.jpg', emoji:'🏙️', hint:'Tallest building in the world, in Dubai', opts:['Empire State Building','Burj Khalifa','CN Tower','Shanghai Tower'], a:1, explain:'The Burj Khalifa in Dubai — at 2,717 feet, the tallest structure ever built!' },
+  { file:'petra.jpg', emoji:'🏜️', hint:'Rose-red ancient city carved into cliffs, Jordan', opts:['Pompeii','Petra','Palmyra','Persepolis'], a:1, explain:'Petra — the ancient Nabataean city carved into rose-red sandstone cliffs in Jordan.' },
+  { file:'angkor-wat.jpg', emoji:'🛕', hint:'Ancient temple complex in Cambodia', opts:['Borobudur','Bagan','Angkor Wat','Tikal'], a:2, explain:'Angkor Wat — the world\'s largest religious monument, built in the 12th century.' },
 ];
 
 let imgShuffled = [];
@@ -1765,27 +1772,54 @@ function initImage() {
 function loadImgRound() {
   imgAnswered = false;
   const r = imgShuffled[imgRound % imgShuffled.length];
+
+  // Rebuild img-box safely every round
+  const box = document.getElementById('img-box');
+  box.innerHTML = '<img id="img-photo" alt="Guess the landmark" style="width:100%;height:100%;object-fit:cover;display:block">';
   const photo = document.getElementById('img-photo');
-  photo.src = `/images/games/${r.file}`;
-  photo.style.display = 'block';
-  photo.onerror = () => {
-    photo.style.display = 'none';
-    document.getElementById('img-box').innerHTML = `<div style="font-size:60px;color:rgba(255,255,255,0.5)">${r.hint}</div>`;
+
+  // Show emoji placeholder immediately — replaced by photo if it loads
+  const placeholder = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:8px">
+    <div style="font-size:72px;line-height:1">${r.emoji}</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.4);font-weight:600">Loading image…</div>
+  </div>`;
+  box.innerHTML = placeholder;
+
+  // Attempt to load the real image
+  const img = new Image();
+  img.onload = () => {
+    // Only swap in if we're still on the same round
+    if (!imgAnswered || imgRound % imgShuffled.length === imgShuffled.indexOf(r)) {
+      box.innerHTML = '';
+      img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;border-radius:12px';
+      box.appendChild(img);
+    }
   };
+  img.onerror = () => {
+    // Image failed — show emoji fallback, game still fully playable
+    box.innerHTML = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px">
+      <div style="font-size:80px;line-height:1">${r.emoji}</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;padding:0 16px">Image not cached yet — open app on Wi-Fi to load images</div>
+    </div>`;
+  };
+  img.src = `/images/games/${r.file}`;
+
   document.getElementById('img-hint').textContent = '💡 ' + r.hint;
   document.getElementById('img-feedback').className = 'img-feedback';
   document.getElementById('img-next').className = 'img-next';
+
   const opts = document.getElementById('img-opts');
   opts.innerHTML = '';
   r.opts.forEach((o, i) => {
     const btn = document.createElement('button');
-    btn.className = 'img-opt'; btn.textContent = o;
-    btn.onclick = () => answerImg(i, r.a, r.explain, r.opts);
+    btn.className = 'img-opt';
+    btn.textContent = o;
+    btn.onclick = () => answerImg(i, r.a, r.explain);
     opts.appendChild(btn);
   });
 }
 
-function answerImg(chosen, correct, explain, opts) {
+function answerImg(chosen, correct, explain) {
   if (imgAnswered) return;
   imgAnswered = true;
   document.querySelectorAll('.img-opt').forEach((b, i) => {
