@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Dashboard — Miami Ride Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #0F2137;
+      --mid:    #1B3A5C;
+      --teal:   #0B9EA6;
+      --teal-m: #E3F4F4;
+      --teal-b: #B5E0E0;
+      --gold:   #C9A84C;
+      --gold-l: #FBF4E6;
+      --gold-b: #E8D9A0;
+      --bg:     #EEF2F7;
+      --card:   #FFFFFF;
+      --border: #D8E3EE;
+      --muted:  #7A8FA6;
+      --body:   #4A6275;
+      --red:    #E05555;
+      --green:  #00A88D;
+      --font:   'DM Sans', sans-serif;
+      --display:'Playfair Display', serif;
+    }
+    html, body { height: 100%; font-family: var(--font); background: var(--bg); color: var(--navy); }
+    body { display: flex; flex-direction: column; }
+
+    /* ── Auth Screen ── */
+    .auth-screen {
+      position: fixed; inset: 0; z-index: 200;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .auth-box {
+      background: white; border-radius: 18px;
+      padding: 36px 40px; width: 360px; text-align: center;
+    }
+    .auth-icon { font-size: 40px; margin-bottom: 14px; }
+    .auth-title { font-family: var(--display); font-size: 24px; color: var(--navy); margin-bottom: 6px; }
+    .auth-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; line-height: 1.5; }
+    .auth-input {
+      width: 100%; padding: 13px 16px; border-radius: 11px;
+      border: 1.5px solid var(--border); font-family: var(--font);
+      font-size: 18px; font-weight: 600; letter-spacing: 4px;
+      text-align: center; color: var(--navy); margin-bottom: 12px;
+    }
+    .auth-input:focus { outline: none; border-color: var(--teal); }
+    .auth-btn {
+      width: 100%; padding: 13px; border-radius: 11px; border: none;
+      background: var(--navy); color: white; font-family: var(--font);
+      font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .auth-btn:hover { background: var(--mid); }
+    .auth-error { font-size: 12px; color: var(--red); margin-top: 10px; display: none; }
+
+    /* ── Top Bar ── */
+    .topbar {
+      background: var(--mid); padding: 10px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-shrink: 0;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 10px; }
+    .topbar-left i { font-size: 16px; color: var(--teal); }
+    .topbar-title { font-size: 14px; font-weight: 600; color: white; }
+    .topbar-sub { font-size: 11px; color: rgba(255,255,255,0.4); margin-left: 4px; }
+    .topbar-right { display: flex; align-items: center; gap: 10px; }
+    .last-pub { font-size: 11px; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 4px; }
+    .last-pub i { font-size: 12px; color: var(--teal); }
+    .view-app-btn {
+      background: rgba(255,255,255,0.1); border: none; border-radius: 7px;
+      padding: 6px 12px; font-family: var(--font); font-size: 11px;
+      font-weight: 600; color: rgba(255,255,255,0.7); cursor: pointer;
+      display: flex; align-items: center; gap: 5px; text-decoration: none;
+    }
+    .view-app-btn i { font-size: 13px; }
+
+    /* ── Shell ── */
+    .shell { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+
+    /* ── Editor Nav ── */
+    .editor-nav {
+      width: 180px; background: #162F4A;
+      display: flex; flex-direction: column; flex-shrink: 0;
+      padding: 10px 8px;
+    }
+    .nav-section-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.2);
+      padding: 6px 8px 5px;
+    }
+    .nav-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 9px 10px; border-radius: 8px; cursor: pointer;
+      margin-bottom: 1px; transition: background 0.15s;
+    }
+    .nav-item:hover { background: rgba(255,255,255,0.05); }
+    .nav-item.active { background: rgba(255,255,255,0.1); }
+    .nav-item i { font-size: 15px; color: rgba(255,255,255,0.3); }
+    .nav-item span { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.3); }
+    .nav-item.active i, .nav-item.active span { color: white; }
+    .nav-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); margin-left: auto; }
+
+    .publish-btn-nav {
+      margin: auto 4px 8px; background: var(--teal); border: none;
+      border-radius: 9px; padding: 10px 12px; font-family: var(--font);
+      font-size: 13px; font-weight: 700; color: white; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .publish-btn-nav i { font-size: 15px; }
+    .publish-btn-nav:hover { background: #0A8A91; }
+    .publish-btn-nav:disabled { opacity: 0.5; cursor: default; }
+
+    /* ── Main Editor Area ── */
+    .editor-main {
+      flex: 1; overflow-y: auto; padding: 20px 24px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+
+    /* ── Panels ── */
+    .panel { display: none; flex-direction: column; gap: 14px; }
+    .panel.active { display: flex; }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--card); border-radius: 14px;
+      border: 0.5px solid var(--border); padding: 18px 20px;
+    }
+    .card-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; margin-bottom: 14px;
+    }
+    .card-title { font-size: 14px; font-weight: 600; color: var(--navy); }
+    .card-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    /* ── Stat Cards ── */
+    .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+    .stat-card { background: var(--card); border-radius: 12px; border: 0.5px solid var(--border); padding: 14px 16px; }
+    .stat-val { font-family: var(--display); font-size: 26px; color: var(--navy); font-weight: 500; line-height: 1; }
+    .stat-lbl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px; font-weight: 600; }
+    .stat-delta { font-size: 11px; font-weight: 600; margin-top: 5px; display: flex; align-items: center; gap: 3px; }
+    .stat-delta.up { color: var(--green); }
+    .stat-delta.down { color: var(--red); }
+    .stat-delta i { font-size: 11px; }
+
+    /* ── Bar Chart ── */
+    .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .bar-lbl { font-size: 11px; font-weight: 500; color: var(--body); width: 90px; flex-shrink: 0; }
+    .bar-track { flex: 1; height: 7px; background: #EEF2F7; border-radius: 4px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
+    .bar-val { font-size: 11px; font-weight: 600; color: var(--navy); width: 36px; text-align: right; flex-shrink: 0; }
+
+    /* ── Top List ── */
+    .top-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 0.5px solid var(--border); }
+    .top-row:last-child { border-bottom: none; }
+    .top-rank { font-size: 12px; font-weight: 700; width: 20px; text-align: center; flex-shrink: 0; }
+    .top-rank.g { color: var(--gold); }
+    .top-rank.s { color: #9BA8B8; }
+    .top-rank.b { color: #C8784C; }
+    .top-name { font-size: 12px; font-weight: 500; color: var(--navy); flex: 1; }
+    .top-count { font-size: 12px; font-weight: 600; color: var(--teal); }
+
+    /* ── Form Elements ── */
+    .field { margin-bottom: 12px; }
+    .field:last-child { margin-bottom: 0; }
+    .field label { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .field input, .field textarea, .field select {
+      width: 100%; padding: 9px 13px; border-radius: 9px;
+      border: 1.5px solid var(--border); font-family: var(--font);
+      font-size: 13px; font-weight: 500; color: var(--navy);
+      background: var(--bg); transition: border-color 0.15s;
+    }
+    .field input:focus, .field textarea:focus, .field select:focus {
+      outline: none; border-color: var(--teal);
+    }
+    .field textarea { resize: vertical; min-height: 70px; line-height: 1.6; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .field-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+
+    /* ── Toggle ── */
+    .toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+    .toggle-lbl { font-size: 13px; font-weight: 500; color: var(--navy); }
+    .toggle-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+    .toggle {
+      width: 44px; height: 24px; border-radius: 12px;
+      background: var(--border); cursor: pointer; position: relative;
+      border: none; transition: background 0.2s; flex-shrink: 0;
+    }
+    .toggle.on { background: var(--teal); }
+    .toggle::after {
+      content: ''; position: absolute; top: 3px; left: 3px;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: white; transition: transform 0.2s;
+    }
+    .toggle.on::after { transform: translateX(20px); }
+
+    /* ── Buttons ── */
+    .btn {
+      padding: 8px 16px; border-radius: 8px; border: none;
+      font-family: var(--font); font-size: 12px; font-weight: 600;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 5px;
+      transition: opacity 0.15s;
+    }
+    .btn:active { opacity: 0.8; }
+    .btn-primary { background: var(--navy); color: white; }
+    .btn-teal { background: var(--teal); color: white; }
+    .btn-ghost { background: var(--teal-m); color: #0B6E72; border: 0.5px solid var(--teal-b); }
+    .btn-danger { background: #FFF0F0; color: var(--red); border: 0.5px solid #F8C8C8; }
+    .btn-gold { background: var(--gold-l); color: #7A5500; border: 0.5px solid var(--gold-b); }
+    .btn i { font-size: 13px; }
+    .btn-sm { padding: 5px 10px; font-size: 11px; }
+
+    /* ── Venue Rows ── */
+    .venue-list { display: flex; flex-direction: column; gap: 6px; }
+    .venue-row {
+      background: var(--card); border-radius: 10px;
+      border: 0.5px solid var(--border); padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .venue-row.pick { border-left: 3px solid var(--gold); }
+    .venue-row.featured { border-left: 3px solid var(--teal); }
+    .drag-handle { color: var(--border); cursor: grab; flex-shrink: 0; font-size: 18px; }
+    .vr-info { flex: 1; min-width: 0; }
+    .vr-name { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .vr-meta { font-size: 10px; color: var(--muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .vr-tag { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 8px; }
+    .vr-tag.restaurant { background: var(--teal-m); color: #0B6E72; }
+    .vr-tag.nightlife { background: #EEF0F8; color: #1B3A5C; }
+    .vr-tag.attraction { background: var(--gold-l); color: #7A5500; }
+    .vr-tag.gem { background: #F0EEF8; color: #4A3580; }
+    .vr-actions { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+
+    /* ── Event Rows ── */
+    .event-row {
+      background: var(--card); border-radius: 10px;
+      border: 0.5px solid var(--border); padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .er-info { flex: 1; min-width: 0; }
+    .er-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+    .er-meta { font-size: 10px; color: var(--muted); }
+
+    /* ── Weather Preview ── */
+    .weather-preview {
+      background: var(--navy); border-radius: 12px;
+      padding: 16px 20px; display: flex; gap: 20px; align-items: center;
+    }
+    .wp-temp { font-family: var(--display); font-size: 42px; color: white; font-weight: 500; line-height: 1; }
+    .wp-icon { font-size: 36px; }
+    .wp-info { flex: 1; }
+    .wp-desc { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+    .wp-sub { font-size: 11px; color: rgba(255,255,255,0.4); }
+    .wp-stats { display: flex; gap: 16px; margin-top: 8px; }
+    .wp-stat { font-size: 11px; color: rgba(255,255,255,0.5); }
+    .wp-stat span { color: white; font-weight: 600; display: block; margin-bottom: 1px; }
+
+    .forecast-mini { display: flex; gap: 6px; flex: 1; justify-content: flex-end; }
+    .fc-mini { background: rgba(255,255,255,0.08); border-radius: 8px; padding: 7px 10px; text-align: center; min-width: 54px; }
+    .fc-mini-day { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+    .fc-mini-icon { font-size: 16px; margin: 3px 0; }
+    .fc-mini-hi { font-size: 12px; font-weight: 600; color: white; }
+    .fc-mini-lo { font-size: 10px; color: rgba(255,255,255,0.4); }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      background: var(--navy); color: white; border-radius: 10px;
+      padding: 12px 20px; font-size: 13px; font-weight: 600;
+      display: flex; align-items: center; gap: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 100;
+    }
+    .toast.show { opacity: 1; pointer-events: all; }
+    .toast.success i { color: var(--teal); }
+    .toast.error i { color: var(--red); }
+
+    /* ── Modal ── */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 50;
+      background: rgba(10,20,35,0.6);
+      display: none; align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: white; border-radius: 16px;
+      padding: 24px 28px; width: 560px; max-width: 96vw;
+      max-height: 90vh; overflow-y: auto;
+    }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    .modal-title { font-size: 16px; font-weight: 600; color: var(--navy); }
+    .modal-close { background: var(--bg); border: none; border-radius: 6px; width: 28px; height: 28px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--muted); }
+
+    /* ── AI Assist ── */
+    .ai-box {
+      background: var(--teal-m); border-radius: 10px;
+      padding: 12px 14px; border: 0.5px solid var(--teal-b); margin-top: 10px;
+    }
+    .ai-box-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .ai-box-title { font-size: 11px; font-weight: 700; color: #0B6E72; display: flex; align-items: center; gap: 5px; }
+    .ai-box-title i { font-size: 13px; }
+    .ai-output { font-size: 12px; color: var(--body); line-height: 1.6; min-height: 40px; }
+    .ai-lang-tabs { display: flex; gap: 4px; margin-bottom: 8px; }
+    .ai-lang-tab { padding: 3px 10px; border-radius: 6px; font-size: 10px; font-weight: 600; cursor: pointer; border: none; background: rgba(255,255,255,0.5); color: #0B6E72; font-family: var(--font); }
+    .ai-lang-tab.active { background: var(--teal); color: white; }
+
+    /* ── Publish Status ── */
+    .publish-status {
+      background: var(--navy); border-radius: 12px;
+      padding: 16px 20px; display: flex; align-items: center; gap: 14px;
+    }
+    .publish-status i { font-size: 24px; color: var(--teal); flex-shrink: 0; }
+    .ps-info { flex: 1; }
+    .ps-title { font-size: 13px; font-weight: 600; color: white; margin-bottom: 3px; }
+    .ps-sub { font-size: 11px; color: rgba(255,255,255,0.4); }
+    .publish-main-btn {
+      padding: 10px 22px; border-radius: 10px; border: none;
+      background: var(--teal); color: white; font-family: var(--font);
+      font-size: 13px; font-weight: 700; cursor: pointer;
+      display: flex; align-items: center; gap: 6px; flex-shrink: 0;
+    }
+    .publish-main-btn:disabled { opacity: 0.5; cursor: default; }
+    .publish-main-btn i { font-size: 15px; }
+
+    /* ── Info box ── */
+    .info-box {
+      background: var(--teal-m); border-radius: 9px;
+      padding: 10px 14px; display: flex; align-items: flex-start; gap: 8px;
+      border: 0.5px solid var(--teal-b);
+    }
+    .info-box i { font-size: 14px; color: var(--teal); flex-shrink: 0; margin-top: 1px; }
+    .info-box span { font-size: 11px; color: #0B6E72; line-height: 1.6; }
+
+    /* ── GitHub Setup ── */
+    .github-setup { background: var(--gold-l); border-radius: 12px; padding: 16px 20px; border: 0.5px solid var(--gold-b); }
+    .github-setup h3 { font-size: 13px; font-weight: 600; color: #7A5500; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .github-setup h3 i { font-size: 15px; color: var(--gold); }
+    .github-field { margin-bottom: 10px; }
+    .github-field label { display: block; font-size: 11px; font-weight: 600; color: #7A5500; margin-bottom: 4px; }
+    .github-field input { width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--gold-b); font-family: var(--font); font-size: 13px; background: white; color: var(--navy); }
+    .github-field input:focus { outline: none; border-color: var(--gold); }
+    .github-save-btn { padding: 8px 16px; border-radius: 8px; border: none; background: #7A5500; color: white; font-family: var(--font); font-size: 12px; font-weight: 600; cursor: pointer; }
+
+    /* ── Tabs inside panels ── */
+    .tab-row-inner { display: flex; gap: 1px; background: var(--border); border-radius: 8px; padding: 2px; margin-bottom: 12px; align-self: flex-start; }
+    .tab-inner { padding: 5px 14px; border-radius: 6px; font-size: 11px; font-weight: 600; color: var(--muted); cursor: pointer; border: none; background: transparent; font-family: var(--font); }
+    .tab-inner.active { background: white; color: var(--navy); }
+
+    /* ── Sponsored ── */
+    .sponsored-slot { background: var(--bg); border-radius: 10px; border: 1.5px dashed var(--border); padding: 16px; margin-bottom: 10px; }
+    .sponsored-slot.active-slot { border-style: solid; border-color: var(--gold); background: var(--gold-l); }
+
+    /* ── Spinner ── */
+    .spinner { width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<!-- ── Auth ── -->
+<div class="auth-screen" id="auth-screen">
+  <div class="auth-box">
+    <div class="auth-icon">🔒</div>
+    <div class="auth-title">Driver Dashboard</div>
+    <div class="auth-sub">Enter your PIN to access the editor.<br>This page is not visible to passengers.</div>
+    <input class="auth-input" id="auth-input" type="password" placeholder="••••" maxlength="8" autocomplete="off">
+    <button class="auth-btn" onclick="checkAuth()">Unlock</button>
+    <div class="auth-error" id="auth-error">Incorrect PIN. Try again.</div>
+    <div style="font-size:11px;color:var(--muted);margin-top:16px">First time? Default PIN is <strong>1234</strong> — change it in Settings.</div>
+  </div>
+</div>
+
+<!-- ── Top Bar ── -->
+<div class="topbar">
+  <div class="topbar-left">
+    <i class="ti ti-tools"></i>
+    <div class="topbar-title">Driver Dashboard</div>
+    <div class="topbar-sub">· visible to you only</div>
+  </div>
+  <div class="topbar-right">
+    <div class="last-pub"><i class="ti ti-refresh"></i><span id="last-pub-txt">Loading…</span></div>
+    <a href="/" class="view-app-btn"><i class="ti ti-eye"></i>View Passenger App</a>
+  </div>
+</div>
+
+<!-- ── Shell ── -->
+<div class="shell">
+
+  <!-- ── Editor Nav ── -->
+  <nav class="editor-nav">
+    <div class="nav-section-label">Insights</div>
+    <div class="nav-item active" id="nav-analytics" onclick="showPanel('analytics')">
+      <i class="ti ti-chart-bar"></i><span>Analytics</span>
+      <div class="nav-dot"></div>
+    </div>
+
+    <div class="nav-section-label" style="margin-top:8px">Content</div>
+    <div class="nav-item" id="nav-venues" onclick="showPanel('venues')">
+      <i class="ti ti-map-pin"></i><span>Venues</span>
+    </div>
+    <div class="nav-item" id="nav-events" onclick="showPanel('events')">
+      <i class="ti ti-calendar-event"></i><span>Events</span>
+    </div>
+    <div class="nav-item" id="nav-weather" onclick="showPanel('weather')">
+      <i class="ti ti-cloud-sun"></i><span>Weather</span>
+    </div>
+
+    <div class="nav-section-label" style="margin-top:8px">Promote</div>
+    <div class="nav-item" id="nav-handyman" onclick="showPanel('handyman')">
+      <i class="ti ti-tools-kitchen-2"></i><span>Handyman</span>
+    </div>
+    <div class="nav-item" id="nav-sponsored" onclick="showPanel('sponsored')">
+      <i class="ti ti-star"></i><span>Sponsored</span>
+    </div>
+
+    <div class="nav-section-label" style="margin-top:8px">System</div>
+    <div class="nav-item" id="nav-settings" onclick="showPanel('settings')">
+      <i class="ti ti-settings"></i><span>Settings</span>
+    </div>
+
+    <button class="publish-btn-nav" id="publish-btn-nav" onclick="publishContent()">
+      <i class="ti ti-cloud-upload"></i>Save & Publish
+    </button>
+  </nav>
+
+  <!-- ── Editor Main ── -->
+  <main class="editor-main">
+
+    <!-- ANALYTICS -->
+    <div class="panel active" id="panel-analytics">
+      <div class="stats-grid" id="analytics-stats">
+        <div class="stat-card"><div class="stat-val" id="stat-sessions">—</div><div class="stat-lbl">Sessions</div><div class="stat-delta up" id="stat-sessions-d"><i class="ti ti-arrow-up"></i>Loading…</div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-duration">—</div><div class="stat-lbl">Avg Duration</div><div class="stat-delta up" id="stat-duration-d"></div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-handyman">—</div><div class="stat-lbl">Handyman Taps</div><div class="stat-delta up" id="stat-handyman-d"></div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-qr">—</div><div class="stat-lbl">QR Taps</div><div class="stat-delta up" id="stat-qr-d"></div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Tab Engagement</div><div class="card-sub">Which sections passengers browse most</div></div></div>
+          <div id="tab-bars">
+            <div class="bar-row"><div class="bar-lbl">City Guide</div><div class="bar-track"><div class="bar-fill" style="width:61%;background:var(--teal)"></div></div><div class="bar-val">61%</div></div>
+            <div class="bar-row"><div class="bar-lbl">Weather</div><div class="bar-track"><div class="bar-fill" style="width:22%;background:var(--navy)"></div></div><div class="bar-val">22%</div></div>
+            <div class="bar-row"><div class="bar-lbl">Games</div><div class="bar-track"><div class="bar-fill" style="width:17%;background:var(--gold)"></div></div><div class="bar-val">17%</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Most Tapped Venues</div><div class="card-sub">Tap count this week</div></div></div>
+          <div id="venue-tops">
+            <div style="font-size:12px;color:var(--muted);padding:8px 0">No data yet — analytics sync from iPad on publish.</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Language Usage</div><div class="card-sub">Which languages passengers select</div></div></div>
+        <div id="lang-bars">
+          <div class="bar-row"><div class="bar-lbl">English</div><div class="bar-track"><div class="bar-fill" style="width:70%;background:var(--teal)"></div></div><div class="bar-val">70%</div></div>
+          <div class="bar-row"><div class="bar-lbl">Spanish</div><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--navy)"></div></div><div class="bar-val">20%</div></div>
+          <div class="bar-row"><div class="bar-lbl">Portuguese</div><div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--gold)"></div></div><div class="bar-val">6%</div></div>
+          <div class="bar-row"><div class="bar-lbl">French</div><div class="bar-track"><div class="bar-fill" style="width:4%;background:#9BA8B8)"></div></div><div class="bar-val">4%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VENUES -->
+    <div class="panel" id="panel-venues">
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">Venues</div><div class="card-sub">Drag to reorder · saved to content.json on publish</div></div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div class="tab-row-inner" id="venue-filter-tabs">
+              <button class="tab-inner active" data-cat="all" onclick="filterVenueList('all')">All</button>
+              <button class="tab-inner" data-cat="restaurant" onclick="filterVenueList('restaurant')">Food</button>
+              <button class="tab-inner" data-cat="nightlife" onclick="filterVenueList('nightlife')">Nightlife</button>
+              <button class="tab-inner" data-cat="attraction" onclick="filterVenueList('attraction')">Attractions</button>
+              <button class="tab-inner" data-cat="gem" onclick="filterVenueList('gem')">Gems</button>
+            </div>
+            <button class="btn btn-teal btn-sm" onclick="openVenueModal(null)"><i class="ti ti-plus"></i>Add Venue</button>
+          </div>
+        </div>
+        <div class="venue-list" id="venue-list">
+          <div style="font-size:12px;color:var(--muted);padding:12px 0">Loading venues…</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENTS -->
+    <div class="panel" id="panel-events">
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">Events This Week</div><div class="card-sub">Auto-fetched from RSS · toggle to show/hide on passenger app</div></div>
+          <button class="btn btn-ghost btn-sm" onclick="fetchEvents()"><i class="ti ti-refresh"></i>Re-fetch RSS</button>
+        </div>
+        <div id="events-list">
+          <div style="font-size:12px;color:var(--muted);padding:12px 0">Loading events…</div>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="ti ti-info-circle"></i>
+        <span>Events are fetched from Timeout Miami and Miami Eater RSS feeds. Toggle each one on or off before publishing. Claude AI can translate descriptions automatically.</span>
+      </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Add Event Manually</div><div class="card-sub">If you know of an event not in the RSS feeds</div></div></div>
+        <div class="field-grid">
+          <div class="field"><label>Event Title (English)</label><input id="new-event-title-en" type="text" placeholder="e.g. Wynwood Music Series"></div>
+          <div class="field"><label>Date</label><input id="new-event-date" type="date"></div>
+        </div>
+        <div class="field-grid">
+          <div class="field"><label>Venue / Location</label><input id="new-event-venue" type="text" placeholder="e.g. Wynwood Walls"></div>
+          <div class="field"><label>Address</label><input id="new-event-address" type="text" placeholder="e.g. 2520 NW 2nd Ave"></div>
+        </div>
+        <div class="field"><label>Description (English)</label><textarea id="new-event-desc-en" placeholder="Brief description of the event…"></textarea></div>
+        <div class="field-grid">
+          <div class="field"><label>URL (optional)</label><input id="new-event-url" type="url" placeholder="https://"></div>
+          <div><label style="display:block;font-size:11px;font-weight:600;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.5px">Free entry?</label>
+          <button class="toggle" id="new-event-free-toggle" onclick="this.classList.toggle('on')"></button></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:4px">
+          <button class="btn btn-ghost" onclick="aiTranslateEvent()"><i class="ti ti-sparkles"></i>Auto-translate to ES/PT/FR</button>
+          <button class="btn btn-primary" onclick="addManualEvent()"><i class="ti ti-plus"></i>Add Event</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEATHER -->
+    <div class="panel" id="panel-weather">
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">Weather Snapshot</div><div class="card-sub">Auto-fetched from Open-Meteo · included in every publish</div></div>
+          <button class="btn btn-ghost" onclick="fetchWeather()"><i class="ti ti-refresh"></i>Re-fetch now</button>
+        </div>
+        <div id="weather-preview-box">
+          <div style="font-size:12px;color:var(--muted);padding:8px 0">Fetching weather…</div>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="ti ti-info-circle"></i>
+        <span>Weather is fetched automatically every time you publish. Re-fetch above to update without publishing. Passengers see a "last updated" timestamp so they know it's a snapshot.</span>
+      </div>
+    </div>
+
+    <!-- HANDYMAN -->
+    <div class="panel" id="panel-handyman">
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">Handyman Business Card</div><div class="card-sub">Shown to all passengers at the bottom of the City Guide</div></div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:12px;color:var(--muted)">Show to passengers</span>
+            <button class="toggle on" id="handyman-toggle" onclick="this.classList.toggle('on')"></button>
+          </div>
+        </div>
+        <div class="field-grid">
+          <div class="field"><label>Headline (English)</label><input id="hm-headline-en" value="Need a handyman in Miami?"></div>
+          <div class="field"><label>Headline (Spanish)</label><input id="hm-headline-es" value="¿Necesitas un manitas en Miami?"></div>
+        </div>
+        <div class="field-grid">
+          <div class="field"><label>Headline (Portuguese)</label><input id="hm-headline-pt" value="Precisa de um faz-tudo em Miami?"></div>
+          <div class="field"><label>Headline (French)</label><input id="hm-headline-fr" value="Besoin d'un bricoleur à Miami ?"></div>
+        </div>
+        <div class="field"><label>Body Text (English)</label><textarea id="hm-body-en">Your driver does that too — repairs, installations, general fixes. Ask me, or scan to save my contact.</textarea></div>
+        <button class="btn btn-ghost" style="margin-bottom:12px" onclick="aiTranslateHandyman()"><i class="ti ti-sparkles"></i>Auto-translate body to ES/PT/FR</button>
+        <div class="field-grid">
+          <div class="field"><label>Phone Number</label><input id="hm-phone" value="+1-305-000-0000" type="tel"></div>
+          <div class="field"><label>Website (optional)</label><input id="hm-website" type="url" placeholder="https://"></div>
+        </div>
+        <button class="btn btn-primary" onclick="saveHandyman()"><i class="ti ti-check"></i>Save Changes</button>
+      </div>
+    </div>
+
+    <!-- SPONSORED -->
+    <div class="panel" id="panel-sponsored">
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Sponsored Slots</div><div class="card-sub">Up to 2 paid local business slots — shown in City Guide with "Sponsored" label</div></div></div>
+        <div id="sponsored-slots">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="panel" id="panel-settings">
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">GitHub Integration</div><div class="card-sub">Required for Save & Publish to work</div></div></div>
+        <div class="github-setup" id="github-setup">
+          <h3><i class="ti ti-brand-github"></i>GitHub API Settings</h3>
+          <div class="github-field"><label>GitHub Personal Access Token</label><input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxx" autocomplete="off"></div>
+          <div class="field-grid">
+            <div class="github-field"><label>Repository Owner / Org</label><input type="text" id="gh-owner" placeholder="miamicompanionapp"></div>
+            <div class="github-field"><label>Repository Name</label><input type="text" id="gh-repo" placeholder="miami-ride-companion"></div>
+          </div>
+          <div class="github-field"><label>Branch</label><input type="text" id="gh-branch" placeholder="main" value="main"></div>
+          <button class="github-save-btn" onclick="saveGitHubSettings()">Save GitHub Settings</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Dashboard PIN</div><div class="card-sub">Change the PIN to access this editor</div></div></div>
+        <div class="field-grid">
+          <div class="field"><label>New PIN</label><input type="password" id="new-pin" placeholder="Enter new PIN" maxlength="8"></div>
+          <div class="field"><label>Confirm PIN</label><input type="password" id="confirm-pin" placeholder="Confirm new PIN" maxlength="8"></div>
+        </div>
+        <button class="btn btn-primary" onclick="changePIN()"><i class="ti ti-lock"></i>Update PIN</button>
+      </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Claude AI Writing Assistant</div><div class="card-sub">Used for auto-translating descriptions</div></div></div>
+        <div class="field"><label>Anthropic API Key</label><input type="password" id="anthropic-key" placeholder="sk-ant-xxxxxxxxxxxx" autocomplete="off"></div>
+        <button class="btn btn-primary" onclick="saveAnthropicKey()"><i class="ti ti-check"></i>Save API Key</button>
+        <div class="info-box" style="margin-top:10px">
+          <i class="ti ti-info-circle"></i>
+          <span>Used only for auto-translating venue and event descriptions. Estimated cost: ~$1–2/month. Get a key at console.anthropic.com.</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ── Venue Modal ── -->
+<div class="modal-overlay" id="venue-modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title" id="venue-modal-title">Add Venue</div>
+      <button class="modal-close" onclick="closeVenueModal()">✕</button>
+    </div>
+    <input type="hidden" id="venue-edit-id">
+    <div class="field-grid">
+      <div class="field"><label>Venue Name</label><input id="vm-name" type="text" placeholder="e.g. Versailles Restaurant"></div>
+      <div class="field"><label>Category</label>
+        <select id="vm-category">
+          <option value="restaurant">Restaurant / Food</option>
+          <option value="nightlife">Nightlife / Bar</option>
+          <option value="attraction">Attraction / Landmark</option>
+          <option value="gem">Hidden Gem</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-grid">
+      <div class="field"><label>Neighborhood</label><input id="vm-neighborhood" type="text" placeholder="e.g. Wynwood"></div>
+      <div class="field"><label>Price Range</label>
+        <select id="vm-price">
+          <option value="$">$ (Under $15)</option>
+          <option value="$$" selected>$$ ($15–$35)</option>
+          <option value="$$$">$$$ ($35–$60)</option>
+          <option value="$$$$">$$$$ (Over $60)</option>
+          <option value="Free">Free</option>
+        </select>
+      </div>
+    </div>
+    <div class="field"><label>Address</label><input id="vm-address" type="text" placeholder="e.g. 3555 SW 8th St, Miami, FL 33135"></div>
+    <div class="field-grid">
+      <div class="field"><label>Latitude</label><input id="vm-lat" type="number" step="0.0001" placeholder="e.g. 25.7663"></div>
+      <div class="field"><label>Longitude</label><input id="vm-lng" type="number" step="0.0001" placeholder="e.g. -80.2324"></div>
+    </div>
+    <div class="field"><label>Website URL (for QR code)</label><input id="vm-website" type="url" placeholder="https://"></div>
+    <div class="field"><label>Description (English)</label><textarea id="vm-desc-en" placeholder="1–2 sentence description of this place…"></textarea></div>
+    <div class="ai-box" id="ai-desc-box">
+      <div class="ai-box-header">
+        <div class="ai-box-title"><i class="ti ti-sparkles"></i>Claude AI Translations</div>
+        <div style="display:flex;gap:6px">
+          <button class="btn btn-ghost btn-sm" onclick="aiTranslateVenue()"><i class="ti ti-language"></i>Auto-translate</button>
+        </div>
+      </div>
+      <div class="ai-lang-tabs">
+        <button class="ai-lang-tab active" onclick="switchAiLang('es', this)">ES</button>
+        <button class="ai-lang-tab" onclick="switchAiLang('pt', this)">PT</button>
+        <button class="ai-lang-tab" onclick="switchAiLang('fr', this)">FR</button>
+      </div>
+      <textarea class="field" id="vm-desc-es" placeholder="Spanish translation…" style="min-height:60px;margin-bottom:0"></textarea>
+      <textarea class="field" id="vm-desc-pt" placeholder="Portuguese translation…" style="min-height:60px;margin-bottom:0;display:none"></textarea>
+      <textarea class="field" id="vm-desc-fr" placeholder="French translation…" style="min-height:60px;margin-bottom:0;display:none"></textarea>
+    </div>
+    <div style="margin-top:12px">
+      <div class="field"><label>Abdullah's Personal Note (English, optional)</label><textarea id="vm-note-en" placeholder="Your personal recommendation in first person…"></textarea></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;margin-top:4px">
+      <div class="toggle-row" style="padding:0;gap:8px">
+        <button class="toggle" id="vm-pick-toggle" onclick="this.classList.toggle('on')"></button>
+        <div><div class="toggle-lbl" style="font-size:12px">Abdullah's Pick ⭐</div></div>
+      </div>
+      <div class="toggle-row" style="padding:0;gap:8px">
+        <button class="toggle" id="vm-featured-toggle" onclick="this.classList.toggle('on')"></button>
+        <div><div class="toggle-lbl" style="font-size:12px">Featured (Sponsored) 💛</div></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:16px;justify-content:flex-end">
+      <button class="btn btn-ghost" onclick="closeVenueModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveVenue()"><i class="ti ti-check"></i>Save Venue</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Toast ── -->
+<div class="toast" id="toast"><i class="ti ti-check"></i><span id="toast-msg"></span></div>
+
+<script>
+// ══════════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════════
+let CONTENT = null;
+let currentVenueFilter = 'all';
+let currentAiLang = 'es';
+const WEATHER_ICONS = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',51:'🌦️',61:'🌧️',80:'🌦️',95:'⛈️'};
+const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+// ══════════════════════════════════════════════════════
+// AUTH
+// ══════════════════════════════════════════════════════
+function checkAuth() {
+  const pin = document.getElementById('auth-input').value;
+  const stored = localStorage.getItem('editorPIN') || '1234';
+  if (pin === stored) {
+    document.getElementById('auth-screen').style.display = 'none';
+    init();
+  } else {
+    document.getElementById('auth-error').style.display = 'block';
+    document.getElementById('auth-input').value = '';
+  }
+}
+document.getElementById('auth-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') checkAuth();
+});
+
+function changePIN() {
+  const np = document.getElementById('new-pin').value;
+  const cp = document.getElementById('confirm-pin').value;
+  if (!np) return showToast('Enter a new PIN', 'error');
+  if (np !== cp) return showToast('PINs do not match', 'error');
+  localStorage.setItem('editorPIN', np);
+  showToast('PIN updated successfully');
+  document.getElementById('new-pin').value = '';
+  document.getElementById('confirm-pin').value = '';
+}
+
+// ══════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════
+async function init() {
+  loadSettings();
+  await loadContent();
+  fetchWeather();
+  loadSponsoredSlots();
+  loadAnalytics();
+}
+
+async function loadContent() {
+  try {
+    const res = await fetch('/content.json?t=' + Date.now());
+    CONTENT = await res.json();
+    renderVenueList();
+    renderEventList();
+    renderHandyman();
+    updateLastPub();
+  } catch (e) {
+    showToast('Could not load content.json — check connection', 'error');
+  }
+}
+
+function updateLastPub() {
+  if (!CONTENT) return;
+  const d = new Date(CONTENT.meta.lastUpdated);
+  document.getElementById('last-pub-txt').textContent =
+    'Last published ' + d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+}
+
+// ══════════════════════════════════════════════════════
+// NAV
+// ══════════════════════════════════════════════════════
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => {
+    n.classList.remove('active');
+    const dot = n.querySelector('.nav-dot');
+    if (dot) dot.remove();
+  });
+  document.getElementById('panel-' + id).classList.add('active');
+  const navEl = document.getElementById('nav-' + id);
+  navEl.classList.add('active');
+  const dot = document.createElement('div');
+  dot.className = 'nav-dot';
+  navEl.appendChild(dot);
+}
+
+// ══════════════════════════════════════════════════════
+// VENUES
+// ══════════════════════════════════════════════════════
+function filterVenueList(cat) {
+  currentVenueFilter = cat;
+  document.querySelectorAll('#venue-filter-tabs .tab-inner').forEach(t => {
+    t.classList.toggle('active', t.dataset.cat === cat);
+  });
+  renderVenueList();
+}
+
+function renderVenueList() {
+  if (!CONTENT) return;
+  const list = document.getElementById('venue-list');
+  let venues = CONTENT.guide.venues;
+  if (currentVenueFilter !== 'all') venues = venues.filter(v => v.category === currentVenueFilter);
+  if (!venues.length) {
+    list.innerHTML = '<div style="font-size:12px;color:var(--muted);padding:12px 0">No venues in this category yet.</div>';
+    return;
+  }
+  list.innerHTML = venues.map((v, i) => `
+    <div class="venue-row ${v.abdullahsPick ? 'pick' : ''} ${v.featured ? 'featured' : ''}">
+      <span class="drag-handle ti ti-grip-vertical"></span>
+      <div class="vr-info">
+        <div class="vr-name">${v.name}</div>
+        <div class="vr-meta">
+          <span class="vr-tag ${v.category}">${v.category}</span>
+          <span>${v.neighborhood}</span>
+          <span>·</span><span>${v.price}</span>
+          ${v.abdullahsPick ? '<span>· ⭐ Your pick</span>' : ''}
+          ${v.featured ? '<span>· 💛 Featured</span>' : ''}
+        </div>
+      </div>
+      <div class="vr-actions">
+        <button class="btn btn-ghost btn-sm" onclick="aiTranslateVenueQuick('${v.id}')"><i class="ti ti-sparkles"></i></button>
+        <button class="btn btn-sm" style="background:var(--bg);border:0.5px solid var(--border)" onclick="openVenueModal('${v.id}')"><i class="ti ti-pencil"></i></button>
+        <button class="btn btn-danger btn-sm" onclick="deleteVenue('${v.id}')"><i class="ti ti-trash"></i></button>
+      </div>
+    </div>`).join('');
+}
+
+function openVenueModal(id) {
+  const modal = document.getElementById('venue-modal');
+  const v = id ? CONTENT.guide.venues.find(x => x.id === id) : null;
+  document.getElementById('venue-modal-title').textContent = v ? 'Edit Venue' : 'Add Venue';
+  document.getElementById('venue-edit-id').value = id || '';
+  document.getElementById('vm-name').value = v ? v.name : '';
+  document.getElementById('vm-category').value = v ? v.category : 'restaurant';
+  document.getElementById('vm-neighborhood').value = v ? v.neighborhood : '';
+  document.getElementById('vm-price').value = v ? v.price : '$$';
+  document.getElementById('vm-address').value = v ? v.address : '';
+  document.getElementById('vm-lat').value = v ? v.lat : '';
+  document.getElementById('vm-lng').value = v ? v.lng : '';
+  document.getElementById('vm-website').value = v ? (v.website || '') : '';
+  document.getElementById('vm-desc-en').value = v ? (v.description.en || '') : '';
+  document.getElementById('vm-desc-es').value = v ? (v.description.es || '') : '';
+  document.getElementById('vm-desc-pt').value = v ? (v.description.pt || '') : '';
+  document.getElementById('vm-desc-fr').value = v ? (v.description.fr || '') : '';
+  document.getElementById('vm-note-en').value = v ? (v.abdullahsNote ? v.abdullahsNote.en || '' : '') : '';
+  document.getElementById('vm-pick-toggle').classList.toggle('on', v ? !!v.abdullahsPick : false);
+  document.getElementById('vm-featured-toggle').classList.toggle('on', v ? !!v.featured : false);
+  modal.classList.add('open');
+}
+
+function closeVenueModal() {
+  document.getElementById('venue-modal').classList.remove('open');
+}
+
+function saveVenue() {
+  const id = document.getElementById('venue-edit-id').value;
+  const name = document.getElementById('vm-name').value.trim();
+  if (!name) return showToast('Venue name is required', 'error');
+
+  const venue = {
+    id: id || 'v' + Date.now(),
+    category: document.getElementById('vm-category').value,
+    name,
+    neighborhood: document.getElementById('vm-neighborhood').value.trim(),
+    price: document.getElementById('vm-price').value,
+    address: document.getElementById('vm-address').value.trim(),
+    lat: parseFloat(document.getElementById('vm-lat').value) || 25.7617,
+    lng: parseFloat(document.getElementById('vm-lng').value) || -80.1918,
+    website: document.getElementById('vm-website').value.trim() || null,
+    abdullahsPick: document.getElementById('vm-pick-toggle').classList.contains('on'),
+    featured: document.getElementById('vm-featured-toggle').classList.contains('on'),
+    sponsored: document.getElementById('vm-featured-toggle').classList.contains('on'),
+    description: {
+      en: document.getElementById('vm-desc-en').value.trim(),
+      es: document.getElementById('vm-desc-es').value.trim(),
+      pt: document.getElementById('vm-desc-pt').value.trim(),
+      fr: document.getElementById('vm-desc-fr').value.trim(),
+    },
+    abdullahsNote: document.getElementById('vm-note-en').value.trim() ? {
+      en: document.getElementById('vm-note-en').value.trim(),
+      es: '', pt: '', fr: ''
+    } : null
+  };
+
+  if (id) {
+    const idx = CONTENT.guide.venues.findIndex(v => v.id === id);
+    if (idx > -1) CONTENT.guide.venues[idx] = venue;
+  } else {
+    CONTENT.guide.venues.push(venue);
+  }
+
+  renderVenueList();
+  closeVenueModal();
+  showToast('Venue saved — hit Publish to go live');
+}
+
+function deleteVenue(id) {
+  if (!confirm('Delete this venue?')) return;
+  CONTENT.guide.venues = CONTENT.guide.venues.filter(v => v.id !== id);
+  renderVenueList();
+  showToast('Venue deleted');
+}
+
+function switchAiLang(lang, btn) {
+  currentAiLang = lang;
+  document.querySelectorAll('.ai-lang-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  ['es','pt','fr'].forEach(l => {
+    document.getElementById('vm-desc-' + l).style.display = l === lang ? 'block' : 'none';
+  });
+}
+
+// ══════════════════════════════════════════════════════
+// EVENTS
+// ══════════════════════════════════════════════════════
+function renderEventList() {
+  if (!CONTENT) return;
+  const list = document.getElementById('events-list');
+  if (!CONTENT.guide.events.length) {
+    list.innerHTML = '<div style="font-size:12px;color:var(--muted);padding:8px 0">No events. Add manually below or re-fetch RSS.</div>';
+    return;
+  }
+  list.innerHTML = CONTENT.guide.events.map(e => `
+    <div class="event-row" style="margin-bottom:6px">
+      <div class="er-info">
+        <div class="er-title">${e.title.en}</div>
+        <div class="er-meta">${new Date(e.date).toLocaleDateString()} · ${e.venue}${e.free ? ' · Free' : ''}</div>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <button class="btn btn-ghost btn-sm" onclick="aiTranslateEventQuick('${e.id}')"><i class="ti ti-sparkles"></i>Translate</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteEvent('${e.id}')"><i class="ti ti-trash"></i></button>
+      </div>
+    </div>`).join('');
+}
+
+function deleteEvent(id) {
+  CONTENT.guide.events = CONTENT.guide.events.filter(e => e.id !== id);
+  renderEventList();
+}
+
+function addManualEvent() {
+  const title = document.getElementById('new-event-title-en').value.trim();
+  const date = document.getElementById('new-event-date').value;
+  if (!title || !date) return showToast('Title and date are required', 'error');
+  const event = {
+    id: 'e' + Date.now(),
+    title: { en: title, es: '', pt: '', fr: '' },
+    date,
+    venue: document.getElementById('new-event-venue').value.trim(),
+    address: document.getElementById('new-event-address').value.trim(),
+    url: document.getElementById('new-event-url').value.trim(),
+    free: document.getElementById('new-event-free-toggle').classList.contains('on'),
+    description: { en: document.getElementById('new-event-desc-en').value.trim(), es: '', pt: '', fr: '' }
+  };
+  CONTENT.guide.events.push(event);
+  renderEventList();
+  ['title-en','date','venue','address','url','desc-en'].forEach(f => {
+    const el = document.getElementById('new-event-' + f);
+    if (el) el.value = '';
+  });
+  showToast('Event added — hit Publish to go live');
+}
+
+async function fetchEvents() {
+  showToast('Fetching events from RSS…');
+  // In production this would use a Netlify function to fetch RSS
+  // (CORS prevents direct browser fetch of external RSS)
+  // For now show a helpful message
+  showToast('RSS fetch runs via Netlify function — deploy first', 'error');
+}
+
+// ══════════════════════════════════════════════════════
+// WEATHER
+// ══════════════════════════════════════════════════════
+async function fetchWeather() {
+  const box = document.getElementById('weather-preview-box');
+  box.innerHTML = '<div style="font-size:12px;color:var(--muted)">Fetching from Open-Meteo…</div>';
+  try {
+    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=25.7617&longitude=-80.1918&current=temperature_2m,weathercode,windspeed_10m,relative_humidity_2m,apparent_temperature&daily=temperature_2m_max,temperature_2m_min,weathercode,precipitation_probability_max&hourly=temperature_2m,weathercode,precipitation_probability&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FNew_York&forecast_days=5');
+    const data = await res.json();
+    const c = data.current;
+    const d = data.daily;
+    const icon = WEATHER_ICONS[c.weathercode] || '🌤️';
+
+    // Update CONTENT
+    if (!CONTENT) CONTENT = {};
+    if (!CONTENT.weather) CONTENT.weather = {};
+    CONTENT.weather.fetchedAt = new Date().toISOString();
+    CONTENT.weather.current = {
+      temp_f: Math.round(c.temperature_2m),
+      feels_f: Math.round(c.apparent_temperature),
+      description: { en: 'Current conditions', es: 'Condiciones actuales', pt: 'Condições atuais', fr: 'Conditions actuelles' },
+      humidity: Math.round(c.relative_humidity_2m),
+      wind_mph: Math.round(c.windspeed_10m),
+      rain_chance: d.precipitation_probability_max[0] || 0,
+      weathercode: c.weathercode
+    };
+    CONTENT.weather.forecast = d.time.slice(0,5).map((date, i) => ({
+      date,
+      high_f: Math.round(d.temperature_2m_max[i]),
+      low_f: Math.round(d.temperature_2m_min[i]),
+      weathercode: d.weathercode[i],
+      rain_chance: d.precipitation_probability_max[i],
+      description: { en: 'See forecast', es: 'Ver pronóstico', pt: 'Ver previsão', fr: 'Voir prévisions' }
+    }));
+
+    // Build hourly (next 24h)
+    const now = new Date();
+    const currentHour = now.getHours();
+    CONTENT.weather.hourly = data.hourly.time.slice(currentHour, currentHour + 24).map((t, i) => ({
+      hour: new Date(t).getHours().toString().padStart(2,'0') + ':00',
+      temp_f: Math.round(data.hourly.temperature_2m[currentHour + i]),
+      weathercode: data.hourly.weathercode[currentHour + i],
+      rain_chance: data.hourly.precipitation_probability[currentHour + i]
+    }));
+
+    const fcCards = d.time.slice(0,5).map((date, i) => `
+      <div class="fc-mini">
+        <div class="fc-mini-day">${i === 0 ? 'Today' : DAYS[new Date(date).getDay()]}</div>
+        <div class="fc-mini-icon">${WEATHER_ICONS[d.weathercode[i]] || '🌤️'}</div>
+        <div class="fc-mini-hi">${Math.round(d.temperature_2m_max[i])}°</div>
+        <div class="fc-mini-lo">${Math.round(d.temperature_2m_min[i])}°</div>
+      </div>`).join('');
+
+    box.innerHTML = `
+      <div class="weather-preview">
+        <div class="wp-icon">${icon}</div>
+        <div>
+          <div class="wp-temp">${Math.round(c.temperature_2m)}°F</div>
+          <div class="wp-desc">Feels like ${Math.round(c.apparent_temperature)}° · Miami, FL</div>
+          <div class="wp-stats">
+            <div class="wp-stat"><span>${Math.round(c.relative_humidity_2m)}%</span>Humidity</div>
+            <div class="wp-stat"><span>${Math.round(c.windspeed_10m)} mph</span>Wind</div>
+            <div class="wp-stat"><span>Fetched now</span>Fresh</div>
+          </div>
+        </div>
+        <div class="forecast-mini">${fcCards}</div>
+      </div>`;
+    showToast('Weather updated ✓');
+  } catch (e) {
+    box.innerHTML = '<div style="font-size:12px;color:var(--red);padding:8px 0">⚠️ Could not fetch weather. Check internet connection.</div>';
+    showToast('Weather fetch failed', 'error');
+  }
+}
+
+// ══════════════════════════════════════════════════════
+// HANDYMAN
+// ══════════════════════════════════════════════════════
+function renderHandyman() {
+  if (!CONTENT || !CONTENT.ads || !CONTENT.ads.handyman) return;
+  const h = CONTENT.ads.handyman;
+  document.getElementById('handyman-toggle').classList.toggle('on', h.enabled);
+  document.getElementById('hm-headline-en').value = h.headline.en || '';
+  document.getElementById('hm-headline-es').value = h.headline.es || '';
+  document.getElementById('hm-headline-pt').value = h.headline.pt || '';
+  document.getElementById('hm-headline-fr').value = h.headline.fr || '';
+  document.getElementById('hm-body-en').value = h.body.en || '';
+  document.getElementById('hm-phone').value = h.phone || '';
+  document.getElementById('hm-website').value = h.website || '';
+}
+
+function saveHandyman() {
+  if (!CONTENT.ads) CONTENT.ads = {};
+  if (!CONTENT.ads.handyman) CONTENT.ads.handyman = {};
+  CONTENT.ads.handyman = {
+    ...CONTENT.ads.handyman,
+    enabled: document.getElementById('handyman-toggle').classList.contains('on'),
+    headline: {
+      en: document.getElementById('hm-headline-en').value.trim(),
+      es: document.getElementById('hm-headline-es').value.trim(),
+      pt: document.getElementById('hm-headline-pt').value.trim(),
+      fr: document.getElementById('hm-headline-fr').value.trim(),
+    },
+    body: {
+      en: document.getElementById('hm-body-en').value.trim(),
+      es: CONTENT.ads.handyman.body?.es || '',
+      pt: CONTENT.ads.handyman.body?.pt || '',
+      fr: CONTENT.ads.handyman.body?.fr || '',
+    },
+    phone: document.getElementById('hm-phone').value.trim(),
+    website: document.getElementById('hm-website').value.trim(),
+  };
+  showToast('Handyman card saved — hit Publish to go live');
+}
+
+// ══════════════════════════════════════════════════════
+// SPONSORED
+// ══════════════════════════════════════════════════════
+function loadSponsoredSlots() {
+  if (!CONTENT) return;
+  const slots = CONTENT.ads?.sponsored || [{id:'s001',enabled:false},{id:'s002',enabled:false}];
+  const container = document.getElementById('sponsored-slots');
+  container.innerHTML = slots.map((s, i) => `
+    <div class="sponsored-slot ${s.enabled ? 'active-slot' : ''}" id="slot-${s.id}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="font-size:13px;font-weight:600;color:var(--navy)">Slot ${i+1} ${s.enabled ? '· Active' : '· Empty'}</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:11px;color:var(--muted)">Active</span>
+          <button class="toggle ${s.enabled ? 'on' : ''}" onclick="this.classList.toggle('on')"></button>
+        </div>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label>Business Name</label><input type="text" value="${s.name || ''}" placeholder="e.g. Gramps Bar"></div>
+        <div class="field"><label>URL</label><input type="url" value="${s.url || ''}" placeholder="https://"></div>
+      </div>
+      <div class="field"><label>Description (English)</label><textarea placeholder="1–2 sentences about the business…">${s.headline?.en || ''}</textarea></div>
+    </div>`).join('');
+}
+
+// ══════════════════════════════════════════════════════
+// ANALYTICS
+// ══════════════════════════════════════════════════════
+function loadAnalytics() {
+  // Try to load from analytics.json (synced from iPad)
+  fetch('/analytics.json?t=' + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      if (data.weeks && data.weeks.length > 0) {
+        const latest = data.weeks[data.weeks.length - 1];
+        document.getElementById('stat-sessions').textContent = latest.sessions || 0;
+        document.getElementById('stat-duration').textContent = latest.avgDuration ? formatDuration(latest.avgDuration) : '—';
+        document.getElementById('stat-handyman').textContent = latest.handymanTaps || 0;
+        document.getElementById('stat-qr').textContent = latest.qrTaps || 0;
+        if (latest.topVenues && latest.topVenues.length) renderTopVenues(latest.topVenues);
+      } else {
+        document.getElementById('stat-sessions').textContent = '0';
+        document.getElementById('stat-sessions-d').textContent = 'No data yet — sync from iPad';
+      }
+    })
+    .catch(() => {
+      document.getElementById('stat-sessions').textContent = '—';
+      document.getElementById('stat-sessions-d').textContent = 'analytics.json not found';
+    });
+}
+
+function renderTopVenues(venues) {
+  const ranks = ['g','s','b'];
+  const medals = ['1','2','3'];
+  document.getElementById('venue-tops').innerHTML = venues.slice(0,5).map((v, i) => `
+    <div class="top-row">
+      <div class="top-rank ${ranks[i] || ''}">${medals[i] || i+1}</div>
+      <div class="top-name">${v.name}</div>
+      <div class="top-count">${v.taps} taps</div>
+    </div>`).join('');
+}
+
+function formatDuration(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return `${m}m${s.toString().padStart(2,'0')}s`;
+}
+
+// ══════════════════════════════════════════════════════
+// AI (Claude API)
+// ══════════════════════════════════════════════════════
+async function callClaude(prompt) {
+  const key = localStorage.getItem('anthropicKey');
+  if (!key) {
+    showToast('Add Anthropic API key in Settings first', 'error');
+    return null;
+  }
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 800,
+      messages: [{ role: 'user', content: prompt }]
+    })
+  });
+  if (!res.ok) throw new Error('API error ' + res.status);
+  const data = await res.json();
+  return data.content[0].text;
+}
+
+async function aiTranslateVenue() {
+  const enText = document.getElementById('vm-desc-en').value.trim();
+  if (!enText) return showToast('Add an English description first', 'error');
+  const venueName = document.getElementById('vm-name').value.trim();
+  showToast('Translating with Claude…');
+  try {
+    const result = await callClaude(
+      `Translate this venue description for "${venueName}" into Spanish, Portuguese (Brazilian), and French.
+Return ONLY a JSON object like: {"es":"...","pt":"...","fr":"..."}
+Keep it natural, warm, and conversational. Under 2 sentences each.
+English original: "${enText}"`
+    );
+    const clean = result.replace(/```json|```/g, '').trim();
+    const parsed = JSON.parse(clean);
+    if (parsed.es) document.getElementById('vm-desc-es').value = parsed.es;
+    if (parsed.pt) document.getElementById('vm-desc-pt').value = parsed.pt;
+    if (parsed.fr) document.getElementById('vm-desc-fr').value = parsed.fr;
+    showToast('Translated into ES, PT, FR ✓');
+  } catch (e) {
+    showToast('Translation failed — check API key', 'error');
+  }
+}
+
+async function aiTranslateVenueQuick(id) {
+  const v = CONTENT.guide.venues.find(x => x.id === id);
+  if (!v || !v.description.en) return showToast('No English description to translate', 'error');
+  showToast('Translating…');
+  try {
+    const result = await callClaude(
+      `Translate this venue description for "${v.name}" into Spanish, Portuguese (Brazilian), and French.
+Return ONLY a JSON object: {"es":"...","pt":"...","fr":"..."}
+English: "${v.description.en}"`
+    );
+    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    if (parsed.es) v.description.es = parsed.es;
+    if (parsed.pt) v.description.pt = parsed.pt;
+    if (parsed.fr) v.description.fr = parsed.fr;
+    showToast(`${v.name} translated ✓`);
+  } catch (e) {
+    showToast('Translation failed', 'error');
+  }
+}
+
+async function aiTranslateHandyman() {
+  const enText = document.getElementById('hm-body-en').value.trim();
+  if (!enText) return showToast('Add English body text first', 'error');
+  showToast('Translating…');
+  try {
+    const result = await callClaude(
+      `Translate this handyman service description into Spanish, Portuguese (Brazilian), and French.
+Return ONLY JSON: {"es":"...","pt":"...","fr":"..."}
+English: "${enText}"`
+    );
+    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    if (!CONTENT.ads.handyman.body) CONTENT.ads.handyman.body = {};
+    if (parsed.es) CONTENT.ads.handyman.body.es = parsed.es;
+    if (parsed.pt) CONTENT.ads.handyman.body.pt = parsed.pt;
+    if (parsed.fr) CONTENT.ads.handyman.body.fr = parsed.fr;
+    showToast('Handyman text translated ✓');
+  } catch (e) {
+    showToast('Translation failed', 'error');
+  }
+}
+
+async function aiTranslateEvent() {
+  const enTitle = document.getElementById('new-event-title-en').value.trim();
+  const enDesc = document.getElementById('new-event-desc-en').value.trim();
+  if (!enTitle) return showToast('Add a title first', 'error');
+  showToast('Translating event…');
+  try {
+    const result = await callClaude(
+      `Translate this Miami event into Spanish, Portuguese (Brazilian), and French.
+Return ONLY JSON: {"title_es":"...","title_pt":"...","title_fr":"...","desc_es":"...","desc_pt":"...","desc_fr":"..."}
+Title: "${enTitle}"
+Description: "${enDesc}"`
+    );
+    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    showToast('Event translated — save it to apply ✓');
+    return parsed;
+  } catch (e) {
+    showToast('Translation failed', 'error');
+    return null;
+  }
+}
+
+async function aiTranslateEventQuick(id) {
+  const e = CONTENT.guide.events.find(x => x.id === id);
+  if (!e) return;
+  showToast('Translating…');
+  try {
+    const result = await callClaude(
+      `Translate this Miami event into Spanish, Portuguese (Brazilian), and French.
+Return ONLY JSON: {"title_es":"...","title_pt":"...","title_fr":"...","desc_es":"...","desc_pt":"...","desc_fr":"..."}
+Title: "${e.title.en}"
+Description: "${e.description.en}"`
+    );
+    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    e.title.es = parsed.title_es || '';
+    e.title.pt = parsed.title_pt || '';
+    e.title.fr = parsed.title_fr || '';
+    e.description.es = parsed.desc_es || '';
+    e.description.pt = parsed.desc_pt || '';
+    e.description.fr = parsed.desc_fr || '';
+    showToast('Event translated ✓');
+  } catch (e) {
+    showToast('Translation failed', 'error');
+  }
+}
+
+// ══════════════════════════════════════════════════════
+// SETTINGS
+// ══════════════════════════════════════════════════════
+function loadSettings() {
+  const gh = JSON.parse(localStorage.getItem('githubSettings') || '{}');
+  if (gh.token) document.getElementById('gh-token').value = gh.token;
+  if (gh.owner) document.getElementById('gh-owner').value = gh.owner;
+  if (gh.repo) document.getElementById('gh-repo').value = gh.repo;
+  if (gh.branch) document.getElementById('gh-branch').value = gh.branch;
+  const ak = localStorage.getItem('anthropicKey');
+  if (ak) document.getElementById('anthropic-key').value = ak;
+}
+
+function saveGitHubSettings() {
+  const settings = {
+    token: document.getElementById('gh-token').value.trim(),
+    owner: document.getElementById('gh-owner').value.trim(),
+    repo: document.getElementById('gh-repo').value.trim(),
+    branch: document.getElementById('gh-branch').value.trim() || 'main',
+  };
+  if (!settings.token || !settings.owner || !settings.repo) {
+    return showToast('Fill in all GitHub fields', 'error');
+  }
+  localStorage.setItem('githubSettings', JSON.stringify(settings));
+  showToast('GitHub settings saved ✓');
+}
+
+function saveAnthropicKey() {
+  const key = document.getElementById('anthropic-key').value.trim();
+  if (!key) return showToast('Enter an API key', 'error');
+  localStorage.setItem('anthropicKey', key);
+  showToast('API key saved ✓');
+}
+
+// ══════════════════════════════════════════════════════
+// PUBLISH
+// ══════════════════════════════════════════════════════
+async function publishContent() {
+  const gh = JSON.parse(localStorage.getItem('githubSettings') || '{}');
+  if (!gh.token || !gh.owner || !gh.repo) {
+    showPanel('settings');
+    return showToast('Set up GitHub settings first', 'error');
+  }
+
+  const btn = document.getElementById('publish-btn-nav');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div> Publishing…';
+
+  try {
+    // Update meta
+    CONTENT.meta.lastUpdated = new Date().toISOString();
+
+    const contentStr = JSON.stringify(CONTENT, null, 2);
+    const encoded = btoa(unescape(encodeURIComponent(contentStr)));
+
+    // Get current file SHA (needed for update)
+    const shaRes = await fetch(
+      `https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/public/content.json`,
+      { headers: { Authorization: `token ${gh.token}`, Accept: 'application/vnd.github.v3+json' } }
+    );
+    const shaData = await shaRes.json();
+    const sha = shaData.sha;
+
+    // Commit updated content.json
+    const commitRes = await fetch(
+      `https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/public/content.json`,
+      {
+        method: 'PUT',
+        headers: {
+          Authorization: `token ${gh.token}`,
+          Accept: 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: `Update content.json — ${new Date().toLocaleString()}`,
+          content: encoded,
+          sha,
+          branch: gh.branch || 'main',
+        })
+      }
+    );
+
+    if (!commitRes.ok) {
+      const err = await commitRes.json();
+      throw new Error(err.message || 'GitHub API error');
+    }
+
+    updateLastPub();
+    showToast('Published! Netlify will deploy in ~30 seconds ✓');
+  } catch (e) {
+    showToast('Publish failed: ' + e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="ti ti-cloud-upload"></i>Save & Publish';
+  }
+}
+
+// ══════════════════════════════════════════════════════
+// TOAST
+// ══════════════════════════════════════════════════════
+let toastTimer = null;
+function showToast(msg, type = 'success') {
+  clearTimeout(toastTimer);
+  const toast = document.getElementById('toast');
+  const icon = toast.querySelector('i');
+  document.getElementById('toast-msg').textContent = msg;
+  icon.className = type === 'error' ? 'ti ti-alert-circle' : 'ti ti-check';
+  toast.className = 'toast show ' + type;
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+}
+</script>
+</body>
+</html>
