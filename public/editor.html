@@ -991,13 +991,34 @@ async function fetchWeather() {
       rain_chance: d.precipitation_probability_max[0] || 0,
       weathercode: c.weathercode
     };
+
+    // Map weathercodes to real descriptions in all 4 languages
+    const WD = {
+      0:  { en:'Clear skies',           es:'Cielo despejado',        pt:'Céu limpo',              fr:'Ciel dégagé' },
+      1:  { en:'Mainly clear',          es:'Mayormente despejado',   pt:'Principalmente limpo',   fr:'Principalement dégagé' },
+      2:  { en:'Partly cloudy',         es:'Parcialmente nublado',   pt:'Parcialmente nublado',   fr:'Partiellement nuageux' },
+      3:  { en:'Overcast',              es:'Nublado',                pt:'Encoberto',              fr:'Couvert' },
+      45: { en:'Foggy',                 es:'Neblina',                pt:'Nevoeiro',               fr:'Brumeux' },
+      48: { en:'Icy fog',               es:'Niebla helada',          pt:'Nevoeiro gelado',        fr:'Brouillard givrant' },
+      51: { en:'Light drizzle',         es:'Llovizna ligera',        pt:'Chuvisco leve',          fr:'Bruine légère' },
+      61: { en:'Light rain',            es:'Lluvia ligera',          pt:'Chuva leve',             fr:'Pluie légère' },
+      63: { en:'Moderate rain',         es:'Lluvia moderada',        pt:'Chuva moderada',         fr:'Pluie modérée' },
+      65: { en:'Heavy rain',            es:'Lluvia intensa',         pt:'Chuva forte',            fr:'Pluie forte' },
+      71: { en:'Light snow',            es:'Nieve ligera',           pt:'Neve leve',              fr:'Neige légère' },
+      80: { en:'Rain showers',          es:'Chubascos',              pt:'Aguaceiros',             fr:'Averses' },
+      81: { en:'Moderate showers',      es:'Chubascos moderados',    pt:'Aguaceiros moderados',   fr:'Averses modérées' },
+      95: { en:'Thunderstorm',          es:'Tormenta eléctrica',     pt:'Trovoada',               fr:'Orage' },
+      99: { en:'Heavy thunderstorm',    es:'Tormenta intensa',       pt:'Trovoada intensa',       fr:'Orage violent' },
+    };
+    const getDesc = (code) => WD[code] || WD[Math.floor(code/10)*10] || { en:'Partly cloudy', es:'Parcialmente nublado', pt:'Parcialmente nublado', fr:'Partiellement nuageux' };
+
     CONTENT.weather.forecast = d.time.slice(0,5).map((date, i) => ({
       date,
       high_f: Math.round(d.temperature_2m_max[i]),
       low_f: Math.round(d.temperature_2m_min[i]),
       weathercode: d.weathercode[i],
       rain_chance: d.precipitation_probability_max[i],
-      description: { en: 'See forecast', es: 'Ver pronóstico', pt: 'Ver previsão', fr: 'Voir prévisions' }
+      description: getDesc(d.weathercode[i])
     }));
 
     // Build hourly (next 24h)
