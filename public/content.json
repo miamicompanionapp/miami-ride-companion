@@ -1,0 +1,485 @@
+{
+  "meta": {
+    "lastUpdated": "2026-05-26T07:04:00",
+    "publishedBy": "Abdullah",
+    "version": "1.0.0"
+  },
+
+  "weather": {
+    "fetchedAt": "2026-05-26T07:04:00",
+    "current": {
+      "temp_f": 84,
+      "feels_f": 89,
+      "description": {
+        "en": "Partly cloudy",
+        "es": "Parcialmente nublado",
+        "pt": "Parcialmente nublado",
+        "fr": "Partiellement nuageux"
+      },
+      "humidity": 74,
+      "wind_mph": 12,
+      "rain_chance": 15,
+      "weathercode": 2
+    },
+    "hourly": [
+      { "hour": "07:00", "temp_f": 79, "rain_chance": 5,  "weathercode": 1 },
+      { "hour": "08:00", "temp_f": 80, "rain_chance": 5,  "weathercode": 1 },
+      { "hour": "09:00", "temp_f": 81, "rain_chance": 8,  "weathercode": 2 },
+      { "hour": "10:00", "temp_f": 82, "rain_chance": 10, "weathercode": 2 },
+      { "hour": "11:00", "temp_f": 83, "rain_chance": 10, "weathercode": 2 },
+      { "hour": "12:00", "temp_f": 85, "rain_chance": 8,  "weathercode": 1 },
+      { "hour": "13:00", "temp_f": 86, "rain_chance": 10, "weathercode": 2 },
+      { "hour": "14:00", "temp_f": 84, "rain_chance": 15, "weathercode": 2 },
+      { "hour": "15:00", "temp_f": 83, "rain_chance": 25, "weathercode": 3 },
+      { "hour": "16:00", "temp_f": 81, "rain_chance": 40, "weathercode": 80 },
+      { "hour": "17:00", "temp_f": 79, "rain_chance": 55, "weathercode": 80 },
+      { "hour": "18:00", "temp_f": 78, "rain_chance": 60, "weathercode": 80 },
+      { "hour": "19:00", "temp_f": 77, "rain_chance": 45, "weathercode": 61 },
+      { "hour": "20:00", "temp_f": 76, "rain_chance": 30, "weathercode": 61 },
+      { "hour": "21:00", "temp_f": 76, "rain_chance": 20, "weathercode": 2 },
+      { "hour": "22:00", "temp_f": 75, "rain_chance": 15, "weathercode": 1 },
+      { "hour": "23:00", "temp_f": 75, "rain_chance": 10, "weathercode": 1 },
+      { "hour": "00:00", "temp_f": 74, "rain_chance": 8,  "weathercode": 0 },
+      { "hour": "01:00", "temp_f": 74, "rain_chance": 5,  "weathercode": 0 },
+      { "hour": "02:00", "temp_f": 73, "rain_chance": 5,  "weathercode": 0 },
+      { "hour": "03:00", "temp_f": 73, "rain_chance": 5,  "weathercode": 0 },
+      { "hour": "04:00", "temp_f": 72, "rain_chance": 5,  "weathercode": 0 },
+      { "hour": "05:00", "temp_f": 72, "rain_chance": 5,  "weathercode": 0 },
+      { "hour": "06:00", "temp_f": 73, "rain_chance": 5,  "weathercode": 1 }
+    ],
+    "forecast": [
+      {
+        "date": "2026-05-26",
+        "high_f": 87,
+        "low_f": 75,
+        "weathercode": 2,
+        "rain_chance": 40,
+        "description": {
+          "en": "Partly cloudy, afternoon showers",
+          "es": "Parcialmente nublado, chubascos por la tarde",
+          "pt": "Parcialmente nublado, chuvas à tarde",
+          "fr": "Partiellement nuageux, averses l'après-midi"
+        }
+      },
+      {
+        "date": "2026-05-27",
+        "high_f": 89,
+        "low_f": 76,
+        "weathercode": 1,
+        "rain_chance": 5,
+        "description": {
+          "en": "Sunny and warm",
+          "es": "Soleado y cálido",
+          "pt": "Ensolarado e quente",
+          "fr": "Ensoleillé et chaud"
+        }
+      },
+      {
+        "date": "2026-05-28",
+        "high_f": 88,
+        "low_f": 74,
+        "weathercode": 1,
+        "rain_chance": 10,
+        "description": {
+          "en": "Mostly clear, light breeze",
+          "es": "Mayormente despejado, brisa ligera",
+          "pt": "Principalmente limpo, brisa leve",
+          "fr": "Mostly clair, légère brise"
+        }
+      },
+      {
+        "date": "2026-05-29",
+        "high_f": 82,
+        "low_f": 73,
+        "weathercode": 95,
+        "rain_chance": 75,
+        "description": {
+          "en": "Scattered thunderstorms",
+          "es": "Tormentas dispersas",
+          "pt": "Tempestades dispersas",
+          "fr": "Orages dispersés"
+        }
+      },
+      {
+        "date": "2026-05-30",
+        "high_f": 85,
+        "low_f": 74,
+        "weathercode": 2,
+        "rain_chance": 20,
+        "description": {
+          "en": "Partly cloudy, humid",
+          "es": "Parcialmente nublado, húmedo",
+          "pt": "Parcialmente nublado, húmido",
+          "fr": "Partiellement nuageux, humide"
+        }
+      }
+    ]
+  },
+
+  "guide": {
+    "venues": [
+      {
+        "id": "v001",
+        "category": "restaurant",
+        "name": "Versailles Restaurant",
+        "neighborhood": "Little Havana",
+        "price": "$$",
+        "address": "3555 SW 8th St, Miami, FL 33135",
+        "lat": 25.7663,
+        "lng": -80.2324,
+        "website": "https://versaillesrestaurant.com",
+        "abdullahsPick": true,
+        "featured": false,
+        "sponsored": false,
+        "description": {
+          "en": "Miami's most iconic Cuban restaurant since 1971. Order the ropa vieja and a cortadito — you won't regret it.",
+          "es": "El restaurante cubano más icónico de Miami desde 1971. Pide la ropa vieja y un cortadito.",
+          "pt": "O restaurante cubano mais icônico de Miami desde 1971. Peça a ropa vieja e um cortadito.",
+          "fr": "Le restaurant cubain le plus emblématique de Miami depuis 1971. Commandez la ropa vieja et un cortadito."
+        },
+        "abdullahsNote": {
+          "en": "My personal favorite — the cortadito here is the best in Miami, no debate.",
+          "es": "Mi favorito personal — el cortadito aquí es el mejor de Miami, sin debate.",
+          "pt": "O meu favorito pessoal — o cortadito aqui é o melhor de Miami, sem debate.",
+          "fr": "Mon favori personnel — le cortadito ici est le meilleur de Miami, sans débat."
+        }
+      },
+      {
+        "id": "v002",
+        "category": "restaurant",
+        "name": "Kyu Miami",
+        "neighborhood": "Wynwood",
+        "price": "$$$",
+        "address": "251 NW 25th St, Miami, FL 33127",
+        "lat": 25.7989,
+        "lng": -80.1993,
+        "website": "https://kyurestaurants.com",
+        "abdullahsPick": false,
+        "featured": false,
+        "sponsored": false,
+        "description": {
+          "en": "Asian-inspired wood-fired cooking in the heart of Wynwood. The cauliflower and smoked lamb ribs are legendary.",
+          "es": "Cocina asiática a la leña en el corazón de Wynwood. La coliflor y las costillas de cordero ahumado son legendarias.",
+          "pt": "Culinária asiática assada em forno de lenha no coração de Wynwood. A couve-flor e as costelas de cordeiro defumado são lendárias.",
+          "fr": "Cuisine asiatique au feu de bois au cœur de Wynwood. Le chou-fleur et les côtes d'agneau fumées sont légendaires."
+        },
+        "abdullahsNote": null
+      },
+      {
+        "id": "v003",
+        "category": "restaurant",
+        "name": "Mandolin Aegean Bistro",
+        "neighborhood": "Upper East Side",
+        "price": "$$$",
+        "address": "4312 NE 2nd Ave, Miami, FL 33137",
+        "lat": 25.8178,
+        "lng": -80.1892,
+        "website": "https://mandolinmiami.com",
+        "abdullahsPick": true,
+        "featured": false,
+        "sponsored": false,
+        "description": {
+          "en": "Beautiful Greek and Turkish Aegean cuisine in a gorgeous garden setting. Feels like the Mediterranean coast.",
+          "es": "Hermosa cocina griega y turca del Egeo en un jardín precioso. Se siente como la costa mediterránea.",
+          "pt": "Bela cozinha grega e turca do Egeu num lindo jardim. Parece a costa mediterrânea.",
+          "fr": "Belle cuisine grecque et turque de la mer Égée dans un magnifique jardin. On se croirait sur la côte méditerranéenne."
+        },
+        "abdullahsNote": {
+          "en": "As someone from Turkey, this place feels like home. The mezze platter and grilled octopus are incredible.",
+          "es": "Como alguien de Turquía, este lugar se siente como casa. La bandeja de mezze y el pulpo a la parrilla son increíbles.",
+          "pt": "Como alguém da Turquia, este lugar parece casa. A travessa de mezze e o polvo grelhado são incríveis.",
+          "fr": "En tant que Turc, cet endroit me fait penser à la maison. Le plateau de mezze et le poulpe grillé sont incroyables."
+        }
+      },
+      {
+        "id": "v004",
+        "category": "nightlife",
+        "name": "Gramps",
+        "neighborhood": "Wynwood",
+        "price": "$$",
+        "address": "176 NW 24th St, Miami, FL 33127",
+        "lat": 25.7981,
+        "lng": -80.1988,
+        "website": "https://gramps.com",
+        "abdullahsPick": false,
+        "featured": true,
+        "sponsored": true,
+        "description": {
+          "en": "Laid-back Wynwood bar with a great outdoor patio, strong cocktails, and live music on weekends.",
+          "es": "Bar relajado en Wynwood con un gran patio al aire libre, cócteles fuertes y música en vivo los fines de semana.",
+          "pt": "Bar descontraído em Wynwood com um ótimo pátio ao ar livre, coquetéis fortes e música ao vivo nos fins de semana.",
+          "fr": "Bar décontracté à Wynwood avec une superbe terrasse, des cocktails forts et de la musique live le week-end."
+        },
+        "abdullahsNote": null
+      },
+      {
+        "id": "v005",
+        "category": "attraction",
+        "name": "Wynwood Walls",
+        "neighborhood": "Wynwood",
+        "price": "Free",
+        "address": "2520 NW 2nd Ave, Miami, FL 33127",
+        "lat": 25.8003,
+        "lng": -80.1996,
+        "website": "https://wynwoodwalls.com",
+        "abdullahsPick": true,
+        "featured": false,
+        "sponsored": false,
+        "description": {
+          "en": "Open-air museum of world-class street murals. Free to walk through — one of Miami's most photographed spots.",
+          "es": "Museo al aire libre de murales callejeros de clase mundial. Gratis para caminar — uno de los lugares más fotografiados de Miami.",
+          "pt": "Museu ao ar livre de murais de rua de classe mundial. Gratuito para caminhar — um dos lugares mais fotografados de Miami.",
+          "fr": "Musée en plein air de fresques murales de classe mondiale. Accès gratuit — l'un des endroits les plus photographiés de Miami."
+        },
+        "abdullahsNote": {
+          "en": "I bring every out-of-town guest here. It's always different — the murals change throughout the year.",
+          "es": "Traigo a todos mis invitados de fuera aquí. Siempre es diferente — los murales cambian durante el año.",
+          "pt": "Trago todos os meus convidados de fora aqui. É sempre diferente — os murais mudam ao longo do ano.",
+          "fr": "J'emmène tous mes invités de l'extérieur ici. C'est toujours différent — les fresques changent au fil de l'année."
+        }
+      },
+      {
+        "id": "v006",
+        "category": "attraction",
+        "name": "South Beach — Ocean Drive",
+        "neighborhood": "South Beach",
+        "price": "Free",
+        "address": "Ocean Dr, Miami Beach, FL 33139",
+        "lat": 25.7751,
+        "lng": -80.1300,
+        "website": "https://miamibeach.com",
+        "abdullahsPick": false,
+        "featured": false,
+        "sponsored": false,
+        "description": {
+          "en": "Miami's crown jewel. Iconic Art Deco architecture, white sand, turquoise water. Best visited early morning or at sunset.",
+          "es": "La joya de la corona de Miami. Arquitectura Art Deco icónica, arena blanca, agua turquesa. Mejor visitarla temprano o al atardecer.",
+          "pt": "A joia da coroa de Miami. Arquitetura Art Déco icônica, areia branca, água turquesa. Melhor visitar cedo ou ao pôr do sol.",
+          "fr": "Le joyau de Miami. Architecture Art Déco iconique, sable blanc, eau turquoise. À visiter tôt le matin ou au coucher du soleil."
+        },
+        "abdullahsNote": null
+      },
+      {
+        "id": "v007",
+        "category": "gem",
+        "name": "El Mago de las Fritas",
+        "neighborhood": "Little Havana",
+        "price": "$",
+        "address": "5828 SW 8th St, Miami, FL 33144",
+        "lat": 25.7656,
+        "lng": -80.2891,
+        "website": null,
+        "abdullahsPick": true,
+        "featured": false,
+        "sponsored": false,
+        "description": {
+          "en": "A hidden gem — the best Cuban hamburger (frita) in Miami. Cash only, tiny spot, enormous flavor.",
+          "es": "Una joya escondida — la mejor hamburguesa cubana (frita) de Miami. Solo efectivo, lugar pequeño, enorme sabor.",
+          "pt": "Uma joia escondida — o melhor hambúrguer cubano (frita) de Miami. Só dinheiro, lugar pequeno, enorme sabor.",
+          "fr": "Un joyau caché — le meilleur hamburger cubain (frita) de Miami. Espèces uniquement, petit endroit, énorme saveur."
+        },
+        "abdullahsNote": {
+          "en": "Nobody knows this place. My passengers always thank me for the tip. Get the frita with chorizo.",
+          "es": "Nadie conoce este lugar. Mis pasajeros siempre me agradecen el consejo. Pide la frita con chorizo.",
+          "pt": "Ninguém conhece este lugar. Os meus passageiros agradecem sempre a dica. Peça a frita com chouriço.",
+          "fr": "Personne ne connaît cet endroit. Mes passagers me remercient toujours pour le tuyau. Prenez la frita au chorizo."
+        }
+      },
+      {
+        "id": "v008",
+        "category": "gem",
+        "name": "The Underline",
+        "neighborhood": "Brickell",
+        "price": "Free",
+        "address": "Brickell Ave, Miami, FL 33129",
+        "lat": 25.7484,
+        "lng": -80.1936,
+        "website": "https://theunderline.org",
+        "abdullahsPick": false,
+        "featured": false,
+        "sponsored": false,
+        "description": {
+          "en": "A linear park and trail under the Metrorail from Brickell to South Miami. Beautiful for walking, biking, or just sitting.",
+          "es": "Un parque lineal y sendero bajo el Metrorail desde Brickell hasta South Miami. Hermoso para caminar, andar en bicicleta o simplemente sentarse.",
+          "pt": "Um parque linear e trilha sob o Metrorail de Brickell a South Miami. Lindo para caminhar, andar de bicicleta ou simplesmente sentar.",
+          "fr": "Un parc linéaire et sentier sous le Metrorail de Brickell à South Miami. Magnifique pour marcher, faire du vélo ou simplement s'asseoir."
+        },
+        "abdullahsNote": null
+      }
+    ],
+
+    "events": [
+      {
+        "id": "e001",
+        "title": {
+          "en": "Wynwood Music Series",
+          "es": "Serie de Música de Wynwood",
+          "pt": "Série de Música de Wynwood",
+          "fr": "Série Musicale de Wynwood"
+        },
+        "date": "2026-05-29",
+        "venue": "Wynwood Walls",
+        "address": "2520 NW 2nd Ave, Miami",
+        "url": "https://wynwoodwalls.com",
+        "free": true,
+        "description": {
+          "en": "Live music every Friday night in the heart of Wynwood. Free entry, great atmosphere.",
+          "es": "Música en vivo cada viernes por la noche en el corazón de Wynwood. Entrada gratuita, gran ambiente.",
+          "pt": "Música ao vivo todas as sextas-feiras à noite no coração de Wynwood. Entrada gratuita, ótima atmosfera.",
+          "fr": "Musique live chaque vendredi soir au cœur de Wynwood. Entrée gratuite, super ambiance."
+        }
+      },
+      {
+        "id": "e002",
+        "title": {
+          "en": "Viernes Culturales — Cultural Fridays",
+          "es": "Viernes Culturales",
+          "pt": "Viernes Culturales — Sextas Culturais",
+          "fr": "Viernes Culturales — Vendredis Culturels"
+        },
+        "date": "2026-05-29",
+        "venue": "Little Havana",
+        "address": "SW 8th St (Calle Ocho), Miami",
+        "url": "https://viernesculturales.org",
+        "free": true,
+        "description": {
+          "en": "Monthly street festival on the last Friday of the month along Calle Ocho. Live music, art, food, and Cuban culture.",
+          "es": "Festival callejero mensual el último viernes del mes en la Calle Ocho. Música en vivo, arte, comida y cultura cubana.",
+          "pt": "Festival de rua mensal na última sexta-feira do mês na Calle Ocho. Música ao vivo, arte, comida e cultura cubana.",
+          "fr": "Festival de rue mensuel le dernier vendredi du mois sur Calle Ocho. Musique live, art, nourriture et culture cubaine."
+        }
+      },
+      {
+        "id": "e003",
+        "title": {
+          "en": "Art Deco Weekend",
+          "es": "Fin de Semana Art Deco",
+          "pt": "Fim de Semana Art Déco",
+          "fr": "Week-end Art Déco"
+        },
+        "date": "2026-05-30",
+        "venue": "Ocean Drive, South Beach",
+        "address": "Ocean Dr, Miami Beach",
+        "url": "https://mdpl.org",
+        "free": true,
+        "description": {
+          "en": "Celebrate Miami Beach's iconic architecture with tours, exhibitions, and live performances along Ocean Drive.",
+          "es": "Celebra la icónica arquitectura de Miami Beach con tours, exposiciones y actuaciones en vivo en Ocean Drive.",
+          "pt": "Celebre a icônica arquitetura de Miami Beach com visitas guiadas, exposições e apresentações ao vivo na Ocean Drive.",
+          "fr": "Célébrez l'architecture emblématique de Miami Beach avec des visites, des expositions et des spectacles vivants sur Ocean Drive."
+        }
+      }
+    ]
+  },
+
+  "ads": {
+    "handyman": {
+      "enabled": true,
+      "name": "Abdullah",
+      "headline": {
+        "en": "Need a handyman in Miami?",
+        "es": "¿Necesitas un manitas en Miami?",
+        "pt": "Precisa de um faz-tudo em Miami?",
+        "fr": "Besoin d'un bricoleur à Miami ?"
+      },
+      "body": {
+        "en": "Your driver does that too — repairs, installations, general fixes. Ask me, or scan to save my contact.",
+        "es": "Tu conductor también hace eso — reparaciones, instalaciones, arreglos generales. Pregúntame, o escanea para guardar mi contacto.",
+        "pt": "O seu motorista também faz isso — reparações, instalações, consertos gerais. Pergunte-me, ou digitalize para guardar o meu contacto.",
+        "fr": "Votre chauffeur fait ça aussi — réparations, installations, bricolage général. Demandez-moi, ou scannez pour sauvegarder mon contact."
+      },
+      "phone": "+1-305-000-0000",
+      "website": ""
+    },
+    "sponsored": [
+      {
+        "id": "s001",
+        "enabled": false,
+        "name": "",
+        "headline": { "en": "", "es": "", "pt": "", "fr": "" },
+        "body": { "en": "", "es": "", "pt": "", "fr": "" },
+        "url": ""
+      },
+      {
+        "id": "s002",
+        "enabled": false,
+        "name": "",
+        "headline": { "en": "", "es": "", "pt": "", "fr": "" },
+        "body": { "en": "", "es": "", "pt": "", "fr": "" },
+        "url": ""
+      }
+    ]
+  },
+
+  "strings": {
+    "greeting": {
+      "morning":   { "en": "Good morning — welcome aboard", "es": "Buenos días — bienvenido a bordo", "pt": "Bom dia — bem-vindo a bordo", "fr": "Bonjour — bienvenue à bord" },
+      "afternoon": { "en": "Good afternoon — welcome aboard", "es": "Buenas tardes — bienvenido a bordo", "pt": "Boa tarde — bem-vindo a bordo", "fr": "Bon après-midi — bienvenue à bord" },
+      "evening":   { "en": "Good evening — welcome aboard", "es": "Buenas noches — bienvenido a bordo", "pt": "Boa noite — bem-vindo a bordo", "fr": "Bonsoir — bienvenue à bord" },
+      "night":     { "en": "Good night — welcome aboard", "es": "Buenas noches — bienvenido a bordo", "pt": "Boa noite — bem-vindo a bordo", "fr": "Bonne nuit — bienvenue à bord" }
+    },
+    "guide": {
+      "nearestTo":    { "en": "Nearest to you", "es": "Más cercano a ti", "pt": "Mais próximo de você", "fr": "Le plus proche de vous" },
+      "miles":        { "en": "mi", "es": "mi", "pt": "mi", "fr": "km" },
+      "free":         { "en": "Free", "es": "Gratis", "pt": "Gratuito", "fr": "Gratuit" },
+      "abdullahsPick":{ "en": "Abdullah's pick", "es": "Elección de Abdullah", "pt": "Escolha de Abdullah", "fr": "Choix d'Abdullah" },
+      "sponsored":    { "en": "Sponsored", "es": "Patrocinado", "pt": "Patrocinado", "fr": "Sponsorisé" },
+      "qrHint":       { "en": "Scan to open on your phone", "es": "Escanea para abrir en tu teléfono", "pt": "Digitalize para abrir no seu telemóvel", "fr": "Scannez pour ouvrir sur votre téléphone" },
+      "openOnPhone":  { "en": "Open on your phone", "es": "Abrir en tu teléfono", "pt": "Abrir no seu telemóvel", "fr": "Ouvrir sur votre téléphone" }
+    },
+    "weather": {
+      "updatedAt":    { "en": "Synced", "es": "Sincronizado", "pt": "Sincronizado", "fr": "Synchronisé" },
+      "feelsLike":    { "en": "Feels like", "es": "Sensación de", "pt": "Sensação de", "fr": "Ressenti" },
+      "humidity":     { "en": "Humidity", "es": "Humedad", "pt": "Humidade", "fr": "Humidité" },
+      "wind":         { "en": "Wind", "es": "Viento", "pt": "Vento", "fr": "Vent" },
+      "rain":         { "en": "Rain", "es": "Lluvia", "pt": "Chuva", "fr": "Pluie" },
+      "high":         { "en": "High", "es": "Máx", "pt": "Máx", "fr": "Max" },
+      "low":          { "en": "Low", "es": "Mín", "pt": "Mín", "fr": "Min" },
+      "staleNotice":  { "en": "Last synced", "es": "Última sincronización", "pt": "Última sincronização", "fr": "Dernière synchronisation" },
+      "connectWifi":  { "en": "Connect to Wi-Fi before your next shift for a fresher forecast.", "es": "Conéctate al Wi-Fi antes de tu próximo turno para un pronóstico más actualizado.", "pt": "Ligue-se ao Wi-Fi antes do seu próximo turno para uma previsão mais atualizada.", "fr": "Connectez-vous au Wi-Fi avant votre prochain service pour des prévisions plus récentes." },
+      "forecast":     { "en": "5-Day Forecast", "es": "Pronóstico de 5 días", "pt": "Previsão de 5 dias", "fr": "Prévisions sur 5 jours" },
+      "hourly":       { "en": "Hourly · Today", "es": "Por hora · Hoy", "pt": "Por hora · Hoje", "fr": "Horaire · Aujourd'hui" },
+      "now":          { "en": "Now", "es": "Ahora", "pt": "Agora", "fr": "Maintenant" }
+    },
+    "games": {
+      "title":        { "en": "Games", "es": "Juegos", "pt": "Jogos", "fr": "Jeux" },
+      "sub":          { "en": "Pick something to play — no internet needed", "es": "Elige algo para jugar — sin internet necesario", "pt": "Escolha algo para jogar — sem internet necessária", "fr": "Choisissez quelque chose à jouer — pas besoin d'internet" },
+      "playNow":      { "en": "Play now", "es": "Jugar ahora", "pt": "Jogar agora", "fr": "Jouer maintenant" },
+      "mostPopular":  { "en": "Most popular", "es": "Más popular", "pt": "Mais popular", "fr": "Le plus populaire" },
+      "minutes":      { "en": "min", "es": "min", "pt": "min", "fr": "min" },
+      "seconds":      { "en": "sec", "es": "seg", "pt": "seg", "fr": "sec" },
+      "anyTime":      { "en": "Any time", "es": "Cualquier momento", "pt": "A qualquer hora", "fr": "N'importe quand" },
+      "players":      { "en": "players", "es": "jugadores", "pt": "jogadores", "fr": "joueurs" }
+    },
+    "footer": {
+      "tip":          { "en": "Enjoying the ride? Tips are always appreciated", "es": "¿Disfrutando el viaje? Las propinas siempre son apreciadas", "pt": "A gostar da viagem? As gorjetas são sempre apreciadas", "fr": "Vous appréciez le trajet ? Les pourboires sont toujours les bienvenus" },
+      "claude":       { "en": "Built with Claude AI · ask your driver", "es": "Creado con Claude AI · pregunta a tu conductor", "pt": "Criado com Claude AI · pergunte ao seu motorista", "fr": "Créé avec Claude AI · demandez à votre chauffeur" }
+    },
+    "inactivity": {
+      "title":        { "en": "Still browsing?", "es": "¿Sigues navegando?", "pt": "Ainda a navegar?", "fr": "Vous naviguez encore ?" },
+      "body":         { "en": "The screen will reset to the home page shortly to be ready for the next passenger.", "es": "La pantalla se restablecerá a la página de inicio en breve para estar lista para el próximo pasajero.", "pt": "O ecrã voltará à página inicial em breve para ficar pronto para o próximo passageiro.", "fr": "L'écran va bientôt revenir à la page d'accueil pour être prêt pour le prochain passager." },
+      "cta":          { "en": "Tap anywhere to keep browsing", "es": "Toca en cualquier lugar para seguir navegando", "pt": "Toque em qualquer lugar para continuar a navegar", "fr": "Appuyez n'importe où pour continuer à naviguer" },
+      "orWait":       { "en": "or wait to reset", "es": "o espera para reiniciar", "pt": "ou aguarde para reiniciar", "fr": "ou attendez la réinitialisation" }
+    },
+    "thanks": {
+      "title":        { "en": "Thanks for riding!", "es": "¡Gracias por viajar!", "pt": "Obrigado pela viagem!", "fr": "Merci d'avoir voyagé !" },
+      "body":         { "en": "Hope you enjoyed the guide. Have a wonderful time in Miami.", "es": "Espero que hayas disfrutado la guía. Que tengas un tiempo maravilloso en Miami.", "pt": "Espero que tenha gostado do guia. Tenha um tempo maravilhoso em Miami.", "fr": "J'espère que vous avez apprécié le guide. Passez un merveilleux séjour à Miami." },
+      "tip":          { "en": "If you enjoyed the ride, a tip in the Lyft app goes a long way — it means the world to your driver.", "es": "Si disfrutaste el viaje, una propina en la app de Lyft significa mucho — es todo para tu conductor.", "pt": "Se gostou da viagem, uma gorjeta na app do Lyft faz toda a diferença — significa tudo para o seu motorista.", "fr": "Si vous avez apprécié le trajet, un pourboire dans l'app Lyft compte énormément — cela signifie tout pour votre chauffeur." },
+      "resetting":    { "en": "Resetting in 5 seconds…", "es": "Reiniciando en 5 segundos…", "pt": "A reiniciar em 5 segundos…", "fr": "Réinitialisation dans 5 secondes…" }
+    },
+    "nav": {
+      "guide":        { "en": "City Guide", "es": "Guía de Ciudad", "pt": "Guia da Cidade", "fr": "Guide de la Ville" },
+      "weather":      { "en": "Weather", "es": "Clima", "pt": "Tempo", "fr": "Météo" },
+      "games":        { "en": "Games", "es": "Juegos", "pt": "Jogos", "fr": "Jeux" }
+    },
+    "categories": {
+      "all":          { "en": "All", "es": "Todo", "pt": "Tudo", "fr": "Tout" },
+      "restaurant":   { "en": "Food", "es": "Comida", "pt": "Comida", "fr": "Nourriture" },
+      "nightlife":    { "en": "Nightlife", "es": "Vida Nocturna", "pt": "Vida Noturna", "fr": "Vie Nocturne" },
+      "attraction":   { "en": "Attractions", "es": "Atracciones", "pt": "Atrações", "fr": "Attractions" },
+      "gem":          { "en": "Hidden Gems", "es": "Joyas Ocultas", "pt": "Joias Escondidas", "fr": "Joyaux Cachés" },
+      "event":        { "en": "Events", "es": "Eventos", "pt": "Eventos", "fr": "Événements" },
+      "picks":        { "en": "Abdullah's Picks", "es": "Elecciones de Abdullah", "pt": "Escolhas de Abdullah", "fr": "Choix d'Abdullah" }
+    }
+  }
+}
