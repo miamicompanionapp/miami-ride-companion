@@ -143,7 +143,7 @@
   <div class="section-label">APIs</div>
   <div class="checks">
     <div class="check-row" id="chk-weather">
-      <div class="check-status idle" id="chk-weather-status"><i class="ti ti-cloud-sun"></i></div>
+      <div class="check-status idle" id="chk-weather-status"><i class="ti ti-cloud"></i></div>
       <div class="check-info">
         <div class="check-name">Open-Meteo weather API responding</div>
         <div class="check-detail" id="chk-weather-detail">Not checked yet</div>
@@ -195,7 +195,7 @@
       <div class="check-time" id="chk-events-time"></div>
     </div>
     <div class="check-row" id="chk-handyman">
-      <div class="check-status idle" id="chk-handyman-status"><i class="ti ti-tools-kitchen-2"></i></div>
+      <div class="check-status idle" id="chk-handyman-status"><i class="ti ti-tools"></i></div>
       <div class="check-info">
         <div class="check-name">Handyman card has phone number set</div>
         <div class="check-detail" id="chk-handyman-detail">Not checked yet</div>
@@ -206,14 +206,6 @@
 
   <div class="section-label">External Resources</div>
   <div class="checks">
-    <div class="check-row" id="chk-images">
-      <div class="check-status idle" id="chk-images-status"><i class="ti ti-photo"></i></div>
-      <div class="check-info">
-        <div class="check-name">Unsplash game images reachable (spot check 3)</div>
-        <div class="check-detail" id="chk-images-detail">Not checked yet</div>
-      </div>
-      <div class="check-time" id="chk-images-time"></div>
-    </div>
     <div class="check-row" id="chk-fonts">
       <div class="check-status idle" id="chk-fonts-status"><i class="ti ti-typography"></i></div>
       <div class="check-info">
@@ -230,6 +222,14 @@
       </div>
       <div class="check-time" id="chk-icons-time"></div>
     </div>
+    <div class="check-row" id="chk-images">
+      <div class="check-status idle" id="chk-images-status"><i class="ti ti-photo"></i></div>
+      <div class="check-info">
+        <div class="check-name">Game images present (spot check 3)</div>
+        <div class="check-detail" id="chk-images-detail">Not checked yet</div>
+      </div>
+      <div class="check-time" id="chk-images-time"></div>
+    </div>
   </div>
 
   <div class="last-run" id="last-run">Never run — click "Run All Checks" above</div>
@@ -244,12 +244,6 @@
 <script>
 let content = null;
 let results = { pass: 0, warn: 0, fail: 0 };
-
-const UNSPLASH_SPOT_CHECK = [
-  'https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?w=900&q=80',
-  'https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=900&q=80',
-  'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=900&q=80',
-];
 
 function setCheck(id, status, detail, time) {
   const row = document.getElementById('chk-' + id);
@@ -495,34 +489,19 @@ async function runAll() {
     }
   }
 
-  // 11 — Unsplash images (spot check 3)
-  setRunning('images', 'Spot-checking 3 Unsplash images…');
-  const imgResults = await Promise.all(UNSPLASH_SPOT_CHECK.map(url => timed(async () => {
-    const res = await fetch(url, { method: 'HEAD' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    return true;
-  })));
-  const imgFailed = imgResults.filter(r => r.error);
-  const avgMs = Math.round(imgResults.reduce((a, r) => a + r.ms, 0) / imgResults.length);
-  if (imgFailed.length === 0) {
-    setCheck('images', 'pass', `All 3 spot-checked images reachable · avg ${avgMs}ms`, avgMs);
-  } else {
-    setCheck('images', 'fail', `${imgFailed.length}/3 images unreachable — Unsplash may be down`);
-  }
-
-  // 12 — Google Fonts
+  // 11 — Google Fonts
   setRunning('fonts', 'Checking Google Fonts CDN…');
   const { error: fontsError, ms: fontsMs } = await timed(async () => {
     const res = await fetch('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap');
     if (!res.ok) throw new Error('HTTP ' + res.status);
   });
   if (fontsError) {
-    setCheck('fonts', 'fail', 'Google Fonts unreachable — icons and fonts won\'t load without cache', fontsMs);
+    setCheck('fonts', 'fail', 'Google Fonts unreachable — fonts won\'t load without cache', fontsMs);
   } else {
     setCheck('fonts', 'pass', 'Google Fonts CDN reachable', fontsMs);
   }
 
-  // 13 — Tabler Icons
+  // 12 — Tabler Icons
   setRunning('icons', 'Checking Tabler Icons CDN…');
   const { error: iconsError, ms: iconsMs } = await timed(async () => {
     const res = await fetch('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css');
@@ -532,6 +511,26 @@ async function runAll() {
     setCheck('icons', 'fail', 'Tabler Icons CDN unreachable — icons won\'t show without cache', iconsMs);
   } else {
     setCheck('icons', 'pass', 'Tabler Icons CDN reachable', iconsMs);
+  }
+
+  // 13 — Local game images (spot check 3)
+  setRunning('images', 'Checking local game images…');
+  const imageSpotCheck = [
+    '/images/games/colosseum.jpg',
+    '/images/games/taj-mahal.jpg',
+    '/images/games/great-wall.jpg',
+  ];
+  const imgChecks = await Promise.all(imageSpotCheck.map(path => timed(async () => {
+    const res = await fetch(path, { method: 'HEAD' });
+    if (!res.ok) throw new Error(path + ' → HTTP ' + res.status);
+    return path;
+  })));
+  const imgFailed = imgChecks.filter(r => r.error);
+  if (imgFailed.length === 0) {
+    setCheck('images', 'pass', 'All 3 spot-checked game images found on server');
+  } else {
+    setCheck('images', imgFailed.length === 3 ? 'fail' : 'warn',
+      `${imgFailed.length}/3 images missing — upload to public/images/games/ and push to GitHub`);
   }
 
   // Final summary
