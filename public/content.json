@@ -1,121 +1,239 @@
 {
   "meta": {
-    "lastUpdated": "2026-05-26T07:04:00",
+    "lastUpdated": "2026-05-26T21:15:31.026Z",
     "publishedBy": "Abdullah",
     "version": "1.0.0"
   },
-
   "weather": {
-    "fetchedAt": "2026-05-26T07:04:00",
+    "fetchedAt": "2026-05-26T21:12:28.196Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 89,
+      "temp_f": 86,
+      "feels_f": 92,
       "description": {
-        "en": "Partly cloudy",
-        "es": "Parcialmente nublado",
-        "pt": "Parcialmente nublado",
-        "fr": "Partiellement nuageux"
+        "en": "Current conditions",
+        "es": "Condiciones actuales",
+        "pt": "Condições atuais",
+        "fr": "Conditions actuelles"
       },
-      "humidity": 74,
+      "humidity": 71,
       "wind_mph": 12,
-      "rain_chance": 15,
-      "weathercode": 2
+      "rain_chance": 16,
+      "weathercode": 1
     },
     "hourly": [
-      { "hour": "07:00", "temp_f": 79, "rain_chance": 5,  "weathercode": 1 },
-      { "hour": "08:00", "temp_f": 80, "rain_chance": 5,  "weathercode": 1 },
-      { "hour": "09:00", "temp_f": 81, "rain_chance": 8,  "weathercode": 2 },
-      { "hour": "10:00", "temp_f": 82, "rain_chance": 10, "weathercode": 2 },
-      { "hour": "11:00", "temp_f": 83, "rain_chance": 10, "weathercode": 2 },
-      { "hour": "12:00", "temp_f": 85, "rain_chance": 8,  "weathercode": 1 },
-      { "hour": "13:00", "temp_f": 86, "rain_chance": 10, "weathercode": 2 },
-      { "hour": "14:00", "temp_f": 84, "rain_chance": 15, "weathercode": 2 },
-      { "hour": "15:00", "temp_f": 83, "rain_chance": 25, "weathercode": 3 },
-      { "hour": "16:00", "temp_f": 81, "rain_chance": 40, "weathercode": 80 },
-      { "hour": "17:00", "temp_f": 79, "rain_chance": 55, "weathercode": 80 },
-      { "hour": "18:00", "temp_f": 78, "rain_chance": 60, "weathercode": 80 },
-      { "hour": "19:00", "temp_f": 77, "rain_chance": 45, "weathercode": 61 },
-      { "hour": "20:00", "temp_f": 76, "rain_chance": 30, "weathercode": 61 },
-      { "hour": "21:00", "temp_f": 76, "rain_chance": 20, "weathercode": 2 },
-      { "hour": "22:00", "temp_f": 75, "rain_chance": 15, "weathercode": 1 },
-      { "hour": "23:00", "temp_f": 75, "rain_chance": 10, "weathercode": 1 },
-      { "hour": "00:00", "temp_f": 74, "rain_chance": 8,  "weathercode": 0 },
-      { "hour": "01:00", "temp_f": 74, "rain_chance": 5,  "weathercode": 0 },
-      { "hour": "02:00", "temp_f": 73, "rain_chance": 5,  "weathercode": 0 },
-      { "hour": "03:00", "temp_f": 73, "rain_chance": 5,  "weathercode": 0 },
-      { "hour": "04:00", "temp_f": 72, "rain_chance": 5,  "weathercode": 0 },
-      { "hour": "05:00", "temp_f": 72, "rain_chance": 5,  "weathercode": 0 },
-      { "hour": "06:00", "temp_f": 73, "rain_chance": 5,  "weathercode": 1 }
+      {
+        "hour": "17:00",
+        "temp_f": 86,
+        "weathercode": 1,
+        "rain_chance": 14
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 12
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 12
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 77,
+        "weathercode": 51,
+        "rain_chance": 15
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 78,
+        "weathercode": 1,
+        "rain_chance": 16
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 12
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 8
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 79,
+        "weathercode": 2,
+        "rain_chance": 9
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 5
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 4
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 5
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 83,
+        "weathercode": 1,
+        "rain_chance": 4
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 85,
+        "weathercode": 1,
+        "rain_chance": 4
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 5
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 3
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 1
+      }
     ],
     "forecast": [
       {
         "date": "2026-05-26",
         "high_f": 87,
-        "low_f": 75,
-        "weathercode": 2,
-        "rain_chance": 40,
+        "low_f": 77,
+        "weathercode": 95,
+        "rain_chance": 16,
         "description": {
-          "en": "Partly cloudy, afternoon showers",
-          "es": "Parcialmente nublado, chubascos por la tarde",
-          "pt": "Parcialmente nublado, chuvas à tarde",
-          "fr": "Partiellement nuageux, averses l'après-midi"
+          "en": "See forecast",
+          "es": "Ver pronóstico",
+          "pt": "Ver previsão",
+          "fr": "Voir prévisions"
         }
       },
       {
         "date": "2026-05-27",
-        "high_f": 89,
-        "low_f": 76,
-        "weathercode": 1,
-        "rain_chance": 5,
+        "high_f": 87,
+        "low_f": 77,
+        "weathercode": 3,
+        "rain_chance": 15,
         "description": {
-          "en": "Sunny and warm",
-          "es": "Soleado y cálido",
-          "pt": "Ensolarado e quente",
-          "fr": "Ensoleillé et chaud"
+          "en": "See forecast",
+          "es": "Ver pronóstico",
+          "pt": "Ver previsão",
+          "fr": "Voir prévisions"
         }
       },
       {
         "date": "2026-05-28",
-        "high_f": 88,
-        "low_f": 74,
-        "weathercode": 1,
-        "rain_chance": 10,
+        "high_f": 85,
+        "low_f": 77,
+        "weathercode": 81,
+        "rain_chance": 51,
         "description": {
-          "en": "Mostly clear, light breeze",
-          "es": "Mayormente despejado, brisa ligera",
-          "pt": "Principalmente limpo, brisa leve",
-          "fr": "Mostly clair, légère brise"
+          "en": "See forecast",
+          "es": "Ver pronóstico",
+          "pt": "Ver previsão",
+          "fr": "Voir prévisions"
         }
       },
       {
         "date": "2026-05-29",
-        "high_f": 82,
-        "low_f": 73,
-        "weathercode": 95,
+        "high_f": 87,
+        "low_f": 79,
+        "weathercode": 55,
         "rain_chance": 75,
         "description": {
-          "en": "Scattered thunderstorms",
-          "es": "Tormentas dispersas",
-          "pt": "Tempestades dispersas",
-          "fr": "Orages dispersés"
+          "en": "See forecast",
+          "es": "Ver pronóstico",
+          "pt": "Ver previsão",
+          "fr": "Voir prévisions"
         }
       },
       {
         "date": "2026-05-30",
-        "high_f": 85,
-        "low_f": 74,
-        "weathercode": 2,
-        "rain_chance": 20,
+        "high_f": 89,
+        "low_f": 80,
+        "weathercode": 3,
+        "rain_chance": 64,
         "description": {
-          "en": "Partly cloudy, humid",
-          "es": "Parcialmente nublado, húmedo",
-          "pt": "Parcialmente nublado, húmido",
-          "fr": "Partiellement nuageux, humide"
+          "en": "See forecast",
+          "es": "Ver pronóstico",
+          "pt": "Ver previsão",
+          "fr": "Voir prévisions"
         }
       }
     ]
   },
-
   "guide": {
     "venues": [
       {
@@ -246,7 +364,7 @@
         "price": "Free",
         "address": "Ocean Dr, Miami Beach, FL 33139",
         "lat": 25.7751,
-        "lng": -80.1300,
+        "lng": -80.13,
         "website": "https://miamibeach.com",
         "abdullahsPick": false,
         "featured": false,
@@ -307,7 +425,6 @@
         "abdullahsNote": null
       }
     ],
-
     "events": [
       {
         "id": "e001",
@@ -371,7 +488,6 @@
       }
     ]
   },
-
   "ads": {
     "handyman": {
       "enabled": true,
@@ -396,90 +512,364 @@
         "id": "s001",
         "enabled": false,
         "name": "",
-        "headline": { "en": "", "es": "", "pt": "", "fr": "" },
-        "body": { "en": "", "es": "", "pt": "", "fr": "" },
+        "headline": {
+          "en": "",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "body": {
+          "en": "",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
         "url": ""
       },
       {
         "id": "s002",
         "enabled": false,
         "name": "",
-        "headline": { "en": "", "es": "", "pt": "", "fr": "" },
-        "body": { "en": "", "es": "", "pt": "", "fr": "" },
+        "headline": {
+          "en": "",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "body": {
+          "en": "",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
         "url": ""
       }
     ]
   },
-
   "strings": {
     "greeting": {
-      "morning":   { "en": "Good morning — welcome aboard", "es": "Buenos días — bienvenido a bordo", "pt": "Bom dia — bem-vindo a bordo", "fr": "Bonjour — bienvenue à bord" },
-      "afternoon": { "en": "Good afternoon — welcome aboard", "es": "Buenas tardes — bienvenido a bordo", "pt": "Boa tarde — bem-vindo a bordo", "fr": "Bon après-midi — bienvenue à bord" },
-      "evening":   { "en": "Good evening — welcome aboard", "es": "Buenas noches — bienvenido a bordo", "pt": "Boa noite — bem-vindo a bordo", "fr": "Bonsoir — bienvenue à bord" },
-      "night":     { "en": "Good night — welcome aboard", "es": "Buenas noches — bienvenido a bordo", "pt": "Boa noite — bem-vindo a bordo", "fr": "Bonne nuit — bienvenue à bord" }
+      "morning": {
+        "en": "Good morning — welcome aboard",
+        "es": "Buenos días — bienvenido a bordo",
+        "pt": "Bom dia — bem-vindo a bordo",
+        "fr": "Bonjour — bienvenue à bord"
+      },
+      "afternoon": {
+        "en": "Good afternoon — welcome aboard",
+        "es": "Buenas tardes — bienvenido a bordo",
+        "pt": "Boa tarde — bem-vindo a bordo",
+        "fr": "Bon après-midi — bienvenue à bord"
+      },
+      "evening": {
+        "en": "Good evening — welcome aboard",
+        "es": "Buenas noches — bienvenido a bordo",
+        "pt": "Boa noite — bem-vindo a bordo",
+        "fr": "Bonsoir — bienvenue à bord"
+      },
+      "night": {
+        "en": "Good night — welcome aboard",
+        "es": "Buenas noches — bienvenido a bordo",
+        "pt": "Boa noite — bem-vindo a bordo",
+        "fr": "Bonne nuit — bienvenue à bord"
+      }
     },
     "guide": {
-      "nearestTo":    { "en": "Nearest to you", "es": "Más cercano a ti", "pt": "Mais próximo de você", "fr": "Le plus proche de vous" },
-      "miles":        { "en": "mi", "es": "mi", "pt": "mi", "fr": "km" },
-      "free":         { "en": "Free", "es": "Gratis", "pt": "Gratuito", "fr": "Gratuit" },
-      "abdullahsPick":{ "en": "Abdullah's pick", "es": "Elección de Abdullah", "pt": "Escolha de Abdullah", "fr": "Choix d'Abdullah" },
-      "sponsored":    { "en": "Sponsored", "es": "Patrocinado", "pt": "Patrocinado", "fr": "Sponsorisé" },
-      "qrHint":       { "en": "Scan to open on your phone", "es": "Escanea para abrir en tu teléfono", "pt": "Digitalize para abrir no seu telemóvel", "fr": "Scannez pour ouvrir sur votre téléphone" },
-      "openOnPhone":  { "en": "Open on your phone", "es": "Abrir en tu teléfono", "pt": "Abrir no seu telemóvel", "fr": "Ouvrir sur votre téléphone" }
+      "nearestTo": {
+        "en": "Nearest to you",
+        "es": "Más cercano a ti",
+        "pt": "Mais próximo de você",
+        "fr": "Le plus proche de vous"
+      },
+      "miles": {
+        "en": "mi",
+        "es": "mi",
+        "pt": "mi",
+        "fr": "km"
+      },
+      "free": {
+        "en": "Free",
+        "es": "Gratis",
+        "pt": "Gratuito",
+        "fr": "Gratuit"
+      },
+      "abdullahsPick": {
+        "en": "Abdullah's pick",
+        "es": "Elección de Abdullah",
+        "pt": "Escolha de Abdullah",
+        "fr": "Choix d'Abdullah"
+      },
+      "sponsored": {
+        "en": "Sponsored",
+        "es": "Patrocinado",
+        "pt": "Patrocinado",
+        "fr": "Sponsorisé"
+      },
+      "qrHint": {
+        "en": "Scan to open on your phone",
+        "es": "Escanea para abrir en tu teléfono",
+        "pt": "Digitalize para abrir no seu telemóvel",
+        "fr": "Scannez pour ouvrir sur votre téléphone"
+      },
+      "openOnPhone": {
+        "en": "Open on your phone",
+        "es": "Abrir en tu teléfono",
+        "pt": "Abrir no seu telemóvel",
+        "fr": "Ouvrir sur votre téléphone"
+      }
     },
     "weather": {
-      "updatedAt":    { "en": "Synced", "es": "Sincronizado", "pt": "Sincronizado", "fr": "Synchronisé" },
-      "feelsLike":    { "en": "Feels like", "es": "Sensación de", "pt": "Sensação de", "fr": "Ressenti" },
-      "humidity":     { "en": "Humidity", "es": "Humedad", "pt": "Humidade", "fr": "Humidité" },
-      "wind":         { "en": "Wind", "es": "Viento", "pt": "Vento", "fr": "Vent" },
-      "rain":         { "en": "Rain", "es": "Lluvia", "pt": "Chuva", "fr": "Pluie" },
-      "high":         { "en": "High", "es": "Máx", "pt": "Máx", "fr": "Max" },
-      "low":          { "en": "Low", "es": "Mín", "pt": "Mín", "fr": "Min" },
-      "staleNotice":  { "en": "Last synced", "es": "Última sincronización", "pt": "Última sincronização", "fr": "Dernière synchronisation" },
-      "connectWifi":  { "en": "Connect to Wi-Fi before your next shift for a fresher forecast.", "es": "Conéctate al Wi-Fi antes de tu próximo turno para un pronóstico más actualizado.", "pt": "Ligue-se ao Wi-Fi antes do seu próximo turno para uma previsão mais atualizada.", "fr": "Connectez-vous au Wi-Fi avant votre prochain service pour des prévisions plus récentes." },
-      "forecast":     { "en": "5-Day Forecast", "es": "Pronóstico de 5 días", "pt": "Previsão de 5 dias", "fr": "Prévisions sur 5 jours" },
-      "hourly":       { "en": "Hourly · Today", "es": "Por hora · Hoy", "pt": "Por hora · Hoje", "fr": "Horaire · Aujourd'hui" },
-      "now":          { "en": "Now", "es": "Ahora", "pt": "Agora", "fr": "Maintenant" }
+      "updatedAt": {
+        "en": "Synced",
+        "es": "Sincronizado",
+        "pt": "Sincronizado",
+        "fr": "Synchronisé"
+      },
+      "feelsLike": {
+        "en": "Feels like",
+        "es": "Sensación de",
+        "pt": "Sensação de",
+        "fr": "Ressenti"
+      },
+      "humidity": {
+        "en": "Humidity",
+        "es": "Humedad",
+        "pt": "Humidade",
+        "fr": "Humidité"
+      },
+      "wind": {
+        "en": "Wind",
+        "es": "Viento",
+        "pt": "Vento",
+        "fr": "Vent"
+      },
+      "rain": {
+        "en": "Rain",
+        "es": "Lluvia",
+        "pt": "Chuva",
+        "fr": "Pluie"
+      },
+      "high": {
+        "en": "High",
+        "es": "Máx",
+        "pt": "Máx",
+        "fr": "Max"
+      },
+      "low": {
+        "en": "Low",
+        "es": "Mín",
+        "pt": "Mín",
+        "fr": "Min"
+      },
+      "staleNotice": {
+        "en": "Last synced",
+        "es": "Última sincronización",
+        "pt": "Última sincronização",
+        "fr": "Dernière synchronisation"
+      },
+      "connectWifi": {
+        "en": "Connect to Wi-Fi before your next shift for a fresher forecast.",
+        "es": "Conéctate al Wi-Fi antes de tu próximo turno para un pronóstico más actualizado.",
+        "pt": "Ligue-se ao Wi-Fi antes do seu próximo turno para uma previsão mais atualizada.",
+        "fr": "Connectez-vous au Wi-Fi avant votre prochain service pour des prévisions plus récentes."
+      },
+      "forecast": {
+        "en": "5-Day Forecast",
+        "es": "Pronóstico de 5 días",
+        "pt": "Previsão de 5 dias",
+        "fr": "Prévisions sur 5 jours"
+      },
+      "hourly": {
+        "en": "Hourly · Today",
+        "es": "Por hora · Hoy",
+        "pt": "Por hora · Hoje",
+        "fr": "Horaire · Aujourd'hui"
+      },
+      "now": {
+        "en": "Now",
+        "es": "Ahora",
+        "pt": "Agora",
+        "fr": "Maintenant"
+      }
     },
     "games": {
-      "title":        { "en": "Games", "es": "Juegos", "pt": "Jogos", "fr": "Jeux" },
-      "sub":          { "en": "Pick something to play — no internet needed", "es": "Elige algo para jugar — sin internet necesario", "pt": "Escolha algo para jogar — sem internet necessária", "fr": "Choisissez quelque chose à jouer — pas besoin d'internet" },
-      "playNow":      { "en": "Play now", "es": "Jugar ahora", "pt": "Jogar agora", "fr": "Jouer maintenant" },
-      "mostPopular":  { "en": "Most popular", "es": "Más popular", "pt": "Mais popular", "fr": "Le plus populaire" },
-      "minutes":      { "en": "min", "es": "min", "pt": "min", "fr": "min" },
-      "seconds":      { "en": "sec", "es": "seg", "pt": "seg", "fr": "sec" },
-      "anyTime":      { "en": "Any time", "es": "Cualquier momento", "pt": "A qualquer hora", "fr": "N'importe quand" },
-      "players":      { "en": "players", "es": "jugadores", "pt": "jogadores", "fr": "joueurs" }
+      "title": {
+        "en": "Games",
+        "es": "Juegos",
+        "pt": "Jogos",
+        "fr": "Jeux"
+      },
+      "sub": {
+        "en": "Pick something to play — no internet needed",
+        "es": "Elige algo para jugar — sin internet necesario",
+        "pt": "Escolha algo para jogar — sem internet necessária",
+        "fr": "Choisissez quelque chose à jouer — pas besoin d'internet"
+      },
+      "playNow": {
+        "en": "Play now",
+        "es": "Jugar ahora",
+        "pt": "Jogar agora",
+        "fr": "Jouer maintenant"
+      },
+      "mostPopular": {
+        "en": "Most popular",
+        "es": "Más popular",
+        "pt": "Mais popular",
+        "fr": "Le plus populaire"
+      },
+      "minutes": {
+        "en": "min",
+        "es": "min",
+        "pt": "min",
+        "fr": "min"
+      },
+      "seconds": {
+        "en": "sec",
+        "es": "seg",
+        "pt": "seg",
+        "fr": "sec"
+      },
+      "anyTime": {
+        "en": "Any time",
+        "es": "Cualquier momento",
+        "pt": "A qualquer hora",
+        "fr": "N'importe quand"
+      },
+      "players": {
+        "en": "players",
+        "es": "jugadores",
+        "pt": "jogadores",
+        "fr": "joueurs"
+      }
     },
     "footer": {
-      "tip":          { "en": "Enjoying the ride? Tips are always appreciated", "es": "¿Disfrutando el viaje? Las propinas siempre son apreciadas", "pt": "A gostar da viagem? As gorjetas são sempre apreciadas", "fr": "Vous appréciez le trajet ? Les pourboires sont toujours les bienvenus" },
-      "claude":       { "en": "Built with Claude AI · ask your driver", "es": "Creado con Claude AI · pregunta a tu conductor", "pt": "Criado com Claude AI · pergunte ao seu motorista", "fr": "Créé avec Claude AI · demandez à votre chauffeur" }
+      "tip": {
+        "en": "Enjoying the ride? Tips are always appreciated",
+        "es": "¿Disfrutando el viaje? Las propinas siempre son apreciadas",
+        "pt": "A gostar da viagem? As gorjetas são sempre apreciadas",
+        "fr": "Vous appréciez le trajet ? Les pourboires sont toujours les bienvenus"
+      },
+      "claude": {
+        "en": "Built with Claude AI · ask your driver",
+        "es": "Creado con Claude AI · pregunta a tu conductor",
+        "pt": "Criado com Claude AI · pergunte ao seu motorista",
+        "fr": "Créé avec Claude AI · demandez à votre chauffeur"
+      }
     },
     "inactivity": {
-      "title":        { "en": "Still browsing?", "es": "¿Sigues navegando?", "pt": "Ainda a navegar?", "fr": "Vous naviguez encore ?" },
-      "body":         { "en": "The screen will reset to the home page shortly to be ready for the next passenger.", "es": "La pantalla se restablecerá a la página de inicio en breve para estar lista para el próximo pasajero.", "pt": "O ecrã voltará à página inicial em breve para ficar pronto para o próximo passageiro.", "fr": "L'écran va bientôt revenir à la page d'accueil pour être prêt pour le prochain passager." },
-      "cta":          { "en": "Tap anywhere to keep browsing", "es": "Toca en cualquier lugar para seguir navegando", "pt": "Toque em qualquer lugar para continuar a navegar", "fr": "Appuyez n'importe où pour continuer à naviguer" },
-      "orWait":       { "en": "or wait to reset", "es": "o espera para reiniciar", "pt": "ou aguarde para reiniciar", "fr": "ou attendez la réinitialisation" }
+      "title": {
+        "en": "Still browsing?",
+        "es": "¿Sigues navegando?",
+        "pt": "Ainda a navegar?",
+        "fr": "Vous naviguez encore ?"
+      },
+      "body": {
+        "en": "The screen will reset to the home page shortly to be ready for the next passenger.",
+        "es": "La pantalla se restablecerá a la página de inicio en breve para estar lista para el próximo pasajero.",
+        "pt": "O ecrã voltará à página inicial em breve para ficar pronto para o próximo passageiro.",
+        "fr": "L'écran va bientôt revenir à la page d'accueil pour être prêt pour le prochain passager."
+      },
+      "cta": {
+        "en": "Tap anywhere to keep browsing",
+        "es": "Toca en cualquier lugar para seguir navegando",
+        "pt": "Toque em qualquer lugar para continuar a navegar",
+        "fr": "Appuyez n'importe où pour continuer à naviguer"
+      },
+      "orWait": {
+        "en": "or wait to reset",
+        "es": "o espera para reiniciar",
+        "pt": "ou aguarde para reiniciar",
+        "fr": "ou attendez la réinitialisation"
+      }
     },
     "thanks": {
-      "title":        { "en": "Thanks for riding!", "es": "¡Gracias por viajar!", "pt": "Obrigado pela viagem!", "fr": "Merci d'avoir voyagé !" },
-      "body":         { "en": "Hope you enjoyed the guide. Have a wonderful time in Miami.", "es": "Espero que hayas disfrutado la guía. Que tengas un tiempo maravilloso en Miami.", "pt": "Espero que tenha gostado do guia. Tenha um tempo maravilhoso em Miami.", "fr": "J'espère que vous avez apprécié le guide. Passez un merveilleux séjour à Miami." },
-      "tip":          { "en": "If you enjoyed the ride, a tip in the Lyft app goes a long way — it means the world to your driver.", "es": "Si disfrutaste el viaje, una propina en la app de Lyft significa mucho — es todo para tu conductor.", "pt": "Se gostou da viagem, uma gorjeta na app do Lyft faz toda a diferença — significa tudo para o seu motorista.", "fr": "Si vous avez apprécié le trajet, un pourboire dans l'app Lyft compte énormément — cela signifie tout pour votre chauffeur." },
-      "resetting":    { "en": "Resetting in 5 seconds…", "es": "Reiniciando en 5 segundos…", "pt": "A reiniciar em 5 segundos…", "fr": "Réinitialisation dans 5 secondes…" }
+      "title": {
+        "en": "Thanks for riding!",
+        "es": "¡Gracias por viajar!",
+        "pt": "Obrigado pela viagem!",
+        "fr": "Merci d'avoir voyagé !"
+      },
+      "body": {
+        "en": "Hope you enjoyed the guide. Have a wonderful time in Miami.",
+        "es": "Espero que hayas disfrutado la guía. Que tengas un tiempo maravilloso en Miami.",
+        "pt": "Espero que tenha gostado do guia. Tenha um tempo maravilhoso em Miami.",
+        "fr": "J'espère que vous avez apprécié le guide. Passez un merveilleux séjour à Miami."
+      },
+      "tip": {
+        "en": "If you enjoyed the ride, a tip in the Lyft app goes a long way — it means the world to your driver.",
+        "es": "Si disfrutaste el viaje, una propina en la app de Lyft significa mucho — es todo para tu conductor.",
+        "pt": "Se gostou da viagem, uma gorjeta na app do Lyft faz toda a diferença — significa tudo para o seu motorista.",
+        "fr": "Si vous avez apprécié le trajet, un pourboire dans l'app Lyft compte énormément — cela signifie tout pour votre chauffeur."
+      },
+      "resetting": {
+        "en": "Resetting in 5 seconds…",
+        "es": "Reiniciando en 5 segundos…",
+        "pt": "A reiniciar em 5 segundos…",
+        "fr": "Réinitialisation dans 5 secondes…"
+      }
     },
     "nav": {
-      "guide":        { "en": "City Guide", "es": "Guía de Ciudad", "pt": "Guia da Cidade", "fr": "Guide de la Ville" },
-      "weather":      { "en": "Weather", "es": "Clima", "pt": "Tempo", "fr": "Météo" },
-      "games":        { "en": "Games", "es": "Juegos", "pt": "Jogos", "fr": "Jeux" }
+      "guide": {
+        "en": "City Guide",
+        "es": "Guía de Ciudad",
+        "pt": "Guia da Cidade",
+        "fr": "Guide de la Ville"
+      },
+      "weather": {
+        "en": "Weather",
+        "es": "Clima",
+        "pt": "Tempo",
+        "fr": "Météo"
+      },
+      "games": {
+        "en": "Games",
+        "es": "Juegos",
+        "pt": "Jogos",
+        "fr": "Jeux"
+      }
     },
     "categories": {
-      "all":          { "en": "All", "es": "Todo", "pt": "Tudo", "fr": "Tout" },
-      "restaurant":   { "en": "Food", "es": "Comida", "pt": "Comida", "fr": "Nourriture" },
-      "nightlife":    { "en": "Nightlife", "es": "Vida Nocturna", "pt": "Vida Noturna", "fr": "Vie Nocturne" },
-      "attraction":   { "en": "Attractions", "es": "Atracciones", "pt": "Atrações", "fr": "Attractions" },
-      "gem":          { "en": "Hidden Gems", "es": "Joyas Ocultas", "pt": "Joias Escondidas", "fr": "Joyaux Cachés" },
-      "event":        { "en": "Events", "es": "Eventos", "pt": "Eventos", "fr": "Événements" },
-      "picks":        { "en": "Abdullah's Picks", "es": "Elecciones de Abdullah", "pt": "Escolhas de Abdullah", "fr": "Choix d'Abdullah" }
+      "all": {
+        "en": "All",
+        "es": "Todo",
+        "pt": "Tudo",
+        "fr": "Tout"
+      },
+      "restaurant": {
+        "en": "Food",
+        "es": "Comida",
+        "pt": "Comida",
+        "fr": "Nourriture"
+      },
+      "nightlife": {
+        "en": "Nightlife",
+        "es": "Vida Nocturna",
+        "pt": "Vida Noturna",
+        "fr": "Vie Nocturne"
+      },
+      "attraction": {
+        "en": "Attractions",
+        "es": "Atracciones",
+        "pt": "Atrações",
+        "fr": "Attractions"
+      },
+      "gem": {
+        "en": "Hidden Gems",
+        "es": "Joyas Ocultas",
+        "pt": "Joias Escondidas",
+        "fr": "Joyaux Cachés"
+      },
+      "event": {
+        "en": "Events",
+        "es": "Eventos",
+        "pt": "Eventos",
+        "fr": "Événements"
+      },
+      "picks": {
+        "en": "Abdullah's Picks",
+        "es": "Elecciones de Abdullah",
+        "pt": "Escolhas de Abdullah",
+        "fr": "Choix d'Abdullah"
+      }
     }
   }
 }
