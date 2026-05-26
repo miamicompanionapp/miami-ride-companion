@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Miami Ride">
+  <meta name="theme-color" content="#0F2137">
+  <title>Miami Ride Companion</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+  <style>
+    /* ── Reset & Root ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-deep:   #0F2137;
+      --navy-mid:    #1B3A5C;
+      --teal:        #0B9EA6;
+      --teal-light:  #7CC8CD;
+      --teal-mist:   #E3F4F4;
+      --teal-border: #B5E0E0;
+      --gold:        #C9A84C;
+      --gold-light:  #FBF4E6;
+      --gold-border: #E8D9A0;
+      --bg:          #F7F9FB;
+      --card:        #FFFFFF;
+      --border:      #D8E3EE;
+      --muted:       #7A8FA6;
+      --body:        #4A6275;
+      --heading:     #0F2137;
+      --radius-sm:   8px;
+      --radius-md:   12px;
+      --radius-lg:   14px;
+      --shadow:      0 1px 8px rgba(15,33,55,0.08);
+      --font-body:   'DM Sans', sans-serif;
+      --font-display:'Playfair Display', serif;
+      --transition:  200ms ease;
+    }
+
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--navy-deep);
+      font-family: var(--font-body);
+      color: var(--heading);
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    /* ── App Shell ────────────────────────────────────────────── */
+    #app {
+      width: 100vw; height: 100vh;
+      display: flex; flex-direction: column;
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    .app-shell {
+      display: flex; flex: 1;
+      overflow: hidden; min-height: 0;
+    }
+
+    /* ── Sidebar ──────────────────────────────────────────────── */
+    .sidebar {
+      width: 196px; flex-shrink: 0;
+      background: var(--navy-deep);
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+
+    .sidebar-header { padding: 16px 16px 10px; }
+    .app-brand {
+      font-family: var(--font-display);
+      font-size: 18px; font-weight: 500;
+      color: white; line-height: 1.25;
+      margin-bottom: 2px;
+    }
+    .app-sub { font-size: 9px; color: rgba(255,255,255,0.35); font-weight: 500; }
+
+    .sidebar-location {
+      padding: 7px 16px;
+      display: flex; align-items: center; gap: 5px;
+      border-bottom: 0.5px solid rgba(255,255,255,0.08);
+      margin-bottom: 8px;
+    }
+    .sidebar-location i { font-size: 11px; color: var(--teal); }
+    .sidebar-location span { font-size: 10px; color: rgba(255,255,255,0.5); }
+
+    .nav-links {
+      display: flex; flex-direction: column;
+      gap: 2px; padding: 0 8px; flex: 1;
+    }
+    .nav-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 10px; border-radius: 10px;
+      cursor: pointer; transition: background var(--transition);
+    }
+    .nav-link:active { background: rgba(255,255,255,0.06); }
+    .nav-link.active { background: rgba(255,255,255,0.1); }
+    .nav-link i { font-size: 17px; color: rgba(255,255,255,0.3); transition: color var(--transition); }
+    .nav-link span { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.3); transition: color var(--transition); }
+    .nav-link.active i, .nav-link.active span { color: white; }
+    .nav-indicator { width: 3px; height: 18px; background: var(--teal); border-radius: 2px; margin-left: auto; }
+
+    .lang-section { padding: 10px 14px; border-top: 0.5px solid rgba(255,255,255,0.08); }
+    .lang-label { font-size: 9px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 6px; }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .lang-btn {
+      padding: 5px 4px; border-radius: 7px;
+      font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.35); cursor: pointer;
+      border: none; background: rgba(255,255,255,0.06);
+      font-family: var(--font-body);
+      display: flex; align-items: center; justify-content: center; gap: 3px;
+      transition: all var(--transition);
+    }
+    .lang-btn.active { background: var(--teal); color: white; }
+    .lang-btn:active { opacity: 0.8; }
+
+    .sidebar-footer { padding: 10px 14px; border-top: 0.5px solid rgba(255,255,255,0.08); }
+    .tip-text {
+      font-size: 9px; color: rgba(255,255,255,0.3);
+      line-height: 1.55; display: flex; align-items: flex-start; gap: 5px;
+    }
+    .tip-text i { font-size: 11px; color: var(--teal); flex-shrink: 0; margin-top: 1px; }
+    .claude-credit { font-size: 8px; color: rgba(255,255,255,0.15); margin-top: 5px; text-align: center; }
+
+    /* ── Main Content Area ────────────────────────────────────── */
+    .main-content {
+      flex: 1; display: flex; flex-direction: column;
+      overflow: hidden; min-height: 0;
+    }
+
+    /* ── Pages ────────────────────────────────────────────────── */
+    .page {
+      flex: 1; display: none; flex-direction: column;
+      overflow: hidden; min-height: 0;
+      animation: fadeIn 300ms ease;
+    }
+    .page.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* ── GUIDE PAGE ───────────────────────────────────────────── */
+    .guide-header { padding: 14px 18px 0; flex-shrink: 0; }
+    .guide-top-row {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; margin-bottom: 12px;
+    }
+    .greeting-text {
+      font-family: var(--font-display);
+      font-size: 19px; font-weight: 500; color: var(--heading); line-height: 1.25;
+    }
+    .greeting-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    .qr-compact {
+      display: flex; align-items: center; gap: 7px;
+      background: var(--teal-mist); border-radius: 10px;
+      padding: 7px 12px; cursor: pointer; border: 0.5px solid var(--teal-border);
+      flex-shrink: 0; margin-left: 12px;
+    }
+    .qr-compact i { font-size: 15px; color: var(--teal); }
+    .qr-compact span { font-size: 11px; font-weight: 600; color: #0B6E72; white-space: nowrap; }
+
+    .filter-row {
+      display: flex; gap: 6px;
+      overflow-x: auto; padding-bottom: 12px;
+      border-bottom: 0.5px solid var(--border);
+      scrollbar-width: none;
+    }
+    .filter-row::-webkit-scrollbar { display: none; }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 6px 12px; border-radius: 30px;
+      font-size: 11px; font-weight: 600;
+      cursor: pointer; white-space: nowrap;
+      border: 1.5px solid transparent;
+      transition: all var(--transition); flex-shrink: 0;
+    }
+    .pill i { font-size: 11px; }
+    .pill.active { background: var(--navy-deep); color: white; border-color: var(--navy-deep); }
+    .pill-all   { background: var(--navy-deep); color: white; }
+    .pill-food  { background: var(--teal-mist); color: #0B6E72; border-color: var(--teal-border); }
+    .pill-night { background: #EEF0F8; color: #1B3A5C; border-color: #C5CCE0; }
+    .pill-attr  { background: var(--gold-light); color: #7A5500; border-color: var(--gold-border); }
+    .pill-gem   { background: #F0EEF8; color: #4A3580; border-color: #C8C0E8; }
+    .pill-event { background: #FFF0F0; color: #8A2020; border-color: #E8C0C0; }
+    .pill-picks { background: #FBF4E6; color: #7A5500; border-color: var(--gold-border); }
+
+    .guide-section-label {
+      padding: 8px 18px 6px;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    .cards-scroll {
+      flex: 1; overflow-y: auto; padding: 0 18px 16px;
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .cards-scroll::-webkit-scrollbar { width: 4px; }
+    .cards-scroll::-webkit-scrollbar-track { background: transparent; }
+    .cards-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    /* ── Venue Card ───────────────────────────────────────────── */
+    .venue-card {
+      background: var(--card); border-radius: var(--radius-lg);
+      border: 0.5px solid var(--border); overflow: hidden;
+      cursor: pointer; transition: border-color var(--transition);
+    }
+    .venue-card:active { opacity: 0.9; }
+    .venue-card.featured { border: 1.5px solid var(--gold); }
+    .venue-card.pick { background: var(--gold-light); border: 0.5px solid var(--gold-border); }
+
+    .featured-badge {
+      background: var(--gold-light); border-bottom: 0.5px solid var(--gold-border);
+      padding: 4px 12px; display: flex; align-items: center; gap: 4px;
+    }
+    .featured-badge i { font-size: 9px; color: var(--gold); }
+    .featured-badge span { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #7A5500; }
+
+    .pick-badge {
+      padding: 4px 12px; display: flex; align-items: center; gap: 4px;
+      border-bottom: 0.5px solid var(--gold-border);
+    }
+    .pick-badge i { font-size: 9px; color: var(--gold); }
+    .pick-badge span { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #7A5500; }
+
+    .venue-inner { padding: 11px 13px; }
+    .venue-top {
+      display: flex; justify-content: space-between;
+      align-items: center; margin-bottom: 4px;
+    }
+    .venue-tag {
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase; color: var(--teal);
+    }
+    .venue-meta { display: flex; align-items: center; gap: 6px; }
+    .venue-price { font-size: 10px; font-weight: 600; color: var(--muted); }
+    .venue-dist {
+      font-size: 10px; font-weight: 700; color: var(--teal);
+      display: flex; align-items: center; gap: 2px;
+    }
+    .venue-dist i { font-size: 10px; }
+    .venue-name {
+      font-family: var(--font-display); font-size: 15px;
+      font-weight: 500; color: var(--heading);
+      margin-bottom: 4px; line-height: 1.3;
+    }
+    .venue-desc { font-size: 11px; color: var(--body); line-height: 1.55; margin-bottom: 8px; }
+    .venue-note {
+      font-size: 10px; color: #7A5500; font-style: italic;
+      line-height: 1.5; margin-bottom: 8px;
+      padding: 5px 8px; background: rgba(201,168,76,0.1);
+      border-radius: 6px; border-left: 2px solid var(--gold);
+    }
+    .venue-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .venue-addr {
+      font-size: 10px; color: var(--muted);
+      display: flex; align-items: center; gap: 3px;
+    }
+    .venue-addr i { font-size: 11px; color: var(--teal); }
+    .qr-btn {
+      width: 28px; height: 28px; background: var(--bg);
+      border-radius: 7px; border: 0.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; flex-shrink: 0;
+    }
+    .qr-btn i { font-size: 14px; color: var(--navy-mid); }
+
+    /* Handyman card */
+    .handyman-card {
+      background: var(--navy-deep); border-radius: var(--radius-lg);
+      overflow: hidden; cursor: pointer;
+    }
+    .handyman-inner { padding: 12px 13px; }
+    .handyman-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--teal); margin-bottom: 5px; }
+    .handyman-name { font-family: var(--font-display); font-size: 15px; color: white; margin-bottom: 3px; }
+    .handyman-desc { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.55; margin-bottom: 8px; }
+    .handyman-bottom { display: flex; justify-content: space-between; align-items: center; }
+    .handyman-phone { font-size: 11px; font-weight: 600; color: var(--teal); }
+    .handyman-qr { width: 28px; height: 28px; background: rgba(255,255,255,0.1); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+    .handyman-qr i { font-size: 14px; color: rgba(255,255,255,0.6); }
+
+    /* Event card */
+    .event-card {
+      background: white; border-radius: var(--radius-lg);
+      border: 0.5px solid #E8C0C0; overflow: hidden;
+      cursor: pointer; grid-column: span 2;
+    }
+    .event-inner { padding: 11px 13px; }
+    .event-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+    .event-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #8A2020; }
+    .event-date { font-size: 10px; font-weight: 600; color: var(--muted); }
+    .event-name { font-family: var(--font-display); font-size: 15px; color: var(--heading); margin-bottom: 4px; }
+    .event-desc { font-size: 11px; color: var(--body); line-height: 1.55; }
+    .event-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+    .event-venue { font-size: 10px; color: var(--muted); display: flex; align-items: center; gap: 3px; }
+    .event-venue i { font-size: 11px; color: #8A2020; }
+    .free-badge { font-size: 9px; font-weight: 700; background: #E8F8F0; color: #00A88D; padding: 2px 8px; border-radius: 10px; }
+
+    /* ── WEATHER PAGE ─────────────────────────────────────────── */
+    .weather-content { flex: 1; display: flex; gap: 14px; padding: 14px 18px; overflow: hidden; min-height: 0; }
+    .weather-left { width: 46%; display: flex; flex-direction: column; gap: 8px; min-height: 0; }
+    .weather-right { flex: 1; display: flex; flex-direction: column; gap: 8px; min-height: 0; }
+
+    .sync-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--teal-mist); border-radius: 20px;
+      padding: 4px 12px; align-self: flex-start;
+      border: 0.5px solid var(--teal-border);
+    }
+    .sync-badge i { font-size: 11px; color: var(--teal); }
+    .sync-badge span { font-size: 10px; font-weight: 600; color: #0B6E72; }
+
+    .stale-notice {
+      background: var(--gold-light); border-radius: 9px;
+      padding: 8px 12px; display: flex; align-items: flex-start; gap: 7px;
+      border: 0.5px solid var(--gold-border); flex-shrink: 0;
+    }
+    .stale-notice i { font-size: 13px; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+    .stale-notice span { font-size: 10px; color: #7A5500; line-height: 1.5; }
+
+    .current-card {
+      background: var(--navy-deep); border-radius: 12px;
+      padding: 13px 15px; flex: 1;
+      display: flex; flex-direction: column; justify-content: space-between;
+      min-height: 0;
+    }
+    .current-label { font-size: 8px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+    .current-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+    .current-temp { font-family: var(--font-display); font-size: 52px; color: white; line-height: 1; font-weight: 500; }
+    .current-icon { font-size: 40px; opacity: 0.85; }
+    .current-desc { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 10px; }
+    .current-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; padding-top: 10px; border-top: 0.5px solid rgba(255,255,255,0.1); }
+    .stat-val { font-size: 13px; font-weight: 600; color: white; }
+    .stat-lbl { font-size: 8px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.7px; margin-top: 1px; }
+
+    .range-temps { display: flex; align-items: flex-end; gap: 10px; margin-bottom: 6px; }
+    .range-high { font-family: var(--font-display); font-size: 48px; color: white; line-height: 1; }
+    .range-low { font-family: var(--font-display); font-size: 28px; color: rgba(255,255,255,0.45); line-height: 1; padding-bottom: 4px; }
+    .range-icon { font-size: 38px; margin-left: auto; padding-bottom: 3px; opacity: 0.85; }
+    .range-desc { font-size: 11px; color: rgba(255,255,255,0.45); margin-bottom: 8px; }
+    .range-label { font-size: 8px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+
+    .hourly-label { font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; flex-shrink: 0; }
+    .hourly-row { display: flex; gap: 5px; flex-shrink: 0; }
+    .hour-card {
+      flex: 1; background: white; border-radius: 9px;
+      border: 0.5px solid var(--border); padding: 7px 5px; text-align: center;
+    }
+    .hour-card.now { border-color: var(--teal); border-width: 1.5px; background: var(--teal-mist); }
+    .hour-time { font-size: 9px; font-weight: 600; color: var(--muted); text-transform: uppercase; margin-bottom: 3px; }
+    .hour-time.now-lbl { color: var(--teal); }
+    .hour-icon { font-size: 15px; margin-bottom: 2px; }
+    .hour-temp { font-size: 12px; font-weight: 600; color: var(--heading); }
+    .hour-rain { font-size: 9px; color: var(--muted); margin-top: 1px; }
+
+    .forecast-label { font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); flex-shrink: 0; }
+    .forecast-cards { display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; }
+    .day-card {
+      background: white; border-radius: 9px;
+      border: 0.5px solid var(--border); padding: 7px 12px;
+      display: flex; align-items: center; flex: 1;
+    }
+    .day-card.today-fresh { border-color: var(--teal); background: var(--teal-mist); }
+    .day-card.today-stale { border-color: var(--gold); background: var(--gold-light); }
+    .day-name { font-size: 11px; font-weight: 600; color: var(--heading); width: 42px; flex-shrink: 0; }
+    .day-name.today-lbl { color: var(--teal); }
+    .day-name.stale-lbl { color: #7A5500; }
+    .day-icon { font-size: 15px; width: 22px; text-align: center; flex-shrink: 0; }
+    .day-desc { font-size: 10px; color: var(--muted); flex: 1; padding: 0 7px; line-height: 1.3; }
+    .day-high { font-size: 12px; font-weight: 600; color: var(--heading); }
+    .day-low { font-size: 10px; color: var(--muted); margin-left: 4px; }
+    .day-rain { font-size: 10px; color: #378ADD; font-weight: 600; margin-left: 6px; display: flex; align-items: center; gap: 1px; }
+    .day-rain i { font-size: 9px; }
+
+    /* ── GAMES PAGE ───────────────────────────────────────────── */
+    .games-content { flex: 1; display: flex; flex-direction: column; padding: 14px 18px; gap: 12px; overflow: hidden; min-height: 0; }
+    .games-header { display: flex; justify-content: space-between; align-items: flex-start; flex-shrink: 0; }
+    .games-title { font-family: var(--font-display); font-size: 19px; color: var(--heading); font-weight: 500; }
+    .games-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .high-score-pill {
+      background: var(--teal-mist); border-radius: 20px;
+      padding: 6px 12px; display: flex; align-items: center; gap: 5px;
+      border: 0.5px solid var(--teal-border);
+    }
+    .high-score-pill i { font-size: 12px; color: var(--teal); }
+    .high-score-pill span { font-size: 10px; font-weight: 600; color: #0B6E72; }
+
+    .games-layout { display: flex; gap: 12px; flex: 1; min-height: 0; }
+    .hero-col { width: 44%; display: flex; flex-direction: column; }
+    .grid-col { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; }
+
+    .hero-card {
+      flex: 1; background: var(--navy-deep); border-radius: 13px;
+      overflow: hidden; display: flex; flex-direction: column;
+      cursor: pointer; position: relative;
+    }
+    .hero-glow {
+      position: absolute; top: 0; right: 0;
+      width: 130px; height: 130px;
+      background: rgba(11,158,166,0.1); border-radius: 50%;
+      transform: translate(30%,-30%); pointer-events: none;
+    }
+    .hero-body { padding: 14px 16px 0; flex: 1; display: flex; flex-direction: column; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(11,158,166,0.2); border-radius: 20px;
+      padding: 4px 10px; margin-bottom: 10px; align-self: flex-start;
+    }
+    .hero-badge i { font-size: 10px; color: var(--teal); }
+    .hero-badge span { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); }
+    .hero-icon { font-size: 36px; margin-bottom: 8px; }
+    .hero-title { font-family: var(--font-display); font-size: 20px; color: white; font-weight: 500; margin-bottom: 6px; line-height: 1.2; }
+    .hero-desc { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.6; flex: 1; }
+    .hero-footer {
+      padding: 10px 16px 12px; display: flex;
+      justify-content: space-between; align-items: center; gap: 12px;
+      border-top: 0.5px solid rgba(255,255,255,0.08);
+      position: relative; z-index: 1;
+    }
+    .hero-meta { display: flex; flex-direction: column; gap: 3px; }
+    .hero-meta-row { display: flex; align-items: center; gap: 5px; font-size: 10px; color: rgba(255,255,255,0.35); }
+    .hero-meta-row i { font-size: 11px; color: rgba(255,255,255,0.25); flex-shrink: 0; }
+    .hero-play {
+      background: var(--teal); color: white; border: none;
+      border-radius: 8px; padding: 8px 16px;
+      font-family: var(--font-body); font-size: 12px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; gap: 5px;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .hero-play i { font-size: 13px; }
+    .hero-play:active { opacity: 0.85; }
+
+    .game-card {
+      background: white; border-radius: 11px;
+      border: 0.5px solid var(--border); padding: 11px 12px;
+      cursor: pointer; display: flex; flex-direction: column;
+      overflow: hidden; transition: border-color var(--transition);
+    }
+    .game-card:active { opacity: 0.9; }
+    .game-card-icon { font-size: 24px; margin-bottom: 5px; }
+    .game-card-title { font-size: 12px; font-weight: 600; color: var(--heading); margin-bottom: 2px; }
+    .game-card-desc { font-size: 10px; color: var(--muted); line-height: 1.45; flex: 1; }
+    .game-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 7px; }
+    .game-card-meta { font-size: 9px; color: #B0BCC8; display: flex; align-items: center; gap: 3px; }
+    .game-card-meta i { font-size: 10px; }
+    .play-arrow { width: 22px; height: 22px; background: var(--teal-mist); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .play-arrow i { font-size: 12px; color: var(--teal); }
+    .game-card.tap   { border-top: 3px solid var(--teal); }
+    .game-card.word  { border-top: 3px solid var(--navy-mid); }
+    .game-card.spin  { border-top: 3px solid var(--gold); }
+    .game-card.image { border-top: 3px solid #7C3AED; }
+
+    /* ── Game Screens ─────────────────────────────────────────── */
+    .game-screen {
+      position: fixed; inset: 0; z-index: 50;
+      background: var(--bg);
+      display: none; flex-direction: column;
+      animation: fadeIn 250ms ease;
+    }
+    .game-screen.open { display: flex; }
+
+    .game-screen-header {
+      background: var(--navy-deep); padding: 12px 20px;
+      display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+    }
+    .game-back-btn {
+      background: rgba(255,255,255,0.1); border: none; border-radius: 8px;
+      width: 34px; height: 34px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; color: white;
+    }
+    .game-back-btn i { font-size: 16px; }
+    .game-screen-title { font-family: var(--font-display); font-size: 18px; color: white; font-weight: 500; flex: 1; }
+    .game-score-badge {
+      background: rgba(255,255,255,0.1); border-radius: 20px;
+      padding: 5px 14px; font-size: 12px; font-weight: 600; color: white;
+    }
+
+    .game-body { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+
+    /* Trivia */
+    .trivia-question { font-size: 16px; font-weight: 500; color: var(--heading); line-height: 1.5; padding: 16px; background: white; border-radius: 12px; border: 0.5px solid var(--border); }
+    .trivia-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .trivia-opt {
+      padding: 13px 16px; border-radius: 11px;
+      border: 1.5px solid var(--border); background: white;
+      font-family: var(--font-body); font-size: 13px; font-weight: 500;
+      color: var(--heading); cursor: pointer; text-align: left;
+      transition: all var(--transition); line-height: 1.35;
+    }
+    .trivia-opt:hover { border-color: var(--teal); background: var(--teal-mist); }
+    .trivia-opt.correct { background: #E8F8F0; border-color: #00C9A7; color: #00A88D; }
+    .trivia-opt.wrong { background: #FFF0EE; border-color: var(--teal); color: #E05555; }
+    .trivia-opt:disabled { cursor: default; }
+    .trivia-feedback {
+      padding: 12px 16px; border-radius: 11px;
+      font-size: 13px; font-weight: 600; text-align: center;
+      display: none;
+    }
+    .trivia-feedback.show { display: block; }
+    .trivia-feedback.ok { background: #E8F8F0; color: #00A88D; }
+    .trivia-feedback.no { background: #FFF0EE; color: #E05555; }
+    .trivia-next {
+      padding: 13px; border-radius: 12px; border: none;
+      background: var(--navy-deep); color: white;
+      font-family: var(--font-body); font-size: 14px; font-weight: 600;
+      cursor: pointer; display: none;
+    }
+    .trivia-next.show { display: block; }
+    .trivia-next:active { opacity: 0.85; }
+
+    /* Tap Frenzy */
+    .tap-center { display: flex; flex-direction: column; align-items: center; padding: 20px 0; flex: 1; justify-content: center; }
+    .tap-timer-display { font-family: var(--font-display); font-size: 48px; color: var(--heading); font-weight: 500; margin-bottom: 8px; }
+    .tap-circle {
+      width: 150px; height: 150px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--navy-mid));
+      border: none; font-family: var(--font-body);
+      color: white; cursor: pointer; margin: 16px auto;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; box-shadow: 0 8px 24px rgba(11,158,166,0.3);
+      transition: transform 0.08s; user-select: none;
+    }
+    .tap-circle:active { transform: scale(0.93); }
+    .tap-count-num { font-family: var(--font-display); font-size: 44px; font-weight: 500; line-height: 1; }
+    .tap-count-lbl { font-size: 11px; opacity: 0.7; margin-top: 2px; }
+    .tap-best-txt { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+    .tap-start-btn {
+      padding: 12px 36px; border-radius: 12px; border: none;
+      background: var(--teal); font-family: var(--font-body);
+      font-size: 14px; font-weight: 600; color: white; cursor: pointer;
+    }
+    .tap-start-btn:active { opacity: 0.85; }
+    .tap-result-txt { font-size: 15px; font-weight: 600; color: var(--heading); min-height: 24px; margin-top: 8px; text-align: center; }
+
+    /* Word Puzzle */
+    .word-clue { background: var(--teal-mist); border-radius: 11px; padding: 12px 16px; font-size: 13px; color: #0B6E72; border: 0.5px solid var(--teal-border); line-height: 1.6; }
+    .word-letters { display: flex; justify-content: center; gap: 7px; flex-wrap: wrap; margin: 8px 0; }
+    .word-letter {
+      width: 36px; height: 46px; border-radius: 9px;
+      border: 1.5px solid var(--border); background: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700; color: var(--heading);
+    }
+    .word-letter.hint { background: #E8F8F0; border-color: #00C9A7; color: #00A88D; }
+    .word-letter.filled { background: var(--teal-mist); border-color: var(--teal); }
+    .word-input-row { display: flex; gap: 8px; }
+    .word-input {
+      flex: 1; padding: 11px 14px; border-radius: 11px;
+      border: 1.5px solid var(--border); font-family: var(--font-body);
+      font-size: 16px; font-weight: 700; color: var(--heading);
+      text-transform: uppercase; letter-spacing: 2px; background: white;
+    }
+    .word-input:focus { outline: none; border-color: var(--teal); }
+    .word-submit {
+      padding: 11px 18px; border-radius: 11px; border: none;
+      background: var(--teal); font-family: var(--font-body);
+      font-size: 13px; font-weight: 700; color: white; cursor: pointer;
+    }
+    .word-submit:active { opacity: 0.85; }
+    .word-btns { display: flex; gap: 8px; }
+    .word-hint-btn {
+      background: none; border: 1.5px solid var(--teal-border);
+      border-radius: 9px; padding: 8px 16px;
+      font-family: var(--font-body); font-size: 12px;
+      font-weight: 600; color: var(--teal); cursor: pointer;
+    }
+    .word-hint-btn:active { opacity: 0.8; }
+    .word-feedback { padding: 11px 14px; border-radius: 11px; font-size: 13px; font-weight: 600; text-align: center; display: none; }
+    .word-feedback.show { display: block; }
+    .word-feedback.ok { background: #E8F8F0; color: #00A88D; }
+    .word-feedback.no { background: #FFF0EE; color: #E05555; }
+
+    /* Facts Spinner */
+    .spinner-center { display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center; gap: 16px; }
+    .spinner-wheel {
+      width: 140px; height: 140px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--navy-mid));
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      font-size: 48px; box-shadow: 0 8px 24px rgba(11,158,166,0.3);
+      border: 4px solid white; user-select: none;
+      transition: transform 0.1s;
+    }
+    .spinner-wheel:active { transform: scale(0.94); }
+    .spin-hint { font-size: 12px; color: var(--muted); font-weight: 500; }
+    .spin-fact-card { background: white; border-radius: 12px; border: 0.5px solid var(--border); padding: 18px 20px; max-width: 500px; text-align: center; }
+    .spin-cat { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); margin-bottom: 8px; }
+    .spin-fact-text { font-size: 14px; font-weight: 500; color: var(--heading); line-height: 1.65; }
+
+    /* Guess the Image */
+    .img-game-area { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .img-box {
+      width: 100%; aspect-ratio: 16/9; border-radius: 12px;
+      overflow: hidden; background: var(--navy-mid);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; border: 0.5px solid var(--border); max-height: 220px;
+    }
+    .img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .img-hint { font-size: 11px; font-weight: 600; color: var(--muted); }
+    .img-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .img-opt {
+      padding: 12px 14px; border-radius: 11px;
+      border: 1.5px solid var(--border); background: white;
+      font-family: var(--font-body); font-size: 13px; font-weight: 500;
+      color: var(--heading); cursor: pointer; text-align: left;
+      transition: all var(--transition);
+    }
+    .img-opt:hover { border-color: var(--teal); background: var(--teal-mist); }
+    .img-opt.correct { background: #E8F8F0; border-color: #00C9A7; color: #00A88D; }
+    .img-opt.wrong { background: #FFF0EE; border-color: #E05555; color: #E05555; }
+    .img-opt:disabled { cursor: default; }
+    .img-feedback { padding: 11px 14px; border-radius: 11px; font-size: 13px; font-weight: 600; display: none; }
+    .img-feedback.show { display: block; }
+    .img-feedback.ok { background: #E8F8F0; color: #00A88D; }
+    .img-feedback.no { background: #FFF0EE; color: #E05555; }
+    .img-next { padding: 13px; border-radius: 12px; border: none; background: var(--navy-deep); color: white; font-family: var(--font-body); font-size: 14px; font-weight: 600; cursor: pointer; display: none; }
+    .img-next.show { display: block; }
+
+    /* ── QR Modal ─────────────────────────────────────────────── */
+    .qr-modal {
+      position: fixed; inset: 0; z-index: 80;
+      background: rgba(10,20,35,0.75);
+      display: none; align-items: center; justify-content: center;
+      animation: fadeIn 300ms ease;
+    }
+    .qr-modal.open { display: flex; }
+    .qr-modal-box { background: white; border-radius: 18px; padding: 28px 32px; text-align: center; max-width: 320px; width: 90%; }
+    .qr-modal-title { font-family: var(--font-display); font-size: 20px; color: var(--heading); margin-bottom: 6px; }
+    .qr-modal-sub { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+    .qr-placeholder { width: 160px; height: 160px; background: var(--navy-deep); border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; }
+    .qr-placeholder i { font-size: 80px; color: rgba(255,255,255,0.6); }
+    .qr-url { font-size: 12px; color: var(--teal); font-weight: 600; margin-bottom: 16px; }
+    .qr-close { padding: 10px 28px; border-radius: 10px; border: none; background: var(--navy-deep); color: white; font-family: var(--font-body); font-size: 13px; font-weight: 600; cursor: pointer; }
+
+    /* ── Inactivity Modal ─────────────────────────────────────── */
+    .inactivity-overlay {
+      position: fixed; inset: 0; z-index: 90;
+      background: rgba(10,20,35,0.7);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 400ms ease;
+      backdrop-filter: blur(3px);
+    }
+    .inactivity-overlay.visible { opacity: 1; pointer-events: all; }
+    .inactivity-box {
+      background: white; border-radius: 18px;
+      padding: 28px 32px; width: 340px; text-align: center;
+      border: 0.5px solid var(--border);
+      transform: scale(0.96);
+      transition: transform 400ms ease;
+    }
+    .inactivity-overlay.visible .inactivity-box { transform: scale(1); }
+    .inactivity-icon { font-size: 36px; margin-bottom: 12px; }
+    .inactivity-title { font-family: var(--font-display); font-size: 20px; color: var(--heading); font-weight: 500; margin-bottom: 6px; }
+    .inactivity-sub { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+    .countdown-ring { width: 64px; height: 64px; margin: 0 auto 18px; position: relative; display: flex; align-items: center; justify-content: center; }
+    .countdown-svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+    .countdown-track { fill: none; stroke: var(--teal-mist); stroke-width: 4; }
+    .countdown-progress { fill: none; stroke: var(--teal); stroke-width: 4; stroke-linecap: round; stroke-dasharray: 175.9; transition: stroke-dashoffset 1s linear; }
+    .countdown-num { font-family: var(--font-display); font-size: 26px; color: var(--heading); font-weight: 500; position: relative; z-index: 1; }
+    .inactivity-cta {
+      width: 100%; padding: 13px; border-radius: 11px; border: none;
+      background: var(--navy-deep); color: white;
+      font-family: var(--font-body); font-size: 13px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      gap: 6px; margin-bottom: 8px;
+    }
+    .inactivity-cta i { font-size: 14px; }
+    .inactivity-cta:active { opacity: 0.85; }
+    .inactivity-dismiss { font-size: 11px; color: #B0BCC8; cursor: pointer; }
+
+    /* ── Thanks Screen ────────────────────────────────────────── */
+    .thanks-screen {
+      position: fixed; inset: 0; z-index: 95;
+      background: var(--navy-deep);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 600ms ease;
+    }
+    .thanks-screen.visible { opacity: 1; pointer-events: all; }
+    .thanks-inner { text-align: center; padding: 32px; max-width: 500px; }
+    .thanks-wave { font-size: 52px; display: block; margin-bottom: 16px; }
+    .thanks-title { font-family: var(--font-display); font-size: 36px; color: white; font-weight: 500; margin-bottom: 8px; line-height: 1.2; }
+    .thanks-sub { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 20px; }
+    .thanks-tip-box {
+      background: rgba(11,158,166,0.15); border-radius: 12px;
+      padding: 14px 20px; border: 1px solid rgba(11,158,166,0.3); margin-bottom: 16px;
+    }
+    .thanks-tip-txt { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.65; }
+    .thanks-tip-txt strong { color: var(--teal); }
+    .thanks-reset-txt { font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 0.5px; }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <div class="app-shell">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header" id="secret-tap-zone">
+        <div class="app-brand">Miami<br>Companion</div>
+        <div class="app-sub">Your city guide</div>
+      </div>
+
+      <div class="sidebar-location">
+        <i class="ti ti-map-pin"></i>
+        <span id="location-display">Locating…</span>
+      </div>
+
+      <nav class="nav-links">
+        <div class="nav-link active" id="nav-guide" onclick="switchTab('guide')">
+          <i class="ti ti-map-pin"></i>
+          <span data-key="nav.guide">City Guide</span>
+          <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-link" id="nav-weather" onclick="switchTab('weather')">
+          <i class="ti ti-cloud-sun"></i>
+          <span data-key="nav.weather">Weather</span>
+        </div>
+        <div class="nav-link" id="nav-games" onclick="switchTab('games')">
+          <i class="ti ti-device-gamepad-2"></i>
+          <span data-key="nav.games">Games</span>
+        </div>
+      </nav>
+
+      <div class="lang-section">
+        <div class="lang-label">Language</div>
+        <div class="lang-grid">
+          <button class="lang-btn active" onclick="setLang('en')">🇺🇸 EN</button>
+          <button class="lang-btn" onclick="setLang('es')">🇪🇸 ES</button>
+          <button class="lang-btn" onclick="setLang('pt')">🇧🇷 PT</button>
+          <button class="lang-btn" onclick="setLang('fr')">🇫🇷 FR</button>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="tip-text">
+          <i class="ti ti-heart"></i>
+          <span data-key="footer.tip">Enjoying the ride? Tips are always appreciated</span>
+        </div>
+        <div class="claude-credit" data-key="footer.claude">Built with Claude AI · ask your driver</div>
+      </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+
+      <!-- GUIDE PAGE -->
+      <div class="page active" id="page-guide">
+        <div class="guide-header">
+          <div class="guide-top-row">
+            <div>
+              <div class="greeting-text" id="greeting-text">Good morning — welcome aboard</div>
+              <div class="greeting-sub" id="greeting-sub">Showing places nearest to your current location</div>
+            </div>
+            <div class="qr-compact" onclick="openQR('app')">
+              <i class="ti ti-qrcode"></i>
+              <span data-key="guide.openOnPhone">Open on your phone</span>
+            </div>
+          </div>
+          <div class="filter-row" id="filter-row">
+            <div class="pill pill-all active" data-filter="all" onclick="setFilter('all')">
+              <i class="ti ti-layout-grid"></i> <span data-key="categories.all">All</span>
+            </div>
+            <div class="pill pill-food" data-filter="restaurant" onclick="setFilter('restaurant')">
+              <i class="ti ti-tools-kitchen-2"></i> <span data-key="categories.restaurant">Food</span>
+            </div>
+            <div class="pill pill-night" data-filter="nightlife" onclick="setFilter('nightlife')">
+              <i class="ti ti-music"></i> <span data-key="categories.nightlife">Nightlife</span>
+            </div>
+            <div class="pill pill-attr" data-filter="attraction" onclick="setFilter('attraction')">
+              <i class="ti ti-map-pin"></i> <span data-key="categories.attraction">Attractions</span>
+            </div>
+            <div class="pill pill-gem" data-filter="gem" onclick="setFilter('gem')">
+              <i class="ti ti-sparkles"></i> <span data-key="categories.gem">Hidden Gems</span>
+            </div>
+            <div class="pill pill-event" data-filter="event" onclick="setFilter('event')">
+              <i class="ti ti-calendar-event"></i> <span data-key="categories.event">Events</span>
+            </div>
+            <div class="pill pill-picks" data-filter="picks" onclick="setFilter('picks')">
+              <i class="ti ti-star"></i> <span data-key="categories.picks">Abdullah's Picks</span>
+            </div>
+          </div>
+        </div>
+        <div class="guide-section-label" id="guide-section-label">Nearest to you</div>
+        <div class="cards-scroll">
+          <div class="cards-grid" id="cards-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- WEATHER PAGE -->
+      <div class="page" id="page-weather">
+        <div class="weather-content" id="weather-content">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- GAMES PAGE -->
+      <div class="page" id="page-games">
+        <div class="games-content">
+          <div class="games-header">
+            <div>
+              <div class="games-title" data-key="games.title">Games</div>
+              <div class="games-sub" data-key="games.sub">Pick something to play — no internet needed</div>
+            </div>
+            <div class="high-score-pill">
+              <i class="ti ti-trophy"></i>
+              <span id="high-score-display">Best tap score: 0</span>
+            </div>
+          </div>
+          <div class="games-layout">
+            <div class="hero-col">
+              <div class="hero-card" onclick="openGame('trivia')">
+                <div class="hero-glow"></div>
+                <div class="hero-body">
+                  <div class="hero-badge"><i class="ti ti-star"></i><span data-key="games.mostPopular">Most popular</span></div>
+                  <div class="hero-icon">🧠</div>
+                  <div class="hero-title">Miami Trivia</div>
+                  <div class="hero-desc" id="trivia-hero-desc">10 questions about Miami's history, culture, landmarks and hidden gems. How well do you know the Magic City?</div>
+                </div>
+                <div class="hero-footer">
+                  <div class="hero-meta">
+                    <div class="hero-meta-row"><i class="ti ti-clock"></i><span>~5 <span data-key="games.minutes">min</span></span></div>
+                    <div class="hero-meta-row"><i class="ti ti-users"></i><span>1–4 <span data-key="games.players">players</span></span></div>
+                  </div>
+                  <button class="hero-play"><i class="ti ti-player-play"></i><span data-key="games.playNow">Play now</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="grid-col">
+              <div class="game-card tap" onclick="openGame('tap')">
+                <div class="game-card-icon">👆</div>
+                <div class="game-card-title">Tap Frenzy</div>
+                <div class="game-card-desc">How many taps in 10 seconds? Beat the high score.</div>
+                <div class="game-card-footer">
+                  <div class="game-card-meta"><i class="ti ti-clock"></i>30 <span data-key="games.seconds">sec</span></div>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card word" onclick="openGame('word')">
+                <div class="game-card-icon">📝</div>
+                <div class="game-card-title">Word Puzzle</div>
+                <div class="game-card-desc">Guess the hidden Miami-themed word from clues.</div>
+                <div class="game-card-footer">
+                  <div class="game-card-meta"><i class="ti ti-clock"></i>2–4 <span data-key="games.minutes">min</span></div>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card spin" onclick="openGame('spin')">
+                <div class="game-card-icon">🌀</div>
+                <div class="game-card-title">Facts Spinner</div>
+                <div class="game-card-desc">Spin for surprising facts about Miami, science & history.</div>
+                <div class="game-card-footer">
+                  <div class="game-card-meta"><i class="ti ti-clock"></i><span data-key="games.anyTime">Any time</span></div>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card image" onclick="openGame('image')">
+                <div class="game-card-icon">🖼️</div>
+                <div class="game-card-title">Guess the Image</div>
+                <div class="game-card-desc">Real photos of world landmarks — can you name them?</div>
+                <div class="game-card-footer">
+                  <div class="game-card-meta"><i class="ti ti-clock"></i>3–5 <span data-key="games.minutes">min</span></div>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- ── Game Screens (full screen overlays) ── -->
+
+<!-- Trivia -->
+<div class="game-screen" id="game-trivia">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title">🧠 Miami Trivia</div>
+    <div class="game-score-badge">Score: <span id="trivia-score">0</span> / <span id="trivia-total">10</span></div>
+  </div>
+  <div class="game-body">
+    <div class="trivia-question" id="trivia-question">Press Start to begin!</div>
+    <div class="trivia-opts" id="trivia-opts"></div>
+    <div class="trivia-feedback" id="trivia-feedback"></div>
+    <button class="trivia-next show" id="trivia-next" onclick="triviaNext()">Start Trivia ▶</button>
+  </div>
+</div>
+
+<!-- Tap Frenzy -->
+<div class="game-screen" id="game-tap">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title">👆 Tap Frenzy</div>
+    <div class="game-score-badge">Best: <span id="tap-best-display">0</span></div>
+  </div>
+  <div class="game-body">
+    <div class="tap-center">
+      <div class="tap-timer-display" id="tap-timer">10s</div>
+      <button class="tap-circle" id="tap-circle" onclick="doTap()" disabled>
+        <span class="tap-count-num" id="tap-count">0</span>
+        <span class="tap-count-lbl">TAP!</span>
+      </button>
+      <div class="tap-best-txt">Best: <span id="tap-best-txt">0</span> taps</div>
+      <button class="tap-start-btn" id="tap-start-btn" onclick="startTap()">Start!</button>
+      <div class="tap-result-txt" id="tap-result"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Word Puzzle -->
+<div class="game-screen" id="game-word">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title">📝 Word Puzzle</div>
+    <div class="game-score-badge">Solved: <span id="word-solved">0</span></div>
+  </div>
+  <div class="game-body">
+    <div class="word-clue" id="word-clue">Loading puzzle…</div>
+    <div class="word-letters" id="word-letters"></div>
+    <div class="word-input-row">
+      <input class="word-input" id="word-input" type="text" placeholder="Type answer" maxlength="15" autocomplete="off" autocorrect="off" spellcheck="false">
+      <button class="word-submit" onclick="checkWord()">Check</button>
+    </div>
+    <div class="word-btns">
+      <button class="word-hint-btn" onclick="wordHint()">💡 Hint</button>
+      <button class="word-hint-btn" onclick="wordSkip()">⏭ Skip</button>
+    </div>
+    <div class="word-feedback" id="word-feedback"></div>
+  </div>
+</div>
+
+<!-- Facts Spinner -->
+<div class="game-screen" id="game-spin">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title">🌀 Facts Spinner</div>
+    <div class="game-score-badge">Spins: <span id="spin-count">0</span></div>
+  </div>
+  <div class="game-body">
+    <div class="spinner-center">
+      <div class="spinner-wheel" onclick="doSpin()">🎲</div>
+      <div class="spin-hint">Tap the wheel to spin!</div>
+      <div class="spin-fact-card">
+        <div class="spin-cat" id="spin-cat">Ready to spin?</div>
+        <div class="spin-fact-text" id="spin-fact">Tap the wheel above to discover amazing facts about Miami, science, history and more!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Guess the Image -->
+<div class="game-screen" id="game-image">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title">🖼️ Guess the Image</div>
+    <div class="game-score-badge">Score: <span id="img-score">0</span></div>
+  </div>
+  <div class="game-body">
+    <div class="img-game-area">
+      <div class="img-box" id="img-box">
+        <img id="img-photo" src="" alt="Guess the landmark" style="display:none">
+      </div>
+      <div class="img-hint" id="img-hint"></div>
+      <div class="img-opts" id="img-opts"></div>
+      <div class="img-feedback" id="img-feedback"></div>
+      <button class="img-next" id="img-next" onclick="imgNext()">Next Image ▶</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── QR Modal ── -->
+<div class="qr-modal" id="qr-modal">
+  <div class="qr-modal-box">
+    <div class="qr-modal-title" id="qr-modal-title">Open on your phone</div>
+    <div class="qr-modal-sub" id="qr-modal-sub">Scan to browse this guide on your own device — keep it after you leave</div>
+    <div class="qr-placeholder"><i class="ti ti-qrcode"></i></div>
+    <div class="qr-url" id="qr-url">miami-ride-companion.netlify.app</div>
+    <button class="qr-close" onclick="closeQR()">Close</button>
+  </div>
+</div>
+
+<!-- ── Inactivity Modal ── -->
+<div class="inactivity-overlay" id="inactivity-overlay" onclick="dismissInactivity()">
+  <div class="inactivity-box" onclick="event.stopPropagation()">
+    <div class="inactivity-icon">👋</div>
+    <div class="inactivity-title" data-key="inactivity.title">Still browsing?</div>
+    <div class="inactivity-sub" data-key="inactivity.body">The screen will reset shortly to be ready for the next passenger.</div>
+    <div class="countdown-ring">
+      <svg class="countdown-svg" viewBox="0 0 64 64">
+        <circle class="countdown-track" cx="32" cy="32" r="28"/>
+        <circle class="countdown-progress" id="countdown-ring" cx="32" cy="32" r="28" stroke-dashoffset="0"/>
+      </svg>
+      <div class="countdown-num" id="countdown-num">15</div>
+    </div>
+    <button class="inactivity-cta" onclick="dismissInactivity()">
+      <i class="ti ti-hand-finger"></i>
+      <span data-key="inactivity.cta">Tap anywhere to keep browsing</span>
+    </button>
+    <div class="inactivity-dismiss" data-key="inactivity.orWait">or wait to reset</div>
+  </div>
+</div>
+
+<!-- ── Thanks Screen ── -->
+<div class="thanks-screen" id="thanks-screen">
+  <div class="thanks-inner">
+    <span class="thanks-wave">🌊</span>
+    <div class="thanks-title" id="thanks-title">Thanks for riding!</div>
+    <div class="thanks-sub" id="thanks-sub">Hope you enjoyed the guide. Have a wonderful time in Miami.</div>
+    <div class="thanks-tip-box">
+      <div class="thanks-tip-txt" id="thanks-tip"></div>
+    </div>
+    <div class="thanks-reset-txt" id="thanks-reset">Resetting in 5 seconds…</div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════════════════════
+let CONTENT = null;
+let lang = 'en';
+let currentFilter = 'all';
+let currentTab = 'guide';
+let userLat = null, userLng = null;
+let tapBest = parseInt(localStorage.getItem('tapBest') || '0');
+let wordSolved = 0;
+let spinCount = 0;
+let imgScore = 0, imgRound = 0, imgAnswered = false;
+let triviaScore = 0, triviaQ = 0, triviaAnswered = false;
+let wordCurrent = null, wordHinted = [];
+let tapCount = 0, tapRunning = false, tapInterval = null;
+
+// Inactivity
+let inactivityTimer = null;
+let countdownTimer = null;
+let countdownVal = 15;
+const INACTIVITY_MS = 60000;  // 60 seconds
+const COUNTDOWN_S  = 15;
+const THANKS_S     = 5;
+
+// Secret tap
+let secretTaps = 0;
+let secretTimer = null;
+
+// Analytics (IndexedDB)
+let sessionStart = null;
+let sessionTaps = {};
+let db = null;
+
+// ════════════════════════════════════════════════════════════
+// BOOT
+// ════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  registerSW();
+  openDB();
+  loadContent();
+  initInactivity();
+  initSecretTap();
+  updateGreeting();
+  setInterval(updateGreeting, 60000);
+  tapBest = parseInt(localStorage.getItem('tapBest') || '0');
+  document.getElementById('tap-best-display').textContent = tapBest;
+  document.getElementById('tap-best-txt').textContent = tapBest;
+  document.getElementById('high-score-display').textContent = `Best tap: ${tapBest}`;
+});
+
+// ── Service Worker Registration ──────────────────────────────
+function registerSW() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('[App] SW registered'))
+      .catch(err => console.warn('[App] SW failed:', err));
+  }
+}
+
+// ── Load content.json ────────────────────────────────────────
+async function loadContent() {
+  try {
+    const res = await fetch('/content.json');
+    CONTENT = await res.json();
+    applyContent();
+  } catch (e) {
+    console.warn('[App] Content load failed:', e);
+    document.getElementById('cards-grid').innerHTML =
+      '<p style="color:var(--muted);font-size:13px;padding:16px;grid-column:span 2">Content unavailable. Please open the app on Wi-Fi to sync.</p>';
+  }
+}
+
+function applyContent() {
+  applyStrings();
+  renderGuide();
+  renderWeather();
+  startSession();
+}
+
+// ════════════════════════════════════════════════════════════
+// LANGUAGE
+// ════════════════════════════════════════════════════════════
+function t(key) {
+  if (!CONTENT) return '';
+  const parts = key.split('.');
+  let obj = CONTENT.strings;
+  for (const p of parts) {
+    if (!obj) return key;
+    obj = obj[p];
+  }
+  if (typeof obj === 'object') return obj[lang] || obj['en'] || key;
+  return obj || key;
+}
+
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  const btns = document.querySelectorAll('.lang-btn');
+  const map = { en: 0, es: 1, pt: 2, fr: 3 };
+  btns[map[l]].classList.add('active');
+  applyStrings();
+  renderGuide();
+  renderWeather();
+  logTap('lang_' + l);
+}
+
+function applyStrings() {
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    el.textContent = t(key);
+  });
+  updateGreeting();
+}
+
+// ════════════════════════════════════════════════════════════
+// GREETING
+// ════════════════════════════════════════════════════════════
+function updateGreeting() {
+  const h = new Date().getHours();
+  let timeKey = h < 12 ? 'morning' : h < 17 ? 'afternoon' : h < 21 ? 'evening' : 'night';
+  const greeting = CONTENT
+    ? CONTENT.strings.greeting[timeKey][lang]
+    : { morning:'Good morning', afternoon:'Good afternoon', evening:'Good evening', night:'Good night' }[timeKey] + ' — welcome aboard';
+  document.getElementById('greeting-text').textContent = greeting;
+}
+
+// ════════════════════════════════════════════════════════════
+// NAVIGATION
+// ════════════════════════════════════════════════════════════
+function switchTab(tab) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-' + tab).classList.add('active');
+  const navEl = document.getElementById('nav-' + tab);
+  navEl.classList.add('active');
+  // Move nav indicator
+  document.querySelectorAll('.nav-indicator').forEach(i => i.remove());
+  const ind = document.createElement('div');
+  ind.className = 'nav-indicator';
+  navEl.appendChild(ind);
+  currentTab = tab;
+  resetInactivity();
+  logTap('tab_' + tab);
+}
+
+// ════════════════════════════════════════════════════════════
+// GPS
+// ════════════════════════════════════════════════════════════
+function startGPS() {
+  if (!navigator.geolocation) return;
+  navigator.geolocation.watchPosition(pos => {
+    userLat = pos.coords.latitude;
+    userLng = pos.coords.longitude;
+    updateLocationDisplay();
+    if (currentTab === 'guide') renderGuide();
+  }, () => {
+    document.getElementById('location-display').textContent = 'Miami, FL';
+  }, { enableHighAccuracy: true, maximumAge: 30000 });
+}
+
+function updateLocationDisplay() {
+  if (!userLat || !CONTENT) return;
+  const neighborhood = detectNeighborhood(userLat, userLng);
+  document.getElementById('location-display').textContent = neighborhood || 'Miami, FL';
+  document.getElementById('greeting-sub').textContent =
+    (t('guide.nearestTo') || 'Nearest to you') + (neighborhood ? ` · ${neighborhood}` : '');
+}
+
+function detectNeighborhood(lat, lng) {
+  const zones = [
+    { name: 'South Beach',      latMin: 25.757, latMax: 25.800, lngMin: -80.145, lngMax: -80.118 },
+    { name: 'Wynwood',          latMin: 25.793, latMax: 25.810, lngMin: -80.205, lngMax: -80.192 },
+    { name: 'Brickell',         latMin: 25.740, latMax: 25.763, lngMin: -80.210, lngMax: -80.185 },
+    { name: 'Little Havana',    latMin: 25.757, latMax: 25.780, lngMin: -80.255, lngMax: -80.220 },
+    { name: 'Downtown Miami',   latMin: 25.765, latMax: 25.785, lngMin: -80.210, lngMax: -80.186 },
+    { name: 'Coconut Grove',    latMin: 25.717, latMax: 25.742, lngMin: -80.255, lngMax: -80.230 },
+    { name: 'Design District',  latMin: 25.810, latMax: 25.825, lngMin: -80.200, lngMax: -80.183 },
+    { name: 'Coral Gables',     latMin: 25.704, latMax: 25.738, lngMin: -80.290, lngMax: -80.244 },
+    { name: 'Upper East Side',  latMin: 25.810, latMax: 25.835, lngMin: -80.198, lngMax: -80.180 },
+    { name: 'Miami Beach',      latMin: 25.800, latMax: 25.870, lngMin: -80.140, lngMax: -80.114 },
+  ];
+  const zone = zones.find(z => lat >= z.latMin && lat <= z.latMax && lng >= z.lngMin && lng <= z.lngMax);
+  return zone ? zone.name : 'Miami, FL';
+}
+
+function haversine(lat1, lng1, lat2, lng2) {
+  const R = 3958.8; // miles
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+// ════════════════════════════════════════════════════════════
+// GUIDE RENDER
+// ════════════════════════════════════════════════════════════
+const WEATHER_ICONS = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',51:'🌦️',61:'🌧️',80:'🌦️',95:'⛈️'};
+
+function setFilter(f) {
+  currentFilter = f;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  document.querySelector(`[data-filter="${f}"]`).classList.add('active');
+  renderGuide();
+  logTap('filter_' + f);
+}
+
+function renderGuide() {
+  if (!CONTENT) return;
+  const grid = document.getElementById('cards-grid');
+  grid.innerHTML = '';
+
+  let venues = [...CONTENT.guide.venues];
+
+  // Attach distances
+  if (userLat && userLng) {
+    venues.forEach(v => {
+      v._dist = haversine(userLat, userLng, v.lat, v.lng);
+    });
+    venues.sort((a, b) => a._dist - b._dist);
+  }
+
+  // Filter
+  let filtered;
+  if (currentFilter === 'all') {
+    filtered = venues;
+  } else if (currentFilter === 'picks') {
+    filtered = venues.filter(v => v.abdullahsPick);
+  } else if (currentFilter === 'event') {
+    filtered = []; // events handled separately below
+  } else {
+    filtered = venues.filter(v => v.category === currentFilter);
+  }
+
+  // Section label
+  const label = document.getElementById('guide-section-label');
+  if (userLat) {
+    label.textContent = (t('guide.nearestTo') || 'Nearest to you') + ' · ' + filtered.length + ' places';
+  } else {
+    label.textContent = filtered.length + ' places';
+  }
+
+  // Render venue cards
+  filtered.forEach(v => {
+    grid.appendChild(buildVenueCard(v));
+  });
+
+  // Events (shown in All or Events filter)
+  if (currentFilter === 'all' || currentFilter === 'event') {
+    CONTENT.guide.events.forEach(e => {
+      grid.appendChild(buildEventCard(e));
+    });
+  }
+
+  // Handyman card (always last in All view)
+  if (currentFilter === 'all' || currentFilter === 'picks') {
+    if (CONTENT.ads.handyman.enabled) {
+      grid.appendChild(buildHandymanCard());
+    }
+  }
+
+  // Start GPS after first render
+  if (!userLat) startGPS();
+}
+
+function buildVenueCard(v) {
+  const card = document.createElement('div');
+  card.className = 'venue-card' + (v.featured ? ' featured' : '') + (v.abdullahsPick ? ' pick' : '');
+
+  const distStr = (userLat && v._dist !== undefined)
+    ? `<span class="venue-dist"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles') || 'mi'}</span>`
+    : '';
+
+  const featBadge = v.featured
+    ? `<div class="featured-badge"><i class="ti ti-star"></i><span>${t('guide.sponsored') || 'Sponsored'}</span></div>` : '';
+
+  const pickBadge = v.abdullahsPick
+    ? `<div class="pick-badge"><i class="ti ti-heart"></i><span>${t('guide.abdullahsPick') || "Abdullah's pick"}</span></div>` : '';
+
+  const note = (v.abdullahsPick && v.abdullahsNote && v.abdullahsNote[lang])
+    ? `<div class="venue-note">${v.abdullahsNote[lang]}</div>` : '';
+
+  const price = v.price && v.price !== 'Free'
+    ? `<span class="venue-price">${v.price}</span>` : v.price === 'Free'
+    ? `<span class="venue-price" style="color:var(--teal)">${t('guide.free') || 'Free'}</span>` : '';
+
+  card.innerHTML = `
+    ${featBadge}${pickBadge}
+    <div class="venue-inner">
+      <div class="venue-top">
+        <div class="venue-tag">${v.neighborhood} · ${v.category}</div>
+        <div class="venue-meta">${price}${distStr}</div>
+      </div>
+      <div class="venue-name">${v.name}</div>
+      <div class="venue-desc">${v.description[lang] || v.description.en}</div>
+      ${note}
+      <div class="venue-bottom">
+        <div class="venue-addr"><i class="ti ti-map-pin"></i>${v.address}</div>
+        <div class="qr-btn" onclick="event.stopPropagation();openQR('venue','${v.id}')"><i class="ti ti-qrcode"></i></div>
+      </div>
+    </div>`;
+
+  card.addEventListener('click', () => logTap('venue_' + v.id));
+  return card;
+}
+
+function buildEventCard(e) {
+  const card = document.createElement('div');
+  card.className = 'event-card';
+  const dateStr = new Date(e.date).toLocaleDateString(lang === 'en' ? 'en-US' : lang, { weekday:'short', month:'short', day:'numeric' });
+  card.innerHTML = `
+    <div class="event-inner">
+      <div class="event-top">
+        <div class="event-tag">${t('categories.event') || 'Event'}</div>
+        <div class="event-date">${dateStr}</div>
+      </div>
+      <div class="event-name">${e.title[lang] || e.title.en}</div>
+      <div class="event-desc">${e.description[lang] || e.description.en}</div>
+      <div class="event-bottom">
+        <div class="event-venue"><i class="ti ti-map-pin"></i>${e.venue}</div>
+        ${e.free ? `<div class="free-badge">${t('guide.free') || 'Free'}</div>` : ''}
+      </div>
+    </div>`;
+  card.addEventListener('click', () => { logTap('event_' + e.id); openQR('event', e.id); });
+  return card;
+}
+
+function buildHandymanCard() {
+  const h = CONTENT.ads.handyman;
+  const card = document.createElement('div');
+  card.className = 'handyman-card';
+  card.innerHTML = `
+    <div class="handyman-inner">
+      <div class="handyman-tag">From your driver</div>
+      <div class="handyman-name">${h.headline[lang] || h.headline.en}</div>
+      <div class="handyman-desc">${h.body[lang] || h.body.en}</div>
+      <div class="handyman-bottom">
+        <span class="handyman-phone">${h.phone}</span>
+        <div class="handyman-qr" onclick="event.stopPropagation();openQR('handyman')"><i class="ti ti-qrcode"></i></div>
+      </div>
+    </div>`;
+  card.addEventListener('click', () => logTap('handyman_tap'));
+  return card;
+}
+
+// ════════════════════════════════════════════════════════════
+// WEATHER RENDER
+// ════════════════════════════════════════════════════════════
+function renderWeather() {
+  if (!CONTENT) return;
+  const w = CONTENT.weather;
+  const fetchedAt = new Date(w.fetchedAt);
+  const now = new Date();
+  const hoursSince = (now - fetchedAt) / 3600000;
+  const isStale = hoursSince > 24;
+  const container = document.getElementById('weather-content');
+
+  const syncLabel = isStale
+    ? `<div class="stale-notice"><i class="ti ti-clock"></i><span><strong>${t('weather.staleNotice') || 'Last synced'} ${fetchedAt.toLocaleDateString()} ${t('weather.updatedAt') || 'at'} ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}.</strong> ${t('weather.connectWifi') || 'Connect to Wi-Fi before your next shift.'}</span></div>`
+    : `<div class="sync-badge"><i class="ti ti-refresh"></i><span>${t('weather.updatedAt') || 'Synced'} ${fetchedAt.toLocaleDateString()} ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</span></div>`;
+
+  let currentHtml = '';
+  if (!isStale) {
+    // Find current hour slot
+    const currentHour = now.getHours().toString().padStart(2,'0') + ':00';
+    const hourData = w.hourly.find(h => h.hour === currentHour) || w.hourly[0];
+
+    // Build hourly strip (5 hours starting from current)
+    const currentIdx = w.hourly.findIndex(h => h.hour === currentHour);
+    const hoursToShow = w.hourly.slice(Math.max(0, currentIdx), currentIdx + 5);
+
+    const hourCards = hoursToShow.map((h, i) => `
+      <div class="hour-card ${i === 0 ? 'now' : ''}">
+        <div class="hour-time ${i === 0 ? 'now-lbl' : ''}">${i === 0 ? (t('weather.now') || 'Now') : h.hour.replace(':00','').replace(/^0/,'') + (parseInt(h.hour) < 12 ? 'am' : 'pm')}</div>
+        <div class="hour-icon">${WEATHER_ICONS[h.weathercode] || '🌤️'}</div>
+        <div class="hour-temp">${Math.round(h.temp_f)}°</div>
+        <div class="hour-rain">${h.rain_chance}%</div>
+      </div>`).join('');
+
+    currentHtml = `
+      <div class="current-card">
+        <div>
+          <div class="current-label">Miami · ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} reading</div>
+          <div class="current-top">
+            <div>
+              <div class="current-temp">${Math.round(hourData.temp_f)}°</div>
+              <div class="current-desc">${w.current.description[lang] || w.current.description.en} · ${t('weather.feelsLike') || 'Feels like'} ${Math.round(w.current.feels_f)}°</div>
+            </div>
+            <div style="font-size:40px;opacity:0.85">${WEATHER_ICONS[w.current.weathercode] || '🌤️'}</div>
+          </div>
+        </div>
+        <div class="current-stats">
+          <div><div class="stat-val">${w.current.humidity}%</div><div class="stat-lbl">${t('weather.humidity') || 'Humidity'}</div></div>
+          <div><div class="stat-val">${w.current.wind_mph} mph</div><div class="stat-lbl">${t('weather.wind') || 'Wind'}</div></div>
+          <div><div class="stat-val">${w.current.rain_chance}%</div><div class="stat-lbl">${t('weather.rain') || 'Rain'}</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="hourly-label">${t('weather.hourly') || 'Hourly · Today'}</div>
+        <div class="hourly-row">${hourCards}</div>
+      </div>`;
+  } else {
+    // Stale — show today min/max only
+    const today = w.forecast[0];
+    currentHtml = `
+      <div class="current-card">
+        <div>
+          <div class="range-label">${t('weather.high') || 'High'} / ${t('weather.low') || 'Low'} · Today</div>
+          <div class="range-temps">
+            <div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:2px">${t('weather.high') || 'High'}</div>
+              <div class="range-high">${today.high_f}°</div>
+            </div>
+            <div style="padding-bottom:5px">
+              <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:2px">${t('weather.low') || 'Low'}</div>
+              <div class="range-low">${today.low_f}°</div>
+            </div>
+            <div class="range-icon">${WEATHER_ICONS[today.weathercode] || '🌤️'}</div>
+          </div>
+          <div class="range-desc">${today.description[lang] || today.description.en}</div>
+        </div>
+        <div class="current-stats">
+          <div><div class="stat-val">${w.current.humidity}%</div><div class="stat-lbl">${t('weather.humidity') || 'Humidity'}</div></div>
+          <div><div class="stat-val">${w.current.wind_mph} mph</div><div class="stat-lbl">${t('weather.wind') || 'Wind'}</div></div>
+          <div><div class="stat-val">${today.rain_chance}%</div><div class="stat-lbl">${t('weather.rain') || 'Rain'}</div></div>
+        </div>
+      </div>
+      ${syncLabel}`;
+  }
+
+  const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const forecastCards = w.forecast.map((f, i) => {
+    const d = new Date(f.date);
+    const dayName = i === 0 ? (t('weather.forecast') ? 'Today' : 'Today') : DAYS[d.getDay()];
+    const isToday = i === 0;
+    const cls = isToday ? (isStale ? 'today-stale' : 'today-fresh') : '';
+    const nameCls = isToday ? (isStale ? 'stale-lbl' : 'today-lbl') : '';
+    const opacity = isStale && i === 4 ? 'opacity:0.45;' : '';
+    return `
+      <div class="day-card ${cls}" style="${opacity}">
+        <div class="day-name ${nameCls}">${dayName}</div>
+        <div class="day-icon">${WEATHER_ICONS[f.weathercode] || '🌤️'}</div>
+        <div class="day-desc">${f.description[lang] || f.description.en}</div>
+        <div class="day-high">${f.high_f}°</div>
+        <div class="day-low">${f.low_f}°</div>
+        <div class="day-rain"><i class="ti ti-droplet"></i>${f.rain_chance}%</div>
+      </div>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="weather-left">
+      ${!isStale ? syncLabel : ''}
+      ${currentHtml}
+    </div>
+    <div class="weather-right">
+      <div class="forecast-label">${t('weather.forecast') || '5-Day Forecast'}${isStale ? ' · ' + t('weather.staleNotice') || '' : ''}</div>
+      <div class="forecast-cards">${forecastCards}</div>
+    </div>`;
+}
+
+// ════════════════════════════════════════════════════════════
+// GAMES
+// ════════════════════════════════════════════════════════════
+function openGame(type) {
+  document.getElementById('game-' + type).classList.add('open');
+  resetInactivity();
+  logTap('game_open_' + type);
+  if (type === 'trivia') initTrivia();
+  if (type === 'word') initWord();
+  if (type === 'image') initImage();
+}
+
+function closeGame() {
+  document.querySelectorAll('.game-screen').forEach(s => s.classList.remove('open'));
+  resetInactivity();
+}
+
+// ── Trivia ────────────────────────────────────────────────
+const TRIVIA_QUESTIONS = [
+  { q:"What is Miami's famous beachside neighborhood?", opts:["North Shore","South Beach","East End","Key West"], a:1 },
+  { q:"Which famous art fair is held in Miami Beach each December?", opts:["Art Basel","Frieze","TEFAF","The Armory Show"], a:0 },
+  { q:"What is the name of Miami's NBA team?", opts:["Miami Storm","Florida Thunder","Miami Heat","South Florida Suns"], a:2 },
+  { q:"What major river runs through Downtown Miami?", opts:["St. Johns","Miami River","Caloosahatchee","New River"], a:1 },
+  { q:"Which neighborhood is known as Miami's Cuban cultural hub?", opts:["Little Haiti","Coconut Grove","Little Havana","Coral Gables"], a:2 },
+  { q:"The iconic 'Welcome to Miami' song is by which artist?", opts:["Pitbull","Will Smith","Flo Rida","Enrique Iglesias"], a:1 },
+  { q:"What year was the City of Miami officially incorporated?", opts:["1892","1896","1905","1910"], a:1 },
+  { q:"Which architectural style dominates South Beach's Ocean Drive?", opts:["Victorian","Gothic Revival","Art Deco","Brutalist"], a:2 },
+  { q:"What is the name of Miami's main performing arts center?", opts:["Adrienne Arsht Center","Ziff Ballet Opera","Gusman Hall","Hard Rock Stadium"], a:0 },
+  { q:"Miami is nicknamed 'The Magic City' — why?", opts:["It has Disney World","It grew so fast it seemed like magic","Its weather changes magically","Built by a magician"], a:1 }
+];
+
+function initTrivia() {
+  triviaScore = 0; triviaQ = 0; triviaAnswered = false;
+  document.getElementById('trivia-score').textContent = '0';
+  document.getElementById('trivia-total').textContent = TRIVIA_QUESTIONS.length;
+  document.getElementById('trivia-question').textContent = 'Press Start to begin!';
+  document.getElementById('trivia-opts').innerHTML = '';
+  document.getElementById('trivia-feedback').className = 'trivia-feedback';
+  document.getElementById('trivia-next').textContent = 'Start Trivia ▶';
+  document.getElementById('trivia-next').className = 'trivia-next show';
+}
+
+function triviaNext() {
+  if (triviaQ >= TRIVIA_QUESTIONS.length) {
+    document.getElementById('trivia-question').textContent = `🎉 Game over! You scored ${triviaScore}/${TRIVIA_QUESTIONS.length}. Great job!`;
+    document.getElementById('trivia-opts').innerHTML = '';
+    document.getElementById('trivia-next').textContent = 'Play Again ▶';
+    document.getElementById('trivia-feedback').className = 'trivia-feedback';
+    triviaQ = 0; triviaScore = 0;
+    document.getElementById('trivia-score').textContent = '0';
+    return;
+  }
+  triviaAnswered = false;
+  const q = TRIVIA_QUESTIONS[triviaQ];
+  document.getElementById('trivia-question').textContent = `${triviaQ + 1}. ${q.q}`;
+  document.getElementById('trivia-feedback').className = 'trivia-feedback';
+  document.getElementById('trivia-next').className = 'trivia-next';
+  const opts = document.getElementById('trivia-opts');
+  opts.innerHTML = '';
+  q.opts.forEach((o, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'trivia-opt'; btn.textContent = o;
+    btn.onclick = () => answerTrivia(i, q.a);
+    opts.appendChild(btn);
+  });
+}
+
+function answerTrivia(chosen, correct) {
+  if (triviaAnswered) return;
+  triviaAnswered = true;
+  const btns = document.querySelectorAll('.trivia-opt');
+  btns.forEach((b, i) => {
+    b.disabled = true;
+    if (i === correct) b.classList.add('correct');
+    else if (i === chosen) b.classList.add('wrong');
+  });
+  const fb = document.getElementById('trivia-feedback');
+  if (chosen === correct) {
+    triviaScore++;
+    document.getElementById('trivia-score').textContent = triviaScore;
+    fb.textContent = '✅ Correct! Great job!';
+    fb.className = 'trivia-feedback show ok';
+  } else {
+    fb.textContent = `❌ The answer is: ${TRIVIA_QUESTIONS[triviaQ].opts[correct]}`;
+    fb.className = 'trivia-feedback show no';
+  }
+  triviaQ++;
+  document.getElementById('trivia-next').textContent = triviaQ >= TRIVIA_QUESTIONS.length ? 'See Results ▶' : 'Next Question ▶';
+  document.getElementById('trivia-next').className = 'trivia-next show';
+}
+
+// ── Tap Frenzy ────────────────────────────────────────────
+function startTap() {
+  if (tapRunning) return;
+  tapCount = 0; tapRunning = true;
+  document.getElementById('tap-count').textContent = '0';
+  document.getElementById('tap-result').textContent = '';
+  document.getElementById('tap-circle').disabled = false;
+  document.getElementById('tap-start-btn').disabled = true;
+  let t = 10;
+  document.getElementById('tap-timer').textContent = t + 's';
+  tapInterval = setInterval(() => {
+    t--;
+    document.getElementById('tap-timer').textContent = t + 's';
+    if (t <= 0) {
+      clearInterval(tapInterval); tapRunning = false;
+      document.getElementById('tap-circle').disabled = true;
+      document.getElementById('tap-start-btn').disabled = false;
+      if (tapCount > tapBest) {
+        tapBest = tapCount;
+        localStorage.setItem('tapBest', tapBest);
+        document.getElementById('tap-best-display').textContent = tapBest;
+        document.getElementById('tap-best-txt').textContent = tapBest;
+        document.getElementById('high-score-display').textContent = `Best tap: ${tapBest}`;
+      }
+      const msgs = ['🔥 On fire!','⚡ Lightning fingers!','👏 Nice work!','🤩 Incredible!','💪 Strong effort!'];
+      document.getElementById('tap-result').textContent = `${tapCount} taps! ${msgs[Math.floor(Math.random()*msgs.length)]}`;
+      logTap('tap_score_' + tapCount);
+    }
+  }, 1000);
+}
+
+function doTap() {
+  if (!tapRunning) return;
+  tapCount++;
+  document.getElementById('tap-count').textContent = tapCount;
+}
+
+// ── Word Puzzle ───────────────────────────────────────────
+const WORD_LIST = [
+  { word:'BISCAYNE', clue:'Famous bay in Miami — ___ Bay' },
+  { word:'EVERGLADES', clue:'Florida\'s iconic national park and wetland' },
+  { word:'HAVANA', clue:'Little ___ — Miami\'s Cuban cultural hub' },
+  { word:'WYNWOOD', clue:'Miami\'s colorful street art neighborhood' },
+  { word:'FLAMINGO', clue:'Pink bird iconic to Florida' },
+  { word:'HURRICANE', clue:'Storm Florida is known for in summer' },
+  { word:'CROQUETA', clue:'Popular Cuban snack — fried and breaded' },
+  { word:'BRICKELL', clue:'Miami\'s financial district' },
+  { word:'DOLPHINS', clue:'Miami\'s NFL team' },
+  { word:'SUNSCREEN', clue:'Miami essential — protect your skin! ☀️' },
+  { word:'CORTADITO', clue:'Classic Cuban espresso — tiny but strong' },
+  { word:'MANGROVE', clue:'Coastal tree found throughout South Florida' },
+];
+
+function initWord() {
+  wordSolved = 0;
+  document.getElementById('word-solved').textContent = '0';
+  document.getElementById('word-input').value = '';
+  newWord();
+}
+
+function newWord() {
+  wordCurrent = WORD_LIST[Math.floor(Math.random() * WORD_LIST.length)];
+  wordHinted = [];
+  document.getElementById('word-clue').textContent = '💬 ' + wordCurrent.clue;
+  document.getElementById('word-input').value = '';
+  document.getElementById('word-feedback').className = 'word-feedback';
+  renderWordLetters();
+}
+
+function renderWordLetters() {
+  const input = document.getElementById('word-input').value.toUpperCase();
+  const container = document.getElementById('word-letters');
+  container.innerHTML = '';
+  wordCurrent.word.split('').forEach((ch, i) => {
+    const box = document.createElement('div');
+    box.className = 'word-letter' + (wordHinted.includes(i) ? ' hint' : '');
+    box.textContent = wordHinted.includes(i) ? ch : (input[i] || '_');
+    container.appendChild(box);
+  });
+}
+
+function checkWord() {
+  const guess = document.getElementById('word-input').value.toUpperCase().trim();
+  const fb = document.getElementById('word-feedback');
+  if (!guess) return;
+  if (guess === wordCurrent.word) {
+    fb.textContent = '🎉 Correct! Amazing!';
+    fb.className = 'word-feedback show ok';
+    wordSolved++;
+    document.getElementById('word-solved').textContent = wordSolved;
+    // Show all letters then next word
+    wordHinted = [...Array(wordCurrent.word.length).keys()];
+    renderWordLetters();
+    setTimeout(newWord, 1800);
+  } else {
+    fb.textContent = `❌ Not quite — ${wordCurrent.word.length} letters`;
+    fb.className = 'word-feedback show no';
+  }
+}
+
+function wordHint() {
+  const unrevealed = [];
+  for (let i = 0; i < wordCurrent.word.length; i++) {
+    if (!wordHinted.includes(i)) unrevealed.push(i);
+  }
+  if (!unrevealed.length) return;
+  wordHinted.push(unrevealed[Math.floor(Math.random() * unrevealed.length)]);
+  renderWordLetters();
+}
+
+function wordSkip() {
+  document.getElementById('word-feedback').className = 'word-feedback';
+  newWord();
+}
+
+document.getElementById('word-input').addEventListener('input', renderWordLetters);
+
+// ── Facts Spinner ─────────────────────────────────────────
+const SPIN_FACTS = [
+  { cat:'🌴 Miami', fact:'Miami has more Rolls-Royces per capita than any other US city. No surprise given the sunny lifestyle!' },
+  { cat:'🌊 Ocean', fact:'The Atlantic Ocean off Miami Beach stays warm enough to swim in year-round — even in January!' },
+  { cat:'🦈 Wildlife', fact:'Bull sharks have been spotted in Miami\'s canals. They can survive in both salt and fresh water!' },
+  { cat:'🎭 Culture', fact:'Miami is home to over 100 different nationalities — one of the most diverse cities on Earth.' },
+  { cat:'🔬 Science', fact:'Honey never spoils. Archaeologists found 3,000-year-old honey in Egyptian tombs that was still edible!' },
+  { cat:'🧠 Brain', fact:'Your brain uses 20% of your body\'s total energy despite being only 2% of your body weight.' },
+  { cat:'🌍 History', fact:'Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid.' },
+  { cat:'🚀 Space', fact:'There are more stars in the observable universe than grains of sand on all of Earth\'s beaches combined.' },
+  { cat:'🐙 Ocean', fact:'Octopuses have three hearts — two pump blood to the gills, one pumps it to the rest of the body.' },
+  { cat:'🌴 Miami', fact:'Miami\'s Coconut Grove is the oldest continuously inhabited community in Florida, settled in 1825!' },
+  { cat:'⚡ Science', fact:'Lightning strikes Earth about 100 times per second — 8 million times per day!' },
+  { cat:'🇹🇷 World', fact:'Istanbul is the only city in the world that straddles two continents — Europe and Asia.' },
+  { cat:'🌴 Miami', fact:'Port of Miami is the world\'s busiest cruise port, handling over 6 million passengers per year.' },
+  { cat:'🧬 Science', fact:'You share about 50% of your DNA with a banana. Life is surprisingly connected.' },
+];
+
+function doSpin() {
+  const f = SPIN_FACTS[Math.floor(Math.random() * SPIN_FACTS.length)];
+  spinCount++;
+  document.getElementById('spin-count').textContent = spinCount;
+  const wheel = document.querySelector('.spinner-wheel');
+  wheel.style.transform = 'rotate(360deg)';
+  wheel.style.transition = 'transform 0.5s ease';
+  setTimeout(() => { wheel.style.transform = ''; wheel.style.transition = ''; }, 500);
+  const catEl = document.getElementById('spin-cat');
+  const factEl = document.getElementById('spin-fact');
+  catEl.style.opacity = '0'; factEl.style.opacity = '0';
+  setTimeout(() => {
+    catEl.textContent = f.cat;
+    factEl.textContent = f.fact;
+    catEl.style.opacity = '1'; factEl.style.opacity = '1';
+    catEl.style.transition = 'opacity 0.3s'; factEl.style.transition = 'opacity 0.3s';
+  }, 300);
+}
+
+// ── Guess the Image ───────────────────────────────────────
+const IMG_ROUNDS = [
+  { file:'statue-of-liberty.jpg', hint:'Located in New York Harbor', opts:['Eiffel Tower','Big Ben','Statue of Liberty','Colosseum'], a:2, explain:'The Statue of Liberty! A gift from France in 1886.' },
+  { file:'eiffel-tower.jpg', hint:'Located in Paris, France', opts:['Eiffel Tower','Empire State','Burj Khalifa','Big Ben'], a:0, explain:'The Eiffel Tower, built in 1889. Bonjour! 🇫🇷' },
+  { file:'colosseum.jpg', hint:'Ancient Roman amphitheater', opts:['Parthenon','Pantheon','Colosseum','Circus Maximus'], a:2, explain:'The Roman Colosseum — once hosted 50,000 spectators!' },
+  { file:'machu-picchu.jpg', hint:'Ancient Incan citadel in South America', opts:['Machu Picchu','Angkor Wat','Tikal','Chichen Itza'], a:0, explain:'Machu Picchu — the lost city of the Incas in Peru!' },
+  { file:'taj-mahal.jpg', hint:'Built by a Mughal emperor in India', opts:['Taj Mahal','Alhambra','Topkapi Palace','Red Fort'], a:0, explain:'The Taj Mahal — a monument to love, built in 1648.' },
+  { file:'sydney-opera.jpg', hint:'Iconic performing arts venue in Australia', opts:['Sydney Opera House','Walt Disney Concert Hall','La Scala','Royal Opera House'], a:0, explain:'The Sydney Opera House — one of the 20th century\'s greatest buildings.' },
+  { file:'golden-gate.jpg', hint:'Famous bridge in San Francisco', opts:['Brooklyn Bridge','Golden Gate','Sydney Harbour','Millau Viaduct'], a:1, explain:'The Golden Gate Bridge — opened in 1937 and still iconic! 🌁' },
+  { file:'big-ben.jpg', hint:'Iconic clock tower in London', opts:['Notre-Dame','Big Ben','Eiffel Tower','Sagrada Família'], a:1, explain:'Big Ben — officially the Elizabeth Tower, built in 1859.' },
+  { file:'sagrada-familia.jpg', hint:'Unfinished basilica in Barcelona', opts:['Notre-Dame','St. Peter\'s Basilica','Sagrada Família','Hagia Sophia'], a:2, explain:'Sagrada Família — Gaudí\'s masterpiece, still under construction since 1882!' },
+  { file:'christ-redeemer.jpg', hint:'Statue overlooking Rio de Janeiro', opts:['Statue of Liberty','Christ the Redeemer','Angel of the North','Motherland Calls'], a:1, explain:'Christ the Redeemer — 98 feet tall, overlooking Rio from Corcovado mountain.' },
+  { file:'great-wall.jpg', hint:'The world\'s longest wall, in Asia', opts:['Hadrian\'s Wall','Great Wall of China','Berlin Wall','Aurelian Wall'], a:1, explain:'The Great Wall of China — over 13,000 miles long!' },
+  { file:'wynwood-walls.jpg', hint:'Famous open-air mural park in Miami', opts:['Wynwood Walls','The High Line','Bowery Mural','MOCA Geffen'], a:0, explain:'Wynwood Walls — Miami\'s own world-class open-air street art museum!' },
+];
+
+let imgShuffled = [];
+
+function initImage() {
+  imgScore = 0; imgRound = 0; imgAnswered = false;
+  document.getElementById('img-score').textContent = '0';
+  imgShuffled = [...IMG_ROUNDS].sort(() => Math.random() - 0.5);
+  loadImgRound();
+}
+
+function loadImgRound() {
+  imgAnswered = false;
+  const r = imgShuffled[imgRound % imgShuffled.length];
+  const photo = document.getElementById('img-photo');
+  photo.src = `/images/games/${r.file}`;
+  photo.style.display = 'block';
+  photo.onerror = () => {
+    photo.style.display = 'none';
+    document.getElementById('img-box').innerHTML = `<div style="font-size:60px;color:rgba(255,255,255,0.5)">${r.hint}</div>`;
+  };
+  document.getElementById('img-hint').textContent = '💡 ' + r.hint;
+  document.getElementById('img-feedback').className = 'img-feedback';
+  document.getElementById('img-next').className = 'img-next';
+  const opts = document.getElementById('img-opts');
+  opts.innerHTML = '';
+  r.opts.forEach((o, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'img-opt'; btn.textContent = o;
+    btn.onclick = () => answerImg(i, r.a, r.explain, r.opts);
+    opts.appendChild(btn);
+  });
+}
+
+function answerImg(chosen, correct, explain, opts) {
+  if (imgAnswered) return;
+  imgAnswered = true;
+  document.querySelectorAll('.img-opt').forEach((b, i) => {
+    b.disabled = true;
+    if (i === correct) b.classList.add('correct');
+    else if (i === chosen) b.classList.add('wrong');
+  });
+  const fb = document.getElementById('img-feedback');
+  if (chosen === correct) {
+    imgScore++;
+    document.getElementById('img-score').textContent = imgScore;
+    fb.textContent = '✅ ' + explain;
+    fb.className = 'img-feedback show ok';
+  } else {
+    fb.textContent = '❌ ' + explain;
+    fb.className = 'img-feedback show no';
+  }
+  imgRound++;
+  document.getElementById('img-next').className = 'img-next show';
+}
+
+function imgNext() { loadImgRound(); }
+
+// ════════════════════════════════════════════════════════════
+// QR MODAL
+// ════════════════════════════════════════════════════════════
+function openQR(type, id) {
+  const modal = document.getElementById('qr-modal');
+  const title = document.getElementById('qr-modal-title');
+  const sub = document.getElementById('qr-modal-sub');
+  const url = document.getElementById('qr-url');
+  const appUrl = window.location.hostname;
+
+  if (type === 'app') {
+    title.textContent = t('guide.openOnPhone') || 'Open on your phone';
+    sub.textContent = t('guide.qrHint') || 'Scan to browse this guide on your own device';
+    url.textContent = appUrl;
+  } else if (type === 'venue' && CONTENT) {
+    const v = CONTENT.guide.venues.find(x => x.id === id);
+    if (v) {
+      title.textContent = v.name;
+      sub.textContent = v.address;
+      url.textContent = v.website || `maps.google.com/?q=${encodeURIComponent(v.address)}`;
+    }
+  } else if (type === 'handyman' && CONTENT) {
+    title.textContent = CONTENT.ads.handyman.headline[lang] || 'Handyman';
+    sub.textContent = CONTENT.ads.handyman.phone;
+    url.textContent = CONTENT.ads.handyman.phone;
+  } else if (type === 'event' && CONTENT) {
+    const e = CONTENT.guide.events.find(x => x.id === id);
+    if (e) {
+      title.textContent = e.title[lang] || e.title.en;
+      sub.textContent = e.venue;
+      url.textContent = e.url || appUrl;
+    }
+  }
+
+  modal.classList.add('open');
+  logTap('qr_' + type);
+}
+
+function closeQR() {
+  document.getElementById('qr-modal').classList.remove('open');
+}
+
+// ════════════════════════════════════════════════════════════
+// INACTIVITY RESET
+// ════════════════════════════════════════════════════════════
+function initInactivity() {
+  document.addEventListener('touchstart', resetInactivity, { passive: true });
+  document.addEventListener('mousedown', resetInactivity);
+  resetInactivity();
+}
+
+function resetInactivity() {
+  clearTimeout(inactivityTimer);
+  clearInterval(countdownTimer);
+  dismissInactivity(true);
+  inactivityTimer = setTimeout(showInactivityModal, INACTIVITY_MS);
+}
+
+function showInactivityModal() {
+  // Close any open game screen
+  document.querySelectorAll('.game-screen').forEach(s => s.classList.remove('open'));
+  document.getElementById('qr-modal').classList.remove('open');
+
+  countdownVal = COUNTDOWN_S;
+  document.getElementById('countdown-num').textContent = countdownVal;
+  updateCountdownRing(countdownVal);
+
+  const overlay = document.getElementById('inactivity-overlay');
+  overlay.classList.add('visible');
+
+  countdownTimer = setInterval(() => {
+    countdownVal--;
+    document.getElementById('countdown-num').textContent = countdownVal;
+    updateCountdownRing(countdownVal);
+    if (countdownVal <= 0) {
+      clearInterval(countdownTimer);
+      endSession();
+      overlay.classList.remove('visible');
+      showThanks();
+    }
+  }, 1000);
+}
+
+function updateCountdownRing(val) {
+  const circumference = 175.9;
+  const progress = (val / COUNTDOWN_S) * circumference;
+  document.getElementById('countdown-ring').style.strokeDashoffset = circumference - progress;
+}
+
+function dismissInactivity(silent = false) {
+  clearInterval(countdownTimer);
+  const overlay = document.getElementById('inactivity-overlay');
+  overlay.classList.remove('visible');
+  if (!silent) resetInactivity();
+}
+
+function showThanks() {
+  // Apply strings
+  if (CONTENT) {
+    document.getElementById('thanks-title').textContent = CONTENT.strings.thanks.title[lang] || 'Thanks for riding!';
+    document.getElementById('thanks-sub').textContent = CONTENT.strings.thanks.body[lang] || 'Hope you enjoyed the guide.';
+    document.getElementById('thanks-tip').innerHTML = (CONTENT.strings.thanks.tip[lang] || 'Tips are appreciated.')
+      .replace('tip in the Lyft app', '<strong>tip in the Lyft app</strong>');
+  }
+
+  const screen = document.getElementById('thanks-screen');
+  screen.classList.add('visible');
+
+  let countdown = THANKS_S;
+  const resetTxt = document.getElementById('thanks-reset');
+  const resetLabel = CONTENT ? CONTENT.strings.thanks.resetting[lang] : 'Resetting in 5 seconds…';
+  resetTxt.textContent = resetLabel.replace('5', countdown);
+
+  const tick = setInterval(() => {
+    countdown--;
+    resetTxt.textContent = resetLabel.replace('5', countdown);
+    if (countdown <= 0) {
+      clearInterval(tick);
+      screen.classList.remove('visible');
+      // Reset app to home state after fade out
+      setTimeout(() => {
+        switchTab('guide');
+        setFilter('all');
+        startSession();
+        resetInactivity();
+      }, 650);
+    }
+  }, 1000);
+}
+
+// ════════════════════════════════════════════════════════════
+// SECRET TAP (5 taps on sidebar header — silent)
+// ════════════════════════════════════════════════════════════
+function initSecretTap() {
+  const zone = document.getElementById('secret-tap-zone');
+  zone.addEventListener('click', () => {
+    secretTaps++;
+    clearTimeout(secretTimer);
+    // No visual feedback — completely silent
+    if (secretTaps >= 5) {
+      secretTaps = 0;
+      window.location.href = '/editor.html';
+      return;
+    }
+    secretTimer = setTimeout(() => { secretTaps = 0; }, 3000);
+  });
+}
+
+// ════════════════════════════════════════════════════════════
+// ANALYTICS (IndexedDB)
+// ════════════════════════════════════════════════════════════
+function openDB() {
+  const req = indexedDB.open('MiamiRideAnalytics', 1);
+  req.onupgradeneeded = e => {
+    const db = e.target.result;
+    if (!db.objectStoreNames.contains('sessions')) {
+      db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
+    }
+    if (!db.objectStoreNames.contains('taps')) {
+      db.createObjectStore('taps', { keyPath: 'id', autoIncrement: true });
+    }
+  };
+  req.onsuccess = e => {
+    db = e.target.result;
+  };
+}
+
+function startSession() {
+  sessionStart = Date.now();
+  sessionTaps = {};
+}
+
+function endSession() {
+  if (!db || !sessionStart) return;
+  const duration = Math.round((Date.now() - sessionStart) / 1000);
+  const session = {
+    startTime: new Date(sessionStart).toISOString(),
+    duration,
+    taps: { ...sessionTaps },
+    lang,
+    endType: 'inactivity'
+  };
+  const tx = db.transaction('sessions', 'readwrite');
+  tx.objectStore('sessions').add(session);
+}
+
+function logTap(key) {
+  resetInactivity();
+  if (!sessionStart) startSession();
+  sessionTaps[key] = (sessionTaps[key] || 0) + 1;
+  if (!db) return;
+  const tx = db.transaction('taps', 'readwrite');
+  tx.objectStore('taps').add({ key, time: Date.now(), lang });
+}
+</script>
+</body>
+</html>
