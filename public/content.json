@@ -1,67 +1,61 @@
 {
   "meta": {
-    "lastUpdated": "2026-05-26T23:23:35.226Z",
+    "lastUpdated": "2026-05-27T00:51:01.517Z",
     "publishedBy": "Abdullah",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-05-26T23:13:42.580Z",
+    "fetchedAt": "2026-05-27T00:50:26.583Z",
     "current": {
       "temp_f": 81,
-      "feels_f": 88,
+      "feels_f": 89,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 83,
-      "wind_mph": 10,
-      "rain_chance": 16,
-      "weathercode": 51
+      "humidity": 85,
+      "wind_mph": 7,
+      "rain_chance": 22,
+      "weathercode": 0
     },
     "hourly": [
       {
-        "hour": "19:00",
-        "temp_f": 81,
-        "weathercode": 51,
-        "rain_chance": 14
-      },
-      {
         "hour": "20:00",
-        "temp_f": 77,
-        "weathercode": 65,
-        "rain_chance": 16
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 22
       },
       {
         "hour": "21:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 13
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 11
       },
       {
         "hour": "22:00",
-        "temp_f": 77,
-        "weathercode": 1,
+        "temp_f": 79,
+        "weathercode": 0,
         "rain_chance": 11
       },
       {
         "hour": "23:00",
-        "temp_f": 77,
-        "weathercode": 0,
+        "temp_f": 79,
+        "weathercode": 1,
         "rain_chance": 6
       },
       {
         "hour": "00:00",
-        "temp_f": 77,
-        "weathercode": 0,
+        "temp_f": 76,
+        "weathercode": 51,
         "rain_chance": 10
       },
       {
         "hour": "01:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 7
+        "weathercode": 0,
+        "rain_chance": 8
       },
       {
         "hour": "02:00",
@@ -71,7 +65,7 @@
       },
       {
         "hour": "03:00",
-        "temp_f": 77,
+        "temp_f": 78,
         "weathercode": 0,
         "rain_chance": 4
       },
@@ -90,50 +84,50 @@
       {
         "hour": "06:00",
         "temp_f": 77,
-        "weathercode": 0,
+        "weathercode": 1,
         "rain_chance": 0
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 0,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 3
       },
       {
         "hour": "08:00",
-        "temp_f": 79,
-        "weathercode": 0,
+        "temp_f": 81,
+        "weathercode": 3,
         "rain_chance": 6
       },
       {
         "hour": "09:00",
-        "temp_f": 81,
-        "weathercode": 0,
+        "temp_f": 83,
+        "weathercode": 2,
         "rain_chance": 3
       },
       {
         "hour": "10:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "11:00",
         "temp_f": 83,
         "weathercode": 1,
         "rain_chance": 5
       },
       {
+        "hour": "11:00",
+        "temp_f": 85,
+        "weathercode": 1,
+        "rain_chance": 4
+      },
+      {
         "hour": "12:00",
         "temp_f": 86,
-        "weathercode": 0,
+        "weathercode": 1,
         "rain_chance": 2
       },
       {
         "hour": "13:00",
         "temp_f": 87,
         "weathercode": 1,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "14:00",
@@ -164,6 +158,12 @@
         "temp_f": 85,
         "weathercode": 3,
         "rain_chance": 0
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 1
       }
     ],
     "forecast": [
@@ -172,7 +172,7 @@
         "high_f": 87,
         "low_f": 77,
         "weathercode": 95,
-        "rain_chance": 16,
+        "rain_chance": 22,
         "description": {
           "en": "See forecast",
           "es": "Ver pronóstico",
@@ -183,8 +183,8 @@
       {
         "date": "2026-05-27",
         "high_f": 87,
-        "low_f": 77,
-        "weathercode": 3,
+        "low_f": 76,
+        "weathercode": 51,
         "rain_chance": 10,
         "description": {
           "en": "See forecast",
@@ -210,7 +210,7 @@
         "date": "2026-05-29",
         "high_f": 87,
         "low_f": 79,
-        "weathercode": 55,
+        "weathercode": 81,
         "rain_chance": 72,
         "description": {
           "en": "See forecast",
@@ -221,9 +221,9 @@
       },
       {
         "date": "2026-05-30",
-        "high_f": 89,
+        "high_f": 91,
         "low_f": 80,
-        "weathercode": 3,
+        "weathercode": 53,
         "rain_chance": 58,
         "description": {
           "en": "See forecast",
@@ -246,7 +246,7 @@
         "lat": 25.7663,
         "lng": -80.2324,
         "website": "https://versaillesrestaurant.com",
-        "abdullahsPick": false,
+        "abdullahsPick": true,
         "featured": false,
         "sponsored": false,
         "description": {
@@ -499,12 +499,12 @@
         "fr": "Besoin d'un bricoleur à Miami ?"
       },
       "body": {
-        "en": "Your driver does that too! Repairs, installations, general fixes. Electrical, plumbing, drywall. Ask me, or scan to save my contact.",
+        "en": "Your driver does that too — repairs, installations, general fixes. Ask me, or scan to save my contact.",
         "es": "Tu conductor también hace eso — reparaciones, instalaciones, arreglos generales. Pregúntame, o escanea para guardar mi contacto.",
         "pt": "O seu motorista também faz isso — reparações, instalações, consertos gerais. Pergunte-me, ou digitalize para guardar o meu contacto.",
         "fr": "Votre chauffeur fait ça aussi — réparations, installations, bricolage général. Demandez-moi, ou scannez pour sauvegarder mon contact."
       },
-      "phone": "(786) 919-2115",
+      "phone": "+1-305-000-0000",
       "website": ""
     },
     "sponsored": [
