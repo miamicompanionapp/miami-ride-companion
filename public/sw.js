@@ -30,7 +30,7 @@ const PRECACHE_URLS = [
   '/images/games/sagrada-familia.jpg',
   '/images/games/christ-redeemer.jpg',
   '/images/games/great-wall.jpg',
-  '/images/games/wynwood-walls.jpg',
+  '/images/games/wynwood-walls.webp',
   '/images/games/burj-khalifa.jpg',
   '/images/games/petra.jpg',
   '/images/games/angkor-wat.jpg',
@@ -42,7 +42,7 @@ const NEVER_CACHE = [
   '/editor.html',
   '/editor',
   '/analytics.json',
-  '/.netlify/functions/',
+  '/api/',
 ];
 
 // ─── Install: pre-cache everything ───────────────────────────────────────────

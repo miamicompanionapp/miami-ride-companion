@@ -607,7 +607,7 @@
         <div class="card-header"><div><div class="card-title">Claude AI Writing Assistant</div><div class="card-sub">Used for auto-translating descriptions</div></div></div>
         <div class="info-box">
           <i class="ti ti-info-circle"></i>
-          <span>The API key is stored securely as a Netlify environment variable — not in the browser. To set it up: go to <strong>Netlify → Site settings → Environment variables → Add variable</strong>, set key name <strong>ANTHROPIC_API_KEY</strong> and paste your key from console.anthropic.com. Then redeploy. Estimated cost: ~$1–2/month.</span>
+          <span>The API key is stored securely as a Cloudflare environment variable — not in the browser. To set it up: go to <strong>Cloudflare Dashboard → Pages → miami-ride-companion → Settings → Environment Variables → Add variable</strong>, set key name <strong>ANTHROPIC_API_KEY</strong> and paste your key from console.anthropic.com. Then redeploy. Estimated cost: ~$1–2/month.</span>
         </div>
       </div>
     </div>
@@ -959,10 +959,41 @@ function addManualEvent() {
 
 async function fetchEvents() {
   showToast('Fetching events from RSS…');
-  // In production this would use a Netlify function to fetch RSS
-  // (CORS prevents direct browser fetch of external RSS)
-  // For now show a helpful message
-  showToast('RSS fetch runs via Netlify function — deploy first', 'error');
+  // CORS prevents direct browser fetches of external RSS feeds.
+  // /api/rss-fetch is a Cloudflare Pages Function that fetches them server-side.
+  try {
+    const res = await fetch('/api/rss-fetch');
+    if (!res.ok) throw new Error(`Server error ${res.status}`);
+    const { events, errors } = await res.json();
+
+    if (errors.length) console.warn('[RSS] Some feeds failed:', errors);
+
+    // Merge new items — skip any URL already in the list
+    const existingUrls = new Set((CONTENT.guide.events || []).map(e => e.url));
+    const newEvents = events
+      .filter(e => e.url && !existingUrls.has(e.url))
+      .map(e => ({
+        id: 'rss_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+        title:       { en: e.title, es: '', pt: '', fr: '' },
+        date:        e.date || new Date().toISOString().split('T')[0],
+        venue:       e.venue   || e.source,
+        address:     e.address || '',
+        url:         e.url,
+        free:        e.free,
+        description: { en: e.description, es: '', pt: '', fr: '' },
+      }));
+
+    if (newEvents.length === 0) {
+      showToast(errors.length ? 'RSS feeds had errors — check console' : 'No new events found', 'error');
+      return;
+    }
+
+    CONTENT.guide.events.push(...newEvents);
+    renderEventList();
+    showToast(`Added ${newEvents.length} new event${newEvents.length > 1 ? 's' : ''} from RSS ✓`);
+  } catch (err) {
+    showToast('RSS fetch failed: ' + err.message, 'error');
+  }
 }
 
 // ══════════════════════════════════════════════════════
@@ -1391,7 +1422,7 @@ async function publishContent() {
     }
 
     updateLastPub();
-    showToast('Published! Netlify will deploy in ~30 seconds ✓');
+    showToast('Published! Cloudflare will deploy in ~30 seconds ✓');
   } catch (e) {
     showToast('Publish failed: ' + e.message, 'error');
   } finally {
