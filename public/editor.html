@@ -1171,14 +1171,14 @@ function formatDuration(seconds) {
 // AI (Claude API)
 // ══════════════════════════════════════════════════════
 async function callClaude(prompt) {
-  // Calls our Netlify proxy function which adds the API key server-side.
+  // Calls our Cloudflare Pages function which adds the API key server-side.
   // This avoids CORS issues and keeps the key out of the browser.
   try {
-    const res = await fetch('/.netlify/functions/claude-proxy', {
+    const res = await fetch('/api/claude-proxy', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 1000,
         messages: [{ role: 'user', content: prompt }],
       })
