@@ -605,12 +605,12 @@
     /* Guess the Image */
     .img-game-area { display: flex; flex-direction: column; gap: 12px; flex: 1; }
     .img-box {
-      width: 100%; aspect-ratio: 16/9; border-radius: 12px;
-      overflow: hidden; background: var(--navy-mid);
+      width: 100%; height: clamp(180px, 38vh, 300px); border-radius: 12px;
+      overflow: hidden; background: #0a1420;
       display: flex; align-items: center; justify-content: center;
-      position: relative; border: 0.5px solid var(--border); max-height: 220px;
+      position: relative; border: 0.5px solid var(--border);
     }
-    .img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .img-box img { width: 100%; height: 100%; object-fit: contain; }
     .img-hint { font-size: 11px; font-weight: 600; color: var(--muted); }
     .img-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .img-opt {
@@ -630,6 +630,27 @@
     .img-feedback.no { background: #FFF0EE; color: #E05555; }
     .img-next { padding: 13px; border-radius: 12px; border: none; background: var(--navy-deep); color: white; font-family: var(--font-body); font-size: 14px; font-weight: 600; cursor: pointer; display: none; }
     .img-next.show { display: block; }
+
+    /* Guess the Image — End Screen */
+    .img-end-screen {
+      flex: 1; flex-direction: column; align-items: center; justify-content: center;
+      gap: 18px; padding: 28px 24px; text-align: center;
+    }
+    .img-end-trophy { font-size: 80px; line-height: 1; }
+    .img-end-title { font-family: var(--font-display); font-size: 26px; color: var(--heading); font-weight: 600; }
+    .img-end-score-line { font-size: 16px; color: var(--muted); }
+    .img-end-score-num { font-size: 32px; font-weight: 700; color: var(--teal); }
+    .img-end-score-denom { font-size: 20px; font-weight: 600; color: var(--heading); }
+    .img-end-stars { font-size: 28px; letter-spacing: 4px; }
+    .img-end-message { font-size: 14px; color: var(--muted); font-style: italic; max-width: 280px; line-height: 1.5; }
+    .img-end-actions { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 300px; margin-top: 6px; }
+    .img-end-btn {
+      width: 100%; padding: 14px; border-radius: 12px; border: none;
+      font-family: var(--font-body); font-size: 15px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .img-end-btn.primary { background: var(--teal); color: white; }
+    .img-end-btn.secondary { background: #e8edf3; color: var(--navy); }
 
     /* ── QR Modal ─────────────────────────────────────────────── */
     .qr-modal {
@@ -979,7 +1000,7 @@
     <div class="game-score-badge">Score: <span id="img-score">0</span></div>
   </div>
   <div class="game-body">
-    <div class="img-game-area">
+    <div class="img-game-area" id="img-game-area">
       <div class="img-box" id="img-box">
         <img id="img-photo" src="" alt="Guess the landmark" style="display:none">
       </div>
@@ -987,6 +1008,17 @@
       <div class="img-opts" id="img-opts"></div>
       <div class="img-feedback" id="img-feedback"></div>
       <button class="img-next" id="img-next" onclick="imgNext()">Next Image ▶</button>
+    </div>
+    <div class="img-end-screen" id="img-end-screen" style="display:none">
+      <div class="img-end-trophy">🏆</div>
+      <div class="img-end-title">Round Complete!</div>
+      <div class="img-end-score-line">You scored <span class="img-end-score-num" id="img-end-score-val">0</span> out of <span class="img-end-score-denom" id="img-end-total">10</span></div>
+      <div class="img-end-stars" id="img-end-stars"></div>
+      <div class="img-end-message" id="img-end-message"></div>
+      <div class="img-end-actions">
+        <button class="img-end-btn primary" onclick="restartImgGame()"><i class="ti ti-refresh"></i> Play Again</button>
+        <button class="img-end-btn secondary" onclick="closeGame()"><i class="ti ti-arrow-left"></i> Back to Games</button>
+      </div>
     </div>
   </div>
 </div>
@@ -1780,6 +1812,8 @@ let imgShuffled = [];
 function initImage() {
   imgScore = 0; imgRound = 0; imgAnswered = false;
   document.getElementById('img-score').textContent = '0';
+  document.getElementById('img-end-screen').style.display = 'none';
+  document.getElementById('img-game-area').style.display = 'flex';
   imgShuffled = [...IMG_ROUNDS].sort(() => Math.random() - 0.5);
   loadImgRound();
 }
@@ -1790,7 +1824,7 @@ function loadImgRound() {
 
   // Rebuild img-box safely every round
   const box = document.getElementById('img-box');
-  box.innerHTML = '<img id="img-photo" alt="Guess the landmark" style="width:100%;height:100%;object-fit:cover;display:block">';
+  box.innerHTML = '<img id="img-photo" alt="Guess the landmark" style="width:100%;height:100%;object-fit:contain;display:block">';
   const photo = document.getElementById('img-photo');
 
   // Show emoji placeholder immediately — replaced by photo if it loads
@@ -1806,7 +1840,7 @@ function loadImgRound() {
     // Only swap in if we're still on the same round
     if (!imgAnswered || imgRound % imgShuffled.length === imgShuffled.indexOf(r)) {
       box.innerHTML = '';
-      img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;border-radius:12px';
+      img.style.cssText = 'width:100%;height:100%;object-fit:contain;display:block;border-radius:12px';
       box.appendChild(img);
     }
   };
@@ -1856,7 +1890,36 @@ function answerImg(chosen, correct, explain) {
   document.getElementById('img-next').className = 'img-next show';
 }
 
-function imgNext() { loadImgRound(); }
+function imgNext() {
+  if (imgRound >= imgShuffled.length) {
+    // All rounds done — show end screen
+    const total = imgShuffled.length;
+    const pct = imgScore / total;
+    const stars = pct === 1 ? '⭐⭐⭐⭐⭐' : pct >= 0.8 ? '⭐⭐⭐⭐' : pct >= 0.6 ? '⭐⭐⭐' : pct >= 0.4 ? '⭐⭐' : '⭐';
+    const msgs = [
+      [1,    '🌟 Perfect score! You really know your landmarks!'],
+      [0.8,  '🎉 Excellent! You\'re a world traveler at heart!'],
+      [0.6,  '👍 Good job! Keep exploring the world!'],
+      [0.4,  '✈️ Not bad — the world has so much more to show you!'],
+      [-1,   '🗺️ Keep playing — you\'ll learn them all!'],
+    ];
+    const msg = msgs.find(([t]) => pct >= t)[1];
+    document.getElementById('img-end-score-val').textContent = imgScore;
+    document.getElementById('img-end-total').textContent = total;
+    document.getElementById('img-end-stars').textContent = stars;
+    document.getElementById('img-end-message').textContent = msg;
+    document.getElementById('img-game-area').style.display = 'none';
+    document.getElementById('img-end-screen').style.display = 'flex';
+    return;
+  }
+  loadImgRound();
+}
+
+function restartImgGame() {
+  document.getElementById('img-end-screen').style.display = 'none';
+  document.getElementById('img-game-area').style.display = 'flex';
+  initImage();
+}
 
 // ════════════════════════════════════════════════════════════
 // QR MODAL
