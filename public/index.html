@@ -132,6 +132,7 @@
     }
     .tip-text i { font-size: 14px; color: var(--teal); flex-shrink: 0; margin-top: 1px; }
     .claude-credit { font-size: 10px; color: rgba(255,255,255,0.2); margin-top: 6px; text-align: center; }
+    .build-tag { font-size: 9px; color: rgba(255,255,255,0.12); margin-top: 4px; text-align: center; letter-spacing: 0.4px; font-family: monospace; }
 
     /* ── Main Content Area ────────────────────────────────────── */
     .main-content {
@@ -754,6 +755,7 @@
           <span data-key="footer.tip">Enjoying the ride? Tips are always appreciated</span>
         </div>
         <div class="claude-credit" data-key="footer.claude">Built with Claude AI · ask your driver</div>
+        <div class="build-tag" id="build-tag"></div>
       </div>
     </aside>
 
@@ -1036,6 +1038,11 @@
 
 <script>
 // ════════════════════════════════════════════════════════════
+// BUILD INFO
+// ════════════════════════════════════════════════════════════
+const APP_BUILD = 'a5c6ecb';
+
+// ════════════════════════════════════════════════════════════
 // STATE
 // ════════════════════════════════════════════════════════════
 let CONTENT = null;
@@ -1083,6 +1090,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('tap-best-display').textContent = tapBest;
   document.getElementById('tap-best-txt').textContent = tapBest;
   document.getElementById('high-score-display').textContent = `Best tap: ${tapBest}`;
+  document.getElementById('build-tag').textContent = `build ${APP_BUILD}`;
 });
 
 // ── Service Worker Registration ──────────────────────────────
@@ -1112,6 +1120,13 @@ function applyContent() {
   renderGuide();
   renderWeather();
   startSession();
+  // Show content timestamp alongside build hash
+  if (CONTENT && CONTENT.meta && CONTENT.meta.lastUpdated) {
+    const d = new Date(CONTENT.meta.lastUpdated);
+    const ts = d.toLocaleDateString('en-US', { month:'short', day:'numeric' })
+              + ' ' + d.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
+    document.getElementById('build-tag').textContent = `build ${APP_BUILD} · content ${ts}`;
+  }
 }
 
 // ════════════════════════════════════════════════════════════
