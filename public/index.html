@@ -159,7 +159,16 @@
       font-family: var(--font-display);
       font-size: 24px; font-weight: 500; color: var(--heading); line-height: 1.25;
     }
-    .greeting-sub { font-size: 14px; color: var(--muted); margin-top: 4px; }
+    .greeting-sub {
+      font-size: 16px; color: var(--body); margin-top: 8px;
+      font-weight: 500; line-height: 1.4;
+      display: inline-flex; align-items: center; gap: 9px;
+      transition: opacity 250ms ease;
+      min-height: 22px;
+    }
+    .greeting-sub.fade { opacity: 0; }
+    .greeting-sub-icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+    .greeting-sub-text { color: var(--body); }
 
     .qr-compact {
       display: flex; align-items: center; gap: 8px;
@@ -281,20 +290,6 @@
     }
     .qr-btn i { font-size: 18px; color: var(--navy-mid); }
 
-    /* Handyman card */
-    .handyman-card {
-      background: var(--navy-deep); border-radius: var(--radius-lg);
-      overflow: hidden; cursor: pointer;
-    }
-    .handyman-inner { padding: 16px 18px; }
-    .handyman-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--teal); margin-bottom: 7px; }
-    .handyman-name { font-family: var(--font-display); font-size: 20px; color: white; margin-bottom: 6px; }
-    .handyman-desc { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 12px; }
-    .handyman-bottom { display: flex; justify-content: space-between; align-items: center; }
-    .handyman-phone { font-size: 15px; font-weight: 600; color: var(--teal); }
-    .handyman-qr { width: 36px; height: 36px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .handyman-qr i { font-size: 18px; color: rgba(255,255,255,0.6); }
-
     /* Event card */
     .event-card {
       background: white; border-radius: var(--radius-lg);
@@ -387,6 +382,18 @@
     .day-low { font-size: 13px; color: var(--muted); margin-left: 6px; }
     .day-rain { font-size: 13px; color: #378ADD; font-weight: 600; margin-left: 8px; display: flex; align-items: center; gap: 2px; }
     .day-rain i { font-size: 12px; }
+
+    /* Section eyebrows — give Hourly vs 5-Day a clear, distinct identity. */
+    .section-eyebrow { display: flex; align-items: center; gap: 7px; margin-bottom: 9px; flex-shrink: 0; }
+    .section-eyebrow i { font-size: 17px; color: var(--teal); }
+    .section-eyebrow span { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--heading); }
+    /* Hourly lives in its own tinted panel so it doesn't read as another row
+       of the white weekly list. */
+    .hourly-panel {
+      background: rgba(11,158,166,0.07);
+      border: 0.5px solid var(--teal-border);
+      border-radius: 14px; padding: 12px 12px 14px; flex-shrink: 0;
+    }
 
     /* ── GAMES PAGE ───────────────────────────────────────────── */
     .games-content { flex: 1; display: flex; flex-direction: column; padding: 14px 18px; gap: 12px; overflow: hidden; min-height: 0; }
@@ -725,6 +732,382 @@
     .thanks-tip-txt { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.65; }
     .thanks-tip-txt strong { color: var(--teal); }
     .thanks-reset-txt { font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 0.5px; }
+
+    /* ── Rest / Blackout Screen ───────────────────────────────── */
+    .rest-section { padding: 10px 16px 0; }
+    .rest-btn {
+      width: 100%; padding: 9px 4px; border-radius: 9px;
+      font-size: 12px; font-weight: 600;
+      color: rgba(255,255,255,0.45); cursor: pointer;
+      border: none; background: rgba(255,255,255,0.06);
+      font-family: var(--font-body);
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      transition: all var(--transition);
+    }
+    .rest-btn i { font-size: 15px; }
+    .rest-btn:active { opacity: 0.8; }
+
+    .rest-screen {
+      position: fixed; inset: 0; z-index: 120;
+      background: #000;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 700ms ease;
+      cursor: pointer;
+    }
+    .rest-screen.visible { opacity: 1; pointer-events: all; }
+    .rest-clock {
+      font-family: var(--font-display);
+      font-size: 84px; font-weight: 500; line-height: 1;
+      color: rgba(255,255,255,0.34);
+      letter-spacing: 1px;
+    }
+    .rest-ampm { font-size: 26px; color: rgba(255,255,255,0.22); margin-left: 8px; }
+    .rest-hint {
+      margin-top: 28px; font-size: 13px; font-weight: 500;
+      color: rgba(255,255,255,0.16); letter-spacing: 0.5px;
+    }
+    /* Gray warning box shown in the final 30s before auto-wake */
+    .rest-warn {
+      margin-top: 38px; display: none;
+      flex-direction: column; align-items: center; gap: 7px;
+      padding: 16px 28px; border-radius: 14px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.13);
+      font-family: var(--font-body); cursor: pointer;
+    }
+    .rest-warn.show { display: flex; }
+    .rest-warn:active { background: rgba(255,255,255,0.12); }
+    .rest-warn-count { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.6); }
+    .rest-warn-extend { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.34); letter-spacing: 0.3px; }
+
+    /* ── DRIVER BUBBLE (sidebar) ─────────────────────────────── */
+    .driver-bubble {
+      margin: 10px 14px 12px;
+      padding: 12px 12px 12px 10px;
+      background: linear-gradient(135deg, rgba(11,158,166,0.18), rgba(11,158,166,0.06));
+      border: 1px solid rgba(11,158,166,0.35);
+      border-radius: 14px;
+      display: flex; align-items: center; gap: 10px;
+      cursor: pointer; text-decoration: none;
+      transition: transform var(--transition), border-color var(--transition);
+    }
+    .driver-bubble:active { transform: scale(0.98); }
+    .driver-bubble.active { border-color: var(--teal); background: linear-gradient(135deg, rgba(11,158,166,0.3), rgba(11,158,166,0.1)); }
+    .driver-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--navy-mid));
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-family: var(--font-display); font-size: 18px; color: white;
+      overflow: hidden;
+    }
+    .driver-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .db-info { flex: 1; min-width: 0; }
+    .db-name { font-size: 14px; font-weight: 700; color: white; line-height: 1.2; margin-bottom: 2px; }
+    .db-role { font-size: 11px; color: rgba(255,255,255,0.65); line-height: 1.3; }
+    .driver-bubble.active .db-role { color: var(--teal); }
+    .db-arrow { color: var(--teal); font-size: 16px; flex-shrink: 0; }
+
+    /* ── DRIVER PAGE ─────────────────────────────────────────── */
+    .driver-page { flex: 1; overflow-y: auto; padding: 18px 28px 28px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+    .driver-page::-webkit-scrollbar { width: 4px; }
+    .driver-page::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .dp-back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; color: var(--muted); cursor: pointer;
+      padding: 6px 12px 6px 8px; border-radius: 8px;
+      background: white; border: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+    .dp-back:hover { background: var(--teal-mist); color: var(--teal); border-color: var(--teal-border); }
+    .dp-back i { font-size: 16px; }
+
+    /* Bio card */
+    .dp-bio-card {
+      background: var(--card); border-radius: 18px;
+      border: 1px solid var(--border); overflow: hidden;
+      display: flex; min-height: 220px;
+      box-shadow: 0 4px 16px rgba(15,33,55,0.06);
+    }
+    .dp-bio-photo {
+      width: 36%; flex-shrink: 0; position: relative;
+      background: linear-gradient(180deg, rgba(15,33,55,0.4), rgba(11,158,166,0.25)), linear-gradient(135deg, #1B3A5C 0%, #0B9EA6 100%);
+      display: flex; align-items: flex-end; justify-content: center;
+      padding: 24px;
+    }
+    .dp-bio-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .dp-bio-initial { font-family: var(--font-display); font-size: 96px; color: rgba(255,255,255,0.95); font-weight: 600; line-height: 1; text-shadow: 0 4px 16px rgba(0,0,0,0.3); position: relative; }
+    .dp-bio-body { flex: 1; padding: 24px 28px; display: flex; flex-direction: column; }
+    .dp-bio-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+    .dp-bio-name { font-family: var(--font-display); font-size: 34px; font-weight: 600; color: var(--heading); line-height: 1.1; margin-bottom: 6px; }
+    .dp-bio-from { font-size: 14px; color: var(--muted); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+    .dp-bio-from i { font-size: 15px; color: var(--gold); }
+    .dp-bio-text { font-size: 15px; line-height: 1.6; color: var(--body); }
+    .dp-bio-text + .dp-bio-text { margin-top: 10px; }
+    .dp-bio-text strong { color: var(--heading); font-weight: 600; }
+
+    /* Handyman card on driver page */
+    .dp-hm-card { background: var(--navy-deep); border-radius: 18px; padding: 24px 28px; margin-top: 18px; position: relative; overflow: hidden; }
+    .dp-hm-card::before { content: ''; position: absolute; top: -60px; right: -60px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(11,158,166,0.25), transparent 70%); pointer-events: none; }
+    .dp-hm-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; position: relative; }
+    .dp-hm-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: white; line-height: 1.2; margin-bottom: 8px; position: relative; }
+    .dp-hm-sub { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px; max-width: 540px; position: relative; }
+    .dp-services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; position: relative; }
+    .dp-svc-chip { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 11px; padding: 12px 14px; display: flex; align-items: center; gap: 8px; }
+    .dp-svc-chip i { font-size: 18px; color: var(--teal); }
+    .dp-svc-chip span { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.85); }
+
+    /* Thumbtack band */
+    .dp-tt-band { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 16px 18px; margin-bottom: 18px; display: flex; align-items: center; gap: 18px; position: relative; }
+    .dp-tt-info { flex: 1; }
+    .dp-tt-stars { display: flex; align-items: center; gap: 4px; margin-bottom: 4px; }
+    .dp-tt-stars i { font-size: 18px; color: var(--gold); filter: drop-shadow(0 0 6px rgba(201,168,76,0.5)); }
+    .dp-tt-stars .rating { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: white; margin-left: 8px; line-height: 1; }
+    .dp-tt-label { font-size: 13px; color: rgba(255,255,255,0.65); }
+    .dp-tt-label strong { color: white; font-weight: 600; }
+
+    /* QR boxes — small inline QRs, tap to enlarge in modal */
+    .dp-qr { width: 72px; height: 72px; border-radius: 10px; background: white; display: flex; align-items: center; justify-content: center; position: relative; flex-shrink: 0; cursor: pointer; }
+    .dp-qr-content { position: absolute; inset: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 6px; }
+    .dp-qr-content canvas, .dp-qr-content img { display: block; width: 100% !important; height: 100% !important; }
+    .dp-qr-label { position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; white-space: nowrap; }
+
+    .dp-phone-row { display: flex; align-items: center; gap: 16px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); position: relative; }
+    .dp-phone-info { flex: 1; }
+    .dp-phone-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.4); letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 4px; }
+    .dp-phone-num { font-family: var(--font-display); font-size: 26px; font-weight: 500; color: white; letter-spacing: 0.5px; }
+
+    /* Pets card */
+    .dp-pets-card { background: var(--card); border-radius: 18px; border: 1px solid var(--border); padding: 22px 26px; margin-top: 18px; box-shadow: 0 4px 16px rgba(15,33,55,0.04); }
+    .dp-pets-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px; }
+    .dp-pets-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--teal); }
+    .dp-pets-title { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--heading); line-height: 1.1; }
+    .dp-pets-sub { font-size: 13px; color: var(--muted); margin-left: auto; }
+    .dp-pets-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .dp-pet { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .dp-pet-photo { width: 80px; height: 80px; border-radius: 50%; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; box-shadow: 0 4px 12px rgba(15,33,55,0.1); }
+    .dp-pet-photo.dog, .dp-pet-photo.pug { background: linear-gradient(135deg, #C9A84C, #E89B5C); }
+    .dp-pet-photo.cat { background: linear-gradient(135deg, #7C3AED, #0B9EA6); }
+    .dp-pet-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .dp-pet-emoji { font-size: 36px; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); position: relative; }
+    .dp-pet-name { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--heading); line-height: 1.2; }
+    .dp-pet-desc { font-size: 11px; color: var(--muted); margin-top: 2px; letter-spacing: 0.3px; line-height: 1.4; }
+
+    /* ── GUIDE PAGE — Home / Browse view switch ───────────────── */
+    .guide-main { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
+    .home-view, .browse-view { flex: 1; flex-direction: column; min-height: 0; }
+    .guide-main[data-view="home"]   .home-view   { display: flex; }
+    .guide-main[data-view="home"]   .browse-view { display: none; }
+    .guide-main[data-view="home"]   .gp-home-btn { display: none; }
+    .guide-main[data-view="browse"] .home-view   { display: none; }
+    .guide-main[data-view="browse"] .browse-view { display: flex; }
+
+    .greeting-text { font-size: 30px; }
+
+    .gp-top-actions { display: flex; align-items: center; gap: 10px; }
+    .gp-home-btn { width: 40px; height: 40px; border-radius: 11px; background: white; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .gp-home-btn i { font-size: 18px; color: var(--heading); }
+    .gp-home-btn:active { background: var(--teal-mist); }
+
+    /* Demote the QR pill — quieter than before */
+    .guide-main .qr-compact { background: transparent; padding: 8px 14px; }
+    .guide-main .qr-compact i, .guide-main .qr-compact span { color: var(--muted); }
+
+    /* Hero scroll */
+    .gp-hero-scroll { flex: 1; overflow-y: auto; padding: 6px 28px 28px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+    .gp-hero-scroll::-webkit-scrollbar { width: 4px; }
+    .gp-hero-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    /* TODAY'S TOP PICK hero */
+    .gp-hero { background: var(--card); border-radius: 18px; overflow: hidden; box-shadow: 0 8px 30px rgba(15,33,55,0.12); border: 1px solid var(--border); display: flex; min-height: 270px; margin-top: 12px; cursor: pointer; transition: transform var(--transition); }
+    .gp-hero:active { transform: scale(0.998); }
+    .gp-hero-photo { width: 42%; flex-shrink: 0; position: relative; display: flex; align-items: flex-end; padding: 18px; overflow: hidden;
+      background: linear-gradient(135deg, rgba(15,33,55,0.55), rgba(11,158,166,0.35)), linear-gradient(45deg, #C9A84C 0%, #E89B5C 40%, #7C3AED 100%);
+    }
+    .gp-hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .gp-hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(15,33,55,0.55) 100%); pointer-events: none; }
+    .gp-hero-tag { position: relative; display: inline-flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.5); backdrop-filter: blur(6px); border-radius: 999px; padding: 7px 13px; font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: white; }
+    .gp-hero-tag i { font-size: 13px; color: var(--gold); }
+
+    .gp-hero-body { flex: 1; padding: 24px 28px 22px; display: flex; flex-direction: column; }
+    .gp-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .gp-hero-eyebrow i { font-size: 14px; }
+    .gp-hero-name { font-family: var(--font-display); font-size: 30px; font-weight: 600; line-height: 1.15; color: var(--heading); margin-bottom: 8px; }
+    .gp-hero-meta { display: flex; align-items: center; gap: 14px; font-size: 14px; color: var(--muted); margin-bottom: 14px; flex-wrap: wrap; }
+    .gp-hero-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+    .gp-hero-dist { color: var(--teal); font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
+    .gp-hero-dist i { font-size: 14px; }
+    .gp-hero-note { font-size: 15px; line-height: 1.55; color: var(--body); font-style: italic; margin-bottom: 18px; padding: 12px 14px; background: var(--gold-light); border-radius: 10px; border-left: 3px solid var(--gold); }
+    .gp-hero-actions { display: flex; gap: 10px; margin-top: auto; }
+    .gp-btn-primary { flex: 1; padding: 13px 18px; border-radius: 11px; background: var(--navy-deep); color: white; border: none; font-family: var(--font-body); font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 7px; cursor: pointer; }
+    .gp-btn-primary i { font-size: 16px; }
+    .gp-btn-primary:active { opacity: 0.9; }
+
+    /* Empty hero (no venues / no GPS yet) */
+    .gp-hero-empty { background: var(--card); border-radius: 18px; border: 1px solid var(--border); padding: 40px 28px; margin-top: 12px; text-align: center; color: var(--muted); font-size: 14px; }
+
+    /* 3-up minis */
+    .gp-section-head { display: flex; justify-content: space-between; align-items: center; margin: 26px 0 12px; }
+    .gp-section-title { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); }
+    .gp-section-link { font-size: 13px; font-weight: 600; color: var(--teal); display: inline-flex; align-items: center; gap: 4px; cursor: pointer; background: none; border: none; font-family: var(--font-body); }
+    .gp-section-link i { font-size: 14px; }
+    .gp-section-link:active { opacity: 0.7; }
+
+    .gp-minis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .gp-mini { background: var(--card); border-radius: 12px; border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; display: flex; flex-direction: column; transition: transform var(--transition); }
+    .gp-mini:active { transform: translateY(1px); }
+    .gp-mini.pick { background: var(--gold-light); border-color: var(--gold-border); }
+    .gp-mini-photo { height: 90px; position: relative; background: linear-gradient(135deg, rgba(15,33,55,0.5), rgba(11,158,166,0.3)), linear-gradient(45deg, #1B3A5C, #0B9EA6); overflow: hidden; }
+    .gp-mini.pick .gp-mini-photo { background: linear-gradient(135deg, rgba(15,33,55,0.45), rgba(201,168,76,0.3)), linear-gradient(45deg, #7A5500, #C9A84C); }
+    .gp-mini-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .gp-mini-pickbadge { position: absolute; top: 8px; right: 8px; background: var(--gold); color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .gp-mini-pickbadge i { font-size: 11px; }
+    .gp-mini-body { padding: 12px 14px 14px; flex: 1; display: flex; flex-direction: column; }
+    .gp-mini-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+    .gp-mini-name { font-family: var(--font-display); font-size: 17px; font-weight: 500; color: var(--heading); line-height: 1.2; margin-bottom: 8px; }
+    .gp-mini-meta { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); }
+    .gp-mini-dist { color: var(--teal); font-weight: 700; display: inline-flex; align-items: center; gap: 3px; }
+    .gp-mini-dist i { font-size: 13px; }
+
+    /* Filter pill row variants */
+    .filter-row.below-hero { margin: 22px 0 0; padding: 0; border: 0; }
+    .filter-row.sticky-top { padding: 14px 28px; background: rgba(247,249,251,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); flex-shrink: 0; margin: 0; }
+
+    /* Browse view */
+    .browse-scroll { flex: 1; overflow-y: auto; padding: 14px 28px 24px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+    .browse-scroll::-webkit-scrollbar { width: 4px; }
+    .browse-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .browse-label { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+
+    /* ── VENUE DETAIL SHEET ───────────────────────────────────── */
+    .venue-sheet-backdrop { position: fixed; inset: 0; background: rgba(15,33,55,0.65); z-index: 70; opacity: 0; pointer-events: none; transition: opacity 220ms ease; }
+    .venue-sheet-backdrop.open { opacity: 1; pointer-events: all; }
+    .venue-sheet {
+      position: fixed; inset: 24px; max-width: 880px; max-height: calc(100vh - 48px);
+      margin: auto; z-index: 71;
+      background: white; border-radius: 22px; overflow: hidden;
+      display: flex; flex-direction: column;
+      transform: scale(0.96); opacity: 0; pointer-events: none;
+      transition: transform 220ms ease, opacity 220ms ease;
+      box-shadow: 0 24px 60px rgba(15,33,55,0.3);
+    }
+    .venue-sheet.open { transform: scale(1); opacity: 1; pointer-events: all; }
+    .vs-photo { height: 220px; position: relative; flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(15,33,55,0.5), rgba(11,158,166,0.3)), linear-gradient(45deg, #1B3A5C, #0B9EA6);
+      overflow: hidden;
+    }
+    .vs-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .vs-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(15,33,55,0.5) 100%); pointer-events: none; }
+    .vs-close { position: absolute; top: 16px; right: 16px; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.95); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .vs-close i { font-size: 18px; color: var(--heading); }
+    .vs-tag-row { position: absolute; bottom: 16px; left: 22px; display: flex; gap: 8px; z-index: 2; }
+    .vs-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.5); backdrop-filter: blur(6px); border-radius: 999px; padding: 6px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: white; }
+    .vs-tag.pick i { color: var(--gold); }
+    .vs-body { flex: 1; overflow-y: auto; padding: 24px 28px 28px; }
+    .vs-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .vs-name { font-family: var(--font-display); font-size: 30px; font-weight: 600; line-height: 1.1; color: var(--heading); margin-bottom: 10px; }
+    .vs-meta { display: flex; align-items: center; gap: 14px; font-size: 14px; color: var(--muted); margin-bottom: 18px; flex-wrap: wrap; }
+    .vs-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+    .vs-meta .vs-dist { color: var(--teal); font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
+    .vs-meta .vs-dist i { font-size: 14px; }
+    .vs-desc { font-size: 15px; line-height: 1.65; color: var(--body); margin-bottom: 16px; }
+    .vs-note { font-size: 15px; line-height: 1.55; color: #6B4D14; font-style: italic; padding: 14px 16px; background: var(--gold-light); border-radius: 10px; border-left: 3px solid var(--gold); margin-bottom: 18px; }
+    .vs-addr { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 6px; margin-bottom: 18px; }
+    .vs-addr i { font-size: 15px; color: var(--teal); }
+    .vs-cta-row { display: flex; gap: 10px; }
+    .vs-cta-row .gp-btn-primary { flex: 1; }
+
+    /* ── Phone support ("Open on your phone") ─────────────────────
+       The app is built for a landscape tablet kiosk. These rules only
+       affect PHONES (gated by size + orientation); the kiosk (≥768px in
+       both dimensions) matches neither query, so it is left untouched. */
+
+    /* Rotate prompt — portrait phones only (CSS-only; auto-hides on rotate). */
+    .rotate-overlay { display: none; }
+    @media (orientation: portrait) and (max-width: 500px) {
+      .rotate-overlay {
+        display: flex; position: fixed; inset: 0; z-index: 300;
+        background: var(--navy-deep); color: white;
+        flex-direction: column; align-items: center; justify-content: center;
+        text-align: center; padding: 36px;
+      }
+      .rotate-icon { font-size: 60px; color: var(--teal); margin-bottom: 20px; animation: rotateHint 2.4s ease-in-out infinite; }
+      .rotate-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; margin-bottom: 12px; }
+      .rotate-sub { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.6); max-width: 320px; }
+    }
+    @keyframes rotateHint {
+      0%, 60%, 100% { transform: rotate(0deg); }
+      30% { transform: rotate(-90deg); }
+    }
+
+    /* Landscape phones — short viewport: shrink the sidebar, tighten spacing,
+       and let the sidebar scroll so nothing clips on a ~390px-tall screen. */
+    @media (orientation: landscape) and (max-height: 480px) {
+      .sidebar { width: 176px; overflow-y: auto; }
+      .sidebar-header { padding: 12px 14px 6px; }
+      .app-brand { font-size: 18px; }
+      .app-sub { font-size: 11px; }
+      .sidebar-location { padding: 6px 14px; margin-bottom: 6px; }
+      .nav-links { gap: 2px; padding: 0 8px; }
+      .nav-link { padding: 9px 10px; }
+      .nav-link i { font-size: 18px; }
+      .nav-link span { font-size: 14px; }
+      .driver-bubble { margin: 6px 10px 8px; padding: 8px 8px 8px 8px; }
+      .lang-section { padding: 8px 12px; }
+      .lang-btn { padding: 6px 4px; font-size: 12px; }
+      .rest-section { padding: 6px 12px 0; }
+      .rest-btn { padding: 7px 4px; }
+      .sidebar-footer { padding: 8px 12px; }
+      .tip-text, .claude-credit, .build-tag { display: none; }
+
+      .guide-header { padding: 12px 16px 0; }
+      .greeting-text { font-size: 19px; }
+      .greeting-sub { font-size: 13px; margin-top: 5px; }
+      .guide-top-row { margin-bottom: 10px; }
+    }
+
+    /* Larger screens (the tablet kiosk): scale up the game screens so they fill
+       the canvas instead of floating in empty space, and cap content width so
+       options don't stretch edge-to-edge. Phones (short viewport) keep the
+       compact sizes defined above. */
+    @media (min-height: 600px) {
+      .game-body { max-width: 740px; margin: 0 auto; width: 100%; gap: 22px; padding: 30px 24px; }
+
+      .trivia-question { font-size: 23px; padding: 24px; line-height: 1.45; }
+      .trivia-opts { gap: 14px; }
+      .trivia-opt { font-size: 17px; padding: 18px 20px; }
+      .trivia-feedback { font-size: 16px; padding: 16px; }
+      .trivia-next { font-size: 17px; padding: 17px; }
+
+      .tap-timer-display { font-size: 68px; margin-bottom: 12px; }
+      .tap-circle { width: 250px; height: 250px; margin: 22px auto; }
+      .tap-count-num { font-size: 78px; }
+      .tap-count-lbl { font-size: 15px; }
+      .tap-best-txt { font-size: 16px; margin-bottom: 22px; }
+      .tap-start-btn { font-size: 18px; padding: 16px 48px; }
+      .tap-result-txt { font-size: 19px; }
+
+      .spinner-center { gap: 24px; }
+      .spinner-wheel { width: 220px; height: 220px; font-size: 84px; border-width: 6px; }
+      .spin-hint { font-size: 15px; }
+      .spin-fact-card { max-width: 600px; padding: 28px 32px; }
+      .spin-cat { font-size: 12px; }
+      .spin-fact-text { font-size: 19px; }
+
+      .word-clue { font-size: 16px; padding: 16px 20px; }
+      .word-letter { width: 46px; height: 58px; font-size: 24px; }
+      .word-input { font-size: 20px; padding: 14px 18px; }
+      .word-submit { font-size: 16px; padding: 14px 24px; }
+      .word-hint-btn { font-size: 14px; padding: 11px 22px; }
+      .word-feedback { font-size: 16px; }
+
+      .img-box { height: clamp(280px, 42vh, 420px); }
+      .img-hint { font-size: 13px; }
+      .img-opts { gap: 12px; }
+      .img-opt { font-size: 16px; padding: 16px 18px; }
+      .img-next { font-size: 17px; padding: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -760,6 +1143,15 @@
         </div>
       </nav>
 
+      <div class="driver-bubble" id="nav-driver" onclick="switchTab('driver')">
+        <div class="driver-avatar" id="db-avatar">A</div>
+        <div class="db-info">
+          <div class="db-name" id="db-name">Abdullah</div>
+          <div class="db-role" id="db-role" data-key="driver.role">Your driver · also a handyman</div>
+        </div>
+        <i class="ti ti-chevron-right db-arrow"></i>
+      </div>
+
       <div class="lang-section">
         <div class="lang-label">Language</div>
         <div class="lang-grid">
@@ -770,11 +1162,14 @@
         </div>
       </div>
 
+      <div class="rest-section">
+        <button class="rest-btn" onclick="enterRest()">
+          <i class="ti ti-moon"></i>
+          <span data-key="rest.button">Rest screen</span>
+        </button>
+      </div>
+
       <div class="sidebar-footer">
-        <div class="tip-text">
-          <i class="ti ti-heart"></i>
-          <span data-key="footer.tip">Enjoying the ride? Tips are always appreciated</span>
-        </div>
         <div class="claude-credit" data-key="footer.claude">Built with Claude AI · ask your driver</div>
         <div class="build-tag" id="build-tag"></div>
       </div>
@@ -789,42 +1184,59 @@
           <div class="guide-top-row">
             <div>
               <div class="greeting-text" id="greeting-text">Good morning — welcome aboard</div>
-              <div class="greeting-sub" id="greeting-sub">Showing places nearest to your current location</div>
+              <div class="greeting-sub" id="greeting-sub">
+                <span class="greeting-sub-icon">📍</span>
+                <span class="greeting-sub-text">Showing places nearest to your current location</span>
+              </div>
             </div>
-            <div class="qr-compact" onclick="openQR('app')">
-              <i class="ti ti-qrcode"></i>
-              <span data-key="guide.openOnPhone">Open on your phone</span>
-            </div>
-          </div>
-          <div class="filter-row" id="filter-row">
-            <div class="pill pill-all active" data-filter="all" onclick="setFilter('all')">
-              <i class="ti ti-layout-grid"></i> <span data-key="categories.all">All</span>
-            </div>
-            <div class="pill pill-food" data-filter="restaurant" onclick="setFilter('restaurant')">
-              <i class="ti ti-tools"></i> <span data-key="categories.restaurant">Food</span>
-            </div>
-            <div class="pill pill-night" data-filter="nightlife" onclick="setFilter('nightlife')">
-              <i class="ti ti-music"></i> <span data-key="categories.nightlife">Nightlife</span>
-            </div>
-            <div class="pill pill-attr" data-filter="attraction" onclick="setFilter('attraction')">
-              <i class="ti ti-map-pin"></i> <span data-key="categories.attraction">Attractions</span>
-            </div>
-            <div class="pill pill-gem" data-filter="gem" onclick="setFilter('gem')">
-              <i class="ti ti-sparkles"></i> <span data-key="categories.gem">Hidden Gems</span>
-            </div>
-            <div class="pill pill-event" data-filter="event" onclick="setFilter('event')">
-              <i class="ti ti-calendar-event"></i> <span data-key="categories.event">Events</span>
-            </div>
-            <div class="pill pill-picks" data-filter="picks" onclick="setFilter('picks')">
-              <i class="ti ti-star"></i> <span data-key="categories.picks">Abdullah's Picks</span>
+            <div class="gp-top-actions">
+              <div class="qr-compact" onclick="openQR('app')">
+                <i class="ti ti-qrcode"></i>
+                <span data-key="guide.openOnPhone">Open on your phone</span>
+              </div>
+              <button class="gp-home-btn" id="gp-home-btn" onclick="goHomeView()" title="Back to home">
+                <i class="ti ti-home"></i>
+              </button>
             </div>
           </div>
         </div>
-        <div class="guide-section-label" id="guide-section-label">Nearest to you</div>
-        <div class="cards-scroll">
-          <div class="cards-grid" id="cards-grid">
-            <!-- Rendered by JS -->
+
+        <div class="guide-main" id="guide-main" data-view="home">
+
+          <!-- BROWSE VIEW: sticky pills + full grid -->
+          <div class="browse-view">
+            <div class="filter-row sticky-top" id="pills-sticky">
+              <!-- Rendered by JS -->
+            </div>
+            <div class="browse-scroll">
+              <div class="browse-label" id="browse-label">All places</div>
+              <div class="cards-grid" id="cards-grid">
+                <!-- Rendered by JS -->
+              </div>
+            </div>
           </div>
+
+          <!-- HOME VIEW: hero + 3-up + pills below -->
+          <div class="home-view">
+            <div class="gp-hero-scroll">
+              <div id="gp-hero-slot"><!-- Rendered by JS --></div>
+
+              <div class="gp-section-head">
+                <div class="gp-section-title" id="gp-more-label">More near you</div>
+                <button class="gp-section-link" onclick="setFilter('all')">
+                  <span>See all</span><i class="ti ti-arrow-right"></i>
+                </button>
+              </div>
+              <div class="gp-minis" id="gp-minis">
+                <!-- Rendered by JS -->
+              </div>
+
+              <div class="filter-row below-hero" id="pills-below">
+                <!-- Rendered by JS -->
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -909,7 +1321,99 @@
         </div>
       </div>
 
+      <!-- DRIVER PAGE -->
+      <div class="page" id="page-driver">
+        <div class="driver-page">
+          <div class="dp-back" onclick="switchTab('guide')">
+            <i class="ti ti-arrow-left"></i>
+            <span data-key="driver.back">Back to guide</span>
+          </div>
+
+          <!-- Bio card -->
+          <div class="dp-bio-card">
+            <div class="dp-bio-photo" id="dp-bio-photo">
+              <div class="dp-bio-initial" id="dp-bio-initial">A</div>
+            </div>
+            <div class="dp-bio-body">
+              <div class="dp-bio-eyebrow" data-key="driver.eyebrow">Your driver today</div>
+              <div class="dp-bio-name" id="dp-bio-name">Abdullah</div>
+              <div class="dp-bio-from">
+                <i class="ti ti-map-2"></i>
+                <span id="dp-bio-from" data-key="driver.fromLine">From Turkey, now in Miami</span>
+              </div>
+              <div id="dp-bio-paragraphs"><!-- Rendered by renderDriver() --></div>
+            </div>
+          </div>
+
+          <!-- Handyman card -->
+          <div class="dp-hm-card">
+            <div class="dp-hm-eyebrow" data-key="driver.handyman.eyebrow">By the way</div>
+            <div class="dp-hm-title" data-key="driver.handyman.title">I'm also a handyman.</div>
+            <div class="dp-hm-sub" id="dp-hm-sub" data-key="driver.handyman.subtitle">If you need work done at home — drywall, paint, electrical, small repairs — I do that on my days off.</div>
+
+            <div class="dp-services" id="dp-services"><!-- Rendered by renderDriver() --></div>
+
+            <!-- Thumbtack credential band -->
+            <div class="dp-tt-band" id="dp-tt-band">
+              <div class="dp-tt-info">
+                <div class="dp-tt-stars" id="dp-tt-stars"><!-- stars rendered by JS --></div>
+                <div class="dp-tt-label" id="dp-tt-label" data-key="driver.thumbtack.label">5-star pro on Thumbtack — verified handyman with real reviews</div>
+              </div>
+              <div class="dp-qr" id="dp-tt-qr" onclick="openQR('driver-thumbtack')" title="Thumbtack profile">
+                <div class="dp-qr-content"></div>
+                <span class="dp-qr-label" data-key="driver.thumbtack.qrLabel">Scan for reviews</span>
+              </div>
+            </div>
+
+            <div class="dp-phone-row">
+              <div class="dp-phone-info">
+                <div class="dp-phone-label" data-key="driver.handyman.phoneLabel">Save my number for later</div>
+                <div class="dp-phone-num" id="dp-phone-num">(786) 919-2115</div>
+              </div>
+              <div class="dp-qr" id="dp-phone-qr" onclick="openQR('driver-phone')" title="Save contact">
+                <div class="dp-qr-content"></div>
+                <span class="dp-qr-label" data-key="driver.handyman.qrLabel">Scan to save</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pets card -->
+          <div class="dp-pets-card">
+            <div class="dp-pets-header">
+              <div>
+                <div class="dp-pets-eyebrow" data-key="driver.pets.eyebrow">Also at home</div>
+                <div class="dp-pets-title" data-key="driver.pets.title">My crew</div>
+              </div>
+              <div class="dp-pets-sub" id="dp-pets-sub" data-key="driver.pets.summary">3 pugs · 2 cats</div>
+            </div>
+            <div class="dp-pets-grid" id="dp-pets-grid"><!-- Rendered by renderDriver() --></div>
+          </div>
+        </div>
+      </div>
+
     </main>
+  </div>
+</div>
+
+<!-- ── Venue Detail Sheet (modal) ── -->
+<div class="venue-sheet-backdrop" id="vs-backdrop" onclick="closeVenueSheet()"></div>
+<div class="venue-sheet" id="venue-sheet" role="dialog" aria-modal="true" aria-labelledby="vs-name">
+  <div class="vs-photo" id="vs-photo">
+    <div class="vs-tag-row" id="vs-tag-row"></div>
+    <button class="vs-close" onclick="closeVenueSheet()" aria-label="Close"><i class="ti ti-x"></i></button>
+  </div>
+  <div class="vs-body">
+    <div class="vs-eyebrow" id="vs-eyebrow"></div>
+    <div class="vs-name" id="vs-name"></div>
+    <div class="vs-meta" id="vs-meta"></div>
+    <div class="vs-desc" id="vs-desc"></div>
+    <div class="vs-note" id="vs-note" style="display:none"></div>
+    <div class="vs-addr" id="vs-addr"></div>
+    <div class="vs-cta-row">
+      <button class="gp-btn-primary" id="vs-cta-phone" onclick="openVenueQR()">
+        <i class="ti ti-qrcode"></i> <span data-key="guide.openOnPhone">Open on your phone</span>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -1068,6 +1572,23 @@
   </div>
 </div>
 
+<!-- ── Rotate-to-landscape prompt (portrait phones only; CSS-gated) ── -->
+<div class="rotate-overlay" id="rotate-overlay">
+  <div class="rotate-icon">📱</div>
+  <div class="rotate-title" data-key="rotate.title">Please rotate your phone</div>
+  <div class="rotate-sub" data-key="rotate.sub">This guide works best in landscape. Turn your phone sideways to continue.</div>
+</div>
+
+<!-- ── Rest / Blackout Screen ── -->
+<div class="rest-screen" id="rest-screen" onclick="exitRest()">
+  <div class="rest-clock" id="rest-clock">--:--</div>
+  <div class="rest-hint" id="rest-hint" data-key="rest.wake">Tap anywhere to wake the screen</div>
+  <button class="rest-warn" id="rest-warn" onclick="extendRest(event)">
+    <span class="rest-warn-count" id="rest-warn-count"></span>
+    <span class="rest-warn-extend" data-key="rest.warnExtend">Keep it dark · 10 more min</span>
+  </button>
+</div>
+
 <script>
 // ════════════════════════════════════════════════════════════
 // BUILD INFO
@@ -1082,6 +1603,9 @@ let lang = 'en';
 let currentFilter = 'all';
 let currentTab = 'guide';
 let userLat = null, userLng = null;
+let currentNeighborhood = '';
+let subtitleVariantIdx = 0;
+let subtitleRotatorInterval = null;
 let tapBest = parseInt(localStorage.getItem('tapBest') || '0');
 let wordSolved = 0;
 let spinCount = 0;
@@ -1097,6 +1621,15 @@ let countdownVal = 15;
 const INACTIVITY_MS = 60000;  // 60 seconds
 const COUNTDOWN_S  = 15;
 const THANKS_S     = 5;
+
+// Rest / blackout screen
+let restActive = false;
+let restClockTimer = null;
+let restWarnTimer = null;     // fires when the warning box should appear
+let restWarnInterval = null;  // 30→0 countdown inside the warning box
+let restWarnVal = 0;
+const REST_MAX_MS = 600000;   // 10 min total before auto-wake (so a new passenger never finds a dark screen)
+const REST_WARN_S = 30;       // show the "waking up" warning box for the final 30s
 
 // Secret tap
 let secretTaps = 0;
@@ -1151,6 +1684,8 @@ function applyContent() {
   applyStrings();
   renderGuide();
   renderWeather();
+  renderDriver();
+  startSubtitleRotator();
   startSession();
   // Show content timestamp alongside build hash
   if (CONTENT && CONTENT.meta && CONTENT.meta.lastUpdated) {
@@ -1185,6 +1720,8 @@ function setLang(l) {
   applyStrings();
   renderGuide();
   renderWeather();
+  renderDriver();
+  setSubtitleVariant(subtitleVariantIdx);
   logTap('lang_' + l);
 }
 
@@ -1194,6 +1731,228 @@ function applyStrings() {
     el.textContent = t(key);
   });
   updateGreeting();
+}
+
+// ════════════════════════════════════════════════════════════
+// DRIVER PAGE
+// ════════════════════════════════════════════════════════════
+// Returns the localized string from a {en,es,pt,fr} object, falling back to en.
+function tx(o) {
+  if (!o) return '';
+  if (typeof o === 'string') return o;
+  return o[lang] || o['en'] || '';
+}
+
+function renderDriver() {
+  if (!CONTENT || !CONTENT.driver) return;
+  const d = CONTENT.driver;
+
+  // Sidebar bubble — hidden when the driver toggles it off in the editor.
+  // (The subtitle rotator's "meet my crew" variant also checks this flag.)
+  document.getElementById('nav-driver').style.display = (d.bubbleVisible !== false) ? '' : 'none';
+
+  // Sidebar bubble
+  document.getElementById('db-name').textContent = d.name || 'Abdullah';
+  document.getElementById('db-role').textContent = tx(d.role);
+  if (d.photo) {
+    document.getElementById('db-avatar').innerHTML = `<img src="${d.photo}" alt="">`;
+  } else {
+    document.getElementById('db-avatar').textContent = (d.name || 'A')[0];
+  }
+
+  // Bio
+  document.getElementById('dp-bio-initial').textContent = (d.name || 'A')[0];
+  if (d.photo) {
+    document.getElementById('dp-bio-photo').innerHTML =
+      `<img src="${d.photo}" alt=""><div class="dp-bio-initial">${(d.name||'A')[0]}</div>`;
+  }
+  document.getElementById('dp-bio-name').textContent = d.name || '';
+  document.getElementById('dp-bio-from').textContent = tx(d.fromLine);
+  const bioParas = (d.bio && (d.bio[lang]?.length ? d.bio[lang] : d.bio.en)) || [];
+  document.getElementById('dp-bio-paragraphs').innerHTML =
+    bioParas.map(p => `<div class="dp-bio-text">${p}</div>`).join('');
+
+  // Static driver-page labels (set by applyStrings using stale key fallback; override here)
+  setText('.dp-back span', tx(d.back));
+  setText('.dp-bio-eyebrow', tx(d.eyebrow));
+
+  // Handyman section
+  if (d.handyman) {
+    setText('.dp-hm-eyebrow', tx(d.handyman.eyebrow));
+    setText('.dp-hm-title',   tx(d.handyman.title));
+    setText('#dp-hm-sub',     tx(d.handyman.subtitle));
+    setText('.dp-phone-label',tx(d.handyman.phoneLabel));
+    document.getElementById('dp-phone-num').textContent = formatPhone(d.phone || '');
+    // Services
+    const services = d.handyman.services || [];
+    document.getElementById('dp-services').innerHTML = services.map(s => `
+      <div class="dp-svc-chip"><i class="ti ${s.icon || 'ti-tool'}"></i><span>${tx(s.label)}</span></div>
+    `).join('');
+    // QR labels (both phone QR and Thumbtack QR live in this card)
+    const phoneQrLabel = document.querySelector('.dp-phone-row .dp-qr-label');
+    if (phoneQrLabel) phoneQrLabel.textContent = tx(d.handyman.qrLabel);
+    // Phone QR — inline vCard, scannable as-is or tap to enlarge
+    renderInlineQR('#dp-phone-qr .dp-qr-content', buildVCard(d));
+  }
+
+  // Thumbtack
+  if (d.thumbtack) {
+    const band = document.getElementById('dp-tt-band');
+    band.style.display = d.thumbtack.enabled === false ? 'none' : '';
+    const rating = Number(d.thumbtack.rating) || 0;
+    const stars = Math.max(0, Math.min(5, Math.round(rating)));
+    document.getElementById('dp-tt-stars').innerHTML =
+      Array.from({length: stars}, () => '<i class="ti ti-star-filled"></i>').join('') +
+      `<span class="rating">${rating.toFixed(1)}</span>`;
+    document.getElementById('dp-tt-label').innerHTML = tx(d.thumbtack.label);
+    const ttQrLabel = document.querySelector('#dp-tt-qr .dp-qr-label');
+    if (ttQrLabel) ttQrLabel.textContent = tx(d.thumbtack.qrLabel);
+    // Thumbtack QR — inline profile URL
+    renderInlineQR('#dp-tt-qr .dp-qr-content', d.thumbtack.url || '');
+  }
+
+  // Pets
+  if (d.pets) {
+    setText('.dp-pets-eyebrow', tx(d.pets.eyebrow));
+    setText('.dp-pets-title',   tx(d.pets.title));
+    setText('#dp-pets-sub',     tx(d.pets.summary));
+    const items = d.pets.items || [];
+    document.getElementById('dp-pets-grid').innerHTML = items.map(p => `
+      <div class="dp-pet">
+        <div class="dp-pet-photo ${p.species || 'dog'}">
+          ${p.photo ? `<img src="${p.photo}" alt="">` : `<div class="dp-pet-emoji">${petEmoji(p.species)}</div>`}
+        </div>
+        <div class="dp-pet-name">${p.name || ''}</div>
+        <div class="dp-pet-desc">${tx(p.description)}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function setText(sel, text) {
+  const el = document.querySelector(sel);
+  if (el && text) el.textContent = text;
+}
+
+function petEmoji(species) {
+  const s = (species || '').toLowerCase();
+  if (s === 'cat') return '🐱';
+  if (s === 'pug') return '🐶';
+  if (s === 'dog') return '🐶';
+  return '🐾';
+}
+
+function formatPhone(p) {
+  // +1-786-919-2115 → (786) 919-2115
+  const digits = (p || '').replace(/\D/g, '');
+  if (digits.length === 11 && digits[0] === '1') {
+    return `(${digits.slice(1,4)}) ${digits.slice(4,7)}-${digits.slice(7)}`;
+  }
+  if (digits.length === 10) {
+    return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  }
+  return p;
+}
+
+function buildVCard(d) {
+  const phone = (d.phone || '').replace(/[^+\d]/g, '');
+  const lines = ['BEGIN:VCARD', 'VERSION:3.0'];
+  if (d.name) lines.push(`FN:${d.name}`);
+  if (phone) lines.push(`TEL:${phone}`);
+  lines.push('END:VCARD');
+  return lines.join('\r\n');
+}
+
+function renderInlineQR(selector, text) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+  el.innerHTML = '';
+  if (!text || typeof QRCode === 'undefined') return;
+  try {
+    new QRCode(el, {
+      text,
+      width: 60, height: 60,
+      colorDark: '#0F2137', colorLight: '#FFFFFF',
+      correctLevel: QRCode.CorrectLevel.M,
+    });
+  } catch (e) { /* leave box blank on failure */ }
+}
+
+// ════════════════════════════════════════════════════════════
+// SUBTITLE ROTATOR
+// ════════════════════════════════════════════════════════════
+// Cycles the greeting subtitle through engaging variants every 15s.
+// Variants are filtered by current state (e.g. driver bubble visibility).
+const SUBTITLE_ROTATE_MS = 15000;
+
+function getSubtitleVariants() {
+  const bubbleVisible = !CONTENT || !CONTENT.driver || CONTENT.driver.bubbleVisible !== false;
+  const variants = [
+    { icon: '📍', getText: () => {
+        const base = t('guide.nearestTo') || 'Nearest to you';
+        return currentNeighborhood ? `${base} · ${currentNeighborhood}` : base;
+      } },
+    { icon: '🛟', getText: () => t('subtitle.seatbelt') },
+    { icon: '💡', getText: () => t('subtitle.tapHint') },
+  ];
+  if (bubbleVisible) {
+    variants.push({ icon: '🐶', getText: () => t('subtitle.meetCrew') });
+  }
+  // Today's pick — only if we can resolve a featured venue
+  const featured = pickFeaturedVenue();
+  if (featured) {
+    variants.push({ icon: '⭐', getText: () => `${t('subtitle.todaysPick')} ${featured.name}` });
+  }
+  variants.push({ icon: '🌴', getText: () => t('subtitle.didYouKnow') });
+  return variants;
+}
+
+function pickFeaturedVenue() {
+  if (!CONTENT || !CONTENT.guide || !CONTENT.guide.venues) return null;
+  const fid = CONTENT.guide.featuredVenueId;
+  return (fid && CONTENT.guide.venues.find(v => v.id === fid))
+    || CONTENT.guide.venues.find(v => v.abdullahsPick)
+    || null;
+}
+
+function renderSubtitleVariant(idx) {
+  const variants = getSubtitleVariants();
+  if (!variants.length) return;
+  const v = variants[idx % variants.length];
+  const el = document.getElementById('greeting-sub');
+  if (!el) return;
+  el.innerHTML = `<span class="greeting-sub-icon">${v.icon}</span><span class="greeting-sub-text">${v.getText()}</span>`;
+}
+
+function setSubtitleVariant(idx) {
+  const variants = getSubtitleVariants();
+  if (!variants.length) return;
+  subtitleVariantIdx = idx % variants.length;
+  renderSubtitleVariant(subtitleVariantIdx);
+}
+
+function rotateSubtitle() {
+  const el = document.getElementById('greeting-sub');
+  if (!el) return;
+  const variants = getSubtitleVariants();
+  if (variants.length <= 1) return;
+  subtitleVariantIdx = (subtitleVariantIdx + 1) % variants.length;
+  el.classList.add('fade');
+  setTimeout(() => {
+    renderSubtitleVariant(subtitleVariantIdx);
+    el.classList.remove('fade');
+  }, 250);
+}
+
+function startSubtitleRotator() {
+  if (subtitleRotatorInterval) clearInterval(subtitleRotatorInterval);
+  // Random starting index so different rides feel different
+  const variants = getSubtitleVariants();
+  if (variants.length) {
+    subtitleVariantIdx = Math.floor(Math.random() * variants.length);
+    renderSubtitleVariant(subtitleVariantIdx);
+  }
+  subtitleRotatorInterval = setInterval(rotateSubtitle, SUBTITLE_ROTATE_MS);
 }
 
 // ════════════════════════════════════════════════════════════
@@ -1212,16 +1971,24 @@ function updateGreeting() {
 // NAVIGATION
 // ════════════════════════════════════════════════════════════
 function switchTab(tab) {
+  // The driver page is only reachable via the bubble; if it's hidden, don't
+  // let anything strand the passenger on an orphaned tab.
+  if (tab === 'driver' && CONTENT && CONTENT.driver && CONTENT.driver.bubbleVisible === false) tab = 'guide';
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
-  document.getElementById('page-' + tab).classList.add('active');
+  document.querySelectorAll('.nav-link, .driver-bubble').forEach(n => n.classList.remove('active'));
+  const page = document.getElementById('page-' + tab);
+  if (page) page.classList.add('active');
   const navEl = document.getElementById('nav-' + tab);
-  navEl.classList.add('active');
-  // Move nav indicator
-  document.querySelectorAll('.nav-indicator').forEach(i => i.remove());
-  const ind = document.createElement('div');
-  ind.className = 'nav-indicator';
-  navEl.appendChild(ind);
+  if (navEl) {
+    navEl.classList.add('active');
+    // Vertical indicator only for regular nav-links (not the driver bubble)
+    document.querySelectorAll('.nav-indicator').forEach(i => i.remove());
+    if (navEl.classList.contains('nav-link')) {
+      const ind = document.createElement('div');
+      ind.className = 'nav-indicator';
+      navEl.appendChild(ind);
+    }
+  }
   currentTab = tab;
   resetInactivity();
   logTap('tab_' + tab);
@@ -1246,8 +2013,9 @@ function updateLocationDisplay() {
   if (!userLat || !CONTENT) return;
   const neighborhood = detectNeighborhood(userLat, userLng);
   document.getElementById('location-display').textContent = neighborhood || 'Miami, FL';
-  document.getElementById('greeting-sub').textContent =
-    (t('guide.nearestTo') || 'Nearest to you') + (neighborhood ? ` · ${neighborhood}` : '');
+  currentNeighborhood = neighborhood || '';
+  // Force the "nearest" variant on so passenger sees the resolved neighborhood immediately
+  setSubtitleVariant(0);
 }
 
 function detectNeighborhood(lat, lng) {
@@ -1282,68 +2050,248 @@ const WEATHER_ICONS = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',51
 
 function setFilter(f) {
   currentFilter = f;
-  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
-  document.querySelector(`[data-filter="${f}"]`).classList.add('active');
+  // Activate matching pill in BOTH rows (below-hero + sticky-top)
+  document.querySelectorAll('.pill').forEach(p => {
+    p.classList.toggle('active', p.dataset.filter === f);
+  });
   renderGuide();
   logTap('filter_' + f);
+  resetInactivity();
 }
 
 function renderGuide() {
-  if (!CONTENT) return;
-  const grid = document.getElementById('cards-grid');
-  grid.innerHTML = '';
+  // Render pill rows (idempotent — labels reflect current language)
+  renderPillRows();
 
+  // Prep venues with distance + sort
   let venues = [...CONTENT.guide.venues];
-
-  // Attach distances
   if (userLat && userLng) {
-    venues.forEach(v => {
-      v._dist = haversine(userLat, userLng, v.lat, v.lng);
-    });
+    venues.forEach(v => { v._dist = haversine(userLat, userLng, v.lat, v.lng); });
     venues.sort((a, b) => a._dist - b._dist);
   }
 
-  // Filter
-  let filtered;
-  if (currentFilter === 'all') {
-    filtered = venues;
-  } else if (currentFilter === 'picks') {
-    filtered = venues.filter(v => v.abdullahsPick);
-  } else if (currentFilter === 'event') {
-    filtered = []; // events handled separately below
+  // Determine view: 'all' → home, anything else → browse
+  const view = currentFilter === 'all' ? 'home' : 'browse';
+  document.getElementById('guide-main').setAttribute('data-view', view);
+
+  if (view === 'home') renderHomeView(venues);
+  else renderBrowseView(venues);
+
+  if (!userLat) startGPS();
+}
+
+function renderHomeView(venues) {
+  // Pick featured: manual override or nearest abdullahsPick
+  const fid = CONTENT.guide.featuredVenueId;
+  let featured = fid ? venues.find(v => v.id === fid) : null;
+  if (!featured) featured = venues.find(v => v.abdullahsPick) || venues[0];
+
+  const heroSlot = document.getElementById('gp-hero-slot');
+  if (featured) {
+    heroSlot.innerHTML = buildHeroHTML(featured);
+    const heroEl = heroSlot.querySelector('.gp-hero');
+    heroEl.addEventListener('click', (e) => {
+      if (e.target.closest('.gp-btn-primary')) return;
+      openVenueSheet(featured.id);
+    });
+    heroSlot.querySelector('.gp-btn-primary').addEventListener('click', (e) => {
+      e.stopPropagation();
+      openQR('venue', featured.id);
+      logTap('hero_qr_' + featured.id);
+    });
   } else {
-    filtered = venues.filter(v => v.category === currentFilter);
+    heroSlot.innerHTML = `<div class="gp-hero-empty">No venues yet — add some in the editor.</div>`;
   }
 
-  // Section label
-  const label = document.getElementById('guide-section-label');
-  if (userLat) {
-    label.textContent = (t('guide.nearestTo') || 'Nearest to you') + ' · ' + filtered.length + ' places';
-  } else {
-    label.textContent = filtered.length + ' places';
-  }
-
-  // Render venue cards
-  filtered.forEach(v => {
-    grid.appendChild(buildVenueCard(v));
+  // 3-up minis: next-nearest, excluding the featured one
+  const restVenues = venues.filter(v => !featured || v.id !== featured.id).slice(0, 3);
+  const minisHost = document.getElementById('gp-minis');
+  minisHost.innerHTML = restVenues.map(v => buildMiniHTML(v)).join('');
+  minisHost.querySelectorAll('.gp-mini').forEach(el => {
+    const vid = el.getAttribute('data-vid');
+    el.addEventListener('click', () => openVenueSheet(vid));
   });
 
-  // Events (shown in All or Events filter)
-  if (currentFilter === 'all' || currentFilter === 'event') {
-    CONTENT.guide.events.forEach(e => {
-      grid.appendChild(buildEventCard(e));
-    });
+  // Section title
+  document.getElementById('gp-more-label').textContent = t('guide.moreNearYou') || 'More near you';
+}
+
+function renderBrowseView(venues) {
+  // Filter
+  let filtered;
+  if (currentFilter === 'picks')      filtered = venues.filter(v => v.abdullahsPick);
+  else if (currentFilter === 'event') filtered = [];
+  else                                filtered = venues.filter(v => v.category === currentFilter);
+
+  // Label per filter
+  const labelKey = currentFilter === 'event' ? 'event' : currentFilter;
+  document.getElementById('browse-label').textContent = t('categories.' + labelKey) || 'Results';
+
+  // Grid
+  const grid = document.getElementById('cards-grid');
+  grid.innerHTML = '';
+  filtered.forEach(v => grid.appendChild(buildVenueCard(v)));
+
+  // Events when Events filter active
+  if (currentFilter === 'event') {
+    CONTENT.guide.events.forEach(e => grid.appendChild(buildEventCard(e)));
+  }
+}
+
+function renderPillRows() {
+  const items = [
+    { f: 'all',        cls: 'pill-all',   icon: 'ti-layout-grid',     k: 'categories.all' },
+    { f: 'restaurant', cls: 'pill-food',  icon: 'ti-tools',           k: 'categories.restaurant' },
+    { f: 'nightlife',  cls: 'pill-night', icon: 'ti-music',           k: 'categories.nightlife' },
+    { f: 'attraction', cls: 'pill-attr',  icon: 'ti-map-pin',         k: 'categories.attraction' },
+    { f: 'gem',        cls: 'pill-gem',   icon: 'ti-sparkles',        k: 'categories.gem' },
+    { f: 'event',      cls: 'pill-event', icon: 'ti-calendar-event',  k: 'categories.event' },
+    { f: 'picks',      cls: 'pill-picks', icon: 'ti-star',            k: 'categories.picks' },
+  ];
+  const html = items.map(it => `
+    <div class="pill ${it.cls}${it.f === currentFilter ? ' active' : ''}" data-filter="${it.f}" onclick="setFilter('${it.f}')">
+      <i class="ti ${it.icon}"></i> <span>${t(it.k) || it.f}</span>
+    </div>
+  `).join('');
+  const below = document.getElementById('pills-below');
+  const sticky = document.getElementById('pills-sticky');
+  if (below)  below.innerHTML  = html;
+  if (sticky) sticky.innerHTML = html;
+}
+
+function goHomeView() {
+  setFilter('all');
+}
+
+// Hero card HTML builder
+function buildHeroHTML(v) {
+  const distStr = (userLat && v._dist !== undefined)
+    ? `<span class="gp-hero-dist"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles')||'mi'}</span>` : '';
+  const priceStr = v.price === 'Free'
+    ? `<span style="color:var(--teal);font-weight:600">${t('guide.free')||'Free'}</span>`
+    : (v.price || '');
+  const note = (v.abdullahsPick && v.abdullahsNote && (v.abdullahsNote[lang] || v.abdullahsNote.en))
+    ? `<div class="gp-hero-note">${v.abdullahsNote[lang] || v.abdullahsNote.en}</div>` : '';
+  const tag = v.abdullahsPick
+    ? `<div class="gp-hero-tag"><i class="ti ti-star-filled"></i>${t('guide.abdullahsPick')||"Abdullah's pick"}</div>`
+    : v.sponsored
+      ? `<div class="gp-hero-tag"><i class="ti ti-star"></i>${t('guide.sponsored')||'Sponsored'}</div>`
+      : '';
+  const photoBg = v.photo ? `<img src="${v.photo}" alt="">` : '';
+  const metaBits = [v.neighborhood, capitalize(v.category), priceStr, distStr].filter(Boolean);
+  const metaHTML = metaBits.map((bit, i) => i === 0 ? bit : `<span class="dot"></span>${bit}`).join('');
+
+  return `
+    <div class="gp-hero">
+      <div class="gp-hero-photo">${photoBg}${tag}</div>
+      <div class="gp-hero-body">
+        <div class="gp-hero-eyebrow"><i class="ti ti-sparkles"></i>${t('guide.todaysPick')||"Today's top pick"}</div>
+        <div class="gp-hero-name">${v.name}</div>
+        <div class="gp-hero-meta">${metaHTML}</div>
+        ${note}
+        <div class="gp-hero-actions">
+          <button class="gp-btn-primary"><i class="ti ti-qrcode"></i> <span>${t('guide.openOnPhone')||'Open on your phone'}</span></button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// Mini card HTML builder
+function buildMiniHTML(v) {
+  const distStr = (userLat && v._dist !== undefined)
+    ? `<span class="gp-mini-dist"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles')||'mi'}</span>` : '';
+  const photoBg = v.photo ? `<img src="${v.photo}" alt="">` : '';
+  const pickBadge = v.abdullahsPick ? `<div class="gp-mini-pickbadge"><i class="ti ti-star-filled"></i></div>` : '';
+  const priceStr = v.price === 'Free' ? (t('guide.free')||'Free') : (v.price || '');
+  return `
+    <div class="gp-mini ${v.abdullahsPick ? 'pick' : ''}" data-vid="${v.id}">
+      <div class="gp-mini-photo">${photoBg}${pickBadge}</div>
+      <div class="gp-mini-body">
+        <div class="gp-mini-tag">${v.neighborhood} · ${capitalize(v.category)}</div>
+        <div class="gp-mini-name">${v.name}</div>
+        <div class="gp-mini-meta">
+          <span>${priceStr}</span>
+          ${distStr}
+        </div>
+      </div>
+    </div>`;
+}
+
+function capitalize(s) {
+  if (!s) return '';
+  return s[0].toUpperCase() + s.slice(1);
+}
+
+// ── VENUE DETAIL SHEET ──────────────────────────────────────
+let currentVenueId = null;
+
+function openVenueSheet(venueId) {
+  const v = CONTENT.guide.venues.find(x => x.id === venueId);
+  if (!v) return;
+  currentVenueId = venueId;
+
+  // Photo (re-attach img if any)
+  const photo = document.getElementById('vs-photo');
+  Array.from(photo.querySelectorAll('img')).forEach(im => im.remove());
+  if (v.photo) {
+    const img = document.createElement('img');
+    img.src = v.photo;
+    img.alt = '';
+    photo.insertBefore(img, photo.firstChild);
   }
 
-  // Handyman card (always last in All view)
-  if (currentFilter === 'all' || currentFilter === 'picks') {
-    if (CONTENT.ads.handyman.enabled) {
-      grid.appendChild(buildHandymanCard());
-    }
+  // Tags
+  const tagRow = document.getElementById('vs-tag-row');
+  let tagsHTML = '';
+  if (v.abdullahsPick) tagsHTML += `<div class="vs-tag pick"><i class="ti ti-star-filled"></i>${t('guide.abdullahsPick')||"Abdullah's pick"}</div>`;
+  if (v.sponsored)     tagsHTML += `<div class="vs-tag"><i class="ti ti-star"></i>${t('guide.sponsored')||'Sponsored'}</div>`;
+  tagRow.innerHTML = tagsHTML;
+
+  document.getElementById('vs-eyebrow').textContent = `${v.neighborhood} · ${capitalize(v.category)}`;
+  document.getElementById('vs-name').textContent = v.name;
+
+  // Meta (price + dist)
+  let distHTML = '';
+  if (userLat && v.lat) {
+    const d = haversine(userLat, userLng, v.lat, v.lng);
+    distHTML = `<span class="vs-dist"><i class="ti ti-map-pin"></i>${d.toFixed(1)} ${t('guide.miles')||'mi'}</span>`;
+  }
+  const priceStr = v.price === 'Free'
+    ? `<span style="color:var(--teal);font-weight:600">${t('guide.free')||'Free'}</span>`
+    : v.price;
+  const metaBits = [priceStr, distHTML].filter(Boolean);
+  document.getElementById('vs-meta').innerHTML = metaBits.map((b, i) => i === 0 ? b : `<span class="dot"></span>${b}`).join('');
+
+  // Description
+  document.getElementById('vs-desc').textContent = v.description[lang] || v.description.en || '';
+
+  // Personal note
+  const noteEl = document.getElementById('vs-note');
+  if (v.abdullahsPick && v.abdullahsNote && (v.abdullahsNote[lang] || v.abdullahsNote.en)) {
+    noteEl.textContent = v.abdullahsNote[lang] || v.abdullahsNote.en;
+    noteEl.style.display = '';
+  } else {
+    noteEl.style.display = 'none';
   }
 
-  // Start GPS after first render
-  if (!userLat) startGPS();
+  // Address
+  document.getElementById('vs-addr').innerHTML = `<i class="ti ti-map-pin"></i>${v.address}`;
+
+  // Open
+  document.getElementById('vs-backdrop').classList.add('open');
+  document.getElementById('venue-sheet').classList.add('open');
+  logTap('venue_sheet_' + venueId);
+  resetInactivity();
+}
+
+function closeVenueSheet() {
+  document.getElementById('vs-backdrop').classList.remove('open');
+  document.getElementById('venue-sheet').classList.remove('open');
+  currentVenueId = null;
+}
+
+function openVenueQR() {
+  if (currentVenueId) openQR('venue', currentVenueId);
 }
 
 function buildVenueCard(v) {
@@ -1383,7 +2331,11 @@ function buildVenueCard(v) {
       </div>
     </div>`;
 
-  card.addEventListener('click', () => logTap('venue_' + v.id));
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('.qr-btn')) return;
+    logTap('venue_' + v.id);
+    openVenueSheet(v.id);
+  });
   return card;
 }
 
@@ -1405,24 +2357,6 @@ function buildEventCard(e) {
       </div>
     </div>`;
   card.addEventListener('click', () => { logTap('event_' + e.id); openQR('event', e.id); });
-  return card;
-}
-
-function buildHandymanCard() {
-  const h = CONTENT.ads.handyman;
-  const card = document.createElement('div');
-  card.className = 'handyman-card';
-  card.innerHTML = `
-    <div class="handyman-inner">
-      <div class="handyman-tag">From your driver</div>
-      <div class="handyman-name">${h.headline[lang] || h.headline.en}</div>
-      <div class="handyman-desc">${h.body[lang] || h.body.en}</div>
-      <div class="handyman-bottom">
-        <span class="handyman-phone">${h.phone}</span>
-        <div class="handyman-qr" onclick="event.stopPropagation();openQR('handyman')"><i class="ti ti-qrcode"></i></div>
-      </div>
-    </div>`;
-  card.addEventListener('click', () => logTap('handyman_tap'));
   return card;
 }
 
@@ -1478,8 +2412,8 @@ function renderWeather() {
           <div><div class="stat-val">${w.current.rain_chance}%</div><div class="stat-lbl">${t('weather.rain') || 'Rain'}</div></div>
         </div>
       </div>
-      <div>
-        <div class="hourly-label">${t('weather.hourly') || 'Hourly · Today'}</div>
+      <div class="hourly-panel">
+        <div class="section-eyebrow"><i class="ti ti-clock"></i><span>${t('weather.hourly') || 'Hourly · Today'}</span></div>
         <div class="hourly-row">${hourCards}</div>
       </div>`;
   } else {
@@ -1536,7 +2470,7 @@ function renderWeather() {
       ${currentHtml}
     </div>
     <div class="weather-right">
-      <div class="forecast-label">${t('weather.forecast') || '5-Day Forecast'}${isStale ? ' · ' + t('weather.staleNotice') || '' : ''}</div>
+      <div class="section-eyebrow"><i class="ti ti-calendar"></i><span>${t('weather.forecast') || '5-Day Forecast'}${isStale ? ' · ' + (t('weather.staleNotice') || '') : ''}</span></div>
       <div class="forecast-cards">${forecastCards}</div>
     </div>`;
 }
@@ -1946,12 +2880,6 @@ function openQR(type, id) {
       qrUrl = v.website || `https://maps.google.com/?q=${encodeURIComponent(v.address)}`;
       urlEl.textContent = v.website ? new URL(v.website).hostname : 'Open in Maps';
     }
-  } else if (type === 'handyman' && CONTENT) {
-    const h = CONTENT.ads.handyman;
-    title.textContent = h.headline[lang] || 'Handyman';
-    sub.textContent = 'Scan to call or save contact';
-    qrUrl = `tel:${h.phone.replace(/[^+\d]/g,'')}`;
-    urlEl.textContent = h.phone;
   } else if (type === 'event' && CONTENT) {
     const e = CONTENT.guide.events.find(x => x.id === id);
     if (e) {
@@ -1960,6 +2888,20 @@ function openQR(type, id) {
       qrUrl = e.url || window.location.origin;
       urlEl.textContent = e.url ? new URL(e.url).hostname : window.location.hostname;
     }
+  } else if (type === 'driver-phone' && CONTENT && CONTENT.driver) {
+    const d = CONTENT.driver;
+    title.textContent = d.name || 'Driver';
+    sub.textContent = tx(d.handyman && d.handyman.qrLabel) || 'Scan to save my contact';
+    qrUrl = buildVCard(d);
+    urlEl.textContent = formatPhone(d.phone || '');
+  } else if (type === 'driver-thumbtack' && CONTENT && CONTENT.driver) {
+    const d = CONTENT.driver;
+    title.textContent = 'Thumbtack profile';
+    sub.textContent = tx(d.thumbtack && d.thumbtack.qrLabel) || 'Scan to read my reviews';
+    qrUrl = (d.thumbtack && d.thumbtack.url) || '';
+    try {
+      urlEl.textContent = qrUrl ? new URL(qrUrl).hostname : 'Not configured';
+    } catch { urlEl.textContent = qrUrl || 'Not configured'; }
   }
 
   // Generate real QR code
@@ -2001,6 +2943,9 @@ function initInactivity() {
 }
 
 function resetInactivity() {
+  // While the rest screen is up, taps are handled by exitRest — don't let the
+  // global activity listeners restart the idle/reset flow underneath it.
+  if (restActive) return;
   clearTimeout(inactivityTimer);
   clearInterval(countdownTimer);
   dismissInactivity(true);
@@ -2008,9 +2953,10 @@ function resetInactivity() {
 }
 
 function showInactivityModal() {
-  // Close any open game screen
+  // Close any open game screen, QR modal, or venue detail sheet
   document.querySelectorAll('.game-screen').forEach(s => s.classList.remove('open'));
   document.getElementById('qr-modal').classList.remove('open');
+  closeVenueSheet();
 
   countdownVal = COUNTDOWN_S;
   document.getElementById('countdown-num').textContent = countdownVal;
@@ -2043,6 +2989,93 @@ function dismissInactivity(silent = false) {
   const overlay = document.getElementById('inactivity-overlay');
   overlay.classList.remove('visible');
   if (!silent) resetInactivity();
+}
+
+// ════════════════════════════════════════════════════════════
+// REST / BLACKOUT SCREEN
+// ════════════════════════════════════════════════════════════
+function enterRest() {
+  // Pause the inactivity/reset flow while resting so nothing pops over the
+  // dark screen; close any transient overlays so we wake to a clean state.
+  clearTimeout(inactivityTimer);
+  clearInterval(countdownTimer);
+  dismissInactivity(true);
+  restActive = true;
+
+  updateRestClock();
+  restClockTimer = setInterval(updateRestClock, 1000);
+  armRestTimers();  // schedules the warning box, then the auto-wake
+  document.getElementById('rest-screen').classList.add('visible');
+}
+
+// (Re)start the 10-minute cycle: nothing happens until REST_WARN_S before the
+// end, when the warning box appears and counts down to the auto-wake.
+function armRestTimers() {
+  clearTimeout(restWarnTimer);
+  clearInterval(restWarnInterval);
+  document.getElementById('rest-warn').classList.remove('show');
+  restWarnTimer = setTimeout(showRestWarning, REST_MAX_MS - REST_WARN_S * 1000);
+}
+
+function showRestWarning() {
+  restWarnVal = REST_WARN_S;
+  updateRestWarnText();
+  document.getElementById('rest-warn').classList.add('show');
+  restWarnInterval = setInterval(() => {
+    restWarnVal--;
+    if (restWarnVal <= 0) {
+      clearInterval(restWarnInterval);
+      autoWakeRest();
+    } else {
+      updateRestWarnText();
+    }
+  }, 1000);
+}
+
+function updateRestWarnText() {
+  const tmpl = t('rest.warnCountdown') || 'Waking up in {n}s';
+  document.getElementById('rest-warn-count').textContent = tmpl.replace('{n}', restWarnVal);
+}
+
+// Passenger taps the warning box: stay dark for another full cycle. stopPropagation
+// keeps the tap from bubbling to the screen's onclick (which would wake instead).
+function extendRest(ev) {
+  if (ev) ev.stopPropagation();
+  clearInterval(restWarnInterval);
+  document.getElementById('rest-warn').classList.remove('show');
+  armRestTimers();
+}
+
+function exitRest() {
+  restActive = false;
+  clearInterval(restClockTimer);
+  restClockTimer = null;
+  clearTimeout(restWarnTimer);
+  clearInterval(restWarnInterval);
+  document.getElementById('rest-warn').classList.remove('show');
+  document.getElementById('rest-screen').classList.remove('visible');
+  resetInactivity();
+}
+
+// Fired when the warning countdown reaches 0: assume the previous passenger has
+// left, so wake to a fresh home view instead of resuming their session — the
+// next passenger should see the app, not a black screen.
+function autoWakeRest() {
+  exitRest();
+  endSession();
+  switchTab('guide');
+  setFilter('all');
+  startSession();
+}
+
+function updateRestClock() {
+  // "9:41 AM" → time + meridiem so we can dim the AM/PM separately. Split on any
+  // whitespace (\s covers the U+202F narrow no-break space modern browsers use);
+  // 24-hour locales yield no second part, leaving ampm empty.
+  const raw = new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  const [time, ampm = ''] = raw.split(/\s+/);
+  document.getElementById('rest-clock').innerHTML =
+    time + (ampm ? '<span class="rest-ampm">' + ampm + '</span>' : '');
 }
 
 function showThanks() {

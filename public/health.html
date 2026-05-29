@@ -194,14 +194,6 @@
       </div>
       <div class="check-time" id="chk-events-time"></div>
     </div>
-    <div class="check-row" id="chk-handyman">
-      <div class="check-status idle" id="chk-handyman-status"><i class="ti ti-tools"></i></div>
-      <div class="check-info">
-        <div class="check-name">Handyman card has phone number set</div>
-        <div class="check-detail" id="chk-handyman-detail">Not checked yet</div>
-      </div>
-      <div class="check-time" id="chk-handyman-time"></div>
-    </div>
   </div>
 
   <div class="section-label">External Resources</div>
@@ -331,7 +323,6 @@ async function runAll() {
     if (!content.weather?.hourly?.length) missing.push('weather.hourly');
     if (!content.guide?.venues?.length) missing.push('guide.venues');
     if (!content.guide?.events) missing.push('guide.events');
-    if (!content.ads?.handyman) missing.push('ads.handyman');
     if (!content.strings) missing.push('strings');
     if (missing.length === 0) {
       const venueCount = content.guide.venues.length;
@@ -469,23 +460,6 @@ async function runAll() {
       setCheck('events', 'pass', `All ${content.guide.events.length} events are upcoming`);
     } else {
       setCheck('events', 'fail', `${stale.length} past event(s) still showing: ${stale.map(e => e.title?.en || e.id).join(', ')} — remove in Editor`);
-    }
-  }
-
-  // 10 — Handyman phone
-  setRunning('handyman', 'Checking handyman card…');
-  await delay(100);
-  if (!content?.ads?.handyman) {
-    setCheck('handyman', 'warn', 'Handyman card not configured in content.json');
-  } else {
-    const h = content.ads.handyman;
-    const phone = h.phone || '';
-    if (!h.enabled) {
-      setCheck('handyman', 'warn', 'Handyman card is disabled — enable in Editor if you want it shown');
-    } else if (!phone || phone === '+1-305-000-0000' || phone.includes('000-0000')) {
-      setCheck('handyman', 'warn', 'Phone number is still the placeholder — update in Editor → Handyman');
-    } else {
-      setCheck('handyman', 'pass', `Enabled · ${phone}`);
     }
   }
 

@@ -410,8 +410,8 @@
     </div>
 
     <div class="nav-section-label" style="margin-top:8px">Promote</div>
-    <div class="nav-item" id="nav-handyman" onclick="showPanel('handyman')">
-      <i class="ti ti-tools"></i><span>Handyman</span>
+    <div class="nav-item" id="nav-driver" onclick="showPanel('driver')">
+      <i class="ti ti-user-heart"></i><span>Driver page</span>
     </div>
     <div class="nav-item" id="nav-sponsored" onclick="showPanel('sponsored')">
       <i class="ti ti-star"></i><span>Sponsored</span>
@@ -435,7 +435,6 @@
       <div class="stats-grid" id="analytics-stats">
         <div class="stat-card"><div class="stat-val" id="stat-sessions">—</div><div class="stat-lbl">Sessions</div><div class="stat-delta up" id="stat-sessions-d"><i class="ti ti-arrow-up"></i>Loading…</div></div>
         <div class="stat-card"><div class="stat-val" id="stat-duration">—</div><div class="stat-lbl">Avg Duration</div><div class="stat-delta up" id="stat-duration-d"></div></div>
-        <div class="stat-card"><div class="stat-val" id="stat-handyman">—</div><div class="stat-lbl">Handyman Taps</div><div class="stat-delta up" id="stat-handyman-d"></div></div>
         <div class="stat-card"><div class="stat-val" id="stat-qr">—</div><div class="stat-lbl">QR Taps</div><div class="stat-delta up" id="stat-qr-d"></div></div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
@@ -469,6 +468,18 @@
     <div class="panel" id="panel-venues">
       <div class="card">
         <div class="card-header">
+          <div><div class="card-title">Featured today</div><div class="card-sub">Which venue gets the hero spot on the homepage right now</div></div>
+        </div>
+        <div class="field" style="margin:0">
+          <select id="featured-venue-select" onchange="saveFeaturedVenue(this.value)" style="max-width:480px">
+            <option value="">(Auto — nearest Local Favorite)</option>
+          </select>
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:8px">Tip: swap this through the day — different pick for breakfast vs. dinner crowd. Leave on Auto to let GPS decide.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
           <div><div class="card-title">Venues</div><div class="card-sub">Drag to reorder · saved to content.json on publish</div></div>
           <div style="display:flex;gap:8px;align-items:center">
             <div class="tab-row-inner" id="venue-filter-tabs">
@@ -491,8 +502,11 @@
     <div class="panel" id="panel-events">
       <div class="card">
         <div class="card-header">
-          <div><div class="card-title">Events This Week</div><div class="card-sub">Auto-fetched from RSS · toggle to show/hide on passenger app</div></div>
-          <button class="btn btn-ghost btn-sm" onclick="fetchEvents()"><i class="ti ti-refresh"></i>Re-fetch RSS</button>
+          <div><div class="card-title">Events This Week</div><div class="card-sub">Pull from Ticketmaster or RSS, then translate &amp; publish</div></div>
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-primary btn-sm" onclick="fetchTicketmaster()"><i class="ti ti-ticket"></i>Fetch Ticketmaster</button>
+            <button class="btn btn-ghost btn-sm" onclick="fetchEvents()"><i class="ti ti-rss"></i>Re-fetch RSS</button>
+          </div>
         </div>
         <div id="events-list">
           <div style="font-size:12px;color:var(--muted);padding:12px 0">Loading events…</div>
@@ -500,7 +514,7 @@
       </div>
       <div class="info-box">
         <i class="ti ti-info-circle"></i>
-        <span>Events are fetched from Timeout Miami and Miami Eater RSS feeds. Toggle each one on or off before publishing. Claude AI can translate descriptions automatically.</span>
+        <span><strong>Ticketmaster</strong> brings real dated Miami events (concerts, shows, sports) — best source. <strong>RSS</strong> (Eater) adds food/news links. Both append to the list without duplicates; review, delete what you don't want, auto-translate to ES/PT/FR, then Publish. Add free/local events (street festivals, etc.) manually below.</span>
       </div>
       <div class="card">
         <div class="card-header"><div><div class="card-title">Add Event Manually</div><div class="card-sub">If you know of an event not in the RSS feeds</div></div></div>
@@ -542,31 +556,93 @@
       </div>
     </div>
 
-    <!-- HANDYMAN -->
-    <div class="panel" id="panel-handyman">
+    <!-- DRIVER -->
+    <div class="panel" id="panel-driver">
       <div class="card">
         <div class="card-header">
-          <div><div class="card-title">Handyman Business Card</div><div class="card-sub">Shown to all passengers at the bottom of the City Guide</div></div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span style="font-size:12px;color:var(--muted)">Show to passengers</span>
-            <button class="toggle on" id="handyman-toggle" onclick="this.classList.toggle('on')"></button>
+          <div><div class="card-title">Meet your driver</div><div class="card-sub">Edits the "Meet your driver" page that opens from the sidebar bubble</div></div>
+          <button class="btn btn-primary" onclick="saveDriver()"><i class="ti ti-check"></i>Save driver data</button>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0 14px;border-bottom:0.5px solid var(--border);margin-bottom:14px">
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--heading)">Show "Meet your driver" on the passenger app</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px">When off, the sidebar bubble and driver page are hidden from passengers.</div>
           </div>
+          <button class="toggle on" id="drv-bubble-toggle" onclick="this.classList.toggle('on')"></button>
+        </div>
+
+        <div class="field-grid">
+          <div class="field"><label>Name</label><input id="drv-name" type="text" placeholder="Abdullah"></div>
+          <div class="field"><label>Phone</label><input id="drv-phone" type="tel" placeholder="+1-786-919-2115"></div>
         </div>
         <div class="field-grid">
-          <div class="field"><label>Headline (English)</label><input id="hm-headline-en" value="Need a handyman in Miami?"></div>
-          <div class="field"><label>Headline (Spanish)</label><input id="hm-headline-es" value="¿Necesitas un manitas en Miami?"></div>
+          <div class="field"><label>Employer</label><input id="drv-employer" type="text" placeholder="Norwegian Cruise Lines"></div>
+          <div class="field"><label>Origin</label><input id="drv-origin" type="text" placeholder="Turkey"></div>
+        </div>
+        <div class="field"><label>Photo URL (optional — leave empty to use initial 'A')</label><input id="drv-photo" type="url" placeholder="https://…"></div>
+
+        <div class="field"><label>Role tagline (English) — shown in sidebar bubble</label><input id="drv-role-en" type="text" placeholder="Your driver · also a handyman"></div>
+        <div class="field"><label>"From" line (English) — under your name</label><input id="drv-fromline-en" type="text" placeholder="From Turkey, now in Miami"></div>
+        <div class="field"><label>Bio paragraphs (English) — one paragraph per line. HTML allowed (e.g. &lt;strong&gt;Norwegian Cruise Lines&lt;/strong&gt;)</label><textarea id="drv-bio-en" rows="5" placeholder="By day I'm a software developer at &lt;strong&gt;Norwegian Cruise Lines&lt;/strong&gt;…"></textarea></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Handyman pitch</div><div class="card-sub">Section below the bio</div></div></div>
+        <div class="field-grid">
+          <div class="field"><label>Eyebrow (English)</label><input id="drv-hm-eyebrow-en" type="text" placeholder="By the way"></div>
+          <div class="field"><label>Title (English)</label><input id="drv-hm-title-en" type="text" placeholder="I'm also a handyman."></div>
+        </div>
+        <div class="field"><label>Subtitle (English)</label><textarea id="drv-hm-sub-en" rows="3" placeholder="If you need work done at home…"></textarea></div>
+        <div class="field"><label>Phone label (English)</label><input id="drv-hm-phonelabel-en" type="text" placeholder="Save my number for later"></div>
+
+        <div class="field">
+          <label style="display:flex;justify-content:space-between;align-items:center">
+            <span>Services</span>
+            <button class="btn btn-ghost btn-sm" onclick="addDriverService()"><i class="ti ti-plus"></i>Add service</button>
+          </label>
+          <div id="drv-services-list" style="display:flex;flex-direction:column;gap:6px;margin-top:6px"><!-- rows --></div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px">Icon names from <a href="https://tabler.io/icons" target="_blank" style="color:var(--teal)">Tabler Icons</a> (e.g. <code>ti-paint</code>, <code>ti-bolt</code>).</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Thumbtack credential</div><div class="card-sub">5-star badge + QR shown above the phone</div></div>
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:12px;color:var(--muted)">Show</span><button class="toggle on" id="drv-tt-toggle" onclick="this.classList.toggle('on')"></button></div>
+        </div>
+        <div class="field"><label>Thumbtack profile URL</label><input id="drv-tt-url" type="url" placeholder="https://www.thumbtack.com/…"></div>
+        <div class="field-grid">
+          <div class="field"><label>Rating (1–5)</label><input id="drv-tt-rating" type="number" min="0" max="5" step="0.1" placeholder="5.0"></div>
+          <div class="field"><label>Review count (optional)</label><input id="drv-tt-reviewcount" type="number" min="0" placeholder=""></div>
+        </div>
+        <div class="field"><label>Credential label (English)</label><input id="drv-tt-label-en" type="text" placeholder="5-star pro on Thumbtack — verified handyman with real reviews"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">Pets</div><div class="card-sub">Shown at the bottom of the driver page</div></div>
+          <button class="btn btn-ghost btn-sm" onclick="addDriverPet()"><i class="ti ti-plus"></i>Add pet</button>
         </div>
         <div class="field-grid">
-          <div class="field"><label>Headline (Portuguese)</label><input id="hm-headline-pt" value="Precisa de um faz-tudo em Miami?"></div>
-          <div class="field"><label>Headline (French)</label><input id="hm-headline-fr" value="Besoin d'un bricoleur à Miami ?"></div>
+          <div class="field"><label>Section eyebrow (English)</label><input id="drv-pets-eyebrow-en" type="text" placeholder="Also at home"></div>
+          <div class="field"><label>Section title (English)</label><input id="drv-pets-title-en" type="text" placeholder="My crew"></div>
         </div>
-        <div class="field"><label>Body Text (English)</label><textarea id="hm-body-en">Your driver does that too — repairs, installations, general fixes. Ask me, or scan to save my contact.</textarea></div>
-        <button class="btn btn-ghost" style="margin-bottom:12px" onclick="aiTranslateHandyman()"><i class="ti ti-sparkles"></i>Auto-translate body to ES/PT/FR</button>
-        <div class="field-grid">
-          <div class="field"><label>Phone Number</label><input id="hm-phone" value="+1-305-000-0000" type="tel"></div>
-          <div class="field"><label>Website (optional)</label><input id="hm-website" type="url" placeholder="https://"></div>
+        <div class="field"><label>Summary line (English)</label><input id="drv-pets-summary-en" type="text" placeholder="3 pugs · 2 cats"></div>
+        <div id="drv-pets-list" style="display:flex;flex-direction:column;gap:8px;margin-top:8px"><!-- rows --></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Auto-translate to ES / PT / FR</div>
+            <div class="card-sub">Sends every English field above to Claude AI and fills in the other three languages</div>
+          </div>
+          <button class="btn btn-primary" onclick="aiTranslateDriver()"><i class="ti ti-sparkles"></i>Translate all</button>
         </div>
-        <button class="btn btn-primary" onclick="saveHandyman()"><i class="ti ti-check"></i>Save Changes</button>
+        <div class="info-box" style="margin-top:0">
+          <i class="ti ti-info-circle"></i>
+          <span>Requires <code>ANTHROPIC_API_KEY</code> set in <code>.dev.vars</code> (local Wrangler) or Cloudflare env (prod). Writes translations into memory only — hit "Save driver data" then "Save &amp; Publish" to persist.</span>
+        </div>
       </div>
     </div>
 
@@ -651,7 +727,10 @@
       <div class="field"><label>Latitude</label><input id="vm-lat" type="number" step="0.0001" placeholder="e.g. 25.7663"></div>
       <div class="field"><label>Longitude</label><input id="vm-lng" type="number" step="0.0001" placeholder="e.g. -80.2324"></div>
     </div>
-    <div class="field"><label>Website URL (for QR code)</label><input id="vm-website" type="url" placeholder="https://"></div>
+    <div class="field-grid">
+      <div class="field"><label>Website URL (for QR code)</label><input id="vm-website" type="url" placeholder="https://"></div>
+      <div class="field"><label>Photo URL (optional — shows in hero / cards / detail sheet)</label><input id="vm-photo" type="url" placeholder="https://"></div>
+    </div>
     <div class="field"><label>Description (English)</label><textarea id="vm-desc-en" placeholder="1–2 sentence description of this place…"></textarea></div>
     <div class="ai-box" id="ai-desc-box">
       <div class="ai-box-header">
@@ -675,7 +754,7 @@
     <div style="display:flex;align-items:center;gap:16px;margin-top:4px">
       <div class="toggle-row" style="padding:0;gap:8px">
         <button class="toggle" id="vm-pick-toggle" onclick="this.classList.toggle('on')"></button>
-        <div><div class="toggle-lbl" style="font-size:12px">Abdullah's Pick ⭐</div></div>
+        <div><div class="toggle-lbl" style="font-size:12px">Local Favorite ⭐ (your curated pick)</div></div>
       </div>
       <div class="toggle-row" style="padding:0;gap:8px">
         <button class="toggle" id="vm-featured-toggle" onclick="this.classList.toggle('on')"></button>
@@ -748,7 +827,8 @@ async function loadContent() {
     CONTENT = await res.json();
     renderVenueList();
     renderEventList();
-    renderHandyman();
+    renderDriverEditor();
+    renderFeaturedDropdown();
     updateLastPub();
   } catch (e) {
     showToast('Could not load content.json — check connection', 'error');
@@ -834,6 +914,7 @@ function openVenueModal(id) {
   document.getElementById('vm-lat').value = v ? v.lat : '';
   document.getElementById('vm-lng').value = v ? v.lng : '';
   document.getElementById('vm-website').value = v ? (v.website || '') : '';
+  document.getElementById('vm-photo').value = v ? (v.photo || '') : '';
   document.getElementById('vm-desc-en').value = v ? (v.description.en || '') : '';
   document.getElementById('vm-desc-es').value = v ? (v.description.es || '') : '';
   document.getElementById('vm-desc-pt').value = v ? (v.description.pt || '') : '';
@@ -863,6 +944,7 @@ function saveVenue() {
     lat: parseFloat(document.getElementById('vm-lat').value) || 25.7617,
     lng: parseFloat(document.getElementById('vm-lng').value) || -80.1918,
     website: document.getElementById('vm-website').value.trim() || null,
+    photo: document.getElementById('vm-photo').value.trim() || '',
     abdullahsPick: document.getElementById('vm-pick-toggle').classList.contains('on'),
     featured: document.getElementById('vm-featured-toggle').classList.contains('on'),
     sponsored: document.getElementById('vm-featured-toggle').classList.contains('on'),
@@ -886,6 +968,7 @@ function saveVenue() {
   }
 
   renderVenueList();
+  renderFeaturedDropdown();
   closeVenueModal();
   showToast('Venue saved — hit Publish to go live');
 }
@@ -893,8 +976,30 @@ function saveVenue() {
 function deleteVenue(id) {
   if (!confirm('Delete this venue?')) return;
   CONTENT.guide.venues = CONTENT.guide.venues.filter(v => v.id !== id);
+  if (CONTENT.guide.featuredVenueId === id) CONTENT.guide.featuredVenueId = '';
   renderVenueList();
+  renderFeaturedDropdown();
   showToast('Venue deleted');
+}
+
+function renderFeaturedDropdown() {
+  if (!CONTENT || !CONTENT.guide) return;
+  const sel = document.getElementById('featured-venue-select');
+  if (!sel) return;
+  const current = CONTENT.guide.featuredVenueId || '';
+  const venues = CONTENT.guide.venues || [];
+  sel.innerHTML =
+    '<option value="">(Auto — nearest Local Favorite)</option>' +
+    venues.map(v => {
+      const tag = v.abdullahsPick ? ' ⭐' : (v.featured ? ' 💛' : '');
+      return `<option value="${v.id}"${v.id === current ? ' selected' : ''}>${v.name}${tag} — ${v.neighborhood}</option>`;
+    }).join('');
+}
+
+function saveFeaturedVenue(id) {
+  if (!CONTENT.guide) CONTENT.guide = {};
+  CONTENT.guide.featuredVenueId = id || '';
+  showToast(id ? 'Featured venue updated — hit Publish to go live' : 'Featured set to Auto — hit Publish to go live');
 }
 
 function switchAiLang(lang, btn) {
@@ -957,23 +1062,34 @@ function addManualEvent() {
   showToast('Event added — hit Publish to go live');
 }
 
-async function fetchEvents() {
-  showToast('Fetching events from RSS…');
-  // CORS prevents direct browser fetches of external RSS feeds.
-  // /api/rss-fetch is a Cloudflare Pages Function that fetches them server-side.
+// Both event sources are Cloudflare Pages Functions (CORS prevents fetching
+// external feeds/APIs straight from the browser) and return the same shape:
+//   { events: [{title, description, url, date, venue, address, free, source}], errors }
+function fetchEvents()       { return fetchEventsFrom('/api/rss-fetch', 'RSS', 'rss_'); }
+function fetchTicketmaster() { return fetchEventsFrom('/api/ticketmaster-fetch', 'Ticketmaster', 'tm_'); }
+
+async function fetchEventsFrom(endpoint, label, idPrefix) {
+  showToast(`Fetching events from ${label}…`);
   try {
-    const res = await fetch('/api/rss-fetch');
-    if (!res.ok) throw new Error(`Server error ${res.status}`);
+    const res = await fetch(endpoint);
+    if (!res.ok) {
+      // Surface the function's JSON error (e.g. "TICKETMASTER_KEY is not set").
+      let msg = `Server error ${res.status}`;
+      try { const j = await res.json(); if (j && j.error) msg = j.error; } catch { /* keep default */ }
+      throw new Error(msg);
+    }
     const { events, errors } = await res.json();
+    if (errors && errors.length) console.warn(`[${label}] Some sources failed:`, errors);
 
-    if (errors.length) console.warn('[RSS] Some feeds failed:', errors);
-
-    // Merge new items — skip any URL already in the list
-    const existingUrls = new Set((CONTENT.guide.events || []).map(e => e.url));
-    const newEvents = events
-      .filter(e => e.url && !existingUrls.has(e.url))
-      .map(e => ({
-        id: 'rss_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+    // Merge new items — skip any URL already in the list AND any repeated
+    // within this batch (add to the seen-set as we go).
+    const seenUrls = new Set((CONTENT.guide.events || []).map(e => e.url));
+    const newEvents = [];
+    for (const e of events) {
+      if (!e.url || seenUrls.has(e.url)) continue;
+      seenUrls.add(e.url);
+      newEvents.push({
+        id: idPrefix + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
         title:       { en: e.title, es: '', pt: '', fr: '' },
         date:        e.date || new Date().toISOString().split('T')[0],
         venue:       e.venue   || e.source,
@@ -981,18 +1097,19 @@ async function fetchEvents() {
         url:         e.url,
         free:        e.free,
         description: { en: e.description, es: '', pt: '', fr: '' },
-      }));
+      });
+    }
 
     if (newEvents.length === 0) {
-      showToast(errors.length ? 'RSS feeds had errors — check console' : 'No new events found', 'error');
+      showToast((errors && errors.length) ? `${label} had errors — check console` : 'No new events found', 'error');
       return;
     }
 
     CONTENT.guide.events.push(...newEvents);
     renderEventList();
-    showToast(`Added ${newEvents.length} new event${newEvents.length > 1 ? 's' : ''} from RSS ✓`);
+    showToast(`Added ${newEvents.length} new event${newEvents.length > 1 ? 's' : ''} from ${label} ✓`);
   } catch (err) {
-    showToast('RSS fetch failed: ' + err.message, 'error');
+    showToast(`${label} fetch failed: ${err.message}`, 'error');
   }
 }
 
@@ -1091,44 +1208,176 @@ async function fetchWeather() {
   }
 }
 
+
 // ══════════════════════════════════════════════════════
-// HANDYMAN
+// DRIVER PAGE
 // ══════════════════════════════════════════════════════
-function renderHandyman() {
-  if (!CONTENT || !CONTENT.ads || !CONTENT.ads.handyman) return;
-  const h = CONTENT.ads.handyman;
-  document.getElementById('handyman-toggle').classList.toggle('on', h.enabled);
-  document.getElementById('hm-headline-en').value = h.headline.en || '';
-  document.getElementById('hm-headline-es').value = h.headline.es || '';
-  document.getElementById('hm-headline-pt').value = h.headline.pt || '';
-  document.getElementById('hm-headline-fr').value = h.headline.fr || '';
-  document.getElementById('hm-body-en').value = h.body.en || '';
-  document.getElementById('hm-phone').value = h.phone || '';
-  document.getElementById('hm-website').value = h.website || '';
+function renderDriverEditor() {
+  if (!CONTENT) return;
+  if (!CONTENT.driver) CONTENT.driver = {};
+  const d = CONTENT.driver;
+
+  document.getElementById('drv-bubble-toggle').classList.toggle('on', d.bubbleVisible !== false);
+  document.getElementById('drv-name').value = d.name || '';
+  document.getElementById('drv-phone').value = d.phone || '';
+  document.getElementById('drv-employer').value = d.employer || '';
+  document.getElementById('drv-origin').value = d.origin || '';
+  document.getElementById('drv-photo').value = d.photo || '';
+  document.getElementById('drv-role-en').value = (d.role && d.role.en) || '';
+  document.getElementById('drv-fromline-en').value = (d.fromLine && d.fromLine.en) || '';
+  document.getElementById('drv-bio-en').value = ((d.bio && d.bio.en) || []).join('\n\n');
+
+  const hm = d.handyman || {};
+  document.getElementById('drv-hm-eyebrow-en').value = (hm.eyebrow && hm.eyebrow.en) || '';
+  document.getElementById('drv-hm-title-en').value = (hm.title && hm.title.en) || '';
+  document.getElementById('drv-hm-sub-en').value = (hm.subtitle && hm.subtitle.en) || '';
+  document.getElementById('drv-hm-phonelabel-en').value = (hm.phoneLabel && hm.phoneLabel.en) || '';
+  renderDriverServicesList(hm.services || []);
+
+  const tt = d.thumbtack || {};
+  document.getElementById('drv-tt-toggle').classList.toggle('on', tt.enabled !== false);
+  document.getElementById('drv-tt-url').value = tt.url || '';
+  document.getElementById('drv-tt-rating').value = tt.rating ?? '';
+  document.getElementById('drv-tt-reviewcount').value = tt.reviewCount ?? '';
+  document.getElementById('drv-tt-label-en').value = (tt.label && tt.label.en) || '';
+
+  const pets = d.pets || {};
+  document.getElementById('drv-pets-eyebrow-en').value = (pets.eyebrow && pets.eyebrow.en) || '';
+  document.getElementById('drv-pets-title-en').value = (pets.title && pets.title.en) || '';
+  document.getElementById('drv-pets-summary-en').value = (pets.summary && pets.summary.en) || '';
+  renderDriverPetsList(pets.items || []);
 }
 
-function saveHandyman() {
-  if (!CONTENT.ads) CONTENT.ads = {};
-  if (!CONTENT.ads.handyman) CONTENT.ads.handyman = {};
-  CONTENT.ads.handyman = {
-    ...CONTENT.ads.handyman,
-    enabled: document.getElementById('handyman-toggle').classList.contains('on'),
-    headline: {
-      en: document.getElementById('hm-headline-en').value.trim(),
-      es: document.getElementById('hm-headline-es').value.trim(),
-      pt: document.getElementById('hm-headline-pt').value.trim(),
-      fr: document.getElementById('hm-headline-fr').value.trim(),
-    },
-    body: {
-      en: document.getElementById('hm-body-en').value.trim(),
-      es: CONTENT.ads.handyman.body?.es || '',
-      pt: CONTENT.ads.handyman.body?.pt || '',
-      fr: CONTENT.ads.handyman.body?.fr || '',
-    },
-    phone: document.getElementById('hm-phone').value.trim(),
-    website: document.getElementById('hm-website').value.trim(),
-  };
-  showToast('Handyman card saved — hit Publish to go live');
+function renderDriverServicesList(services) {
+  const list = document.getElementById('drv-services-list');
+  list.innerHTML = services.map((s, i) => `
+    <div class="driver-row" data-idx="${i}" style="display:grid;grid-template-columns:130px 130px 1fr 32px;gap:8px;align-items:center">
+      <input type="text" data-field="id"    value="${escapeAttr(s.id || '')}"    placeholder="id (slug)">
+      <input type="text" data-field="icon"  value="${escapeAttr(s.icon || 'ti-tool')}" placeholder="ti-icon">
+      <input type="text" data-field="label" value="${escapeAttr((s.label && s.label.en) || '')}" placeholder="Label (EN)">
+      <button class="btn btn-ghost btn-sm" onclick="this.parentElement.remove()" title="Remove"><i class="ti ti-x"></i></button>
+    </div>
+  `).join('');
+}
+
+function renderDriverPetsList(pets) {
+  const list = document.getElementById('drv-pets-list');
+  list.innerHTML = pets.map((p, i) => `
+    <div class="driver-row" data-idx="${i}" style="display:grid;grid-template-columns:130px 90px 1fr 1fr 32px;gap:8px;align-items:center">
+      <input type="text" data-field="name" value="${escapeAttr(p.name || '')}" placeholder="Name">
+      <select data-field="species">
+        <option value="pug" ${p.species==='pug'?'selected':''}>Pug</option>
+        <option value="dog" ${p.species==='dog'?'selected':''}>Dog</option>
+        <option value="cat" ${p.species==='cat'?'selected':''}>Cat</option>
+        <option value="other" ${p.species==='other'?'selected':''}>Other</option>
+      </select>
+      <input type="url" data-field="photo" value="${escapeAttr(p.photo || '')}" placeholder="Photo URL (optional)">
+      <input type="text" data-field="desc" value="${escapeAttr((p.description && p.description.en) || '')}" placeholder="Description (EN) — e.g. 'Pug · pint-sized security detail'">
+      <button class="btn btn-ghost btn-sm" onclick="this.parentElement.remove()" title="Remove"><i class="ti ti-x"></i></button>
+    </div>
+  `).join('');
+}
+
+function addDriverService() {
+  const list = document.getElementById('drv-services-list');
+  const row = document.createElement('div');
+  row.className = 'driver-row';
+  row.style.cssText = 'display:grid;grid-template-columns:130px 130px 1fr 32px;gap:8px;align-items:center';
+  row.innerHTML = `
+    <input type="text" data-field="id" value="" placeholder="id (slug)">
+    <input type="text" data-field="icon" value="ti-tool" placeholder="ti-icon">
+    <input type="text" data-field="label" value="" placeholder="Label (EN)">
+    <button class="btn btn-ghost btn-sm" onclick="this.parentElement.remove()" title="Remove"><i class="ti ti-x"></i></button>
+  `;
+  list.appendChild(row);
+}
+
+function addDriverPet() {
+  const list = document.getElementById('drv-pets-list');
+  const row = document.createElement('div');
+  row.className = 'driver-row';
+  row.style.cssText = 'display:grid;grid-template-columns:130px 90px 1fr 1fr 32px;gap:8px;align-items:center';
+  row.innerHTML = `
+    <input type="text" data-field="name" value="" placeholder="Name">
+    <select data-field="species">
+      <option value="pug" selected>Pug</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="other">Other</option>
+    </select>
+    <input type="url" data-field="photo" value="" placeholder="Photo URL (optional)">
+    <input type="text" data-field="desc" value="" placeholder="Description (EN)">
+    <button class="btn btn-ghost btn-sm" onclick="this.parentElement.remove()" title="Remove"><i class="ti ti-x"></i></button>
+  `;
+  list.appendChild(row);
+}
+
+function saveDriver() {
+  if (!CONTENT.driver) CONTENT.driver = {};
+  const d = CONTENT.driver;
+
+  d.bubbleVisible = document.getElementById('drv-bubble-toggle').classList.contains('on');
+  d.name = document.getElementById('drv-name').value.trim();
+  d.phone = document.getElementById('drv-phone').value.trim();
+  d.employer = document.getElementById('drv-employer').value.trim();
+  d.origin = document.getElementById('drv-origin').value.trim();
+  d.photo = document.getElementById('drv-photo').value.trim();
+
+  d.role = d.role || {};
+  d.role.en = document.getElementById('drv-role-en').value.trim();
+  d.fromLine = d.fromLine || {};
+  d.fromLine.en = document.getElementById('drv-fromline-en').value.trim();
+
+  const bioText = document.getElementById('drv-bio-en').value.trim();
+  d.bio = d.bio || {};
+  d.bio.en = bioText ? bioText.split(/\n{2,}/).map(p => p.trim()).filter(Boolean) : [];
+
+  d.handyman = d.handyman || {};
+  d.handyman.eyebrow = d.handyman.eyebrow || {};
+  d.handyman.eyebrow.en = document.getElementById('drv-hm-eyebrow-en').value.trim();
+  d.handyman.title = d.handyman.title || {};
+  d.handyman.title.en = document.getElementById('drv-hm-title-en').value.trim();
+  d.handyman.subtitle = d.handyman.subtitle || {};
+  d.handyman.subtitle.en = document.getElementById('drv-hm-sub-en').value.trim();
+  d.handyman.phoneLabel = d.handyman.phoneLabel || {};
+  d.handyman.phoneLabel.en = document.getElementById('drv-hm-phonelabel-en').value.trim();
+
+  d.handyman.services = Array.from(document.querySelectorAll('#drv-services-list .driver-row')).map(row => ({
+    id: row.querySelector('[data-field="id"]').value.trim(),
+    icon: row.querySelector('[data-field="icon"]').value.trim() || 'ti-tool',
+    label: { en: row.querySelector('[data-field="label"]').value.trim() }
+  })).filter(s => s.id || s.label.en);
+
+  d.thumbtack = d.thumbtack || {};
+  d.thumbtack.enabled = document.getElementById('drv-tt-toggle').classList.contains('on');
+  d.thumbtack.url = document.getElementById('drv-tt-url').value.trim();
+  const ratingRaw = document.getElementById('drv-tt-rating').value.trim();
+  d.thumbtack.rating = ratingRaw === '' ? null : parseFloat(ratingRaw);
+  const rcRaw = document.getElementById('drv-tt-reviewcount').value.trim();
+  d.thumbtack.reviewCount = rcRaw === '' ? null : parseInt(rcRaw, 10);
+  d.thumbtack.label = d.thumbtack.label || {};
+  d.thumbtack.label.en = document.getElementById('drv-tt-label-en').value.trim();
+
+  d.pets = d.pets || {};
+  d.pets.eyebrow = d.pets.eyebrow || {};
+  d.pets.eyebrow.en = document.getElementById('drv-pets-eyebrow-en').value.trim();
+  d.pets.title = d.pets.title || {};
+  d.pets.title.en = document.getElementById('drv-pets-title-en').value.trim();
+  d.pets.summary = d.pets.summary || {};
+  d.pets.summary.en = document.getElementById('drv-pets-summary-en').value.trim();
+
+  d.pets.items = Array.from(document.querySelectorAll('#drv-pets-list .driver-row')).map(row => ({
+    name: row.querySelector('[data-field="name"]').value.trim(),
+    species: row.querySelector('[data-field="species"]').value,
+    photo: row.querySelector('[data-field="photo"]').value.trim(),
+    description: { en: row.querySelector('[data-field="desc"]').value.trim() }
+  })).filter(p => p.name);
+
+  showToast('Driver page saved — hit Publish to go live');
+}
+
+function escapeAttr(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 // ══════════════════════════════════════════════════════
@@ -1167,7 +1416,6 @@ function loadAnalytics() {
         const latest = data.weeks[data.weeks.length - 1];
         document.getElementById('stat-sessions').textContent = latest.sessions || 0;
         document.getElementById('stat-duration').textContent = latest.avgDuration ? formatDuration(latest.avgDuration) : '—';
-        document.getElementById('stat-handyman').textContent = latest.handymanTaps || 0;
         document.getElementById('stat-qr').textContent = latest.qrTaps || 0;
         if (latest.topVenues && latest.topVenues.length) renderTopVenues(latest.topVenues);
       } else {
@@ -1201,16 +1449,17 @@ function formatDuration(seconds) {
 // ══════════════════════════════════════════════════════
 // AI (Claude API)
 // ══════════════════════════════════════════════════════
-async function callClaude(prompt) {
+async function callClaude(prompt, opts = {}) {
   // Calls our Cloudflare Pages function which adds the API key server-side.
   // This avoids CORS issues and keeps the key out of the browser.
+  const maxTokens = opts.maxTokens || 1000;
   try {
     const res = await fetch('/api/claude-proxy', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        max_tokens: 1000,
+        max_tokens: maxTokens,
         messages: [{ role: 'user', content: prompt }],
       })
     });
@@ -1268,24 +1517,151 @@ English: "${v.description.en}"`
   }
 }
 
-async function aiTranslateHandyman() {
-  const enText = document.getElementById('hm-body-en').value.trim();
-  if (!enText) return showToast('Add English body text first', 'error');
-  showToast('Translating…');
+// ── Driver page: translate every English field in one shot ─────────────────
+function buildDriverTranslationInput() {
+  const d = CONTENT.driver || {};
+  const subtitle = (CONTENT.strings && CONTENT.strings.subtitle) || {};
+  const input = {};
+  const get = obj => obj && obj.en ? obj.en : null;
+
+  if (get(d.role))     input.role     = d.role.en;
+  if (get(d.fromLine)) input.fromLine = d.fromLine.en;
+  if (d.bio && Array.isArray(d.bio.en)) {
+    d.bio.en.forEach((p, i) => { if (p) input['bio_' + i] = p; });
+  }
+  const hm = d.handyman || {};
+  if (get(hm.eyebrow))    input.hm_eyebrow    = hm.eyebrow.en;
+  if (get(hm.title))      input.hm_title      = hm.title.en;
+  if (get(hm.subtitle))   input.hm_subtitle   = hm.subtitle.en;
+  if (get(hm.phoneLabel)) input.hm_phoneLabel = hm.phoneLabel.en;
+  if (get(hm.qrLabel))    input.hm_qrLabel    = hm.qrLabel.en;
+  (hm.services || []).forEach(s => {
+    if (s.id && get(s.label)) input['service_' + s.id] = s.label.en;
+  });
+  const tt = d.thumbtack || {};
+  if (get(tt.label))   input.tt_label   = tt.label.en;
+  if (get(tt.qrLabel)) input.tt_qrLabel = tt.qrLabel.en;
+  const pets = d.pets || {};
+  if (get(pets.eyebrow)) input.pets_eyebrow = pets.eyebrow.en;
+  if (get(pets.title))   input.pets_title   = pets.title.en;
+  if (get(pets.summary)) input.pets_summary = pets.summary.en;
+  (pets.items || []).forEach((p, i) => {
+    if (get(p.description)) input['pet_' + i] = p.description.en;
+  });
+  Object.keys(subtitle).forEach(k => {
+    if (get(subtitle[k])) input['subtitle_' + k] = subtitle[k].en;
+  });
+  return input;
+}
+
+function applyDriverTranslations(translations) {
+  const d = CONTENT.driver || {};
+  const subtitle = (CONTENT.strings && CONTENT.strings.subtitle) || {};
+  const LANGS = ['es', 'pt', 'fr'];
+  let applied = 0;
+  const setLangs = (target, t) => {
+    if (!target || !t) return;
+    LANGS.forEach(l => { if (t[l]) { target[l] = t[l]; applied++; } });
+  };
+
+  Object.keys(translations).forEach(key => {
+    const t = translations[key];
+    if (!t || typeof t !== 'object') return;
+
+    if (key === 'role')          return setLangs(d.role, t);
+    if (key === 'fromLine')      return setLangs(d.fromLine, t);
+    if (key.startsWith('bio_')) {
+      const idx = parseInt(key.slice(4), 10);
+      if (Number.isNaN(idx) || !d.bio) return;
+      LANGS.forEach(l => {
+        if (!Array.isArray(d.bio[l])) d.bio[l] = [];
+        if (t[l]) { d.bio[l][idx] = t[l]; applied++; }
+      });
+      return;
+    }
+    if (key === 'hm_eyebrow')    return setLangs(d.handyman && d.handyman.eyebrow, t);
+    if (key === 'hm_title')      return setLangs(d.handyman && d.handyman.title, t);
+    if (key === 'hm_subtitle')   return setLangs(d.handyman && d.handyman.subtitle, t);
+    if (key === 'hm_phoneLabel') return setLangs(d.handyman && d.handyman.phoneLabel, t);
+    if (key === 'hm_qrLabel')    return setLangs(d.handyman && d.handyman.qrLabel, t);
+    if (key.startsWith('service_')) {
+      const id = key.slice(8);
+      const svc = ((d.handyman && d.handyman.services) || []).find(s => s.id === id);
+      if (svc) setLangs(svc.label, t);
+      return;
+    }
+    if (key === 'tt_label')      return setLangs(d.thumbtack && d.thumbtack.label, t);
+    if (key === 'tt_qrLabel')    return setLangs(d.thumbtack && d.thumbtack.qrLabel, t);
+    if (key === 'pets_eyebrow')  return setLangs(d.pets && d.pets.eyebrow, t);
+    if (key === 'pets_title')    return setLangs(d.pets && d.pets.title, t);
+    if (key === 'pets_summary')  return setLangs(d.pets && d.pets.summary, t);
+    if (key.startsWith('pet_')) {
+      const idx = parseInt(key.slice(4), 10);
+      const pet = d.pets && d.pets.items && d.pets.items[idx];
+      if (pet) setLangs(pet.description, t);
+      return;
+    }
+    if (key.startsWith('subtitle_')) {
+      const sk = key.slice(9);
+      if (subtitle[sk]) setLangs(subtitle[sk], t);
+      return;
+    }
+  });
+
+  return applied;
+}
+
+async function aiTranslateDriver() {
+  if (!CONTENT) return showToast('Content not loaded', 'error');
+  const input = buildDriverTranslationInput();
+  const keyCount = Object.keys(input).length;
+  if (keyCount === 0) return showToast('No English content to translate', 'error');
+
+  showToast(`Translating ${keyCount} driver fields…`);
+  const prompt =
+`You are translating UI strings for a Miami rideshare hospitality app. The tone is warm, conversational, and personal — like a thoughtful local guide, not corporate copy.
+
+For each English string below, return a natural translation in:
+- es (Latin American Spanish)
+- pt (Brazilian Portuguese)
+- fr (France French)
+
+Rules:
+- Preserve HTML tags (e.g. <strong>…</strong>) exactly.
+- Preserve em-dashes (—), middle dots (·), ellipses (…).
+- Keep roughly equivalent length; do not pad.
+- Casual register, second person where natural.
+
+Return ONLY a single JSON object — no prose, no code fences. Shape:
+{
+  "<key>": { "es": "...", "pt": "...", "fr": "..." },
+  ...
+}
+
+English input:
+${JSON.stringify(input, null, 2)}`;
+
   try {
-    const result = await callClaude(
-      `Translate this handyman service description into Spanish, Portuguese (Brazilian), and French.
-Return ONLY JSON: {"es":"...","pt":"...","fr":"..."}
-English: "${enText}"`
-    );
-    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
-    if (!CONTENT.ads.handyman.body) CONTENT.ads.handyman.body = {};
-    if (parsed.es) CONTENT.ads.handyman.body.es = parsed.es;
-    if (parsed.pt) CONTENT.ads.handyman.body.pt = parsed.pt;
-    if (parsed.fr) CONTENT.ads.handyman.body.fr = parsed.fr;
-    showToast('Handyman text translated ✓');
+    const result = await callClaude(prompt, { maxTokens: 4000 });
+    console.log('[Translate] raw response:', result);
+    // Extract the JSON object from anywhere in the response (handles code
+    // fences, leading prose, trailing notes).
+    const jsonStart = result.indexOf('{');
+    const jsonEnd = result.lastIndexOf('}');
+    if (jsonStart === -1 || jsonEnd === -1) {
+      throw new Error('No JSON object found in response');
+    }
+    const parsed = JSON.parse(result.slice(jsonStart, jsonEnd + 1));
+    const applied = applyDriverTranslations(parsed);
+    renderDriverEditor();
+    if (applied === 0) {
+      showToast('Translation returned but 0 fields applied — see console', 'error');
+    } else {
+      showToast(`Translated ${applied} fields into ES/PT/FR ✓ — hit Save driver data + Publish`);
+    }
   } catch (e) {
-    showToast('Translation failed', 'error');
+    console.error('[Translate] failed:', e);
+    showToast('Translation failed — ' + (e.message || 'check API key'), 'error');
   }
 }
 

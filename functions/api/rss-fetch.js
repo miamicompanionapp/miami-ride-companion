@@ -7,13 +7,13 @@
 // Each event: { title, description, url, date, venue, address, free, source }
 
 const RSS_FEEDS = [
-  {
-    name: 'Timeout Miami',
-    url:  'https://www.timeout.com/miami/rss/things-to-do',
-  },
+  // Timeout Miami's RSS is gone — https://www.timeout.com/miami/rss/things-to-do
+  // and every common alternate path return 404 (verified 2026-05-29, browser UA).
+  // Disabled so it stops polluting `errors`; find a replacement feed → backlog #16.
+  // { name: 'Timeout Miami', url: 'https://www.timeout.com/miami/rss/things-to-do' },
   {
     name: 'Eater Miami',
-    url:  'https://miami.eater.com/rss/index.xml',
+    url:  'https://miami.eater.com/rss/index.xml', // Atom feed (parsed by parseFeed)
   },
 ];
 
@@ -43,21 +43,46 @@ function stripHtml(html) {
     .trim();
 }
 
-function parseRSS(xml, sourceName) {
-  const items = [];
-  const itemRe = /<item[^>]*>([\s\S]*?)<\/item>/gi;
-  let match;
+// Atom links are attributes, not text: <link rel="alternate" href="…"/>.
+// Prefer rel="alternate", skip rel="self", else take the first link.
+function extractAtomLink(block) {
+  const links = (block.match(/<link\b[^>]*>/gi) || []);
+  if (!links.length) return '';
+  const pick = links.find(l => /rel=["']alternate["']/i.test(l))
+            || links.find(l => !/rel=["']self["']/i.test(l))
+            || links[0];
+  const href = pick.match(/href=["']([^"']+)["']/i);
+  return href ? href[1] : '';
+}
 
-  while ((match = itemRe.exec(xml)) !== null) {
+// Handles both RSS 2.0 (<item>) and Atom (<entry>) — feeds in the wild are
+// split between the two (e.g. Eater serves Atom). Auto-detects per feed.
+function parseFeed(xml, sourceName) {
+  const isAtom = /<feed[\s>]/i.test(xml) && /<entry[\s>]/i.test(xml);
+  const blockRe = isAtom
+    ? /<entry[^>]*>([\s\S]*?)<\/entry>/gi
+    : /<item[^>]*>([\s\S]*?)<\/item>/gi;
+
+  const items = [];
+  let match;
+  while ((match = blockRe.exec(xml)) !== null) {
     const block = match[1];
 
     const title = stripHtml(extractField(block, 'title'));
     if (!title) continue;
 
-    const link    = extractField(block, 'link') || extractField(block, 'guid');
-    const rawDesc = extractField(block, 'description');
-    const desc    = stripHtml(rawDesc).substring(0, 400);
-    const pubDate = extractField(block, 'pubDate');
+    const link = isAtom
+      ? extractAtomLink(block)
+      : (extractField(block, 'link') || extractField(block, 'guid'));
+
+    const rawDesc = isAtom
+      ? (extractField(block, 'summary') || extractField(block, 'content'))
+      : extractField(block, 'description');
+    const desc = stripHtml(rawDesc).substring(0, 400);
+
+    const pubDate = isAtom
+      ? (extractField(block, 'published') || extractField(block, 'updated'))
+      : extractField(block, 'pubDate');
 
     let date = '';
     if (pubDate) {
@@ -105,7 +130,7 @@ export async function onRequestGet() {
         });
         if (!res.ok) throw new Error(`HTTP ${res.status} from ${feed.url}`);
         const xml = await res.text();
-        const items = parseRSS(xml, feed.name);
+        const items = parseFeed(xml, feed.name);
         events.push(...items);
       } catch (err) {
         errors.push(`${feed.name}: ${err.message}`);

@@ -12,8 +12,14 @@ const CORS_HEADERS = (origin) => ({
 function isAllowedOrigin(origin, env) {
   if (!origin) return true; // same-origin requests have no Origin header
   if (origin.endsWith('.pages.dev')) return true;
-  if (origin === 'http://localhost:8788') return true; // local wrangler dev
-  if (origin === 'http://localhost:8000') return true; // any local dev server
+  // Allow any loopback origin on any port — safe because loopback is
+  // unreachable from outside the machine running Wrangler.
+  try {
+    const u = new URL(origin);
+    if (u.hostname === 'localhost' || u.hostname === '127.0.0.1' || u.hostname === '[::1]') {
+      return true;
+    }
+  } catch { /* fall through to denial */ }
   if (env.ALLOWED_ORIGIN && origin === env.ALLOWED_ORIGIN) return true;
   return false;
 }

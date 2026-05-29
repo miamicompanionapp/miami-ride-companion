@@ -1,0 +1,17 @@
+# Local environment variables for Wrangler Pages dev.
+# Copy this file to `.dev.vars` and fill in your real API keys.
+# `.dev.vars` is gitignored — never commit your real keys.
+#
+# Anthropic key (auto-translate):  https://console.anthropic.com/settings/keys
+# Ticketmaster key (events fetch): https://developer.ticketmaster.com/my-apps/apps
+#   → use the app's "Consumer Key" (the Discovery API needs only the key).
+#
+# Once .dev.vars exists, `npm run dev` (which runs `wrangler dev`) injects these
+# into the Worker runtime, so /api/claude-proxy, /api/rss-fetch, and
+# /api/ticketmaster-fetch can reach their upstreams.
+#
+# For PRODUCTION, set the same vars in:
+#   Cloudflare Dashboard → Pages → your project → Settings → Environment Variables
+
+ANTHROPIC_API_KEY=sk-ant-api03-replace-me
+TICKETMASTER_KEY=your-ticketmaster-consumer-key
