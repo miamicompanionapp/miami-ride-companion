@@ -1,137 +1,125 @@
 {
   "meta": {
-    "lastUpdated": "2026-05-30T17:58:32.498Z",
+    "lastUpdated": "2026-05-30T19:24:20.893Z",
     "publishedBy": "Abdullah",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-05-30T17:55:12.707Z",
+    "fetchedAt": "2026-05-30T19:20:12.139Z",
     "current": {
       "temp_f": 86,
-      "feels_f": 97,
+      "feels_f": 99,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 67,
-      "wind_mph": 3,
-      "rain_chance": 29,
+      "humidity": 69,
+      "wind_mph": 0,
+      "rain_chance": 30,
       "weathercode": 3
     },
     "hourly": [
       {
-        "hour": "13:00",
+        "hour": "15:00",
         "temp_f": 85,
         "weathercode": 51,
-        "rain_chance": 18
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 21
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 22
+        "rain_chance": 30
       },
       {
         "hour": "16:00",
-        "temp_f": 84,
-        "weathercode": 51,
-        "rain_chance": 24
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 27
       },
       {
         "hour": "17:00",
-        "temp_f": 81,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 25
+        "rain_chance": 22
       },
       {
         "hour": "18:00",
         "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 22
+        "rain_chance": 19
       },
       {
         "hour": "19:00",
-        "temp_f": 80,
+        "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 16
+        "rain_chance": 15
       },
       {
         "hour": "20:00",
-        "temp_f": 80,
-        "weathercode": 95,
-        "rain_chance": 13
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 14
       },
       {
         "hour": "21:00",
-        "temp_f": 79,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 12
       },
       {
         "hour": "22:00",
-        "temp_f": 79,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 11
       },
       {
         "hour": "23:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 80,
+        "weathercode": 51,
+        "rain_chance": 5
       },
       {
         "hour": "00:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 2
       },
       {
         "hour": "01:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "02:00",
-        "temp_f": 77,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "03:00",
-        "temp_f": 77,
+        "temp_f": 78,
         "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "04:00",
-        "temp_f": 77,
-        "weathercode": 95,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "05:00",
         "temp_f": 77,
-        "weathercode": 95,
+        "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "06:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 2
       },
       {
         "hour": "07:00",
-        "temp_f": 74,
+        "temp_f": 76,
         "weathercode": 3,
         "rain_chance": 3
       },
@@ -145,7 +133,7 @@
         "hour": "09:00",
         "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 4
       },
       {
         "hour": "10:00",
@@ -157,13 +145,25 @@
         "hour": "11:00",
         "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 5
       },
       {
         "hour": "12:00",
         "temp_f": 86,
         "weathercode": 3,
         "rain_chance": 8
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 9
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 17
       }
     ],
     "forecast": [
@@ -172,7 +172,7 @@
         "high_f": 86,
         "low_f": 75,
         "weathercode": 95,
-        "rain_chance": 29,
+        "rain_chance": 30,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -183,9 +183,9 @@
       {
         "date": "2026-05-31",
         "high_f": 88,
-        "low_f": 74,
+        "low_f": 76,
         "weathercode": 95,
-        "rain_chance": 44,
+        "rain_chance": 46,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -491,50 +491,10 @@
     ],
     "events": [
       {
-        "id": "e001",
-        "title": {
-          "en": "Wynwood Music Series",
-          "es": "Serie de Música de Wynwood",
-          "pt": "Série de Música de Wynwood",
-          "fr": "Série Musicale de Wynwood"
-        },
-        "date": "2026-05-29",
-        "venue": "Wynwood Walls",
-        "address": "2520 NW 2nd Ave, Miami",
-        "url": "https://wynwoodwalls.com",
-        "free": true,
-        "description": {
-          "en": "Live music every Friday night in the heart of Wynwood. Free entry, great atmosphere.",
-          "es": "Música en vivo cada viernes por la noche en el corazón de Wynwood. Entrada gratuita, gran ambiente.",
-          "pt": "Música ao vivo todas as sextas-feiras à noite no coração de Wynwood. Entrada gratuita, ótima atmosfera.",
-          "fr": "Musique live chaque vendredi soir au cœur de Wynwood. Entrée gratuite, super ambiance."
-        }
-      },
-      {
-        "id": "e002",
-        "title": {
-          "en": "Viernes Culturales — Cultural Fridays",
-          "es": "Viernes Culturales",
-          "pt": "Viernes Culturales — Sextas Culturais",
-          "fr": "Viernes Culturales — Vendredis Culturels"
-        },
-        "date": "2026-05-29",
-        "venue": "Little Havana",
-        "address": "SW 8th St (Calle Ocho), Miami",
-        "url": "https://viernesculturales.org",
-        "free": true,
-        "description": {
-          "en": "Monthly street festival on the last Friday of the month along Calle Ocho. Live music, art, food, and Cuban culture.",
-          "es": "Festival callejero mensual el último viernes del mes en la Calle Ocho. Música en vivo, arte, comida y cultura cubana.",
-          "pt": "Festival de rua mensal na última sexta-feira do mês na Calle Ocho. Música ao vivo, arte, comida e cultura cubana.",
-          "fr": "Festival de rue mensuel le dernier vendredi du mois sur Calle Ocho. Musique live, art, nourriture et culture cubaine."
-        }
-      },
-      {
         "id": "e003",
         "title": {
           "en": "Art Deco Weekend",
-          "es": "Fin de Semana Art Deco",
+          "es": "Fin de Semana Art Déco",
           "pt": "Fim de Semana Art Déco",
           "fr": "Week-end Art Déco"
         },
@@ -545,9 +505,9 @@
         "free": true,
         "description": {
           "en": "Celebrate Miami Beach's iconic architecture with tours, exhibitions, and live performances along Ocean Drive.",
-          "es": "Celebra la icónica arquitectura de Miami Beach con tours, exposiciones y actuaciones en vivo en Ocean Drive.",
-          "pt": "Celebre a icônica arquitetura de Miami Beach com visitas guiadas, exposições e apresentações ao vivo na Ocean Drive.",
-          "fr": "Célébrez l'architecture emblématique de Miami Beach avec des visites, des expositions et des spectacles vivants sur Ocean Drive."
+          "es": "Celebra la icónica arquitectura de Miami Beach con recorridos, exposiciones y actuaciones en vivo a lo largo de Ocean Drive.",
+          "pt": "Celebre a icônica arquitetura de Miami Beach com passeios, exposições e apresentações ao vivo ao longo da Ocean Drive.",
+          "fr": "Célébrez l'architecture emblématique de Miami Beach avec des visites guidées, des expositions et des spectacles en direct le long d'Ocean Drive."
         }
       },
       {
@@ -572,27 +532,6 @@
         }
       },
       {
-        "id": "rss_1780163716504_xbv9",
-        "title": {
-          "en": "Mainly Mozart Festival 2026: BOYD MEETS GIRL 6/6/26",
-          "es": "Festival Mainly Mozart 2026: BOYD MEETS GIRL 6/6/26",
-          "pt": "Festival Mainly Mozart 2026: BOYD MEETS GIRL 6/6/26",
-          "fr": "Festival Mainly Mozart 2026 : BOYD MEETS GIRL 6/6/26"
-        },
-        "date": "2026-06-06",
-        "venue": "The Betsy Hotel",
-        "address": "1440 Ocean Dr, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/05/25/mainly-mozart-festival-2026-boyd-meets-girl-6-6-26/",
-        "free": false,
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/05/148305-350x175.jpg",
-        "description": {
-          "en": "Mainly Mozart Festival 2026: BOYD MEETS GIRL Saturday, 06/06/2026-06/06/2026, 04:00 pm-05:30 pm The Betsy Hotel 1440 Ocean Dr, Miami Beach, Florida, 33139 Website Cost: $39.19 The Gallery at the Betsy Hotel (Enter the property at 1433 Collins Avenue for theRead More Mainly Mozart Festival 2026: BOYD MEETS GIRL 6/6/26",
-          "es": "Festival Mainly Mozart 2026: BOYD MEETS GIRL Sábado, 06/06/2026, 4:00 pm - 5:30 pm. The Betsy Hotel, 1440 Ocean Dr, Miami Beach, Florida, 33139. Sitio web. Costo: $39.19. La Galería del Betsy Hotel (Ingrese a la propiedad por 1433 Collins Avenue para más información). Festival Mainly Mozart 2026: BOYD MEETS GIRL 6/6/26",
-          "pt": "Festival Mainly Mozart 2026: BOYD MEETS GIRL Sábado, 06/06/2026, 16h00 - 17h30. The Betsy Hotel, 1440 Ocean Dr, Miami Beach, Florida, 33139. Site. Valor: $39,19. A Galeria do Betsy Hotel (Entre na propriedade pela 1433 Collins Avenue para mais informações). Festival Mainly Mozart 2026: BOYD MEETS GIRL 6/6/26",
-          "fr": "Festival Mainly Mozart 2026 : BOYD MEETS GIRL Samedi 06/06/2026, 16h00 - 17h30. The Betsy Hotel, 1440 Ocean Dr, Miami Beach, Floride, 33139. Site web. Tarif : 39,19 $. La Galerie du Betsy Hotel (Entrez dans la propriété au 1433 Collins Avenue pour plus d'informations). Festival Mainly Mozart 2026 : BOYD MEETS GIRL 6/6/26"
-        }
-      },
-      {
         "id": "rss_1780163716504_r5zw",
         "title": {
           "en": "The Grove Cup Watch Party | Brazil Vs Morocco 6/13/26",
@@ -614,46 +553,412 @@
         }
       },
       {
-        "id": "rss_1780163716504_ga5a",
+        "id": "rss_1780168897892_dlh7",
         "title": {
-          "en": "MAYAMI x VILENA Swim Week Fashion Presentation 5/29/26",
+          "en": "Mainly Mozart Festival 2026: BOYD MEETS GIRL 6/6/26",
           "es": "",
           "pt": "",
           "fr": ""
         },
-        "date": "2026-05-29",
-        "venue": "Mayami",
-        "address": "127 NW 23 St, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/05/23/mayami-x-vilena-swim-week-fashion-presentation-5-29-26/",
+        "date": "2026-06-06",
+        "venue": "The Betsy Hotel",
+        "address": "1440 Ocean Dr, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/05/25/mainly-mozart-festival-2026-boyd-meets-girl-6-6-26/",
         "free": false,
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/05/Screenshot-2026-05-22-at-12.23.54-PM-330x500.png",
+        "price": "$39",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/05/148305-350x175.jpg",
         "description": {
-          "en": "MAYAMI x VILENA Swim Week Fashion Presentation Friday, 05/29/2026-, 10:30 pm-03:00 am Mayami 127 NW 23 St, Miami, Florida, 33127 Website Cost: Reservation Required, Cost FREE This Swim Week, Mayami Wynwood transforms into a high-energy runway experience celebrating VILENA, theRead More MAYAMI x VILENA Swim Week Fashion Presentation 5/29/26",
+          "en": "The Gallery at the Betsy Hotel (Enter the property at 1433 Collins Avenue for the",
           "es": "",
           "pt": "",
           "fr": ""
-        }
+        },
+        "lat": 25.7864648,
+        "lng": -80.129768
       },
       {
-        "id": "rss_1780163716504_f944",
+        "id": "tm_1780168903944_o2af",
         "title": {
-          "en": "Patio Jazz 5/29/26",
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
           "es": "",
           "pt": "",
           "fr": ""
         },
-        "date": "2026-05-29",
-        "venue": "Art Deco Welcome Center",
-        "address": "1001 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/05/23/patio-jazz-5-29-26/",
-        "free": true,
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/05/DSC09227-Enhanced-NR-Small.jpeg",
+        "date": "2026-05-30",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
         "description": {
-          "en": "Patio Jazz Friday, 05/29/2026-, 05:00 pm-07:00 pm Art Deco Welcome Center 1001 Ocean Drive, Miami Beach, Florida, 33139 Website Cost: FREE Free Jazz Concert Featuring The G.G. Quartet Patio Jazz with The G.G. Quartet Presented by the South Beach JazzRead More Patio Jazz 5/29/26",
+          "en": "Miscellaneous · Family · Starts 15:30 · Mana Wynwood Convention Center",
           "es": "",
           "pt": "",
           "fr": ""
-        }
+        },
+        "lat": 25.797998,
+        "lng": -80.202062
+      },
+      {
+        "id": "tm_1780168903944_ygt2",
+        "title": {
+          "en": "Kaseya Center All-Access Tour",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fkaseya-center-all-access-tour-tickets-82ZSY4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 16:00 · Kaseya Center",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1780168903944_vcxz",
+        "title": {
+          "en": "Dance Dimensions: Dance To The Music",
+          "es": "Dance Dimensions: Baila al Ritmo de la Música",
+          "pt": "Dance Dimensions: Dance ao Som da Música",
+          "fr": "Dance Dimensions: Dansez au Rythme de la Musique"
+        },
+        "date": "2026-05-30",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdance-dimensions-dance-to-the-music-ft-lauderdale-florida-05-30-2026%2Fevent%2F0D006490A63E98C6&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/e3c/f0228594-95c2-411a-ab77-c6831dd3de3c_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Dance Dimensions presents our annual Spring Performance. Our year-end showcase features our talented students starting at the age of 3 through Adult. We are excited to share our love of dance with the community for over four decades. · Starts 17:30 · Amaturo Theater at Broward Center",
+          "es": "Dance Dimensions presenta nuestra actuación anual de primavera. Nuestro espectáculo de fin de año presenta a nuestros talentosos estudiantes desde los 3 años hasta adultos. Estamos emocionados de compartir nuestro amor por la danza con la comunidad durante más de cuatro décadas. · Comienza a las 17:30 · Teatro Amaturo en el Broward Center",
+          "pt": "A Dance Dimensions apresenta nosso espetáculo anual de primavera. Nossa mostra de fim de ano conta com nossos talentosos alunos a partir dos 3 anos até adultos. Estamos animados em compartilhar nosso amor pela dança com a comunidade há mais de quatro décadas. · Início às 17h30 · Teatro Amaturo no Broward Center",
+          "fr": "Dance Dimensions présente notre spectacle annuel de printemps. Notre showcase de fin d'année met en vedette nos talentueux élèves, des enfants dès l'âge de 3 ans jusqu'aux adultes. Nous sommes ravis de partager notre amour de la danse avec la communauté depuis plus de quatre décennies. · Début à 17h30 · Théâtre Amaturo au Broward Center"
+        },
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1780168903944_skbq",
+        "title": {
+          "en": "ASTRID AUDET ACADEMY: DANCING TROUGH THE DECADES",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fastrid-audet-academy-dancing-trough-the-ft-lauderdale-florida-05-30-2026%2Fevent%2F0D0064789F297FC7&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/a46/55a5cfb1-7b43-4f98-a003-f7c60ffb8a46_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Welcome to the Astrid Audet Academy of Ballet and More's annual recital production as we celebrate our 20th Year Anniversary! This year we invite you to step into the Party as we celebrate \"Dancing Through The Decades\" in the 20th and 21st centuries. You will be entertained by famous songs and themes from all genres of dance so be prepared to be amazed by a vibrant celebration of dance, music, and",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1780168903944_uqos",
+        "title": {
+          "en": "Southern Hospitality Tour: The Black Crowes and Whiskey Myers",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsouthern-hospitality-tour-the-black-crowes-hollywood-florida-05-30-2026%2Fevent%2F0D00643BA183862E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b9d/c3a62394-b30b-407a-8e03-16fb3d4a0b9d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 18:30 · Hard Rock Live",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1780168903944_2kc9",
+        "title": {
+          "en": "Anthony Rodia",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "Dania Improv Comedy Theatre",
+        "address": "177 N Pointe Dr, Dania Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7OaQd&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/751/3438dd47-d6ec-4176-a49d-8319d125a751_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Miscellaneous · Starts 19:00 · Dania Improv Comedy Theatre",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 26.051901,
+        "lng": -80.142403
+      },
+      {
+        "id": "tm_1780168903944_93zf",
+        "title": {
+          "en": "Crawling: Tribute to Linkin Park",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcrawling-tribute-to-linkin-park-ft-lauderdale-florida-05-30-2026%2Fevent%2F0D006477C452BF76&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/b0f/d54a1dc2-de3f-4a76-b3e7-e427cd850b0f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Crawling: Tribute to Linkin Park will be performing at Revolution Live on Saturday, May 30th with special guests Got The Life - The Korn Tribute & Arms Wide Open - Tribute to Creed. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1780168903944_co4s",
+        "title": {
+          "en": "Prof G Markets with Scott Galloway and Ed Elson",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fprof-g-markets-with-scott-galloway-miami-beach-florida-05-30-2026%2Fevent%2F0D00648A13D455C8&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/1ed/cc8a0b52-02da-4545-b73d-fae9c203f1ed_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Theatre · Starts 19:30 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1780168903944_61s9",
+        "title": {
+          "en": "MiamiBash",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiamibash-miami-florida-05-30-2026%2Fevent%2F0D006472AE2CC6D3&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/8e3/809f2cb9-6914-4572-af86-2cd5a911f8e3_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "***Artist Lineup is Subject to Change*** Arcangel Wisin Ryan Castro Bebeshito Farruko Ivy Queen Gente de Zona Baby Rasta y Gringo Alexis y Fido Greeicy Jory Boy Fariana Mau y Ricky Chimbala Dalex · Starts 20:00 · Kaseya Center",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1780168903944_r7lp",
+        "title": {
+          "en": "Cheap Trills Musical Improv",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheap-trills-musical-improv-just-the-funny-tickets%2F14775203&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Cheap Trills Musical ImprovNothing beats a Cheap Trills show! Its a musical. Its a variety show. Its improv comedy. Its all of that and much more! Join the talented cast of Just The Funny and be prepared for a wild, hilarious ride.Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as close as possible, but may have to split large",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1780168903944_3tiu",
+        "title": {
+          "en": "Mathame",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-30",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fmathame-liv-nightclub-miami-tickets%2F14935943&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/df8/81eadad8-4449-412e-a2b1-3d8bbb78edf8_106181_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1780168903944_byhc",
+        "title": {
+          "en": "Marcus King Band: Darling Blue Tour Pt. 2",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-31",
+        "venue": "Mizner Park Amphitheater",
+        "address": "590 Plaza Real, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmarcus-king-band-darling-blue-tour-boca-raton-florida-05-31-2026%2Fevent%2F0D006462C1E6AAFC&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/252/9e12bb50-a595-453b-b1e7-ab20f7231252_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Doors open at 7pm. No chairs are permitted to be brought into the venue. · Starts 20:00 · Mizner Park Amphitheater",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 26.3566189,
+        "lng": -80.0848989
+      },
+      {
+        "id": "tm_1780168903944_liql",
+        "title": {
+          "en": "LIV ON SUNDAY",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-31",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fliv-on-sunday-liv-nightclub-miami-tickets%2F14935953&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/697/f243b83d-1a3c-4b0a-a153-04eaa1ad5697_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1780168903944_w8lu",
+        "title": {
+          "en": "Sexyy Red",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-05-31",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsexyy-red-liv-nightclub-miami-tickets%2F14940193&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/94a/c52f847d-e228-47a9-98a1-9b48524a594a_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1780168903944_o31t",
+        "title": {
+          "en": "Ride and Dine! Hard Rock Cafe Miami and Big Bus Tours Miami",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-06-01",
+        "venue": "Hard Rock Cafe Miami",
+        "address": "401 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-hard-rock-hard-rock-cafe-tickets%2F14043704%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Starts 07:00 · Hard Rock Cafe Miami",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.7784353,
+        "lng": -80.1880012
+      },
+      {
+        "id": "tm_1780168903944_ize4",
+        "title": {
+          "en": "Ride and Dine with Us! Thriller Speedboat Tours",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-06-01",
+        "venue": "Hard Rock Cafe Miami",
+        "address": "401 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-with-us-hard-rock-cafe-tickets%2F14038054%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Starts 11:00 · Hard Rock Cafe Miami",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.7784353,
+        "lng": -80.1880012
       }
     ]
   },
