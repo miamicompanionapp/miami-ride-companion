@@ -1794,14 +1794,13 @@ function renderDriver() {
     document.getElementById('db-avatar').textContent = (d.name || 'A')[0];
   }
 
-  // Bio. Note: the photo innerHTML below re-creates .dp-bio-initial, so keep its
-  // id (and null-guard) — otherwise a second renderDriver (e.g. language switch)
-  // would find no #dp-bio-initial and throw, killing the whole driver render.
+  // Bio. The big initial letter is only a fallback for when there's NO photo —
+  // with a photo we render just the image (no letter overlaid on the face).
+  // Null-guard the initial since the photo case removes it from the DOM.
   const bioInitial = document.getElementById('dp-bio-initial');
   if (bioInitial) bioInitial.textContent = (d.name || 'A')[0];
   if (d.photo) {
-    document.getElementById('dp-bio-photo').innerHTML =
-      `<img src="${d.photo}" alt=""><div class="dp-bio-initial" id="dp-bio-initial">${(d.name||'A')[0]}</div>`;
+    document.getElementById('dp-bio-photo').innerHTML = `<img src="${d.photo}" alt="">`;
   }
   document.getElementById('dp-bio-name').textContent = d.name || '';
   document.getElementById('dp-bio-from').textContent = tx(d.fromLine);
