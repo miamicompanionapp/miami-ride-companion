@@ -296,6 +296,10 @@
       border: 0.5px solid #E8C0C0; overflow: hidden;
       cursor: pointer; grid-column: span 2;
     }
+    .event-photo { height: 130px; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, rgba(138,32,32,0.5), rgba(201,168,76,0.3)), linear-gradient(45deg, #8A2020, #C9A84C); }
+    .event-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .event-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(15,33,55,0.4) 100%); pointer-events: none; }
     .event-inner { padding: 14px 16px; }
     .event-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
     .event-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #8A2020; }
@@ -2343,7 +2347,14 @@ function buildEventCard(e) {
   const card = document.createElement('div');
   card.className = 'event-card';
   const dateStr = new Date(e.date).toLocaleDateString(lang === 'en' ? 'en-US' : lang, { weekday:'short', month:'short', day:'numeric' });
+  // Fetched events (RSS / Ticketmaster) carry an image; curated events usually
+  // don't and stay clean text-only. A broken image URL hides the <img> so the
+  // band falls back to its gradient.
+  const photoBand = e.image
+    ? `<div class="event-photo"><img src="${e.image}" alt="" loading="lazy" onerror="this.remove()"></div>`
+    : '';
   card.innerHTML = `
+    ${photoBand}
     <div class="event-inner">
       <div class="event-top">
         <div class="event-tag">${t('categories.event') || 'Event'}</div>

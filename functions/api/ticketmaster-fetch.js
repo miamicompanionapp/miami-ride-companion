@@ -1,12 +1,12 @@
 // functions/api/ticketmaster-fetch.js
-// Cloudflare Pages Function — fetches upcoming Miami events from the
+// Cloudflare Pages Function — fetches upcoming South Florida events from the
 // Ticketmaster Discovery API server-side, so the API key stays out of the
 // browser. Set TICKETMASTER_KEY in:
 //   Cloudflare Dashboard → Pages → your project → Settings → Environment Variables
 //
 // GET /api/ticketmaster-fetch  →  { events: [...], errors: [...] }
 // Each event matches the same shape as /api/rss-fetch:
-//   { title, description, url, date, venue, address, free, source }
+//   { title, description, url, date, venue, address, free, image, source }
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin':  '*',
@@ -14,11 +14,16 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
-// Greater Miami — city filter keeps it simple and reliable. We pull a large
-// page because Ticketmaster returns one row per showtime; after collapsing
-// duplicate exhibitions/runs we keep only MAX_EVENTS distinct events.
+// All of South Florida — Abdullah's rideshare route runs Boca Raton down to
+// Homestead, so we geo-filter by a center point + radius instead of a single
+// city. (25.95, -80.20) sits around the Aventura/Hollywood line; a 45-mile
+// radius reaches Boca Raton to the north and Homestead to the south.
+// We pull a large page because Ticketmaster returns one row per showtime;
+// after collapsing duplicate exhibitions/runs we keep only MAX_EVENTS distinct.
 const TM_PARAMS = {
-  city: 'Miami',
+  latlong: '25.95,-80.20',
+  radius: '45',
+  unit: 'miles',
   sort: 'date,asc',
   size: '100',
   locale: '*',
@@ -84,6 +89,19 @@ export async function onRequestGet({ env }) {
   }
 }
 
+// Ticketmaster returns an images[] array at several ratios/sizes. Prefer a
+// wide 16:9 image around card size (~640px) for a clean banner; otherwise take
+// the widest available, then whatever's first.
+function pickImage(images) {
+  if (!Array.isArray(images) || !images.length) return '';
+  const wide = images
+    .filter(im => im?.url && (im.ratio === '16_9' || !im.ratio))
+    .sort((a, b) => Math.abs((a.width || 0) - 640) - Math.abs((b.width || 0) - 640));
+  if (wide.length) return wide[0].url;
+  const widest = [...images].filter(im => im?.url).sort((a, b) => (b.width || 0) - (a.width || 0));
+  return widest[0]?.url || '';
+}
+
 function mapEvent(ev) {
   const venue = ev?._embedded?.venues?.[0] || {};
   const addressBits = [
@@ -120,6 +138,7 @@ function mapEvent(ev) {
     venue:       venue?.name || '',
     address:     addressBits.join(', '),
     free,
+    image:       pickImage(ev?.images),
     source:      'Ticketmaster',
   };
 }

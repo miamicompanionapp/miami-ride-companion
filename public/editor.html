@@ -686,6 +686,17 @@
           <span>The API key is stored securely as a Cloudflare environment variable — not in the browser. To set it up: go to <strong>Cloudflare Dashboard → Pages → miami-ride-companion → Settings → Environment Variables → Add variable</strong>, set key name <strong>ANTHROPIC_API_KEY</strong> and paste your key from console.anthropic.com. Then redeploy. Estimated cost: ~$1–2/month.</span>
         </div>
       </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Passenger Analytics</div><div class="card-sub">Usage data stays private on this device — export to review, or reset to start a clean period</div></div></div>
+        <div class="info-box">
+          <i class="ti ti-info-circle"></i>
+          <span>Analytics live only in this tablet's browser — nothing is uploaded anywhere. <strong>Export</strong> downloads a JSON file you can hand to Claude.ai for a plain-English summary of how the app is being used. <strong>Reset</strong> wipes the stored sessions and taps so you can measure a fresh stretch. Run these on the iPad, where the data lives.</span>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-primary" onclick="exportAnalytics()"><i class="ti ti-download"></i>Export analytics (JSON)</button>
+          <button class="btn btn-danger" onclick="resetAnalytics()"><i class="ti ti-trash"></i>Reset analytics</button>
+        </div>
+      </div>
     </div>
 
   </main>
@@ -1096,6 +1107,7 @@ async function fetchEventsFrom(endpoint, label, idPrefix) {
         address:     e.address || '',
         url:         e.url,
         free:        e.free,
+        image:       e.image || '',
         description: { en: e.description, es: '', pt: '', fr: '' },
       });
     }
@@ -1407,26 +1419,136 @@ function loadSponsoredSlots() {
 // ══════════════════════════════════════════════════════
 // ANALYTICS
 // ══════════════════════════════════════════════════════
-function loadAnalytics() {
-  // Try to load from analytics.json (synced from iPad)
-  fetch('/analytics.json?t=' + Date.now())
-    .then(r => r.json())
-    .then(data => {
-      if (data.weeks && data.weeks.length > 0) {
-        const latest = data.weeks[data.weeks.length - 1];
-        document.getElementById('stat-sessions').textContent = latest.sessions || 0;
-        document.getElementById('stat-duration').textContent = latest.avgDuration ? formatDuration(latest.avgDuration) : '—';
-        document.getElementById('stat-qr').textContent = latest.qrTaps || 0;
-        if (latest.topVenues && latest.topVenues.length) renderTopVenues(latest.topVenues);
-      } else {
-        document.getElementById('stat-sessions').textContent = '0';
-        document.getElementById('stat-sessions-d').textContent = 'No data yet — sync from iPad';
-      }
-    })
-    .catch(() => {
-      document.getElementById('stat-sessions').textContent = '—';
-      document.getElementById('stat-sessions-d').textContent = 'analytics.json not found';
-    });
+// The passenger app (index.html) records sessions + taps into IndexedDB
+// ('MiamiRideAnalytics'). The editor is same-origin, so on the iPad it reads
+// that same store directly — no server sync / analytics.json needed. On
+// Abdullah's laptop the store is simply empty (data lives on the kiosk).
+function openAnalyticsDB() {
+  return new Promise((resolve, reject) => {
+    // Match the passenger app's schema (name + version + stores) exactly, so
+    // opening here can never leave a store-less DB that breaks the app's logging.
+    const req = indexedDB.open('MiamiRideAnalytics', 1);
+    req.onupgradeneeded = e => {
+      const db = e.target.result;
+      if (!db.objectStoreNames.contains('sessions')) db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
+      if (!db.objectStoreNames.contains('taps'))     db.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
+    };
+    req.onsuccess = e => resolve(e.target.result);
+    req.onerror   = () => reject(req.error);
+  });
+}
+
+function readStore(db, name) {
+  return new Promise(resolve => {
+    if (!db.objectStoreNames.contains(name)) return resolve([]);
+    const out = [];
+    const cur = db.transaction(name, 'readonly').objectStore(name).openCursor();
+    cur.onsuccess = e => { const c = e.target.result; if (c) { out.push(c.value); c.continue(); } else resolve(out); };
+    cur.onerror   = () => resolve(out);
+  });
+}
+
+async function readAllAnalytics() {
+  try {
+    const db = await openAnalyticsDB();
+    const [sessions, taps] = await Promise.all([readStore(db, 'sessions'), readStore(db, 'taps')]);
+    return { sessions, taps };
+  } catch {
+    return { sessions: [], taps: [] };
+  }
+}
+
+function venueName(id) {
+  const v = ((CONTENT && CONTENT.guide && CONTENT.guide.venues) || []).find(x => x.id === id);
+  return v ? v.name : id;
+}
+
+// Roll the raw rows up into the numbers the dashboard + export both use.
+function summarizeAnalytics({ sessions, taps }) {
+  const TAB_LABEL  = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver' };
+  const tabCounts  = { 'City Guide': 0, Weather: 0, Games: 0, Driver: 0 };
+  const venueCounts = {};
+  let qrTaps = 0;
+  for (const tp of taps) {
+    const k = tp.key || '';
+    if (TAB_LABEL[k]) tabCounts[TAB_LABEL[k]]++;
+    else if (k.startsWith('qr_') || k.startsWith('hero_qr_')) qrTaps++;
+    else { const m = k.match(/^venue_(?!sheet_)(.+)$/); if (m) venueCounts[m[1]] = (venueCounts[m[1]] || 0) + 1; }
+  }
+  const langCounts = {};
+  const langSource = sessions.length ? sessions.map(s => s.lang) : taps.map(t => t.lang);
+  for (const lg of langSource) { const l = lg || 'en'; langCounts[l] = (langCounts[l] || 0) + 1; }
+  const avgDuration = sessions.length
+    ? Math.round(sessions.reduce((a, s) => a + (s.duration || 0), 0) / sessions.length)
+    : 0;
+  const topVenues = Object.entries(venueCounts)
+    .map(([id, taps]) => ({ id, name: venueName(id), taps }))
+    .sort((a, b) => b.taps - a.taps).slice(0, 5);
+  return { sessions: sessions.length, avgDuration, qrTaps, tabCounts, langCounts, topVenues };
+}
+
+function renderBars(containerId, entries, colors) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const total = entries.reduce((a, [, c]) => a + c, 0);
+  if (!total) { el.innerHTML = '<div style="font-size:12px;color:var(--muted);padding:8px 0">No data yet</div>'; return; }
+  el.innerHTML = entries.map(([label, count], i) => {
+    const pct = Math.round(count / total * 100);
+    return `<div class="bar-row"><div class="bar-lbl">${label}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${colors[i % colors.length]}"></div></div><div class="bar-val">${pct}%</div></div>`;
+  }).join('');
+}
+
+const LANG_LABEL = { en: 'English', es: 'Spanish', pt: 'Portuguese', fr: 'French' };
+
+function renderAnalytics(data) {
+  const s = summarizeAnalytics(data);
+  const colors = ['var(--teal)', 'var(--navy)', 'var(--gold)', '#9BA8B8'];
+  document.getElementById('stat-sessions').textContent = s.sessions;
+  document.getElementById('stat-sessions-d').textContent = s.sessions ? 'On this device' : 'No data yet — collected on the iPad';
+  document.getElementById('stat-duration').textContent = s.avgDuration ? formatDuration(s.avgDuration) : '—';
+  document.getElementById('stat-qr').textContent = s.qrTaps;
+  renderBars('tab-bars', Object.entries(s.tabCounts), colors);
+  renderBars('lang-bars', Object.entries(s.langCounts).map(([k, v]) => [LANG_LABEL[k] || k, v]), colors);
+  if (s.topVenues.length) renderTopVenues(s.topVenues);
+  else document.getElementById('venue-tops').innerHTML = '<div style="font-size:12px;color:var(--muted);padding:8px 0">No venue taps yet</div>';
+}
+
+async function loadAnalytics() {
+  renderAnalytics(await readAllAnalytics());
+}
+
+async function exportAnalytics() {
+  const data = await readAllAnalytics();
+  if (!data.sessions.length && !data.taps.length) { showToast('No analytics on this device to export yet', 'error'); return; }
+  const payload = {
+    app: 'Miami Ride Companion',
+    exportedAt: new Date().toISOString(),
+    summary: summarizeAnalytics(data),
+    sessions: data.sessions,
+    taps: data.taps,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `analytics-${new Date().toISOString().split('T')[0]}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(a.href);
+  showToast(`Exported ${data.sessions.length} sessions · ${data.taps.length} taps ✓`);
+}
+
+async function resetAnalytics() {
+  if (!confirm('Erase ALL passenger analytics stored on this device? This cannot be undone. Consider exporting first.')) return;
+  try {
+    const db = await openAnalyticsDB();
+    const stores = ['sessions', 'taps'].filter(n => db.objectStoreNames.contains(n));
+    if (!stores.length) { showToast('No analytics to clear'); return; }
+    const tx = db.transaction(stores, 'readwrite');
+    stores.forEach(n => tx.objectStore(n).clear());
+    tx.oncomplete = () => { showToast('Analytics cleared ✓'); loadAnalytics(); };
+    tx.onerror    = () => showToast('Could not clear analytics', 'error');
+  } catch {
+    showToast('Could not open analytics store', 'error');
+  }
 }
 
 function renderTopVenues(venues) {
