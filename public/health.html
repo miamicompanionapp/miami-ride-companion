@@ -454,8 +454,12 @@ async function runAll() {
   } else if (content.guide.events.length === 0) {
     setCheck('events', 'pass', 'No events configured — add some in the Editor');
   } else {
-    const today = new Date(); today.setHours(0,0,0,0);
-    const stale = content.guide.events.filter(e => new Date(e.date) < today);
+    // Compare DATE strings (YYYY-MM-DD), not Date objects: new Date("2026-05-30")
+    // parses as UTC midnight, which in Miami is the evening before — that wrongly
+    // flagged today's events as past. Matches the app's upcomingEvents() logic.
+    const n = new Date();
+    const todayStr = `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;
+    const stale = content.guide.events.filter(e => e.date && e.date < todayStr);
     if (stale.length === 0) {
       setCheck('events', 'pass', `All ${content.guide.events.length} events are upcoming`);
     } else {
