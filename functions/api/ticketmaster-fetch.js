@@ -6,7 +6,7 @@
 //
 // GET /api/ticketmaster-fetch  →  { events: [...], errors: [...] }
 // Each event matches the same shape as /api/rss-fetch:
-//   { title, description, url, date, venue, address, free, image, source }
+//   { title, description, url, date, venue, address, free, price, image, lat, lng, source }
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin':  '*',
@@ -125,10 +125,17 @@ function mapEvent(ev) {
     venue?.name || '',
   ].filter(Boolean);
 
-  // Treat as free only if Ticketmaster explicitly reports a 0 minimum price.
-  const free = Array.isArray(ev?.priceRanges)
-    ? ev.priceRanges.some(p => p?.min === 0)
-    : false;
+  // Price: free if a 0 minimum is reported, else the lowest min as "$N".
+  const mins = Array.isArray(ev?.priceRanges)
+    ? ev.priceRanges.map(p => p?.min).filter(n => typeof n === 'number')
+    : [];
+  const minPrice = mins.length ? Math.min(...mins) : null;
+  const free = minPrice === 0;
+  const price = (minPrice && minPrice > 0) ? '$' + Math.round(minPrice) : '';
+
+  // Venue coordinates come straight from the API → passenger app shows distance.
+  const lat = parseFloat(venue?.location?.latitude);
+  const lng = parseFloat(venue?.location?.longitude);
 
   return {
     title:       (ev?.name || '').trim(),
@@ -137,6 +144,9 @@ function mapEvent(ev) {
     date:        ev?.dates?.start?.localDate || '',
     venue:       venue?.name || '',
     address:     addressBits.join(', '),
+    price,
+    lat:         Number.isFinite(lat) ? lat : undefined,
+    lng:         Number.isFinite(lng) ? lng : undefined,
     free,
     image:       pickImage(ev?.images),
     source:      'Ticketmaster',

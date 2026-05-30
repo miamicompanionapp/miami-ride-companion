@@ -296,10 +296,16 @@
       border: 0.5px solid #E8C0C0; overflow: hidden;
       cursor: pointer; grid-column: span 2;
     }
-    .event-photo { height: 130px; position: relative; overflow: hidden;
-      background: linear-gradient(135deg, rgba(138,32,32,0.5), rgba(201,168,76,0.3)), linear-gradient(45deg, #8A2020, #C9A84C); }
-    .event-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .event-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(15,33,55,0.4) 100%); pointer-events: none; }
+    /* Event posters/flyers come in wild aspect ratios (portrait posters, wide
+       photos). Instead of crop-to-fit (which slices posters in half), we fill
+       the band with a blurred, darkened copy of the image and lay the FULL
+       image on top, contained — so nothing important is ever cut off. */
+    .event-photo { height: 160px; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #1B3A5C, #0B9EA6); }
+    .event-photo-bg { position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; transform: scale(1.15); filter: blur(20px) brightness(0.6); }
+    .event-photo-fg { position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: contain; }
     .event-inner { padding: 14px 16px; }
     .event-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
     .event-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #8A2020; }
@@ -310,6 +316,7 @@
     .event-venue { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 4px; }
     .event-venue i { font-size: 14px; color: #8A2020; }
     .free-badge { font-size: 12px; font-weight: 700; background: #E8F8F0; color: #00A88D; padding: 4px 10px; border-radius: 10px; }
+    .price-badge { font-size: 12px; font-weight: 700; background: #FBF3DC; color: #8A6D1F; padding: 4px 10px; border-radius: 10px; white-space: nowrap; }
 
     /* ── WEATHER PAGE ─────────────────────────────────────────── */
     .weather-content { flex: 1; display: flex; gap: 16px; padding: 18px 22px; overflow: hidden; min-height: 0; }
@@ -2136,10 +2143,25 @@ function renderBrowseView(venues) {
   grid.innerHTML = '';
   filtered.forEach(v => grid.appendChild(buildVenueCard(v)));
 
-  // Events when Events filter active
+  // Events when Events filter active — only upcoming, soonest first, so past
+  // events drop off on their own with no manual cleanup.
   if (currentFilter === 'event') {
-    CONTENT.guide.events.forEach(e => grid.appendChild(buildEventCard(e)));
+    upcomingEvents(CONTENT.guide.events).forEach(e => grid.appendChild(buildEventCard(e)));
   }
+}
+
+// Today's local date as YYYY-MM-DD (event dates are stored that way, so a
+// lexicographic compare is correct and timezone-safe).
+function todayStr() {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, '0')}-${String(n.getDate()).padStart(2, '0')}`;
+}
+
+function upcomingEvents(events) {
+  const today = todayStr();
+  return (events || [])
+    .filter(e => !e.date || e.date >= today)
+    .sort((a, b) => (a.date || '').localeCompare(b.date || ''));
 }
 
 function renderPillRows() {
@@ -2343,15 +2365,57 @@ function buildVenueCard(v) {
   return card;
 }
 
+// WordPress serves resized copies named "<file>-<W>x<H>.<ext>"; the original
+// (suffix stripped) is full resolution. Keeps query strings intact.
+function fullResImage(url) {
+  return url.replace(/-\d{2,5}x\d{2,5}(\.[a-z]{3,4})(\?.*)?$/i, '$1$2');
+}
+
+// Full-res 404'd → fall back to the original thumbnail; thumb failed too →
+// drop the whole banner so the card is clean text.
+function restoreEventThumb(img) {
+  const thumb = img.dataset.thumb;
+  if (thumb && img.src !== thumb) {
+    img.src = thumb;
+    const bg = img.parentElement && img.parentElement.querySelector('.event-photo-bg');
+    if (bg) bg.src = thumb;
+  } else {
+    const band = img.closest('.event-photo');
+    if (band) band.remove();
+  }
+}
+
+// Parse a "YYYY-MM-DD" event date as a LOCAL date. `new Date("2026-05-30")`
+// parses as UTC midnight, which in Miami (UTC-4/-5) renders as the day before
+// — so events showed one day early. Building from parts keeps it local.
+function parseLocalDate(s) {
+  const [y, m, d] = String(s).split('-').map(Number);
+  return (y && m && d) ? new Date(y, m - 1, d) : new Date(s);
+}
+
+// "· 2.3 mi" when we know both the passenger's location and the event's coords
+// (Ticketmaster ships them; RSS events are geocoded in the editor). Empty
+// otherwise — a bare venue name like "Peacock Park" with no distance.
+function eventDistStr(e) {
+  if (!userLat || !userLng || typeof e.lat !== 'number' || typeof e.lng !== 'number') return '';
+  const mi = haversine(userLat, userLng, e.lat, e.lng);
+  return ` · ${mi < 10 ? mi.toFixed(1) : Math.round(mi)} mi`;
+}
+
 function buildEventCard(e) {
   const card = document.createElement('div');
   card.className = 'event-card';
-  const dateStr = new Date(e.date).toLocaleDateString(lang === 'en' ? 'en-US' : lang, { weekday:'short', month:'short', day:'numeric' });
+  const dateStr = parseLocalDate(e.date).toLocaleDateString(lang === 'en' ? 'en-US' : lang, { weekday:'short', month:'short', day:'numeric' });
   // Fetched events (RSS / Ticketmaster) carry an image; curated events usually
-  // don't and stay clean text-only. A broken image URL hides the <img> so the
-  // band falls back to its gradient.
-  const photoBand = e.image
-    ? `<div class="event-photo"><img src="${e.image}" alt="" loading="lazy" onerror="this.remove()"></div>`
+  // don't and stay clean text-only. Event art is all aspect ratios, so we show
+  // the FULL image (object-fit:contain) over a blurred copy of itself, upgraded
+  // to full resolution. A broken URL drops the banner (restoreEventThumb).
+  const hi = e.image ? fullResImage(e.image) : '';
+  const photoBand = hi
+    ? `<div class="event-photo">
+         <img class="event-photo-bg" src="${hi}" alt="" aria-hidden="true">
+         <img class="event-photo-fg" src="${hi}" alt="" loading="lazy" data-thumb="${e.image}" onerror="restoreEventThumb(this)">
+       </div>`
     : '';
   card.innerHTML = `
     ${photoBand}
@@ -2363,8 +2427,10 @@ function buildEventCard(e) {
       <div class="event-name">${e.title[lang] || e.title.en}</div>
       <div class="event-desc">${e.description[lang] || e.description.en}</div>
       <div class="event-bottom">
-        <div class="event-venue"><i class="ti ti-map-pin"></i>${e.venue}</div>
-        ${e.free ? `<div class="free-badge">${t('guide.free') || 'Free'}</div>` : ''}
+        <div class="event-venue"><i class="ti ti-map-pin"></i>${e.venue}${eventDistStr(e)}</div>
+        ${e.free
+          ? `<div class="free-badge">${t('guide.free') || 'Free'}</div>`
+          : (e.price ? `<div class="price-badge">${e.price}</div>` : '')}
       </div>
     </div>`;
   card.addEventListener('click', () => { logTap('event_' + e.id); openQR('event', e.id); });

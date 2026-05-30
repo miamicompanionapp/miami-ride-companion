@@ -506,6 +506,7 @@
           <div style="display:flex;gap:6px">
             <button class="btn btn-primary btn-sm" onclick="fetchTicketmaster()"><i class="ti ti-ticket"></i>Fetch Ticketmaster</button>
             <button class="btn btn-ghost btn-sm" onclick="fetchEvents()"><i class="ti ti-rss"></i>Re-fetch RSS</button>
+            <button class="btn btn-danger btn-sm" onclick="removePastEvents()"><i class="ti ti-calendar-off"></i>Remove past</button>
           </div>
         </div>
         <div id="events-list">
@@ -1036,7 +1037,7 @@ function renderEventList() {
     <div class="event-row" style="margin-bottom:6px">
       <div class="er-info">
         <div class="er-title">${e.title.en}</div>
-        <div class="er-meta">${new Date(e.date).toLocaleDateString()} · ${e.venue}${e.free ? ' · Free' : ''}</div>
+        <div class="er-meta">${fmtEventDate(e.date)} · ${e.venue}${e.free ? ' · Free' : (e.price ? ' · ' + e.price : '')}</div>
       </div>
       <div style="display:flex;gap:6px;align-items:center">
         <button class="btn btn-ghost btn-sm" onclick="aiTranslateEventQuick('${e.id}')"><i class="ti ti-sparkles"></i>Translate</button>
@@ -1048,6 +1049,32 @@ function renderEventList() {
 function deleteEvent(id) {
   CONTENT.guide.events = CONTENT.guide.events.filter(e => e.id !== id);
   renderEventList();
+}
+
+// Parse "YYYY-MM-DD" as a LOCAL date and format it — avoids the UTC-parse
+// off-by-one that showed events a day early.
+function fmtEventDate(s) {
+  const [y, m, d] = String(s).split('-').map(Number);
+  const dt = (y && m && d) ? new Date(y, m - 1, d) : new Date(s);
+  return isNaN(dt) ? (s || '') : dt.toLocaleDateString();
+}
+
+// Today as YYYY-MM-DD (local). Event dates are stored that way → string compare.
+function eventTodayStr() {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, '0')}-${String(n.getDate()).padStart(2, '0')}`;
+}
+
+// One-tap cleanup: drop events whose date is before today. (Passengers already
+// never SEE past events — index.html filters at render — this just keeps
+// content.json tidy before publishing.)
+function removePastEvents() {
+  const today = eventTodayStr();
+  const before = CONTENT.guide.events.length;
+  CONTENT.guide.events = CONTENT.guide.events.filter(e => !e.date || e.date >= today);
+  const removed = before - CONTENT.guide.events.length;
+  renderEventList();
+  showToast(removed ? `Removed ${removed} past event${removed > 1 ? 's' : ''} ✓` : 'No past events to remove');
 }
 
 function addManualEvent() {
@@ -1095,11 +1122,13 @@ async function fetchEventsFrom(endpoint, label, idPrefix) {
     // Merge new items — skip any URL already in the list AND any repeated
     // within this batch (add to the seen-set as we go).
     const seenUrls = new Set((CONTENT.guide.events || []).map(e => e.url));
+    const today = eventTodayStr();
     const newEvents = [];
     for (const e of events) {
       if (!e.url || seenUrls.has(e.url)) continue;
+      if (e.date && e.date < today) continue;   // skip already-past events
       seenUrls.add(e.url);
-      newEvents.push({
+      const ev = {
         id: idPrefix + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
         title:       { en: e.title, es: '', pt: '', fr: '' },
         date:        e.date || new Date().toISOString().split('T')[0],
@@ -1107,9 +1136,13 @@ async function fetchEventsFrom(endpoint, label, idPrefix) {
         address:     e.address || '',
         url:         e.url,
         free:        e.free,
+        price:       e.price || '',
         image:       e.image || '',
         description: { en: e.description, es: '', pt: '', fr: '' },
-      });
+      };
+      // Ticketmaster ships coords; RSS gives only an address (geocoded below).
+      if (Number.isFinite(e.lat) && Number.isFinite(e.lng)) { ev.lat = e.lat; ev.lng = e.lng; }
+      newEvents.push(ev);
     }
 
     if (newEvents.length === 0) {
@@ -1120,9 +1153,34 @@ async function fetchEventsFrom(endpoint, label, idPrefix) {
     CONTENT.guide.events.push(...newEvents);
     renderEventList();
     showToast(`Added ${newEvents.length} new event${newEvents.length > 1 ? 's' : ''} from ${label} ✓`);
+
+    // Geocode events that arrived without coordinates (RSS) so the passenger
+    // app can show "x mi away". Done here in the browser (not the Worker) to
+    // stay on a residential IP, throttled to respect Nominatim's usage policy.
+    await geocodeEvents(newEvents.filter(ev => ev.lat === undefined && ev.address));
   } catch (err) {
     showToast(`${label} fetch failed: ${err.message}`, 'error');
   }
+}
+
+async function geocodeEvents(list) {
+  if (!list.length) return;
+  let done = 0;
+  for (const ev of list) {
+    try {
+      const url = 'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' +
+                  encodeURIComponent(ev.address);
+      const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
+      const data = await res.json();
+      if (data && data[0]) {
+        ev.lat = parseFloat(data[0].lat);
+        ev.lng = parseFloat(data[0].lon);
+        done++;
+      }
+    } catch { /* leave without coords → card just omits distance */ }
+    await new Promise(r => setTimeout(r, 1100)); // ~1 req/sec per Nominatim policy
+  }
+  if (done) { renderEventList(); showToast(`Located ${done} venue${done > 1 ? 's' : ''} on the map ✓`); }
 }
 
 // ══════════════════════════════════════════════════════

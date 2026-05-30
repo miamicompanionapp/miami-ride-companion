@@ -4,7 +4,8 @@
 //
 // GET /api/rss-fetch  →  { events: [...], errors: [...] }
 //
-// Each event: { title, description, url, date, venue, address, free, image, source }
+// Each event: { title, description, url, date, venue, address, free, price, image, source }
+// (price is "$N" for paid events; Soul of Miami events are geocoded in the editor.)
 
 const RSS_FEEDS = [
   // Timeout Miami's RSS is gone — https://www.timeout.com/miami/rss/things-to-do
@@ -113,9 +114,20 @@ function decorateSoulOfMiami(item) {
     if (!Number.isNaN(Date.parse(iso))) item.date = iso;
   }
 
-  // Cost line → free flag.
-  if (/Cost:\s*Free/i.test(d)) item.free = true;
-  else if (/Cost:\s*\$\s*\d/i.test(d)) item.free = false;
+  // Cost line → free flag + price. "Free" or "0" = free; "$39.19"/"$24" = paid.
+  // Colon optional — some posts write "Cost FREE" without one.
+  const cost = d.match(/\bCost:?\s+(Free\b|\$?\s*[\d][\d.,]*)/i);
+  if (cost) {
+    if (/free/i.test(cost[1])) {
+      item.free = true;
+    } else {
+      const num = parseFloat(cost[1].replace(/[^\d.]/g, ''));
+      if (!Number.isNaN(num)) {
+        if (num === 0) { item.free = true; }
+        else { item.free = false; item.price = '$' + Math.round(num); }
+      }
+    }
+  }
 
   // Venue + address sit between the time range and "Website Cost".
   const va = d.match(/\d{1,2}(?::\d{2})?\s*[ap]m(?:\s*-\s*\d{1,2}(?::\d{2})?\s*[ap]m)?\s*-?\s*(.+?)\s+Website\s+Cost/i);
@@ -129,6 +141,15 @@ function decorateSoulOfMiami(item) {
       item.venue = blk;
     }
   }
+
+  // Clean description: the real blurb sits AFTER "Website Cost: <x>" and BEFORE
+  // the "Read More" teaser tail. The leading structured line (date/time/venue/
+  // address/cost) is redundant — the card already shows those as fields.
+  const blurb = d.match(/\bCost:?\s+\S+\s+([\s\S]*?)\s*(?:Read More|$)/i);
+  if (blurb && blurb[1].trim().length > 20) {
+    item.description = blurb[1].trim();
+  }
+
   return item;
 }
 
