@@ -2159,8 +2159,19 @@ function renderHomeView(venues) {
     heroSlot.innerHTML = `<div class="gp-hero-empty">No venues yet — add some in the editor.</div>`;
   }
 
-  // 3-up minis: next-nearest, excluding the featured one
-  const restVenues = venues.filter(v => !featured || v.id !== featured.id).slice(0, 3);
+  // 3-up minis. If the driver curated a spotlight list (guide.featuredMiniIds),
+  // show those in that order, excluding the hero. Otherwise fall back to the
+  // nearest venues. Either way, top up to 3 with the nearest remaining so the
+  // row is never short (e.g. if a curated id was deleted).
+  const heroId = featured ? featured.id : null;
+  const curatedIds = Array.isArray(CONTENT.guide.featuredMiniIds) ? CONTENT.guide.featuredMiniIds : [];
+  const curated = curatedIds
+    .map(id => venues.find(v => v.id === id))
+    .filter(v => v && v.id !== heroId);
+  const seen = new Set(curated.map(v => v.id));
+  const fillers = venues.filter(v => v.id !== heroId && !seen.has(v.id));
+  const restVenues = [...curated, ...fillers].slice(0, 3);
+
   const minisHost = document.getElementById('gp-minis');
   minisHost.innerHTML = restVenues.map(v => buildMiniHTML(v)).join('');
   minisHost.querySelectorAll('.gp-mini').forEach(el => {
@@ -2168,8 +2179,11 @@ function renderHomeView(venues) {
     el.addEventListener('click', () => openVenueSheet(vid));
   });
 
-  // Section title
-  document.getElementById('gp-more-label').textContent = t('guide.moreNearYou') || 'More near you';
+  // Section title — reflects whether the row is a curated spotlight or geographic.
+  const curatedActive = curated.length > 0;
+  document.getElementById('gp-more-label').textContent = curatedActive
+    ? (FEATURED_MINIS_LABEL[lang] || FEATURED_MINIS_LABEL.en)
+    : (t('guide.moreNearYou') || 'More near you');
 }
 
 function renderBrowseView(venues) {
@@ -2213,6 +2227,7 @@ function upcomingEvents(events) {
 // "Featured" label is hardcoded here (not in content.json) so this fix stays
 // isolated to index.html.
 const FEATURED_LABEL = { en: 'Featured', es: 'Destacados', pt: 'Destaques', fr: 'À la une' };
+const FEATURED_MINIS_LABEL = { en: 'Featured spots', es: 'Lugares destacados', pt: 'Locais em destaque', fr: 'Lieux à la une' };
 
 function renderPillRows() {
   const items = [

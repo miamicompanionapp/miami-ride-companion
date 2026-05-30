@@ -15,6 +15,19 @@ test.describe('Passenger app', () => {
     expect(venueCount).toBeGreaterThan(0);
   });
 
+  test('featured landing: hero = featuredVenueId, minis = curated featuredMiniIds (hero excluded)', async ({ page }) => {
+    const { heroId, miniIds, curated } = await page.evaluate(() => ({
+      heroId: CONTENT.guide.featuredVenueId,
+      miniIds: [...document.querySelectorAll('#gp-minis .gp-mini')].map(el => el.getAttribute('data-vid')),
+      curated: CONTENT.guide.featuredMiniIds || [],
+    }));
+    // The hero never doubles as a mini.
+    expect(miniIds).not.toContain(heroId);
+    // Curated ids (minus the hero) lead the row, in order.
+    const expected = curated.filter(id => id !== heroId).slice(0, 3);
+    expect(miniIds.slice(0, expected.length)).toEqual(expected);
+  });
+
   test('switches language across ES / PT / FR / EN', async ({ page }) => {
     const expected = {
       es: 'Guía de Ciudad',
