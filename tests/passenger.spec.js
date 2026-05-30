@@ -56,11 +56,26 @@ test.describe('Passenger app', () => {
   });
 
   test('driver bubble hides (and tab is guarded) when bubbleVisible is false', async ({ page }) => {
+    // Default ships hidden now, so force it on first to prove the visible state.
+    await page.evaluate(() => { localStorage.removeItem('mrc_bubble'); CONTENT.driver.bubbleVisible = true; renderDriver(); });
     await expect(page.locator('#nav-driver')).toBeVisible();
     await page.evaluate(() => { CONTENT.driver.bubbleVisible = false; renderDriver(); });
     await expect(page.locator('#nav-driver')).toBeHidden();
     await page.evaluate(() => switchTab('driver')); // should be redirected to guide
     await expect(page.locator('#page-guide')).toHaveClass(/active/);
+  });
+
+  test('5-tap footer override forces the bubble on without touching content.json', async ({ page }) => {
+    // Content default is hidden; the per-device override should win.
+    await page.evaluate(() => { localStorage.removeItem('mrc_bubble'); CONTENT.driver.bubbleVisible = false; renderDriver(); });
+    await expect(page.locator('#nav-driver')).toBeHidden();
+    for (let i = 0; i < 5; i++) await page.locator('#bubble-toggle-zone').click();
+    await expect(page.locator('#nav-driver')).toBeVisible();
+    expect(await page.evaluate(() => localStorage.getItem('mrc_bubble'))).toBe('show');
+    // Five more taps flips it back off and persists.
+    for (let i = 0; i < 5; i++) await page.locator('#bubble-toggle-zone').click();
+    await expect(page.locator('#nav-driver')).toBeHidden();
+    expect(await page.evaluate(() => localStorage.getItem('mrc_bubble'))).toBe('hide');
   });
 
   test('games scale up to fill the kiosk canvas', async ({ page }) => {
@@ -71,7 +86,7 @@ test.describe('Passenger app', () => {
   });
 
   test('driver page renders bio and pet crew', async ({ page }) => {
-    await page.evaluate(() => switchTab('driver'));
+    await page.evaluate(() => { localStorage.setItem('mrc_bubble', 'show'); renderDriver(); switchTab('driver'); });
     await expect(page.locator('#page-driver')).toHaveClass(/active/);
     await expect(page.locator('#dp-bio-name')).not.toBeEmpty();
     await expect(page.locator('#dp-bio-paragraphs')).not.toBeEmpty();

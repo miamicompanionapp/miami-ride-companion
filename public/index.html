@@ -1197,7 +1197,7 @@
         </button>
       </div>
 
-      <div class="sidebar-footer">
+      <div class="sidebar-footer" id="bubble-toggle-zone">
         <div class="claude-credit" data-key="footer.claude">Built with Claude AI · ask your driver</div>
         <div class="build-tag" id="build-tag"></div>
       </div>
@@ -1683,6 +1683,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadContent();
   initInactivity();
   initSecretTap();
+  initBubbleToggle();
   updateGreeting();
   setInterval(updateGreeting, 60000);
   tapBest = parseInt(localStorage.getItem('tapBest') || '0');
@@ -1781,9 +1782,10 @@ function renderDriver() {
   if (!CONTENT || !CONTENT.driver) return;
   const d = CONTENT.driver;
 
-  // Sidebar bubble — hidden when the driver toggles it off in the editor.
-  // (The subtitle rotator's "meet my crew" variant also checks this flag.)
-  document.getElementById('nav-driver').style.display = (d.bubbleVisible !== false) ? '' : 'none';
+  // Sidebar bubble — hidden when the driver toggles it off (content.json flag,
+  // or a per-device override set by the 5-tap footer shortcut on this tablet).
+  // (The subtitle rotator's "meet my crew" variant also checks this.)
+  document.getElementById('nav-driver').style.display = isBubbleVisible() ? '' : 'none';
 
   // Sidebar bubble
   document.getElementById('db-name').textContent = d.name || 'Abdullah';
@@ -1940,7 +1942,7 @@ function renderInlineQR(selector, text) {
 const SUBTITLE_ROTATE_MS = 15000;
 
 function getSubtitleVariants() {
-  const bubbleVisible = !CONTENT || !CONTENT.driver || CONTENT.driver.bubbleVisible !== false;
+  const bubbleVisible = isBubbleVisible();
   const variants = [
     { icon: '📍', getText: () => {
         const base = t('guide.nearestTo') || 'Nearest to you';
@@ -2027,7 +2029,7 @@ function updateGreeting() {
 function switchTab(tab) {
   // The driver page is only reachable via the bubble; if it's hidden, don't
   // let anything strand the passenger on an orphaned tab.
-  if (tab === 'driver' && CONTENT && CONTENT.driver && CONTENT.driver.bubbleVisible === false) tab = 'guide';
+  if (tab === 'driver' && !isBubbleVisible()) tab = 'guide';
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link, .driver-bubble').forEach(n => n.classList.remove('active'));
   const page = document.getElementById('page-' + tab);
@@ -3257,6 +3259,76 @@ function initSecretTap() {
     }
     secretTimer = setTimeout(() => { secretTaps = 0; }, 3000);
   });
+}
+
+// ════════════════════════════════════════════════════════════
+// DRIVER-BUBBLE VISIBILITY (content flag + per-device override)
+// ════════════════════════════════════════════════════════════
+// The bubble's default comes from content.json (driver.bubbleVisible).
+// On this tablet, Abdullah can override it WITHOUT a deploy/publish by
+// tapping the sidebar footer 5 times — handy to flip it on/off on the spot.
+// localStorage 'mrc_bubble': 'show' | 'hide' | absent (= use content default).
+const BUBBLE_OVERRIDE_KEY = 'mrc_bubble';
+
+function isBubbleVisible() {
+  let ov = null;
+  try { ov = localStorage.getItem(BUBBLE_OVERRIDE_KEY); } catch (e) {}
+  if (ov === 'show') return true;
+  if (ov === 'hide') return false;
+  return !CONTENT || !CONTENT.driver || CONTENT.driver.bubbleVisible !== false;
+}
+
+function applyBubbleVisibility() {
+  const nav = document.getElementById('nav-driver');
+  if (nav) nav.style.display = isBubbleVisible() ? '' : 'none';
+  // Refresh the subtitle rotator so the "meet my crew" variant appears/disappears.
+  if (typeof startSubtitleRotator === 'function') startSubtitleRotator();
+}
+
+let bubbleTaps = 0;
+let bubbleTapTimer = null;
+function initBubbleToggle() {
+  const zone = document.getElementById('bubble-toggle-zone');
+  if (!zone) return;
+  zone.addEventListener('click', () => {
+    bubbleTaps++;
+    clearTimeout(bubbleTapTimer);
+    if (bubbleTaps >= 5) {
+      bubbleTaps = 0;
+      const nowVisible = isBubbleVisible();
+      try { localStorage.setItem(BUBBLE_OVERRIDE_KEY, nowVisible ? 'hide' : 'show'); } catch (e) {}
+      applyBubbleVisibility();
+      showMiniToast(nowVisible ? 'Driver bubble hidden' : 'Driver bubble shown');
+      return;
+    }
+    bubbleTapTimer = setTimeout(() => { bubbleTaps = 0; }, 3000);
+  });
+}
+
+// Tiny self-contained toast (created on demand) — only the driver sees this,
+// after the deliberate 5-tap, so it confirms the silent toggle took effect.
+let miniToastTimer = null;
+function showMiniToast(msg) {
+  let el = document.getElementById('mini-toast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'mini-toast';
+    el.style.cssText = 'position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(8px);'
+      + 'background:rgba(15,33,55,0.95);color:#fff;padding:11px 20px;border-radius:999px;'
+      + 'font-size:14px;font-weight:500;letter-spacing:0.2px;box-shadow:0 6px 24px rgba(0,0,0,0.28);'
+      + 'z-index:9999;opacity:0;transition:opacity 200ms ease, transform 200ms ease;pointer-events:none;';
+    document.body.appendChild(el);
+  }
+  el.textContent = msg;
+  // force reflow so the transition runs each time
+  void el.offsetWidth;
+  el.style.opacity = '1';
+  el.style.transform = 'translateX(-50%) translateY(0)';
+  clearTimeout(miniToastTimer);
+  miniToastTimer = setTimeout(() => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateX(-50%) translateY(8px)';
+  }, 1800);
 }
 
 // ════════════════════════════════════════════════════════════
