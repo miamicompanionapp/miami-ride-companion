@@ -621,6 +621,17 @@
 
       <div class="card">
         <div class="card-header">
+          <div><div class="card-title">My Queen 👑</div><div class="card-sub">A personal line shown just above the pets — fill in a name to show it</div></div>
+        </div>
+        <div class="field-grid">
+          <div class="field"><label>Name</label><input id="drv-queen-name" type="text" placeholder="Her name"></div>
+          <div class="field"><label>Photo URL (optional)</label><input id="drv-queen-photo" type="text" placeholder="https://…  (blank shows a 👑)"></div>
+        </div>
+        <div class="field"><label>Note (optional)</label><input id="drv-queen-note" type="text" placeholder="e.g. The heart of our home"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
           <div><div class="card-title">Pets</div><div class="card-sub">Shown at the bottom of the driver page</div></div>
           <button class="btn btn-ghost btn-sm" onclick="addDriverPet()"><i class="ti ti-plus"></i>Add pet</button>
         </div>
@@ -665,8 +676,8 @@
           <h3><i class="ti ti-brand-github"></i>GitHub API Settings</h3>
           <div class="github-field"><label>GitHub Personal Access Token</label><input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxx" autocomplete="off"></div>
           <div class="field-grid">
-            <div class="github-field"><label>Repository Owner / Org</label><input type="text" id="gh-owner" placeholder="miamicompanionapp"></div>
-            <div class="github-field"><label>Repository Name</label><input type="text" id="gh-repo" placeholder="miami-ride-companion"></div>
+            <div class="github-field"><label>Repository Owner / Org</label><input type="text" id="gh-owner" placeholder="miamicompanionapp" value="miamicompanionapp"></div>
+            <div class="github-field"><label>Repository Name</label><input type="text" id="gh-repo" placeholder="miami-ride-companion" value="miami-ride-companion"></div>
           </div>
           <div class="github-field"><label>Branch</label><input type="text" id="gh-branch" placeholder="main" value="main"></div>
           <button class="github-save-btn" onclick="saveGitHubSettings()">Save GitHub Settings</button>
@@ -679,6 +690,13 @@
           <div class="field"><label>Confirm PIN</label><input type="password" id="confirm-pin" placeholder="Confirm new PIN" maxlength="8"></div>
         </div>
         <button class="btn btn-primary" onclick="changePIN()"><i class="ti ti-lock"></i>Update PIN</button>
+      </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Rest screen</div><div class="card-sub">How long the black "rest" screen stays dark before it auto-wakes to a fresh home view (so a new passenger never finds it dark)</div></div></div>
+        <div class="field" style="max-width:260px">
+          <label>Auto-wake after (minutes)</label>
+          <input type="number" id="set-rest-minutes" min="1" max="60" step="1" placeholder="5" onchange="updateRestMinutes(this.value)">
+        </div>
       </div>
       <div class="card">
         <div class="card-header"><div><div class="card-title">Claude AI Writing Assistant</div><div class="card-sub">Used for auto-translating descriptions</div></div></div>
@@ -840,11 +858,30 @@ async function loadContent() {
     renderVenueList();
     renderEventList();
     renderDriverEditor();
+    renderAppSettings();
     renderFeaturedDropdown();
     updateLastPub();
   } catch (e) {
     showToast('Could not load content.json — check connection', 'error');
   }
+}
+
+// App-wide settings stored in content.json (published, not localStorage).
+function renderAppSettings() {
+  if (!CONTENT) return;
+  const s = CONTENT.settings || {};
+  document.getElementById('set-rest-minutes').value = s.restMinutes != null ? s.restMinutes : 5;
+}
+
+function updateRestMinutes(val) {
+  if (!CONTENT) return;
+  CONTENT.settings = CONTENT.settings || {};
+  let n = parseInt(val, 10);
+  if (isNaN(n) || n < 1) n = 5;
+  if (n > 60) n = 60;
+  CONTENT.settings.restMinutes = n;
+  document.getElementById('set-rest-minutes').value = n;
+  showToast(`Rest screen auto-wakes after ${n} min — hit Publish to save`);
 }
 
 function updateLastPub() {
@@ -1311,6 +1348,11 @@ function renderDriverEditor() {
   document.getElementById('drv-tt-reviewcount').value = tt.reviewCount ?? '';
   document.getElementById('drv-tt-label-en').value = (tt.label && tt.label.en) || '';
 
+  const queen = d.queen || {};
+  document.getElementById('drv-queen-name').value = queen.name || '';
+  document.getElementById('drv-queen-note').value = queen.note || '';
+  document.getElementById('drv-queen-photo').value = queen.photo || '';
+
   const pets = d.pets || {};
   document.getElementById('drv-pets-eyebrow-en').value = (pets.eyebrow && pets.eyebrow.en) || '';
   document.getElementById('drv-pets-title-en').value = (pets.title && pets.title.en) || '';
@@ -1427,6 +1469,11 @@ function saveDriver() {
   d.thumbtack.reviewCount = rcRaw === '' ? null : parseInt(rcRaw, 10);
   d.thumbtack.label = d.thumbtack.label || {};
   d.thumbtack.label.en = document.getElementById('drv-tt-label-en').value.trim();
+
+  d.queen = d.queen || {};
+  d.queen.name = document.getElementById('drv-queen-name').value.trim();
+  d.queen.note = document.getElementById('drv-queen-note').value.trim();
+  d.queen.photo = document.getElementById('drv-queen-photo').value.trim();
 
   d.pets = d.pets || {};
   d.pets.eyebrow = d.pets.eyebrow || {};

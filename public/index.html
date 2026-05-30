@@ -296,17 +296,24 @@
       border: 0.5px solid #E8C0C0; overflow: hidden;
       cursor: pointer; grid-column: span 2;
     }
+    /* With a photo, the card is a row: thumbnail on the LEFT, text on the right
+       (compact — more events fit on screen). Cards without a photo stay text-only. */
+    .event-card.has-photo { display: flex; align-items: stretch; min-height: 132px; }
     /* Event posters/flyers come in wild aspect ratios (portrait posters, wide
        photos). Instead of crop-to-fit (which slices posters in half), we fill
-       the band with a blurred, darkened copy of the image and lay the FULL
+       the thumbnail with a blurred, darkened copy of the image and lay the FULL
        image on top, contained — so nothing important is ever cut off. */
-    .event-photo { height: 160px; position: relative; overflow: hidden;
+    .event-photo { width: 168px; flex-shrink: 0; position: relative; overflow: hidden;
       background: linear-gradient(135deg, #1B3A5C, #0B9EA6); }
     .event-photo-bg { position: absolute; inset: 0; width: 100%; height: 100%;
       object-fit: cover; transform: scale(1.15); filter: blur(20px) brightness(0.6); }
     .event-photo-fg { position: absolute; inset: 0; width: 100%; height: 100%;
       object-fit: contain; }
     .event-inner { padding: 14px 16px; }
+    .event-card.has-photo .event-inner { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+    /* Keep compact cards tidy: clamp the blurb to 2 lines in the narrower column. */
+    .event-card.has-photo .event-desc { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .event-card.has-photo .event-bottom { margin-top: auto; }
     .event-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
     .event-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #8A2020; }
     .event-date { font-size: 13px; font-weight: 600; color: var(--muted); }
@@ -890,6 +897,15 @@
     .dp-phone-num { font-family: var(--font-display); font-size: 26px; font-weight: 500; color: white; letter-spacing: 0.5px; }
 
     /* Pets card */
+    .dp-queen { display: flex; align-items: center; gap: 16px; border-radius: 18px; padding: 18px 24px; margin-top: 18px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.14), rgba(201,168,76,0.04)); border: 1px solid rgba(201,168,76,0.35); }
+    .dp-queen-photo { width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #C9A84C, #E89B5C); box-shadow: 0 4px 12px rgba(201,168,76,0.25); }
+    .dp-queen-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .dp-queen-emoji { font-size: 30px; line-height: 1; }
+    .dp-queen-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: #B08D2E; }
+    .dp-queen-name { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--heading); line-height: 1.15; }
+    .dp-queen-note { font-size: 14px; color: var(--body); font-style: italic; margin-top: 2px; }
     .dp-pets-card { background: var(--card); border-radius: 18px; border: 1px solid var(--border); padding: 22px 26px; margin-top: 18px; box-shadow: 0 4px 16px rgba(15,33,55,0.04); }
     .dp-pets-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px; }
     .dp-pets-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--teal); }
@@ -1388,6 +1404,9 @@
             </div>
           </div>
 
+          <!-- My Queen — personal line above the pets (rendered by renderDriver) -->
+          <div class="dp-queen" id="dp-queen" style="display:none"></div>
+
           <!-- Pets card -->
           <div class="dp-pets-card">
             <div class="dp-pets-header">
@@ -1639,7 +1658,10 @@ let restClockTimer = null;
 let restWarnTimer = null;     // fires when the warning box should appear
 let restWarnInterval = null;  // 30→0 countdown inside the warning box
 let restWarnVal = 0;
-const REST_MAX_MS = 600000;   // 10 min total before auto-wake (so a new passenger never finds a dark screen)
+// Auto-wake delay is configurable from the dashboard (settings.restMinutes,
+// default 5 min) so a new passenger never finds a dark screen. Read live so a
+// published change takes effect without a code change.
+function restMaxMs() { return ((CONTENT && CONTENT.settings && CONTENT.settings.restMinutes) || 5) * 60000; }
 const REST_WARN_S = 30;       // show the "waking up" warning box for the final 30s
 
 // Secret tap
@@ -1771,11 +1793,14 @@ function renderDriver() {
     document.getElementById('db-avatar').textContent = (d.name || 'A')[0];
   }
 
-  // Bio
-  document.getElementById('dp-bio-initial').textContent = (d.name || 'A')[0];
+  // Bio. Note: the photo innerHTML below re-creates .dp-bio-initial, so keep its
+  // id (and null-guard) — otherwise a second renderDriver (e.g. language switch)
+  // would find no #dp-bio-initial and throw, killing the whole driver render.
+  const bioInitial = document.getElementById('dp-bio-initial');
+  if (bioInitial) bioInitial.textContent = (d.name || 'A')[0];
   if (d.photo) {
     document.getElementById('dp-bio-photo').innerHTML =
-      `<img src="${d.photo}" alt=""><div class="dp-bio-initial">${(d.name||'A')[0]}</div>`;
+      `<img src="${d.photo}" alt=""><div class="dp-bio-initial" id="dp-bio-initial">${(d.name||'A')[0]}</div>`;
   }
   document.getElementById('dp-bio-name').textContent = d.name || '';
   document.getElementById('dp-bio-from').textContent = tx(d.fromLine);
@@ -1820,6 +1845,24 @@ function renderDriver() {
     if (ttQrLabel) ttQrLabel.textContent = tx(d.thumbtack.qrLabel);
     // Thumbtack QR — inline profile URL
     renderInlineQR('#dp-tt-qr .dp-qr-content', d.thumbtack.url || '');
+  }
+
+  // My Queen — a personal nod to the driver's wife, above the pets.
+  const qEl = document.getElementById('dp-queen');
+  if (qEl) {
+    const q = d.queen;
+    if (q && q.name) {
+      qEl.style.display = '';
+      qEl.innerHTML = `
+        <div class="dp-queen-photo">${q.photo ? `<img src="${q.photo}" alt="">` : '<div class="dp-queen-emoji">👑</div>'}</div>
+        <div class="dp-queen-text">
+          <div class="dp-queen-eyebrow">My Queen</div>
+          <div class="dp-queen-name">${q.name}</div>
+          ${q.note ? `<div class="dp-queen-note">${q.note}</div>` : ''}
+        </div>`;
+    } else {
+      qEl.style.display = 'none';
+    }
   }
 
   // Pets
@@ -2404,13 +2447,14 @@ function eventDistStr(e) {
 
 function buildEventCard(e) {
   const card = document.createElement('div');
-  card.className = 'event-card';
   const dateStr = parseLocalDate(e.date).toLocaleDateString(lang === 'en' ? 'en-US' : lang, { weekday:'short', month:'short', day:'numeric' });
   // Fetched events (RSS / Ticketmaster) carry an image; curated events usually
   // don't and stay clean text-only. Event art is all aspect ratios, so we show
-  // the FULL image (object-fit:contain) over a blurred copy of itself, upgraded
-  // to full resolution. A broken URL drops the banner (restoreEventThumb).
+  // the FULL image (object-fit:contain) over a blurred copy of itself in a
+  // left-hand thumbnail, upgraded to full resolution. Broken URL → drop the
+  // thumbnail (restoreEventThumb), card falls back to text-only.
   const hi = e.image ? fullResImage(e.image) : '';
+  card.className = hi ? 'event-card has-photo' : 'event-card';
   const photoBand = hi
     ? `<div class="event-photo">
          <img class="event-photo-bg" src="${hi}" alt="" aria-hidden="true">
@@ -3085,13 +3129,13 @@ function enterRest() {
   document.getElementById('rest-screen').classList.add('visible');
 }
 
-// (Re)start the 10-minute cycle: nothing happens until REST_WARN_S before the
+// (Re)start the auto-wake cycle: nothing happens until REST_WARN_S before the
 // end, when the warning box appears and counts down to the auto-wake.
 function armRestTimers() {
   clearTimeout(restWarnTimer);
   clearInterval(restWarnInterval);
   document.getElementById('rest-warn').classList.remove('show');
-  restWarnTimer = setTimeout(showRestWarning, REST_MAX_MS - REST_WARN_S * 1000);
+  restWarnTimer = setTimeout(showRestWarning, restMaxMs() - REST_WARN_S * 1000);
 }
 
 function showRestWarning() {
