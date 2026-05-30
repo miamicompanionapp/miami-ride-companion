@@ -197,7 +197,8 @@
     }
     .pill i { font-size: 14px; }
     .pill.active { background: var(--navy-deep); color: white; border-color: var(--navy-deep); }
-    .pill-all   { background: var(--navy-deep); color: white; }
+    .pill-featured { background: #FBEFCF; color: #7A5A12; border-color: #E8CE8E; }   /* curated landing */
+    .pill-allcat{ background: #EEF2F7; color: #3A4A5E; border-color: #D4DCE6; }   /* "All" grid */
     .pill-food  { background: var(--teal-mist); color: #0B6E72; border-color: var(--teal-border); }
     .pill-night { background: #EEF0F8; color: #1B3A5C; border-color: #C5CCE0; }
     .pill-attr  { background: var(--gold-light); color: #7A5500; border-color: var(--gold-border); }
@@ -1630,7 +1631,7 @@ const APP_BUILD = 'a5c6ecb';
 // ════════════════════════════════════════════════════════════
 let CONTENT = null;
 let lang = 'en';
-let currentFilter = 'all';
+let currentFilter = 'featured';   // 'featured' = curated hero+minis landing; 'all' = full grid
 let currentTab = 'guide';
 let userLat = null, userLng = null;
 let currentNeighborhood = '';
@@ -2124,8 +2125,8 @@ function renderGuide() {
     venues.sort((a, b) => a._dist - b._dist);
   }
 
-  // Determine view: 'all' → home, anything else → browse
-  const view = currentFilter === 'all' ? 'home' : 'browse';
+  // Determine view: 'featured' → curated home (hero + minis), anything else → grid
+  const view = currentFilter === 'featured' ? 'home' : 'browse';
   document.getElementById('guide-main').setAttribute('data-view', view);
 
   if (view === 'home') renderHomeView(venues);
@@ -2175,6 +2176,7 @@ function renderBrowseView(venues) {
   let filtered;
   if (currentFilter === 'picks')      filtered = venues.filter(v => v.abdullahsPick);
   else if (currentFilter === 'event') filtered = [];
+  else if (currentFilter === 'all')   filtered = venues;   // every venue, distance-sorted
   else                                filtered = venues.filter(v => v.category === currentFilter);
 
   // Label per filter
@@ -2207,21 +2209,28 @@ function upcomingEvents(events) {
     .sort((a, b) => (a.date || '').localeCompare(b.date || ''));
 }
 
+// "Featured" label is hardcoded here (not in content.json) so this fix stays
+// isolated to index.html.
+const FEATURED_LABEL = { en: 'Featured', es: 'Destacados', pt: 'Destaques', fr: 'À la une' };
+
 function renderPillRows() {
   const items = [
-    { f: 'all',        cls: 'pill-all',   icon: 'ti-layout-grid',     k: 'categories.all' },
-    { f: 'restaurant', cls: 'pill-food',  icon: 'ti-tools',           k: 'categories.restaurant' },
-    { f: 'nightlife',  cls: 'pill-night', icon: 'ti-music',           k: 'categories.nightlife' },
-    { f: 'attraction', cls: 'pill-attr',  icon: 'ti-map-pin',         k: 'categories.attraction' },
-    { f: 'gem',        cls: 'pill-gem',   icon: 'ti-sparkles',        k: 'categories.gem' },
-    { f: 'event',      cls: 'pill-event', icon: 'ti-calendar-event',  k: 'categories.event' },
-    { f: 'picks',      cls: 'pill-picks', icon: 'ti-star',            k: 'categories.picks' },
+    { f: 'featured',   cls: 'pill-featured', icon: 'ti-star-filled',   label: FEATURED_LABEL },
+    { f: 'all',        cls: 'pill-allcat', icon: 'ti-layout-grid',     k: 'categories.all' },
+    { f: 'restaurant', cls: 'pill-food',   icon: 'ti-tools',           k: 'categories.restaurant' },
+    { f: 'nightlife',  cls: 'pill-night',  icon: 'ti-music',           k: 'categories.nightlife' },
+    { f: 'attraction', cls: 'pill-attr',   icon: 'ti-map-pin',         k: 'categories.attraction' },
+    { f: 'gem',        cls: 'pill-gem',    icon: 'ti-sparkles',        k: 'categories.gem' },
+    { f: 'event',      cls: 'pill-event',  icon: 'ti-calendar-event',  k: 'categories.event' },
+    { f: 'picks',      cls: 'pill-picks',  icon: 'ti-star',            k: 'categories.picks' },
   ];
-  const html = items.map(it => `
+  const html = items.map(it => {
+    const label = it.label ? (it.label[lang] || it.label.en) : (t(it.k) || it.f);
+    return `
     <div class="pill ${it.cls}${it.f === currentFilter ? ' active' : ''}" data-filter="${it.f}" onclick="setFilter('${it.f}')">
-      <i class="ti ${it.icon}"></i> <span>${t(it.k) || it.f}</span>
-    </div>
-  `).join('');
+      <i class="ti ${it.icon}"></i> <span>${label}</span>
+    </div>`;
+  }).join('');
   const below = document.getElementById('pills-below');
   const sticky = document.getElementById('pills-sticky');
   if (below)  below.innerHTML  = html;
@@ -2229,7 +2238,7 @@ function renderPillRows() {
 }
 
 function goHomeView() {
-  setFilter('all');
+  setFilter('featured');
 }
 
 // Hero card HTML builder
@@ -3185,7 +3194,7 @@ function autoWakeRest() {
   exitRest();
   endSession();
   switchTab('guide');
-  setFilter('all');
+  setFilter('featured');
   startSession();
 }
 
@@ -3225,7 +3234,7 @@ function showThanks() {
       // Reset app to home state after fade out
       setTimeout(() => {
         switchTab('guide');
-        setFilter('all');
+        setFilter('featured');
         startSession();
         resetInactivity();
       }, 650);
