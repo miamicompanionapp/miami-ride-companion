@@ -1295,8 +1295,8 @@
                 <div class="hero-body">
                   <div class="hero-badge"><i class="ti ti-star"></i><span data-key="games.mostPopular">Most popular</span></div>
                   <div class="hero-icon">🧠</div>
-                  <div class="hero-title">Miami Trivia</div>
-                  <div class="hero-desc" id="trivia-hero-desc">10 questions about Miami's history, culture, landmarks and hidden gems. How well do you know the Magic City?</div>
+                  <div class="hero-title" data-gkey="triviaHeroTitle">Miami Trivia</div>
+                  <div class="hero-desc" id="trivia-hero-desc" data-gkey="triviaHeroDesc">10 questions about Miami's history, culture, landmarks and hidden gems. How well do you know the Magic City?</div>
                 </div>
                 <div class="hero-footer">
                   <div class="hero-meta">
@@ -1328,8 +1328,8 @@
               </div>
               <div class="game-card spin" onclick="openGame('spin')">
                 <div class="game-card-icon">🌀</div>
-                <div class="game-card-title">Facts Spinner</div>
-                <div class="game-card-desc">Spin for surprising facts about Miami, science & history.</div>
+                <div class="game-card-title" data-gkey="spinCardTitle">Facts Spinner</div>
+                <div class="game-card-desc" data-gkey="spinCardDesc">Spin for surprising facts about Miami, science & history.</div>
                 <div class="game-card-footer">
                   <div class="game-card-meta"><i class="ti ti-clock"></i><span data-key="games.anyTime">Any time</span></div>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
@@ -1337,8 +1337,8 @@
               </div>
               <div class="game-card image" onclick="openGame('image')">
                 <div class="game-card-icon">🖼️</div>
-                <div class="game-card-title">Guess the Image</div>
-                <div class="game-card-desc">Real photos of world landmarks — can you name them?</div>
+                <div class="game-card-title" data-gkey="imgCardTitle">Guess the Image</div>
+                <div class="game-card-desc" data-gkey="imgCardDesc">Real photos of world landmarks — can you name them?</div>
                 <div class="game-card-footer">
                   <div class="game-card-meta"><i class="ti ti-clock"></i>3–5 <span data-key="games.minutes">min</span></div>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
@@ -1454,8 +1454,8 @@
 <div class="game-screen" id="game-trivia">
   <div class="game-screen-header">
     <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
-    <div class="game-screen-title">🧠 Miami Trivia</div>
-    <div class="game-score-badge">Score: <span id="trivia-score">0</span> / <span id="trivia-total">10</span></div>
+    <div class="game-screen-title" data-gkey="triviaScreenTitle">🧠 Miami Trivia</div>
+    <div class="game-score-badge"><span data-gkey="scoreLabel">Score:</span> <span id="trivia-score">0</span> / <span id="trivia-total">10</span></div>
   </div>
   <div class="game-body">
     <div class="trivia-question" id="trivia-question">Press Start to begin!</div>
@@ -1512,16 +1512,16 @@
 <div class="game-screen" id="game-spin">
   <div class="game-screen-header">
     <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
-    <div class="game-screen-title">🌀 Facts Spinner</div>
-    <div class="game-score-badge">Spins: <span id="spin-count">0</span></div>
+    <div class="game-screen-title" data-gkey="spinScreenTitle">🌀 Facts Spinner</div>
+    <div class="game-score-badge"><span data-gkey="spinsLabel">Spins:</span> <span id="spin-count">0</span></div>
   </div>
   <div class="game-body">
     <div class="spinner-center">
       <div class="spinner-wheel" onclick="doSpin()">🎲</div>
-      <div class="spin-hint">Tap the wheel to spin!</div>
+      <div class="spin-hint" data-gkey="spinHint">Tap the wheel to spin!</div>
       <div class="spin-fact-card">
-        <div class="spin-cat" id="spin-cat">Ready to spin?</div>
-        <div class="spin-fact-text" id="spin-fact">Tap the wheel above to discover amazing facts about Miami, science, history and more!</div>
+        <div class="spin-cat" id="spin-cat" data-gkey="spinReadyCat">Ready to spin?</div>
+        <div class="spin-fact-text" id="spin-fact" data-gkey="spinReadyFact">Tap the wheel above to discover amazing facts about Miami, science, history and more!</div>
       </div>
     </div>
   </div>
@@ -1531,8 +1531,8 @@
 <div class="game-screen" id="game-image">
   <div class="game-screen-header">
     <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
-    <div class="game-screen-title">🖼️ Guess the Image</div>
-    <div class="game-score-badge">Score: <span id="img-score">0</span></div>
+    <div class="game-screen-title" data-gkey="imgScreenTitle">🖼️ Guess the Image</div>
+    <div class="game-score-badge"><span data-gkey="scoreLabel">Score:</span> <span id="img-score">0</span></div>
   </div>
   <div class="game-body">
     <div class="img-game-area" id="img-game-area">
@@ -1542,17 +1542,17 @@
       <div class="img-hint" id="img-hint"></div>
       <div class="img-opts" id="img-opts"></div>
       <div class="img-feedback" id="img-feedback"></div>
-      <button class="img-next" id="img-next" onclick="imgNext()">Next Image ▶</button>
+      <button class="img-next" id="img-next" onclick="imgNext()" data-gkey="nextImage">Next Image ▶</button>
     </div>
     <div class="img-end-screen" id="img-end-screen" style="display:none">
       <div class="img-end-trophy">🏆</div>
-      <div class="img-end-title">Round Complete!</div>
-      <div class="img-end-score-line">You scored <span class="img-end-score-num" id="img-end-score-val">0</span> out of <span class="img-end-score-denom" id="img-end-total">10</span></div>
+      <div class="img-end-title" data-gkey="roundComplete">Round Complete!</div>
+      <div class="img-end-score-line" id="img-end-score-line">You scored <span class="img-end-score-num" id="img-end-score-val">0</span> out of <span class="img-end-score-denom" id="img-end-total">10</span></div>
       <div class="img-end-stars" id="img-end-stars"></div>
       <div class="img-end-message" id="img-end-message"></div>
       <div class="img-end-actions">
-        <button class="img-end-btn primary" onclick="restartImgGame()"><i class="ti ti-refresh"></i> Play Again</button>
-        <button class="img-end-btn secondary" onclick="closeGame()"><i class="ti ti-arrow-left"></i> Back to Games</button>
+        <button class="img-end-btn primary" onclick="restartImgGame()"><i class="ti ti-refresh"></i> <span data-gkey="playAgainImg">Play Again</span></button>
+        <button class="img-end-btn secondary" onclick="closeGame()"><i class="ti ti-arrow-left"></i> <span data-gkey="backToGames">Back to Games</span></button>
       </div>
     </div>
   </div>
@@ -1717,6 +1717,7 @@ async function loadContent() {
 
 function applyContent() {
   applyStrings();
+  applyGameStrings();
   renderGuide();
   renderWeather();
   renderDriver();
@@ -1753,9 +1754,11 @@ function setLang(l) {
   const map = { en: 0, es: 1, pt: 2, fr: 3 };
   btns[map[l]].classList.add('active');
   applyStrings();
+  applyGameStrings();
   renderGuide();
   renderWeather();
   renderDriver();
+  refreshOpenGame();
   setSubtitleVariant(subtitleVariantIdx);
   logTap('lang_' + l);
 }
@@ -2643,6 +2646,87 @@ function renderWeather() {
 // ════════════════════════════════════════════════════════════
 // GAMES
 // ════════════════════════════════════════════════════════════
+// ── i18n for games (Trivia, Facts Spinner, Guess the Image) ──────────────────
+// Game CONTENT + UI live here in index.html (not content.json) for now — see
+// backlog "games i18n". A translatable field may be a plain string (untranslated
+// → shown as-is) or a {en,es,pt,fr} object; gL() picks the active language with
+// an EN fallback so proper nouns can stay plain strings.
+const gL = (v) => (v && typeof v === 'object' && !Array.isArray(v)) ? (v[lang] || v.en) : v;
+let triviaCurrent = null, spinCurrent = null, imgCurrent = null;
+
+const GAME_UI = {
+  scoreLabel:   { en:'Score:', es:'Puntuación:', pt:'Pontuação:', fr:'Score :' },
+  spinsLabel:   { en:'Spins:', es:'Giros:', pt:'Giros:', fr:'Tours :' },
+  bestTapScore: { en:'Best tap score:', es:'Mejor puntuación:', pt:'Melhor pontuação:', fr:'Meilleur score :' },
+  // Trivia
+  triviaHeroTitle:   { en:'Miami Trivia', es:'Trivia de Miami', pt:'Trivia de Miami', fr:'Quiz de Miami' },
+  triviaScreenTitle: { en:'🧠 Miami Trivia', es:'🧠 Trivia de Miami', pt:'🧠 Trivia de Miami', fr:'🧠 Quiz de Miami' },
+  triviaHeroDesc: {
+    en:"10 questions about Miami's history, culture, landmarks and hidden gems. How well do you know the Magic City?",
+    es:"10 preguntas sobre la historia, la cultura, los lugares emblemáticos y los rincones escondidos de Miami. ¿Cuánto conoces la Ciudad Mágica?",
+    pt:"10 perguntas sobre a história, a cultura, os pontos turísticos e os tesouros escondidos de Miami. O quanto você conhece a Cidade Mágica?",
+    fr:"10 questions sur l'histoire, la culture, les monuments et les trésors cachés de Miami. Connaissez-vous bien la Ville magique ?" },
+  pressStart:   { en:'Press Start to begin!', es:'¡Pulsa Empezar para comenzar!', pt:'Pressione Começar para iniciar!', fr:'Appuyez sur Démarrer pour commencer !' },
+  startTrivia:  { en:'Start Trivia ▶', es:'Empezar trivia ▶', pt:'Começar trivia ▶', fr:'Démarrer le quiz ▶' },
+  correct:      { en:'✅ Correct! Great job!', es:'✅ ¡Correcto! ¡Bien hecho!', pt:'✅ Correto! Muito bem!', fr:'✅ Correct ! Bravo !' },
+  answerIs:     { en:'❌ The answer is:', es:'❌ La respuesta es:', pt:'❌ A resposta é:', fr:'❌ La réponse est :' },
+  nextQuestion: { en:'Next Question ▶', es:'Siguiente pregunta ▶', pt:'Próxima pergunta ▶', fr:'Question suivante ▶' },
+  seeResults:   { en:'See Results ▶', es:'Ver resultados ▶', pt:'Ver resultados ▶', fr:'Voir les résultats ▶' },
+  playAgain:    { en:'Play Again ▶', es:'Jugar de nuevo ▶', pt:'Jogar novamente ▶', fr:'Rejouer ▶' },
+  gameOver:     { en:'🎉 Game over! You scored {s}/{t}. Great job!', es:'🎉 ¡Fin del juego! Obtuviste {s}/{t}. ¡Bien hecho!', pt:'🎉 Fim de jogo! Você fez {s}/{t}. Muito bem!', fr:'🎉 Partie terminée ! Vous avez obtenu {s}/{t}. Bravo !' },
+  // Facts Spinner
+  spinScreenTitle: { en:'🌀 Facts Spinner', es:'🌀 Ruleta de datos', pt:'🌀 Roleta de fatos', fr:'🌀 Roue des faits' },
+  spinCardTitle:   { en:'Facts Spinner', es:'Ruleta de datos', pt:'Roleta de fatos', fr:'Roue des faits' },
+  spinCardDesc:    { en:'Spin for surprising facts about Miami, science & history.', es:'Gira para descubrir datos sorprendentes sobre Miami, ciencia e historia.', pt:'Gire para descobrir fatos surpreendentes sobre Miami, ciência e história.', fr:'Tournez pour découvrir des faits surprenants sur Miami, la science et l\'histoire.' },
+  spinHint:        { en:'Tap the wheel to spin!', es:'¡Toca la rueda para girar!', pt:'Toque na roda para girar!', fr:'Touchez la roue pour tourner !' },
+  spinReadyCat:    { en:'Ready to spin?', es:'¿Listo para girar?', pt:'Pronto para girar?', fr:'Prêt à tourner ?' },
+  spinReadyFact:   { en:'Tap the wheel above to discover amazing facts about Miami, science, history and more!', es:'¡Toca la rueda de arriba para descubrir datos asombrosos sobre Miami, ciencia, historia y más!', pt:'Toque na roda acima para descobrir fatos incríveis sobre Miami, ciência, história e muito mais!', fr:'Touchez la roue ci-dessus pour découvrir des faits incroyables sur Miami, la science, l\'histoire et plus encore !' },
+  // Guess the Image
+  imgScreenTitle: { en:'🖼️ Guess the Image', es:'🖼️ Adivina la imagen', pt:'🖼️ Adivinhe a imagem', fr:'🖼️ Devinez l\'image' },
+  imgCardTitle:   { en:'Guess the Image', es:'Adivina la imagen', pt:'Adivinhe a imagem', fr:'Devinez l\'image' },
+  imgCardDesc:    { en:'Real photos of world landmarks — can you name them?', es:'Fotos reales de monumentos del mundo, ¿puedes nombrarlos?', pt:'Fotos reais de pontos turísticos do mundo — você consegue nomeá-los?', fr:'De vraies photos de monuments du monde — saurez-vous les nommer ?' },
+  nextImage:    { en:'Next Image ▶', es:'Siguiente imagen ▶', pt:'Próxima imagem ▶', fr:'Image suivante ▶' },
+  loadingImg:   { en:'Loading image…', es:'Cargando imagen…', pt:'Carregando imagem…', fr:'Chargement de l\'image…' },
+  notCached:    { en:'Image not cached yet — open app on Wi-Fi to load images', es:'Imagen aún no guardada — abre la app con Wi-Fi para cargar las imágenes', pt:'Imagem ainda não armazenada — abra o app no Wi-Fi para carregar as imagens', fr:'Image pas encore enregistrée — ouvrez l\'appli en Wi-Fi pour charger les images' },
+  roundComplete:{ en:'Round Complete!', es:'¡Ronda completa!', pt:'Rodada concluída!', fr:'Manche terminée !' },
+  youScored:    { en:'You scored {n} out of {t}', es:'Obtuviste {n} de {t}', pt:'Você acertou {n} de {t}', fr:'Vous avez obtenu {n} sur {t}' },
+  playAgainImg: { en:'Play Again', es:'Jugar de nuevo', pt:'Jogar novamente', fr:'Rejouer' },
+  backToGames:  { en:'Back to Games', es:'Volver a los juegos', pt:'Voltar aos jogos', fr:'Retour aux jeux' },
+};
+const gt = (k) => { const v = GAME_UI[k]; return v ? (v[lang] || v.en) : k; };
+
+// Guess-the-Image end-of-round messages, by score fraction (highest first).
+const IMG_END_MSGS = [
+  { min: 1,   msg:{ en:'🌟 Perfect score! You really know your landmarks!', es:'🌟 ¡Puntuación perfecta! ¡De verdad conoces los monumentos!', pt:'🌟 Pontuação perfeita! Você realmente conhece os pontos turísticos!', fr:'🌟 Score parfait ! Vous connaissez vraiment vos monuments !' } },
+  { min: 0.8, msg:{ en:"🎉 Excellent! You're a world traveler at heart!", es:'🎉 ¡Excelente! ¡Eres un viajero del mundo de corazón!', pt:'🎉 Excelente! Você é um viajante do mundo de coração!', fr:"🎉 Excellent ! Vous êtes un voyageur dans l'âme !" } },
+  { min: 0.6, msg:{ en:'👍 Good job! Keep exploring the world!', es:'👍 ¡Bien hecho! ¡Sigue explorando el mundo!', pt:'👍 Muito bem! Continue explorando o mundo!', fr:'👍 Bien joué ! Continuez à explorer le monde !' } },
+  { min: 0.4, msg:{ en:'✈️ Not bad — the world has so much more to show you!', es:'✈️ ¡Nada mal — el mundo tiene mucho más para mostrarte!', pt:'✈️ Nada mal — o mundo tem muito mais para te mostrar!', fr:'✈️ Pas mal — le monde a encore tant à vous montrer !' } },
+  { min: -1,  msg:{ en:"🗺️ Keep playing — you'll learn them all!", es:'🗺️ ¡Sigue jugando — los aprenderás todos!', pt:'🗺️ Continue jogando — você vai aprender todos!', fr:'🗺️ Continuez à jouer — vous les apprendrez tous !' } },
+];
+
+// Set every static [data-gkey] label to the active language. Called on load and
+// on every language switch.
+function applyGameStrings() {
+  document.querySelectorAll('[data-gkey]').forEach(el => { el.textContent = gt(el.getAttribute('data-gkey')); });
+  const hs = document.getElementById('high-score-display');
+  if (hs) hs.textContent = gt('bestTapScore') + ' ' + (typeof tapBest === 'number' ? tapBest : 0);
+}
+
+// Re-render the dynamic content of whichever game is open, in the new language.
+function refreshOpenGame() {
+  const open = document.querySelector('.game-screen.open');
+  if (!open) return;
+  if (open.id === 'game-spin' && spinCurrent) {
+    document.getElementById('spin-cat').textContent = gL(spinCurrent.cat);
+    document.getElementById('spin-fact').textContent = gL(spinCurrent.fact);
+  } else if (open.id === 'game-image' && imgCurrent && !imgAnswered) {
+    renderImgRoundLabels(imgCurrent);
+  } else if (open.id === 'game-trivia' && triviaCurrent && !triviaAnswered &&
+             document.getElementById('trivia-opts').children.length) {
+    renderTriviaQuestion();
+  }
+}
+
 function openGame(type) {
   document.getElementById('game-' + type).classList.add('open');
   resetInactivity();
@@ -2658,50 +2742,71 @@ function closeGame() {
 }
 
 // ── Trivia ────────────────────────────────────────────────
+// q/opts may be plain strings (proper nouns kept as-is) or {en,es,pt,fr}; gL() resolves them.
 const TRIVIA_QUESTIONS = [
-  { q:"What is Miami's famous beachside neighborhood?", opts:["North Shore","South Beach","East End","Key West"], a:1 },
-  { q:"Which famous art fair is held in Miami Beach each December?", opts:["Art Basel","Frieze","TEFAF","The Armory Show"], a:0 },
-  { q:"What is the name of Miami's NBA team?", opts:["Miami Storm","Florida Thunder","Miami Heat","South Florida Suns"], a:2 },
-  { q:"What major river runs through Downtown Miami?", opts:["St. Johns","Miami River","Caloosahatchee","New River"], a:1 },
-  { q:"Which neighborhood is known as Miami's Cuban cultural hub?", opts:["Little Haiti","Coconut Grove","Little Havana","Coral Gables"], a:2 },
-  { q:"The iconic 'Welcome to Miami' song is by which artist?", opts:["Pitbull","Will Smith","Flo Rida","Enrique Iglesias"], a:1 },
-  { q:"What year was the City of Miami officially incorporated?", opts:["1892","1896","1905","1910"], a:1 },
-  { q:"Which architectural style dominates South Beach's Ocean Drive?", opts:["Victorian","Gothic Revival","Art Deco","Brutalist"], a:2 },
-  { q:"What is the name of Miami's main performing arts center?", opts:["Adrienne Arsht Center","Ziff Ballet Opera","Gusman Hall","Hard Rock Stadium"], a:0 },
-  { q:"Miami is nicknamed 'The Magic City' — why?", opts:["It has Disney World","It grew so fast it seemed like magic","Its weather changes magically","Built by a magician"], a:1 }
+  { q:{ en:"What is Miami's famous beachside neighborhood?", es:"¿Cuál es el famoso barrio junto a la playa de Miami?", pt:"Qual é o famoso bairro à beira-mar de Miami?", fr:"Quel est le célèbre quartier en bord de mer de Miami ?" },
+    opts:["North Shore","South Beach","East End","Key West"], a:1 },
+  { q:{ en:"Which famous art fair is held in Miami Beach each December?", es:"¿Qué famosa feria de arte se celebra en Miami Beach cada diciembre?", pt:"Qual famosa feira de arte acontece em Miami Beach todo dezembro?", fr:"Quelle célèbre foire d'art se tient à Miami Beach chaque décembre ?" },
+    opts:["Art Basel","Frieze","TEFAF","The Armory Show"], a:0 },
+  { q:{ en:"What is the name of Miami's NBA team?", es:"¿Cómo se llama el equipo de la NBA de Miami?", pt:"Qual é o nome do time da NBA de Miami?", fr:"Quel est le nom de l'équipe NBA de Miami ?" },
+    opts:["Miami Storm","Florida Thunder","Miami Heat","South Florida Suns"], a:2 },
+  { q:{ en:"What major river runs through Downtown Miami?", es:"¿Qué río importante atraviesa el centro de Miami?", pt:"Qual grande rio atravessa o centro de Miami?", fr:"Quelle grande rivière traverse le centre-ville de Miami ?" },
+    opts:["St. Johns","Miami River","Caloosahatchee","New River"], a:1 },
+  { q:{ en:"Which neighborhood is known as Miami's Cuban cultural hub?", es:"¿Qué barrio es conocido como el centro cultural cubano de Miami?", pt:"Qual bairro é conhecido como o centro cultural cubano de Miami?", fr:"Quel quartier est connu comme le cœur culturel cubain de Miami ?" },
+    opts:["Little Haiti","Coconut Grove","Little Havana","Coral Gables"], a:2 },
+  { q:{ en:"The iconic 'Welcome to Miami' song is by which artist?", es:"¿La icónica canción 'Welcome to Miami' es de qué artista?", pt:"A icônica música 'Welcome to Miami' é de qual artista?", fr:"La célèbre chanson « Welcome to Miami » est de quel artiste ?" },
+    opts:["Pitbull","Will Smith","Flo Rida","Enrique Iglesias"], a:1 },
+  { q:{ en:"What year was the City of Miami officially incorporated?", es:"¿En qué año se constituyó oficialmente la ciudad de Miami?", pt:"Em que ano a cidade de Miami foi oficialmente incorporada?", fr:"En quelle année la ville de Miami a-t-elle été officiellement fondée ?" },
+    opts:["1892","1896","1905","1910"], a:1 },
+  { q:{ en:"Which architectural style dominates South Beach's Ocean Drive?", es:"¿Qué estilo arquitectónico domina Ocean Drive en South Beach?", pt:"Qual estilo arquitetônico domina a Ocean Drive em South Beach?", fr:"Quel style architectural domine Ocean Drive à South Beach ?" },
+    opts:[ { en:"Victorian", es:"Victoriano", pt:"Vitoriano", fr:"Victorien" }, { en:"Gothic Revival", es:"Neogótico", pt:"Neogótico", fr:"Néogothique" }, { en:"Art Deco", es:"Art Déco", pt:"Art Déco", fr:"Art déco" }, { en:"Brutalist", es:"Brutalista", pt:"Brutalista", fr:"Brutaliste" } ], a:2 },
+  { q:{ en:"What is the name of Miami's main performing arts center?", es:"¿Cómo se llama el principal centro de artes escénicas de Miami?", pt:"Qual é o nome do principal centro de artes cênicas de Miami?", fr:"Quel est le nom du principal centre des arts du spectacle de Miami ?" },
+    opts:["Adrienne Arsht Center","Ziff Ballet Opera","Gusman Hall","Hard Rock Stadium"], a:0 },
+  { q:{ en:"Miami is nicknamed 'The Magic City' — why?", es:"Miami es apodada 'La Ciudad Mágica' — ¿por qué?", pt:"Miami é apelidada de 'A Cidade Mágica' — por quê?", fr:"Miami est surnommée « la Ville magique » — pourquoi ?" },
+    opts:[ { en:"It has Disney World", es:"Tiene Disney World", pt:"Tem a Disney World", fr:"Elle a Disney World" }, { en:"It grew so fast it seemed like magic", es:"Creció tan rápido que parecía magia", pt:"Cresceu tão rápido que parecia mágica", fr:"Elle a grandi si vite que cela semblait magique" }, { en:"Its weather changes magically", es:"Su clima cambia mágicamente", pt:"Seu clima muda magicamente", fr:"Sa météo change comme par magie" }, { en:"Built by a magician", es:"Construida por un mago", pt:"Construída por um mágico", fr:"Construite par un magicien" } ], a:1 }
 ];
 
 function initTrivia() {
-  triviaScore = 0; triviaQ = 0; triviaAnswered = false;
+  triviaScore = 0; triviaQ = 0; triviaAnswered = false; triviaCurrent = null;
   document.getElementById('trivia-score').textContent = '0';
   document.getElementById('trivia-total').textContent = TRIVIA_QUESTIONS.length;
-  document.getElementById('trivia-question').textContent = 'Press Start to begin!';
+  document.getElementById('trivia-question').textContent = gt('pressStart');
   document.getElementById('trivia-opts').innerHTML = '';
   document.getElementById('trivia-feedback').className = 'trivia-feedback';
-  document.getElementById('trivia-next').textContent = 'Start Trivia ▶';
+  document.getElementById('trivia-next').textContent = gt('startTrivia');
   document.getElementById('trivia-next').className = 'trivia-next show';
 }
 
 function triviaNext() {
   if (triviaQ >= TRIVIA_QUESTIONS.length) {
-    document.getElementById('trivia-question').textContent = `🎉 Game over! You scored ${triviaScore}/${TRIVIA_QUESTIONS.length}. Great job!`;
+    triviaCurrent = null;
+    document.getElementById('trivia-question').textContent =
+      gt('gameOver').replace('{s}', triviaScore).replace('{t}', TRIVIA_QUESTIONS.length);
     document.getElementById('trivia-opts').innerHTML = '';
-    document.getElementById('trivia-next').textContent = 'Play Again ▶';
+    document.getElementById('trivia-next').textContent = gt('playAgain');
     document.getElementById('trivia-feedback').className = 'trivia-feedback';
     triviaQ = 0; triviaScore = 0;
     document.getElementById('trivia-score').textContent = '0';
     return;
   }
   triviaAnswered = false;
-  const q = TRIVIA_QUESTIONS[triviaQ];
-  document.getElementById('trivia-question').textContent = `${triviaQ + 1}. ${q.q}`;
+  triviaCurrent = TRIVIA_QUESTIONS[triviaQ];
   document.getElementById('trivia-feedback').className = 'trivia-feedback';
   document.getElementById('trivia-next').className = 'trivia-next';
+  renderTriviaQuestion();
+}
+
+// Render the current question + options in the active language (also used to
+// re-render in place when the rider switches language mid-question).
+function renderTriviaQuestion() {
+  const q = triviaCurrent;
+  if (!q) return;
+  document.getElementById('trivia-question').textContent = `${triviaQ + 1}. ${gL(q.q)}`;
   const opts = document.getElementById('trivia-opts');
   opts.innerHTML = '';
   q.opts.forEach((o, i) => {
     const btn = document.createElement('button');
-    btn.className = 'trivia-opt'; btn.textContent = o;
+    btn.className = 'trivia-opt'; btn.textContent = gL(o);
     btn.onclick = () => answerTrivia(i, q.a);
     opts.appendChild(btn);
   });
@@ -2720,14 +2825,14 @@ function answerTrivia(chosen, correct) {
   if (chosen === correct) {
     triviaScore++;
     document.getElementById('trivia-score').textContent = triviaScore;
-    fb.textContent = '✅ Correct! Great job!';
+    fb.textContent = gt('correct');
     fb.className = 'trivia-feedback show ok';
   } else {
-    fb.textContent = `❌ The answer is: ${TRIVIA_QUESTIONS[triviaQ].opts[correct]}`;
+    fb.textContent = `${gt('answerIs')} ${gL(TRIVIA_QUESTIONS[triviaQ].opts[correct])}`;
     fb.className = 'trivia-feedback show no';
   }
   triviaQ++;
-  document.getElementById('trivia-next').textContent = triviaQ >= TRIVIA_QUESTIONS.length ? 'See Results ▶' : 'Next Question ▶';
+  document.getElementById('trivia-next').textContent = triviaQ >= TRIVIA_QUESTIONS.length ? gt('seeResults') : gt('nextQuestion');
   document.getElementById('trivia-next').className = 'trivia-next show';
 }
 
@@ -2753,7 +2858,7 @@ function startTap() {
         localStorage.setItem('tapBest', tapBest);
         document.getElementById('tap-best-display').textContent = tapBest;
         document.getElementById('tap-best-txt').textContent = tapBest;
-        document.getElementById('high-score-display').textContent = `Best tap: ${tapBest}`;
+        document.getElementById('high-score-display').textContent = `${gt('bestTapScore')} ${tapBest}`;
       }
       const msgs = ['🔥 On fire!','⚡ Lightning fingers!','👏 Nice work!','🤩 Incredible!','💪 Strong effort!'];
       document.getElementById('tap-result').textContent = `${tapCount} taps! ${msgs[Math.floor(Math.random()*msgs.length)]}`;
@@ -2850,24 +2955,39 @@ document.getElementById('word-input').addEventListener('input', renderWordLetter
 
 // ── Facts Spinner ─────────────────────────────────────────
 const SPIN_FACTS = [
-  { cat:'🌴 Miami', fact:'Miami has more Rolls-Royces per capita than any other US city. No surprise given the sunny lifestyle!' },
-  { cat:'🌊 Ocean', fact:'The Atlantic Ocean off Miami Beach stays warm enough to swim in year-round — even in January!' },
-  { cat:'🦈 Wildlife', fact:'Bull sharks have been spotted in Miami\'s canals. They can survive in both salt and fresh water!' },
-  { cat:'🎭 Culture', fact:'Miami is home to over 100 different nationalities — one of the most diverse cities on Earth.' },
-  { cat:'🔬 Science', fact:'Honey never spoils. Archaeologists found 3,000-year-old honey in Egyptian tombs that was still edible!' },
-  { cat:'🧠 Brain', fact:'Your brain uses 20% of your body\'s total energy despite being only 2% of your body weight.' },
-  { cat:'🌍 History', fact:'Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid.' },
-  { cat:'🚀 Space', fact:'There are more stars in the observable universe than grains of sand on all of Earth\'s beaches combined.' },
-  { cat:'🐙 Ocean', fact:'Octopuses have three hearts — two pump blood to the gills, one pumps it to the rest of the body.' },
-  { cat:'🌴 Miami', fact:'Miami\'s Coconut Grove is the oldest continuously inhabited community in Florida, settled in 1825!' },
-  { cat:'⚡ Science', fact:'Lightning strikes Earth about 100 times per second — 8 million times per day!' },
-  { cat:'🇹🇷 World', fact:'Istanbul is the only city in the world that straddles two continents — Europe and Asia.' },
-  { cat:'🌴 Miami', fact:'Port of Miami is the world\'s busiest cruise port, handling over 6 million passengers per year.' },
-  { cat:'🧬 Science', fact:'You share about 50% of your DNA with a banana. Life is surprisingly connected.' },
+  { cat:{ en:'🌴 Miami', es:'🌴 Miami', pt:'🌴 Miami', fr:'🌴 Miami' },
+    fact:{ en:'Miami has more Rolls-Royces per capita than any other US city. No surprise given the sunny lifestyle!', es:'Miami tiene más Rolls-Royce per cápita que cualquier otra ciudad de EE. UU. ¡No es de extrañar con este estilo de vida tan soleado!', pt:'Miami tem mais Rolls-Royce per capita do que qualquer outra cidade dos EUA. Não é surpresa, com esse estilo de vida ensolarado!', fr:'Miami compte plus de Rolls-Royce par habitant que toute autre ville américaine. Pas étonnant avec ce mode de vie ensoleillé !' } },
+  { cat:{ en:'🌊 Ocean', es:'🌊 Océano', pt:'🌊 Oceano', fr:'🌊 Océan' },
+    fact:{ en:'The Atlantic Ocean off Miami Beach stays warm enough to swim in year-round — even in January!', es:'El océano Atlántico frente a Miami Beach se mantiene lo bastante cálido para nadar todo el año, ¡incluso en enero!', pt:'O oceano Atlântico em Miami Beach fica quente o suficiente para nadar o ano todo — até em janeiro!', fr:"L'océan Atlantique au large de Miami Beach reste assez chaud pour se baigner toute l'année — même en janvier !" } },
+  { cat:{ en:'🦈 Wildlife', es:'🦈 Fauna', pt:'🦈 Vida selvagem', fr:'🦈 Faune' },
+    fact:{ en:"Bull sharks have been spotted in Miami's canals. They can survive in both salt and fresh water!", es:'Se han avistado tiburones toro en los canales de Miami. ¡Pueden sobrevivir tanto en agua salada como dulce!', pt:'Tubarões-touro já foram avistados nos canais de Miami. Eles sobrevivem tanto em água salgada quanto doce!', fr:"Des requins-bouledogues ont été aperçus dans les canaux de Miami. Ils survivent aussi bien en eau salée qu'en eau douce !" } },
+  { cat:{ en:'🎭 Culture', es:'🎭 Cultura', pt:'🎭 Cultura', fr:'🎭 Culture' },
+    fact:{ en:'Miami is home to over 100 different nationalities — one of the most diverse cities on Earth.', es:'Miami alberga más de 100 nacionalidades distintas: una de las ciudades más diversas del mundo.', pt:'Miami abriga mais de 100 nacionalidades diferentes — uma das cidades mais diversas do mundo.', fr:"Miami abrite plus de 100 nationalités différentes — l'une des villes les plus diverses au monde." } },
+  { cat:{ en:'🔬 Science', es:'🔬 Ciencia', pt:'🔬 Ciência', fr:'🔬 Science' },
+    fact:{ en:'Honey never spoils. Archaeologists found 3,000-year-old honey in Egyptian tombs that was still edible!', es:'La miel nunca se echa a perder. ¡Arqueólogos encontraron miel de 3000 años en tumbas egipcias que aún era comestible!', pt:'O mel nunca estraga. Arqueólogos encontraram mel de 3.000 anos em tumbas egípcias que ainda era comestível!', fr:'Le miel ne se périme jamais. Des archéologues ont trouvé dans des tombes égyptiennes du miel vieux de 3 000 ans encore comestible !' } },
+  { cat:{ en:'🧠 Brain', es:'🧠 Cerebro', pt:'🧠 Cérebro', fr:'🧠 Cerveau' },
+    fact:{ en:"Your brain uses 20% of your body's total energy despite being only 2% of your body weight.", es:'Tu cerebro usa el 20 % de la energía total del cuerpo a pesar de ser solo el 2 % de tu peso.', pt:'Seu cérebro usa 20% da energia total do corpo, apesar de ser apenas 2% do seu peso.', fr:"Votre cerveau consomme 20 % de l'énergie totale du corps alors qu'il ne représente que 2 % de son poids." } },
+  { cat:{ en:'🌍 History', es:'🌍 Historia', pt:'🌍 História', fr:'🌍 Histoire' },
+    fact:{ en:'Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid.', es:'Cleopatra vivió más cerca en el tiempo de la llegada a la Luna que de la construcción de la Gran Pirámide.', pt:'Cleópatra viveu mais perto no tempo da chegada à Lua do que da construção da Grande Pirâmide.', fr:"Cléopâtre a vécu plus près dans le temps de l'alunissage que de la construction de la Grande Pyramide." } },
+  { cat:{ en:'🚀 Space', es:'🚀 Espacio', pt:'🚀 Espaço', fr:'🚀 Espace' },
+    fact:{ en:"There are more stars in the observable universe than grains of sand on all of Earth's beaches combined.", es:'Hay más estrellas en el universo observable que granos de arena en todas las playas de la Tierra juntas.', pt:'Há mais estrelas no universo observável do que grãos de areia em todas as praias da Terra juntas.', fr:"Il y a plus d'étoiles dans l'univers observable que de grains de sable sur toutes les plages de la Terre réunies." } },
+  { cat:{ en:'🐙 Ocean', es:'🐙 Océano', pt:'🐙 Oceano', fr:'🐙 Océan' },
+    fact:{ en:'Octopuses have three hearts — two pump blood to the gills, one pumps it to the rest of the body.', es:'Los pulpos tienen tres corazones: dos bombean sangre a las branquias y uno al resto del cuerpo.', pt:'Os polvos têm três corações — dois bombeiam sangue para as guelras e um para o resto do corpo.', fr:'Les poulpes ont trois cœurs — deux envoient le sang aux branchies, un au reste du corps.' } },
+  { cat:{ en:'🌴 Miami', es:'🌴 Miami', pt:'🌴 Miami', fr:'🌴 Miami' },
+    fact:{ en:"Miami's Coconut Grove is the oldest continuously inhabited community in Florida, settled in 1825!", es:'Coconut Grove, en Miami, es la comunidad habitada de forma continua más antigua de Florida, ¡fundada en 1825!', pt:'Coconut Grove, em Miami, é a comunidade continuamente habitada mais antiga da Flórida, fundada em 1825!', fr:'Coconut Grove, à Miami, est la plus ancienne communauté habitée sans interruption de Floride, fondée en 1825 !' } },
+  { cat:{ en:'⚡ Science', es:'⚡ Ciencia', pt:'⚡ Ciência', fr:'⚡ Science' },
+    fact:{ en:'Lightning strikes Earth about 100 times per second — 8 million times per day!', es:'Un rayo cae sobre la Tierra unas 100 veces por segundo: ¡8 millones de veces al día!', pt:'Um raio atinge a Terra cerca de 100 vezes por segundo — 8 milhões de vezes por dia!', fr:'La foudre frappe la Terre environ 100 fois par seconde — 8 millions de fois par jour !' } },
+  { cat:{ en:'🇹🇷 World', es:'🇹🇷 Mundo', pt:'🇹🇷 Mundo', fr:'🇹🇷 Monde' },
+    fact:{ en:'Istanbul is the only city in the world that straddles two continents — Europe and Asia.', es:'Estambul es la única ciudad del mundo que se extiende sobre dos continentes: Europa y Asia.', pt:'Istambul é a única cidade do mundo que fica sobre dois continentes — Europa e Ásia.', fr:"Istanbul est la seule ville au monde à cheval sur deux continents — l'Europe et l'Asie." } },
+  { cat:{ en:'🌴 Miami', es:'🌴 Miami', pt:'🌴 Miami', fr:'🌴 Miami' },
+    fact:{ en:"Port of Miami is the world's busiest cruise port, handling over 6 million passengers per year.", es:'El Puerto de Miami es el puerto de cruceros más concurrido del mundo, con más de 6 millones de pasajeros al año.', pt:'O Porto de Miami é o porto de cruzeiros mais movimentado do mundo, com mais de 6 milhões de passageiros por ano.', fr:'Le port de Miami est le port de croisière le plus fréquenté au monde, avec plus de 6 millions de passagers par an.' } },
+  { cat:{ en:'🧬 Science', es:'🧬 Ciencia', pt:'🧬 Ciência', fr:'🧬 Science' },
+    fact:{ en:'You share about 50% of your DNA with a banana. Life is surprisingly connected.', es:'Compartes alrededor del 50 % de tu ADN con un plátano. La vida está sorprendentemente conectada.', pt:'Você compartilha cerca de 50% do seu DNA com uma banana. A vida é surpreendentemente conectada.', fr:'Vous partagez environ 50 % de votre ADN avec une banane. Le vivant est étonnamment connecté.' } },
 ];
 
 function doSpin() {
   const f = SPIN_FACTS[Math.floor(Math.random() * SPIN_FACTS.length)];
+  spinCurrent = f;
   spinCount++;
   document.getElementById('spin-count').textContent = spinCount;
   const wheel = document.querySelector('.spinner-wheel');
@@ -2878,8 +2998,8 @@ function doSpin() {
   const factEl = document.getElementById('spin-fact');
   catEl.style.opacity = '0'; factEl.style.opacity = '0';
   setTimeout(() => {
-    catEl.textContent = f.cat;
-    factEl.textContent = f.fact;
+    catEl.textContent = gL(f.cat);
+    factEl.textContent = gL(f.fact);
     catEl.style.opacity = '1'; factEl.style.opacity = '1';
     catEl.style.transition = 'opacity 0.3s'; factEl.style.transition = 'opacity 0.3s';
   }, 300);
@@ -2888,22 +3008,68 @@ function doSpin() {
 // ── Guess the Image ───────────────────────────────────────
 // Images stored locally in /public/images/games/
 // Served from Cloudflare Pages, cached by Service Worker — works fully offline
+// hint/opts/explain may be {en,es,pt,fr} or plain strings (proper nouns). gL() resolves.
 const IMG_ROUNDS = [
-  { file:'statue-of-liberty.jpg', emoji:'🗽', hint:'Located in New York Harbor, USA', opts:['Eiffel Tower','Big Ben','Statue of Liberty','Colosseum'], a:2, explain:'The Statue of Liberty! A gift from France, unveiled in 1886.' },
-  { file:'eiffel-tower.jpg', emoji:'🗼', hint:'Located in Paris, France', opts:['Eiffel Tower','Empire State Building','Burj Khalifa','Big Ben'], a:0, explain:'The Eiffel Tower, built in 1889 by Gustave Eiffel. Bonjour! 🇫🇷' },
-  { file:'colosseum.jpg', emoji:'🏟️', hint:'Ancient amphitheater in Rome, Italy', opts:['Parthenon','Pantheon','Colosseum','Circus Maximus'], a:2, explain:'The Roman Colosseum — once hosted gladiator battles for 50,000 spectators!' },
-  { file:'machu-picchu.jpg', emoji:'🏔️', hint:'Ancient Incan citadel high in the Andes', opts:['Machu Picchu','Angkor Wat','Tikal','Chichen Itza'], a:0, explain:'Machu Picchu — the lost city of the Incas, high in the Peruvian mountains!' },
-  { file:'taj-mahal.jpg', emoji:'🕌', hint:'White marble mausoleum in Agra, India', opts:['Taj Mahal','Alhambra','Topkapi Palace','Red Fort'], a:0, explain:'The Taj Mahal — a monument to love, built in 1632 by Emperor Shah Jahan.' },
-  { file:'sydney-opera.jpg', emoji:'🎭', hint:'Iconic performing arts venue in Australia', opts:['Sydney Opera House','Walt Disney Concert Hall','La Scala','Royal Opera House'], a:0, explain:'The Sydney Opera House — one of the 20th century\'s greatest buildings.' },
-  { file:'golden-gate.jpg', emoji:'🌉', hint:'Famous red suspension bridge in California', opts:['Brooklyn Bridge','Golden Gate Bridge','Sydney Harbour Bridge','Millau Viaduct'], a:1, explain:'The Golden Gate Bridge — opened in 1937 and still one of the world\'s most iconic structures!' },
-  { file:'big-ben.jpg', emoji:'🕰️', hint:'Famous clock tower in London, England', opts:['Notre-Dame','Big Ben','Eiffel Tower','Sagrada Família'], a:1, explain:'Big Ben — officially the Elizabeth Tower. The bell has rung since 1859.' },
-  { file:'sagrada-familia.jpg', emoji:'⛪', hint:'Still-unfinished basilica in Barcelona, Spain', opts:['Notre-Dame','St. Peter\'s Basilica','Sagrada Família','Hagia Sophia'], a:2, explain:'Sagrada Família — Gaudí\'s masterpiece, under construction since 1882!' },
-  { file:'christ-redeemer.jpg', emoji:'✝️', hint:'Famous statue atop a mountain in Brazil', opts:['Statue of Liberty','Christ the Redeemer','Angel of the North','Motherland Calls'], a:1, explain:'Christ the Redeemer — 98 feet tall, overlooking Rio de Janeiro from Corcovado mountain.' },
-  { file:'great-wall.jpg', emoji:'🧱', hint:'The world\'s longest wall, in northern China', opts:['Hadrian\'s Wall','Great Wall of China','Berlin Wall','Aurelian Wall'], a:1, explain:'The Great Wall of China — stretches over 13,000 miles across northern China!' },
-  { file:'wynwood-walls.webp', emoji:'🎨', hint:'Famous open-air street art museum in Miami', opts:['Wynwood Walls','The High Line','Bowery Mural','MOCA Geffen'], a:0, explain:'Wynwood Walls — Miami\'s own world-class open-air street art museum!' },
-  { file:'burj-khalifa.jpg', emoji:'🏙️', hint:'Tallest building in the world, in Dubai', opts:['Empire State Building','Burj Khalifa','CN Tower','Shanghai Tower'], a:1, explain:'The Burj Khalifa in Dubai — at 2,717 feet, the tallest structure ever built!' },
-  { file:'petra.jpg', emoji:'🏜️', hint:'Rose-red ancient city carved into cliffs, Jordan', opts:['Pompeii','Petra','Palmyra','Persepolis'], a:1, explain:'Petra — the ancient Nabataean city carved into rose-red sandstone cliffs in Jordan.' },
-  { file:'angkor-wat.jpg', emoji:'🛕', hint:'Ancient temple complex in Cambodia', opts:['Borobudur','Bagan','Angkor Wat','Tikal'], a:2, explain:'Angkor Wat — the world\'s largest religious monument, built in the 12th century.' },
+  { file:'statue-of-liberty.jpg', emoji:'🗽', a:2,
+    hint:{ en:'Located in New York Harbor, USA', es:'Ubicada en el puerto de Nueva York, EE. UU.', pt:'Localizada no porto de Nova York, EUA', fr:'Située dans le port de New York, aux États-Unis' },
+    opts:[ {en:'Eiffel Tower',es:'Torre Eiffel',pt:'Torre Eiffel',fr:'Tour Eiffel'}, 'Big Ben', {en:'Statue of Liberty',es:'Estatua de la Libertad',pt:'Estátua da Liberdade',fr:'Statue de la Liberté'}, {en:'Colosseum',es:'Coliseo',pt:'Coliseu',fr:'Colisée'} ],
+    explain:{ en:'The Statue of Liberty! A gift from France, unveiled in 1886.', es:'¡La Estatua de la Libertad! Un regalo de Francia, inaugurada en 1886.', pt:'A Estátua da Liberdade! Um presente da França, inaugurada em 1886.', fr:'La Statue de la Liberté ! Un cadeau de la France, inaugurée en 1886.' } },
+  { file:'eiffel-tower.jpg', emoji:'🗼', a:0,
+    hint:{ en:'Located in Paris, France', es:'Ubicada en París, Francia', pt:'Localizada em Paris, França', fr:'Située à Paris, en France' },
+    opts:[ {en:'Eiffel Tower',es:'Torre Eiffel',pt:'Torre Eiffel',fr:'Tour Eiffel'}, 'Empire State Building', 'Burj Khalifa', 'Big Ben' ],
+    explain:{ en:'The Eiffel Tower, built in 1889 by Gustave Eiffel. Bonjour! 🇫🇷', es:'La Torre Eiffel, construida en 1889 por Gustave Eiffel. ¡Bonjour! 🇫🇷', pt:'A Torre Eiffel, construída em 1889 por Gustave Eiffel. Bonjour! 🇫🇷', fr:'La tour Eiffel, construite en 1889 par Gustave Eiffel. Bonjour ! 🇫🇷' } },
+  { file:'colosseum.jpg', emoji:'🏟️', a:2,
+    hint:{ en:'Ancient amphitheater in Rome, Italy', es:'Antiguo anfiteatro en Roma, Italia', pt:'Antigo anfiteatro em Roma, Itália', fr:'Amphithéâtre antique à Rome, en Italie' },
+    opts:[ {en:'Parthenon',es:'Partenón',pt:'Partenon',fr:'Parthénon'}, {en:'Pantheon',es:'Panteón',pt:'Panteão',fr:'Panthéon'}, {en:'Colosseum',es:'Coliseo',pt:'Coliseu',fr:'Colisée'}, 'Circus Maximus' ],
+    explain:{ en:'The Roman Colosseum — once hosted gladiator battles for 50,000 spectators!', es:'El Coliseo romano: ¡albergó combates de gladiadores ante 50 000 espectadores!', pt:'O Coliseu romano — já recebeu lutas de gladiadores para 50.000 espectadores!', fr:'Le Colisée romain — il a accueilli des combats de gladiateurs devant 50 000 spectateurs !' } },
+  { file:'machu-picchu.jpg', emoji:'🏔️', a:0,
+    hint:{ en:'Ancient Incan citadel high in the Andes', es:'Antigua ciudadela inca en lo alto de los Andes', pt:'Antiga cidadela inca no alto dos Andes', fr:'Ancienne citadelle inca au sommet des Andes' },
+    opts:['Machu Picchu','Angkor Wat','Tikal','Chichen Itza'],
+    explain:{ en:'Machu Picchu — the lost city of the Incas, high in the Peruvian mountains!', es:'Machu Picchu: ¡la ciudad perdida de los incas, en lo alto de las montañas peruanas!', pt:'Machu Picchu — a cidade perdida dos incas, no alto das montanhas peruanas!', fr:'Machu Picchu — la cité perdue des Incas, au cœur des montagnes péruviennes !' } },
+  { file:'taj-mahal.jpg', emoji:'🕌', a:0,
+    hint:{ en:'White marble mausoleum in Agra, India', es:'Mausoleo de mármol blanco en Agra, India', pt:'Mausoléu de mármore branco em Agra, Índia', fr:'Mausolée de marbre blanc à Agra, en Inde' },
+    opts:[ 'Taj Mahal', 'Alhambra', {en:'Topkapi Palace',es:'Palacio de Topkapi',pt:'Palácio de Topkapi',fr:'Palais de Topkapı'}, {en:'Red Fort',es:'Fuerte Rojo',pt:'Forte Vermelho',fr:'Fort Rouge'} ],
+    explain:{ en:'The Taj Mahal — a monument to love, built in 1632 by Emperor Shah Jahan.', es:'El Taj Mahal: un monumento al amor, construido en 1632 por el emperador Shah Jahan.', pt:'O Taj Mahal — um monumento ao amor, construído em 1632 pelo imperador Shah Jahan.', fr:"Le Taj Mahal — un monument à l'amour, construit en 1632 par l'empereur Shah Jahan." } },
+  { file:'sydney-opera.jpg', emoji:'🎭', a:0,
+    hint:{ en:'Iconic performing arts venue in Australia', es:'Icónico recinto de artes escénicas en Australia', pt:'Icônico espaço de artes cênicas na Austrália', fr:'Salle de spectacle emblématique en Australie' },
+    opts:[ {en:'Sydney Opera House',es:'Ópera de Sídney',pt:'Ópera de Sydney',fr:'Opéra de Sydney'}, 'Walt Disney Concert Hall', 'La Scala', 'Royal Opera House' ],
+    explain:{ en:"The Sydney Opera House — one of the 20th century's greatest buildings.", es:'La Ópera de Sídney: uno de los mayores edificios del siglo XX.', pt:'A Ópera de Sydney — um dos maiores edifícios do século XX.', fr:"L'Opéra de Sydney — l'un des plus grands bâtiments du XXe siècle." } },
+  { file:'golden-gate.jpg', emoji:'🌉', a:1,
+    hint:{ en:'Famous red suspension bridge in California', es:'Famoso puente colgante rojo en California', pt:'Famosa ponte suspensa vermelha na Califórnia', fr:'Célèbre pont suspendu rouge en Californie' },
+    opts:[ {en:'Brooklyn Bridge',es:'Puente de Brooklyn',pt:'Ponte do Brooklyn',fr:'Pont de Brooklyn'}, {en:'Golden Gate Bridge',es:'Puente Golden Gate',pt:'Ponte Golden Gate',fr:'Golden Gate Bridge'}, 'Sydney Harbour Bridge', {en:'Millau Viaduct',es:'Viaducto de Millau',pt:'Viaduto de Millau',fr:'Viaduc de Millau'} ],
+    explain:{ en:"The Golden Gate Bridge — opened in 1937 and still one of the world's most iconic structures!", es:'El Puente Golden Gate: inaugurado en 1937 y todavía una de las estructuras más icónicas del mundo.', pt:'A Ponte Golden Gate — inaugurada em 1937 e ainda uma das estruturas mais icônicas do mundo!', fr:"Le Golden Gate Bridge — inauguré en 1937 et toujours l'une des structures les plus emblématiques au monde !" } },
+  { file:'big-ben.jpg', emoji:'🕰️', a:1,
+    hint:{ en:'Famous clock tower in London, England', es:'Famosa torre del reloj en Londres, Inglaterra', pt:'Famosa torre do relógio em Londres, Inglaterra', fr:"Célèbre tour de l'horloge à Londres, en Angleterre" },
+    opts:[ 'Notre-Dame', 'Big Ben', {en:'Eiffel Tower',es:'Torre Eiffel',pt:'Torre Eiffel',fr:'Tour Eiffel'}, 'Sagrada Família' ],
+    explain:{ en:'Big Ben — officially the Elizabeth Tower. The bell has rung since 1859.', es:'Big Ben: oficialmente la Torre Isabel. La campana suena desde 1859.', pt:'Big Ben — oficialmente a Torre Elizabeth. O sino toca desde 1859.', fr:'Big Ben — officiellement la tour Elizabeth. La cloche sonne depuis 1859.' } },
+  { file:'sagrada-familia.jpg', emoji:'⛪', a:2,
+    hint:{ en:'Still-unfinished basilica in Barcelona, Spain', es:'Basílica aún inacabada en Barcelona, España', pt:'Basílica ainda inacabada em Barcelona, Espanha', fr:'Basilique encore inachevée à Barcelone, en Espagne' },
+    opts:[ 'Notre-Dame', {en:"St. Peter's Basilica",es:'Basílica de San Pedro',pt:'Basílica de São Pedro',fr:'Basilique Saint-Pierre'}, 'Sagrada Família', {en:'Hagia Sophia',es:'Santa Sofía',pt:'Santa Sofia',fr:'Sainte-Sophie'} ],
+    explain:{ en:"Sagrada Família — Gaudí's masterpiece, under construction since 1882!", es:'La Sagrada Família: la obra maestra de Gaudí, ¡en construcción desde 1882!', pt:'Sagrada Família — a obra-prima de Gaudí, em construção desde 1882!', fr:"La Sagrada Família — le chef-d'œuvre de Gaudí, en construction depuis 1882 !" } },
+  { file:'christ-redeemer.jpg', emoji:'✝️', a:1,
+    hint:{ en:'Famous statue atop a mountain in Brazil', es:'Famosa estatua en la cima de una montaña en Brasil', pt:'Famosa estátua no topo de uma montanha no Brasil', fr:"Célèbre statue au sommet d'une montagne au Brésil" },
+    opts:[ {en:'Statue of Liberty',es:'Estatua de la Libertad',pt:'Estátua da Liberdade',fr:'Statue de la Liberté'}, {en:'Christ the Redeemer',es:'Cristo Redentor',pt:'Cristo Redentor',fr:'Christ Rédempteur'}, 'Angel of the North', 'Motherland Calls' ],
+    explain:{ en:'Christ the Redeemer — 98 feet tall, overlooking Rio de Janeiro from Corcovado mountain.', es:'El Cristo Redentor: 30 metros de altura, vigilando Río de Janeiro desde el monte Corcovado.', pt:'O Cristo Redentor — 30 metros de altura, observando o Rio de Janeiro do morro do Corcovado.', fr:'Le Christ Rédempteur — 30 mètres de haut, dominant Rio de Janeiro depuis le mont Corcovado.' } },
+  { file:'great-wall.jpg', emoji:'🧱', a:1,
+    hint:{ en:"The world's longest wall, in northern China", es:'El muro más largo del mundo, en el norte de China', pt:'O muro mais longo do mundo, no norte da China', fr:'Le plus long mur du monde, dans le nord de la Chine' },
+    opts:[ {en:"Hadrian's Wall",es:'Muro de Adriano',pt:'Muralha de Adriano',fr:"Mur d'Hadrien"}, {en:'Great Wall of China',es:'Gran Muralla China',pt:'Grande Muralha da China',fr:'Grande Muraille de Chine'}, {en:'Berlin Wall',es:'Muro de Berlín',pt:'Muro de Berlim',fr:'Mur de Berlin'}, {en:'Aurelian Wall',es:'Muralla Aureliana',pt:'Muralha Aureliana',fr:"Muraille d'Aurélien"} ],
+    explain:{ en:'The Great Wall of China — stretches over 13,000 miles across northern China!', es:'La Gran Muralla China: ¡se extiende más de 21 000 km por el norte de China!', pt:'A Grande Muralha da China — estende-se por mais de 21.000 km pelo norte da China!', fr:"La Grande Muraille de Chine — elle s'étend sur plus de 21 000 km dans le nord de la Chine !" } },
+  { file:'wynwood-walls.webp', emoji:'🎨', a:0,
+    hint:{ en:'Famous open-air street art museum in Miami', es:'Famoso museo de arte urbano al aire libre en Miami', pt:'Famoso museu de arte de rua ao ar livre em Miami', fr:"Célèbre musée d'art urbain en plein air à Miami" },
+    opts:['Wynwood Walls','The High Line','Bowery Mural','MOCA Geffen'],
+    explain:{ en:"Wynwood Walls — Miami's own world-class open-air street art museum!", es:'Wynwood Walls: ¡el museo de arte urbano al aire libre de talla mundial de Miami!', pt:'Wynwood Walls — o museu de arte de rua ao ar livre de nível mundial de Miami!', fr:"Wynwood Walls — le musée d'art urbain en plein air de classe mondiale de Miami !" } },
+  { file:'burj-khalifa.jpg', emoji:'🏙️', a:1,
+    hint:{ en:'Tallest building in the world, in Dubai', es:'El edificio más alto del mundo, en Dubái', pt:'O edifício mais alto do mundo, em Dubai', fr:'Le plus haut gratte-ciel du monde, à Dubaï' },
+    opts:[ 'Empire State Building', 'Burj Khalifa', {en:'CN Tower',es:'Torre CN',pt:'Torre CN',fr:'Tour CN'}, {en:'Shanghai Tower',es:'Torre de Shanghái',pt:'Torre de Xangai',fr:'Tour Shanghai'} ],
+    explain:{ en:'The Burj Khalifa in Dubai — at 2,717 feet, the tallest structure ever built!', es:'El Burj Khalifa en Dubái: con 828 metros, ¡la estructura más alta jamás construida!', pt:'O Burj Khalifa em Dubai — com 828 metros, a estrutura mais alta já construída!', fr:'Le Burj Khalifa à Dubaï — avec 828 mètres, la plus haute structure jamais construite !' } },
+  { file:'petra.jpg', emoji:'🏜️', a:1,
+    hint:{ en:'Rose-red ancient city carved into cliffs, Jordan', es:'Antigua ciudad rojo rosado tallada en acantilados, Jordania', pt:'Antiga cidade rosa-avermelhada esculpida em penhascos, Jordânia', fr:'Ancienne cité rose taillée dans la falaise, en Jordanie' },
+    opts:[ {en:'Pompeii',es:'Pompeya',pt:'Pompeia',fr:'Pompéi'}, 'Petra', {en:'Palmyra',es:'Palmira',pt:'Palmira',fr:'Palmyre'}, {en:'Persepolis',es:'Persépolis',pt:'Persépolis',fr:'Persépolis'} ],
+    explain:{ en:'Petra — the ancient Nabataean city carved into rose-red sandstone cliffs in Jordan.', es:'Petra: la antigua ciudad nabatea tallada en acantilados de arenisca rojo rosado en Jordania.', pt:'Petra — a antiga cidade nabateia esculpida em penhascos de arenito rosa-avermelhado na Jordânia.', fr:'Pétra — l\'ancienne cité nabatéenne taillée dans des falaises de grès rose en Jordanie.' } },
+  { file:'angkor-wat.jpg', emoji:'🛕', a:2,
+    hint:{ en:'Ancient temple complex in Cambodia', es:'Antiguo complejo de templos en Camboya', pt:'Antigo complexo de templos no Camboja', fr:'Ancien complexe de temples au Cambodge' },
+    opts:['Borobudur','Bagan','Angkor Wat','Tikal'],
+    explain:{ en:"Angkor Wat — the world's largest religious monument, built in the 12th century.", es:'Angkor Wat: el mayor monumento religioso del mundo, construido en el siglo XII.', pt:'Angkor Wat — o maior monumento religioso do mundo, construído no século XII.', fr:'Angkor Wat — le plus grand monument religieux du monde, construit au XIIe siècle.' } },
 ];
 
 let imgShuffled = [];
@@ -2920,6 +3086,7 @@ function initImage() {
 function loadImgRound() {
   imgAnswered = false;
   const r = imgShuffled[imgRound % imgShuffled.length];
+  imgCurrent = r;
 
   // Rebuild img-box safely every round
   const box = document.getElementById('img-box');
@@ -2929,7 +3096,7 @@ function loadImgRound() {
   // Show emoji placeholder immediately — replaced by photo if it loads
   const placeholder = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:8px">
     <div style="font-size:72px;line-height:1">${r.emoji}</div>
-    <div style="font-size:12px;color:rgba(255,255,255,0.4);font-weight:600">Loading image…</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.4);font-weight:600">${gt('loadingImg')}</div>
   </div>`;
   box.innerHTML = placeholder;
 
@@ -2947,21 +3114,26 @@ function loadImgRound() {
     // Image failed — show emoji fallback, game still fully playable
     box.innerHTML = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px">
       <div style="font-size:80px;line-height:1">${r.emoji}</div>
-      <div style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;padding:0 16px">Image not cached yet — open app on Wi-Fi to load images</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:600;text-align:center;padding:0 16px">${gt('notCached')}</div>
     </div>`;
   };
   img.src = `/images/games/${r.file}`;
 
-  document.getElementById('img-hint').textContent = '💡 ' + r.hint;
   document.getElementById('img-feedback').className = 'img-feedback';
   document.getElementById('img-next').className = 'img-next';
+  renderImgRoundLabels(r);
+}
 
+// Render the round's hint + options in the active language (also used to
+// re-render in place on a mid-round language switch).
+function renderImgRoundLabels(r) {
+  document.getElementById('img-hint').textContent = '💡 ' + gL(r.hint);
   const opts = document.getElementById('img-opts');
   opts.innerHTML = '';
   r.opts.forEach((o, i) => {
     const btn = document.createElement('button');
     btn.className = 'img-opt';
-    btn.textContent = o;
+    btn.textContent = gL(o);
     btn.onclick = () => answerImg(i, r.a, r.explain);
     opts.appendChild(btn);
   });
@@ -2979,10 +3151,10 @@ function answerImg(chosen, correct, explain) {
   if (chosen === correct) {
     imgScore++;
     document.getElementById('img-score').textContent = imgScore;
-    fb.textContent = '✅ ' + explain;
+    fb.textContent = '✅ ' + gL(explain);
     fb.className = 'img-feedback show ok';
   } else {
-    fb.textContent = '❌ ' + explain;
+    fb.textContent = '❌ ' + gL(explain);
     fb.className = 'img-feedback show no';
   }
   imgRound++;
@@ -2995,16 +3167,11 @@ function imgNext() {
     const total = imgShuffled.length;
     const pct = imgScore / total;
     const stars = pct === 1 ? '⭐⭐⭐⭐⭐' : pct >= 0.8 ? '⭐⭐⭐⭐' : pct >= 0.6 ? '⭐⭐⭐' : pct >= 0.4 ? '⭐⭐' : '⭐';
-    const msgs = [
-      [1,    '🌟 Perfect score! You really know your landmarks!'],
-      [0.8,  '🎉 Excellent! You\'re a world traveler at heart!'],
-      [0.6,  '👍 Good job! Keep exploring the world!'],
-      [0.4,  '✈️ Not bad — the world has so much more to show you!'],
-      [-1,   '🗺️ Keep playing — you\'ll learn them all!'],
-    ];
-    const msg = msgs.find(([t]) => pct >= t)[1];
-    document.getElementById('img-end-score-val').textContent = imgScore;
-    document.getElementById('img-end-total').textContent = total;
+    const msg = gL((IMG_END_MSGS.find(m => pct >= m.min) || IMG_END_MSGS[IMG_END_MSGS.length - 1]).msg);
+    const scoreLine = document.getElementById('img-end-score-line');
+    if (scoreLine) scoreLine.innerHTML = gt('youScored')
+      .replace('{n}', `<span class="img-end-score-num">${imgScore}</span>`)
+      .replace('{t}', `<span class="img-end-score-denom">${total}</span>`);
     document.getElementById('img-end-stars').textContent = stars;
     document.getElementById('img-end-message').textContent = msg;
     document.getElementById('img-game-area').style.display = 'none';
