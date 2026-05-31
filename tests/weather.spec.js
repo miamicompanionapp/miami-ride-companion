@@ -45,4 +45,26 @@ test.describe('Weather forecast rail', () => {
     expect(res.names[1]).toBe(res.expectTomorrow);
     expect(res.names[2]).toBe(res.expectDayAfter);
   });
+
+  test('hourly strip shows 12-hour labels, not 24-hour with am/pm (no "16pm")', async ({ page }) => {
+    const labels = await page.evaluate(() => {
+      const pad = (x) => String(x).padStart(2, '0');
+      const mkHour = (h) => ({ hour: pad(h) + ':00', temp_f: 80, weathercode: 0, rain_chance: 0 });
+      // The strip slices forward from the current real hour, so anchor slot 0 to
+      // it (it renders as "Now" regardless) and make the rest the tricky slots
+      // straddling noon/midnight — 16:00 and 00:00 are what the old formatter
+      // turned into "16pm" / "0am".
+      const curHour = pad(new Date().getHours()) + ':00';
+      CONTENT.weather.fetchedAt = new Date().toISOString();
+      CONTENT.weather.hourly = [{ hour: curHour, temp_f: 80, weathercode: 0, rain_chance: 0 }, mkHour(16), mkHour(0), mkHour(12), mkHour(9)];
+      CONTENT.weather.current = CONTENT.weather.current || { humidity: 50, wind_mph: 5, rain_chance: 0, weathercode: 0, feels_f: 80, description: { en: 'Clear' } };
+      renderWeather();
+      return [...document.querySelectorAll('.hourly-row .hour-time')].map((e) => e.textContent.trim());
+    });
+    // First slot is "Now"; the rest must be clean 12-hour labels.
+    expect(labels[0]).toBe('Now');
+    expect(labels.slice(1)).toEqual(['4pm', '12am', '12pm', '9am']);
+    // Belt-and-suspenders: never a 24-hour number glued to am/pm.
+    for (const l of labels) expect(l).not.toMatch(/(1[3-9]|2[0-3]|^0)(am|pm)/);
+  });
 });

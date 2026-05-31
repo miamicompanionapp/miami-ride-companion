@@ -2532,13 +2532,21 @@ function renderWeather() {
     const currentIdx = w.hourly.findIndex(h => h.hour === currentHour);
     const hoursToShow = w.hourly.slice(Math.max(0, currentIdx), currentIdx + 5);
 
-    const hourCards = hoursToShow.map((h, i) => `
+    const hourCards = hoursToShow.map((h, i) => {
+      // Convert the 24h "HH:00" slot to a 12-hour label (16:00 -> 4pm, 00:00 ->
+      // 12am, 12:00 -> 12pm). The old code kept the 24h number and just appended
+      // am/pm, so 16:00 rendered as "16 PM".
+      const hr24 = parseInt(h.hour, 10);
+      const hr12 = hr24 % 12 === 0 ? 12 : hr24 % 12;
+      const label = i === 0 ? (t('weather.now') || 'Now') : hr12 + (hr24 < 12 ? 'am' : 'pm');
+      return `
       <div class="hour-card ${i === 0 ? 'now' : ''}">
-        <div class="hour-time ${i === 0 ? 'now-lbl' : ''}">${i === 0 ? (t('weather.now') || 'Now') : h.hour.replace(':00','').replace(/^0/,'') + (parseInt(h.hour) < 12 ? 'am' : 'pm')}</div>
+        <div class="hour-time ${i === 0 ? 'now-lbl' : ''}">${label}</div>
         <div class="hour-icon">${WEATHER_ICONS[h.weathercode] || '🌤️'}</div>
         <div class="hour-temp">${Math.round(h.temp_f)}°</div>
         <div class="hour-rain">${h.rain_chance}%</div>
-      </div>`).join('');
+      </div>`;
+    }).join('');
 
     currentHtml = `
       <div class="current-card">
