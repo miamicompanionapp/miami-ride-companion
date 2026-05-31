@@ -2499,7 +2499,9 @@ function buildEventCard(e) {
         <div class="event-venue"><i class="ti ti-map-pin"></i>${e.venue}${eventDistStr(e)}</div>
         ${e.free
           ? `<div class="free-badge">${t('guide.free') || 'Free'}</div>`
-          : (e.price ? `<div class="price-badge">${e.price}</div>` : '')}
+          : (e.price
+              ? `<div class="price-badge">${e.price}</div>`
+              : `<div class="price-badge">${t('guide.priceVaries') || 'Price varies'}</div>`)}
       </div>
     </div>`;
   card.addEventListener('click', () => { logTap('event_' + e.id); openQR('event', e.id); });

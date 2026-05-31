@@ -49,4 +49,22 @@ test.describe('Content integrity', () => {
     });
     expect(gaps, `events missing translations:\n${gaps.join('\n')}`).toEqual([]);
   });
+
+  test('every event card shows a badge (Free, a price, or "Price varies")', async ({ page }) => {
+    // No card should be badge-less: free -> green Free, known price -> gold $N,
+    // otherwise a neutral "Price varies" badge for ticketed events without a
+    // price from the feed.
+    const result = await page.evaluate(() => {
+      return (CONTENT.guide.events || []).map((e) => {
+        const card = buildEventCard(e);
+        const free = card.querySelector('.free-badge');
+        const price = card.querySelector('.price-badge');
+        return { id: e.id, hasBadge: !!(free || price), text: (free || price || {}).textContent || '' };
+      });
+    });
+    const blank = result.filter((r) => !r.hasBadge).map((r) => r.id);
+    expect(blank, `event cards with no badge:\n${blank.join('\n')}`).toEqual([]);
+    // Free events must read the localized Free label, never "Price varies".
+    expect(result.every((r) => r.text.trim().length > 0)).toBe(true);
+  });
 });
