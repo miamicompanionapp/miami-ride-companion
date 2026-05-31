@@ -2592,13 +2592,22 @@ function renderWeather() {
   }
 
   const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  const forecastCards = w.forecast.map((f, i) => {
-    const d = new Date(f.date);
-    const dayName = i === 0 ? (t('weather.forecast') ? 'Today' : 'Today') : DAYS[d.getDay()];
-    const isToday = i === 0;
+  const today = todayStr();
+  // Drop forecast days already in the past — the snapshot can be a day or two
+  // old (it's only refreshed on publish), so the lead card must be today (or
+  // the next available day), never a stale past day mislabeled "Today".
+  // Also: parse dates as LOCAL via parseLocalDate so "2026-05-31" isn't read as
+  // UTC midnight (which renders as the previous day in Miami) — same off-by-one
+  // fix already applied to events.
+  let days = w.forecast.filter(f => !f.date || f.date >= today);
+  if (!days.length) days = w.forecast;  // all days stale — show what we have
+  const lastIdx = days.length - 1;
+  const forecastCards = days.map((f, i) => {
+    const isToday = f.date === today;
+    const dayName = isToday ? 'Today' : DAYS[parseLocalDate(f.date).getDay()];
     const cls = isToday ? (isStale ? 'today-stale' : 'today-fresh') : '';
     const nameCls = isToday ? (isStale ? 'stale-lbl' : 'today-lbl') : '';
-    const opacity = isStale && i === 4 ? 'opacity:0.45;' : '';
+    const opacity = isStale && i === lastIdx ? 'opacity:0.45;' : '';
     return `
       <div class="day-card ${cls}" style="${opacity}">
         <div class="day-name ${nameCls}">${dayName}</div>

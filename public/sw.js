@@ -1,7 +1,7 @@
 // Miami Ride Companion — Service Worker
 // Version this string whenever you deploy a significant update.
 // Changing it forces all clients to re-cache everything fresh.
-const CACHE_VERSION = 'miami-ride-v1.11.0';
+const CACHE_VERSION = 'miami-ride-v1.12.0';
 
 // ─── Files to pre-cache on install ───────────────────────────────────────────
 // These are fetched and stored the moment the SW installs (first app open on Wi-Fi).
@@ -45,6 +45,33 @@ const NEVER_CACHE = [
   '/api/',
 ];
 
+// ─── Offline fallback page for the (never-cached) dashboard ──────────────────
+// Inlined so it needs no network and nothing in the cache. Matches the app's
+// navy/teal/gold palette. Shown when editor.html is opened with no connection.
+const OFFLINE_EDITOR_HTML = `<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard offline</title>
+<style>
+  html,body{margin:0;height:100%}
+  body{background:#0F2137;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+  .card{max-width:420px}
+  .icon{font-size:54px;margin-bottom:12px}
+  h1{font-size:22px;margin:0 0 10px;color:#C9A84C;font-weight:600}
+  p{font-size:15px;line-height:1.5;color:rgba(255,255,255,.82);margin:0 0 22px}
+  button{background:#0B9EA6;color:#fff;border:0;border-radius:10px;
+    padding:13px 26px;font-size:15px;font-weight:600;cursor:pointer}
+  button:active{opacity:.85}
+</style></head><body>
+  <div class="card">
+    <div class="icon">📡</div>
+    <h1>Dashboard needs a connection</h1>
+    <p>The driver dashboard always loads fresh, so it can't open offline. Reconnect to Wi-Fi or cellular, then try again.</p>
+    <button onclick="location.reload()">Try again</button>
+  </div>
+</body></html>`;
+
 // ─── Install: pre-cache everything ───────────────────────────────────────────
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -86,9 +113,25 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
-  // Never cache the editor or analytics
+  // Never cache the editor or analytics — always load fresh from the network.
+  // But fail GRACEFULLY when offline: without a .catch() here the fetch()
+  // promise rejects, respondWith() gets a rejected promise, and the browser
+  // shows a raw "FetchEvent.respondWith received an error: TypeError: Load
+  // failed" page (seen opening the dashboard in airplane mode end-of-shift).
   if (NEVER_CACHE.some(path => url.pathname.startsWith(path))) {
-    event.respondWith(fetch(event.request));
+    event.respondWith(
+      fetch(event.request).catch(() => {
+        // Document (HTML) requests get a friendly offline page; everything else
+        // (analytics.json, /api/*) gets a 503 the calling code can handle.
+        if (event.request.destination === 'document') {
+          return new Response(OFFLINE_EDITOR_HTML, {
+            status: 503,
+            headers: { 'Content-Type': 'text/html; charset=utf-8' }
+          });
+        }
+        return new Response('', { status: 503, statusText: 'Offline' });
+      })
+    );
     return;
   }
 

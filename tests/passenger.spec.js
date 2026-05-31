@@ -54,6 +54,37 @@ test.describe('Passenger app', () => {
     await page.evaluate(() => closeVenueSheet());
   });
 
+  test('upcomingEvents() hides past events and sorts soonest-first', async ({ page }) => {
+    // Guards the event date handling: past events drop out, future ones stay,
+    // ordered nearest-first. Uses the app's own todayStr() so it is not
+    // sensitive to the machine timezone.
+    const res = await page.evaluate(() => {
+      const t = todayStr();
+      const shift = (days) => {
+        const [y, m, d] = t.split('-').map(Number);
+        const dt = new Date(y, m - 1, d + days);
+        return `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`;
+      };
+      const sample = [
+        { id: 'past', date: shift(-3) },
+        { id: 'soon', date: shift(2) },
+        { id: 'today', date: t },
+        { id: 'later', date: shift(10) },
+      ];
+      return upcomingEvents(sample).map((e) => e.id);
+    });
+    expect(res).not.toContain('past');
+    expect(res).toEqual(['today', 'soon', 'later']);
+  });
+
+  test('published events are all upcoming (no past dates linger in content.json)', async ({ page }) => {
+    const stale = await page.evaluate(() => {
+      const t = todayStr();
+      return (CONTENT.guide.events || []).filter((e) => e.date && e.date < t).map((e) => `${e.id} (${e.date})`);
+    });
+    expect(stale, `past events still published:\n${stale.join('\n')}`).toEqual([]);
+  });
+
   test('weather tab renders forecast content', async ({ page }) => {
     await page.locator('#nav-weather').click();
     await expect(page.locator('#page-weather')).toHaveClass(/active/);
