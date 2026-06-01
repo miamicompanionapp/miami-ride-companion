@@ -152,3 +152,6 @@ function mapEvent(ev) {
     source:      'Ticketmaster',
   };
 }
+
+// Test-only exports (see tests/backend.spec.js) — harmless to the bundler.
+export { mapEvent, pickImage };

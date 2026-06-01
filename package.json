@@ -9,7 +9,19 @@
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
-    "test:report": "playwright show-report"
+    "test:report": "playwright show-report",
+    "test:index": "playwright test --grep @index",
+    "test:games": "playwright test --grep @games",
+    "test:editor": "playwright test --grep @editor",
+    "test:backend": "playwright test --grep @backend",
+    "test:weather": "playwright test --grep @weather",
+    "test:content": "playwright test --grep @content",
+    "test:phone": "playwright test --grep @phone",
+    "test:rest": "playwright test --grep @rest",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:negative": "playwright test --grep @negative",
+    "test:i18n": "playwright test --grep @i18n",
+    "test:units": "playwright test --grep @unit"
   },
   "repository": {
     "type": "git",

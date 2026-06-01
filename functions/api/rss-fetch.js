@@ -107,12 +107,17 @@ function decorateSoulOfMiami(item) {
 
   const d = item.description || '';
 
-  // Real event start date: first M/D/YYYY in the intro line.
+  // Real event start date: first M/D/YYYY in the intro line. The feed's own
+  // pubDate is only when the post went live — so an event whose real date we
+  // CAN'T parse would otherwise inherit the post date and masquerade as
+  // happening "today" (this is backlog bug #19: re-fetching surfaced events
+  // that had already passed). If there's no parseable event date, drop the
+  // item rather than surface it with a misleading date.
   const dm = d.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
-  if (dm) {
-    const iso = `${dm[3]}-${dm[1].padStart(2, '0')}-${dm[2].padStart(2, '0')}`;
-    if (!Number.isNaN(Date.parse(iso))) item.date = iso;
-  }
+  if (!dm) return null;
+  const iso = `${dm[3]}-${dm[1].padStart(2, '0')}-${dm[2].padStart(2, '0')}`;
+  if (Number.isNaN(Date.parse(iso))) return null;
+  item.date = iso;
 
   // Cost line → free flag + price. "Free" or "0" = free; "$39.19"/"$24" = paid.
   // Colon optional — some posts write "Cost FREE" without one.
@@ -215,6 +220,21 @@ function parseFeed(xml, sourceName) {
   return items.slice(0, 6); // cap at 6 items per feed
 }
 
+// ─── Past-event guard (backlog #19) ─────────────────────────────────────────
+// Today's date (YYYY-MM-DD) in Miami's timezone. The Worker runs on UTC at the
+// edge, so comparing against the raw UTC day could drop a Miami event late in
+// the evening; pin the comparison to America/New_York. (en-CA formats as ISO.)
+function miamiToday() {
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+}
+
+// Defense in depth alongside decorateSoulOfMiami's date fix: never return an
+// event whose date is already in the past. Undated events are kept (we can't
+// judge them). The editor applies the same filter on its side.
+function dropPastEvents(events, today = miamiToday()) {
+  return (events || []).filter(e => !e.date || e.date >= today);
+}
+
 // ─── Handler ──────────────────────────────────────────────────────────────────
 
 const CORS_HEADERS = {
@@ -253,8 +273,22 @@ export async function onRequestGet() {
     })
   );
 
-  return new Response(JSON.stringify({ events, errors }), {
+  return new Response(JSON.stringify({ events: dropPastEvents(events), errors }), {
     status: 200,
     headers: { 'Content-Type': 'application/json', ...CORS_HEADERS },
   });
 }
+
+// Test-only exports. Cloudflare's bundler ignores these extra named exports;
+// the unit suite (tests/backend.spec.js) imports them to exercise the pure
+// parsing/decoration logic without a live network fetch.
+export {
+  decorateSoulOfMiami,
+  parseFeed,
+  stripHtml,
+  extractField,
+  extractImage,
+  extractAtomLink,
+  dropPastEvents,
+  miamiToday,
+};

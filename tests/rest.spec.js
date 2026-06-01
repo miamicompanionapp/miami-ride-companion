@@ -1,7 +1,7 @@
 // E2E: Rest / blackout screen (passenger comfort feature).
 const { test, expect } = require('./fixtures');
 
-test.describe('Rest screen', () => {
+test.describe('Rest screen', { tag: ['@index', '@rest'] }, () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/index.html');
     await page.waitForSelector('#gp-minis .gp-mini', { timeout: 10_000 });

@@ -7,7 +7,7 @@
 //       day wore the "Today" badge. Fixed: drop past days, label by real date.
 const { test, expect } = require('./fixtures');
 
-test.describe('Weather forecast rail', () => {
+test.describe('Weather forecast rail', { tag: ['@index', '@weather'] }, () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof CONTENT !== 'undefined' && !!CONTENT.weather);

@@ -9,13 +9,13 @@ async function unlock(page) {
   await expect(page.locator('#auth-screen')).toBeHidden();
 }
 
-test.describe('Driver dashboard', () => {
+test.describe('Driver dashboard', { tag: ['@editor'] }, () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/editor.html');
     await page.waitForSelector('#auth-screen');
   });
 
-  test('rejects an incorrect PIN', async ({ page }) => {
+  test('rejects an incorrect PIN', { tag: ['@negative'] }, async ({ page }) => {
     await page.fill('#auth-input', '0000');
     await page.click('.auth-btn');
     await expect(page.locator('#auth-screen')).toBeVisible(); // still locked

@@ -1147,7 +1147,7 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header" id="secret-tap-zone">
         <div class="app-brand">Miami<br>Companion</div>
-        <div class="app-sub">Your city guide</div>
+        <div class="app-sub" data-key="app.subtitle">Your city guide</div>
       </div>
 
       <div class="sidebar-location">
@@ -1181,7 +1181,7 @@
       </div>
 
       <div class="lang-section">
-        <div class="lang-label">Language</div>
+        <div class="lang-label" data-key="app.language">Language</div>
         <div class="lang-grid">
           <button class="lang-btn active" onclick="setLang('en')">🇺🇸 EN</button>
           <button class="lang-btn" onclick="setLang('es')">🇪🇸 ES</button>
@@ -1861,7 +1861,7 @@ function renderDriver() {
       qEl.innerHTML = `
         <div class="dp-queen-photo">${q.photo ? `<img src="${q.photo}" alt="">` : '<div class="dp-queen-emoji">👑</div>'}</div>
         <div class="dp-queen-text">
-          <div class="dp-queen-eyebrow">My Queen</div>
+          <div class="dp-queen-eyebrow">${q.eyebrow ? tx(q.eyebrow) : 'My Queen'}</div>
           <div class="dp-queen-name">${q.name}</div>
           ${q.note ? `<div class="dp-queen-note">${q.note}</div>` : ''}
         </div>`;
@@ -2727,17 +2727,39 @@ function refreshOpenGame() {
   }
 }
 
+// Registry of every game. To add a new game: drop one entry here with its
+// screen id and a reset() that returns the board to a clean, fresh state.
+// openGame() calls reset() on open, so a game is NEVER shown with a stale or
+// half-finished board — no per-game wiring in openGame/closeGame needed.
+const GAMES = {
+  trivia: { screen: 'game-trivia', reset: initTrivia },
+  tap:    { screen: 'game-tap',    reset: resetTapGame },
+  word:   { screen: 'game-word',   reset: initWord },
+  spin:   { screen: 'game-spin',   reset: resetSpinGame },
+  image:  { screen: 'game-image',  reset: initImage },
+};
+
 function openGame(type) {
   document.getElementById('game-' + type).classList.add('open');
   resetInactivity();
   logTap('game_open_' + type);
-  if (type === 'trivia') initTrivia();
-  if (type === 'word') initWord();
-  if (type === 'image') initImage();
+  const g = GAMES[type];
+  if (g && g.reset) g.reset();
+}
+
+// Close every open game screen. Used by the back button AND by the inactivity
+// flow, so both paths behave identically. We don't reset state here — the next
+// openGame() always re-inits — but we do stop any game's background timers so
+// nothing keeps ticking on a hidden screen.
+function closeGames() {
+  document.querySelectorAll('.game-screen.open').forEach(s => {
+    s.classList.remove('open');
+    if (s.id === 'game-tap') stopTapTimer();
+  });
 }
 
 function closeGame() {
-  document.querySelectorAll('.game-screen').forEach(s => s.classList.remove('open'));
+  closeGames();
   resetInactivity();
 }
 
@@ -2837,6 +2859,26 @@ function answerTrivia(chosen, correct) {
 }
 
 // ── Tap Frenzy ────────────────────────────────────────────
+// Stop the countdown so it can't keep ticking on a hidden screen.
+function stopTapTimer() {
+  clearInterval(tapInterval);
+  tapInterval = null;
+  tapRunning = false;
+}
+
+// Fresh, idle state: nothing running, circle disabled, Start enabled.
+function resetTapGame() {
+  stopTapTimer();
+  tapCount = 0;
+  document.getElementById('tap-count').textContent = '0';
+  document.getElementById('tap-timer').textContent = '10s';
+  document.getElementById('tap-result').textContent = '';
+  document.getElementById('tap-circle').disabled = true;
+  document.getElementById('tap-start-btn').disabled = false;
+  document.getElementById('tap-best-display').textContent = tapBest;
+  document.getElementById('tap-best-txt').textContent = tapBest;
+}
+
 function startTap() {
   if (tapRunning) return;
   tapCount = 0; tapRunning = true;
@@ -2985,6 +3027,20 @@ const SPIN_FACTS = [
     fact:{ en:'You share about 50% of your DNA with a banana. Life is surprisingly connected.', es:'Compartes alrededor del 50 % de tu ADN con un plátano. La vida está sorprendentemente conectada.', pt:'Você compartilha cerca de 50% do seu DNA com uma banana. A vida é surpreendentemente conectada.', fr:'Vous partagez environ 50 % de votre ADN avec une banane. Le vivant est étonnamment connecté.' } },
 ];
 
+// Fresh state: spin count zeroed, fact card back to its "ready" prompt (in the
+// active language).
+function resetSpinGame() {
+  spinCount = 0;
+  spinCurrent = null;
+  document.getElementById('spin-count').textContent = '0';
+  const catEl = document.getElementById('spin-cat');
+  const factEl = document.getElementById('spin-fact');
+  catEl.textContent = gt('spinReadyCat');
+  factEl.textContent = gt('spinReadyFact');
+  catEl.style.opacity = '1';
+  factEl.style.opacity = '1';
+}
+
 function doSpin() {
   const f = SPIN_FACTS[Math.floor(Math.random() * SPIN_FACTS.length)];
   spinCurrent = f;
@@ -3073,6 +3129,7 @@ const IMG_ROUNDS = [
 ];
 
 let imgShuffled = [];
+let imgLoadToken = 0;  // bumped each round; a late image load with a stale token is dropped
 
 function initImage() {
   imgScore = 0; imgRound = 0; imgAnswered = false;
@@ -3087,6 +3144,7 @@ function loadImgRound() {
   imgAnswered = false;
   const r = imgShuffled[imgRound % imgShuffled.length];
   imgCurrent = r;
+  const myToken = ++imgLoadToken;  // any image still loading from a previous round is now stale
 
   // Rebuild img-box safely every round
   const box = document.getElementById('img-box');
@@ -3103,14 +3161,15 @@ function loadImgRound() {
   // Attempt to load the real image
   const img = new Image();
   img.onload = () => {
-    // Only swap in if we're still on the same round
-    if (!imgAnswered || imgRound % imgShuffled.length === imgShuffled.indexOf(r)) {
-      box.innerHTML = '';
-      img.style.cssText = 'width:100%;height:100%;object-fit:contain;display:block;border-radius:12px';
-      box.appendChild(img);
-    }
+    // Drop the image if the round already advanced — guarantees the picture on
+    // screen always matches the current options and correct answer.
+    if (myToken !== imgLoadToken) return;
+    box.innerHTML = '';
+    img.style.cssText = 'width:100%;height:100%;object-fit:contain;display:block;border-radius:12px';
+    box.appendChild(img);
   };
   img.onerror = () => {
+    if (myToken !== imgLoadToken) return;
     // Image failed — show emoji fallback, game still fully playable
     box.innerHTML = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px">
       <div style="font-size:80px;line-height:1">${r.emoji}</div>
@@ -3269,9 +3328,36 @@ function closeQR() {
 // INACTIVITY RESET
 // ════════════════════════════════════════════════════════════
 function initInactivity() {
+  // Capture-phase guard: while the "Still browsing?" popup is up, the dismissing
+  // tap must ONLY close the popup — it must never fall through to the game or
+  // guide underneath. Running in the capture phase lets us swallow the whole tap
+  // sequence (touchstart → … → click) before it reaches any element, including
+  // the bubble-phase resetInactivity listeners below. Game-agnostic: it knows
+  // nothing about which screen is underneath, so it covers every game (current
+  // and future) and every overlay/sheet.
+  ['touchstart', 'touchend', 'mousedown', 'mouseup', 'click'].forEach(evt =>
+    document.addEventListener(evt, inactivityTapGuard, { capture: true, passive: false }));
+
   document.addEventListener('touchstart', resetInactivity, { passive: true });
   document.addEventListener('mousedown', resetInactivity);
   resetInactivity();
+}
+
+// Swallow the dismissing tap. The first event of the tap (while the overlay is
+// visible) closes the popup; the trailing events of that SAME tap arrive after
+// the overlay is already hidden, so we keep eating events for a short window to
+// stop the click from leaking through to whatever is now beneath.
+let swallowTapsUntil = 0;
+function inactivityTapGuard(e) {
+  const overlay = document.getElementById('inactivity-overlay');
+  const showing = overlay && overlay.classList.contains('visible');
+  if (!showing && Date.now() >= swallowTapsUntil) return;  // normal interaction — let it through
+  e.preventDefault();
+  e.stopPropagation();
+  if (showing) {
+    swallowTapsUntil = Date.now() + 600;  // eat the rest of this tap (touchend/mouse/click)
+    dismissInactivity();                  // hide popup + re-arm idle timer
+  }
 }
 
 function resetInactivity() {
@@ -3286,7 +3372,7 @@ function resetInactivity() {
 
 function showInactivityModal() {
   // Close any open game screen, QR modal, or venue detail sheet
-  document.querySelectorAll('.game-screen').forEach(s => s.classList.remove('open'));
+  closeGames();
   document.getElementById('qr-modal').classList.remove('open');
   closeVenueSheet();
 

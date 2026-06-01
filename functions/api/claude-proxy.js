@@ -90,3 +90,7 @@ export async function onRequestPost({ request, env }) {
     });
   }
 }
+
+// Test-only export (see tests/backend.spec.js) — the origin allowlist is the
+// security-sensitive bit worth guarding; harmless to the bundler.
+export { isAllowedOrigin };

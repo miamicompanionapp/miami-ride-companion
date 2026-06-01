@@ -1,14 +1,14 @@
 // E2E: passenger-facing app (public/index.html) — the landscape tablet kiosk.
 const { test, expect } = require('./fixtures');
 
-test.describe('Passenger app', () => {
+test.describe('Passenger app', { tag: ['@index'] }, () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/index.html');
     // Home view is ready once the "more near you" minis have rendered.
     await page.waitForSelector('#gp-minis .gp-mini', { timeout: 10_000 });
   });
 
-  test('loads the home view with a hero pick and venues', async ({ page }) => {
+  test('loads the home view with a hero pick and venues', { tag: ['@smoke'] }, async ({ page }) => {
     await expect(page.locator('#gp-hero-slot')).not.toBeEmpty();
     expect(await page.locator('#gp-minis .gp-mini').count()).toBeGreaterThan(0);
     const venueCount = await page.evaluate(() => CONTENT.guide.venues.length);
@@ -122,7 +122,7 @@ test.describe('Passenger app', () => {
     expect(await page.evaluate(() => localStorage.getItem('mrc_bubble'))).toBe('hide');
   });
 
-  test('games scale up to fill the kiosk canvas', async ({ page }) => {
+  test('games scale up to fill the kiosk canvas', { tag: ['@games'] }, async ({ page }) => {
     await page.locator('#nav-games').click();
     await page.evaluate(() => openGame('tap'));
     const circle = await page.locator('#tap-circle').evaluate(el => el.getBoundingClientRect().width);
@@ -146,7 +146,7 @@ test.describe('Passenger app', () => {
 
   // Each of the five games should open to its screen and close cleanly.
   for (const game of ['trivia', 'tap', 'word', 'spin', 'image']) {
-    test(`game "${game}" opens and closes`, async ({ page }) => {
+    test(`game "${game}" opens and closes`, { tag: ['@games', '@smoke'] }, async ({ page }) => {
       await page.locator('#nav-games').click();
       await page.evaluate((g) => openGame(g), game);
       await expect(page.locator(`#game-${game}`)).toBeVisible();

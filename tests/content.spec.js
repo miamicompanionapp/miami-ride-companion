@@ -3,7 +3,7 @@
 // must carry ES/PT/FR so non-English riders never see English fallback text.
 const { test, expect } = require('./fixtures');
 
-test.describe('Content integrity', () => {
+test.describe('Content integrity', { tag: ['@index', '@content', '@i18n'] }, () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof CONTENT !== 'undefined' && !!CONTENT.guide);

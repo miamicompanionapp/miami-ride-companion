@@ -3,7 +3,7 @@
 // AND that the kiosk viewport is left untouched.
 const { test, expect } = require('./fixtures');
 
-test.describe('Phone — portrait', () => {
+test.describe('Phone — portrait', { tag: ['@index', '@phone'] }, () => {
   test.use({ viewport: { width: 390, height: 844 } });
 
   test('shows the rotate-to-landscape prompt', async ({ page }) => {
@@ -13,7 +13,7 @@ test.describe('Phone — portrait', () => {
   });
 });
 
-test.describe('Phone — landscape', () => {
+test.describe('Phone — landscape', { tag: ['@index', '@phone'] }, () => {
   test.use({ viewport: { width: 844, height: 390 } });
 
   test('hides the prompt, shrinks the sidebar, renders the guide', async ({ page }) => {
@@ -26,7 +26,7 @@ test.describe('Phone — landscape', () => {
   });
 });
 
-test.describe('Tablet kiosk — unaffected by phone rules', () => {
+test.describe('Tablet kiosk — unaffected by phone rules', { tag: ['@index', '@phone'] }, () => {
   test.use({ viewport: { width: 1024, height: 768 } });
 
   test('no rotate prompt and full 220px sidebar', async ({ page }) => {

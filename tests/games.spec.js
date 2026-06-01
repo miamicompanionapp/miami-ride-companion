@@ -5,7 +5,7 @@
 // NOTE: Tap Frenzy + Word Puzzle are intentionally out of scope (see backlog).
 const { test, expect } = require('./fixtures');
 
-test.describe('Game translations', () => {
+test.describe('Game translations', { tag: ['@games', '@i18n'] }, () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof TRIVIA_QUESTIONS !== 'undefined' && typeof GAME_UI !== 'undefined');
@@ -50,7 +50,9 @@ test.describe('Game translations', () => {
   test('spinner fact re-renders in Portuguese on language switch', async ({ page }) => {
     await page.locator('#nav-games').click();
     await page.evaluate(() => { openGame('spin'); doSpin(); });
-    await page.waitForTimeout(400); // let doSpin's fade-in timeout populate the fact
+    // doSpin populates spinCurrent after a fade-in timeout — wait for it
+    // deterministically rather than a fixed sleep (the sleep raced under load).
+    await page.waitForFunction(() => typeof spinCurrent !== 'undefined' && spinCurrent && spinCurrent.fact);
     await page.evaluate(() => setLang('pt'));
     const fact = await page.locator('#spin-fact').textContent();
     const expected = await page.evaluate(() => spinCurrent.fact.pt);
