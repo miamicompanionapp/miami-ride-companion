@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Icon B: "Drop Pin Palm" — a map pin (the guide) with a palm inside (Miami). Bold, brand-aligned. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#0F2137"/>
+      <stop offset="100%" stop-color="#081320"/>
+    </linearGradient>
+    <linearGradient id="pin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#13C2CB"/>
+      <stop offset="100%" stop-color="#0B9EA6"/>
+    </linearGradient>
+    <radialGradient id="disc" cx="50%" cy="42%" r="60%">
+      <stop offset="0%"  stop-color="#FDE6B0"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </radialGradient>
+    <clipPath id="frame2"><rect width="512" height="512"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame2)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+
+    <!-- soft glow under pin -->
+    <ellipse cx="256" cy="446" rx="78" ry="16" fill="#0B9EA6" opacity="0.28"/>
+
+    <!-- map pin body -->
+    <path d="M256 86
+             C171 86 110 149 110 233
+             C110 330 210 392 248 430
+             C253 435 259 435 264 430
+             C302 392 402 330 402 233
+             C402 149 341 86 256 86 Z" fill="url(#pin)"/>
+
+    <!-- inner gold disc -->
+    <circle cx="256" cy="226" r="96" fill="url(#disc)"/>
+
+    <!-- palm silhouette on the disc -->
+    <g fill="#0F2137">
+      <!-- trunk -->
+      <path d="M250 296 C248 266 250 240 258 214 l12 2 C264 240 262 268 264 296 Z"/>
+      <!-- fronds -->
+      <path d="M260 210 C236 192 206 188 182 198 C210 196 234 204 252 220 Z"/>
+      <path d="M262 208 C250 180 224 160 196 156 C222 168 240 190 252 218 Z"/>
+      <path d="M264 208 C272 178 296 158 326 156 C300 168 282 190 270 218 Z"/>
+      <path d="M266 210 C292 192 322 190 346 200 C318 196 292 204 274 220 Z"/>
+      <path d="M263 206 c-4 -18 0 -38 8 -54 c2 18 0 38 -4 54 Z"/>
+      <!-- coconuts -->
+      <circle cx="258" cy="214" r="5"/>
+      <circle cx="270" cy="214" r="5"/>
+    </g>
+  </g>
+</svg>

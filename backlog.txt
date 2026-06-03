@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-06-01
+Last updated: 2026-06-03
 Owner: Abdullah
 
 
@@ -15,6 +15,51 @@ WORKING POLICY
 - Local dev: static testing works with `python -m http.server 8000` inside
   ./public, BUT RSS refetch and Claude auto-translate require Wrangler to
   serve the Pages Functions. See "Wrangler setup" below.
+
+
+PRIORITY ROADMAP (open items, ranked)  — set 2026-06-01
+-------------------------------------------------------
+Working order for the OPEN items. Full detail for each lives in its numbered
+entry further down (search "[ ] N." or "[~] N."). This is a living ranking —
+re-order freely. [X] items are completed history, kept below for reference.
+
+TIER 1 — high impact / broken or blocking
+  1. #20  Ticketmaster + claude-proxy functions flaky in prod (BUG). Blocks the
+          content pipeline (auto-translate, TM fetch) and #24/#17. First step:
+          surface the real status+body in editor toasts.
+  2. #28  Animated attract/idle screen. Your live finding: passengers don't
+          engage. Highest-leverage feature — the rotating tappable attractor.
+  3. #7   Test the full redesign on the real iPad. Tablet is prod and we're
+          pushing live; the on-device reality check tests can't give.
+
+TIER 2 — visible polish bugs passengers see
+  4. #34  Driver bio photo cropped — shoulders cut (BUG). ~1-line CSS, needs an
+          on-device eyeball to tune.
+  5. #36  Landing images blink on GPS re-render (BUG). Happens constantly in a
+          moving car; cause already diagnosed (renderGuide rebuilds <img> DOM).
+  6. #33  "Nearest to you" subtitle misleading on the curated landing. ~10 min
+          copy/scope decision.
+
+TIER 3 — engagement & UX enhancements
+  7. #30  Multiplayer shared-screen games. Strong differentiator; larger effort;
+          pairs with #28. [~] (a) tic-tac-toe + games-page categorization SHIPPED
+          2026-06-01; next: (b) Tap Duel, (c) Trivia Buzzer.
+  8. #35  Tap any photo to enlarge (shared lightbox).
+  9. #31  Consolidate secret-tap gestures into one hidden menu (+ offline
+          analytics peek).
+ 10. #29  Finish games i18n (Word Puzzle + Tap Frenzy still EN). [~] partial.
+
+TIER 4 — editor/content tooling & smaller wins
+ 11. #26  `featured` flag conflated with `sponsored` (BUG). Untangle before
+          reusing `featured`; relates to #25.
+ 12. #24  "Translate all" button in the editor Events tab. Gated on #20.
+ 13. #25  Editor UI to pick the 3 featured-landing minis (no more hand-editing).
+ 14. #21  Optimize heavy venue images.
+ 15. #22  Celsius support on the weather page.
+ 16. #23  Passenger feedback function (needs a storage decision).
+
+TIER 5 — deferred / future
+ 17. #17  Events auto-refresh via Cloudflare Cron. Only after #20 is trusted.
 
 
 TEST SUITE & TAGS (Playwright)  — expanded 2026-06-01
@@ -646,7 +691,20 @@ NEW FROM Abdullah (2026-05-30) — BUGS + ENHANCEMENTS
             * Reuse the rotating-subtitle machinery (item #13) + the existing
               inactivity timer; do NOT build a parallel timer.
 
-[ ] 30. ENHANCEMENT: multiplayer (2-3) shared-screen games (added 2026-06-01).
+[~] 30. ENHANCEMENT: multiplayer (2-3) shared-screen games (added 2026-06-01).
+        *** (a) TIC-TAC-TOE SHIPPED 2026-06-01 (uncommitted) — see sub-item (a). ***
+        *** (b) TAP DUEL + (c) TRIVIA BUZZER SHIPPED 2026-06-02 (uncommitted) —
+            the "With friends" category is now 100% playable (no more "Soon"
+            teasers). Both reuse a NEW shared player-count picker (pg-* / the
+            "How many players?" 2-3 chooser — satisfies the #30 "reuse one
+            chooser" rule; ttt keeps its bespoke fixed-2 intro). SW v1.14.0 ->
+            v1.15.0. Added 13 tests (8 logic + 2 i18n + 2 open/close + the
+            i18n-completeness sweep auto-covers the new GAME_UI keys) — all green.
+            NEXT MULTIPLAYER OPTIONS (lower priority, not started): (d) Connect
+            Four (2P), (e) Dots & Boxes (2-3P), (f) tug-of-war (2-3P), BONUS
+            finger-picker. See build order below.
+            STILL OPEN for b/c: verify on real iPad (#7); the duel green-flip uses
+            setTimeout (1.2-4.0s) — confirm it feels fair on-device. ***
         - WHY (Abdullah's insight): riders default to their own phones the moment
           they sit down. A phone is single-player-in-the-hand; a shared tablet
           between friends is something the phone can't replicate — so a multiplayer
@@ -674,15 +732,77 @@ NEW FROM Abdullah (2026-05-30) — BUGS + ENHANCEMENTS
           zone); turn-based BOARD games mostly DON'T. So tic-tac-toe / Connect Four
           stay 2-only; the 3-player options are the reflex games + dots-and-boxes.
         - Build order by effort/payoff:
-            a) Tic-tac-toe (2P) — hot-seat, trivial, instantly understood. SHIP
-               FIRST (proves the hot-seat pattern + the player-count picker).
-            b) Tap-reaction duel (2-3P) — split into 2 or 3 zones, "tap when it
-               turns green," first to tap wins. Zero rules, works for strangers,
-               scales to 3 by adding a third zone. Very social.
-            c) Multiplayer trivia buzzer (2-3P) — HIGH payoff: reuses the existing
-               Trivia question bank + ES/PT/FR translations (#29). Each player gets
-               a buzzer zone; first to buzz answers; right = score, wrong = locked
-               out that round. Running scoreboard.
+            a) [X] Tic-tac-toe (2P) — DONE 2026-06-01 (uncommitted), all in
+               index.html. Mocked first (mock-tictactoe.html, project root — NOT
+               in public/, won't deploy) → Abdullah picked: navy board (variant
+               B), "Solo / With friends" category headers, "loser goes first".
+               SHIPPED:
+                 * GAMES-PAGE REDESIGN (the #30 categorization rule): replaced the
+                   old trivia-hero + 2x2 grid with two categories — "Solo" (trivia,
+                   tap, word, spin, image) and "With friends" (tic-tac-toe + "Soon"
+                   teasers for Tap Duel / Trivia Buzzer). Every tile now has a
+                   player-count badge (1 / 2 / 2-3) + icon + one-liner. .games-cats
+                   scrolls if needed. Old .hero-*/.games-layout/.grid-col CSS +
+                   markup removed; trivia is now a normal Solo card (triviaHeroTitle/
+                   triviaHeroDesc GAME_UI keys renamed triviaCardTitle/Desc).
+                 * GAME: #game-ttt screen. P1=X (teal, LEFT), P2=O (gold, RIGHT),
+                   SAME orientation (no 180° flip — riders side-by-side). Turn bar
+                   highlights the active player; running win tally per player.
+                   Win line highlighted; win/draw banner + "Play again". Logic:
+                   tttMove/tttWinningLine/tttRenderBoard/tttRenderStrings, registered
+                   in GAMES registry (reset: initTTT). Taps logged (game_ttt_*).
+                 * "LOSER GOES FIRST": winner-decided round → loser opens next;
+                   draw → alternate opener. Round 1 opens with X.
+                 * PLAYER-COUNT PICKER: tic-tac-toe is fixed-2, so instead of a
+                   1/2/3 chooser (pointless friction for a 2-only board) it shows a
+                   lightweight pre-game INTRO ("2 players · pass & play" + Start).
+                   This establishes the shared pre-game STEP; the real 1/2/3 picker
+                   slots into .ttt-intro's place when the variable-count reflex games
+                   (b/c) land. NOTE: this deviates slightly from mock frame 2 (which
+                   dimmed 1 & 3) — confirm the intro screen on-device.
+                 * i18n EN/ES/PT/FR for everything (categories, badges, teaser
+                   cards, ttt UI + dynamic turn/banner via tttRenderStrings, wired
+                   into refreshOpenGame so an open game flips language cleanly).
+                 * TESTS: 5 logic tests (games-logic.spec.js: alternation, win+tally
+                   +highlight, illegal-move/after-over guards, loser-goes-first,
+                   draw) + 1 i18n re-render test (games.spec.js) + ttt added to the
+                   open/close loop (passenger.spec.js). All ttt tests green; suite
+                   flakes seen were env-only (ERR_INSUFFICIENT_RESOURCES / CDN refused
+                   under repeated parallel runs), not ttt.
+                 * SW cache bumped v1.13.0 -> v1.14.0.
+                 * OPEN: delete mock-tictactoe.html once happy; verify on real iPad
+                   (#7); decide if the fixed-2 intro should instead show the dimmed
+                   1/2/3 picker for consistency with the b/c games.
+            b) [X] Tap-reaction duel (2-3P) — DONE 2026-06-02 (uncommitted).
+               2/3 zones (P1 left … P3 right, same orientation). Arming=red,
+               then a random 1.2-4.0s setTimeout flips all zones green; first
+               valid tap wins + tallies. DESIGN CHOICE: a tap on red = false
+               start that VOIDS the round (no tally) and names the early tapper
+               — one fair rule for any count (vs awarding the win to "opponents,"
+               which is ambiguous at 3P). #game-duel; logic duelArm/duelGo/
+               duelTap/duelRender; reset: initDuel. Timer cleared in closeGames.
+            c) [X] Multiplayer trivia buzzer (2-3P) — DONE 2026-06-02 (uncommitted).
+               Reuses TRIVIA_QUESTIONS + ES/PT/FR (#29) and the .trivia-opt
+               styling. Shared question up top, per-player BUZZ buttons along the
+               bottom. #game-buzzer; logic buzzIn/buzzAnswer/buzzTimeout/buzzNext/
+               buzzRender; reset: initBuzzer. SW v1.15.0 -> v1.16.0.
+               ANTI-EXPLOIT RULES (Abdullah, 2026-06-02 — buzzing early to lock
+               others out then reading at leisure was the problem):
+                 * THE BUZZ IS A COMMITMENT: buzzing starts a per-buzz countdown
+                   (BUZZ_SECONDS = 5s, visible #buzz-timer). Read first, then buzz.
+                 * Correct → +1, question ends.
+                 * Wrong (in time) → locked out, NO point lost; buzz reopens for
+                   the others.
+                 * TIMEOUT (ran out the clock) → LOSE a point and locked out; buzz
+                   reopens. Scores MAY GO NEGATIVE (deliberate — keeps the penalty
+                   biting even at 0; .buzz-score-pts.neg shows red).
+                 * All players out → reveal answer, no winner, Next.
+                 * Rejected ideas: initial 1-2s buzzer lockout (punishes fast
+                   readers / feels broken on kiosk — the per-buzz timer is the real
+                   fix); awarding the point to opponents on timeout (inflates 3P
+                   scores, rewards non-knowledge). buzzTimeout() is split from the
+                   1s setInterval (buzzTick) so tests drive it deterministically;
+                   timer cleared in closeGames.
             d) Connect Four (2P) — more replay value than tic-tac-toe.
             e) Dots and Boxes (2-3P) — natively supports 3+ (each player a color,
                most boxes wins); the one board game that scales to a third player.
@@ -828,6 +948,64 @@ NEW FROM Abdullah (2026-06-01) — BUGS + i18n + IMAGE UX
           maximumAge / whether watchPosition needs high accuracy at all.
 
 
+2026-06-02/03 SESSION — UNCOMMITTED (PWA icons + Deco Dusk whole-app retheme)
+----------------------------------------------------------------------------
+Staged on main, NOT pushed (no-push policy). First real app icons + a full
+visual redesign. Deploys batched with the other uncommitted work; SW bumped.
+
+  - PWA ICONS (NEW — were 404ing): /icons/icon-192.png + icon-512.png never
+    existed, but manifest.json + the apple-touch-icon referenced them → a 404
+    on every load and a blank install icon on the tablet. Created real icons.
+      * 3 designs mocked (assets/icons/icon-{a,b,c}.svg, rendered to PNG via
+        scripts/render-icons.mjs using `sharp`): A "Sunset Causeway",
+        B "Drop Pin Palm", C "Miami Vice" (purple/pink synthwave palm —
+        Abdullah's brief).
+      * CHOSEN: C. Rendered to public/icons/icon-192.png + icon-512.png (the
+        canonical names the manifest already referenced → no path edits).
+        meta theme-color #0F2137 → #0C1A2E. Icons added to SW PRECACHE_URLS so
+        the installed tablet app has them offline.
+      * Re-render anytime: set CHOSEN in scripts/render-icons.mjs, `node` it.
+      * NOTE: `sharp` is used by the icon/screenshot scripts but is NOT in
+        package.json (only present transitively); add as a devDep if those
+        scripts ever break after a clean install. App itself doesn't need it.
+
+  - DECO DUSK RETHEME (whole app — Guide + Weather + Games + driver page + all
+    game screens + modals). Replaces the cool navy/teal/gold LIGHT theme with a
+    warm DARK "South Beach art-deco at twilight" look (Abdullah: "warm +
+    eye-catching", leaning Miami Vice). Direction picked from 3 full mockups
+    (mocks/home-{a,b,c}-*.html + screenshots).
+      * Approach: TOKEN-FIRST. :root remapped (deep navy/teal/gold + new
+        --pink/--pink-soft, translucent --card, new --card-solid, gold-hairline
+        --border); #app paints a radial+linear dusk gradient. Most components
+        use semantic tokens, so the bulk flipped automatically.
+      * Fonts: added Marcellus (display) + Poiret One (deco labels);
+        --font-display is now Marcellus (was Playfair, still loaded). Greeting
+        "welcome aboard" accented italic gold (.greeting-accent; split on the
+        em-dash, built with DOM nodes so it's injection-safe; works in 4 langs).
+      * Surgical fixes beyond the cascade: filter pills, hero gold deco frame +
+        gold CTA, weather hour/day cards, event cards/badges, ALL game-screen
+        boxes (background:white → dark, EXCEPT the two QR backgrounds which MUST
+        stay white to scan), trivia/word/image correct-wrong-feedback states,
+        tap-duel/buzzer states, inactivity + QR modals. Fixed a real contrast
+        bug surfaced by the brighter gold: P2 buzzer button had white text on
+        gold → now dark text.
+      * VERIFIED: screenshotted all 3 tabs + trivia/QR/driver in the RUNNING
+        app (scripts/shoot-app.mjs, shoot-deep.mjs, shoot-verify.mjs) + every
+        game intro; PLUS programmatic audits (scripts/audit-theme.mjs /
+        audit-special.mjs / audit-tabs.mjs): 0 un-themed light boxes on game
+        play screens; 0 light-bg / 0 low-contrast text on inactivity/thanks/
+        rest. The Guide audit's 2 "low-contrast" hits are false positives
+        (gradient buttons the bg-color audit can't read).
+      * SW cache bumped v1.16.0 → v1.17.0.
+      * OPEN: verify on the real iPad (#7) — esp. dark-screen glare/readability
+        in a bright car (the original reason the theme was light). Consider a
+        Playwright "theme regression" guard (port the audit scripts).
+
+  - MOCKS POLICY (Abdullah, 2026-06-02): keep ALL design mocks permanently in
+    mocks/ and their helper scripts in scripts/ — never delete them as
+    "cleanup". (Saved to Claude memory too.)
+
+
 2026-05-31 SESSION — UNCOMMITTED (translations, events, weather, SW, tests)
 ---------------------------------------------------------------------------
 Batched with the offline-fallback (#27) work; all staged on main, NOT pushed.
@@ -878,9 +1056,10 @@ KNOWN TRANSITIONAL STATE (not bugs)
   every event title/description). The only blank-translation objects left are
   ads.sponsored[0..1] headline/body — and their EN is empty too (unused slots),
   so there is nothing to translate. Enforced by tests/content.spec.js.
-- Service Worker cache version is 'miami-ride-v1.12.0' (bumped 2026-05-31 for the
-  editor offline-fallback fix #27, UNCOMMITTED). Bump again before any further
-  prod push so existing tablet clients re-cache the new bundle.
+- Service Worker cache version is 'miami-ride-v1.17.0' (bumped 2026-06-03 for the
+  PWA icons + Deco Dusk retheme; the v1.12.0→v1.17.0 bumps across sessions are
+  all UNCOMMITTED). Bump again before any further prod push so existing tablet
+  clients re-cache the new bundle.
 
 EVENT CARD POLISH — UNCOMMITTED (2026-05-30, after the 13ec4ba deploy):
   Driven by Abdullah reviewing live events. NOT yet pushed — needs a deploy

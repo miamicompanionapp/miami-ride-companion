@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Icon C: "Miami Vice" — classic purple/pink synthwave sun with a palm silhouette. -->
+  <defs>
+    <linearGradient id="vsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1B0B3A"/>
+      <stop offset="38%"  stop-color="#5A1A8C"/>
+      <stop offset="70%"  stop-color="#B5278E"/>
+      <stop offset="100%" stop-color="#3A0E5C"/>
+    </linearGradient>
+    <linearGradient id="vsun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFE27A"/>
+      <stop offset="45%"  stop-color="#FF8FB1"/>
+      <stop offset="100%" stop-color="#FF2E88"/>
+    </linearGradient>
+    <linearGradient id="grid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FF2E88" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#FF6FB5" stop-opacity="0.9"/>
+    </linearGradient>
+    <clipPath id="sundisc"><circle cx="256" cy="226" r="118"/></clipPath>
+    <clipPath id="frame3"><rect width="512" height="512"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame3)">
+    <rect width="512" height="512" fill="url(#vsky)"/>
+
+    <!-- retro sun with horizontal slits in its lower half -->
+    <g clip-path="url(#sundisc)">
+      <rect x="138" y="108" width="236" height="236" fill="url(#vsun)"/>
+      <g fill="#5A1A8C">
+        <rect x="138" y="236" width="236" height="8"/>
+        <rect x="138" y="254" width="236" height="10"/>
+        <rect x="138" y="276" width="236" height="13"/>
+        <rect x="138" y="302" width="236" height="17"/>
+        <rect x="138" y="332" width="236" height="22"/>
+      </g>
+    </g>
+
+    <!-- horizon line -->
+    <rect x="0" y="344" width="512" height="4" fill="#FF6FB5" opacity="0.85"/>
+
+    <!-- perspective grid floor -->
+    <g stroke="url(#grid)" stroke-width="3" fill="none" opacity="0.9">
+      <line x1="256" y1="348" x2="-120" y2="512"/>
+      <line x1="256" y1="348" x2="40"   y2="512"/>
+      <line x1="256" y1="348" x2="160"  y2="512"/>
+      <line x1="256" y1="348" x2="256"  y2="512"/>
+      <line x1="256" y1="348" x2="352"  y2="512"/>
+      <line x1="256" y1="348" x2="472"  y2="512"/>
+      <line x1="256" y1="348" x2="632"  y2="512"/>
+      <line x1="0" y1="380" x2="512" y2="380"/>
+      <line x1="0" y1="424" x2="512" y2="424"/>
+      <line x1="0" y1="480" x2="512" y2="480"/>
+    </g>
+
+    <!-- palm silhouette -->
+    <g fill="#160826">
+      <path d="M150 360 C146 300 150 250 168 198 l20 4 C172 252 168 304 174 360 Z"/>
+      <path d="M178 196 C150 168 110 156 74 162 C112 164 146 180 170 210 Z"/>
+      <path d="M180 192 C166 150 132 118 92 108 C128 130 156 164 170 206 Z"/>
+      <path d="M184 192 C200 150 240 122 286 118 C242 134 210 166 192 206 Z"/>
+      <path d="M186 196 C220 174 262 172 300 186 C262 180 224 188 196 212 Z"/>
+      <path d="M182 188 c-6 -26 -2 -54 10 -78 c4 26 0 54 -2 78 Z"/>
+      <circle cx="176" cy="200" r="6"/>
+      <circle cx="190" cy="200" r="6"/>
+    </g>
+  </g>
+</svg>

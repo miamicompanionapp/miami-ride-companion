@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — Option A · Sunset Vice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg-0:#160A2E; --bg-1:#22103F; --purple:#6B1F8F; --magenta:#C42E8A;
+    --pink:#FF2E88; --pink-soft:#FF6FB5; --cyan:#2DE2E6; --amber:#FFD86B;
+    --ink:#F4E9FF; --muted:#B49AD6; --line:rgba(255,111,181,.22);
+    --glass:rgba(43,20,74,.55); --glass-2:rgba(58,28,94,.45);
+    --display:'Unbounded',sans-serif; --body:'DM Sans',sans-serif;
+  }
+  html,body{height:100%;font-family:var(--body);color:var(--ink);overflow:hidden}
+  body{
+    background:
+      radial-gradient(1100px 700px at 78% -10%, rgba(255,46,136,.38), transparent 60%),
+      radial-gradient(900px 600px at 12% 110%, rgba(45,226,230,.16), transparent 55%),
+      linear-gradient(160deg,#160A2E 0%, #22103F 45%, #3A0E5C 100%);
+  }
+  .shell{display:flex;height:100vh;width:100vw}
+
+  /* sidebar */
+  .sidebar{width:236px;flex-shrink:0;display:flex;flex-direction:column;padding:22px 18px;gap:20px;
+    background:linear-gradient(180deg, rgba(22,10,46,.7), rgba(34,16,63,.55));
+    border-right:1px solid var(--line);backdrop-filter:blur(8px)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:42px;height:42px;border-radius:13px;flex-shrink:0;position:relative;overflow:hidden;
+    background:linear-gradient(160deg,#FFD86B,#FF2E88 55%,#6B1F8F);box-shadow:0 0 18px rgba(255,46,136,.5)}
+  .brand-mark::after{content:"";position:absolute;left:6px;bottom:6px;width:10px;height:18px;border-radius:2px;
+    background:#160A2E;clip-path:polygon(40% 0,60% 0,100% 100%,0 100%)}
+  .brand-name{font-family:var(--display);font-weight:800;font-size:17px;line-height:1.05;letter-spacing:-.3px}
+  .brand-sub{font-size:11px;color:var(--muted);letter-spacing:.5px;margin-top:2px}
+  .loc{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--cyan);
+    background:rgba(45,226,230,.08);border:1px solid rgba(45,226,230,.25);padding:8px 11px;border-radius:10px}
+  .nav{display:flex;flex-direction:column;gap:6px}
+  .nav a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:var(--muted);
+    font-weight:600;font-size:14px;text-decoration:none;transition:.2s;position:relative}
+  .nav a i{font-size:19px}
+  .nav a.active{color:#fff;background:linear-gradient(100deg,rgba(255,46,136,.9),rgba(196,46,138,.7));
+    box-shadow:0 8px 22px -8px rgba(255,46,136,.8)}
+  .nav a:not(.active):hover{color:var(--ink);background:rgba(255,255,255,.04)}
+  .driver{margin-top:auto;display:flex;align-items:center;gap:11px;padding:12px;border-radius:14px;
+    background:var(--glass-2);border:1px solid var(--line)}
+  .av{width:38px;height:38px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-weight:700;color:#160A2E;
+    background:linear-gradient(150deg,var(--amber),var(--pink));font-family:var(--display)}
+  .driver .nm{font-size:13.5px;font-weight:700}
+  .driver .rl{font-size:11px;color:var(--muted)}
+  .langs{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .langs button{font-family:var(--body);font-weight:600;font-size:12px;color:var(--muted);cursor:pointer;
+    padding:8px;border-radius:9px;border:1px solid var(--line);background:transparent}
+  .langs button.on{color:#160A2E;background:var(--cyan);border-color:var(--cyan)}
+
+  /* main */
+  .main{flex:1;display:flex;flex-direction:column;min-width:0;padding:26px 30px 0}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px}
+  .hello{font-family:var(--display);font-weight:700;font-size:30px;letter-spacing:-.6px;line-height:1.05}
+  .hello b{background:linear-gradient(100deg,var(--amber),var(--pink) 60%,var(--cyan));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hello-sub{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13.5px;margin-top:8px}
+  .top-actions{display:flex;gap:10px;align-items:center}
+  .wx{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:13px;background:var(--glass);
+    border:1px solid var(--line)}
+  .wx .t{font-family:var(--display);font-weight:700;font-size:19px}
+  .wx i{font-size:22px;color:var(--amber)}
+  .phone{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#160A2E;cursor:pointer;
+    padding:10px 15px;border-radius:13px;background:linear-gradient(100deg,var(--cyan),#7CF5D2);
+    box-shadow:0 8px 20px -8px rgba(45,226,230,.7)}
+
+  .scroll{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:20px;padding-bottom:24px}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.15fr 1fr;border-radius:24px;overflow:hidden;min-height:248px;
+    border:1px solid var(--line);background:var(--glass);position:relative}
+  .hero-photo{position:relative;background:#2A1247}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;mix-blend-mode:luminosity;opacity:.92}
+  .hero-photo::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,transparent 40%,var(--glass) 100%),
+      linear-gradient(180deg,rgba(255,46,136,.25),transparent 50%)}
+  .badge{position:absolute;top:16px;left:16px;z-index:2;display:flex;align-items:center;gap:6px;
+    font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#160A2E;
+    padding:7px 12px;border-radius:30px;background:linear-gradient(100deg,var(--amber),var(--pink-soft));
+    box-shadow:0 6px 16px -6px rgba(255,46,136,.8)}
+  .hero-body{padding:26px 28px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+  .eyebrow{font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan)}
+  .hero-name{font-family:var(--display);font-weight:700;font-size:30px;line-height:1.06;letter-spacing:-.5px}
+  .hero-meta{display:flex;gap:14px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+  .hero-meta span{display:flex;align-items:center;gap:6px}
+  .hero-meta i{color:var(--pink-soft);font-size:16px}
+  .hero-desc{font-size:13.5px;line-height:1.55;color:#D9C7F2;max-width:42ch}
+  .hero-cta{align-self:flex-start;margin-top:4px;display:flex;align-items:center;gap:9px;font-weight:700;font-size:13px;
+    color:#fff;padding:11px 18px;border-radius:13px;cursor:pointer;
+    background:linear-gradient(100deg,var(--pink),var(--magenta));box-shadow:0 10px 24px -10px var(--pink)}
+
+  .sec-head{display:flex;justify-content:space-between;align-items:baseline}
+  .sec-title{font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:-.2px}
+  .sec-link{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--cyan);cursor:pointer}
+
+  .minis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mini{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--glass-2);
+    transition:.25s;cursor:pointer}
+  .mini:hover{transform:translateY(-3px);border-color:rgba(255,46,136,.5)}
+  .mini-top{height:96px;position:relative;display:grid;place-items:center;font-size:34px}
+  .mini-top.g1{background:linear-gradient(150deg,#FF2E88,#6B1F8F)}
+  .mini-top.g2{background:linear-gradient(150deg,#2DE2E6,#3A0E5C)}
+  .mini-top.g3{background:linear-gradient(150deg,#FFD86B,#C42E8A)}
+  .mini-tag{position:absolute;top:10px;left:10px;font-size:9.5px;font-weight:700;letter-spacing:.5px;
+    text-transform:uppercase;padding:4px 9px;border-radius:20px;background:rgba(22,10,46,.7);color:var(--ink);
+    border:1px solid var(--line)}
+  .mini-body{padding:13px 15px 16px}
+  .mini-name{font-family:var(--display);font-weight:600;font-size:15px;margin-bottom:5px}
+  .mini-meta{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+  .mini-meta i{color:var(--pink-soft);font-size:14px}
+
+  .pills{display:flex;gap:10px;flex-wrap:wrap}
+  .pill{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;cursor:pointer;
+    padding:9px 15px;border-radius:30px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.03)}
+  .pill i{font-size:15px}
+  .pill.on{color:#160A2E;background:linear-gradient(100deg,var(--amber),var(--pink-soft));border-color:transparent;font-weight:700}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div><div class="brand-name">Miami<br>Companion</div></div>
+    </div>
+    <div class="loc"><i class="ti ti-map-pin"></i> Wynwood, Miami</div>
+    <nav class="nav">
+      <a class="active"><i class="ti ti-map-pin"></i> City Guide</a>
+      <a><i class="ti ti-cloud"></i> Weather</a>
+      <a><i class="ti ti-device-gamepad-2"></i> Games</a>
+    </nav>
+    <div class="driver">
+      <div class="av">A</div>
+      <div><div class="nm">Abdullah</div><div class="rl">Your driver · handyman</div></div>
+    </div>
+    <div class="langs">
+      <button class="on">🇺🇸 EN</button><button>🇪🇸 ES</button>
+      <button>🇧🇷 PT</button><button>🇫🇷 FR</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="top">
+      <div>
+        <div class="hello">Good evening — <b>welcome aboard</b></div>
+        <div class="hello-sub"><i class="ti ti-current-location"></i> Showing places nearest to you right now</div>
+      </div>
+      <div class="top-actions">
+        <div class="wx"><i class="ti ti-sun-high"></i><div><div class="t">84°</div></div></div>
+        <div class="phone"><i class="ti ti-qrcode"></i> Open on your phone</div>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <section class="hero">
+        <div class="hero-photo">
+          <div class="badge"><i class="ti ti-star-filled"></i> Local Favorite</div>
+          <img src="../public/images/venues/mandolin.png" alt="Mandolin">
+        </div>
+        <div class="hero-body">
+          <div class="eyebrow">Aegean · Design District</div>
+          <div class="hero-name">Mandolin Aegean Bistro</div>
+          <div class="hero-meta">
+            <span><i class="ti ti-walk"></i> 6 min away</span>
+            <span><i class="ti ti-star"></i> 4.7</span>
+            <span><i class="ti ti-currency-dollar"></i> $$$</span>
+          </div>
+          <div class="hero-desc">Greek & Turkish coastal cooking in a whitewashed garden — the closest thing to the Aegean in Miami.</div>
+          <div class="hero-cta">See it & get directions <i class="ti ti-arrow-right"></i></div>
+        </div>
+      </section>
+
+      <div class="sec-head">
+        <div class="sec-title">More near you</div>
+        <div class="sec-link">See all <i class="ti ti-arrow-right"></i></div>
+      </div>
+      <div class="minis">
+        <div class="mini">
+          <div class="mini-top g1">🎨<span class="mini-tag">Street Art</span></div>
+          <div class="mini-body"><div class="mini-name">Wynwood Walls</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 3 min · Wynwood</div></div>
+        </div>
+        <div class="mini">
+          <div class="mini-top g2">🍽️<span class="mini-tag">Cuban</span></div>
+          <div class="mini-body"><div class="mini-name">Versailles</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 12 min · Little Havana</div></div>
+        </div>
+        <div class="mini">
+          <div class="mini-top g3">🍸<span class="mini-tag">Sponsored</span></div>
+          <div class="mini-body"><div class="mini-name">Gramps</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 4 min · Wynwood</div></div>
+        </div>
+      </div>
+
+      <div class="pills">
+        <div class="pill on"><i class="ti ti-sparkles"></i> All places</div>
+        <div class="pill"><i class="ti ti-tools-kitchen-2"></i> Food</div>
+        <div class="pill"><i class="ti ti-camera"></i> Attractions</div>
+        <div class="pill"><i class="ti ti-heart"></i> Local picks</div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

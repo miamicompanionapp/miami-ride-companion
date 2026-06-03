@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Icon A: "Sunset Causeway" — brand navy/teal/gold. A road leading into the Miami sunset. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0F2137"/>
+      <stop offset="42%" stop-color="#13455A"/>
+      <stop offset="68%" stop-color="#0B9EA6"/>
+      <stop offset="100%" stop-color="#F2C75B"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FDE6B0"/>
+      <stop offset="55%" stop-color="#F2C75B"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </radialGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0B9EA6" stop-opacity="0.0"/>
+      <stop offset="40%" stop-color="#0F2137"/>
+      <stop offset="100%" stop-color="#091726"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="512" height="512"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="512" height="512" fill="url(#sky)"/>
+
+    <!-- sun, sitting on the horizon -->
+    <circle cx="256" cy="300" r="92" fill="url(#sun)"/>
+    <!-- horizon haze bands across the sun -->
+    <g fill="#13455A" opacity="0.55">
+      <rect x="150" y="318" width="212" height="9" rx="4"/>
+      <rect x="150" y="338" width="212" height="11" rx="5"/>
+      <rect x="150" y="360" width="212" height="13" rx="6"/>
+    </g>
+
+    <!-- the causeway / road -->
+    <path d="M256 296 L196 512 L316 512 Z" fill="url(#road)"/>
+    <!-- centre lane dashes -->
+    <g fill="#F2C75B">
+      <path d="M254 360 l4 0 l3 26 l-10 0 Z"/>
+      <path d="M251 408 l10 0 l4 34 l-18 0 Z"/>
+      <path d="M247 470 l18 0 l5 42 l-28 0 Z"/>
+    </g>
+  </g>
+</svg>

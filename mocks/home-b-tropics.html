@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — Option B · Warm Tropics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --cream:#FFF6EC; --cream-2:#FDEBD8; --paper:#FFFDFA;
+    --coral:#FF6B4A; --coral-deep:#E8472B; --sun:#FBA834; --berry:#C0306B;
+    --grape:#6A2C8F; --teal:#159E96;
+    --ink:#3A2417; --ink-soft:#8A6B57; --line:#F0DEC8;
+    --display:'Fraunces',serif; --body:'DM Sans',sans-serif;
+  }
+  html,body{height:100%;font-family:var(--body);color:var(--ink);overflow:hidden}
+  body{background:
+    radial-gradient(900px 520px at 88% -8%, rgba(251,168,52,.28), transparent 60%),
+    radial-gradient(700px 480px at -5% 105%, rgba(192,48,107,.14), transparent 60%),
+    linear-gradient(165deg,var(--cream) 0%, var(--cream-2) 100%)}
+  .shell{display:flex;height:100vh;width:100vw}
+
+  .sidebar{width:236px;flex-shrink:0;display:flex;flex-direction:column;padding:22px 18px;gap:20px;
+    background:linear-gradient(180deg,rgba(255,253,250,.85),rgba(253,235,216,.6));border-right:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:42px;height:42px;border-radius:14px;flex-shrink:0;position:relative;overflow:hidden;
+    background:linear-gradient(155deg,var(--sun),var(--coral) 55%,var(--berry));box-shadow:0 8px 18px -6px rgba(232,71,43,.5)}
+  .brand-mark::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:16px;transform:translate(-50%,-40%);
+    border-radius:2px;background:rgba(255,253,250,.92);clip-path:polygon(42% 0,58% 0,100% 100%,0 100%)}
+  .brand-name{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.02}
+  .loc{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--coral-deep);
+    background:rgba(255,107,74,.1);padding:8px 11px;border-radius:11px}
+  .nav{display:flex;flex-direction:column;gap:5px}
+  .nav a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:13px;color:var(--ink-soft);
+    font-weight:600;font-size:14px;text-decoration:none;transition:.2s}
+  .nav a i{font-size:19px}
+  .nav a.active{color:#fff;background:linear-gradient(100deg,var(--coral),var(--coral-deep));
+    box-shadow:0 10px 22px -10px rgba(232,71,43,.8)}
+  .nav a:not(.active):hover{background:rgba(255,107,74,.08);color:var(--ink)}
+  .driver{margin-top:auto;display:flex;align-items:center;gap:11px;padding:12px;border-radius:15px;
+    background:var(--paper);border:1px solid var(--line)}
+  .av{width:38px;height:38px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-weight:700;color:#fff;
+    background:linear-gradient(150deg,var(--sun),var(--berry));font-family:var(--display)}
+  .driver .nm{font-size:13.5px;font-weight:700}
+  .driver .rl{font-size:11px;color:var(--ink-soft)}
+  .langs{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .langs button{font-family:var(--body);font-weight:600;font-size:12px;color:var(--ink-soft);cursor:pointer;
+    padding:8px;border-radius:10px;border:1px solid var(--line);background:var(--paper)}
+  .langs button.on{color:#fff;background:var(--teal);border-color:var(--teal)}
+
+  .main{flex:1;display:flex;flex-direction:column;min-width:0;padding:26px 30px 0}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px}
+  .hello{font-family:var(--display);font-weight:600;font-size:32px;letter-spacing:-.4px;line-height:1.04}
+  .hello b{font-weight:700;font-style:italic;color:var(--coral-deep)}
+  .hello-sub{display:flex;align-items:center;gap:7px;color:var(--ink-soft);font-size:13.5px;margin-top:8px}
+  .top-actions{display:flex;gap:10px;align-items:center}
+  .wx{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:14px;background:var(--paper);
+    border:1px solid var(--line);box-shadow:0 4px 14px -8px rgba(58,36,23,.3)}
+  .wx .t{font-family:var(--display);font-weight:700;font-size:19px}
+  .wx i{font-size:22px;color:var(--sun)}
+  .phone{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#fff;cursor:pointer;
+    padding:11px 16px;border-radius:14px;background:linear-gradient(100deg,var(--sun),var(--coral));
+    box-shadow:0 10px 22px -10px rgba(251,168,52,.9)}
+
+  .scroll{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:20px;padding-bottom:24px}
+
+  .hero{display:grid;grid-template-columns:1.15fr 1fr;border-radius:26px;overflow:hidden;min-height:250px;
+    background:var(--paper);border:1px solid var(--line);box-shadow:0 24px 50px -28px rgba(192,48,107,.45)}
+  .hero-photo{position:relative;background:var(--cream-2)}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,var(--paper) 100%)}
+  .badge{position:absolute;top:16px;left:16px;z-index:2;display:flex;align-items:center;gap:6px;
+    font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#fff;
+    padding:7px 13px;border-radius:30px;background:linear-gradient(100deg,var(--berry),var(--coral-deep));
+    box-shadow:0 8px 18px -8px rgba(192,48,107,.8)}
+  .hero-body{padding:28px 30px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+  .eyebrow{font-size:11.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal)}
+  .hero-name{font-family:var(--display);font-weight:700;font-size:31px;line-height:1.04;letter-spacing:-.4px}
+  .hero-meta{display:flex;gap:14px;color:var(--ink-soft);font-size:13px;flex-wrap:wrap}
+  .hero-meta span{display:flex;align-items:center;gap:6px}
+  .hero-meta i{color:var(--coral);font-size:16px}
+  .hero-desc{font-size:13.5px;line-height:1.55;color:#6E5240;max-width:42ch}
+  .hero-cta{align-self:flex-start;margin-top:4px;display:flex;align-items:center;gap:9px;font-weight:700;font-size:13px;
+    color:#fff;padding:12px 19px;border-radius:14px;cursor:pointer;
+    background:linear-gradient(100deg,var(--coral),var(--coral-deep));box-shadow:0 12px 26px -12px var(--coral-deep)}
+
+  .sec-head{display:flex;justify-content:space-between;align-items:baseline}
+  .sec-title{font-family:var(--display);font-weight:600;font-size:20px}
+  .sec-link{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--coral-deep);cursor:pointer}
+
+  .minis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mini{border-radius:20px;overflow:hidden;background:var(--paper);border:1px solid var(--line);
+    box-shadow:0 12px 30px -22px rgba(58,36,23,.5);transition:.25s;cursor:pointer}
+  .mini:hover{transform:translateY(-3px);box-shadow:0 20px 38px -22px rgba(232,71,43,.6)}
+  .mini-top{height:98px;position:relative;display:grid;place-items:center;font-size:34px}
+  .mini-top.g1{background:linear-gradient(150deg,#FF6B4A,#C0306B)}
+  .mini-top.g2{background:linear-gradient(150deg,#FBA834,#E8472B)}
+  .mini-top.g3{background:linear-gradient(150deg,#159E96,#6A2C8F)}
+  .mini-tag{position:absolute;top:10px;left:10px;font-size:9.5px;font-weight:700;letter-spacing:.5px;
+    text-transform:uppercase;padding:4px 10px;border-radius:20px;background:rgba(255,253,250,.9);color:var(--ink)}
+  .mini-body{padding:13px 16px 16px}
+  .mini-name{font-family:var(--display);font-weight:600;font-size:16px;margin-bottom:5px}
+  .mini-meta{font-size:12px;color:var(--ink-soft);display:flex;align-items:center;gap:6px}
+  .mini-meta i{color:var(--coral);font-size:14px}
+
+  .pills{display:flex;gap:10px;flex-wrap:wrap}
+  .pill{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;cursor:pointer;
+    padding:10px 16px;border-radius:30px;border:1px solid var(--line);color:var(--ink-soft);background:var(--paper)}
+  .pill i{font-size:15px}
+  .pill.on{color:#fff;background:linear-gradient(100deg,var(--sun),var(--coral));border-color:transparent;font-weight:700}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div><div class="brand-name">Miami<br>Companion</div></div>
+    </div>
+    <div class="loc"><i class="ti ti-map-pin"></i> Wynwood, Miami</div>
+    <nav class="nav">
+      <a class="active"><i class="ti ti-map-pin"></i> City Guide</a>
+      <a><i class="ti ti-cloud"></i> Weather</a>
+      <a><i class="ti ti-device-gamepad-2"></i> Games</a>
+    </nav>
+    <div class="driver">
+      <div class="av">A</div>
+      <div><div class="nm">Abdullah</div><div class="rl">Your driver · handyman</div></div>
+    </div>
+    <div class="langs">
+      <button class="on">🇺🇸 EN</button><button>🇪🇸 ES</button>
+      <button>🇧🇷 PT</button><button>🇫🇷 FR</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="top">
+      <div>
+        <div class="hello">Good evening — <b>welcome aboard</b></div>
+        <div class="hello-sub"><i class="ti ti-current-location"></i> Showing places nearest to you right now</div>
+      </div>
+      <div class="top-actions">
+        <div class="wx"><i class="ti ti-sun-high"></i><div class="t">84°</div></div>
+        <div class="phone"><i class="ti ti-qrcode"></i> Open on your phone</div>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <section class="hero">
+        <div class="hero-photo">
+          <div class="badge"><i class="ti ti-star-filled"></i> Local Favorite</div>
+          <img src="../public/images/venues/mandolin.png" alt="Mandolin">
+        </div>
+        <div class="hero-body">
+          <div class="eyebrow">Aegean · Design District</div>
+          <div class="hero-name">Mandolin Aegean Bistro</div>
+          <div class="hero-meta">
+            <span><i class="ti ti-walk"></i> 6 min away</span>
+            <span><i class="ti ti-star"></i> 4.7</span>
+            <span><i class="ti ti-currency-dollar"></i> $$$</span>
+          </div>
+          <div class="hero-desc">Greek & Turkish coastal cooking in a whitewashed garden — the closest thing to the Aegean in Miami.</div>
+          <div class="hero-cta">See it & get directions <i class="ti ti-arrow-right"></i></div>
+        </div>
+      </section>
+
+      <div class="sec-head">
+        <div class="sec-title">More near you</div>
+        <div class="sec-link">See all <i class="ti ti-arrow-right"></i></div>
+      </div>
+      <div class="minis">
+        <div class="mini">
+          <div class="mini-top g1">🎨<span class="mini-tag">Street Art</span></div>
+          <div class="mini-body"><div class="mini-name">Wynwood Walls</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 3 min · Wynwood</div></div>
+        </div>
+        <div class="mini">
+          <div class="mini-top g2">🍽️<span class="mini-tag">Cuban</span></div>
+          <div class="mini-body"><div class="mini-name">Versailles</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 12 min · Little Havana</div></div>
+        </div>
+        <div class="mini">
+          <div class="mini-top g3">🍸<span class="mini-tag">Sponsored</span></div>
+          <div class="mini-body"><div class="mini-name">Gramps</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 4 min · Wynwood</div></div>
+        </div>
+      </div>
+
+      <div class="pills">
+        <div class="pill on"><i class="ti ti-sparkles"></i> All places</div>
+        <div class="pill"><i class="ti ti-tools-kitchen-2"></i> Food</div>
+        <div class="pill"><i class="ti ti-camera"></i> Attractions</div>
+        <div class="pill"><i class="ti ti-heart"></i> Local picks</div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -6,41 +6,46 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Miami Ride">
-  <meta name="theme-color" content="#0F2137">
+  <meta name="theme-color" content="#0C1A2E">
   <title>Miami Ride Companion</title>
   <link rel="manifest" href="/manifest.json">
   <link rel="apple-touch-icon" href="/icons/icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Marcellus&family=Poiret+One&family=Playfair+Display:wght@500;600&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
 
   <style>
     /* ── Reset & Root ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy-deep:   #0F2137;
-      --navy-mid:    #1B3A5C;
-      --teal:        #0B9EA6;
-      --teal-light:  #7CC8CD;
-      --teal-mist:   #E3F4F4;
-      --teal-border: #B5E0E0;
-      --gold:        #C9A84C;
-      --gold-light:  #FBF4E6;
-      --gold-border: #E8D9A0;
-      --bg:          #F7F9FB;
-      --card:        #FFFFFF;
-      --border:      #D8E3EE;
-      --muted:       #7A8FA6;
-      --body:        #4A6275;
-      --heading:     #0F2137;
+      /* ── Deco Dusk theme (South Beach art-deco, twilight) ───────── */
+      --navy-deep:   #0C1A2E;   /* deepest dusk — sidebar, dark cards */
+      --navy-mid:    #15294A;
+      --teal:        #19A0A8;
+      --teal-light:  #37C7CE;
+      --teal-mist:   rgba(25,160,168,0.14);   /* translucent chip tint on dark */
+      --teal-border: rgba(25,160,168,0.34);
+      --gold:        #E5C06B;
+      --gold-light:  rgba(229,192,107,0.12);
+      --gold-border: rgba(229,192,107,0.30);
+      --pink:        #FF5C8A;   /* neon deco accent */
+      --pink-soft:   #FF89AE;
+      --bg:          #0C1A2E;
+      --card:        rgba(20,40,66,0.72);      /* glass panel over the dusk gradient */
+      --card-solid:  #16294A;                  /* opaque panel where needed */
+      --border:      rgba(229,192,107,0.18);   /* gold hairline */
+      --muted:       #9DB4C6;
+      --body:        #CBDAE6;
+      --heading:     #EAF1F6;
       --radius-sm:   8px;
       --radius-md:   12px;
       --radius-lg:   14px;
-      --shadow:      0 1px 8px rgba(15,33,55,0.08);
+      --shadow:      0 12px 34px rgba(0,0,0,0.40);
       --font-body:   'DM Sans', sans-serif;
-      --font-display:'Playfair Display', serif;
+      --font-display:'Marcellus', serif;
+      --font-deco:   'Poiret One', sans-serif;  /* deco eyebrows / labels */
       --transition:  200ms ease;
     }
 
@@ -59,7 +64,10 @@
     #app {
       width: 100vw; height: 100vh;
       display: flex; flex-direction: column;
-      background: var(--bg);
+      background:
+        radial-gradient(1000px 620px at 85% -12%, rgba(255,92,138,0.20), transparent 58%),
+        radial-gradient(820px 560px at 8% 108%, rgba(25,160,168,0.16), transparent 58%),
+        linear-gradient(165deg, #0C1A2E 0%, #15294A 50%, #0B2A3A 100%);
       overflow: hidden;
     }
 
@@ -159,6 +167,7 @@
       font-family: var(--font-display);
       font-size: 24px; font-weight: 500; color: var(--heading); line-height: 1.25;
     }
+    .greeting-accent { font-style: italic; color: var(--gold); }
     .greeting-sub {
       font-size: 16px; color: var(--body); margin-top: 8px;
       font-weight: 500; line-height: 1.4;
@@ -177,7 +186,7 @@
       flex-shrink: 0; margin-left: 14px;
     }
     .qr-compact i { font-size: 18px; color: var(--teal); }
-    .qr-compact span { font-size: 13px; font-weight: 600; color: #0B6E72; white-space: nowrap; }
+    .qr-compact span { font-size: 13px; font-weight: 600; color: #6FD3D9; white-space: nowrap; }
 
     .filter-row {
       display: flex; gap: 8px;
@@ -196,15 +205,15 @@
       transition: all var(--transition); flex-shrink: 0;
     }
     .pill i { font-size: 14px; }
-    .pill.active { background: var(--navy-deep); color: white; border-color: var(--navy-deep); }
-    .pill-featured { background: #FBEFCF; color: #7A5A12; border-color: #E8CE8E; }   /* curated landing */
-    .pill-allcat{ background: #EEF2F7; color: #3A4A5E; border-color: #D4DCE6; }   /* "All" grid */
-    .pill-food  { background: var(--teal-mist); color: #0B6E72; border-color: var(--teal-border); }
-    .pill-night { background: #EEF0F8; color: #1B3A5C; border-color: #C5CCE0; }
-    .pill-attr  { background: var(--gold-light); color: #7A5500; border-color: var(--gold-border); }
-    .pill-gem   { background: #F0EEF8; color: #4A3580; border-color: #C8C0E8; }
-    .pill-event { background: #FFF0F0; color: #8A2020; border-color: #E8C0C0; }
-    .pill-picks { background: #FBF4E6; color: #7A5500; border-color: var(--gold-border); }
+    .pill.active { background: linear-gradient(100deg, var(--gold), var(--pink-soft)); color: #0C1A2E; border-color: transparent; font-weight: 700; }
+    .pill-featured { background: var(--gold-light); color: #F0D08A; border-color: var(--gold-border); }   /* curated landing */
+    .pill-allcat{ background: rgba(157,180,198,0.12); color: #C3D3E0; border-color: rgba(157,180,198,0.28); }   /* "All" grid */
+    .pill-food  { background: var(--teal-mist); color: #6FD3D9; border-color: var(--teal-border); }
+    .pill-night { background: rgba(122,140,214,0.14); color: #B7C2F0; border-color: rgba(122,140,214,0.32); }
+    .pill-attr  { background: var(--gold-light); color: #F0D08A; border-color: var(--gold-border); }
+    .pill-gem   { background: rgba(168,130,224,0.14); color: #D3BBF2; border-color: rgba(168,130,224,0.32); }
+    .pill-event { background: rgba(255,92,138,0.14); color: var(--pink-soft); border-color: rgba(255,92,138,0.32); }
+    .pill-picks { background: var(--gold-light); color: #F0D08A; border-color: var(--gold-border); }
 
     .guide-section-label {
       padding: 10px 22px 8px;
@@ -238,14 +247,14 @@
       padding: 6px 14px; display: flex; align-items: center; gap: 5px;
     }
     .featured-badge i { font-size: 11px; color: var(--gold); }
-    .featured-badge span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #7A5500; }
+    .featured-badge span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #E5C06B; }
 
     .pick-badge {
       padding: 6px 14px; display: flex; align-items: center; gap: 5px;
       border-bottom: 0.5px solid var(--gold-border);
     }
     .pick-badge i { font-size: 11px; color: var(--gold); }
-    .pick-badge span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #7A5500; }
+    .pick-badge span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #E5C06B; }
 
     .venue-inner { padding: 14px 16px; }
     .venue-top {
@@ -270,7 +279,7 @@
     }
     .venue-desc { font-size: 14px; color: var(--body); line-height: 1.6; margin-bottom: 10px; }
     .venue-note {
-      font-size: 13px; color: #7A5500; font-style: italic;
+      font-size: 13px; color: #E5C06B; font-style: italic;
       line-height: 1.55; margin-bottom: 10px;
       padding: 7px 10px; background: rgba(201,168,76,0.1);
       border-radius: 6px; border-left: 2px solid var(--gold);
@@ -293,8 +302,8 @@
 
     /* Event card */
     .event-card {
-      background: white; border-radius: var(--radius-lg);
-      border: 0.5px solid #E8C0C0; overflow: hidden;
+      background: var(--card); border-radius: var(--radius-lg);
+      border: 0.5px solid rgba(255,92,138,0.32); overflow: hidden;
       cursor: pointer; grid-column: span 2;
     }
     /* With a photo, the card is a row: thumbnail on the LEFT, text on the right
@@ -316,15 +325,15 @@
     .event-card.has-photo .event-desc { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .event-card.has-photo .event-bottom { margin-top: auto; }
     .event-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-    .event-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #8A2020; }
+    .event-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--pink-soft); }
     .event-date { font-size: 13px; font-weight: 600; color: var(--muted); }
     .event-name { font-family: var(--font-display); font-size: 18px; color: var(--heading); margin-bottom: 6px; }
     .event-desc { font-size: 14px; color: var(--body); line-height: 1.6; }
     .event-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
     .event-venue { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 4px; }
-    .event-venue i { font-size: 14px; color: #8A2020; }
-    .free-badge { font-size: 12px; font-weight: 700; background: #E8F8F0; color: #00A88D; padding: 4px 10px; border-radius: 10px; }
-    .price-badge { font-size: 12px; font-weight: 700; background: #FBF3DC; color: #8A6D1F; padding: 4px 10px; border-radius: 10px; white-space: nowrap; }
+    .event-venue i { font-size: 14px; color: var(--pink); }
+    .free-badge { font-size: 12px; font-weight: 700; background: rgba(0,200,167,0.16); color: #4FE0C0; padding: 4px 10px; border-radius: 10px; }
+    .price-badge { font-size: 12px; font-weight: 700; background: var(--gold-light); color: #F0D08A; padding: 4px 10px; border-radius: 10px; white-space: nowrap; }
 
     /* ── WEATHER PAGE ─────────────────────────────────────────── */
     .weather-content { flex: 1; display: flex; gap: 16px; padding: 18px 22px; overflow: hidden; min-height: 0; }
@@ -338,7 +347,7 @@
       border: 0.5px solid var(--teal-border);
     }
     .sync-badge i { font-size: 14px; color: var(--teal); }
-    .sync-badge span { font-size: 13px; font-weight: 600; color: #0B6E72; }
+    .sync-badge span { font-size: 13px; font-weight: 600; color: #6FD3D9; }
 
     .stale-notice {
       background: var(--gold-light); border-radius: 10px;
@@ -346,7 +355,7 @@
       border: 0.5px solid var(--gold-border); flex-shrink: 0;
     }
     .stale-notice i { font-size: 16px; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
-    .stale-notice span { font-size: 13px; color: #7A5500; line-height: 1.55; }
+    .stale-notice span { font-size: 13px; color: #E5C06B; line-height: 1.55; }
 
     .current-card {
       background: var(--navy-deep); border-radius: 14px;
@@ -373,7 +382,7 @@
     .hourly-label { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; flex-shrink: 0; }
     .hourly-row { display: flex; gap: 7px; flex-shrink: 0; }
     .hour-card {
-      flex: 1; background: white; border-radius: 10px;
+      flex: 1; background: var(--card); border-radius: 10px;
       border: 0.5px solid var(--border); padding: 10px 6px; text-align: center;
     }
     .hour-card.now { border-color: var(--teal); border-width: 1.5px; background: var(--teal-mist); }
@@ -386,7 +395,7 @@
     .forecast-label { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); flex-shrink: 0; }
     .forecast-cards { display: flex; flex-direction: column; gap: 7px; flex: 1; min-height: 0; }
     .day-card {
-      background: white; border-radius: 11px;
+      background: var(--card); border-radius: 11px;
       border: 0.5px solid var(--border); padding: 10px 16px;
       display: flex; align-items: center; flex: 1;
     }
@@ -394,7 +403,7 @@
     .day-card.today-stale { border-color: var(--gold); background: var(--gold-light); }
     .day-name { font-size: 14px; font-weight: 600; color: var(--heading); width: 52px; flex-shrink: 0; }
     .day-name.today-lbl { color: var(--teal); }
-    .day-name.stale-lbl { color: #7A5500; }
+    .day-name.stale-lbl { color: #E5C06B; }
     .day-icon { font-size: 22px; width: 30px; text-align: center; flex-shrink: 0; }
     .day-desc { font-size: 13px; color: var(--muted); flex: 1; padding: 0 12px; line-height: 1.4; }
     .day-high { font-size: 15px; font-weight: 600; color: var(--heading); }
@@ -425,58 +434,35 @@
       border: 0.5px solid var(--teal-border);
     }
     .high-score-pill i { font-size: 12px; color: var(--teal); }
-    .high-score-pill span { font-size: 10px; font-weight: 600; color: #0B6E72; }
+    .high-score-pill span { font-size: 10px; font-weight: 600; color: #6FD3D9; }
 
-    .games-layout { display: flex; gap: 12px; flex: 1; min-height: 0; }
-    .hero-col { width: 44%; display: flex; flex-direction: column; }
-    .grid-col { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; }
+    /* Games are grouped into categories ("Solo" / "With friends"). The list
+       scrolls if the categories outgrow the canvas — see #30 (categorization). */
+    .games-cats { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+    .cat-eyebrow { display: flex; align-items: center; gap: 8px; margin: 6px 0 2px; }
+    .cat-eyebrow .cat-bar { width: 4px; height: 16px; border-radius: 2px; }
+    .cat-eyebrow .cat-bar.solo { background: var(--teal); }
+    .cat-eyebrow .cat-bar.together { background: var(--gold); }
+    .cat-eyebrow .cat-lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--heading); }
+    .cat-eyebrow .cat-hint { font-size: 11px; color: var(--muted); font-weight: 500; }
+    .game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 9px; }
 
-    .hero-card {
-      flex: 1; background: var(--navy-deep); border-radius: 13px;
-      overflow: hidden; display: flex; flex-direction: column;
-      cursor: pointer; position: relative;
-    }
-    .hero-glow {
-      position: absolute; top: 0; right: 0;
-      width: 130px; height: 130px;
-      background: rgba(11,158,166,0.1); border-radius: 50%;
-      transform: translate(30%,-30%); pointer-events: none;
-    }
-    .hero-body { padding: 14px 16px 0; flex: 1; display: flex; flex-direction: column; position: relative; z-index: 1; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      background: rgba(11,158,166,0.2); border-radius: 20px;
-      padding: 4px 10px; margin-bottom: 10px; align-self: flex-start;
-    }
-    .hero-badge i { font-size: 10px; color: var(--teal); }
-    .hero-badge span { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); }
-    .hero-icon { font-size: 36px; margin-bottom: 8px; }
-    .hero-title { font-family: var(--font-display); font-size: 20px; color: white; font-weight: 500; margin-bottom: 6px; line-height: 1.2; }
-    .hero-desc { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.6; flex: 1; }
-    .hero-footer {
-      padding: 10px 16px 12px; display: flex;
-      justify-content: space-between; align-items: center; gap: 12px;
-      border-top: 0.5px solid rgba(255,255,255,0.08);
-      position: relative; z-index: 1;
-    }
-    .hero-meta { display: flex; flex-direction: column; gap: 3px; }
-    .hero-meta-row { display: flex; align-items: center; gap: 5px; font-size: 10px; color: rgba(255,255,255,0.35); }
-    .hero-meta-row i { font-size: 11px; color: rgba(255,255,255,0.25); flex-shrink: 0; }
-    .hero-play {
-      background: var(--teal); color: white; border: none;
-      border-radius: 8px; padding: 8px 16px;
-      font-family: var(--font-body); font-size: 12px; font-weight: 600;
-      cursor: pointer; display: flex; align-items: center; gap: 5px;
-      white-space: nowrap; flex-shrink: 0;
-    }
-    .hero-play i { font-size: 13px; }
-    .hero-play:active { opacity: 0.85; }
+    /* Player-count badge shown on every card (#30: clear count at a glance). */
+    .pcount { display: inline-flex; align-items: center; gap: 4px; background: var(--teal-mist); color: #6FD3D9; border: 0.5px solid var(--teal-border); padding: 3px 8px; border-radius: 14px; font-size: 9px; font-weight: 700; }
+    .pcount.solo { background: rgba(157,180,198,0.12); color: #9DB4C6; border-color: rgba(157,180,198,0.26); }
+    .pcount i { font-size: 10px; }
+    .badge-new { position: absolute; top: 9px; right: 9px; background: var(--gold); color: white; font-size: 8px; font-weight: 700; padding: 2px 7px; border-radius: 10px; letter-spacing: 0.05em; }
+    /* "Coming soon" teaser tiles (not yet playable) — see #30 build order. */
+    .game-card.soon { cursor: default; opacity: 0.6; }
+    .game-card.soon:active { opacity: 0.6; }
+    .badge-soon { font-size: 9px; font-weight: 700; color: var(--muted); }
 
     .game-card {
-      background: white; border-radius: 11px;
+      background: var(--card); border-radius: 11px;
       border: 0.5px solid var(--border); padding: 11px 12px;
       cursor: pointer; display: flex; flex-direction: column;
       overflow: hidden; transition: border-color var(--transition);
+      position: relative;
     }
     .game-card:active { opacity: 0.9; }
     .game-card-icon { font-size: 24px; margin-bottom: 5px; }
@@ -487,10 +473,14 @@
     .game-card-meta i { font-size: 10px; }
     .play-arrow { width: 22px; height: 22px; background: var(--teal-mist); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
     .play-arrow i { font-size: 12px; color: var(--teal); }
+    .game-card.trivia { border-top: 3px solid var(--teal-light); }
     .game-card.tap   { border-top: 3px solid var(--teal); }
     .game-card.word  { border-top: 3px solid var(--navy-mid); }
     .game-card.spin  { border-top: 3px solid var(--gold); }
     .game-card.image { border-top: 3px solid #7C3AED; }
+    .game-card.ttt    { border-top: 3px solid var(--teal); }
+    .game-card.duel   { border-top: 3px solid #E0794B; }
+    .game-card.buzzer { border-top: 3px solid #7C3AED; }
 
     /* ── Game Screens ─────────────────────────────────────────── */
     .game-screen {
@@ -520,18 +510,18 @@
     .game-body { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
 
     /* Trivia */
-    .trivia-question { font-size: 16px; font-weight: 500; color: var(--heading); line-height: 1.5; padding: 16px; background: white; border-radius: 12px; border: 0.5px solid var(--border); }
+    .trivia-question { font-size: 16px; font-weight: 500; color: var(--heading); line-height: 1.5; padding: 16px; background: var(--card-solid); border-radius: 12px; border: 0.5px solid var(--border); }
     .trivia-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .trivia-opt {
       padding: 13px 16px; border-radius: 11px;
-      border: 1.5px solid var(--border); background: white;
+      border: 1.5px solid var(--border); background: var(--card-solid);
       font-family: var(--font-body); font-size: 13px; font-weight: 500;
       color: var(--heading); cursor: pointer; text-align: left;
       transition: all var(--transition); line-height: 1.35;
     }
     .trivia-opt:hover { border-color: var(--teal); background: var(--teal-mist); }
-    .trivia-opt.correct { background: #E8F8F0; border-color: #00C9A7; color: #00A88D; }
-    .trivia-opt.wrong { background: #FFF0EE; border-color: var(--teal); color: #E05555; }
+    .trivia-opt.correct { background: rgba(0,200,167,0.16); border-color: #00C9A7; color: #4FE0C0; }
+    .trivia-opt.wrong { background: rgba(255,92,138,0.16); border-color: var(--teal); color: #FF8FA3; }
     .trivia-opt:disabled { cursor: default; }
     .trivia-feedback {
       padding: 12px 16px; border-radius: 11px;
@@ -539,8 +529,8 @@
       display: none;
     }
     .trivia-feedback.show { display: block; }
-    .trivia-feedback.ok { background: #E8F8F0; color: #00A88D; }
-    .trivia-feedback.no { background: #FFF0EE; color: #E05555; }
+    .trivia-feedback.ok { background: rgba(0,200,167,0.16); color: #4FE0C0; }
+    .trivia-feedback.no { background: rgba(255,92,138,0.16); color: #FF8FA3; }
     .trivia-next {
       padding: 13px; border-radius: 12px; border: none;
       background: var(--navy-deep); color: white;
@@ -575,22 +565,22 @@
     .tap-result-txt { font-size: 15px; font-weight: 600; color: var(--heading); min-height: 24px; margin-top: 8px; text-align: center; }
 
     /* Word Puzzle */
-    .word-clue { background: var(--teal-mist); border-radius: 11px; padding: 12px 16px; font-size: 13px; color: #0B6E72; border: 0.5px solid var(--teal-border); line-height: 1.6; }
+    .word-clue { background: var(--teal-mist); border-radius: 11px; padding: 12px 16px; font-size: 13px; color: #6FD3D9; border: 0.5px solid var(--teal-border); line-height: 1.6; }
     .word-letters { display: flex; justify-content: center; gap: 7px; flex-wrap: wrap; margin: 8px 0; }
     .word-letter {
       width: 36px; height: 46px; border-radius: 9px;
-      border: 1.5px solid var(--border); background: white;
+      border: 1.5px solid var(--border); background: var(--card-solid);
       display: flex; align-items: center; justify-content: center;
       font-size: 18px; font-weight: 700; color: var(--heading);
     }
-    .word-letter.hint { background: #E8F8F0; border-color: #00C9A7; color: #00A88D; }
+    .word-letter.hint { background: rgba(0,200,167,0.16); border-color: #00C9A7; color: #4FE0C0; }
     .word-letter.filled { background: var(--teal-mist); border-color: var(--teal); }
     .word-input-row { display: flex; gap: 8px; }
     .word-input {
       flex: 1; padding: 11px 14px; border-radius: 11px;
       border: 1.5px solid var(--border); font-family: var(--font-body);
       font-size: 16px; font-weight: 700; color: var(--heading);
-      text-transform: uppercase; letter-spacing: 2px; background: white;
+      text-transform: uppercase; letter-spacing: 2px; background: var(--card-solid);
     }
     .word-input:focus { outline: none; border-color: var(--teal); }
     .word-submit {
@@ -609,8 +599,8 @@
     .word-hint-btn:active { opacity: 0.8; }
     .word-feedback { padding: 11px 14px; border-radius: 11px; font-size: 13px; font-weight: 600; text-align: center; display: none; }
     .word-feedback.show { display: block; }
-    .word-feedback.ok { background: #E8F8F0; color: #00A88D; }
-    .word-feedback.no { background: #FFF0EE; color: #E05555; }
+    .word-feedback.ok { background: rgba(0,200,167,0.16); color: #4FE0C0; }
+    .word-feedback.no { background: rgba(255,92,138,0.16); color: #FF8FA3; }
 
     /* Facts Spinner */
     .spinner-center { display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center; gap: 16px; }
@@ -624,7 +614,7 @@
     }
     .spinner-wheel:active { transform: scale(0.94); }
     .spin-hint { font-size: 12px; color: var(--muted); font-weight: 500; }
-    .spin-fact-card { background: white; border-radius: 12px; border: 0.5px solid var(--border); padding: 18px 20px; max-width: 500px; text-align: center; }
+    .spin-fact-card { background: var(--card-solid); border-radius: 12px; border: 0.5px solid var(--border); padding: 18px 20px; max-width: 500px; text-align: center; }
     .spin-cat { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); margin-bottom: 8px; }
     .spin-fact-text { font-size: 14px; font-weight: 500; color: var(--heading); line-height: 1.65; }
 
@@ -641,19 +631,19 @@
     .img-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .img-opt {
       padding: 12px 14px; border-radius: 11px;
-      border: 1.5px solid var(--border); background: white;
+      border: 1.5px solid var(--border); background: var(--card-solid);
       font-family: var(--font-body); font-size: 13px; font-weight: 500;
       color: var(--heading); cursor: pointer; text-align: left;
       transition: all var(--transition);
     }
     .img-opt:hover { border-color: var(--teal); background: var(--teal-mist); }
-    .img-opt.correct { background: #E8F8F0; border-color: #00C9A7; color: #00A88D; }
-    .img-opt.wrong { background: #FFF0EE; border-color: #E05555; color: #E05555; }
+    .img-opt.correct { background: rgba(0,200,167,0.16); border-color: #00C9A7; color: #4FE0C0; }
+    .img-opt.wrong { background: rgba(255,92,138,0.16); border-color: #FF8FA3; color: #FF8FA3; }
     .img-opt:disabled { cursor: default; }
     .img-feedback { padding: 11px 14px; border-radius: 11px; font-size: 13px; font-weight: 600; display: none; }
     .img-feedback.show { display: block; }
-    .img-feedback.ok { background: #E8F8F0; color: #00A88D; }
-    .img-feedback.no { background: #FFF0EE; color: #E05555; }
+    .img-feedback.ok { background: rgba(0,200,167,0.16); color: #4FE0C0; }
+    .img-feedback.no { background: rgba(255,92,138,0.16); color: #FF8FA3; }
     .img-next { padding: 13px; border-radius: 12px; border: none; background: var(--navy-deep); color: white; font-family: var(--font-body); font-size: 14px; font-weight: 600; cursor: pointer; display: none; }
     .img-next.show { display: block; }
 
@@ -676,7 +666,7 @@
       cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
     }
     .img-end-btn.primary { background: var(--teal); color: white; }
-    .img-end-btn.secondary { background: #e8edf3; color: var(--navy); }
+    .img-end-btn.secondary { background: rgba(255,255,255,0.08); color: var(--heading); border: 1px solid var(--border); }
 
     /* ── QR Modal ─────────────────────────────────────────────── */
     .qr-modal {
@@ -686,9 +676,9 @@
       animation: fadeIn 300ms ease;
     }
     .qr-modal.open { display: flex; }
-    .qr-modal-box { background: white; border-radius: 18px; padding: 28px 32px; text-align: center; max-width: 320px; width: 90%; }
-    .qr-modal-title { font-family: var(--font-display); font-size: 20px; color: var(--heading); margin-bottom: 6px; }
-    .qr-modal-sub { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+    .qr-modal-box { background: #FFFFFF; border-radius: 18px; padding: 28px 32px; text-align: center; max-width: 320px; width: 90%; }
+    .qr-modal-title { font-family: var(--font-display); font-size: 20px; color: #15294A; margin-bottom: 6px; }
+    .qr-modal-sub { font-size: 12px; color: #6B7B8C; line-height: 1.6; margin-bottom: 20px; }
     .qr-placeholder { width: 160px; height: 160px; background: var(--navy-deep); border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; }
     .qr-placeholder i { font-size: 80px; color: rgba(255,255,255,0.6); }
     .qr-url { font-size: 12px; color: var(--teal); font-weight: 600; margin-bottom: 16px; }
@@ -705,7 +695,7 @@
     }
     .inactivity-overlay.visible { opacity: 1; pointer-events: all; }
     .inactivity-box {
-      background: white; border-radius: 18px;
+      background: var(--card-solid); border-radius: 18px;
       padding: 28px 32px; width: 340px; text-align: center;
       border: 0.5px solid var(--border);
       transform: scale(0.96);
@@ -836,7 +826,7 @@
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 13px; color: var(--muted); cursor: pointer;
       padding: 6px 12px 6px 8px; border-radius: 8px;
-      background: white; border: 1px solid var(--border);
+      background: var(--card-solid); border: 1px solid var(--border);
       margin-bottom: 14px;
     }
     .dp-back:hover { background: var(--teal-mist); color: var(--teal); border-color: var(--teal-border); }
@@ -887,7 +877,7 @@
     .dp-tt-label strong { color: white; font-weight: 600; }
 
     /* QR boxes — small inline QRs, tap to enlarge in modal */
-    .dp-qr { width: 72px; height: 72px; border-radius: 10px; background: white; display: flex; align-items: center; justify-content: center; position: relative; flex-shrink: 0; cursor: pointer; }
+    .dp-qr { width: 72px; height: 72px; border-radius: 10px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; position: relative; flex-shrink: 0; cursor: pointer; }
     .dp-qr-content { position: absolute; inset: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 6px; }
     .dp-qr-content canvas, .dp-qr-content img { display: block; width: 100% !important; height: 100% !important; }
     .dp-qr-label { position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; white-space: nowrap; }
@@ -934,7 +924,7 @@
     .greeting-text { font-size: 30px; }
 
     .gp-top-actions { display: flex; align-items: center; gap: 10px; }
-    .gp-home-btn { width: 40px; height: 40px; border-radius: 11px; background: white; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .gp-home-btn { width: 40px; height: 40px; border-radius: 11px; background: var(--card); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; }
     .gp-home-btn i { font-size: 18px; color: var(--heading); }
     .gp-home-btn:active { background: var(--teal-mist); }
 
@@ -948,7 +938,8 @@
     .gp-hero-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
     /* TODAY'S TOP PICK hero */
-    .gp-hero { background: var(--card); border-radius: 18px; overflow: hidden; box-shadow: 0 8px 30px rgba(15,33,55,0.12); border: 1px solid var(--border); display: flex; min-height: 270px; margin-top: 12px; cursor: pointer; transition: transform var(--transition); }
+    .gp-hero { position: relative; background: var(--card); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--gold-border); display: flex; min-height: 270px; margin-top: 12px; cursor: pointer; transition: transform var(--transition); }
+    .gp-hero::before { content: ''; position: absolute; inset: 9px; border: 1px solid rgba(229,192,107,0.35); border-radius: 5px; pointer-events: none; z-index: 3; }
     .gp-hero:active { transform: scale(0.998); }
     .gp-hero-photo { width: 42%; flex-shrink: 0; position: relative; display: flex; align-items: flex-end; padding: 18px; overflow: hidden;
       background: linear-gradient(135deg, rgba(15,33,55,0.55), rgba(11,158,166,0.35)), linear-gradient(45deg, #C9A84C 0%, #E89B5C 40%, #7C3AED 100%);
@@ -968,7 +959,7 @@
     .gp-hero-dist i { font-size: 14px; }
     .gp-hero-note { font-size: 15px; line-height: 1.55; color: var(--body); font-style: italic; margin-bottom: 18px; padding: 12px 14px; background: var(--gold-light); border-radius: 10px; border-left: 3px solid var(--gold); }
     .gp-hero-actions { display: flex; gap: 10px; margin-top: auto; }
-    .gp-btn-primary { flex: 1; padding: 13px 18px; border-radius: 11px; background: var(--navy-deep); color: white; border: none; font-family: var(--font-body); font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 7px; cursor: pointer; }
+    .gp-btn-primary { flex: 1; padding: 13px 18px; border-radius: 11px; background: linear-gradient(100deg, var(--gold), #C9A24A); color: #0C1A2E; border: none; font-family: var(--font-body); font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 7px; cursor: pointer; box-shadow: 0 10px 24px -12px rgba(229,192,107,0.8); }
     .gp-btn-primary i { font-size: 16px; }
     .gp-btn-primary:active { opacity: 0.9; }
 
@@ -987,7 +978,7 @@
     .gp-mini:active { transform: translateY(1px); }
     .gp-mini.pick { background: var(--gold-light); border-color: var(--gold-border); }
     .gp-mini-photo { height: 90px; position: relative; background: linear-gradient(135deg, rgba(15,33,55,0.5), rgba(11,158,166,0.3)), linear-gradient(45deg, #1B3A5C, #0B9EA6); overflow: hidden; }
-    .gp-mini.pick .gp-mini-photo { background: linear-gradient(135deg, rgba(15,33,55,0.45), rgba(201,168,76,0.3)), linear-gradient(45deg, #7A5500, #C9A84C); }
+    .gp-mini.pick .gp-mini-photo { background: linear-gradient(135deg, rgba(15,33,55,0.45), rgba(201,168,76,0.3)), linear-gradient(45deg, #E5C06B, #C9A84C); }
     .gp-mini-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     .gp-mini-pickbadge { position: absolute; top: 8px; right: 8px; background: var(--gold); color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
     .gp-mini-pickbadge i { font-size: 11px; }
@@ -1014,7 +1005,7 @@
     .venue-sheet {
       position: fixed; inset: 24px; max-width: 880px; max-height: calc(100vh - 48px);
       margin: auto; z-index: 71;
-      background: white; border-radius: 22px; overflow: hidden;
+      background: var(--card-solid); border-radius: 22px; overflow: hidden;
       display: flex; flex-direction: column;
       transform: scale(0.96); opacity: 0; pointer-events: none;
       transition: transform 220ms ease, opacity 220ms ease;
@@ -1099,6 +1090,137 @@
        the canvas instead of floating in empty space, and cap content width so
        options don't stretch edge-to-edge. Phones (short viewport) keep the
        compact sizes defined above. */
+    /* ── Tic-Tac-Toe (2-player hot-seat, #30a) ─────────────────── */
+    #game-ttt .game-body { align-items: center; justify-content: center; }
+    .ttt-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; max-width: 520px; }
+
+    /* Pre-game intro — the shared pre-game step; the player-count picker
+       slots in here for the variable-count games coming next (#30 b/c). */
+    .ttt-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 5px; }
+    .ttt-intro-icon { font-size: 46px; }
+    .ttt-intro-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--heading); }
+    .ttt-intro-sub { font-size: 13px; color: var(--muted); }
+    .ttt-players-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--teal-mist); border: 0.5px solid var(--teal-border); color: #6FD3D9; border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 600; margin: 8px 0 4px; }
+    .ttt-players-chip i { font-size: 13px; }
+    .ttt-start-btn { background: var(--navy-deep); color: white; border: none; border-radius: 12px; padding: 13px 34px; font-family: var(--font-body); font-size: 15px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+    .ttt-start-btn:active { opacity: 0.85; }
+    .ttt-start-btn i { font-size: 16px; }
+
+    /* Turn / score bar — P1 left (teal X), P2 right (gold O), no rotation. */
+    .ttt-turnbar { display: flex; gap: 10px; width: 100%; }
+    .ttt-pscore { flex: 1; background: var(--card-solid); border: 2px solid var(--border); border-radius: 13px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; transition: all var(--transition); }
+    .ttt-pscore.active.p1 { border-color: var(--teal); background: var(--teal-mist); box-shadow: 0 4px 14px rgba(11,158,166,0.18); }
+    .ttt-pscore.active.p2 { border-color: var(--gold); background: var(--gold-light); box-shadow: 0 4px 14px rgba(201,168,76,0.18); }
+    .ttt-mark { font-family: var(--font-display); font-weight: 700; font-size: 26px; width: 32px; text-align: center; flex-shrink: 0; }
+    .ttt-pscore.p1 .ttt-mark { color: var(--teal); }
+    .ttt-pscore.p2 .ttt-mark { color: var(--gold); }
+    .ttt-pinfo { display: flex; flex-direction: column; min-width: 0; }
+    .ttt-pwho { font-size: 12px; font-weight: 700; color: var(--heading); }
+    .ttt-pturn { font-size: 10px; color: var(--muted); font-weight: 600; }
+    .ttt-pwins { margin-left: auto; text-align: right; font-size: 9px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; flex-shrink: 0; }
+    .ttt-pwins b { display: block; font-size: 16px; color: var(--heading); }
+
+    /* Board — navy grid (variant B). Internal hairlines only, outer edges clean. */
+    .ttt-board { display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,1fr); width: 300px; height: 300px; background: var(--navy-deep); border-radius: 16px; padding: 12px; }
+    .ttt-cell { display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 56px; color: white; cursor: pointer; border: 1px solid rgba(255,255,255,0.12); background: transparent; -webkit-tap-highlight-color: transparent; }
+    .ttt-cell:nth-child(-n+3) { border-top: none; }
+    .ttt-cell:nth-child(3n+1) { border-left: none; }
+    .ttt-cell:nth-child(3n) { border-right: none; }
+    .ttt-cell:nth-child(n+7) { border-bottom: none; }
+    .ttt-cell.x { color: var(--teal-light); }
+    .ttt-cell.o { color: var(--gold); }
+    .ttt-cell.win { background: rgba(11,158,166,0.22); border-radius: 8px; }
+    .ttt-cell:disabled { cursor: default; }
+
+    /* Win / draw banner */
+    .ttt-banner { text-align: center; }
+    .ttt-banner-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+    .ttt-banner-title.p1 { color: var(--teal); }
+    .ttt-banner-title.p2 { color: var(--gold); }
+    .ttt-banner-title.draw { color: var(--muted); }
+    .ttt-again-btn { margin-top: 8px; background: var(--navy-deep); color: white; border: none; border-radius: 11px; padding: 11px 26px; font-family: var(--font-body); font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; }
+    .ttt-again-btn i { font-size: 15px; }
+
+    /* ── Shared multiplayer pre-game picker (#30 b/c) ──────────
+       One "How many players?" chooser reused by every variable-count game
+       (Tap Duel, Trivia Buzzer). Mirrors the ttt-intro pattern but with a
+       2/3 count picker in place of the fixed "2 players" chip. */
+    .pg-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .pg-icon { font-size: 46px; }
+    .pg-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--heading); }
+    .pg-sub { font-size: 13px; color: var(--muted); max-width: 360px; }
+    .pg-count-label { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
+    .pg-count { display: flex; gap: 10px; }
+    .pg-count-btn { width: 54px; height: 54px; border-radius: 13px; border: 2px solid var(--border); background: var(--card-solid); font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--heading); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all var(--transition); }
+    .pg-count-btn.active { border-color: var(--teal); background: var(--teal-mist); color: #6FD3D9; }
+    .pg-start { margin-top: 12px; background: var(--navy-deep); color: white; border: none; border-radius: 12px; padding: 13px 34px; font-family: var(--font-body); font-size: 15px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+    .pg-start:active { opacity: 0.85; }
+    .pg-start i { font-size: 16px; }
+    .pg-again { margin-top: 10px; background: var(--navy-deep); color: white; border: none; border-radius: 11px; padding: 11px 26px; font-family: var(--font-body); font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; }
+    .pg-again i { font-size: 15px; }
+
+    /* ── Tap Duel (reaction race, 2-3P, #30b) ─────────────────
+       Riders sit side-by-side facing the same way → zones are columns (P1
+       left, P2 middle, P3 right), SAME orientation, no rotation. Red = wait,
+       green = tap now; a tap on red is a false start (round void). */
+    #game-duel .game-body { align-items: center; justify-content: center; }
+    .duel-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; max-width: 660px; }
+    .duel-play { display: flex; flex-direction: column; gap: 16px; width: 100%; align-items: center; }
+    .duel-zones { display: flex; gap: 12px; width: 100%; }
+    .duel-zone { flex: 1; min-height: 210px; border-radius: 16px; border: 2px solid var(--border); background: var(--card-solid); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: background var(--transition), border-color var(--transition), opacity var(--transition); padding: 16px 10px; }
+    .duel-zone-player { font-size: 13px; font-weight: 700; }
+    .duel-zone.p1 .duel-zone-player { color: var(--teal); }
+    .duel-zone.p2 .duel-zone-player { color: var(--gold); }
+    .duel-zone.p3 .duel-zone-player { color: #7C3AED; }
+    .duel-zone-state { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--heading); }
+    .duel-zone-wins { font-size: 10px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .duel-zone.arming { background: rgba(229,115,115,0.18); border-color: #E57373; }
+    .duel-zone.arming .duel-zone-state { color: #FF6B6B; }
+    .duel-zone.ready { background: #1FB85A; border-color: #169248; }
+    .duel-zone.ready .duel-zone-player, .duel-zone.ready .duel-zone-state, .duel-zone.ready .duel-zone-wins { color: white; }
+    .duel-zone.win { background: var(--teal-mist); border-color: var(--teal); }
+    .duel-zone.win .duel-zone-state { color: #6FD3D9; }
+    .duel-zone.falsestart { background: rgba(255,107,107,0.16); border-color: #FF6B6B; }
+    .duel-zone.falsestart .duel-zone-state { color: #FF6B6B; }
+    .duel-zone.dim { opacity: 0.4; }
+    .duel-banner { text-align: center; min-height: 26px; display: flex; flex-direction: column; align-items: center; }
+    .duel-banner-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--heading); }
+    .duel-getready { font-size: 14px; color: var(--muted); font-weight: 600; }
+
+    /* ── Trivia Buzzer (2-3P, #30c) ───────────────────────────
+       Shared question + options up top (everyone reads the same way up); the
+       per-player BUZZ buttons sit along the bottom — P1 left … P3 right, who
+       sits where. Reuses .trivia-question / .trivia-opt styling. */
+    #game-buzzer .game-body { gap: 13px; }
+    #buzz-play { display: flex; flex-direction: column; gap: 13px; width: 100%; }
+    .buzz-scorebar { display: flex; gap: 8px; }
+    .buzz-score { flex: 1; background: var(--card-solid); border: 2px solid var(--border); border-radius: 11px; padding: 7px 8px; text-align: center; transition: all var(--transition); }
+    .buzz-score.p1.active { border-color: var(--teal); background: var(--teal-mist); }
+    .buzz-score.p2.active { border-color: var(--gold); background: var(--gold-light); }
+    .buzz-score.p3.active { border-color: #7C3AED; background: rgba(124,58,237,0.20); }
+    .buzz-score-who { font-size: 11px; font-weight: 700; }
+    .buzz-score.p1 .buzz-score-who { color: var(--teal); }
+    .buzz-score.p2 .buzz-score-who { color: var(--gold); }
+    .buzz-score.p3 .buzz-score-who { color: #7C3AED; }
+    .buzz-score-pts { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--heading); }
+    .buzz-score-pts.neg { color: #FF6B6B; }
+    .buzz-timer { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--teal); text-align: center; }
+    .buzz-timer.low { color: #FF6B6B; }
+    #buzz-opts .trivia-opt:disabled { opacity: 0.6; }
+    #buzz-opts .trivia-opt:disabled:hover { border-color: var(--border); background: var(--card-solid); }
+    .buzz-feedback { text-align: center; font-size: 14px; font-weight: 600; color: var(--muted); min-height: 20px; }
+    .buzz-buzzers { display: flex; gap: 12px; }
+    .buzz-btn { flex: 1; border: none; border-radius: 14px; padding: 18px 10px; font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; cursor: pointer; -webkit-tap-highlight-color: transparent; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: opacity var(--transition); }
+    .buzz-btn.p1 { background: var(--teal); }
+    .buzz-btn.p2 { background: var(--gold); color: #0C1A2E; }
+    .buzz-btn.p3 { background: #7C3AED; }
+    .buzz-btn:disabled { opacity: 0.35; cursor: default; }
+    .buzz-btn-sub { font-size: 10px; font-weight: 600; opacity: 0.92; text-transform: uppercase; letter-spacing: 0.04em; }
+    .buzz-end { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .buzz-end-trophy { font-size: 50px; }
+    .buzz-end-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--heading); }
+    .buzz-end-line { font-size: 15px; color: var(--muted); }
+
     @media (min-height: 600px) {
       .game-body { max-width: 740px; margin: 0 auto; width: 100%; gap: 22px; padding: 30px 24px; }
 
@@ -1135,6 +1257,37 @@
       .img-opts { gap: 12px; }
       .img-opt { font-size: 16px; padding: 16px 18px; }
       .img-next { font-size: 17px; padding: 16px; }
+
+      .ttt-wrap { gap: 22px; }
+      .ttt-board { width: 380px; height: 380px; padding: 14px; }
+      .ttt-cell { font-size: 74px; }
+      .ttt-mark { font-size: 32px; width: 38px; }
+      .ttt-pwho { font-size: 14px; }
+      .ttt-pturn { font-size: 12px; }
+      .ttt-pwins b { font-size: 19px; }
+      .ttt-intro-icon { font-size: 60px; }
+      .ttt-intro-title { font-size: 32px; }
+      .ttt-intro-sub { font-size: 15px; }
+      .ttt-banner-title { font-size: 26px; }
+
+      .pg-icon { font-size: 60px; }
+      .pg-title { font-size: 32px; }
+      .pg-sub { font-size: 15px; }
+      .pg-count-btn { width: 64px; height: 64px; font-size: 26px; }
+      .pg-start { font-size: 17px; padding: 15px 40px; }
+
+      .duel-zone { min-height: 300px; }
+      .duel-zone-player { font-size: 16px; }
+      .duel-zone-state { font-size: 28px; }
+      .duel-banner-title { font-size: 26px; }
+      .duel-getready { font-size: 16px; }
+
+      .buzz-score-who { font-size: 13px; }
+      .buzz-score-pts { font-size: 24px; }
+      .buzz-feedback { font-size: 16px; }
+      .buzz-timer { font-size: 32px; }
+      .buzz-btn { font-size: 22px; padding: 24px 12px; }
+      .buzz-end-title { font-size: 28px; }
     }
   </style>
 </head>
@@ -1288,32 +1441,30 @@
               <span id="high-score-display">Best tap score: 0</span>
             </div>
           </div>
-          <div class="games-layout">
-            <div class="hero-col">
-              <div class="hero-card" onclick="openGame('trivia')">
-                <div class="hero-glow"></div>
-                <div class="hero-body">
-                  <div class="hero-badge"><i class="ti ti-star"></i><span data-key="games.mostPopular">Most popular</span></div>
-                  <div class="hero-icon">🧠</div>
-                  <div class="hero-title" data-gkey="triviaHeroTitle">Miami Trivia</div>
-                  <div class="hero-desc" id="trivia-hero-desc" data-gkey="triviaHeroDesc">10 questions about Miami's history, culture, landmarks and hidden gems. How well do you know the Magic City?</div>
-                </div>
-                <div class="hero-footer">
-                  <div class="hero-meta">
-                    <div class="hero-meta-row"><i class="ti ti-clock"></i><span>~5 <span data-key="games.minutes">min</span></span></div>
-                    <div class="hero-meta-row"><i class="ti ti-users"></i><span>1–4 <span data-key="games.players">players</span></span></div>
-                  </div>
-                  <button class="hero-play"><i class="ti ti-player-play"></i><span data-key="games.playNow">Play now</span></button>
+          <div class="games-cats">
+
+            <!-- ── SOLO ── -->
+            <div class="cat-eyebrow">
+              <span class="cat-bar solo"></span>
+              <span class="cat-lbl" data-gkey="catSolo">Solo</span>
+              <span class="cat-hint" data-gkey="catSoloHint">· play on your own</span>
+            </div>
+            <div class="game-grid">
+              <div class="game-card trivia" onclick="openGame('trivia')">
+                <div class="game-card-icon">🧠</div>
+                <div class="game-card-title" data-gkey="triviaCardTitle">Miami Trivia</div>
+                <div class="game-card-desc" data-gkey="triviaCardDesc">10 questions on Miami history, culture and landmarks.</div>
+                <div class="game-card-footer">
+                  <span class="pcount solo"><i class="ti ti-user"></i>1</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
-            </div>
-            <div class="grid-col">
               <div class="game-card tap" onclick="openGame('tap')">
                 <div class="game-card-icon">👆</div>
                 <div class="game-card-title">Tap Frenzy</div>
                 <div class="game-card-desc">How many taps in 10 seconds? Beat the high score.</div>
                 <div class="game-card-footer">
-                  <div class="game-card-meta"><i class="ti ti-clock"></i>30 <span data-key="games.seconds">sec</span></div>
+                  <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
@@ -1322,7 +1473,7 @@
                 <div class="game-card-title">Word Puzzle</div>
                 <div class="game-card-desc">Guess the hidden Miami-themed word from clues.</div>
                 <div class="game-card-footer">
-                  <div class="game-card-meta"><i class="ti ti-clock"></i>2–4 <span data-key="games.minutes">min</span></div>
+                  <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
@@ -1331,7 +1482,7 @@
                 <div class="game-card-title" data-gkey="spinCardTitle">Facts Spinner</div>
                 <div class="game-card-desc" data-gkey="spinCardDesc">Spin for surprising facts about Miami, science & history.</div>
                 <div class="game-card-footer">
-                  <div class="game-card-meta"><i class="ti ti-clock"></i><span data-key="games.anyTime">Any time</span></div>
+                  <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
@@ -1340,11 +1491,51 @@
                 <div class="game-card-title" data-gkey="imgCardTitle">Guess the Image</div>
                 <div class="game-card-desc" data-gkey="imgCardDesc">Real photos of world landmarks — can you name them?</div>
                 <div class="game-card-footer">
-                  <div class="game-card-meta"><i class="ti ti-clock"></i>3–5 <span data-key="games.minutes">min</span></div>
+                  <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
             </div>
+
+            <!-- ── WITH FRIENDS ── -->
+            <div class="cat-eyebrow">
+              <span class="cat-bar together"></span>
+              <span class="cat-lbl" data-gkey="catTogether">With friends</span>
+              <span class="cat-hint" data-gkey="catTogetherHint">· share the screen</span>
+            </div>
+            <div class="game-grid">
+              <div class="game-card ttt" onclick="openGame('ttt')">
+                <div class="badge-new" data-gkey="badgeNew">NEW</div>
+                <div class="game-card-icon">⭕</div>
+                <div class="game-card-title" data-gkey="tttCardTitle">Tic-Tac-Toe</div>
+                <div class="game-card-desc" data-gkey="tttCardDesc">Classic 3-in-a-row. Take turns on the screen.</div>
+                <div class="game-card-footer">
+                  <span class="pcount"><i class="ti ti-users"></i>2</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card duel" onclick="openGame('duel')">
+                <div class="badge-new" data-gkey="badgeNew">NEW</div>
+                <div class="game-card-icon">⚡</div>
+                <div class="game-card-title" data-gkey="duelCardTitle">Tap Duel</div>
+                <div class="game-card-desc" data-gkey="duelCardDesc">Tap when it turns green — fastest finger wins.</div>
+                <div class="game-card-footer">
+                  <span class="pcount"><i class="ti ti-users"></i>2–3</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card buzzer" onclick="openGame('buzzer')">
+                <div class="badge-new" data-gkey="badgeNew">NEW</div>
+                <div class="game-card-icon">🔔</div>
+                <div class="game-card-title" data-gkey="buzzerCardTitle">Trivia Buzzer</div>
+                <div class="game-card-desc" data-gkey="buzzerCardDesc">First to buzz answers. Race your friends.</div>
+                <div class="game-card-footer">
+                  <span class="pcount"><i class="ti ti-users"></i>2–3</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -1555,6 +1746,131 @@
         <button class="img-end-btn secondary" onclick="closeGame()"><i class="ti ti-arrow-left"></i> <span data-gkey="backToGames">Back to Games</span></button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Tic-Tac-Toe (2-player hot-seat, #30a) -->
+<div class="game-screen" id="game-ttt">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title" data-gkey="tttScreenTitle">⭕ Tic-Tac-Toe</div>
+    <button class="gs-restart-hidden game-score-badge" id="ttt-restart" onclick="tttPlayAgain()" style="display:none;border:none;cursor:pointer">
+      <i class="ti ti-refresh"></i> <span data-gkey="tttRestart">Restart</span>
+    </button>
+  </div>
+  <div class="game-body">
+    <div class="ttt-wrap">
+
+      <!-- Pre-game (the shared pre-game step; player-count picker slots here) -->
+      <div class="ttt-intro" id="ttt-intro">
+        <div class="ttt-intro-icon">⭕❌</div>
+        <div class="ttt-intro-title" data-gkey="tttCardTitle">Tic-Tac-Toe</div>
+        <div class="ttt-intro-sub" data-gkey="tttIntroSub">Take turns on the screen — three in a row wins.</div>
+        <div class="ttt-players-chip"><i class="ti ti-users"></i> <span data-gkey="tttPlayers">2 players · pass &amp; play</span></div>
+        <button class="ttt-start-btn" onclick="tttStart()"><i class="ti ti-player-play"></i> <span data-gkey="tttStartBtn">Start game</span></button>
+      </div>
+
+      <!-- Live game -->
+      <div class="ttt-play" id="ttt-play" style="display:none">
+        <div class="ttt-turnbar">
+          <div class="ttt-pscore p1" id="ttt-p1">
+            <div class="ttt-mark">X</div>
+            <div class="ttt-pinfo">
+              <div class="ttt-pwho" data-gkey="tttP1">Player 1</div>
+              <div class="ttt-pturn" id="ttt-p1-turn"></div>
+            </div>
+            <div class="ttt-pwins"><span data-gkey="tttWins">wins</span><b id="ttt-p1-wins">0</b></div>
+          </div>
+          <div class="ttt-pscore p2" id="ttt-p2">
+            <div class="ttt-mark">O</div>
+            <div class="ttt-pinfo">
+              <div class="ttt-pwho" data-gkey="tttP2">Player 2</div>
+              <div class="ttt-pturn" id="ttt-p2-turn"></div>
+            </div>
+            <div class="ttt-pwins"><span data-gkey="tttWins">wins</span><b id="ttt-p2-wins">0</b></div>
+          </div>
+        </div>
+        <div class="ttt-board" id="ttt-board"><!-- 9 cells rendered by JS --></div>
+        <div class="ttt-banner" id="ttt-banner"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Tap Duel (reaction race, 2-3P hot-seat, #30b) -->
+<div class="game-screen" id="game-duel">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title" data-gkey="duelScreenTitle">⚡ Tap Duel</div>
+  </div>
+  <div class="game-body">
+    <div class="duel-wrap">
+
+      <!-- Pre-game: shared player-count picker (#30 b/c) -->
+      <div class="pg-intro" id="duel-intro">
+        <div class="pg-icon">⚡</div>
+        <div class="pg-title" data-gkey="duelCardTitle">Tap Duel</div>
+        <div class="pg-sub" data-gkey="duelIntroSub">When your zone turns green, tap fast — first tap wins. Tap while it's still red and the round is void!</div>
+        <div class="pg-count-label" data-gkey="howManyPlayers">How many players?</div>
+        <div class="pg-count" id="duel-count">
+          <button class="pg-count-btn active" data-n="2" onclick="pgSelectCount(this)">2</button>
+          <button class="pg-count-btn" data-n="3" onclick="pgSelectCount(this)">3</button>
+        </div>
+        <button class="pg-start" onclick="duelStart()"><i class="ti ti-player-play"></i> <span data-gkey="pgStartBtn">Start game</span></button>
+      </div>
+
+      <!-- Live game -->
+      <div class="duel-play" id="duel-play" style="display:none">
+        <div class="duel-zones" id="duel-zones"><!-- N zones rendered by JS --></div>
+        <div class="duel-banner" id="duel-banner"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Trivia Buzzer (2-3P buzz-in, #30c) -->
+<div class="game-screen" id="game-buzzer">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title" data-gkey="buzzScreenTitle">🔔 Trivia Buzzer</div>
+    <div class="game-score-badge" id="buzz-progress" style="display:none"></div>
+  </div>
+  <div class="game-body">
+
+    <!-- Pre-game: shared player-count picker -->
+    <div class="pg-intro" id="buzz-intro">
+      <div class="pg-icon">🔔</div>
+      <div class="pg-title" data-gkey="buzzerCardTitle">Trivia Buzzer</div>
+      <div class="pg-sub" data-gkey="buzzIntroSub">Read the question — first to buzz answers. Right scores a point; wrong locks you out of that question.</div>
+      <div class="pg-count-label" data-gkey="howManyPlayers">How many players?</div>
+      <div class="pg-count" id="buzz-count">
+        <button class="pg-count-btn active" data-n="2" onclick="pgSelectCount(this)">2</button>
+        <button class="pg-count-btn" data-n="3" onclick="pgSelectCount(this)">3</button>
+      </div>
+      <button class="pg-start" onclick="buzzStart()"><i class="ti ti-player-play"></i> <span data-gkey="pgStartBtn">Start game</span></button>
+    </div>
+
+    <!-- Live game -->
+    <div id="buzz-play" style="display:none">
+      <div class="buzz-scorebar" id="buzz-scorebar"><!-- per-player scores --></div>
+      <div class="trivia-question" id="buzz-question"></div>
+      <div class="trivia-opts" id="buzz-opts"></div>
+      <div class="buzz-feedback" id="buzz-feedback"></div>
+      <div class="buzz-timer" id="buzz-timer" style="display:none"></div>
+      <div class="buzz-buzzers" id="buzz-buzzers"><!-- N buzz buttons --></div>
+      <button class="trivia-next" id="buzz-next" onclick="buzzNext()"></button>
+    </div>
+
+    <!-- End screen -->
+    <div class="buzz-end" id="buzz-end" style="display:none">
+      <div class="buzz-end-trophy">🏆</div>
+      <div class="buzz-end-title" id="buzz-end-title"></div>
+      <div class="buzz-end-line" id="buzz-end-line"></div>
+      <button class="pg-again" onclick="buzzPlayAgain()"><i class="ti ti-refresh"></i> <span data-gkey="pgPlayAgain">Play again</span></button>
+    </div>
+
   </div>
 </div>
 
@@ -2023,7 +2339,19 @@ function updateGreeting() {
   const greeting = CONTENT
     ? CONTENT.strings.greeting[timeKey][lang]
     : { morning:'Good morning', afternoon:'Good afternoon', evening:'Good evening', night:'Good night' }[timeKey] + ' — welcome aboard';
-  document.getElementById('greeting-text').textContent = greeting;
+  // Accent the phrase after the em-dash ("welcome aboard" / its translation) in
+  // italic gold — built with DOM nodes so content stays injection-safe.
+  const greetEl = document.getElementById('greeting-text');
+  const dash = greeting.indexOf('—');
+  if (dash !== -1) {
+    greetEl.textContent = greeting.slice(0, dash).trim() + ' — ';
+    const accent = document.createElement('span');
+    accent.className = 'greeting-accent';
+    accent.textContent = greeting.slice(dash + 1).trim();
+    greetEl.appendChild(accent);
+  } else {
+    greetEl.textContent = greeting;
+  }
 }
 
 // ════════════════════════════════════════════════════════════
@@ -2659,13 +2987,73 @@ const GAME_UI = {
   spinsLabel:   { en:'Spins:', es:'Giros:', pt:'Giros:', fr:'Tours :' },
   bestTapScore: { en:'Best tap score:', es:'Mejor puntuación:', pt:'Melhor pontuação:', fr:'Meilleur score :' },
   // Trivia
-  triviaHeroTitle:   { en:'Miami Trivia', es:'Trivia de Miami', pt:'Trivia de Miami', fr:'Quiz de Miami' },
+  triviaCardTitle:   { en:'Miami Trivia', es:'Trivia de Miami', pt:'Trivia de Miami', fr:'Quiz de Miami' },
   triviaScreenTitle: { en:'🧠 Miami Trivia', es:'🧠 Trivia de Miami', pt:'🧠 Trivia de Miami', fr:'🧠 Quiz de Miami' },
-  triviaHeroDesc: {
-    en:"10 questions about Miami's history, culture, landmarks and hidden gems. How well do you know the Magic City?",
-    es:"10 preguntas sobre la historia, la cultura, los lugares emblemáticos y los rincones escondidos de Miami. ¿Cuánto conoces la Ciudad Mágica?",
-    pt:"10 perguntas sobre a história, a cultura, os pontos turísticos e os tesouros escondidos de Miami. O quanto você conhece a Cidade Mágica?",
-    fr:"10 questions sur l'histoire, la culture, les monuments et les trésors cachés de Miami. Connaissez-vous bien la Ville magique ?" },
+  triviaCardDesc: {
+    en:"10 questions on Miami history, culture and landmarks.",
+    es:"10 preguntas sobre la historia, la cultura y los lugares emblemáticos de Miami.",
+    pt:"10 perguntas sobre a história, a cultura e os pontos turísticos de Miami.",
+    fr:"10 questions sur l'histoire, la culture et les monuments de Miami." },
+  // Games-page categories + teasers (#30)
+  catSolo:        { en:'Solo', es:'Individual', pt:'Individual', fr:'Solo' },
+  catSoloHint:    { en:'· play on your own', es:'· juega tú solo', pt:'· jogue sozinho', fr:'· jouez seul' },
+  catTogether:    { en:'With friends', es:'Con amigos', pt:'Com amigos', fr:'Entre amis' },
+  catTogetherHint:{ en:'· share the screen', es:'· compartan la pantalla', pt:'· compartilhem a tela', fr:'· partagez l\'écran' },
+  badgeNew:       { en:'NEW', es:'NUEVO', pt:'NOVO', fr:'NOUVEAU' },
+  badgeSoon:      { en:'Soon', es:'Pronto', pt:'Em breve', fr:'Bientôt' },
+  duelCardTitle:  { en:'Tap Duel', es:'Duelo de toques', pt:'Duelo de toques', fr:'Duel de tap' },
+  duelCardDesc:   { en:'Tap when it turns green — fastest finger wins.', es:'Toca cuando se ponga verde: gana el más rápido.', pt:'Toque quando ficar verde — o mais rápido vence.', fr:'Touchez quand c\'est vert — le plus rapide gagne.' },
+  buzzerCardTitle:{ en:'Trivia Buzzer', es:'Pulsador de trivia', pt:'Campainha de trivia', fr:'Buzzer quiz' },
+  buzzerCardDesc: { en:'First to buzz answers. Race your friends.', es:'El primero en pulsar responde. Compite con tus amigos.', pt:'Quem apertar primeiro responde. Dispute com os amigos.', fr:'Le premier à buzzer répond. Affrontez vos amis.' },
+  // Shared multiplayer picker (#30 b/c)
+  howManyPlayers: { en:'How many players?', es:'¿Cuántos jugadores?', pt:'Quantos jogadores?', fr:'Combien de joueurs ?' },
+  pgStartBtn:     { en:'Start game', es:'Empezar', pt:'Começar', fr:'Commencer' },
+  pgPlayAgain:    { en:'Play again', es:'Jugar de nuevo', pt:'Jogar de novo', fr:'Rejouer' },
+  pgP1:           { en:'Player 1', es:'Jugador 1', pt:'Jogador 1', fr:'Joueur 1' },
+  pgP2:           { en:'Player 2', es:'Jugador 2', pt:'Jogador 2', fr:'Joueur 2' },
+  pgP3:           { en:'Player 3', es:'Jugador 3', pt:'Jogador 3', fr:'Joueur 3' },
+  // Tap Duel (#30b)
+  duelScreenTitle:{ en:'⚡ Tap Duel', es:'⚡ Duelo de toques', pt:'⚡ Duelo de toques', fr:'⚡ Duel de tap' },
+  duelIntroSub:   { en:"When your zone turns green, tap fast — first tap wins. Tap while it's still red and the round is void!", es:'Cuando tu zona se ponga verde, toca rápido: el primero gana. ¡Si tocas mientras está roja, la ronda se anula!', pt:'Quando sua zona ficar verde, toque rápido — o primeiro vence. Se tocar enquanto está vermelha, a rodada é anulada!', fr:'Quand votre zone devient verte, touchez vite — le premier gagne. Si vous touchez quand c\'est encore rouge, la manche est annulée !' },
+  duelWait:       { en:'Wait…', es:'Espera…', pt:'Espere…', fr:'Attendez…' },
+  duelTapNow:     { en:'TAP!', es:'¡TOCA!', pt:'TOQUE!', fr:'TAPEZ !' },
+  duelWon:        { en:'Winner! 🎉', es:'¡Ganador! 🎉', pt:'Vencedor! 🎉', fr:'Gagnant ! 🎉' },
+  duelTooSoon:    { en:'Too soon!', es:'¡Demasiado pronto!', pt:'Cedo demais!', fr:'Trop tôt !' },
+  duelWinsLabel:  { en:'wins:', es:'gana:', pt:'vit.:', fr:'gagn. :' },
+  duelGetReady:   { en:'Get ready… wait for green', es:'Prepárate… espera el verde', pt:'Prepare-se… espere o verde', fr:'Préparez-vous… attendez le vert' },
+  duelWinMsg:     { en:'{p} wins the round! 🎉', es:'¡{p} gana la ronda! 🎉', pt:'{p} vence a rodada! 🎉', fr:'{p} gagne la manche ! 🎉' },
+  duelFalseMsg:   { en:'{p} jumped early — round void', es:'{p} se adelantó — ronda anulada', pt:'{p} adiantou-se — rodada anulada', fr:'{p} a sauté trop tôt — manche annulée' },
+  // Trivia Buzzer (#30c)
+  buzzScreenTitle:{ en:'🔔 Trivia Buzzer', es:'🔔 Pulsador de trivia', pt:'🔔 Campainha de trivia', fr:'🔔 Buzzer quiz' },
+  buzzIntroSub:   { en:'Read the question, then buzz. You get 5 seconds to answer — run out of time and you lose a point. First to answer right wins it.', es:'Lee la pregunta y pulsa. Tienes 5 segundos para responder: si se acaba el tiempo, pierdes un punto. El primero en acertar gana.', pt:'Leia a pergunta e aperte. Você tem 5 segundos para responder — se o tempo acabar, perde um ponto. Quem acertar primeiro vence.', fr:'Lisez la question, puis buzzez. Vous avez 5 secondes pour répondre — si le temps s\'écoule, vous perdez un point. Le premier à trouver gagne.' },
+  buzzReady:      { en:'Read the question, then buzz in!', es:'Lee la pregunta y ¡pulsa!', pt:'Leia a pergunta e aperte!', fr:'Lisez la question, puis buzzez !' },
+  buzzYourAnswer: { en:'{p} — pick your answer!', es:'{p}: ¡elige tu respuesta!', pt:'{p} — escolha sua resposta!', fr:'{p} — choisissez votre réponse !' },
+  buzzTimeUp:     { en:"⏱ Time's up — {p} loses a point! Others, buzz in.", es:'⏱ ¡Se acabó el tiempo — {p} pierde un punto! Los demás, ¡pulsen!', pt:'⏱ Tempo esgotado — {p} perde um ponto! Os outros, apertem!', fr:'⏱ Temps écoulé — {p} perd un point ! Aux autres de buzzer.' },
+  buzzWrongPass:  { en:'❌ Wrong — {p} is out. Others, buzz in!', es:'❌ Incorrecto — {p} queda fuera. Los demás, ¡pulsen!', pt:'❌ Errou — {p} está fora. Os outros, apertem!', fr:'❌ Faux — {p} est éliminé. Aux autres de buzzer !' },
+  buzzCorrect:    { en:'✅ Correct — {p} scores!', es:'✅ ¡Correcto — {p} puntúa!', pt:'✅ Correto — {p} pontua!', fr:'✅ Correct — {p} marque !' },
+  buzzNobody:     { en:'Nobody got it — here\'s the answer', es:'Nadie acertó — esta es la respuesta', pt:'Ninguém acertou — esta é a resposta', fr:'Personne n\'a trouvé — voici la réponse' },
+  buzzTap:        { en:'Buzz!', es:'¡Pulsa!', pt:'Aperte!', fr:'Buzz !' },
+  buzzOut:        { en:'Out', es:'Fuera', pt:'Fora', fr:'Éliminé' },
+  buzzNextQ:      { en:'Next Question ▶', es:'Siguiente pregunta ▶', pt:'Próxima pergunta ▶', fr:'Question suivante ▶' },
+  buzzSeeResults: { en:'See Results ▶', es:'Ver resultados ▶', pt:'Ver resultados ▶', fr:'Voir les résultats ▶' },
+  buzzWinner:     { en:'🏆 {p} wins!', es:'🏆 ¡{p} gana!', pt:'🏆 {p} venceu!', fr:'🏆 {p} gagne !' },
+  buzzTie:        { en:"🤝 It's a tie!", es:'🤝 ¡Empate!', pt:'🤝 Empate!', fr:'🤝 Égalité !' },
+  // Tic-Tac-Toe (#30a)
+  tttCardTitle:  { en:'Tic-Tac-Toe', es:'Tres en raya', pt:'Jogo da velha', fr:'Morpion' },
+  tttCardDesc:   { en:'Classic 3-in-a-row. Take turns on the screen.', es:'El clásico tres en raya. Túrnense en la pantalla.', pt:'O clássico jogo da velha. Joguem alternando na tela.', fr:'Le morpion classique. Jouez à tour de rôle sur l\'écran.' },
+  tttScreenTitle:{ en:'⭕ Tic-Tac-Toe', es:'⭕ Tres en raya', pt:'⭕ Jogo da velha', fr:'⭕ Morpion' },
+  tttIntroSub:   { en:'Take turns on the screen — three in a row wins.', es:'Túrnense en la pantalla: tres en raya gana.', pt:'Joguem alternando na tela — três em linha vence.', fr:'Jouez à tour de rôle — trois alignés gagnent.' },
+  tttPlayers:    { en:'2 players · pass & play', es:'2 jugadores · por turnos', pt:'2 jogadores · revezando', fr:'2 joueurs · à tour de rôle' },
+  tttStartBtn:   { en:'Start game', es:'Empezar', pt:'Começar', fr:'Commencer' },
+  tttRestart:    { en:'Restart', es:'Reiniciar', pt:'Reiniciar', fr:'Recommencer' },
+  tttP1:         { en:'Player 1', es:'Jugador 1', pt:'Jogador 1', fr:'Joueur 1' },
+  tttP2:         { en:'Player 2', es:'Jugador 2', pt:'Jogador 2', fr:'Joueur 2' },
+  tttWins:       { en:'wins', es:'gana', pt:'vit.', fr:'gagn.' },
+  tttYourTurn:   { en:'Your turn', es:'Tu turno', pt:'Sua vez', fr:'À vous' },
+  tttWaiting:    { en:'Waiting…', es:'Esperando…', pt:'Aguardando…', fr:'En attente…' },
+  tttWinMsg:     { en:'{p} wins! 🎉', es:'¡{p} gana! 🎉', pt:'{p} venceu! 🎉', fr:'{p} gagne ! 🎉' },
+  tttDrawMsg:    { en:"It's a draw 🤝", es:'Empate 🤝', pt:'Empate 🤝', fr:'Match nul 🤝' },
+  tttPlayAgain:  { en:'Play again', es:'Jugar de nuevo', pt:'Jogar de novo', fr:'Rejouer' },
   pressStart:   { en:'Press Start to begin!', es:'¡Pulsa Empezar para comenzar!', pt:'Pressione Começar para iniciar!', fr:'Appuyez sur Démarrer pour commencer !' },
   startTrivia:  { en:'Start Trivia ▶', es:'Empezar trivia ▶', pt:'Começar trivia ▶', fr:'Démarrer le quiz ▶' },
   correct:      { en:'✅ Correct! Great job!', es:'✅ ¡Correcto! ¡Bien hecho!', pt:'✅ Correto! Muito bem!', fr:'✅ Correct ! Bravo !' },
@@ -2724,6 +3112,13 @@ function refreshOpenGame() {
   } else if (open.id === 'game-trivia' && triviaCurrent && !triviaAnswered &&
              document.getElementById('trivia-opts').children.length) {
     renderTriviaQuestion();
+  } else if (open.id === 'game-ttt') {
+    tttRenderStrings();
+  } else if (open.id === 'game-duel' && duelPhase !== 'idle') {
+    duelRender();
+  } else if (open.id === 'game-buzzer') {
+    if (document.getElementById('buzz-end').style.display !== 'none') buzzRenderEnd();
+    else if (buzzCurrent) buzzRender();
   }
 }
 
@@ -2737,6 +3132,9 @@ const GAMES = {
   word:   { screen: 'game-word',   reset: initWord },
   spin:   { screen: 'game-spin',   reset: resetSpinGame },
   image:  { screen: 'game-image',  reset: initImage },
+  ttt:    { screen: 'game-ttt',    reset: initTTT },
+  duel:   { screen: 'game-duel',   reset: initDuel },
+  buzzer: { screen: 'game-buzzer', reset: initBuzzer },
 };
 
 function openGame(type) {
@@ -2755,12 +3153,490 @@ function closeGames() {
   document.querySelectorAll('.game-screen.open').forEach(s => {
     s.classList.remove('open');
     if (s.id === 'game-tap') stopTapTimer();
+    if (s.id === 'game-duel') clearDuelTimer();
+    if (s.id === 'game-buzzer') clearBuzzTimer();
   });
 }
 
 function closeGame() {
   closeGames();
   resetInactivity();
+}
+
+// ── Tic-Tac-Toe (2-player hot-seat, #30a) ───────────────────
+// Hot-seat: both players share the screen, SAME orientation (riders sit
+// side-by-side facing the headrest — no 180° flip). P1 = X (teal, left),
+// P2 = O (gold, right). "Loser goes first" the next round; round 1 opens
+// with X. The win tally persists across rounds within a session and resets
+// when the game is (re)opened — initTTT() is the reset() openGame() calls.
+const TTT_LINES = [
+  [0,1,2],[3,4,5],[6,7,8], // rows
+  [0,3,6],[1,4,7],[2,5,8], // columns
+  [0,4,8],[2,4,6],         // diagonals
+];
+let tttBoard = Array(9).fill('');
+let tttTurn = 'X';
+let tttStarter = 'X';        // who opens the next round (loser-goes-first)
+let tttWins = { X: 0, O: 0 };
+let tttOver = false;
+
+// Fresh match: zero the tally and show the pre-game intro (the shared
+// pre-game step; the player-count picker slots in here for #30 b/c).
+function initTTT() {
+  tttWins = { X: 0, O: 0 };
+  tttStarter = 'X';
+  tttOver = true;            // not in play yet — intro is showing
+  document.getElementById('ttt-p1-wins').textContent = '0';
+  document.getElementById('ttt-p2-wins').textContent = '0';
+  document.getElementById('ttt-intro').style.display = '';
+  document.getElementById('ttt-play').style.display = 'none';
+  document.getElementById('ttt-restart').style.display = 'none';
+}
+
+function tttStart() {
+  document.getElementById('ttt-intro').style.display = 'none';
+  document.getElementById('ttt-play').style.display = '';
+  document.getElementById('ttt-restart').style.display = '';
+  tttNewRound();
+  logTap('game_ttt_start');
+}
+
+// New round: clear the board, keep the tally, open with the current starter.
+function tttNewRound() {
+  tttBoard = Array(9).fill('');
+  tttTurn = tttStarter;
+  tttOver = false;
+  tttRenderBoard();
+  tttRenderStrings();
+}
+
+function tttPlayAgain() {
+  tttNewRound();
+  resetInactivity();
+}
+
+function tttRenderBoard() {
+  const board = document.getElementById('ttt-board');
+  const winLine = tttOver ? tttWinningLine() : null;
+  board.innerHTML = '';
+  for (let i = 0; i < 9; i++) {
+    const cell = document.createElement('button');
+    cell.className = 'ttt-cell' +
+      (tttBoard[i] === 'X' ? ' x' : tttBoard[i] === 'O' ? ' o' : '') +
+      (winLine && winLine.includes(i) ? ' win' : '');
+    cell.textContent = tttBoard[i];
+    if (tttBoard[i] || tttOver) cell.disabled = true;
+    else cell.onclick = () => tttMove(i);
+    board.appendChild(cell);
+  }
+  const p1 = document.getElementById('ttt-p1'), p2 = document.getElementById('ttt-p2');
+  p1.classList.toggle('active', !tttOver && tttTurn === 'X');
+  p2.classList.toggle('active', !tttOver && tttTurn === 'O');
+}
+
+function tttMove(i) {
+  if (tttOver || tttBoard[i]) return;
+  tttBoard[i] = tttTurn;
+  resetInactivity();
+  const line = tttWinningLine();
+  if (line) {
+    tttOver = true;
+    tttWins[tttTurn]++;
+    document.getElementById(tttTurn === 'X' ? 'ttt-p1-wins' : 'ttt-p2-wins').textContent = tttWins[tttTurn];
+    tttStarter = tttTurn === 'X' ? 'O' : 'X';      // loser opens next round
+    logTap('game_ttt_win');
+  } else if (tttBoard.every(c => c)) {
+    tttOver = true;
+    tttStarter = tttStarter === 'X' ? 'O' : 'X';   // draw → alternate the opener
+  } else {
+    tttTurn = tttTurn === 'X' ? 'O' : 'X';
+  }
+  tttRenderBoard();
+  tttRenderStrings();
+}
+
+// Winning line (3 indices) or null. Pure — also unit-tested.
+function tttWinningLine() {
+  for (const [a,b,c] of TTT_LINES) {
+    if (tttBoard[a] && tttBoard[a] === tttBoard[b] && tttBoard[a] === tttBoard[c]) return [a,b,c];
+  }
+  return null;
+}
+
+// All language-dependent runtime text: per-player turn hint + win/draw
+// banner. Re-run on language switch (refreshOpenGame) so an open game flips.
+function tttRenderStrings() {
+  const p1turn = document.getElementById('ttt-p1-turn');
+  const p2turn = document.getElementById('ttt-p2-turn');
+  const banner = document.getElementById('ttt-banner');
+  if (!p1turn) return;
+  if (tttOver) {
+    p1turn.textContent = ''; p2turn.textContent = '';
+    const line = tttWinningLine();
+    const again = '<button class="ttt-again-btn" onclick="tttPlayAgain()"><i class="ti ti-refresh"></i> ' + gt('tttPlayAgain') + '</button>';
+    if (line) {
+      const isX = tttBoard[line[0]] === 'X';
+      banner.innerHTML = '<div class="ttt-banner-title ' + (isX ? 'p1' : 'p2') + '">' +
+        gt('tttWinMsg').replace('{p}', gt(isX ? 'tttP1' : 'tttP2')) + '</div>' + again;
+    } else {
+      banner.innerHTML = '<div class="ttt-banner-title draw">' + gt('tttDrawMsg') + '</div>' + again;
+    }
+  } else {
+    banner.innerHTML = '';
+    p1turn.textContent = tttTurn === 'X' ? gt('tttYourTurn') : gt('tttWaiting');
+    p2turn.textContent = tttTurn === 'O' ? gt('tttYourTurn') : gt('tttWaiting');
+  }
+}
+
+// ── Shared multiplayer player-count picker (#30 b/c) ───────
+// One "How many players?" chooser reused by every variable-count game. Buttons
+// carry data-n; the active one is the chosen count. pgSelectCount toggles on
+// tap, pgGetCount reads it, pgSetCount resets it (to 2 when a game reopens).
+function pgSelectCount(btn) {
+  btn.parentElement.querySelectorAll('.pg-count-btn').forEach(b => b.classList.toggle('active', b === btn));
+  resetInactivity();
+}
+function pgGetCount(id) {
+  const a = document.querySelector('#' + id + ' .pg-count-btn.active');
+  return a ? parseInt(a.dataset.n, 10) : 2;
+}
+function pgSetCount(id, n) {
+  document.querySelectorAll('#' + id + ' .pg-count-btn').forEach(b => b.classList.toggle('active', parseInt(b.dataset.n, 10) === n));
+}
+// Localized player label, 0-indexed (P1/P2/P3). Shared by duel + buzzer.
+const PG_PKEY = ['pgP1', 'pgP2', 'pgP3'];
+const pgPlayer = (i) => gt(PG_PKEY[i]);
+
+// ── Tap Duel (reaction race, 2-3P, #30b) ──────────────────
+// Zones are columns (P1 left … P3 right), SAME orientation — riders sit
+// shoulder-to-shoulder. Flow: arming (red, "wait") → after a random delay all
+// zones flip green → first valid tap wins and is tallied. A tap during arming
+// is a FALSE START: the round is void (no tally) and the early tapper is named
+// — one fair rule for any player count. The arming timer is cleared on close
+// (closeGames) and before each round so nothing fires on a hidden screen.
+let duelCount = 2;
+let duelWins = [0, 0, 0];
+let duelPhase = 'idle';   // idle | arming | ready | done
+let duelWinner = null;    // index of the round winner (valid green tap)
+let duelFalse = null;     // index of the false-starter, if any
+let duelTimer = null;
+
+function clearDuelTimer() { if (duelTimer) { clearTimeout(duelTimer); duelTimer = null; } }
+
+// reset() for openGame: back to the picker with a clean tally.
+function initDuel() {
+  clearDuelTimer();
+  duelWins = [0, 0, 0];
+  duelPhase = 'idle'; duelWinner = null; duelFalse = null;
+  pgSetCount('duel-count', 2);
+  document.getElementById('duel-intro').style.display = '';
+  document.getElementById('duel-play').style.display = 'none';
+}
+
+function duelStart() {
+  duelCount = pgGetCount('duel-count');
+  duelWins = [0, 0, 0];
+  document.getElementById('duel-intro').style.display = 'none';
+  document.getElementById('duel-play').style.display = '';
+  logTap('game_duel_start_' + duelCount);
+  duelArm();
+}
+
+// Begin a round: red/arming, then schedule the green flip after a random delay.
+function duelArm() {
+  clearDuelTimer();
+  duelPhase = 'arming'; duelWinner = null; duelFalse = null;
+  duelRender();
+  duelTimer = setTimeout(duelGo, 1200 + Math.random() * 2800); // 1.2–4.0s
+}
+
+// Flip every zone to green. Split out from the timer so tests can drive it.
+function duelGo() {
+  if (duelPhase !== 'arming') return;
+  duelPhase = 'ready';
+  duelRender();
+}
+
+function duelTap(p) {
+  if (p >= duelCount) return;
+  resetInactivity();
+  if (duelPhase === 'arming') {        // tapped on red → false start, round void
+    clearDuelTimer();
+    duelPhase = 'done'; duelFalse = p; duelWinner = null;
+    logTap('game_duel_false');
+    duelRender();
+  } else if (duelPhase === 'ready') {  // first valid green tap wins the round
+    duelPhase = 'done'; duelWinner = p; duelFalse = null;
+    duelWins[p]++;
+    logTap('game_duel_win');
+    duelRender();
+  }
+  // idle / done → ignore
+}
+
+function duelPlayAgain() { duelArm(); resetInactivity(); }
+
+// Render the N zones + banner from current state (also re-run on language
+// switch). Zone classes drive the red/green/win/false-start colours in CSS.
+function duelRender() {
+  const zones = document.getElementById('duel-zones');
+  zones.innerHTML = '';
+  for (let i = 0; i < duelCount; i++) {
+    const z = document.createElement('button');
+    let cls = 'duel-zone p' + (i + 1);
+    let state = '';
+    if (duelPhase === 'arming') { cls += ' arming'; state = gt('duelWait'); }
+    else if (duelPhase === 'ready') { cls += ' ready'; state = gt('duelTapNow'); }
+    else if (duelPhase === 'done') {
+      if (duelWinner === i) { cls += ' win'; state = gt('duelWon'); }
+      else if (duelFalse === i) { cls += ' falsestart'; state = gt('duelTooSoon'); }
+      else cls += ' dim';
+    }
+    z.className = cls;
+    z.onclick = () => duelTap(i);
+    z.innerHTML = '<div class="duel-zone-player">' + pgPlayer(i) + '</div>' +
+      '<div class="duel-zone-state">' + state + '</div>' +
+      '<div class="duel-zone-wins">' + gt('duelWinsLabel') + ' ' + duelWins[i] + '</div>';
+    zones.appendChild(z);
+  }
+  const banner = document.getElementById('duel-banner');
+  if (duelPhase === 'arming') {
+    banner.innerHTML = '<div class="duel-getready">' + gt('duelGetReady') + '</div>';
+  } else if (duelPhase === 'ready') {
+    banner.innerHTML = '';
+  } else if (duelPhase === 'done') {
+    const again = '<button class="pg-again" onclick="duelPlayAgain()"><i class="ti ti-refresh"></i> ' + gt('pgPlayAgain') + '</button>';
+    const title = duelWinner !== null
+      ? gt('duelWinMsg').replace('{p}', pgPlayer(duelWinner))
+      : gt('duelFalseMsg').replace('{p}', pgPlayer(duelFalse));
+    banner.innerHTML = '<div class="duel-banner-title">' + title + '</div>' + again;
+  }
+}
+
+// ── Trivia Buzzer (2-3P buzz-in, #30c) ────────────────────
+// Reuses TRIVIA_QUESTIONS (already ES/PT/FR). Everyone reads the shared
+// question; first to BUZZ (bottom buttons, P1 left … P3 right) gets to answer.
+// THE BUZZ IS A COMMITMENT: buzzing starts a per-buzz countdown (BUZZ_SECONDS),
+// so you can't lock others out and then read at leisure — read first, then buzz.
+//   • Right answer  → +1 and the question ends.
+//   • Wrong answer  → that player is LOCKED OUT for the question (no point lost);
+//                     the buzz reopens for whoever's left.
+//   • Run out of time → the player LOSES a point (scores may go negative) and is
+//                     locked out; the buzz reopens for the others.
+// When everyone's locked out, the answer is revealed and Next advances. Final
+// screen tallies the winner. The countdown is cleared on close (closeGames).
+const BUZZ_SECONDS = 5;   // answer window once a player buzzes in (see buzzIntroSub)
+let buzzCount = 2;
+let buzzWins = [0, 0, 0];
+let buzzQ = 0;
+let buzzCurrent = null;
+let buzzPhase = 'idle';   // idle | buzzing | answering | revealed
+let buzzActive = null;    // player index currently answering
+let buzzLocked = [false, false, false];
+let buzzWrong = [];       // option indices answered wrong (for the reveal)
+let buzzSolvedBy = null;  // player who answered correctly, or null (all locked)
+let buzzRemaining = 0;    // seconds left on the current answer countdown
+let buzzTimer = null;     // setInterval handle for the countdown
+let buzzLastEvent = null; // {type:'wrong'|'timeout', p} — drives the buzzing-phase prompt
+
+function clearBuzzTimer() { if (buzzTimer) { clearInterval(buzzTimer); buzzTimer = null; } }
+
+// reset() for openGame: back to the picker.
+function initBuzzer() {
+  clearBuzzTimer();
+  buzzPhase = 'idle'; buzzActive = null; buzzCurrent = null;
+  buzzWins = [0, 0, 0]; buzzQ = 0; buzzLastEvent = null;
+  pgSetCount('buzz-count', 2);
+  document.getElementById('buzz-intro').style.display = '';
+  document.getElementById('buzz-play').style.display = 'none';
+  document.getElementById('buzz-end').style.display = 'none';
+  document.getElementById('buzz-progress').style.display = 'none';
+}
+
+function buzzStart() {
+  buzzCount = pgGetCount('buzz-count');
+  buzzWins = [0, 0, 0]; buzzQ = 0;
+  document.getElementById('buzz-intro').style.display = 'none';
+  document.getElementById('buzz-end').style.display = 'none';
+  document.getElementById('buzz-play').style.display = 'flex';
+  document.getElementById('buzz-progress').style.display = '';
+  logTap('game_buzzer_start_' + buzzCount);
+  buzzLoadQuestion();
+}
+
+function buzzLoadQuestion() {
+  clearBuzzTimer();
+  buzzCurrent = TRIVIA_QUESTIONS[buzzQ];
+  buzzActive = null;
+  buzzLocked = [false, false, false];
+  buzzWrong = [];
+  buzzSolvedBy = null;
+  buzzLastEvent = null;
+  buzzRemaining = 0;
+  buzzPhase = 'buzzing';
+  buzzRender();
+}
+
+function buzzIn(p) {
+  if (p >= buzzCount || buzzPhase !== 'buzzing' || buzzLocked[p]) return;
+  buzzActive = p;
+  buzzPhase = 'answering';
+  buzzRemaining = BUZZ_SECONDS;       // start this player's answer countdown
+  clearBuzzTimer();
+  buzzTimer = setInterval(buzzTick, 1000);
+  resetInactivity();
+  buzzRender();
+}
+
+// One countdown tick. Split out from the interval so tests can drive the
+// timeout deterministically via buzzTimeout() instead of waiting 5 real seconds.
+function buzzTick() {
+  buzzRemaining--;
+  if (buzzRemaining <= 0) { buzzTimeout(); return; }
+  const t = document.getElementById('buzz-timer');     // light update — no full re-render
+  if (t) { t.textContent = '⏱ ' + buzzRemaining + 's'; t.classList.toggle('low', buzzRemaining <= 2); }
+}
+
+// Ran out of time: the buzzer loses a point (may go negative) and is locked out;
+// the buzz reopens for the others, or the answer is revealed if everyone's out.
+function buzzTimeout() {
+  clearBuzzTimer();
+  if (buzzPhase !== 'answering') return;
+  const p = buzzActive;
+  buzzWins[p]--;
+  buzzLocked[p] = true;
+  buzzLastEvent = { type: 'timeout', p };
+  buzzActive = null;
+  buzzPhase = buzzLocked.slice(0, buzzCount).every(Boolean) ? 'revealed' : 'buzzing';
+  logTap('game_buzzer_timeout');
+  buzzRender();
+}
+
+function buzzAnswer(choice) {
+  if (buzzPhase !== 'answering') return;
+  clearBuzzTimer();
+  resetInactivity();
+  if (choice === buzzCurrent.a) {       // correct → score + reveal
+    buzzSolvedBy = buzzActive;
+    buzzWins[buzzActive]++;
+    buzzLastEvent = null;
+    buzzPhase = 'revealed';
+  } else {                              // wrong → lock this player out (no point lost)
+    buzzLocked[buzzActive] = true;
+    if (!buzzWrong.includes(choice)) buzzWrong.push(choice);
+    buzzLastEvent = { type: 'wrong', p: buzzActive };
+    buzzActive = null;
+    buzzPhase = buzzLocked.slice(0, buzzCount).every(Boolean) ? 'revealed' : 'buzzing';
+  }
+  buzzRender();
+}
+
+function buzzNext() {
+  buzzQ++;
+  if (buzzQ >= TRIVIA_QUESTIONS.length) { buzzEnd(); return; }
+  buzzLoadQuestion();
+  resetInactivity();
+}
+
+function buzzEnd() {
+  clearBuzzTimer();
+  document.getElementById('buzz-play').style.display = 'none';
+  document.getElementById('buzz-progress').style.display = 'none';
+  document.getElementById('buzz-end').style.display = 'flex';
+  buzzRenderEnd();
+}
+
+function buzzPlayAgain() { buzzStart(); resetInactivity(); }
+
+// All language-dependent runtime text lives here so a mid-game language switch
+// (refreshOpenGame → buzzRender) re-renders the whole live screen cleanly.
+function buzzRender() {
+  if (!buzzCurrent) return;
+  document.getElementById('buzz-progress').textContent = (buzzQ + 1) + ' / ' + TRIVIA_QUESTIONS.length;
+  // Per-player scorebar (the answering player is highlighted)
+  const sb = document.getElementById('buzz-scorebar');
+  sb.innerHTML = '';
+  for (let i = 0; i < buzzCount; i++) {
+    const d = document.createElement('div');
+    d.className = 'buzz-score p' + (i + 1) + (buzzActive === i ? ' active' : '');
+    d.innerHTML = '<div class="buzz-score-who">' + pgPlayer(i) + '</div>' +
+      '<div class="buzz-score-pts' + (buzzWins[i] < 0 ? ' neg' : '') + '">' + buzzWins[i] + '</div>';
+    sb.appendChild(d);
+  }
+  // Shared question
+  document.getElementById('buzz-question').textContent = (buzzQ + 1) + '. ' + gL(buzzCurrent.q);
+  // Options — only tappable while a player is answering; revealed marks them.
+  const opts = document.getElementById('buzz-opts');
+  opts.innerHTML = '';
+  buzzCurrent.opts.forEach((o, i) => {
+    const b = document.createElement('button');
+    b.className = 'trivia-opt';
+    b.textContent = gL(o);
+    if (buzzPhase === 'answering') {
+      b.onclick = () => buzzAnswer(i);
+    } else {
+      b.disabled = true;
+      if (buzzPhase === 'revealed') {
+        if (i === buzzCurrent.a) b.classList.add('correct');
+        else if (buzzWrong.includes(i)) b.classList.add('wrong');
+      }
+    }
+    opts.appendChild(b);
+  });
+  // Feedback line — during buzzing, surface what just happened (a timeout / wrong
+  // answer) so the table knows why the buzz reopened; otherwise the ready prompt.
+  const fb = document.getElementById('buzz-feedback');
+  if (buzzPhase === 'buzzing') {
+    if (buzzLastEvent && buzzLastEvent.type === 'timeout') fb.textContent = gt('buzzTimeUp').replace('{p}', pgPlayer(buzzLastEvent.p));
+    else if (buzzLastEvent && buzzLastEvent.type === 'wrong') fb.textContent = gt('buzzWrongPass').replace('{p}', pgPlayer(buzzLastEvent.p));
+    else fb.textContent = gt('buzzReady');
+  } else if (buzzPhase === 'answering') {
+    fb.textContent = gt('buzzYourAnswer').replace('{p}', pgPlayer(buzzActive));
+  } else {
+    fb.textContent = buzzSolvedBy !== null
+      ? gt('buzzCorrect').replace('{p}', pgPlayer(buzzSolvedBy))
+      : gt('buzzNobody');
+  }
+  // Countdown — visible only while a player is answering.
+  const timer = document.getElementById('buzz-timer');
+  if (buzzPhase === 'answering') {
+    timer.style.display = '';
+    timer.textContent = '⏱ ' + buzzRemaining + 's';
+    timer.classList.toggle('low', buzzRemaining <= 2);
+  } else {
+    timer.style.display = 'none';
+  }
+  // Buzz buttons
+  const bz = document.getElementById('buzz-buzzers');
+  bz.innerHTML = '';
+  for (let i = 0; i < buzzCount; i++) {
+    const btn = document.createElement('button');
+    btn.className = 'buzz-btn p' + (i + 1);
+    btn.innerHTML = pgPlayer(i) + '<span class="buzz-btn-sub">' + gt(buzzLocked[i] ? 'buzzOut' : 'buzzTap') + '</span>';
+    btn.disabled = buzzPhase !== 'buzzing' || buzzLocked[i];
+    btn.onclick = () => buzzIn(i);
+    bz.appendChild(btn);
+  }
+  // Next button (revealed only)
+  const next = document.getElementById('buzz-next');
+  if (buzzPhase === 'revealed') {
+    next.textContent = (buzzQ + 1 >= TRIVIA_QUESTIONS.length) ? gt('buzzSeeResults') : gt('buzzNextQ');
+    next.classList.add('show');
+  } else {
+    next.classList.remove('show');
+  }
+}
+
+function buzzRenderEnd() {
+  const scores = buzzWins.slice(0, buzzCount);
+  const max = Math.max(...scores);
+  const winners = [];
+  for (let i = 0; i < buzzCount; i++) if (scores[i] === max) winners.push(i);
+  document.getElementById('buzz-end-title').textContent = winners.length === 1
+    ? gt('buzzWinner').replace('{p}', pgPlayer(winners[0]))
+    : gt('buzzTie');
+  document.getElementById('buzz-end-line').textContent =
+    scores.map((s, i) => pgPlayer(i) + ': ' + s).join('   ·   ');
 }
 
 // ── Trivia ────────────────────────────────────────────────

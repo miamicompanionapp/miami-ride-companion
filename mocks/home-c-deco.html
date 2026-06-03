@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — Option C · Deco Dusk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poiret+One&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --dusk-0:#0C1A2E; --dusk-1:#15294A; --teal-deep:#0B4F57; --teal:#19A0A8;
+    --pink:#FF5C8A; --pink-soft:#FF89AE; --gold:#E5C06B; --gold-deep:#C9A24A;
+    --ink:#EAF1F6; --muted:#9DB4C6; --line:rgba(229,192,107,.22);
+    --panel:rgba(18,38,66,.6); --panel-2:rgba(11,79,87,.32);
+    --display:'Marcellus',serif; --deco:'Poiret One',sans-serif; --body:'DM Sans',sans-serif;
+  }
+  html,body{height:100%;font-family:var(--body);color:var(--ink);overflow:hidden}
+  body{background:
+    radial-gradient(1000px 620px at 85% -12%, rgba(255,92,138,.30), transparent 58%),
+    radial-gradient(820px 560px at 8% 108%, rgba(25,160,168,.22), transparent 58%),
+    linear-gradient(165deg,#0C1A2E 0%, #15294A 50%, #0B2A3A 100%)}
+  .shell{display:flex;height:100vh;width:100vw}
+
+  .sidebar{width:236px;flex-shrink:0;display:flex;flex-direction:column;padding:22px 18px;gap:20px;
+    background:linear-gradient(180deg,rgba(12,26,46,.7),rgba(11,79,87,.28));border-right:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:42px;height:42px;border-radius:11px;flex-shrink:0;position:relative;
+    background:linear-gradient(160deg,var(--gold),var(--pink) 60%,var(--teal-deep));
+    box-shadow:0 0 16px rgba(255,92,138,.4);border:1px solid rgba(229,192,107,.5)}
+  .brand-mark::after{content:"";position:absolute;left:50%;top:54%;width:7px;height:15px;transform:translate(-50%,-40%);
+    background:#0C1A2E;clip-path:polygon(42% 0,58% 0,100% 100%,0 100%)}
+  .brand-name{font-family:var(--display);font-size:19px;line-height:1.02;letter-spacing:.3px}
+  .brand-sub{font-family:var(--deco);font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+  .loc{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--gold);
+    background:rgba(229,192,107,.08);border:1px solid var(--line);padding:8px 11px;border-radius:9px}
+  .nav{display:flex;flex-direction:column;gap:5px}
+  .nav a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;color:var(--muted);
+    font-weight:600;font-size:14px;text-decoration:none;transition:.2s}
+  .nav a i{font-size:19px}
+  .nav a.active{color:#0C1A2E;background:linear-gradient(100deg,var(--gold),var(--pink-soft));
+    box-shadow:0 8px 20px -10px rgba(255,92,138,.7);font-weight:700}
+  .nav a:not(.active):hover{background:rgba(255,255,255,.04);color:var(--ink)}
+  .driver{margin-top:auto;display:flex;align-items:center;gap:11px;padding:12px;border-radius:12px;
+    background:var(--panel);border:1px solid var(--line)}
+  .av{width:38px;height:38px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-weight:700;color:#0C1A2E;
+    background:linear-gradient(150deg,var(--gold),var(--pink));font-family:var(--display)}
+  .driver .nm{font-size:13.5px;font-weight:700}
+  .driver .rl{font-size:11px;color:var(--muted)}
+  .langs{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .langs button{font-family:var(--body);font-weight:600;font-size:12px;color:var(--muted);cursor:pointer;
+    padding:8px;border-radius:8px;border:1px solid var(--line);background:transparent}
+  .langs button.on{color:#0C1A2E;background:var(--teal);border-color:var(--teal)}
+
+  .main{flex:1;display:flex;flex-direction:column;min-width:0;padding:26px 30px 0}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px}
+  .hello{font-family:var(--display);font-size:32px;letter-spacing:.2px;line-height:1.05}
+  .hello b{font-weight:400;font-style:italic;color:var(--gold)}
+  .hello-sub{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13.5px;margin-top:8px}
+  .top-actions{display:flex;gap:10px;align-items:center}
+  .wx{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:11px;background:var(--panel);
+    border:1px solid var(--line)}
+  .wx .t{font-family:var(--display);font-size:20px}
+  .wx i{font-size:22px;color:var(--gold)}
+  .phone{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#0C1A2E;cursor:pointer;
+    padding:11px 16px;border-radius:11px;background:linear-gradient(100deg,var(--teal),#37C7CE);
+    box-shadow:0 10px 22px -10px rgba(25,160,168,.8)}
+
+  .scroll{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:20px;padding-bottom:24px}
+
+  .hero{position:relative;display:grid;grid-template-columns:1.15fr 1fr;border-radius:6px;overflow:hidden;
+    min-height:250px;background:var(--panel);border:1px solid var(--line)}
+  .hero::before{content:"";position:absolute;inset:9px;border:1px solid rgba(229,192,107,.35);border-radius:3px;
+    pointer-events:none;z-index:3}
+  .hero-photo{position:relative;background:#0B2A3A}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;opacity:.95}
+  .hero-photo::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,transparent 45%,var(--panel) 100%),linear-gradient(180deg,rgba(255,92,138,.18),transparent 45%)}
+  .badge{position:absolute;top:20px;left:20px;z-index:4;display:flex;align-items:center;gap:6px;
+    font-family:var(--deco);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0C1A2E;
+    padding:7px 14px;border-radius:3px;background:linear-gradient(100deg,var(--gold),var(--pink-soft))}
+  .hero-body{padding:30px 32px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+  .eyebrow{font-family:var(--deco);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal)}
+  .hero-name{font-family:var(--display);font-size:32px;line-height:1.06;letter-spacing:.3px}
+  .hero-meta{display:flex;gap:14px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+  .hero-meta span{display:flex;align-items:center;gap:6px}
+  .hero-meta i{color:var(--pink-soft);font-size:16px}
+  .hero-desc{font-size:13.5px;line-height:1.55;color:#CBDAE6;max-width:42ch}
+  .hero-cta{align-self:flex-start;margin-top:4px;display:flex;align-items:center;gap:9px;font-weight:700;font-size:13px;
+    color:#0C1A2E;padding:11px 19px;border-radius:4px;cursor:pointer;
+    background:linear-gradient(100deg,var(--gold),var(--gold-deep));box-shadow:0 10px 24px -12px var(--gold)}
+
+  .sec-head{display:flex;justify-content:space-between;align-items:center}
+  .sec-title{font-family:var(--display);font-size:21px;letter-spacing:.3px;display:flex;align-items:center;gap:12px}
+  .sec-title::after{content:"";flex:1;height:1px;width:60px;background:linear-gradient(90deg,var(--gold),transparent)}
+  .sec-link{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--gold);cursor:pointer}
+
+  .minis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mini{position:relative;border-radius:5px;overflow:hidden;background:var(--panel-2);border:1px solid var(--line);
+    transition:.25s;cursor:pointer}
+  .mini:hover{transform:translateY(-3px);border-color:rgba(255,92,138,.5)}
+  .mini-top{height:98px;position:relative;display:grid;place-items:center;font-size:34px}
+  .mini-top.g1{background:linear-gradient(150deg,#FF5C8A,#15294A)}
+  .mini-top.g2{background:linear-gradient(150deg,#19A0A8,#0C1A2E)}
+  .mini-top.g3{background:linear-gradient(150deg,#E5C06B,#C0306B)}
+  .mini-tag{position:absolute;top:10px;left:10px;font-family:var(--deco);font-size:10px;font-weight:700;letter-spacing:1.5px;
+    text-transform:uppercase;padding:4px 10px;border-radius:3px;background:rgba(12,26,46,.72);color:var(--gold);
+    border:1px solid var(--line)}
+  .mini-body{padding:13px 16px 16px}
+  .mini-name{font-family:var(--display);font-size:17px;margin-bottom:5px;letter-spacing:.2px}
+  .mini-meta{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+  .mini-meta i{color:var(--pink-soft);font-size:14px}
+
+  .pills{display:flex;gap:10px;flex-wrap:wrap}
+  .pill{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;cursor:pointer;
+    padding:9px 16px;border-radius:4px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.03)}
+  .pill i{font-size:15px}
+  .pill.on{color:#0C1A2E;background:linear-gradient(100deg,var(--gold),var(--pink-soft));border-color:transparent;font-weight:700}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div><div class="brand-name">Miami<br>Companion</div><div class="brand-sub">City Guide</div></div>
+    </div>
+    <div class="loc"><i class="ti ti-map-pin"></i> Wynwood, Miami</div>
+    <nav class="nav">
+      <a class="active"><i class="ti ti-map-pin"></i> City Guide</a>
+      <a><i class="ti ti-cloud"></i> Weather</a>
+      <a><i class="ti ti-device-gamepad-2"></i> Games</a>
+    </nav>
+    <div class="driver">
+      <div class="av">A</div>
+      <div><div class="nm">Abdullah</div><div class="rl">Your driver · handyman</div></div>
+    </div>
+    <div class="langs">
+      <button class="on">🇺🇸 EN</button><button>🇪🇸 ES</button>
+      <button>🇧🇷 PT</button><button>🇫🇷 FR</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="top">
+      <div>
+        <div class="hello">Good evening — <b>welcome aboard</b></div>
+        <div class="hello-sub"><i class="ti ti-current-location"></i> Showing places nearest to you right now</div>
+      </div>
+      <div class="top-actions">
+        <div class="wx"><i class="ti ti-sun-high"></i><div class="t">84°</div></div>
+        <div class="phone"><i class="ti ti-qrcode"></i> Open on your phone</div>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <section class="hero">
+        <div class="hero-photo">
+          <div class="badge"><i class="ti ti-star-filled"></i> Local Favorite</div>
+          <img src="../public/images/venues/mandolin.png" alt="Mandolin">
+        </div>
+        <div class="hero-body">
+          <div class="eyebrow">Aegean · Design District</div>
+          <div class="hero-name">Mandolin Aegean Bistro</div>
+          <div class="hero-meta">
+            <span><i class="ti ti-walk"></i> 6 min away</span>
+            <span><i class="ti ti-star"></i> 4.7</span>
+            <span><i class="ti ti-currency-dollar"></i> $$$</span>
+          </div>
+          <div class="hero-desc">Greek & Turkish coastal cooking in a whitewashed garden — the closest thing to the Aegean in Miami.</div>
+          <div class="hero-cta">See it & get directions <i class="ti ti-arrow-right"></i></div>
+        </div>
+      </section>
+
+      <div class="sec-head">
+        <div class="sec-title">More near you</div>
+        <div class="sec-link">See all <i class="ti ti-arrow-right"></i></div>
+      </div>
+      <div class="minis">
+        <div class="mini">
+          <div class="mini-top g1">🎨<span class="mini-tag">Street Art</span></div>
+          <div class="mini-body"><div class="mini-name">Wynwood Walls</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 3 min · Wynwood</div></div>
+        </div>
+        <div class="mini">
+          <div class="mini-top g2">🍽️<span class="mini-tag">Cuban</span></div>
+          <div class="mini-body"><div class="mini-name">Versailles</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 12 min · Little Havana</div></div>
+        </div>
+        <div class="mini">
+          <div class="mini-top g3">🍸<span class="mini-tag">Sponsored</span></div>
+          <div class="mini-body"><div class="mini-name">Gramps</div>
+            <div class="mini-meta"><i class="ti ti-walk"></i> 4 min · Wynwood</div></div>
+        </div>
+      </div>
+
+      <div class="pills">
+        <div class="pill on"><i class="ti ti-sparkles"></i> All places</div>
+        <div class="pill"><i class="ti ti-tools-kitchen-2"></i> Food</div>
+        <div class="pill"><i class="ti ti-camera"></i> Attractions</div>
+        <div class="pill"><i class="ti ti-heart"></i> Local picks</div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

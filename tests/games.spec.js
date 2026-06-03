@@ -67,4 +67,42 @@ test.describe('Game translations', { tag: ['@games', '@i18n'] }, () => {
     const expected = await page.evaluate(() => `💡 ${imgCurrent.hint.fr}`);
     expect(hint).toBe(expected);
   });
+
+  test('tic-tac-toe turn hint + win banner re-render on language switch', async ({ page }) => {
+    await page.locator('#nav-games').click();
+    await page.evaluate(() => { openGame('ttt'); tttStart(); });
+    // Mid-round: the active player's turn hint is localized.
+    await page.evaluate(() => setLang('es'));
+    const turn = await page.locator('#ttt-p1-turn').textContent();
+    expect(turn).toBe(await page.evaluate(() => GAME_UI.tttYourTurn.es));
+    // Finish a win, then switch language — the banner must follow.
+    await page.evaluate(() => { tttMove(0); tttMove(3); tttMove(1); tttMove(4); tttMove(2); });
+    await page.evaluate(() => setLang('fr'));
+    const banner = await page.locator('#ttt-banner .ttt-banner-title').textContent();
+    const expected = await page.evaluate(() => GAME_UI.tttWinMsg.fr.replace('{p}', GAME_UI.tttP1.fr));
+    expect(banner).toBe(expected);
+  });
+
+  test('tap duel win banner re-renders on language switch', async ({ page }) => {
+    await page.locator('#nav-games').click();
+    // Start, kill the random timer, force green, then a win — all deterministic.
+    await page.evaluate(() => { openGame('duel'); duelStart(); clearDuelTimer(); duelGo(); duelTap(0); });
+    await page.evaluate(() => setLang('es'));
+    const banner = await page.locator('#duel-banner .duel-banner-title').textContent();
+    const expected = await page.evaluate(() => GAME_UI.duelWinMsg.es.replace('{p}', GAME_UI.pgP1.es));
+    expect(banner).toBe(expected);
+  });
+
+  test('trivia buzzer question + feedback re-render on language switch', async ({ page }) => {
+    await page.locator('#nav-games').click();
+    // Freeze the answer countdown so it can't fire across the awaits below.
+    await page.evaluate(() => { openGame('buzzer'); buzzStart(); buzzIn(0); clearBuzzTimer(); }); // P1 is answering
+    await page.evaluate(() => setLang('pt'));
+    const q = await page.locator('#buzz-question').textContent();
+    const expectedQ = await page.evaluate(() => `1. ${TRIVIA_QUESTIONS[0].q.pt}`);
+    expect(q).toBe(expectedQ);
+    const fb = await page.locator('#buzz-feedback').textContent();
+    const expectedFb = await page.evaluate(() => GAME_UI.buzzYourAnswer.pt.replace('{p}', GAME_UI.pgP1.pt));
+    expect(fb).toBe(expectedFb);
+  });
 });

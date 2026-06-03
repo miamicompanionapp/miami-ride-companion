@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-Tac-Toe — Mocks for Abdullah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+  :root{
+    --navy-deep:#0F2137; --navy-mid:#1B3A5C;
+    --teal:#0B9EA6; --teal-light:#7CC8CD; --teal-mist:#E3F4F4; --teal-border:#B5E0E0;
+    --gold:#C9A84C; --gold-light:#FBF4E6; --gold-border:#E8D9A0;
+    --bg:#F7F9FB; --border:#D8E3EE; --muted:#7A8FA6; --heading:#0F2137;
+    --font-body:'DM Sans',sans-serif; --font-display:'Playfair Display',serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#21303f;font-family:var(--font-body);color:var(--heading);padding:32px 20px 80px;}
+  .pagehead{max-width:1080px;margin:0 auto 26px;color:#fff;}
+  .pagehead h1{font-family:var(--font-display);font-weight:600;font-size:26px;margin-bottom:6px;}
+  .pagehead p{font-size:13px;color:#aebccb;line-height:1.6;max-width:760px}
+  .pagehead code{background:rgba(255,255,255,.1);padding:1px 6px;border-radius:5px;font-size:12px}
+
+  .frame-label{max-width:1024px;margin:38px auto 10px;color:#cfe4e6;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+  .frame-label .n{background:var(--teal);color:#fff;width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px}
+  .frame-note{max-width:1024px;margin:0 auto 12px;color:#9fb0c0;font-size:12px;line-height:1.6}
+
+  /* tablet kiosk frame */
+  .kiosk{max-width:1024px;margin:0 auto;background:var(--bg);border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid #33404f;height:660px;display:flex}
+
+  /* sidebar (trimmed, just for context) */
+  .sidebar{width:200px;background:var(--navy-deep);color:#fff;flex-shrink:0;display:flex;flex-direction:column;padding:18px 14px}
+  .sb-brand{font-family:var(--font-display);font-size:18px;font-weight:600;line-height:1.2}
+  .sb-sub{font-size:11px;color:#7e93a8;margin-top:2px;margin-bottom:20px}
+  .sb-nav{display:flex;flex-direction:column;gap:3px}
+  .sb-item{display:flex;align-items:center;gap:10px;padding:10px 11px;border-radius:9px;font-size:13px;color:#b9c7d6;font-weight:500}
+  .sb-item i{font-size:17px}
+  .sb-item.active{background:rgba(255,255,255,.07);color:#fff}
+  .sb-item.active .ind{width:3px;height:20px;background:var(--teal);border-radius:2px;margin-left:auto}
+  .sb-spacer{flex:1}
+  .sb-rest{display:flex;align-items:center;gap:8px;padding:10px 11px;border-radius:9px;font-size:12px;color:#8da0b3;border:1px solid rgba(255,255,255,.08)}
+
+  .main{flex:1;overflow-y:auto}
+  .pad{padding:22px 26px}
+
+  /* games header */
+  .g-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
+  .g-title{font-family:var(--font-display);font-size:26px;font-weight:600}
+  .g-sub{font-size:13px;color:var(--muted);margin-top:2px}
+  .pill-best{display:flex;align-items:center;gap:6px;background:var(--gold-light);border:1px solid var(--gold-border);color:#7A5500;padding:7px 13px;border-radius:20px;font-size:12px;font-weight:600}
+  .pill-best i{font-size:14px;color:var(--gold)}
+
+  /* category section */
+  .cat-eyebrow{display:flex;align-items:center;gap:8px;margin:20px 0 12px}
+  .cat-eyebrow .bar{width:4px;height:18px;border-radius:2px}
+  .cat-eyebrow .bar.solo{background:var(--teal)}
+  .cat-eyebrow .bar.together{background:var(--gold)}
+  .cat-eyebrow .lbl{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--heading)}
+  .cat-eyebrow .hint{font-size:12px;color:var(--muted);font-weight:500}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+  .card{background:#fff;border:.5px solid var(--border);border-radius:13px;padding:13px 14px;display:flex;flex-direction:column;cursor:pointer;position:relative;min-height:128px;transition:border-color .15s,transform .15s}
+  .card:hover{border-color:var(--teal);transform:translateY(-2px)}
+  .card.tap{border-top:3px solid var(--teal)} .card.word{border-top:3px solid var(--navy-mid)}
+  .card.spin{border-top:3px solid var(--gold)} .card.image{border-top:3px solid #7C3AED}
+  .card.ttt{border-top:3px solid var(--teal)} .card.duel{border-top:3px solid #E0794B}
+  .card.buzzer{border-top:3px solid #7C3AED}
+  .card-icon{font-size:26px;margin-bottom:6px}
+  .card-title{font-size:13px;font-weight:600;color:var(--heading);margin-bottom:3px}
+  .card-desc{font-size:11px;color:var(--muted);line-height:1.45;flex:1}
+  .card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:9px}
+  .pcount{display:inline-flex;align-items:center;gap:4px;background:var(--teal-mist);color:#0B6E72;border:1px solid var(--teal-border);padding:3px 8px;border-radius:14px;font-size:10px;font-weight:700}
+  .pcount.solo{background:#EEF2F6;color:#5B7188;border-color:#D8E3EE}
+  .pcount i{font-size:11px}
+  .arrow{width:24px;height:24px;background:var(--teal-mist);border-radius:7px;display:flex;align-items:center;justify-content:center}
+  .arrow i{font-size:13px;color:var(--teal)}
+  .badge-new{position:absolute;top:10px;right:10px;background:var(--gold);color:#fff;font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;letter-spacing:.05em}
+
+  /* ===== game screen shell ===== */
+  .gs{display:flex;flex-direction:column;height:100%;background:var(--bg)}
+  .gs-head{background:var(--navy-deep);padding:13px 22px;display:flex;align-items:center;gap:13px;flex-shrink:0}
+  .gs-back{background:rgba(255,255,255,.1);border:none;border-radius:8px;width:34px;height:34px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px}
+  .gs-title{font-family:var(--font-display);font-size:18px;color:#fff;font-weight:500;flex:1}
+  .gs-restart{background:rgba(255,255,255,.1);border:none;color:#fff;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;font-family:var(--font-body)}
+  .gs-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;gap:18px}
+
+  /* ===== player-count picker ===== */
+  .pick-wrap{text-align:center;max-width:560px}
+  .pick-h{font-family:var(--font-display);font-size:30px;font-weight:600;margin-bottom:6px}
+  .pick-sub{font-size:14px;color:var(--muted);margin-bottom:26px}
+  .pick-row{display:flex;gap:16px;justify-content:center}
+  .pick-opt{width:150px;height:170px;background:#fff;border:2px solid var(--border);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:.15s}
+  .pick-opt:hover{border-color:var(--teal);transform:translateY(-3px)}
+  .pick-opt.sel{border-color:var(--teal);background:var(--teal-mist)}
+  .pick-opt .num{font-family:var(--font-display);font-size:46px;font-weight:700;color:var(--navy-deep)}
+  .pick-opt .faces{font-size:26px}
+  .pick-opt .cap{font-size:12px;font-weight:600;color:var(--muted)}
+  .pick-opt.disabled{opacity:.4;cursor:not-allowed}
+
+  /* ===== scoreboard / turn bar ===== */
+  .turnbar{display:flex;gap:12px;width:100%;max-width:520px}
+  .pscore{flex:1;background:#fff;border:2px solid var(--border);border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:11px;transition:.2s}
+  .pscore.p1.active{border-color:var(--teal);background:var(--teal-mist);box-shadow:0 4px 14px rgba(11,158,166,.18)}
+  .pscore.p2.active{border-color:var(--gold);background:var(--gold-light);box-shadow:0 4px 14px rgba(201,168,76,.18)}
+  .pscore .mark{font-family:var(--font-display);font-weight:700;font-size:30px;width:42px;text-align:center}
+  .pscore.p1 .mark{color:var(--teal)} .pscore.p2 .mark{color:var(--gold)}
+  .pscore .who{font-size:13px;font-weight:700;color:var(--heading)}
+  .pscore .turn{font-size:11px;color:var(--muted);font-weight:600}
+  .pscore .wins{margin-left:auto;font-size:11px;color:var(--muted);font-weight:600;text-align:right}
+  .pscore .wins b{display:block;font-size:18px;color:var(--heading)}
+
+  /* ===== board variant A (light) ===== */
+  .boardA{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:10px;width:330px;height:330px;background:var(--teal-border);border-radius:18px;padding:10px}
+  .boardA .cell{background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:64px;cursor:pointer;transition:.12s}
+  .boardA .cell:hover{background:var(--teal-mist)}
+  .boardA .cell.x{color:var(--teal)} .boardA .cell.o{color:var(--gold)}
+  .boardA .cell.win{background:#E8F8F0}
+
+  /* ===== board variant B (navy) ===== */
+  .boardB{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:0;width:330px;height:330px;background:var(--navy-deep);border-radius:18px;padding:14px;position:relative}
+  .boardB .cell{display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:64px;color:#fff;cursor:pointer;border:1px solid rgba(255,255,255,.12)}
+  .boardB .cell:nth-child(-n+3){border-top:none} .boardB .cell:nth-child(3n+1){border-left:none}
+  .boardB .cell:nth-child(3n){border-right:none} .boardB .cell:nth-child(n+7){border-bottom:none}
+  .boardB .cell.x{color:var(--teal-light)} .boardB .cell.o{color:var(--gold)}
+
+  .toast{background:var(--navy-deep);color:#fff;border-radius:12px;padding:12px 22px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:9px}
+  .toast i{font-size:18px;color:var(--gold)}
+
+  /* win banner */
+  .winbanner{text-align:center}
+  .winbanner .crown{font-size:48px;margin-bottom:6px}
+  .winbanner .wt{font-family:var(--font-display);font-size:30px;font-weight:700}
+  .winbanner .wt.p1{color:var(--teal)} .winbanner .wt.p2{color:var(--gold)}
+  .winbanner .ws{font-size:13px;color:var(--muted);margin-top:4px}
+  .btn-again{margin-top:18px;background:var(--navy-deep);color:#fff;border:none;border-radius:12px;padding:13px 30px;font-family:var(--font-body);font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+
+  .two-up{max-width:1024px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .two-up .kiosk{height:560px}
+  @media(max-width:900px){.two-up{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="pagehead">
+  <h1>Tic-Tac-Toe — design mocks</h1>
+  <p>Backlog item <b>#30a</b>. Built with your real tokens (navy/teal/gold, DM Sans + Playfair, Tabler icons) so it looks like the live app. This is a static mock — root file, <b>not</b> in <code>public/</code>, so it won't deploy. Four frames below: the new categorized games page, the shared player-count picker, the live board (two visual variants side-by-side), and the win state.</p>
+</div>
+
+<!-- ============ FRAME 1 ============ -->
+<div class="frame-label"><span class="n">1</span> New games page — grouped “Solo” vs “Play together”</div>
+<div class="frame-note">Implements your #30 rules: category headers, a player-count badge on every tile (1 / 2 / 1–3), big touch targets. Tic-tac-toe gets a “NEW” flag and a <b>2</b> badge.</div>
+<div class="kiosk">
+  <div class="sidebar">
+    <div class="sb-brand">Miami Ride<br>Companion</div>
+    <div class="sb-sub">Your city guide</div>
+    <div class="sb-nav">
+      <div class="sb-item"><i class="ti ti-map-pin"></i> City Guide</div>
+      <div class="sb-item"><i class="ti ti-cloud"></i> Weather</div>
+      <div class="sb-item active"><i class="ti ti-device-gamepad-2"></i> Games <span class="ind"></span></div>
+      <div class="sb-item"><i class="ti ti-user"></i> Your Driver</div>
+    </div>
+    <div class="sb-spacer"></div>
+    <div class="sb-rest"><i class="ti ti-moon"></i> Rest screen</div>
+  </div>
+  <div class="main"><div class="pad">
+    <div class="g-head">
+      <div><div class="g-title">Games</div><div class="g-sub">Pick something to play — no internet needed</div></div>
+      <div class="pill-best"><i class="ti ti-trophy"></i> Best tap score: 47</div>
+    </div>
+
+    <div class="cat-eyebrow"><span class="bar solo"></span><span class="lbl">Solo</span><span class="hint">· play on your own</span></div>
+    <div class="grid">
+      <div class="card tap"><div class="card-icon">👆</div><div class="card-title">Tap Frenzy</div><div class="card-desc">How many taps in 10 seconds?</div><div class="card-foot"><span class="pcount solo"><i class="ti ti-user"></i>1</span><span class="arrow"><i class="ti ti-arrow-right"></i></span></div></div>
+      <div class="card word"><div class="card-icon">📝</div><div class="card-title">Word Puzzle</div><div class="card-desc">Guess the hidden Miami word.</div><div class="card-foot"><span class="pcount solo"><i class="ti ti-user"></i>1</span><span class="arrow"><i class="ti ti-arrow-right"></i></span></div></div>
+      <div class="card spin"><div class="card-icon">🌀</div><div class="card-title">Facts Spinner</div><div class="card-desc">Spin for surprising Miami facts.</div><div class="card-foot"><span class="pcount solo"><i class="ti ti-user"></i>1</span><span class="arrow"><i class="ti ti-arrow-right"></i></span></div></div>
+      <div class="card image"><div class="card-icon">🖼️</div><div class="card-title">Guess the Image</div><div class="card-desc">Name the world landmarks.</div><div class="card-foot"><span class="pcount solo"><i class="ti ti-user"></i>1</span><span class="arrow"><i class="ti ti-arrow-right"></i></span></div></div>
+    </div>
+
+    <div class="cat-eyebrow"><span class="bar together"></span><span class="lbl">Play together</span><span class="hint">· share the screen with friends</span></div>
+    <div class="grid">
+      <div class="card ttt"><div class="badge-new">NEW</div><div class="card-icon">⭕</div><div class="card-title">Tic-Tac-Toe</div><div class="card-desc">Classic 3-in-a-row. Pass &amp; play.</div><div class="card-foot"><span class="pcount"><i class="ti ti-users"></i>2</span><span class="arrow"><i class="ti ti-arrow-right"></i></span></div></div>
+      <div class="card duel"><div class="card-icon">⚡</div><div class="card-title">Tap Duel</div><div class="card-desc">Tap when it turns green. Soon.</div><div class="card-foot"><span class="pcount"><i class="ti ti-users"></i>2–3</span><span class="arrow"><i class="ti ti-arrow-right"></i></span></div></div>
+      <div class="card buzzer"><div class="card-icon">🧠</div><div class="card-title">Trivia Buzzer</div><div class="card-desc">First to buzz answers. Soon.</div><div class="card-foot"><span class="pcount"><i class="ti ti-users"></i>2–3</span><span class="arrow"><i class="ti ti-arrow-right"></i></span></div></div>
+      <div class="card" style="border-top:3px dashed var(--border);opacity:.55;justify-content:center;align-items:center;text-align:center"><div class="card-icon" style="opacity:.6">➕</div><div class="card-desc">More group games coming</div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ============ FRAME 2 ============ -->
+<div class="frame-label"><span class="n">2</span> Shared player-count picker (the reusable pre-game step)</div>
+<div class="frame-note">Tic-tac-toe is locked to <b>2</b> (turn-based boards don’t scale — your rule), so 1 &amp; 3 are dimmed and it auto-advances. The same component will offer real 1/2/3 choices for Tap Duel &amp; Trivia Buzzer.</div>
+<div class="kiosk">
+  <div class="sidebar">
+    <div class="sb-brand">Miami Ride<br>Companion</div><div class="sb-sub">Your city guide</div>
+    <div class="sb-nav"><div class="sb-item"><i class="ti ti-map-pin"></i> City Guide</div><div class="sb-item"><i class="ti ti-cloud"></i> Weather</div><div class="sb-item active"><i class="ti ti-device-gamepad-2"></i> Games <span class="ind"></span></div><div class="sb-item"><i class="ti ti-user"></i> Your Driver</div></div>
+    <div class="sb-spacer"></div><div class="sb-rest"><i class="ti ti-moon"></i> Rest screen</div>
+  </div>
+  <div class="main"><div class="gs">
+    <div class="gs-head"><button class="gs-back"><i class="ti ti-arrow-left"></i></button><div class="gs-title">Tic-Tac-Toe</div></div>
+    <div class="gs-body">
+      <div class="pick-wrap">
+        <div class="pick-h">How many players?</div>
+        <div class="pick-sub">You’ll share the screen — sit side by side</div>
+        <div class="pick-row">
+          <div class="pick-opt disabled"><div class="num">1</div><div class="faces">🙂</div><div class="cap">Needs 2</div></div>
+          <div class="pick-opt sel"><div class="num">2</div><div class="faces">🙂&nbsp;🙂</div><div class="cap">Pass &amp; play</div></div>
+          <div class="pick-opt disabled"><div class="num">3</div><div class="faces">🙂🙂🙂</div><div class="cap">Not for this game</div></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ============ FRAME 3 ============ -->
+<div class="frame-label"><span class="n">3</span> Live board — two visual variants (pick one)</div>
+<div class="frame-note">Mid-game. P1 = teal <b>X</b> (left), P2 = gold <b>O</b> (right) — same orientation, no rotation. The active player’s scoreboard glows. <b>Variant A</b> = light tiles (matches the airy card look). <b>Variant B</b> = navy board (more “game”, higher contrast). Running win tally on the right.</div>
+<div class="two-up">
+  <div class="kiosk">
+    <div class="main" style="width:100%"><div class="gs">
+      <div class="gs-head"><button class="gs-back"><i class="ti ti-arrow-left"></i></button><div class="gs-title">Tic-Tac-Toe · Variant A</div><button class="gs-restart"><i class="ti ti-refresh"></i> Restart</button></div>
+      <div class="gs-body">
+        <div class="turnbar">
+          <div class="pscore p1 active"><div class="mark">X</div><div><div class="who">Player 1</div><div class="turn">Your turn</div></div><div class="wins">wins<b>1</b></div></div>
+          <div class="pscore p2"><div class="mark">O</div><div><div class="who">Player 2</div><div class="turn">Waiting…</div></div><div class="wins">wins<b>0</b></div></div>
+        </div>
+        <div class="boardA">
+          <div class="cell x">X</div><div class="cell o">O</div><div class="cell x">X</div>
+          <div class="cell"></div><div class="cell x">X</div><div class="cell o">O</div>
+          <div class="cell o">O</div><div class="cell"></div><div class="cell"></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+  <div class="kiosk">
+    <div class="main" style="width:100%"><div class="gs">
+      <div class="gs-head"><button class="gs-back"><i class="ti ti-arrow-left"></i></button><div class="gs-title">Tic-Tac-Toe · Variant B</div><button class="gs-restart"><i class="ti ti-refresh"></i> Restart</button></div>
+      <div class="gs-body">
+        <div class="turnbar">
+          <div class="pscore p1"><div class="mark">X</div><div><div class="who">Player 1</div><div class="turn">Waiting…</div></div><div class="wins">wins<b>1</b></div></div>
+          <div class="pscore p2 active"><div class="mark">O</div><div><div class="who">Player 2</div><div class="turn">Your turn</div></div><div class="wins">wins<b>0</b></div></div>
+        </div>
+        <div class="boardB">
+          <div class="cell x">X</div><div class="cell o">O</div><div class="cell x">X</div>
+          <div class="cell"></div><div class="cell x">X</div><div class="cell o">O</div>
+          <div class="cell o">O</div><div class="cell"></div><div class="cell"></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</div>
+
+<!-- ============ FRAME 4 ============ -->
+<div class="frame-label"><span class="n">4</span> Win state</div>
+<div class="frame-note">Winning line highlighted, banner in the winner’s color, one-tap “Play again” keeps the running tally so friends play best-of.</div>
+<div class="kiosk">
+  <div class="sidebar">
+    <div class="sb-brand">Miami Ride<br>Companion</div><div class="sb-sub">Your city guide</div>
+    <div class="sb-nav"><div class="sb-item"><i class="ti ti-map-pin"></i> City Guide</div><div class="sb-item"><i class="ti ti-cloud"></i> Weather</div><div class="sb-item active"><i class="ti ti-device-gamepad-2"></i> Games <span class="ind"></span></div><div class="sb-item"><i class="ti ti-user"></i> Your Driver</div></div>
+    <div class="sb-spacer"></div><div class="sb-rest"><i class="ti ti-moon"></i> Rest screen</div>
+  </div>
+  <div class="main"><div class="gs">
+    <div class="gs-head"><button class="gs-back"><i class="ti ti-arrow-left"></i></button><div class="gs-title">Tic-Tac-Toe</div><button class="gs-restart"><i class="ti ti-refresh"></i> Restart</button></div>
+    <div class="gs-body">
+      <div class="turnbar">
+        <div class="pscore p1 active"><div class="mark">X</div><div><div class="who">Player 1</div><div class="turn">Winner! 🎉</div></div><div class="wins">wins<b>2</b></div></div>
+        <div class="pscore p2"><div class="mark">O</div><div><div class="who">Player 2</div><div class="turn">—</div></div><div class="wins">wins<b>0</b></div></div>
+      </div>
+      <div class="boardA">
+        <div class="cell x win">X</div><div class="cell o">O</div><div class="cell o">O</div>
+        <div class="cell x win">X</div><div class="cell o">O</div><div class="cell"></div>
+        <div class="cell x win">X</div><div class="cell"></div><div class="cell"></div>
+      </div>
+      <div class="winbanner">
+        <div class="wt p1">Player 1 wins!</div>
+        <div class="ws">Three X’s in a column</div>
+        <button class="btn-again"><i class="ti ti-player-play"></i> Play again</button>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+</body>
+</html>

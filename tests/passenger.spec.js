@@ -144,8 +144,8 @@ test.describe('Passenger app', { tag: ['@index'] }, () => {
     await page.evaluate(() => closeQR());
   });
 
-  // Each of the five games should open to its screen and close cleanly.
-  for (const game of ['trivia', 'tap', 'word', 'spin', 'image']) {
+  // Each game should open to its screen and close cleanly.
+  for (const game of ['trivia', 'tap', 'word', 'spin', 'image', 'ttt', 'duel', 'buzzer']) {
     test(`game "${game}" opens and closes`, { tag: ['@games', '@smoke'] }, async ({ page }) => {
       await page.locator('#nav-games').click();
       await page.evaluate((g) => openGame(g), game);
