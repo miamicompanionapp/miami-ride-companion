@@ -6,15 +6,26 @@ Owner: Abdullah
 
 WORKING POLICY
 --------------
-- DO NOT push to GitHub / origin/main. We're treating the local working tree as
-  staging and the tablet as prod. Pushing auto-deploys to Cloudflare Pages and
-  burns free-tier credits + Pages Function invocations.
-- All in-progress redesign work (Phases 1, 2a, 2b, 2c) is uncommitted on main on
-  purpose. We commit + push only when the full feature set is ready to land on
-  the tablet in one batch.
+- PUSH STATUS (updated 2026-06-03): the long "don't push" freeze is OVER. All the
+  previously-batched redesign work (Phases 1/2a/2b/2c, games, PWA icons, Deco Dusk
+  retheme, translations, event curation) is now COMMITTED + PUSHED to origin/main
+  and live on Cloudflare. The session "UNCOMMITTED / NOT pushed" headers further
+  down are HISTORICAL — treat them as "shipped", not pending.
+- Deploys are real now: every push to origin/main triggers Workers Builds →
+  `wrangler deploy` → live in ~30-60s. So push deliberately, bump the SW cache
+  version on any push that changes public/ assets, and prefer small reviewable
+  commits over giant batches. (Cost note — why the freeze existed: pushing burns
+  Cloudflare free-tier build/invocation credits, so don't push no-op commits.)
+- This is a WORKER project, NOT Pages: deploy = `wrangler deploy` (wrangler.jsonc
+  + src/index.js routes /api/* to the functions/api/* modules). `wrangler deploy`
+  IGNORES the Pages `functions/` auto-routing — src/index.js exists to replace it.
+- PROD SECRETS: ANTHROPIC_API_KEY + TICKETMASTER_KEY must be encrypted SECRETS in
+  the Worker's runtime "Variables and Secrets" (NOT plain-text vars — `wrangler
+  deploy` on push wipes those; NOT the Build tab — that's build-time only, the
+  runtime never sees it). See bug #20.
 - Local dev: static testing works with `python -m http.server 8000` inside
-  ./public, BUT RSS refetch and Claude auto-translate require Wrangler to
-  serve the Pages Functions. See "Wrangler setup" below.
+  ./public, BUT RSS refetch and Claude auto-translate require Wrangler (`npm run
+  dev`) to serve the /api/* routes with .dev.vars keys. See "Wrangler setup" below.
 
 
 PRIORITY ROADMAP (open items, ranked)  — set 2026-06-01
@@ -24,9 +35,11 @@ entry further down (search "[ ] N." or "[~] N."). This is a living ranking —
 re-order freely. [X] items are completed history, kept below for reference.
 
 TIER 1 — high impact / broken or blocking
-  1. #20  Ticketmaster + claude-proxy functions flaky in prod (BUG). Blocks the
-          content pipeline (auto-translate, TM fetch) and #24/#17. First step:
-          surface the real status+body in editor toasts.
+  1. #20  [X DONE 2026-06-03] Ticketmaster + claude-proxy prod failures — RESOLVED.
+          Root cause: prod secrets weren't set as encrypted Secrets (plain-text
+          vars get wiped by `wrangler deploy` on push; Build-tab vars are runtime-
+          invisible) + a trailing-whitespace paste broke the TM key (401). Fixed by
+          re-adding both as clean encrypted Secrets; verified survives git push.
   2. #28  Animated attract/idle screen. Your live finding: passengers don't
           engage. Highest-leverage feature — the rotating tappable attractor.
   3. #7   Test the full redesign on the real iPad. Tablet is prod and we're
@@ -37,8 +50,8 @@ TIER 2 — visible polish bugs passengers see
           on-device eyeball to tune.
   5. #36  Landing images blink on GPS re-render (BUG). Happens constantly in a
           moving car; cause already diagnosed (renderGuide rebuilds <img> DOM).
-  6. #33  "Nearest to you" subtitle misleading on the curated landing. ~10 min
-          copy/scope decision.
+  6. #33  [X DONE 2026-06-03] "Nearest to you" subtitle misleading on the curated
+          landing — gated the variant to the distance-sorted browse views.
 
 TIER 3 — engagement & UX enhancements
   7. #30  Multiplayer shared-screen games. Strong differentiator; larger effort;
@@ -560,14 +573,27 @@ NEW FROM Abdullah (2026-05-30) — BUGS + ENHANCEMENTS
           were already published in content.json (Balloon Museum, Kaseya tour).
           tests/passenger.spec.js "published events are all upcoming" now green.
 
-[ ] 20. Ticketmaster + Anthropic (claude-proxy) functions not always working.
-        - Intermittent failures on /api/ticketmaster-fetch and /api/claude-proxy
-          (auto-translate). Needs investigation — could be the Cloudflare
-          *Secrets* (ANTHROPIC_API_KEY / TICKETMASTER_KEY) not set on the
-          Production env (see DEPLOYED 2026-05-30 note: still pending), rate
-          limits, cold-start timeouts, or upstream 4xx/5xx not surfaced to the
-          editor. First step: add clear error reporting (status + body) to the
-          editor toasts so "not working" becomes a specific cause.
+[X] 20. Ticketmaster + Anthropic (claude-proxy) functions not always working.
+        RESOLVED 2026-06-03. It WAS the prod Secrets, two compounding causes:
+        - WRONG VAR TYPE / LOCATION: the keys were set as plain-text variables
+          (and/or under the Build tab). On a Worker, `wrangler deploy` (which runs
+          on every git push via Workers Builds) rebuilds bindings from
+          wrangler.jsonc and WIPES dashboard plain-text vars not declared there —
+          so the key vanished on push (worked only after a manual dashboard
+          deploy). Build-tab vars are build-time only; the runtime never sees them.
+          FIX: set ANTHROPIC_API_KEY + TICKETMASTER_KEY as encrypted SECRETS in the
+          Worker's runtime "Variables and Secrets" — Secrets persist across deploys.
+        - TICKETMASTER 401 (after the above): the pasted TM secret had trailing
+          whitespace/newline; URLSearchParams encoded it onto the key (%0A) → TM
+          rejected it. The same key value returned HTTP 200 locally, proving it was
+          a copy artifact, not a bad key. FIX: re-paste the 32-char Consumer Key
+          clean (no trailing newline).
+        - VERIFIED: Anthropic auto-translate works in prod; survives git push. TM
+          re-pasted clean. Final git-push survival confirmed by the #33 deploy
+          (commit 9705a73). Doc comments in functions/api/* + .dev.vars.example
+          updated to say "encrypted Secret in the Worker", not "Pages env vars".
+        - Original symptom (for reference): intermittent 500s on
+          /api/ticketmaster-fetch + /api/claude-proxy after pushes.
 
 --- ENHANCEMENTS ---
 [ ] 21. Optimize venue images (added 2026-05-30 after wiring venue photos).
@@ -897,16 +923,22 @@ NEW FROM Abdullah (2026-06-01) — BUGS + i18n + IMAGE UX
           editing index.html (games/inactivity, lines 2729+) and content.json
           (events deletion ~735) — disjoint regions, no collision.
 
-[ ] 33. "Nearest to you" rotating subtitle is misleading on the featured landing.
-        - The featured landing minis are HAND-PICKED (guide.featuredMiniIds), but
-          the rotating subtitle variant says "📍 Nearest to you · {neighborhood}"
-          (index.html getSubtitleVariants, ~line 1950), implying the shown cards
-          are GPS-nearest. They aren't.
-        - Two options (Abdullah to pick copy at build time): (a) REWORD to
-          something true regardless of sort order (e.g. "Handpicked Miami spots");
-          or (b) keep "Nearest to you" but only show it on the BROWSE list (which
-          IS distance-sorted) and drop it from the featured landing.
-        - Tiny change either way (~10 min); it's a copy/scope decision.
+[X] 33. "Nearest to you" rotating subtitle is misleading on the featured landing.
+        DONE 2026-06-03 (committed 9705a73, pushed). Chose option (b): SCOPE, not
+        reword — strings untouched.
+        - getSubtitleVariants() now includes the "📍 Nearest to you · {hood}"
+          variant only when currentFilter !== 'featured' (i.e. on the browse views,
+          which ARE distance-sorted, so the label is true). It's dropped from the
+          curated featured landing.
+        - updateLocationDisplay() likewise gates its GPS force-show
+          (setSubtitleVariant(0)) to non-featured filters, where that variant
+          actually exists.
+        - SW cache bumped v1.17.0 → v1.18.0. tests/index-units.spec.js subtitle
+          count test stays green (5 variants on the default landing: seatbelt,
+          tapHint, meetCrew, todaysPick, didYouKnow).
+        - Original problem (for reference): the featured landing minis are
+          HAND-PICKED (guide.featuredMiniIds), so "Nearest to you" falsely implied
+          the shown cards were GPS-nearest.
 
 [ ] 34. BUG: driver bio photo is cropped — shoulders cut off.
         - index.html:858 .dp-bio-photo img uses object-fit:cover; object-position:
@@ -1056,10 +1088,10 @@ KNOWN TRANSITIONAL STATE (not bugs)
   every event title/description). The only blank-translation objects left are
   ads.sponsored[0..1] headline/body — and their EN is empty too (unused slots),
   so there is nothing to translate. Enforced by tests/content.spec.js.
-- Service Worker cache version is 'miami-ride-v1.17.0' (bumped 2026-06-03 for the
-  PWA icons + Deco Dusk retheme; the v1.12.0→v1.17.0 bumps across sessions are
-  all UNCOMMITTED). Bump again before any further prod push so existing tablet
-  clients re-cache the new bundle.
+- Service Worker cache version is 'miami-ride-v1.18.0' (bumped 2026-06-03 for the
+  #33 subtitle fix; the prior v1.12.0→v1.17.0 bumps are all COMMITTED + PUSHED and
+  live now). Bump again before any further prod push that changes public/ so
+  existing tablet clients re-cache the new bundle.
 
 EVENT CARD POLISH — UNCOMMITTED (2026-05-30, after the 13ec4ba deploy):
   Driven by Abdullah reviewing live events. NOT yet pushed — needs a deploy

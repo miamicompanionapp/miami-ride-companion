@@ -1,5 +1,6 @@
 // functions/api/rss-fetch.js
-// Cloudflare Pages Function — fetches South Florida event RSS feeds server-side.
+// Cloudflare Worker route (functions/api/*, routed via src/index.js) — fetches
+// South Florida event RSS feeds server-side. (No API key needed — public feeds.)
 // The browser can't fetch these directly (CORS); this proxy runs at the edge.
 //
 // GET /api/rss-fetch  →  { events: [...], errors: [...] }

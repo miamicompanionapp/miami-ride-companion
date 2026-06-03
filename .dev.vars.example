@@ -10,8 +10,12 @@
 # into the Worker runtime, so /api/claude-proxy, /api/rss-fetch, and
 # /api/ticketmaster-fetch can reach their upstreams.
 #
-# For PRODUCTION, set the same vars in:
-#   Cloudflare Dashboard → Pages → your project → Settings → Environment Variables
+# For PRODUCTION, add the same keys as encrypted SECRETS in:
+#   Cloudflare Dashboard → your Worker → Settings → Variables and Secrets
+# Use Secret (encrypt), NOT a plain-text variable: `wrangler deploy` (which runs
+# on git push via Workers Builds) wipes plain vars that aren't in wrangler.jsonc,
+# but Secrets persist. The Build tab's variables are build-time only — the Worker
+# runtime never sees them, so the key would read as undefined there.
 
 ANTHROPIC_API_KEY=sk-ant-api03-replace-me
 TICKETMASTER_KEY=your-ticketmaster-consumer-key

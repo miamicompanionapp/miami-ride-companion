@@ -1,7 +1,11 @@
 // functions/api/claude-proxy.js
-// Cloudflare Pages Function — proxies Anthropic API calls server-side.
-// Keeps the API key out of the browser. Set ANTHROPIC_API_KEY in:
-//   Cloudflare Dashboard → Pages → your project → Settings → Environment Variables
+// Cloudflare Worker route (functions/api/*, routed via src/index.js) — proxies
+// Anthropic API calls server-side, keeping the API key out of the browser.
+// Set ANTHROPIC_API_KEY as an encrypted SECRET in:
+//   Cloudflare Dashboard → your Worker → Settings → Variables and Secrets
+// (Use a Secret, NOT a plain-text var — `wrangler deploy` on git push wipes
+//  plain vars not declared in wrangler.jsonc, but Secrets persist. The Build
+//  tab's variables are build-time only; the Worker never sees them.)
 
 const CORS_HEADERS = (origin) => ({
   'Access-Control-Allow-Origin': origin || '*',
@@ -48,7 +52,7 @@ export async function onRequestPost({ request, env }) {
     return new Response(
       JSON.stringify({
         error:
-          'ANTHROPIC_API_KEY is not set. Add it in Cloudflare Dashboard → Pages → your project → Settings → Environment Variables.',
+          'ANTHROPIC_API_KEY is not set. Add it as an encrypted Secret in Cloudflare Dashboard → your Worker → Settings → Variables and Secrets.',
       }),
       {
         status: 500,

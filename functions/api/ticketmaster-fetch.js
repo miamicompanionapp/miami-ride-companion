@@ -1,8 +1,12 @@
 // functions/api/ticketmaster-fetch.js
-// Cloudflare Pages Function — fetches upcoming South Florida events from the
-// Ticketmaster Discovery API server-side, so the API key stays out of the
-// browser. Set TICKETMASTER_KEY in:
-//   Cloudflare Dashboard → Pages → your project → Settings → Environment Variables
+// Cloudflare Worker route (functions/api/*, routed via src/index.js) — fetches
+// upcoming South Florida events from the Ticketmaster Discovery API server-side,
+// so the API key stays out of the browser.
+// Set TICKETMASTER_KEY as an encrypted SECRET in:
+//   Cloudflare Dashboard → your Worker → Settings → Variables and Secrets
+// (Use a Secret, NOT a plain-text var — `wrangler deploy` on git push wipes
+//  plain vars not declared in wrangler.jsonc, but Secrets persist. The Build
+//  tab's variables are build-time only; the Worker never sees them.)
 //
 // GET /api/ticketmaster-fetch  →  { events: [...], errors: [...] }
 // Each event matches the same shape as /api/rss-fetch:
@@ -47,7 +51,7 @@ export async function onRequestGet({ env }) {
     return json(
       {
         error:
-          'TICKETMASTER_KEY is not set. Add it in Cloudflare Dashboard → Pages → your project → Settings → Environment Variables (use your app\'s Consumer Key from developer.ticketmaster.com).',
+          'TICKETMASTER_KEY is not set. Add it as an encrypted Secret in Cloudflare Dashboard → your Worker → Settings → Variables and Secrets (use your app\'s Consumer Key from developer.ticketmaster.com).',
       },
       500
     );
