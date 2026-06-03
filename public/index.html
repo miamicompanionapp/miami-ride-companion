@@ -3393,7 +3393,8 @@ function duelRender() {
       else cls += ' dim';
     }
     z.className = cls;
-    z.onclick = () => duelTap(i);
+    z.addEventListener('pointerdown', (e) => { e.preventDefault(); duelTap(i); });
+    z.addEventListener('click', () => duelTap(i));
     z.innerHTML = '<div class="duel-zone-player">' + pgPlayer(i) + '</div>' +
       '<div class="duel-zone-state">' + state + '</div>' +
       '<div class="duel-zone-wins">' + gt('duelWinsLabel') + ' ' + duelWins[i] + '</div>';
@@ -3614,7 +3615,8 @@ function buzzRender() {
     btn.className = 'buzz-btn p' + (i + 1);
     btn.innerHTML = pgPlayer(i) + '<span class="buzz-btn-sub">' + gt(buzzLocked[i] ? 'buzzOut' : 'buzzTap') + '</span>';
     btn.disabled = buzzPhase !== 'buzzing' || buzzLocked[i];
-    btn.onclick = () => buzzIn(i);
+    btn.addEventListener('pointerdown', (e) => { e.preventDefault(); buzzIn(i); });
+    btn.addEventListener('click', () => buzzIn(i));
     bz.appendChild(btn);
   }
   // Next button (revealed only)
