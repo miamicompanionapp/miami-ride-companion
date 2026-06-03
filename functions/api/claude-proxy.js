@@ -11,7 +11,7 @@ const CORS_HEADERS = (origin) => ({
 
 function isAllowedOrigin(origin, env) {
   if (!origin) return true; // same-origin requests have no Origin header
-  if (origin.endsWith('.pages.dev')) return true;
+  if (origin.endsWith('.pages.dev') || origin.endsWith('.workers.dev')) return true;
   // Allow any loopback origin on any port — safe because loopback is
   // unreachable from outside the machine running Wrangler.
   try {
