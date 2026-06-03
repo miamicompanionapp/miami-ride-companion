@@ -2262,14 +2262,20 @@ const SUBTITLE_ROTATE_MS = 15000;
 
 function getSubtitleVariants() {
   const bubbleVisible = isBubbleVisible();
-  const variants = [
-    { icon: '📍', getText: () => {
+  const variants = [];
+  // #33: "Nearest to you" is only TRUE on the distance-sorted browse list. The
+  // featured landing is hand-picked (guide.featuredMiniIds), so showing it there
+  // falsely implies those cards are GPS-nearest — gate it to the browse views.
+  if (currentFilter !== 'featured') {
+    variants.push({ icon: '📍', getText: () => {
         const base = t('guide.nearestTo') || 'Nearest to you';
         return currentNeighborhood ? `${base} · ${currentNeighborhood}` : base;
-      } },
+      } });
+  }
+  variants.push(
     { icon: '🛟', getText: () => t('subtitle.seatbelt') },
     { icon: '💡', getText: () => t('subtitle.tapHint') },
-  ];
+  );
   if (bubbleVisible) {
     variants.push({ icon: '🐶', getText: () => t('subtitle.meetCrew') });
   }
@@ -2401,8 +2407,9 @@ function updateLocationDisplay() {
   const neighborhood = detectNeighborhood(userLat, userLng);
   document.getElementById('location-display').textContent = neighborhood || 'Miami, FL';
   currentNeighborhood = neighborhood || '';
-  // Force the "nearest" variant on so passenger sees the resolved neighborhood immediately
-  setSubtitleVariant(0);
+  // Force the "nearest" variant on so passenger sees the resolved neighborhood
+  // immediately — but only on the browse list, where that variant exists (#33).
+  if (currentFilter !== 'featured') setSubtitleVariant(0);
 }
 
 function detectNeighborhood(lat, lng) {
