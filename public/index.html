@@ -721,6 +721,73 @@
     .inactivity-cta:active { opacity: 0.85; }
     .inactivity-dismiss { font-size: 11px; color: #B0BCC8; cursor: pointer; }
 
+    /* ── Attractor / Idle Teaser Overlay ─────────────────────── */
+    .attractor-overlay {
+      position: fixed; inset: 0; z-index: 85;
+      background: rgba(8,15,26,0.84);
+      backdrop-filter: blur(8px);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 600ms ease;
+    }
+    .attractor-overlay.visible { opacity: 1; pointer-events: all; }
+    .attractor-card {
+      background: var(--card-solid);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 26px;
+      padding: 44px 40px 36px;
+      width: min(460px, 88vw);
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.08);
+      transition: opacity 350ms ease;
+    }
+    .attractor-card.fading { opacity: 0; }
+    .attractor-visual {
+      font-size: 62px; line-height: 1;
+      margin-bottom: 18px; min-height: 70px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    /* Game card two-player visual dots */
+    .att-players {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; font-size: 28px;
+    }
+    .att-p1 { color: var(--teal); font-weight: 700; }
+    .att-p2 { color: var(--gold); font-weight: 700; }
+    .att-vs  { font-size: 13px; font-weight: 700; color: var(--muted);
+               letter-spacing: 1px; text-transform: uppercase; }
+    /* Mini TTT grid */
+    .att-ttt {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 5px;
+      width: 84px; margin: 0 auto;
+    }
+    .att-ttt-cell {
+      width: 24px; height: 24px; border-radius: 5px;
+      background: rgba(255,255,255,0.06);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+    }
+    .attractor-headline {
+      font-family: var(--font-display); font-size: 26px;
+      color: var(--heading); font-weight: 500;
+      margin-bottom: 10px; line-height: 1.25;
+    }
+    .attractor-sub {
+      font-size: 14px; color: var(--muted); line-height: 1.55;
+    }
+    .attractor-hint {
+      margin-top: 30px; font-size: 11px;
+      color: rgba(255,255,255,0.22);
+      letter-spacing: 0.8px; text-transform: uppercase;
+    }
+    /* Gold accent bar at card top */
+    .attractor-card::before {
+      content: ''; display: block;
+      width: 40px; height: 2px; border-radius: 2px;
+      background: var(--gold); margin: 0 auto 22px;
+    }
+
     /* ── Thanks Screen ────────────────────────────────────────── */
     .thanks-screen {
       position: fixed; inset: 0; z-index: 95;
@@ -1885,6 +1952,16 @@
   </div>
 </div>
 
+<!-- ── Attractor Overlay ── -->
+<div class="attractor-overlay" id="attractor-overlay" onclick="onAttractorTap()">
+  <div class="attractor-card" id="attractor-card">
+    <div class="attractor-visual" id="attractor-visual">☀️</div>
+    <div class="attractor-headline" id="attractor-headline">Miami weather right now</div>
+    <div class="attractor-sub" id="attractor-sub">Tap to see the hourly forecast</div>
+  </div>
+  <div class="attractor-hint" id="attractor-hint">Tap anywhere to browse</div>
+</div>
+
 <!-- ── Inactivity Modal ── -->
 <div class="inactivity-overlay" id="inactivity-overlay" onclick="dismissInactivity()">
   <div class="inactivity-box" onclick="event.stopPropagation()">
@@ -1896,7 +1973,7 @@
         <circle class="countdown-track" cx="32" cy="32" r="28"/>
         <circle class="countdown-progress" id="countdown-ring" cx="32" cy="32" r="28" stroke-dashoffset="0"/>
       </svg>
-      <div class="countdown-num" id="countdown-num">15</div>
+      <div class="countdown-num" id="countdown-num">4</div>
     </div>
     <button class="inactivity-cta" onclick="dismissInactivity()">
       <i class="ti ti-hand-stop"></i>
@@ -1961,12 +2038,278 @@ let triviaScore = 0, triviaQ = 0, triviaAnswered = false;
 let wordCurrent = null, wordHinted = [];
 let tapCount = 0, tapRunning = false, tapInterval = null;
 
+// ════════════════════════════════════════════════════════════
+// ATTRACTOR — idle teaser overlay
+// ════════════════════════════════════════════════════════════
+let attractorActive    = false;
+let attractorCardTimer = null;   // interval: cycles cards every ATTRACTOR_CARD_MS
+let attractorDoneTimer = null;   // timeout: ends attractor after ATTRACTOR_DURATION_MS
+let currentAttractorCard = null;
+let attractorCycleNum  = 0;      // which cycle we're on → picks language card L0/L1/L2
+let attractorInCycle   = 0;      // position within current cycle (0=lang, 1..N=content)
+let attractorContentShuffled = [];
+
+const ATTRACTOR_DURATION_MS = 28000;  // 28s → ~4 cards at 7s each
+const ATTRACTOR_CARD_MS     = 7000;   // 7s per card
+
+function attractorDelayMs() {
+  return ((CONTENT && CONTENT.settings && CONTENT.settings.attractorDelay) || 30) * 1000;
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Pick the right language from an {en,es,pt,fr} card string (or return plain string)
+function aL(obj) {
+  if (typeof obj === 'string') return obj;
+  const l = lang || 'en';
+  return obj[l] || obj.en || '';
+}
+
+const ATTRACTOR_HINT = {
+  en: 'Tap anywhere to browse',
+  es: 'Toca en cualquier lugar para explorar',
+  pt: 'Toque em qualquer lugar para navegar',
+  fr: "Appuyez n'importe où pour naviguer",
+};
+
+const ATTRACTOR_SPOTIFY_FLASH = {
+  en: { headline: 'Tell your driver! 🎵', sub: "Just say the word — I've got Spotify!" },
+  es: { headline: '¡Díselo a tu conductor! 🎵', sub: '¡Solo dilo — tengo Spotify!' },
+  pt: { headline: 'Fale com seu motorista! 🎵', sub: 'É só falar — tenho Spotify!' },
+  fr: { headline: 'Dites-le à votre chauffeur! 🎵', sub: "Il suffit de le dire — j'ai Spotify!" },
+};
+
+// ── Language cards (always first in each cycle, rotating L0→L1→L2→L0) ──────
+const ATTRACTOR_LANG_CARDS = [
+  { id: 'lang_es', visual: '🇪🇸',
+    headline: 'También disponible en español',
+    sub: 'Toca aquí para cambiar el idioma',
+    action: () => setLang('es') },
+  { id: 'lang_pt', visual: '🇧🇷',
+    headline: 'Disponível em português',
+    sub: 'Toque aqui para mudar o idioma',
+    action: () => setLang('pt') },
+  { id: 'lang_fr', visual: '🇫🇷',
+    headline: 'Aussi disponible en français',
+    sub: 'Appuyez ici pour changer de langue',
+    action: () => setLang('fr') },
+];
+
+// ── Content card pool (rebuilt each cycle so live data is fresh) ─────────────
+function buildContentCards() {
+  // Weather: live temp per language
+  const w = CONTENT && CONTENT.weather;
+  let tempVal = null;
+  if (w && w.hourly && w.hourly.length) {
+    const currentHour = new Date().getHours().toString().padStart(2, '0') + ':00';
+    const slot = w.hourly.find(h => h.hour === currentHour) || w.hourly[0];
+    if (slot && slot.temp != null) tempVal = Math.round(slot.temp);
+  }
+  const weatherHeadline = tempVal != null ? {
+    en: `${tempVal}° in Miami right now`,
+    es: `${tempVal}° en Miami ahora mismo`,
+    pt: `${tempVal}° em Miami agora`,
+    fr: `${tempVal}° à Miami en ce moment`,
+  } : {
+    en: 'Miami weather right now',
+    es: 'El tiempo en Miami ahora',
+    pt: 'Clima em Miami agora',
+    fr: 'La météo à Miami en ce moment',
+  };
+
+  // Events: soonest upcoming — title already has {en,es,pt,fr}
+  const evts = CONTENT && CONTENT.guide && CONTENT.guide.events
+    ? upcomingEvents(CONTENT.guide.events) : [];
+  const nextEvt = evts[0];
+  const evtHeadline = nextEvt ? nextEvt.title : {
+    en: "See what's on in Miami", es: 'Ver eventos en Miami',
+    pt: 'Ver eventos em Miami',  fr: 'Voir les événements à Miami',
+  };
+  const evtSub = nextEvt ? (() => {
+    const d = parseLocalDate(nextEvt.date);
+    const v = nextEvt.venue;
+    return {
+      en: `${d.toLocaleDateString('en-US',  { weekday:'short', month:'short', day:'numeric' })} · ${v}`,
+      es: `${d.toLocaleDateString('es-MX',  { weekday:'short', month:'short', day:'numeric' })} · ${v}`,
+      pt: `${d.toLocaleDateString('pt-BR',  { weekday:'short', month:'short', day:'numeric' })} · ${v}`,
+      fr: `${d.toLocaleDateString('fr-FR',  { weekday:'short', month:'short', day:'numeric' })} · ${v}`,
+    };
+  })() : {
+    en: 'Live events, concerts & shows this week',
+    es: 'Eventos en vivo, conciertos y espectáculos esta semana',
+    pt: 'Eventos ao vivo, shows e espetáculos esta semana',
+    fr: 'Événements en direct, concerts et spectacles cette semaine',
+  };
+
+  return [
+    { id: 'food', visual: '🍽',
+      headline: { en: 'Best restaurants near you', es: 'Los mejores restaurantes cerca', pt: 'Melhores restaurantes perto de você', fr: 'Les meilleurs restaurants près de vous' },
+      sub:      { en: 'Cuban, Japanese, Aegean — your driver knows the spots', es: 'Cubano, japonés, egeo — tu conductor conoce los mejores', pt: 'Cubana, japonesa, egeia — seu motorista conhece os melhores', fr: 'Cubain, japonais, égéen — votre chauffeur connaît les meilleures adresses' },
+      action: () => { switchTab('guide'); setFilter('restaurant'); } },
+
+    { id: 'nightlife', visual: '🌃',
+      headline: { en: 'Miami nightlife', es: 'Vida nocturna en Miami', pt: 'Vida noturna em Miami', fr: 'La vie nocturne de Miami' },
+      sub:      { en: 'Bars, clubs & late-night spots — the night is still young', es: 'Bares, clubs y lugares nocturnos — la noche aún es joven', pt: 'Bares, baladas e locais noturnos — a noite ainda é jovem', fr: 'Bars, clubs et sorties nocturnes — la nuit est encore jeune' },
+      action: () => { switchTab('guide'); setFilter('nightlife'); } },
+
+    { id: 'attractions', visual: '🏛',
+      headline: { en: 'Top Miami attractions', es: 'Las mejores atracciones de Miami', pt: 'Principais atrações de Miami', fr: 'Les meilleures attractions de Miami' },
+      sub:      { en: 'Wynwood Walls, South Beach & more', es: 'Wynwood Walls, South Beach y más', pt: 'Wynwood Walls, South Beach e muito mais', fr: 'Wynwood Walls, South Beach et bien plus' },
+      action: () => { switchTab('guide'); setFilter('attraction'); } },
+
+    { id: 'gems', visual: '💎',
+      headline: { en: 'Local hidden gems', es: 'Joyas ocultas locales', pt: 'Joias escondidas locais', fr: 'Les trésors cachés locaux' },
+      sub:      { en: 'Places most tourists never find', es: 'Lugares que los turistas nunca descubren', pt: 'Lugares que a maioria dos turistas nunca encontra', fr: 'Des endroits que la plupart des touristes ne trouvent jamais' },
+      action: () => { switchTab('guide'); setFilter('gem'); } },
+
+    { id: 'events', visual: '🗓',
+      headline: evtHeadline,
+      sub:      evtSub,
+      action: () => { switchTab('guide'); setFilter('all'); } },
+
+    { id: 'weather', visual: '☀️',
+      headline: weatherHeadline,
+      sub:      { en: 'Tap to see the hourly & weekly forecast', es: 'Toca para ver el pronóstico por hora y semanal', pt: 'Toque para ver a previsão horária e semanal', fr: 'Appuyez pour voir les prévisions horaires et hebdomadaires' },
+      action: () => switchTab('weather') },
+
+    { id: 'trivia', visual: '🎮',
+      headline: { en: 'Play Miami Trivia', es: 'Juega trivia sobre Miami', pt: 'Jogue Trivia de Miami', fr: 'Jouez au Trivia de Miami' },
+      sub:      { en: 'How much do you really know about the Magic City?', es: '¿Cuánto sabes realmente sobre la Ciudad Mágica?', pt: 'O quanto você realmente sabe sobre a Cidade Mágica?', fr: 'Que savez-vous vraiment sur la Ville Magique?' },
+      action: () => openGame('trivia') },
+
+    { id: 'ttt',
+      visualHtml: `<div class="att-ttt">${['❌','','⭕','','❌','','⭕','','❌'].map(c=>`<div class="att-ttt-cell">${c}</div>`).join('')}</div>`,
+      headline: { en: 'Play Tic-Tac-Toe with your friend!', es: '¡Juega Tres en Raya con tu amigo!', pt: 'Jogue Jogo da Velha com seu amigo!', fr: 'Jouez au Morpion avec votre ami!' },
+      sub:      { en: "Who's the smarter one? Let the board decide 🤔", es: '¿Quién es el más listo? ¡Que el tablero decida! 🤔', pt: 'Quem é o mais inteligente? O tabuleiro vai decidir! 🤔', fr: 'Qui est le plus malin? Laissez le plateau décider! 🤔' },
+      action: () => openGame('ttt') },
+
+    { id: 'duel',
+      visualHtml: `<div class="att-players"><span class="att-p1">●</span><span class="att-vs">⚡ TAP ⚡</span><span class="att-p2">●</span></div>`,
+      headline: { en: "Tap Duel — who's faster?", es: 'Duelo de Taps — ¿quién es más rápido?', pt: 'Duelo de Tap — quem é mais rápido?', fr: 'Duel de Tap — qui est le plus rapide?' },
+      sub:      { en: 'See whose reflexes are the best! Ready… set… TAP! 👆', es: '¡Descubre quién tiene los mejores reflejos! ¡Listos… ya… TAP! 👆', pt: 'Veja quem tem os melhores reflexos! Prontos… vai… TAP! 👆', fr: 'Voyez qui a les meilleurs réflexes! Prêts… partez… TAP! 👆' },
+      action: () => openGame('duel') },
+
+    { id: 'buzzer',
+      visualHtml: `<div class="att-players"><span class="att-p1">P1</span><span style="font-size:36px">🔔</span><span class="att-p2">P2</span></div>`,
+      headline: { en: 'Trivia Buzzer — buzz in!', es: 'Buzzer de Trivia — ¡presiona!', pt: 'Buzzer de Trivia — aperte já!', fr: 'Buzzer Trivia — sonnez!' },
+      sub:      { en: 'Who knows the most useless facts? Find out! 🏆', es: '¿Quién sabe los datos más inútiles? ¡Descúbrelo! 🏆', pt: 'Quem sabe os fatos mais inúteis? Descubra! 🏆', fr: 'Qui connaît les faits les plus inutiles? Découvrez-le! 🏆' },
+      action: () => openGame('buzzer') },
+
+    { id: 'spotify', visual: '🎵',
+      headline: { en: 'Want to hear a song?', es: '¿Quieres escuchar una canción?', pt: 'Quer ouvir uma música?', fr: 'Vous voulez écouter une chanson?' },
+      sub:      { en: "Tell your driver — I have Spotify and I'm taking requests! 🎶", es: '¡Dile a tu conductor — tengo Spotify y acepto solicitudes! 🎶', pt: 'Fale com seu motorista — tenho Spotify e aceito pedidos! 🎶', fr: "Dites-le à votre chauffeur — j'ai Spotify et j'accepte les demandes! 🎶" },
+      action: 'spotify' },
+
+    { id: 'qr', visual: '📱',
+      headline: { en: 'Open this app on your phone', es: 'Abre esta app en tu teléfono', pt: 'Abra este app no seu celular', fr: 'Ouvrez cette appli sur votre téléphone' },
+      sub:      { en: 'Take the Miami guide with you after the ride', es: 'Llévate la guía de Miami después del viaje', pt: 'Leve o guia de Miami com você após a corrida', fr: 'Emportez le guide de Miami après votre trajet' },
+      action: () => openQR('app') },
+  ];
+}
+
+// ── Rotation: first card = language (cycles L0→L1→L2), rest = shuffled content
+function getNextAttractorCard() {
+  if (attractorInCycle === 0) {
+    attractorContentShuffled = shuffle(buildContentCards());
+  }
+  let card;
+  if (attractorInCycle === 0) {
+    card = ATTRACTOR_LANG_CARDS[attractorCycleNum % 3];
+  } else {
+    card = attractorContentShuffled[(attractorInCycle - 1) % attractorContentShuffled.length];
+  }
+  attractorInCycle++;
+  if (attractorInCycle > attractorContentShuffled.length) {
+    attractorInCycle = 0;
+    attractorCycleNum++;
+  }
+  return card;
+}
+
+function renderAttractorCard(card) {
+  currentAttractorCard = card;
+  const visualEl   = document.getElementById('attractor-visual');
+  const headlineEl = document.getElementById('attractor-headline');
+  const subEl      = document.getElementById('attractor-sub');
+  if (card.visualHtml) {
+    visualEl.innerHTML = card.visualHtml;
+  } else {
+    visualEl.textContent = card.visual || '';
+  }
+  headlineEl.textContent = aL(card.headline);
+  subEl.textContent      = aL(card.sub);
+}
+
+function cycleAttractorCard() {
+  const cardEl = document.getElementById('attractor-card');
+  cardEl.classList.add('fading');
+  setTimeout(() => {
+    renderAttractorCard(getNextAttractorCard());
+    cardEl.classList.remove('fading');
+  }, 380);
+}
+
+function showAttractor() {
+  if (restActive) return;
+  attractorActive = true;
+  document.getElementById('attractor-hint').textContent = aL(ATTRACTOR_HINT);
+  renderAttractorCard(getNextAttractorCard());
+  document.getElementById('attractor-overlay').classList.add('visible');
+  attractorCardTimer = setInterval(cycleAttractorCard, ATTRACTOR_CARD_MS);
+  // After ATTRACTOR_DURATION_MS, hand off to the "Still browsing?" modal
+  attractorDoneTimer = setTimeout(() => {
+    hideAttractor();
+    showInactivityModal();
+  }, ATTRACTOR_DURATION_MS);
+}
+
+function hideAttractor() {
+  attractorActive = false;
+  const el = document.getElementById('attractor-overlay');
+  if (el) el.classList.remove('visible');
+  clearInterval(attractorCardTimer);
+  clearTimeout(attractorDoneTimer);
+  attractorCardTimer = null;
+  attractorDoneTimer = null;
+  currentAttractorCard = null;
+}
+
+function onAttractorTap() {
+  const card = currentAttractorCard;
+  if (!card) { hideAttractor(); resetInactivity(); return; }
+
+  if (card.action === 'spotify') {
+    const flash = ATTRACTOR_SPOTIFY_FLASH[lang] || ATTRACTOR_SPOTIFY_FLASH.en;
+    document.getElementById('attractor-visual').textContent = '🎶';
+    document.getElementById('attractor-headline').textContent = flash.headline;
+    document.getElementById('attractor-sub').textContent = flash.sub;
+    clearInterval(attractorCardTimer);
+    clearTimeout(attractorDoneTimer);
+    currentAttractorCard = null;
+    logTap('attractor_spotify');
+    setTimeout(() => { hideAttractor(); resetInactivity(); }, 2000);
+    return;
+  }
+
+  hideAttractor();
+  logTap('attractor_' + card.id);
+  if (typeof card.action === 'function') card.action();
+  resetInactivity();
+}
+
 // Inactivity
 let inactivityTimer = null;
 let countdownTimer = null;
-let countdownVal = 15;
-const INACTIVITY_MS = 60000;  // 60 seconds
-const COUNTDOWN_S  = 15;
+let countdownVal = 10;
+const ATTRACTOR_MS = 30000;   // kept for reference; actual delay reads settings
+const COUNTDOWN_S  = 4;
 const THANKS_S     = 5;
 
 // Rest / blackout screen
@@ -4246,13 +4589,17 @@ function inactivityTapGuard(e) {
 }
 
 function resetInactivity() {
-  // While the rest screen is up, taps are handled by exitRest — don't let the
-  // global activity listeners restart the idle/reset flow underneath it.
+  // While the rest screen is up, taps are handled by exitRest.
   if (restActive) return;
+  // While the attractor is up, only onAttractorTap() dismisses it. The global
+  // mousedown listener fires before the overlay's click handler, so returning
+  // here keeps the overlay alive until the tap completes.
+  if (attractorActive) return;
   clearTimeout(inactivityTimer);
   clearInterval(countdownTimer);
   dismissInactivity(true);
-  inactivityTimer = setTimeout(showInactivityModal, INACTIVITY_MS);
+  hideAttractor();
+  inactivityTimer = setTimeout(showAttractor, attractorDelayMs());
 }
 
 function showInactivityModal() {

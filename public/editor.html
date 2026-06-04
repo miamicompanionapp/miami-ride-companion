@@ -512,10 +512,14 @@
         <div id="events-list">
           <div style="font-size:12px;color:var(--muted);padding:12px 0">Loading events…</div>
         </div>
+        <div style="display:flex;gap:6px;padding-top:10px;border-top:0.5px solid var(--border);margin-top:8px">
+          <button class="btn btn-ghost btn-sm" onclick="aiReviewAllEvents()"><i class="ti ti-brain"></i>AI Review all</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiTranslateAllEvents()"><i class="ti ti-language"></i>Translate missing</button>
+        </div>
       </div>
       <div class="info-box">
         <i class="ti ti-info-circle"></i>
-        <span><strong>Ticketmaster</strong> brings real dated Miami events (concerts, shows, sports) — best source. <strong>RSS</strong> (Eater) adds food/news links. Both append to the list without duplicates; review, delete what you don't want, auto-translate to ES/PT/FR, then Publish. Add free/local events (street festivals, etc.) manually below.</span>
+        <span><strong>Ticketmaster</strong> brings real dated Miami events (concerts, shows, sports) — best source. <strong>RSS</strong> adds more. Both append without duplicates. Use <strong>AI Review all</strong> to flag which events are worth keeping, then <strong>Translate missing</strong> to fill ES/PT/FR in one shot. Delete unwanted events, then Publish.</span>
       </div>
       <div class="card">
         <div class="card-header"><div><div class="card-title">Add Event Manually</div><div class="card-sub">If you know of an event not in the RSS feeds</div></div></div>
@@ -699,6 +703,13 @@
         </div>
       </div>
       <div class="card">
+        <div class="card-header"><div><div class="card-title">Attractor screen</div><div class="card-sub">How long the screen is idle before the rotating teaser cards appear — lower this for testing, keep at 30s for real rides</div></div></div>
+        <div class="field" style="max-width:260px">
+          <label>Attractor starts after (seconds)</label>
+          <input type="number" id="set-attractor-delay" min="5" max="120" step="5" placeholder="30" onchange="updateAttractorDelay(this.value)">
+        </div>
+      </div>
+      <div class="card">
         <div class="card-header"><div><div class="card-title">Claude AI Writing Assistant</div><div class="card-sub">Used for auto-translating descriptions</div></div></div>
         <div class="info-box">
           <i class="ti ti-info-circle"></i>
@@ -871,6 +882,7 @@ function renderAppSettings() {
   if (!CONTENT) return;
   const s = CONTENT.settings || {};
   document.getElementById('set-rest-minutes').value = s.restMinutes != null ? s.restMinutes : 5;
+  document.getElementById('set-attractor-delay').value = s.attractorDelay != null ? s.attractorDelay : 30;
 }
 
 function updateRestMinutes(val) {
@@ -882,6 +894,17 @@ function updateRestMinutes(val) {
   CONTENT.settings.restMinutes = n;
   document.getElementById('set-rest-minutes').value = n;
   showToast(`Rest screen auto-wakes after ${n} min — hit Publish to save`);
+}
+
+function updateAttractorDelay(val) {
+  if (!CONTENT) return;
+  CONTENT.settings = CONTENT.settings || {};
+  let n = parseInt(val, 10);
+  if (isNaN(n) || n < 5) n = 5;
+  if (n > 120) n = 120;
+  CONTENT.settings.attractorDelay = n;
+  document.getElementById('set-attractor-delay').value = n;
+  showToast(`Attractor starts after ${n}s — hit Publish to save`);
 }
 
 function updateLastPub() {
@@ -1063,6 +1086,10 @@ function switchAiLang(lang, btn) {
 // ══════════════════════════════════════════════════════
 // EVENTS
 // ══════════════════════════════════════════════════════
+
+// Session-only AI review results keyed by event id — never written to content.json
+const AI_REVIEW = {};
+
 function renderEventList() {
   if (!CONTENT) return;
   const list = document.getElementById('events-list');
@@ -1070,17 +1097,32 @@ function renderEventList() {
     list.innerHTML = '<div style="font-size:12px;color:var(--muted);padding:8px 0">No events. Add manually below or re-fetch RSS.</div>';
     return;
   }
-  list.innerHTML = CONTENT.guide.events.map(e => `
+  list.innerHTML = CONTENT.guide.events.map(e => {
+    const needsI18n = !e.title.es || !e.title.pt || !e.title.fr ||
+                      !e.description.es || !e.description.pt || !e.description.fr;
+    const rev = AI_REVIEW[e.id];
+    const revBadge = rev
+      ? rev.verdict === 'keep'
+        ? `<span style="font-size:10px;background:#16a34a22;color:#16a34a;border-radius:4px;padding:2px 6px">✓ Keep</span>`
+        : `<span style="font-size:10px;background:#d9770622;color:#d97706;border-radius:4px;padding:2px 6px">⚠ Skip</span>`
+      : '';
+    const i18nBadge = needsI18n
+      ? `<span style="font-size:10px;background:var(--teal-soft,#0b9ea622);color:var(--teal);border-radius:4px;padding:2px 6px">needs i18n</span>`
+      : '';
+    const skipReason = rev && rev.verdict === 'skip'
+      ? ` · <em style="color:var(--muted)">${rev.reason}</em>` : '';
+    return `
     <div class="event-row" style="margin-bottom:6px">
       <div class="er-info">
-        <div class="er-title">${e.title.en}</div>
-        <div class="er-meta">${fmtEventDate(e.date)} · ${e.venue}${e.free ? ' · Free' : (e.price ? ' · ' + e.price : '')}</div>
+        <div class="er-title" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap">${e.title.en}${revBadge}${i18nBadge}</div>
+        <div class="er-meta">${fmtEventDate(e.date)} · ${e.venue}${e.free ? ' · Free' : (e.price ? ' · ' + e.price : '')}${skipReason}</div>
       </div>
       <div style="display:flex;gap:6px;align-items:center">
         <button class="btn btn-ghost btn-sm" onclick="aiTranslateEventQuick('${e.id}')"><i class="ti ti-sparkles"></i>Translate</button>
         <button class="btn btn-danger btn-sm" onclick="deleteEvent('${e.id}')"><i class="ti ti-trash"></i></button>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function deleteEvent(id) {
@@ -1741,6 +1783,90 @@ English: "${v.description.en}"`
     showToast(`${v.name} translated ✓`);
   } catch (e) {
     showToast('Translation failed', 'error');
+  }
+}
+
+// ── Bulk: translate every event that's missing ES/PT/FR ────────────────────
+async function aiTranslateAllEvents() {
+  if (!CONTENT?.guide?.events?.length) return showToast('No events', 'error');
+  const missing = CONTENT.guide.events.filter(e =>
+    !e.title.es || !e.title.pt || !e.title.fr ||
+    !e.description.es || !e.description.pt || !e.description.fr
+  );
+  if (!missing.length) return showToast('All events already translated ✓');
+
+  showToast(`Translating ${missing.length} event${missing.length !== 1 ? 's' : ''}…`);
+  const payload = {};
+  missing.forEach(e => { payload[e.id] = { title_en: e.title.en, desc_en: e.description.en || '' }; });
+
+  try {
+    const result = await callClaude(
+`Translate these Miami events into Spanish (Latin American), Portuguese (Brazilian), and French.
+Return ONLY valid JSON — no markdown, no extra keys:
+{ "<id>": { "title_es":"...","title_pt":"...","title_fr":"...","desc_es":"...","desc_pt":"...","desc_fr":"..." }, ... }
+
+Events:
+${JSON.stringify(payload)}`, { maxTokens: 4000 });
+
+    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    let applied = 0;
+    missing.forEach(e => {
+      const t = parsed[e.id];
+      if (!t) return;
+      if (t.title_es) e.title.es = t.title_es;
+      if (t.title_pt) e.title.pt = t.title_pt;
+      if (t.title_fr) e.title.fr = t.title_fr;
+      if (t.desc_es) e.description.es = t.desc_es;
+      if (t.desc_pt) e.description.pt = t.desc_pt;
+      if (t.desc_fr) e.description.fr = t.desc_fr;
+      applied++;
+    });
+    renderEventList();
+    showToast(`${applied} event${applied !== 1 ? 's' : ''} translated ✓ — Save & Publish to persist`);
+  } catch(err) {
+    console.error('[translateAll]', err);
+    showToast('Translation failed — check API key', 'error');
+  }
+}
+
+// ── Bulk: ask Claude which fetched events are worth keeping ─────────────────
+async function aiReviewAllEvents() {
+  if (!CONTENT?.guide?.events?.length) return showToast('No events to review', 'error');
+  const events = CONTENT.guide.events;
+  showToast(`Reviewing ${events.length} events…`);
+
+  const payload = {};
+  events.forEach(e => {
+    payload[e.id] = {
+      title: e.title.en,
+      venue: e.venue || '',
+      date: e.date || '',
+      free: !!e.free,
+      desc: (e.description?.en || '').slice(0, 200)
+    };
+  });
+
+  try {
+    const result = await callClaude(
+`You are helping curate events for a Miami ride-share companion app. Passengers are tourists or locals on a short Lyft/Uber trip.
+
+For each event rate: "keep" (relevant, appealing, good for Miami visitors/locals) or "skip" (too niche, too far from Miami, low-interest for a general audience). Add one short reason, max 8 words.
+
+Return ONLY valid JSON — no markdown:
+{ "<id>": { "verdict": "keep"|"skip", "reason": "..." }, ... }
+
+Events:
+${JSON.stringify(payload)}`, { maxTokens: 1500 });
+
+    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    Object.assign(AI_REVIEW, parsed);
+    renderEventList();
+    const keeps = Object.values(parsed).filter(x => x.verdict === 'keep').length;
+    const skips = Object.values(parsed).filter(x => x.verdict === 'skip').length;
+    showToast(`AI Review: ${keeps} keep · ${skips} skip`);
+  } catch(err) {
+    console.error('[reviewAll]', err);
+    showToast('AI Review failed — check API key', 'error');
   }
 }
 

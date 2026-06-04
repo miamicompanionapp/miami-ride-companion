@@ -28,51 +28,25 @@ WORKING POLICY
   dev`) to serve the /api/* routes with .dev.vars keys. See "Wrangler setup" below.
 
 
-PRIORITY ROADMAP (open items, ranked)  — set 2026-06-01
--------------------------------------------------------
-Working order for the OPEN items. Full detail for each lives in its numbered
-entry further down (search "[ ] N." or "[~] N."). This is a living ranking —
-re-order freely. [X] items are completed history, kept below for reference.
+NEXT UP — open items, ranked  (updated 2026-06-03)
+---------------------------------------------------
+Full notes for each item live in the numbered entries below (search "[ ] N.").
+Re-order freely; mark [X] when done.
 
-TIER 1 — high impact / broken or blocking
-  1. #20  [X DONE 2026-06-03] Ticketmaster + claude-proxy prod failures — RESOLVED.
-          Root cause: prod secrets weren't set as encrypted Secrets (plain-text
-          vars get wiped by `wrangler deploy` on push; Build-tab vars are runtime-
-          invisible) + a trailing-whitespace paste broke the TM key (401). Fixed by
-          re-adding both as clean encrypted Secrets; verified survives git push.
-  2. #28  Animated attract/idle screen. Your live finding: passengers don't
-          engage. Highest-leverage feature — the rotating tappable attractor.
-  3. #7   Test the full redesign on the real iPad. Tablet is prod and we're
-          pushing live; the on-device reality check tests can't give.
-
-TIER 2 — visible polish bugs passengers see
-  4. #34  Driver bio photo cropped — shoulders cut (BUG). ~1-line CSS, needs an
-          on-device eyeball to tune.
-  5. #36  Landing images blink on GPS re-render (BUG). Happens constantly in a
-          moving car; cause already diagnosed (renderGuide rebuilds <img> DOM).
-  6. #33  [X DONE 2026-06-03] "Nearest to you" subtitle misleading on the curated
-          landing — gated the variant to the distance-sorted browse views.
-
-TIER 3 — engagement & UX enhancements
-  7. #30  Multiplayer shared-screen games. Strong differentiator; larger effort;
-          pairs with #28. [~] (a) tic-tac-toe + games-page categorization SHIPPED
-          2026-06-01; next: (b) Tap Duel, (c) Trivia Buzzer.
-  8. #35  Tap any photo to enlarge (shared lightbox).
-  9. #31  Consolidate secret-tap gestures into one hidden menu (+ offline
-          analytics peek).
- 10. #29  Finish games i18n (Word Puzzle + Tap Frenzy still EN). [~] partial.
-
-TIER 4 — editor/content tooling & smaller wins
- 11. #26  `featured` flag conflated with `sponsored` (BUG). Untangle before
-          reusing `featured`; relates to #25.
- 12. #24  "Translate all" button in the editor Events tab. Gated on #20.
- 13. #25  Editor UI to pick the 3 featured-landing minis (no more hand-editing).
- 14. #21  Optimize heavy venue images.
- 15. #22  Celsius support on the weather page.
- 16. #23  Passenger feedback function (needs a storage decision).
-
-TIER 5 — deferred / future
- 17. #17  Events auto-refresh via Cloudflare Cron. Only after #20 is trusted.
+  1. #28  [X DONE 2026-06-03] Attract/idle screen — shipped, see entry below
+  2. #7   Test the full redesign on the real iPad
+  3. #34  BUG: driver bio photo cropped (shoulders cut)
+  4. #36  BUG: landing images blink on every GPS re-render in a moving car
+  5. #30  Multiplayer games — Tap Duel (b) + Trivia Buzzer (c) next  [~done a]
+  6. #35  Tap any photo to enlarge (shared lightbox)
+  7. #31  Secret-tap hidden menu + offline analytics peek
+  8. #29  Finish games i18n — Word Puzzle + Tap Frenzy still EN  [~partial]
+  9. #26  BUG: `featured` flag conflated with `sponsored`
+ 10. #25  Editor UI to pick the 3 featured-landing mini cards
+ 11. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
+ 12. #22  Celsius support on weather page
+ 13. #23  Passenger feedback (storage decision needed)
+ 14. #17  Events auto-refresh via Cloudflare Cron (deferred — after #20 trusted ✓)
 
 
 TEST SUITE & TAGS (Playwright)  — expanded 2026-06-01
@@ -617,12 +591,19 @@ NEW FROM Abdullah (2026-05-30) — BUGS + ENHANCEMENTS
           it on the tablet) vs. a real endpoint (Worker -> somewhere). Keep it
           low-friction and respect the no-soliciting / no-tip-prompt rules.
 
-[ ] 24. "Translate all" button in the editor EVENTS tab.
-        - The Driver tab already has a one-click "Translate all" (item #2,
-          aiTranslateDriver). Add the equivalent for events: flatten every
-          event's EN title/description, send one proxied Claude call, write
-          ES/PT/FR back. Same flow: Translate all -> review -> Save & Publish.
-          (Depends on #20 — claude-proxy must be reliable in prod.)
+[X] 24. "Translate all" + "AI Review all" in the editor EVENTS tab. DONE 2026-06-03.
+        - "Translate missing" button: scans all events for empty es/pt/fr fields,
+          bundles them in ONE Claude call, writes translations back. Shows count:
+          "3 events translated ✓ — Save & Publish to persist". Skips events that
+          are already fully translated (zero wasted API tokens).
+        - "AI Review all" button: sends all events to Claude for keep/skip triage
+          with a one-line reason each. Results land as session-only badges on each
+          event row (green ✓ Keep / amber ⚠ Skip + reason in the meta line).
+          NOT stored in content.json — advisory only, clears on page reload.
+        - "needs i18n" badge on each event row when any es/pt/fr field is empty.
+        - Both buttons live at the bottom of the Events card, under the list.
+        - Info-box text updated to describe the new workflow.
+        - SW bumped v1.18.0 → v1.19.0.
 
 [ ] 25. Editor UI to pick the 3 featured-landing "minis".
         - Shipped 2026-05-30: guide.featuredMiniIds = [v011, v003, v022] curates
