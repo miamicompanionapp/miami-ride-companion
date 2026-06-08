@@ -50,6 +50,15 @@ test.describe('Content integrity', { tag: ['@index', '@content', '@i18n'] }, () 
     expect(gaps, `events missing translations:\n${gaps.join('\n')}`).toEqual([]);
   });
 
+  test('every event has a non-empty image URL', async ({ page }) => {
+    const missing = await page.evaluate(() => {
+      return (CONTENT.guide.events || [])
+        .filter(e => !e.image || !String(e.image).trim())
+        .map(e => e.id);
+    });
+    expect(missing, `events with no image:\n${missing.join('\n')}`).toEqual([]);
+  });
+
   test('every event card shows a badge (Free, a price, or "Price varies")', async ({ page }) => {
     // No card should be badge-less: free -> green Free, known price -> gold $N,
     // otherwise a neutral "Price varies" badge for ticketed events without a
