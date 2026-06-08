@@ -1641,8 +1641,8 @@
               </div>
               <div class="game-card tap" onclick="openGame('tap')">
                 <div class="game-card-icon">👆</div>
-                <div class="game-card-title">Tap Frenzy</div>
-                <div class="game-card-desc">How many taps in 10 seconds? Beat the high score.</div>
+                <div class="game-card-title" data-gkey="tapCardTitle">Tap Frenzy</div>
+                <div class="game-card-desc" data-gkey="tapCardDesc">How many taps in 10 seconds? Beat the high score.</div>
                 <div class="game-card-footer">
                   <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
@@ -1840,18 +1840,18 @@
 <div class="game-screen" id="game-tap">
   <div class="game-screen-header">
     <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
-    <div class="game-screen-title">👆 Tap Frenzy</div>
-    <div class="game-score-badge">Best: <span id="tap-best-display">0</span></div>
+    <div class="game-screen-title" data-gkey="tapScreenTitle">👆 Tap Frenzy</div>
+    <div class="game-score-badge"><span data-gkey="tapBestLabel">Best:</span> <span id="tap-best-display">0</span></div>
   </div>
   <div class="game-body">
     <div class="tap-center">
       <div class="tap-timer-display" id="tap-timer">10s</div>
       <button class="tap-circle" id="tap-circle" onclick="doTap()" disabled>
         <span class="tap-count-num" id="tap-count">0</span>
-        <span class="tap-count-lbl">TAP!</span>
+        <span class="tap-count-lbl" data-gkey="tapTapLabel">TAP!</span>
       </button>
-      <div class="tap-best-txt">Best: <span id="tap-best-txt">0</span> taps</div>
-      <button class="tap-start-btn" id="tap-start-btn" onclick="startTap()">Start!</button>
+      <div class="tap-best-txt" id="tap-best-row"><span data-gkey="tapBestLabel">Best:</span> <span id="tap-best-txt">0</span> <span data-gkey="tapTapsWord">taps</span></div>
+      <button class="tap-start-btn" id="tap-start-btn" onclick="startTap()" data-gkey="tapStartBtn">Start!</button>
       <div class="tap-result-txt" id="tap-result"></div>
     </div>
   </div>
@@ -2521,7 +2521,7 @@ document.addEventListener('DOMContentLoaded', () => {
   tapBest = parseInt(localStorage.getItem('tapBest') || '0');
   document.getElementById('tap-best-display').textContent = tapBest;
   document.getElementById('tap-best-txt').textContent = tapBest;
-  document.getElementById('high-score-display').textContent = `Best tap: ${tapBest}`;
+  document.getElementById('high-score-display').textContent = `${gt('tapBestLabel')} ${tapBest}`;
   document.getElementById('build-tag').textContent = `build ${APP_BUILD}`;
 });
 
@@ -3582,6 +3582,19 @@ const GAME_UI = {
   tttWinMsg:     { en:'{p} wins! 🎉', es:'¡{p} gana! 🎉', pt:'{p} venceu! 🎉', fr:'{p} gagne ! 🎉' },
   tttDrawMsg:    { en:"It's a draw 🤝", es:'Empate 🤝', pt:'Empate 🤝', fr:'Match nul 🤝' },
   tttPlayAgain:  { en:'Play again', es:'Jugar de nuevo', pt:'Jogar de novo', fr:'Rejouer' },
+  // Tap Frenzy (#29)
+  tapCardTitle:  { en:'Tap Frenzy', es:'Toca rápido', pt:'Toque frenético', fr:'Tap Frénésie' },
+  tapCardDesc:   { en:'How many taps in 10 seconds? Beat the high score.', es:'¿Cuántos toques en 10 segundos? ¡Bate el récord!', pt:'Quantos toques em 10 segundos? Bata o recorde!', fr:'Combien de taps en 10 secondes ? Battez le record !' },
+  tapScreenTitle:{ en:'👆 Tap Frenzy', es:'👆 Toca rápido', pt:'👆 Toque frenético', fr:'👆 Tap Frénésie' },
+  tapBestLabel:  { en:'Best:', es:'Récord:', pt:'Recorde:', fr:'Record :' },
+  tapTapsWord:   { en:'taps', es:'toques', pt:'toques', fr:'taps' },
+  tapStartBtn:   { en:'Start!', es:'¡Empezar!', pt:'Começar!', fr:'C\'est parti !' },
+  tapTapLabel:   { en:'TAP!', es:'¡TOCA!', pt:'TOQUE!', fr:'TAPEZ !' },
+  tapMsg0:       { en:'🔥 On fire!', es:'🔥 ¡Eres fuego!', pt:'🔥 Que ritmo!', fr:'🔥 En feu !' },
+  tapMsg1:       { en:'⚡ Lightning fingers!', es:'⚡ ¡Dedos de rayo!', pt:'⚡ Dedos velozes!', fr:'⚡ Doigts d\'éclair !' },
+  tapMsg2:       { en:'👏 Nice work!', es:'👏 ¡Buen trabajo!', pt:'👏 Bom trabalho!', fr:'👏 Bien joué !' },
+  tapMsg3:       { en:'🤩 Incredible!', es:'🤩 ¡Increíble!', pt:'🤩 Incrível!', fr:'🤩 Incroyable !' },
+  tapMsg4:       { en:'💪 Strong effort!', es:'💪 ¡Buen esfuerzo!', pt:'💪 Bom esforço!', fr:'💪 Bel effort !' },
   pressStart:   { en:'Press Start to begin!', es:'¡Pulsa Empezar para comenzar!', pt:'Pressione Começar para iniciar!', fr:'Appuyez sur Démarrer pour commencer !' },
   startTrivia:  { en:'Start Trivia ▶', es:'Empezar trivia ▶', pt:'Começar trivia ▶', fr:'Démarrer le quiz ▶' },
   correct:      { en:'✅ Correct! Great job!', es:'✅ ¡Correcto! ¡Bien hecho!', pt:'✅ Correto! Muito bem!', fr:'✅ Correct ! Bravo !' },
@@ -3642,6 +3655,9 @@ function refreshOpenGame() {
     renderTriviaQuestion();
   } else if (open.id === 'game-ttt') {
     tttRenderStrings();
+  } else if (open.id === 'game-tap') {
+    const hs = document.getElementById('high-score-display');
+    if (hs) hs.textContent = gt('tapBestLabel') + ' ' + (typeof tapBest === 'number' ? tapBest : 0);
   } else if (open.id === 'game-duel' && duelPhase !== 'idle') {
     duelRender();
   } else if (open.id === 'game-buzzer') {
@@ -4308,8 +4324,8 @@ function startTap() {
         document.getElementById('tap-best-txt').textContent = tapBest;
         document.getElementById('high-score-display').textContent = `${gt('bestTapScore')} ${tapBest}`;
       }
-      const msgs = ['🔥 On fire!','⚡ Lightning fingers!','👏 Nice work!','🤩 Incredible!','💪 Strong effort!'];
-      document.getElementById('tap-result').textContent = `${tapCount} taps! ${msgs[Math.floor(Math.random()*msgs.length)]}`;
+      const msgs = ['tapMsg0','tapMsg1','tapMsg2','tapMsg3','tapMsg4'];
+      document.getElementById('tap-result').textContent = `${tapCount} ${gt('tapTapsWord')}! ${gt(msgs[Math.floor(Math.random()*msgs.length)])}`;
       logTap('tap_score_' + tapCount);
     }
   }, 1000);
