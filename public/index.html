@@ -479,6 +479,7 @@
     .game-card.spin  { border-top: 3px solid var(--gold); }
     .game-card.image { border-top: 3px solid #7C3AED; }
     .game-card.ttt    { border-top: 3px solid var(--teal); }
+    .game-card.c4     { border-top: 3px solid #E05252; }
     .game-card.duel   { border-top: 3px solid #E0794B; }
     .game-card.buzzer { border-top: 3px solid #7C3AED; }
 
@@ -1401,6 +1402,35 @@
     .buzz-end-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--heading); }
     .buzz-end-line { font-size: 15px; color: var(--muted); }
 
+    /* ── Connect Four (#30d) ──────────────────────────────────── */
+    #game-c4 .game-body { align-items: center; justify-content: center; }
+    .c4-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 560px; }
+    .c4-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .c4-intro-icon { font-size: 46px; }
+    .c4-intro-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--heading); }
+    .c4-intro-sub { font-size: 13px; color: var(--muted); }
+
+    /* Score bar — identical to TTT's turn bar */
+    .c4-turnbar { display: flex; gap: 10px; width: 100%; }
+
+    /* Drop-column arrow row */
+    .c4-col-btns { display: grid; grid-template-columns: repeat(7, 1fr); width: 100%; gap: 4px; }
+    .c4-col-btn { background: transparent; border: none; padding: 4px 0; color: var(--muted); font-size: 18px; cursor: pointer; opacity: 0.5; transition: opacity 150ms; }
+    .c4-col-btn:not(:disabled):hover { opacity: 1; color: var(--heading); }
+    .c4-col-btn:disabled { opacity: 0.1; cursor: default; }
+    .c4-col-btn.p1-turn { color: var(--teal); opacity: 0.8; }
+    .c4-col-btn.p2-turn { color: var(--gold); opacity: 0.8; }
+
+    /* Grid */
+    .c4-board { display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(6, 1fr); gap: 5px; background: var(--navy-deep); border-radius: 14px; padding: 10px; width: 336px; height: 294px; }
+    .c4-cell { border-radius: 50%; background: rgba(255,255,255,0.07); transition: background 150ms; }
+    .c4-cell.p1 { background: var(--teal); }
+    .c4-cell.p2 { background: var(--gold); }
+    .c4-cell.win { box-shadow: 0 0 0 3px white; }
+
+    /* Banner */
+    .c4-banner { text-align: center; min-height: 56px; }
+
     @media (min-height: 600px) {
       .game-body { max-width: 740px; margin: 0 auto; width: 100%; gap: 22px; padding: 30px 24px; }
 
@@ -1468,6 +1498,11 @@
       .buzz-timer { font-size: 32px; }
       .buzz-btn { font-size: 22px; padding: 24px 12px; }
       .buzz-end-title { font-size: 28px; }
+
+      .c4-board { width: 414px; height: 360px; }
+      .c4-cell { width: 50px; height: 50px; }
+      .c4-intro-icon { font-size: 60px; }
+      .c4-intro-title { font-size: 32px; }
     }
   </style>
 </head>
@@ -1711,6 +1746,16 @@
                 <div class="game-card-desc" data-gkey="buzzerCardDesc">First to buzz answers. Race your friends.</div>
                 <div class="game-card-footer">
                   <span class="pcount"><i class="ti ti-users"></i>2–3</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card c4" onclick="openGame('c4')">
+                <div class="badge-new" data-gkey="badgeNew">NEW</div>
+                <div class="game-card-icon">🔴</div>
+                <div class="game-card-title" data-gkey="c4CardTitle">Connect Four</div>
+                <div class="game-card-desc" data-gkey="c4CardDesc">Drop discs to connect 4 in a row.</div>
+                <div class="game-card-footer">
+                  <span class="pcount"><i class="ti ti-users"></i>2</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
@@ -2051,6 +2096,68 @@
       <button class="pg-again" onclick="buzzPlayAgain()"><i class="ti ti-refresh"></i> <span data-gkey="pgPlayAgain">Play again</span></button>
     </div>
 
+  </div>
+</div>
+
+<!-- Connect Four (#30d, 2P shared-screen) -->
+<div class="game-screen" id="game-c4">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title" data-gkey="c4ScreenTitle">🔴 Connect Four</div>
+    <button class="gs-restart-hidden game-score-badge" id="c4-restart" onclick="c4NewRound();resetInactivity()" style="display:none;border:none;cursor:pointer">
+      <i class="ti ti-refresh"></i> <span data-gkey="tttRestart">Restart</span>
+    </button>
+  </div>
+  <div class="game-body">
+    <div class="c4-wrap">
+
+      <!-- Pre-game intro -->
+      <div class="c4-intro" id="c4-intro">
+        <div class="c4-intro-icon">🔴🟡</div>
+        <div class="c4-intro-title" data-gkey="c4CardTitle">Connect Four</div>
+        <div class="c4-intro-sub" data-gkey="c4IntroSub">Take turns dropping discs — 4 in a row wins.</div>
+        <div class="ttt-players-chip" style="margin-top:10px"><i class="ti ti-users"></i> <span data-gkey="tttPlayers">2 players · pass &amp; play</span></div>
+        <button class="ttt-start-btn" style="margin-top:8px" onclick="c4Start()"><i class="ti ti-player-play"></i> <span data-gkey="tttStartBtn">Start game</span></button>
+      </div>
+
+      <!-- Live game -->
+      <div class="c4-play" id="c4-play" style="display:none">
+        <!-- Score bar (reuses ttt-turnbar + ttt-pscore CSS) -->
+        <div class="ttt-turnbar c4-turnbar">
+          <div class="ttt-pscore p1" id="c4-p1">
+            <div class="ttt-mark" style="font-size:22px">🔴</div>
+            <div class="ttt-pinfo">
+              <div class="ttt-pwho" data-gkey="tttP1">Player 1</div>
+              <div class="ttt-pturn" id="c4-p1-turn"></div>
+            </div>
+            <div class="ttt-pwins"><span data-gkey="tttWins">wins</span><b id="c4-p1-wins">0</b></div>
+          </div>
+          <div class="ttt-pscore p2" id="c4-p2">
+            <div class="ttt-mark" style="font-size:22px">🟡</div>
+            <div class="ttt-pinfo">
+              <div class="ttt-pwho" data-gkey="tttP2">Player 2</div>
+              <div class="ttt-pturn" id="c4-p2-turn"></div>
+            </div>
+            <div class="ttt-pwins"><span data-gkey="tttWins">wins</span><b id="c4-p2-wins">0</b></div>
+          </div>
+        </div>
+        <!-- Column drop buttons -->
+        <div class="c4-col-btns" id="c4-col-btns">
+          <button class="c4-col-btn" onclick="c4Drop(0)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(1)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(2)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(3)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(4)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(5)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(6)"><i class="ti ti-arrow-down"></i></button>
+        </div>
+        <!-- Board -->
+        <div class="c4-board" id="c4-board"></div>
+        <!-- Banner -->
+        <div class="c4-banner" id="c4-banner"></div>
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -3582,6 +3689,11 @@ const GAME_UI = {
   tttWinMsg:     { en:'{p} wins! 🎉', es:'¡{p} gana! 🎉', pt:'{p} venceu! 🎉', fr:'{p} gagne ! 🎉' },
   tttDrawMsg:    { en:"It's a draw 🤝", es:'Empate 🤝', pt:'Empate 🤝', fr:'Match nul 🤝' },
   tttPlayAgain:  { en:'Play again', es:'Jugar de nuevo', pt:'Jogar de novo', fr:'Rejouer' },
+  // Connect Four (#30d)
+  c4CardTitle:  { en:'Connect Four', es:'Conecta Cuatro', pt:'Conecte Quatro', fr:'Puissance 4' },
+  c4CardDesc:   { en:'Drop discs to connect 4 in a row.', es:'Deja caer fichas para conectar 4 en fila.', pt:'Solte discos para conectar 4 em linha.', fr:'Faites tomber des jetons pour aligner 4 d\'affilée.' },
+  c4ScreenTitle:{ en:'🔴 Connect Four', es:'🔴 Conecta Cuatro', pt:'🔴 Conecte Quatro', fr:'🔴 Puissance 4' },
+  c4IntroSub:   { en:'Take turns dropping discs — 4 in a row wins.', es:'Túrnense para soltar fichas: 4 en fila gana.', pt:'Se revezem soltando discos — 4 em linha vence.', fr:'À tour de rôle, faites tomber un jeton — 4 alignés gagnent.' },
   // Tap Frenzy (#29)
   tapCardTitle:  { en:'Tap Frenzy', es:'Toca rápido', pt:'Toque frenético', fr:'Tap Frénésie' },
   tapCardDesc:   { en:'How many taps in 10 seconds? Beat the high score.', es:'¿Cuántos toques en 10 segundos? ¡Bate el récord!', pt:'Quantos toques em 10 segundos? Bata o recorde!', fr:'Combien de taps en 10 secondes ? Battez le record !' },
@@ -3655,6 +3767,8 @@ function refreshOpenGame() {
     renderTriviaQuestion();
   } else if (open.id === 'game-ttt') {
     tttRenderStrings();
+  } else if (open.id === 'game-c4' && !c4Over) {
+    c4RenderStrings();
   } else if (open.id === 'game-tap') {
     const hs = document.getElementById('high-score-display');
     if (hs) hs.textContent = gt('tapBestLabel') + ' ' + (typeof tapBest === 'number' ? tapBest : 0);
@@ -3677,6 +3791,7 @@ const GAMES = {
   spin:   { screen: 'game-spin',   reset: resetSpinGame },
   image:  { screen: 'game-image',  reset: initImage },
   ttt:    { screen: 'game-ttt',    reset: initTTT },
+  c4:     { screen: 'game-c4',     reset: initC4 },
   duel:   { screen: 'game-duel',   reset: initDuel },
   buzzer: { screen: 'game-buzzer', reset: initBuzzer },
 };
@@ -3850,6 +3965,146 @@ function pgSetCount(id, n) {
 // Localized player label, 0-indexed (P1/P2/P3). Shared by duel + buzzer.
 const PG_PKEY = ['pgP1', 'pgP2', 'pgP3'];
 const pgPlayer = (i) => gt(PG_PKEY[i]);
+
+// ── Connect Four (2P, #30d) ────────────────────────────────
+const C4_ROWS = 6, C4_COLS = 7;
+
+// Precompute all winning lines once (69 total: 24 horiz + 21 vert + 12 diag↘ + 12 diag↙)
+const C4_LINES = (() => {
+  const lines = [];
+  for (let r = 0; r < C4_ROWS; r++)
+    for (let c = 0; c <= C4_COLS - 4; c++)
+      lines.push([[r,c],[r,c+1],[r,c+2],[r,c+3]]);
+  for (let c = 0; c < C4_COLS; c++)
+    for (let r = 0; r <= C4_ROWS - 4; r++)
+      lines.push([[r,c],[r+1,c],[r+2,c],[r+3,c]]);
+  for (let r = 0; r <= C4_ROWS - 4; r++) {
+    for (let c = 0; c <= C4_COLS - 4; c++)
+      lines.push([[r,c],[r+1,c+1],[r+2,c+2],[r+3,c+3]]);
+    for (let c = 3; c < C4_COLS; c++)
+      lines.push([[r,c],[r+1,c-1],[r+2,c-2],[r+3,c-3]]);
+  }
+  return lines;
+})();
+
+let c4Board = null;   // [row][col] → 0 | 1 | 2
+let c4Turn = 1;
+let c4Starter = 1;    // who opens the next round (loser-goes-first)
+let c4Wins = { 1: 0, 2: 0 };
+let c4Over = false;
+let c4WinCells = null;
+
+function initC4() {
+  c4Wins = { 1: 0, 2: 0 };
+  c4Starter = 1;
+  c4Over = true;
+  document.getElementById('c4-p1-wins').textContent = '0';
+  document.getElementById('c4-p2-wins').textContent = '0';
+  document.getElementById('c4-intro').style.display = '';
+  document.getElementById('c4-play').style.display = 'none';
+  document.getElementById('c4-restart').style.display = 'none';
+}
+
+function c4Start() {
+  document.getElementById('c4-intro').style.display = 'none';
+  document.getElementById('c4-play').style.display = '';
+  document.getElementById('c4-restart').style.display = '';
+  c4NewRound();
+  logTap('game_c4_start');
+}
+
+function c4NewRound() {
+  c4Board = Array.from({ length: C4_ROWS }, () => Array(C4_COLS).fill(0));
+  c4Turn = c4Starter;
+  c4Over = false;
+  c4WinCells = null;
+  c4RenderBoard();
+  c4RenderStrings();
+}
+
+function c4Drop(col) {
+  if (c4Over) return;
+  let row = -1;
+  for (let r = C4_ROWS - 1; r >= 0; r--) {
+    if (c4Board[r][col] === 0) { row = r; break; }
+  }
+  if (row === -1) return; // column full
+  c4Board[row][col] = c4Turn;
+  resetInactivity();
+
+  const winLine = c4CheckWin(c4Turn);
+  if (winLine) {
+    c4Over = true;
+    c4WinCells = winLine;
+    c4Wins[c4Turn]++;
+    document.getElementById(`c4-p${c4Turn}-wins`).textContent = c4Wins[c4Turn];
+    c4Starter = c4Turn === 1 ? 2 : 1;  // loser opens next round
+    logTap('game_c4_win');
+  } else if (c4Board[0].every((_, c) => c4Board[0][c] !== 0)) {
+    c4Over = true;
+    c4Starter = c4Starter === 1 ? 2 : 1; // draw → alternate starter
+    logTap('game_c4_draw');
+  } else {
+    c4Turn = c4Turn === 1 ? 2 : 1;
+  }
+  c4RenderBoard();
+  c4RenderStrings();
+}
+
+function c4CheckWin(player) {
+  for (const line of C4_LINES) {
+    if (line.every(([r, c]) => c4Board[r][c] === player)) return line;
+  }
+  return null;
+}
+
+function c4RenderBoard() {
+  const board = document.getElementById('c4-board');
+  board.innerHTML = '';
+  const winSet = c4WinCells
+    ? new Set(c4WinCells.map(([r, c]) => r * C4_COLS + c)) : null;
+  for (let r = 0; r < C4_ROWS; r++) {
+    for (let c = 0; c < C4_COLS; c++) {
+      const cell = document.createElement('div');
+      const p = c4Board[r][c];
+      cell.className = 'c4-cell' +
+        (p === 1 ? ' p1' : p === 2 ? ' p2' : '') +
+        (winSet && winSet.has(r * C4_COLS + c) ? ' win' : '');
+      board.appendChild(cell);
+    }
+  }
+  const btnCls = c4Turn === 1 ? 'p1-turn' : 'p2-turn';
+  document.querySelectorAll('.c4-col-btn').forEach((btn, c) => {
+    btn.disabled = c4Over || c4Board[0][c] !== 0;
+    btn.className = 'c4-col-btn' + (c4Over ? '' : ' ' + btnCls);
+  });
+  const p1El = document.getElementById('c4-p1'), p2El = document.getElementById('c4-p2');
+  p1El.classList.toggle('active', !c4Over && c4Turn === 1);
+  p2El.classList.toggle('active', !c4Over && c4Turn === 2);
+}
+
+function c4RenderStrings() {
+  document.getElementById('c4-p1-turn').textContent =
+    (!c4Over && c4Turn === 1) ? gt('tttYourTurn') : (c4Over ? '' : gt('tttWaiting'));
+  document.getElementById('c4-p2-turn').textContent =
+    (!c4Over && c4Turn === 2) ? gt('tttYourTurn') : (c4Over ? '' : gt('tttWaiting'));
+  const banner = document.getElementById('c4-banner');
+  if (c4Over && c4WinCells) {
+    const pName = c4Turn === 1 ? gt('tttP1') : gt('tttP2');
+    const cls = c4Turn === 1 ? 'p1' : 'p2';
+    banner.innerHTML = `<div class="ttt-banner-title ${cls}">${gt('tttWinMsg').replace('{p}', pName)}</div>
+      <button class="ttt-again-btn" onclick="c4NewRound();resetInactivity()">
+        <i class="ti ti-refresh"></i> ${gt('tttPlayAgain')}
+      </button>`;
+  } else if (c4Over) {
+    banner.innerHTML = `<div class="ttt-banner-title draw">${gt('tttDrawMsg')}</div>
+      <button class="ttt-again-btn" onclick="c4NewRound();resetInactivity()">
+        <i class="ti ti-refresh"></i> ${gt('tttPlayAgain')}
+      </button>`;
+  } else {
+    banner.innerHTML = '';
+  }
+}
 
 // ── Tap Duel (reaction race, 2-3P, #30b) ──────────────────
 // Zones are columns (P1 left … P3 right), SAME orientation — riders sit

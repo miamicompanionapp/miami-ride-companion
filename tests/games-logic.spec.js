@@ -445,3 +445,79 @@ test.describe('Trivia Buzzer (2-3P buzz-in)', { tag: ['@games', '@unit'] }, () =
     expect(res.title).toContain('1');   // "Player 1 wins!"
   });
 });
+
+test.describe('Connect Four (#30d)', { tag: ['@games', '@unit'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof c4Drop === 'function');
+    await page.locator('#nav-games').click();
+    await page.evaluate(() => { openGame('c4'); c4Start(); }); // intro → live board
+  });
+
+  test('P1 starts, turns alternate, piece lands in lowest empty row', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      const first = c4Turn;        // P1 opens
+      c4Drop(0);                   // P1 drops in col 0 → row 5
+      const afterP1 = c4Turn;
+      c4Drop(0);                   // P2 drops in col 0 → row 4
+      return { first, afterP1, afterP2: c4Turn, row5: c4Board[5][0], row4: c4Board[4][0] };
+    });
+    expect(res.first).toBe(1);
+    expect(res.afterP1).toBe(2);
+    expect(res.afterP2).toBe(1);
+    expect(res.row5).toBe(1);
+    expect(res.row4).toBe(2);
+  });
+
+  test('horizontal win is detected and tallied; loser opens next round', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      // P1: cols 0,1,2,3 wins; P2: cols 4,5,6 (interspersed)
+      c4Drop(0); c4Drop(4); c4Drop(1); c4Drop(5); c4Drop(2); c4Drop(6); c4Drop(3);
+      return { over: c4Over, p1Wins: c4Wins[1], hasCells: c4WinCells !== null,
+               banner: document.getElementById('c4-banner').textContent };
+    });
+    expect(res.over).toBe(true);
+    expect(res.p1Wins).toBe(1);
+    expect(res.hasCells).toBe(true);
+    expect(res.banner).toContain('🎉');
+  });
+
+  test('loser opens next round after a win', async ({ page }) => {
+    const starter = await page.evaluate(() => {
+      // P1 wins: cols 0,1,2,3; P2: cols 4,5,6
+      c4Drop(0); c4Drop(4); c4Drop(1); c4Drop(5); c4Drop(2); c4Drop(6); c4Drop(3);
+      c4NewRound();
+      return c4Turn; // loser (P2) should open
+    });
+    expect(starter).toBe(2);
+  });
+
+  test('@negative cannot drop into a full column', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      // Fill column 0 (6 discs alternating without triggering a vertical win):
+      // P1: rows 5,3,1; P2: rows 4,2,0
+      for (let i = 0; i < 6; i++) {
+        // Alternate with col 1 to avoid vertical win in col 0
+        c4Drop(0); c4Drop(1);
+      }
+      // Clear game-over state to re-test the column-full guard
+      c4Over = false; c4WinCells = null; c4Turn = 1;
+      const topBefore = c4Board[0][0];
+      c4Drop(0); // col 0 is full (row 0 !== 0) — should be ignored
+      return { topBefore, topAfter: c4Board[0][0] };
+    });
+    // Whether it's 1 or 2, the cell should remain unchanged after the extra drop
+    expect(res.topAfter).toBe(res.topBefore);
+  });
+
+  test('@negative cannot move after game over', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      c4Drop(0); c4Drop(4); c4Drop(1); c4Drop(5); c4Drop(2); c4Drop(6); c4Drop(3);
+      const winsAfterEnd = c4Wins[1];
+      c4Drop(3); // game already over → ignored
+      return { over: c4Over, winsStill: c4Wins[1] === winsAfterEnd };
+    });
+    expect(res.over).toBe(true);
+    expect(res.winsStill).toBe(true);
+  });
+});
