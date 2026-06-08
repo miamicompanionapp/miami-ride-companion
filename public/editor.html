@@ -2524,7 +2524,7 @@ function downloadOfflineTiles() {
 }
 
 async function clearOfflineTiles() {
-  if (!confirm('Clear all cached map tiles? You'll need to re-download for offline use.')) return;
+  if (!confirm('Clear all cached map tiles? You\'ll need to re-download for offline use.')) return;
   await caches.delete(TILE_CACHE);
   localStorage.removeItem('offlineMapsMeta');
   loadOfflineStatus();
