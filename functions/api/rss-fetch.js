@@ -25,6 +25,22 @@ const RSS_FEEDS = [
     decorate: decorateSoulOfMiami,
   },
 
+  // Miami on the Cheap — human-curated free/cheap South Florida events. Mix of
+  // real events and evergreen deal roundups; AI Review filters the noise.
+  // Verified live 2026-06-07.
+  {
+    name: 'Miami on the Cheap',
+    url:  'https://miamionthecheap.com/feed/',
+  },
+
+  // Miami New Times — local alt-weekly general news feed. ~30% actual events
+  // (concerts, screenings, weekend picks); rest is news/opinion. AI Review
+  // filters. Verified live 2026-06-07.
+  {
+    name: 'Miami New Times',
+    url:  'https://www.miaminewtimes.com/feed/',
+  },
+
   // Eater Miami (https://miami.eater.com/rss/index.xml) is ALIVE (Atom) but it's
   // food *news* — articles like "16 Best Restaurants…", not dated events — so it
   // pollutes an events list. Disabled here; re-enable behind a future food-news

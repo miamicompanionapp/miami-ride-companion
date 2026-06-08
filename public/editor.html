@@ -513,7 +513,7 @@
           <div style="font-size:12px;color:var(--muted);padding:12px 0">Loading events…</div>
         </div>
         <div style="display:flex;gap:6px;padding-top:10px;border-top:0.5px solid var(--border);margin-top:8px">
-          <button class="btn btn-ghost btn-sm" onclick="aiReviewAllEvents()"><i class="ti ti-brain"></i>AI Review all</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiReviewAllEvents()"><i class="ti ti-brain"></i>AI Review new</button>
           <button class="btn btn-ghost btn-sm" onclick="aiTranslateAllEvents()"><i class="ti ti-language"></i>Translate missing</button>
         </div>
       </div>
@@ -866,6 +866,7 @@ async function loadContent() {
   try {
     const res = await fetch('/content.json?t=' + Date.now());
     CONTENT = await res.json();
+    loadAiReviewCache();
     renderVenueList();
     renderEventList();
     renderDriverEditor();
@@ -1087,8 +1088,20 @@ function switchAiLang(lang, btn) {
 // EVENTS
 // ══════════════════════════════════════════════════════
 
-// Session-only AI review results keyed by event id — never written to content.json
+// AI review results keyed by event id — persisted in localStorage, never written to content.json
 const AI_REVIEW = {};
+const AI_REVIEW_KEY = 'aiReviewCache';
+
+function loadAiReviewCache() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(AI_REVIEW_KEY) || '{}');
+    Object.assign(AI_REVIEW, stored);
+  } catch(e) { /* ignore corrupt cache */ }
+}
+
+function saveAiReviewCache() {
+  try { localStorage.setItem(AI_REVIEW_KEY, JSON.stringify(AI_REVIEW)); } catch(e) {}
+}
 
 function renderEventList() {
   if (!CONTENT) return;
@@ -1832,11 +1845,12 @@ ${JSON.stringify(payload)}`, { maxTokens: 4000 });
 // ── Bulk: ask Claude which fetched events are worth keeping ─────────────────
 async function aiReviewAllEvents() {
   if (!CONTENT?.guide?.events?.length) return showToast('No events to review', 'error');
-  const events = CONTENT.guide.events;
-  showToast(`Reviewing ${events.length} events…`);
+  const unreviewed = CONTENT.guide.events.filter(e => !AI_REVIEW[e.id]);
+  if (!unreviewed.length) return showToast('All events already reviewed ✓');
+  showToast(`Reviewing ${unreviewed.length} new event${unreviewed.length > 1 ? 's' : ''}…`);
 
   const payload = {};
-  events.forEach(e => {
+  unreviewed.forEach(e => {
     payload[e.id] = {
       title: e.title.en,
       venue: e.venue || '',
@@ -1860,6 +1874,7 @@ ${JSON.stringify(payload)}`, { maxTokens: 1500 });
 
     const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
     Object.assign(AI_REVIEW, parsed);
+    saveAiReviewCache();
     renderEventList();
     const keeps = Object.values(parsed).filter(x => x.verdict === 'keep').length;
     const skips = Object.values(parsed).filter(x => x.verdict === 'skip').length;
