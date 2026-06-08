@@ -28,25 +28,27 @@ WORKING POLICY
   dev`) to serve the /api/* routes with .dev.vars keys. See "Wrangler setup" below.
 
 
-NEXT UP — open items, ranked  (updated 2026-06-03)
+NEXT UP — open items, ranked  (updated 2026-06-07)
 ---------------------------------------------------
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
   1. #28  [X DONE 2026-06-03] Attract/idle screen — shipped, see entry below
-  2. #7   Test the full redesign on the real iPad
-  3. #34  BUG: driver bio photo cropped (shoulders cut)
-  4. #36  BUG: landing images blink on every GPS re-render in a moving car
-  5. #30  Multiplayer games — Tap Duel (b) + Trivia Buzzer (c) next  [~done a]
-  6. #35  Tap any photo to enlarge (shared lightbox)
-  7. #31  Secret-tap hidden menu + offline analytics peek
-  8. #29  Finish games i18n — Word Puzzle + Tap Frenzy still EN  [~partial]
-  9. #26  BUG: `featured` flag conflated with `sponsored`
- 10. #25  Editor UI to pick the 3 featured-landing mini cards
- 11. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
- 12. #22  Celsius support on weather page
- 13. #23  Passenger feedback (storage decision needed)
- 14. #17  Events auto-refresh via Cloudflare Cron (deferred — after #20 trusted ✓)
+  2. #31  [X DONE 2026-06-07] Secret-tap driver menu + analytics peek — branch sunday-sprint
+  3. #26  [X DONE 2026-06-07] BUG: featured/sponsored flags separated — branch sunday-sprint
+  4. #22  [X DONE 2026-06-07] Celsius support on weather page — branch sunday-sprint
+  5. #35  [X DONE 2026-06-07] Tap any photo to enlarge (shared lightbox) — branch sunday-sprint
+  6. #25  [X DONE 2026-06-07] Editor UI for 3 featured mini cards — branch sunday-sprint
+  7. #29  [X DONE 2026-06-07] Tap Frenzy i18n EN/ES/PT/FR — branch sunday-sprint (Word Puzzle deferred)
+  8. #30d [X DONE 2026-06-07] Connect Four (2P) + 5 logic tests — branch sunday-sprint
+  9. #7   Test the full redesign on the real iPad
+ 10. #34  BUG: driver bio photo cropped (shoulders cut)
+ 11. #36  BUG: landing images blink on every GPS re-render in a moving car
+ 12. #30  Multiplayer games — d done; e) Dots & Boxes, f) tug-of-war, bonus finger-picker still open
+ 13. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
+ 14. #23  Passenger feedback (storage decision needed)
+ 15. #17  Events auto-refresh via Cloudflare Cron (deferred — after #20 trusted ✓)
+ NOTE: sunday-sprint branch has 4 commits ready to review + merge to main.
 
 
 TEST SUITE & TAGS (Playwright)  — expanded 2026-06-01
