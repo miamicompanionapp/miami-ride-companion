@@ -476,6 +476,24 @@
           </select>
         </div>
         <div style="font-size:11px;color:var(--muted);margin-top:8px">Tip: swap this through the day — different pick for breakfast vs. dinner crowd. Leave on Auto to let GPS decide.</div>
+        <div style="margin-top:16px;border-top:0.5px solid var(--border);padding-top:14px">
+          <div style="font-size:12px;font-weight:600;color:var(--heading);margin-bottom:10px">Featured mini cards <span style="font-weight:400;color:var(--muted)">(the 3 cards under the hero)</span></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <div class="field" style="margin:0;flex:1;min-width:140px">
+              <label style="font-size:10px">Slot 1</label>
+              <select id="mini-slot-0" onchange="saveFeaturedMinis()" style="font-size:12px"></select>
+            </div>
+            <div class="field" style="margin:0;flex:1;min-width:140px">
+              <label style="font-size:10px">Slot 2</label>
+              <select id="mini-slot-1" onchange="saveFeaturedMinis()" style="font-size:12px"></select>
+            </div>
+            <div class="field" style="margin:0;flex:1;min-width:140px">
+              <label style="font-size:10px">Slot 3</label>
+              <select id="mini-slot-2" onchange="saveFeaturedMinis()" style="font-size:12px"></select>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:8px">Leave all three on Auto to fall back to the 3 nearest Local Favorites.</div>
+        </div>
       </div>
 
       <div class="card">
@@ -513,7 +531,7 @@
           <div style="font-size:12px;color:var(--muted);padding:12px 0">Loading events…</div>
         </div>
         <div style="display:flex;gap:6px;padding-top:10px;border-top:0.5px solid var(--border);margin-top:8px">
-          <button class="btn btn-ghost btn-sm" onclick="aiReviewAllEvents()"><i class="ti ti-brain"></i>AI Review all</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiReviewAllEvents()"><i class="ti ti-brain"></i>AI Review new</button>
           <button class="btn btn-ghost btn-sm" onclick="aiTranslateAllEvents()"><i class="ti ti-language"></i>Translate missing</button>
         </div>
       </div>
@@ -799,7 +817,11 @@
       </div>
       <div class="toggle-row" style="padding:0;gap:8px">
         <button class="toggle" id="vm-featured-toggle" onclick="this.classList.toggle('on')"></button>
-        <div><div class="toggle-lbl" style="font-size:12px">Featured (Sponsored) 💛</div></div>
+        <div><div class="toggle-lbl" style="font-size:12px">Featured 🏷️ (gold border)</div></div>
+      </div>
+      <div class="toggle-row" style="padding:0;gap:8px">
+        <button class="toggle" id="vm-sponsored-toggle" onclick="this.classList.toggle('on')"></button>
+        <div><div class="toggle-lbl" style="font-size:12px">Sponsored 💛 (shows badge)</div></div>
       </div>
     </div>
     <div style="display:flex;gap:8px;margin-top:16px;justify-content:flex-end">
@@ -866,11 +888,13 @@ async function loadContent() {
   try {
     const res = await fetch('/content.json?t=' + Date.now());
     CONTENT = await res.json();
+    loadAiReviewCache();
     renderVenueList();
     renderEventList();
     renderDriverEditor();
     renderAppSettings();
     renderFeaturedDropdown();
+    renderFeaturedMiniDropdowns();
     updateLastPub();
   } catch (e) {
     showToast('Could not load content.json — check connection', 'error');
@@ -994,6 +1018,7 @@ function openVenueModal(id) {
   document.getElementById('vm-note-en').value = v ? (v.abdullahsNote ? v.abdullahsNote.en || '' : '') : '';
   document.getElementById('vm-pick-toggle').classList.toggle('on', v ? !!v.abdullahsPick : false);
   document.getElementById('vm-featured-toggle').classList.toggle('on', v ? !!v.featured : false);
+  document.getElementById('vm-sponsored-toggle').classList.toggle('on', v ? !!v.sponsored : false);
   modal.classList.add('open');
 }
 
@@ -1019,7 +1044,7 @@ function saveVenue() {
     photo: document.getElementById('vm-photo').value.trim() || '',
     abdullahsPick: document.getElementById('vm-pick-toggle').classList.contains('on'),
     featured: document.getElementById('vm-featured-toggle').classList.contains('on'),
-    sponsored: document.getElementById('vm-featured-toggle').classList.contains('on'),
+    sponsored: document.getElementById('vm-sponsored-toggle').classList.contains('on'),
     description: {
       en: document.getElementById('vm-desc-en').value.trim(),
       es: document.getElementById('vm-desc-es').value.trim(),
@@ -1041,6 +1066,7 @@ function saveVenue() {
 
   renderVenueList();
   renderFeaturedDropdown();
+  renderFeaturedMiniDropdowns();
   closeVenueModal();
   showToast('Venue saved — hit Publish to go live');
 }
@@ -1049,8 +1075,11 @@ function deleteVenue(id) {
   if (!confirm('Delete this venue?')) return;
   CONTENT.guide.venues = CONTENT.guide.venues.filter(v => v.id !== id);
   if (CONTENT.guide.featuredVenueId === id) CONTENT.guide.featuredVenueId = '';
+  if (Array.isArray(CONTENT.guide.featuredMiniIds))
+    CONTENT.guide.featuredMiniIds = CONTENT.guide.featuredMiniIds.map(mid => mid === id ? '' : mid);
   renderVenueList();
   renderFeaturedDropdown();
+  renderFeaturedMiniDropdowns();
   showToast('Venue deleted');
 }
 
@@ -1074,6 +1103,30 @@ function saveFeaturedVenue(id) {
   showToast(id ? 'Featured venue updated — hit Publish to go live' : 'Featured set to Auto — hit Publish to go live');
 }
 
+function renderFeaturedMiniDropdowns() {
+  if (!CONTENT || !CONTENT.guide) return;
+  const venues = CONTENT.guide.venues || [];
+  const ids = Array.isArray(CONTENT.guide.featuredMiniIds) ? CONTENT.guide.featuredMiniIds : ['', '', ''];
+  const optionsHTML = '<option value="">(Auto)</option>' +
+    venues.map(v => `<option value="${v.id}">${v.name} — ${v.neighborhood}</option>`).join('');
+  [0, 1, 2].forEach(i => {
+    const sel = document.getElementById(`mini-slot-${i}`);
+    if (!sel) return;
+    sel.innerHTML = optionsHTML;
+    sel.value = ids[i] || '';
+  });
+}
+
+function saveFeaturedMinis() {
+  if (!CONTENT.guide) CONTENT.guide = {};
+  const ids = [0, 1, 2].map(i => {
+    const sel = document.getElementById(`mini-slot-${i}`);
+    return sel ? sel.value : '';
+  });
+  CONTENT.guide.featuredMiniIds = ids;
+  showToast('Mini cards updated — hit Save & Publish to go live');
+}
+
 function switchAiLang(lang, btn) {
   currentAiLang = lang;
   document.querySelectorAll('.ai-lang-tab').forEach(t => t.classList.remove('active'));
@@ -1087,8 +1140,20 @@ function switchAiLang(lang, btn) {
 // EVENTS
 // ══════════════════════════════════════════════════════
 
-// Session-only AI review results keyed by event id — never written to content.json
+// AI review results keyed by event id — persisted in localStorage, never written to content.json
 const AI_REVIEW = {};
+const AI_REVIEW_KEY = 'aiReviewCache';
+
+function loadAiReviewCache() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(AI_REVIEW_KEY) || '{}');
+    Object.assign(AI_REVIEW, stored);
+  } catch(e) { /* ignore corrupt cache */ }
+}
+
+function saveAiReviewCache() {
+  try { localStorage.setItem(AI_REVIEW_KEY, JSON.stringify(AI_REVIEW)); } catch(e) {}
+}
 
 function renderEventList() {
   if (!CONTENT) return;
@@ -1832,11 +1897,12 @@ ${JSON.stringify(payload)}`, { maxTokens: 4000 });
 // ── Bulk: ask Claude which fetched events are worth keeping ─────────────────
 async function aiReviewAllEvents() {
   if (!CONTENT?.guide?.events?.length) return showToast('No events to review', 'error');
-  const events = CONTENT.guide.events;
-  showToast(`Reviewing ${events.length} events…`);
+  const unreviewed = CONTENT.guide.events.filter(e => !AI_REVIEW[e.id]);
+  if (!unreviewed.length) return showToast('All events already reviewed ✓');
+  showToast(`Reviewing ${unreviewed.length} new event${unreviewed.length > 1 ? 's' : ''}…`);
 
   const payload = {};
-  events.forEach(e => {
+  unreviewed.forEach(e => {
     payload[e.id] = {
       title: e.title.en,
       venue: e.venue || '',
@@ -1860,6 +1926,7 @@ ${JSON.stringify(payload)}`, { maxTokens: 1500 });
 
     const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
     Object.assign(AI_REVIEW, parsed);
+    saveAiReviewCache();
     renderEventList();
     const keeps = Object.values(parsed).filter(x => x.verdict === 'keep').length;
     const skips = Object.values(parsed).filter(x => x.verdict === 'skip').length;

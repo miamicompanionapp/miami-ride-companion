@@ -479,6 +479,7 @@
     .game-card.spin  { border-top: 3px solid var(--gold); }
     .game-card.image { border-top: 3px solid #7C3AED; }
     .game-card.ttt    { border-top: 3px solid var(--teal); }
+    .game-card.c4     { border-top: 3px solid #E05252; }
     .game-card.duel   { border-top: 3px solid #E0794B; }
     .game-card.buzzer { border-top: 3px solid #7C3AED; }
 
@@ -822,6 +823,119 @@
     }
     .rest-btn i { font-size: 15px; }
     .rest-btn:active { opacity: 0.8; }
+
+    /* ── Image Lightbox ──────────────────────────────────────── */
+    #img-lightbox {
+      position: fixed; inset: 0; z-index: 130;
+      background: rgba(0,0,0,0.92);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 200ms ease;
+      cursor: zoom-out;
+    }
+    #img-lightbox.visible { opacity: 1; pointer-events: all; }
+    #img-lightbox img {
+      max-width: 92vw; max-height: 88vh;
+      object-fit: contain; border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      transition: transform 200ms ease;
+      transform: scale(0.94);
+    }
+    #img-lightbox.visible img { transform: scale(1); }
+
+    /* ── Secret Menu + Analytics Overlay ──────────────────────── */
+    .secret-menu-overlay {
+      position: fixed; inset: 0; z-index: 115;
+      background: rgba(10,20,35,0.82);
+      backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 200ms ease;
+    }
+    .secret-menu-overlay.visible { opacity: 1; pointer-events: all; }
+    .secret-menu-box {
+      background: var(--card-solid); border-radius: 20px;
+      padding: 28px 32px; min-width: 280px;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.5);
+      display: flex; flex-direction: column; gap: 12px;
+      transform: scale(0.94); transition: transform 200ms ease;
+    }
+    .secret-menu-overlay.visible .secret-menu-box { transform: scale(1); }
+    .secret-menu-title {
+      font-family: var(--font-display); font-size: 13px;
+      color: var(--muted); letter-spacing: 0.8px; text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .secret-menu-btn {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px; padding: 14px 18px;
+      color: var(--heading); font-size: 15px; font-weight: 500;
+      cursor: pointer; text-align: left; width: 100%;
+      transition: background 150ms ease;
+    }
+    .secret-menu-btn:active { background: rgba(255,255,255,0.12); }
+    .secret-menu-btn i { font-size: 18px; color: var(--teal); flex-shrink: 0; }
+    .secret-menu-btn.danger i { color: var(--gold); }
+    .secret-menu-close {
+      margin-top: 4px; background: transparent; border: none;
+      color: var(--muted); font-size: 13px; cursor: pointer;
+      padding: 6px 0; text-align: center;
+    }
+
+    .analytics-overlay {
+      position: fixed; inset: 0; z-index: 116;
+      background: rgba(10,20,35,0.88);
+      backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 200ms ease;
+    }
+    .analytics-overlay.visible { opacity: 1; pointer-events: all; }
+    .analytics-box {
+      background: var(--card-solid); border-radius: 20px;
+      padding: 26px 28px; width: min(480px, 90vw); max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.5);
+      transform: scale(0.94); transition: transform 200ms ease;
+    }
+    .analytics-overlay.visible .analytics-box { transform: scale(1); }
+    .analytics-title {
+      font-family: var(--font-display); font-size: 18px; color: var(--heading);
+      font-weight: 500; margin-bottom: 18px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .analytics-close-btn {
+      background: transparent; border: none;
+      color: var(--muted); font-size: 22px; cursor: pointer; line-height: 1;
+      padding: 2px 6px;
+    }
+    .analytics-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+      margin-bottom: 18px;
+    }
+    .anl-stat { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 12px; text-align: center; }
+    .anl-stat-val { font-size: 22px; font-weight: 700; color: var(--teal); }
+    .anl-stat-lbl { font-size: 11px; color: var(--muted); margin-top: 3px; }
+    .analytics-section { margin-bottom: 14px; }
+    .analytics-section-title {
+      font-size: 11px; letter-spacing: 0.7px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .anl-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; font-size: 12px; }
+    .anl-bar-lbl { width: 80px; color: var(--body); flex-shrink: 0; }
+    .anl-bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+    .anl-bar-fill { height: 100%; border-radius: 3px; transition: width 400ms ease; }
+    .anl-bar-pct { width: 32px; text-align: right; color: var(--muted); flex-shrink: 0; }
+    .anl-no-data { font-size: 12px; color: var(--muted); padding: 4px 0; }
+    .anl-venues-list { list-style: none; padding: 0; margin: 0; }
+    .anl-venues-list li {
+      display: flex; justify-content: space-between;
+      font-size: 13px; color: var(--body); padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .anl-venues-list li:last-child { border-bottom: none; }
+    .anl-venue-taps { color: var(--teal); font-weight: 600; }
 
     .rest-screen {
       position: fixed; inset: 0; z-index: 120;
@@ -1288,6 +1402,35 @@
     .buzz-end-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--heading); }
     .buzz-end-line { font-size: 15px; color: var(--muted); }
 
+    /* ── Connect Four (#30d) ──────────────────────────────────── */
+    #game-c4 .game-body { align-items: center; justify-content: center; }
+    .c4-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 560px; }
+    .c4-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .c4-intro-icon { font-size: 46px; }
+    .c4-intro-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--heading); }
+    .c4-intro-sub { font-size: 13px; color: var(--muted); }
+
+    /* Score bar — identical to TTT's turn bar */
+    .c4-turnbar { display: flex; gap: 10px; width: 100%; }
+
+    /* Drop-column arrow row */
+    .c4-col-btns { display: grid; grid-template-columns: repeat(7, 1fr); width: 100%; gap: 4px; }
+    .c4-col-btn { background: transparent; border: none; padding: 4px 0; color: var(--muted); font-size: 18px; cursor: pointer; opacity: 0.5; transition: opacity 150ms; }
+    .c4-col-btn:not(:disabled):hover { opacity: 1; color: var(--heading); }
+    .c4-col-btn:disabled { opacity: 0.1; cursor: default; }
+    .c4-col-btn.p1-turn { color: var(--teal); opacity: 0.8; }
+    .c4-col-btn.p2-turn { color: var(--gold); opacity: 0.8; }
+
+    /* Grid */
+    .c4-board { display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(6, 1fr); gap: 5px; background: var(--navy-deep); border-radius: 14px; padding: 10px; width: 336px; height: 294px; }
+    .c4-cell { border-radius: 50%; background: rgba(255,255,255,0.07); transition: background 150ms; }
+    .c4-cell.p1 { background: var(--teal); }
+    .c4-cell.p2 { background: var(--gold); }
+    .c4-cell.win { box-shadow: 0 0 0 3px white; }
+
+    /* Banner */
+    .c4-banner { text-align: center; min-height: 56px; }
+
     @media (min-height: 600px) {
       .game-body { max-width: 740px; margin: 0 auto; width: 100%; gap: 22px; padding: 30px 24px; }
 
@@ -1355,6 +1498,11 @@
       .buzz-timer { font-size: 32px; }
       .buzz-btn { font-size: 22px; padding: 24px 12px; }
       .buzz-end-title { font-size: 28px; }
+
+      .c4-board { width: 414px; height: 360px; }
+      .c4-cell { width: 50px; height: 50px; }
+      .c4-intro-icon { font-size: 60px; }
+      .c4-intro-title { font-size: 32px; }
     }
   </style>
 </head>
@@ -1528,8 +1676,8 @@
               </div>
               <div class="game-card tap" onclick="openGame('tap')">
                 <div class="game-card-icon">👆</div>
-                <div class="game-card-title">Tap Frenzy</div>
-                <div class="game-card-desc">How many taps in 10 seconds? Beat the high score.</div>
+                <div class="game-card-title" data-gkey="tapCardTitle">Tap Frenzy</div>
+                <div class="game-card-desc" data-gkey="tapCardDesc">How many taps in 10 seconds? Beat the high score.</div>
                 <div class="game-card-footer">
                   <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
@@ -1598,6 +1746,16 @@
                 <div class="game-card-desc" data-gkey="buzzerCardDesc">First to buzz answers. Race your friends.</div>
                 <div class="game-card-footer">
                   <span class="pcount"><i class="ti ti-users"></i>2–3</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card c4" onclick="openGame('c4')">
+                <div class="badge-new" data-gkey="badgeNew">NEW</div>
+                <div class="game-card-icon">🔴</div>
+                <div class="game-card-title" data-gkey="c4CardTitle">Connect Four</div>
+                <div class="game-card-desc" data-gkey="c4CardDesc">Drop discs to connect 4 in a row.</div>
+                <div class="game-card-footer">
+                  <span class="pcount"><i class="ti ti-users"></i>2</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
@@ -1727,18 +1885,18 @@
 <div class="game-screen" id="game-tap">
   <div class="game-screen-header">
     <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
-    <div class="game-screen-title">👆 Tap Frenzy</div>
-    <div class="game-score-badge">Best: <span id="tap-best-display">0</span></div>
+    <div class="game-screen-title" data-gkey="tapScreenTitle">👆 Tap Frenzy</div>
+    <div class="game-score-badge"><span data-gkey="tapBestLabel">Best:</span> <span id="tap-best-display">0</span></div>
   </div>
   <div class="game-body">
     <div class="tap-center">
       <div class="tap-timer-display" id="tap-timer">10s</div>
       <button class="tap-circle" id="tap-circle" onclick="doTap()" disabled>
         <span class="tap-count-num" id="tap-count">0</span>
-        <span class="tap-count-lbl">TAP!</span>
+        <span class="tap-count-lbl" data-gkey="tapTapLabel">TAP!</span>
       </button>
-      <div class="tap-best-txt">Best: <span id="tap-best-txt">0</span> taps</div>
-      <button class="tap-start-btn" id="tap-start-btn" onclick="startTap()">Start!</button>
+      <div class="tap-best-txt" id="tap-best-row"><span data-gkey="tapBestLabel">Best:</span> <span id="tap-best-txt">0</span> <span data-gkey="tapTapsWord">taps</span></div>
+      <button class="tap-start-btn" id="tap-start-btn" onclick="startTap()" data-gkey="tapStartBtn">Start!</button>
       <div class="tap-result-txt" id="tap-result"></div>
     </div>
   </div>
@@ -1941,6 +2099,68 @@
   </div>
 </div>
 
+<!-- Connect Four (#30d, 2P shared-screen) -->
+<div class="game-screen" id="game-c4">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title" data-gkey="c4ScreenTitle">🔴 Connect Four</div>
+    <button class="gs-restart-hidden game-score-badge" id="c4-restart" onclick="c4NewRound();resetInactivity()" style="display:none;border:none;cursor:pointer">
+      <i class="ti ti-refresh"></i> <span data-gkey="tttRestart">Restart</span>
+    </button>
+  </div>
+  <div class="game-body">
+    <div class="c4-wrap">
+
+      <!-- Pre-game intro -->
+      <div class="c4-intro" id="c4-intro">
+        <div class="c4-intro-icon">🔴🟡</div>
+        <div class="c4-intro-title" data-gkey="c4CardTitle">Connect Four</div>
+        <div class="c4-intro-sub" data-gkey="c4IntroSub">Take turns dropping discs — 4 in a row wins.</div>
+        <div class="ttt-players-chip" style="margin-top:10px"><i class="ti ti-users"></i> <span data-gkey="tttPlayers">2 players · pass &amp; play</span></div>
+        <button class="ttt-start-btn" style="margin-top:8px" onclick="c4Start()"><i class="ti ti-player-play"></i> <span data-gkey="tttStartBtn">Start game</span></button>
+      </div>
+
+      <!-- Live game -->
+      <div class="c4-play" id="c4-play" style="display:none">
+        <!-- Score bar (reuses ttt-turnbar + ttt-pscore CSS) -->
+        <div class="ttt-turnbar c4-turnbar">
+          <div class="ttt-pscore p1" id="c4-p1">
+            <div class="ttt-mark" style="font-size:22px">🔴</div>
+            <div class="ttt-pinfo">
+              <div class="ttt-pwho" data-gkey="tttP1">Player 1</div>
+              <div class="ttt-pturn" id="c4-p1-turn"></div>
+            </div>
+            <div class="ttt-pwins"><span data-gkey="tttWins">wins</span><b id="c4-p1-wins">0</b></div>
+          </div>
+          <div class="ttt-pscore p2" id="c4-p2">
+            <div class="ttt-mark" style="font-size:22px">🟡</div>
+            <div class="ttt-pinfo">
+              <div class="ttt-pwho" data-gkey="tttP2">Player 2</div>
+              <div class="ttt-pturn" id="c4-p2-turn"></div>
+            </div>
+            <div class="ttt-pwins"><span data-gkey="tttWins">wins</span><b id="c4-p2-wins">0</b></div>
+          </div>
+        </div>
+        <!-- Column drop buttons -->
+        <div class="c4-col-btns" id="c4-col-btns">
+          <button class="c4-col-btn" onclick="c4Drop(0)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(1)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(2)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(3)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(4)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(5)"><i class="ti ti-arrow-down"></i></button>
+          <button class="c4-col-btn" onclick="c4Drop(6)"><i class="ti ti-arrow-down"></i></button>
+        </div>
+        <!-- Board -->
+        <div class="c4-board" id="c4-board"></div>
+        <!-- Banner -->
+        <div class="c4-banner" id="c4-banner"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <!-- ── QR Modal ── -->
 <div class="qr-modal" id="qr-modal">
   <div class="qr-modal-box">
@@ -2001,6 +2221,65 @@
   <div class="rotate-icon">📱</div>
   <div class="rotate-title" data-key="rotate.title">Please rotate your phone</div>
   <div class="rotate-sub" data-key="rotate.sub">This guide works best in landscape. Turn your phone sideways to continue.</div>
+</div>
+
+<!-- ── Image Lightbox ── -->
+<div id="img-lightbox" onclick="closeImage()">
+  <img id="img-lightbox-img" src="" alt="">
+</div>
+
+<!-- ── Secret Menu ── -->
+<div class="secret-menu-overlay" id="secret-menu-overlay" onclick="closeSecretMenu(event)">
+  <div class="secret-menu-box" onclick="event.stopPropagation()">
+    <div class="secret-menu-title">Driver Menu</div>
+    <button class="secret-menu-btn" onclick="closeSecretMenu(); window.location.href='/editor.html'">
+      <i class="ti ti-layout-dashboard"></i> Open Editor
+    </button>
+    <button class="secret-menu-btn" onclick="closeSecretMenu(); openAnalyticsOverlay()">
+      <i class="ti ti-chart-bar"></i> Passenger Analytics
+    </button>
+    <button class="secret-menu-btn danger" id="secret-bubble-btn" onclick="secretToggleBubble()">
+      <i class="ti ti-user"></i> <span id="secret-bubble-label">Driver Bubble: On</span>
+    </button>
+    <button class="secret-menu-close" onclick="closeSecretMenu()">Close</button>
+  </div>
+</div>
+
+<!-- ── Analytics Peek Overlay ── -->
+<div class="analytics-overlay" id="analytics-overlay" onclick="closeAnalyticsOverlay(event)">
+  <div class="analytics-box" onclick="event.stopPropagation()">
+    <div class="analytics-title">
+      Passenger Analytics
+      <button class="analytics-close-btn" onclick="closeAnalyticsOverlay()">×</button>
+    </div>
+    <div class="analytics-stats">
+      <div class="anl-stat">
+        <div class="anl-stat-val" id="anl-sessions">—</div>
+        <div class="anl-stat-lbl">Sessions</div>
+      </div>
+      <div class="anl-stat">
+        <div class="anl-stat-val" id="anl-duration">—</div>
+        <div class="anl-stat-lbl">Avg Duration</div>
+      </div>
+      <div class="anl-stat">
+        <div class="anl-stat-val" id="anl-qr">—</div>
+        <div class="anl-stat-lbl">QR Taps</div>
+      </div>
+    </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">Tab Engagement</div>
+      <div id="anl-tab-bars"></div>
+    </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">Language</div>
+      <div id="anl-lang-bars"></div>
+    </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">Top Venues</div>
+      <ul class="anl-venues-list" id="anl-venues"></ul>
+    </div>
+    <div style="font-size:11px;color:var(--muted);margin-top:8px;text-align:center">Read-only · use the Editor to export or reset</div>
+  </div>
 </div>
 
 <!-- ── Rest / Blackout Screen ── -->
@@ -2110,13 +2389,14 @@ function buildContentCards() {
   if (w && w.hourly && w.hourly.length) {
     const currentHour = new Date().getHours().toString().padStart(2, '0') + ':00';
     const slot = w.hourly.find(h => h.hour === currentHour) || w.hourly[0];
-    if (slot && slot.temp != null) tempVal = Math.round(slot.temp);
+    if (slot && slot.temp_f != null) tempVal = Math.round(slot.temp_f);
   }
+  const cVal = tempVal != null ? toC(tempVal) : null;
   const weatherHeadline = tempVal != null ? {
-    en: `${tempVal}° in Miami right now`,
-    es: `${tempVal}° en Miami ahora mismo`,
-    pt: `${tempVal}° em Miami agora`,
-    fr: `${tempVal}° à Miami en ce moment`,
+    en: `${tempVal}°F (${cVal}°C) in Miami right now`,
+    es: `${tempVal}°F (${cVal}°C) en Miami ahora mismo`,
+    pt: `${tempVal}°F (${cVal}°C) em Miami agora`,
+    fr: `${tempVal}°F (${cVal}°C) à Miami en ce moment`,
   } : {
     en: 'Miami weather right now',
     es: 'El tiempo en Miami ahora',
@@ -2348,7 +2628,7 @@ document.addEventListener('DOMContentLoaded', () => {
   tapBest = parseInt(localStorage.getItem('tapBest') || '0');
   document.getElementById('tap-best-display').textContent = tapBest;
   document.getElementById('tap-best-txt').textContent = tapBest;
-  document.getElementById('high-score-display').textContent = `Best tap: ${tapBest}`;
+  document.getElementById('high-score-display').textContent = `${gt('tapBestLabel')} ${tapBest}`;
   document.getElementById('build-tag').textContent = `build ${APP_BUILD}`;
 });
 
@@ -2464,7 +2744,7 @@ function renderDriver() {
   const bioInitial = document.getElementById('dp-bio-initial');
   if (bioInitial) bioInitial.textContent = (d.name || 'A')[0];
   if (d.photo) {
-    document.getElementById('dp-bio-photo').innerHTML = `<img src="${d.photo}" alt="">`;
+    document.getElementById('dp-bio-photo').innerHTML = `<img src="${d.photo}" alt="" onclick="openImage(this.src)" style="cursor:zoom-in">`;
   }
   document.getElementById('dp-bio-name').textContent = d.name || '';
   document.getElementById('dp-bio-from').textContent = tx(d.fromLine);
@@ -2538,7 +2818,7 @@ function renderDriver() {
     document.getElementById('dp-pets-grid').innerHTML = items.map(p => `
       <div class="dp-pet">
         <div class="dp-pet-photo ${p.species || 'dog'}">
-          ${p.photo ? `<img src="${p.photo}" alt="">` : `<div class="dp-pet-emoji">${petEmoji(p.species)}</div>`}
+          ${p.photo ? `<img src="${p.photo}" alt="" onclick="openImage(this.src)" style="cursor:zoom-in">` : `<div class="dp-pet-emoji">${petEmoji(p.species)}</div>`}
         </div>
         <div class="dp-pet-name">${p.name || ''}</div>
         <div class="dp-pet-desc">${tx(p.description)}</div>
@@ -2952,7 +3232,7 @@ function buildHeroHTML(v) {
     : v.sponsored
       ? `<div class="gp-hero-tag"><i class="ti ti-star"></i>${t('guide.sponsored')||'Sponsored'}</div>`
       : '';
-  const photoBg = v.photo ? `<img src="${v.photo}" alt="">` : '';
+  const photoBg = v.photo ? `<img src="${v.photo}" alt="" onclick="openImage(this.src)" style="cursor:zoom-in">` : '';
   const metaBits = [v.neighborhood, capitalize(v.category), priceStr, distStr].filter(Boolean);
   const metaHTML = metaBits.map((bit, i) => i === 0 ? bit : `<span class="dot"></span>${bit}`).join('');
 
@@ -3012,6 +3292,8 @@ function openVenueSheet(venueId) {
     const img = document.createElement('img');
     img.src = v.photo;
     img.alt = '';
+    img.style.cursor = 'zoom-in';
+    img.onclick = () => openImage(v.photo);
     photo.insertBefore(img, photo.firstChild);
   }
 
@@ -3077,7 +3359,7 @@ function buildVenueCard(v) {
     ? `<span class="venue-dist"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles') || 'mi'}</span>`
     : '';
 
-  const featBadge = v.featured
+  const featBadge = v.sponsored
     ? `<div class="featured-badge"><i class="ti ti-star"></i><span>${t('guide.sponsored') || 'Sponsored'}</span></div>` : '';
 
   const pickBadge = v.abdullahsPick
@@ -3162,7 +3444,7 @@ function buildEventCard(e) {
   const hi = e.image ? fullResImage(e.image) : '';
   card.className = hi ? 'event-card has-photo' : 'event-card';
   const photoBand = hi
-    ? `<div class="event-photo">
+    ? `<div class="event-photo" onclick="openImage('${hi}')" style="cursor:zoom-in">
          <img class="event-photo-bg" src="${hi}" alt="" aria-hidden="true">
          <img class="event-photo-fg" src="${hi}" alt="" loading="lazy" data-thumb="${e.image}" onerror="restoreEventThumb(this)">
        </div>`
@@ -3192,6 +3474,9 @@ function buildEventCard(e) {
 // ════════════════════════════════════════════════════════════
 // WEATHER RENDER
 // ════════════════════════════════════════════════════════════
+const toC = (f) => Math.round((f - 32) * 5 / 9);
+const dualTemp = (f) => `${Math.round(f)}°F (${toC(f)}°C)`;
+
 function renderWeather() {
   if (!CONTENT) return;
   const w = CONTENT.weather;
@@ -3237,8 +3522,8 @@ function renderWeather() {
           <div class="current-label">Miami · ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} reading</div>
           <div class="current-top">
             <div>
-              <div class="current-temp">${Math.round(hourData.temp_f)}°</div>
-              <div class="current-desc">${w.current.description[lang] || w.current.description.en} · ${t('weather.feelsLike') || 'Feels like'} ${Math.round(w.current.feels_f)}°</div>
+              <div class="current-temp">${Math.round(hourData.temp_f)}°<span style="font-size:22px;font-weight:400;opacity:0.6"> (${toC(hourData.temp_f)}°C)</span></div>
+              <div class="current-desc">${w.current.description[lang] || w.current.description.en} · ${t('weather.feelsLike') || 'Feels like'} ${dualTemp(w.current.feels_f)}</div>
             </div>
             <div style="font-size:40px;opacity:0.85">${WEATHER_ICONS[w.current.weathercode] || '🌤️'}</div>
           </div>
@@ -3263,11 +3548,11 @@ function renderWeather() {
           <div class="range-temps">
             <div>
               <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:2px">${t('weather.high') || 'High'}</div>
-              <div class="range-high">${today.high_f}°</div>
+              <div class="range-high">${today.high_f}°<span style="font-size:13px;font-weight:400;opacity:0.65"> (${toC(today.high_f)}°C)</span></div>
             </div>
             <div style="padding-bottom:5px">
               <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:2px">${t('weather.low') || 'Low'}</div>
-              <div class="range-low">${today.low_f}°</div>
+              <div class="range-low">${today.low_f}°<span style="font-size:13px;font-weight:400;opacity:0.65"> (${toC(today.low_f)}°C)</span></div>
             </div>
             <div class="range-icon">${WEATHER_ICONS[today.weathercode] || '🌤️'}</div>
           </div>
@@ -3304,8 +3589,8 @@ function renderWeather() {
         <div class="day-name ${nameCls}">${dayName}</div>
         <div class="day-icon">${WEATHER_ICONS[f.weathercode] || '🌤️'}</div>
         <div class="day-desc">${f.description[lang] || f.description.en}</div>
-        <div class="day-high">${f.high_f}°</div>
-        <div class="day-low">${f.low_f}°</div>
+        <div class="day-high">${f.high_f}°<span style="font-size:10px;font-weight:400;opacity:0.6"> ${toC(f.high_f)}°C</span></div>
+        <div class="day-low">${f.low_f}°<span style="font-size:10px;font-weight:400;opacity:0.6"> ${toC(f.low_f)}°C</span></div>
         <div class="day-rain"><i class="ti ti-droplet"></i>${f.rain_chance}%</div>
       </div>`;
   }).join('');
@@ -3404,6 +3689,24 @@ const GAME_UI = {
   tttWinMsg:     { en:'{p} wins! 🎉', es:'¡{p} gana! 🎉', pt:'{p} venceu! 🎉', fr:'{p} gagne ! 🎉' },
   tttDrawMsg:    { en:"It's a draw 🤝", es:'Empate 🤝', pt:'Empate 🤝', fr:'Match nul 🤝' },
   tttPlayAgain:  { en:'Play again', es:'Jugar de nuevo', pt:'Jogar de novo', fr:'Rejouer' },
+  // Connect Four (#30d)
+  c4CardTitle:  { en:'Connect Four', es:'Conecta Cuatro', pt:'Conecte Quatro', fr:'Puissance 4' },
+  c4CardDesc:   { en:'Drop discs to connect 4 in a row.', es:'Deja caer fichas para conectar 4 en fila.', pt:'Solte discos para conectar 4 em linha.', fr:'Faites tomber des jetons pour aligner 4 d\'affilée.' },
+  c4ScreenTitle:{ en:'🔴 Connect Four', es:'🔴 Conecta Cuatro', pt:'🔴 Conecte Quatro', fr:'🔴 Puissance 4' },
+  c4IntroSub:   { en:'Take turns dropping discs — 4 in a row wins.', es:'Túrnense para soltar fichas: 4 en fila gana.', pt:'Se revezem soltando discos — 4 em linha vence.', fr:'À tour de rôle, faites tomber un jeton — 4 alignés gagnent.' },
+  // Tap Frenzy (#29)
+  tapCardTitle:  { en:'Tap Frenzy', es:'Toca rápido', pt:'Toque frenético', fr:'Tap Frénésie' },
+  tapCardDesc:   { en:'How many taps in 10 seconds? Beat the high score.', es:'¿Cuántos toques en 10 segundos? ¡Bate el récord!', pt:'Quantos toques em 10 segundos? Bata o recorde!', fr:'Combien de taps en 10 secondes ? Battez le record !' },
+  tapScreenTitle:{ en:'👆 Tap Frenzy', es:'👆 Toca rápido', pt:'👆 Toque frenético', fr:'👆 Tap Frénésie' },
+  tapBestLabel:  { en:'Best:', es:'Récord:', pt:'Recorde:', fr:'Record :' },
+  tapTapsWord:   { en:'taps', es:'toques', pt:'toques', fr:'taps' },
+  tapStartBtn:   { en:'Start!', es:'¡Empezar!', pt:'Começar!', fr:'C\'est parti !' },
+  tapTapLabel:   { en:'TAP!', es:'¡TOCA!', pt:'TOQUE!', fr:'TAPEZ !' },
+  tapMsg0:       { en:'🔥 On fire!', es:'🔥 ¡Eres fuego!', pt:'🔥 Que ritmo!', fr:'🔥 En feu !' },
+  tapMsg1:       { en:'⚡ Lightning fingers!', es:'⚡ ¡Dedos de rayo!', pt:'⚡ Dedos velozes!', fr:'⚡ Doigts d\'éclair !' },
+  tapMsg2:       { en:'👏 Nice work!', es:'👏 ¡Buen trabajo!', pt:'👏 Bom trabalho!', fr:'👏 Bien joué !' },
+  tapMsg3:       { en:'🤩 Incredible!', es:'🤩 ¡Increíble!', pt:'🤩 Incrível!', fr:'🤩 Incroyable !' },
+  tapMsg4:       { en:'💪 Strong effort!', es:'💪 ¡Buen esfuerzo!', pt:'💪 Bom esforço!', fr:'💪 Bel effort !' },
   pressStart:   { en:'Press Start to begin!', es:'¡Pulsa Empezar para comenzar!', pt:'Pressione Começar para iniciar!', fr:'Appuyez sur Démarrer pour commencer !' },
   startTrivia:  { en:'Start Trivia ▶', es:'Empezar trivia ▶', pt:'Começar trivia ▶', fr:'Démarrer le quiz ▶' },
   correct:      { en:'✅ Correct! Great job!', es:'✅ ¡Correcto! ¡Bien hecho!', pt:'✅ Correto! Muito bem!', fr:'✅ Correct ! Bravo !' },
@@ -3464,6 +3767,11 @@ function refreshOpenGame() {
     renderTriviaQuestion();
   } else if (open.id === 'game-ttt') {
     tttRenderStrings();
+  } else if (open.id === 'game-c4' && !c4Over) {
+    c4RenderStrings();
+  } else if (open.id === 'game-tap') {
+    const hs = document.getElementById('high-score-display');
+    if (hs) hs.textContent = gt('tapBestLabel') + ' ' + (typeof tapBest === 'number' ? tapBest : 0);
   } else if (open.id === 'game-duel' && duelPhase !== 'idle') {
     duelRender();
   } else if (open.id === 'game-buzzer') {
@@ -3483,6 +3791,7 @@ const GAMES = {
   spin:   { screen: 'game-spin',   reset: resetSpinGame },
   image:  { screen: 'game-image',  reset: initImage },
   ttt:    { screen: 'game-ttt',    reset: initTTT },
+  c4:     { screen: 'game-c4',     reset: initC4 },
   duel:   { screen: 'game-duel',   reset: initDuel },
   buzzer: { screen: 'game-buzzer', reset: initBuzzer },
 };
@@ -3656,6 +3965,146 @@ function pgSetCount(id, n) {
 // Localized player label, 0-indexed (P1/P2/P3). Shared by duel + buzzer.
 const PG_PKEY = ['pgP1', 'pgP2', 'pgP3'];
 const pgPlayer = (i) => gt(PG_PKEY[i]);
+
+// ── Connect Four (2P, #30d) ────────────────────────────────
+const C4_ROWS = 6, C4_COLS = 7;
+
+// Precompute all winning lines once (69 total: 24 horiz + 21 vert + 12 diag↘ + 12 diag↙)
+const C4_LINES = (() => {
+  const lines = [];
+  for (let r = 0; r < C4_ROWS; r++)
+    for (let c = 0; c <= C4_COLS - 4; c++)
+      lines.push([[r,c],[r,c+1],[r,c+2],[r,c+3]]);
+  for (let c = 0; c < C4_COLS; c++)
+    for (let r = 0; r <= C4_ROWS - 4; r++)
+      lines.push([[r,c],[r+1,c],[r+2,c],[r+3,c]]);
+  for (let r = 0; r <= C4_ROWS - 4; r++) {
+    for (let c = 0; c <= C4_COLS - 4; c++)
+      lines.push([[r,c],[r+1,c+1],[r+2,c+2],[r+3,c+3]]);
+    for (let c = 3; c < C4_COLS; c++)
+      lines.push([[r,c],[r+1,c-1],[r+2,c-2],[r+3,c-3]]);
+  }
+  return lines;
+})();
+
+let c4Board = null;   // [row][col] → 0 | 1 | 2
+let c4Turn = 1;
+let c4Starter = 1;    // who opens the next round (loser-goes-first)
+let c4Wins = { 1: 0, 2: 0 };
+let c4Over = false;
+let c4WinCells = null;
+
+function initC4() {
+  c4Wins = { 1: 0, 2: 0 };
+  c4Starter = 1;
+  c4Over = true;
+  document.getElementById('c4-p1-wins').textContent = '0';
+  document.getElementById('c4-p2-wins').textContent = '0';
+  document.getElementById('c4-intro').style.display = '';
+  document.getElementById('c4-play').style.display = 'none';
+  document.getElementById('c4-restart').style.display = 'none';
+}
+
+function c4Start() {
+  document.getElementById('c4-intro').style.display = 'none';
+  document.getElementById('c4-play').style.display = '';
+  document.getElementById('c4-restart').style.display = '';
+  c4NewRound();
+  logTap('game_c4_start');
+}
+
+function c4NewRound() {
+  c4Board = Array.from({ length: C4_ROWS }, () => Array(C4_COLS).fill(0));
+  c4Turn = c4Starter;
+  c4Over = false;
+  c4WinCells = null;
+  c4RenderBoard();
+  c4RenderStrings();
+}
+
+function c4Drop(col) {
+  if (c4Over) return;
+  let row = -1;
+  for (let r = C4_ROWS - 1; r >= 0; r--) {
+    if (c4Board[r][col] === 0) { row = r; break; }
+  }
+  if (row === -1) return; // column full
+  c4Board[row][col] = c4Turn;
+  resetInactivity();
+
+  const winLine = c4CheckWin(c4Turn);
+  if (winLine) {
+    c4Over = true;
+    c4WinCells = winLine;
+    c4Wins[c4Turn]++;
+    document.getElementById(`c4-p${c4Turn}-wins`).textContent = c4Wins[c4Turn];
+    c4Starter = c4Turn === 1 ? 2 : 1;  // loser opens next round
+    logTap('game_c4_win');
+  } else if (c4Board[0].every((_, c) => c4Board[0][c] !== 0)) {
+    c4Over = true;
+    c4Starter = c4Starter === 1 ? 2 : 1; // draw → alternate starter
+    logTap('game_c4_draw');
+  } else {
+    c4Turn = c4Turn === 1 ? 2 : 1;
+  }
+  c4RenderBoard();
+  c4RenderStrings();
+}
+
+function c4CheckWin(player) {
+  for (const line of C4_LINES) {
+    if (line.every(([r, c]) => c4Board[r][c] === player)) return line;
+  }
+  return null;
+}
+
+function c4RenderBoard() {
+  const board = document.getElementById('c4-board');
+  board.innerHTML = '';
+  const winSet = c4WinCells
+    ? new Set(c4WinCells.map(([r, c]) => r * C4_COLS + c)) : null;
+  for (let r = 0; r < C4_ROWS; r++) {
+    for (let c = 0; c < C4_COLS; c++) {
+      const cell = document.createElement('div');
+      const p = c4Board[r][c];
+      cell.className = 'c4-cell' +
+        (p === 1 ? ' p1' : p === 2 ? ' p2' : '') +
+        (winSet && winSet.has(r * C4_COLS + c) ? ' win' : '');
+      board.appendChild(cell);
+    }
+  }
+  const btnCls = c4Turn === 1 ? 'p1-turn' : 'p2-turn';
+  document.querySelectorAll('.c4-col-btn').forEach((btn, c) => {
+    btn.disabled = c4Over || c4Board[0][c] !== 0;
+    btn.className = 'c4-col-btn' + (c4Over ? '' : ' ' + btnCls);
+  });
+  const p1El = document.getElementById('c4-p1'), p2El = document.getElementById('c4-p2');
+  p1El.classList.toggle('active', !c4Over && c4Turn === 1);
+  p2El.classList.toggle('active', !c4Over && c4Turn === 2);
+}
+
+function c4RenderStrings() {
+  document.getElementById('c4-p1-turn').textContent =
+    (!c4Over && c4Turn === 1) ? gt('tttYourTurn') : (c4Over ? '' : gt('tttWaiting'));
+  document.getElementById('c4-p2-turn').textContent =
+    (!c4Over && c4Turn === 2) ? gt('tttYourTurn') : (c4Over ? '' : gt('tttWaiting'));
+  const banner = document.getElementById('c4-banner');
+  if (c4Over && c4WinCells) {
+    const pName = c4Turn === 1 ? gt('tttP1') : gt('tttP2');
+    const cls = c4Turn === 1 ? 'p1' : 'p2';
+    banner.innerHTML = `<div class="ttt-banner-title ${cls}">${gt('tttWinMsg').replace('{p}', pName)}</div>
+      <button class="ttt-again-btn" onclick="c4NewRound();resetInactivity()">
+        <i class="ti ti-refresh"></i> ${gt('tttPlayAgain')}
+      </button>`;
+  } else if (c4Over) {
+    banner.innerHTML = `<div class="ttt-banner-title draw">${gt('tttDrawMsg')}</div>
+      <button class="ttt-again-btn" onclick="c4NewRound();resetInactivity()">
+        <i class="ti ti-refresh"></i> ${gt('tttPlayAgain')}
+      </button>`;
+  } else {
+    banner.innerHTML = '';
+  }
+}
 
 // ── Tap Duel (reaction race, 2-3P, #30b) ──────────────────
 // Zones are columns (P1 left … P3 right), SAME orientation — riders sit
@@ -4130,8 +4579,8 @@ function startTap() {
         document.getElementById('tap-best-txt').textContent = tapBest;
         document.getElementById('high-score-display').textContent = `${gt('bestTapScore')} ${tapBest}`;
       }
-      const msgs = ['🔥 On fire!','⚡ Lightning fingers!','👏 Nice work!','🤩 Incredible!','💪 Strong effort!'];
-      document.getElementById('tap-result').textContent = `${tapCount} taps! ${msgs[Math.floor(Math.random()*msgs.length)]}`;
+      const msgs = ['tapMsg0','tapMsg1','tapMsg2','tapMsg3','tapMsg4'];
+      document.getElementById('tap-result').textContent = `${tapCount} ${gt('tapTapsWord')}! ${gt(msgs[Math.floor(Math.random()*msgs.length)])}`;
       logTap('tap_score_' + tapCount);
     }
   }, 1000);
@@ -4770,14 +5219,150 @@ function initSecretTap() {
   zone.addEventListener('click', () => {
     secretTaps++;
     clearTimeout(secretTimer);
-    // No visual feedback — completely silent
     if (secretTaps >= 5) {
       secretTaps = 0;
-      window.location.href = '/editor.html';
+      openSecretMenu();
       return;
     }
     secretTimer = setTimeout(() => { secretTaps = 0; }, 3000);
   });
+}
+
+function openSecretMenu() {
+  const label = document.getElementById('secret-bubble-label');
+  if (label) label.textContent = 'Driver Bubble: ' + (isBubbleVisible() ? 'On' : 'Off');
+  document.getElementById('secret-menu-overlay').classList.add('visible');
+}
+
+function closeSecretMenu(e) {
+  if (e && e.target !== document.getElementById('secret-menu-overlay')) return;
+  document.getElementById('secret-menu-overlay').classList.remove('visible');
+}
+
+function secretToggleBubble() {
+  const nowVisible = isBubbleVisible();
+  try { localStorage.setItem(BUBBLE_OVERRIDE_KEY, nowVisible ? 'hide' : 'show'); } catch (_) {}
+  applyBubbleVisibility();
+  const label = document.getElementById('secret-bubble-label');
+  if (label) label.textContent = 'Driver Bubble: ' + (nowVisible ? 'Off' : 'On');
+  showMiniToast(nowVisible ? 'Driver bubble hidden' : 'Driver bubble shown');
+}
+
+// ── Analytics peek (read-only, no export/reset) ──────────────────────────────
+function readStoreAll(db, name) {
+  return new Promise(resolve => {
+    if (!db.objectStoreNames.contains(name)) return resolve([]);
+    const out = [];
+    const cur = db.transaction(name, 'readonly').objectStore(name).openCursor();
+    cur.onsuccess = e => { const c = e.target.result; if (c) { out.push(c.value); c.continue(); } else resolve(out); };
+    cur.onerror   = () => resolve(out);
+  });
+}
+
+async function readAnalyticsForPeek() {
+  return new Promise(resolve => {
+    const req = indexedDB.open('MiamiRideAnalytics', 1);
+    req.onupgradeneeded = e => {
+      const d = e.target.result;
+      if (!d.objectStoreNames.contains('sessions')) d.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
+      if (!d.objectStoreNames.contains('taps'))     d.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
+    };
+    req.onsuccess = async e => {
+      const d = e.target.result;
+      const [sessions, taps] = await Promise.all([readStoreAll(d, 'sessions'), readStoreAll(d, 'taps')]);
+      resolve({ sessions, taps });
+    };
+    req.onerror = () => resolve({ sessions: [], taps: [] });
+  });
+}
+
+function summarizeForPeek({ sessions, taps }) {
+  const TAB_LABEL = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver' };
+  const tabCounts = { 'City Guide': 0, Weather: 0, Games: 0, Driver: 0 };
+  const venueCounts = {};
+  let qrTaps = 0;
+  for (const tp of taps) {
+    const k = tp.key || '';
+    if (TAB_LABEL[k]) tabCounts[TAB_LABEL[k]]++;
+    else if (k.startsWith('qr_') || k.startsWith('hero_qr_')) qrTaps++;
+    else { const m = k.match(/^venue_(?!sheet_)(.+)$/); if (m) venueCounts[m[1]] = (venueCounts[m[1]] || 0) + 1; }
+  }
+  const langCounts = {};
+  for (const l of (sessions.length ? sessions.map(s => s.lang) : taps.map(t => t.lang))) {
+    const k = l || 'en'; langCounts[k] = (langCounts[k] || 0) + 1;
+  }
+  const avgDuration = sessions.length
+    ? Math.round(sessions.reduce((a, s) => a + (s.duration || 0), 0) / sessions.length) : 0;
+  const venues = Object.entries(venueCounts)
+    .map(([id, n]) => {
+      const v = (CONTENT?.guide?.venues || []).find(x => x.id === id);
+      return { name: v ? v.name : id, taps: n };
+    })
+    .sort((a, b) => b.taps - a.taps).slice(0, 5);
+  return { count: sessions.length, avgDuration, qrTaps, tabCounts, langCounts, venues };
+}
+
+function renderAnlBars(containerId, entries) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const colors = ['var(--teal)', 'var(--gold)', '#9BA8B8', 'var(--pink,#e05)'];
+  const total = entries.reduce((a, [, c]) => a + c, 0);
+  if (!total) { el.innerHTML = '<div class="anl-no-data">No data yet</div>'; return; }
+  el.innerHTML = entries.map(([label, count], i) => {
+    const pct = Math.round(count / total * 100);
+    return `<div class="anl-bar-row">
+      <div class="anl-bar-lbl">${label}</div>
+      <div class="anl-bar-track"><div class="anl-bar-fill" style="width:${pct}%;background:${colors[i % colors.length]}"></div></div>
+      <div class="anl-bar-pct">${pct}%</div>
+    </div>`;
+  }).join('');
+}
+
+function fmtDuration(s) {
+  if (!s) return '—';
+  if (s < 60) return s + 's';
+  return Math.round(s / 60) + 'm ' + (s % 60) + 's';
+}
+
+const LANG_LABEL_PEEK = { en: 'English', es: 'Spanish', pt: 'Portuguese', fr: 'French' };
+
+async function openAnalyticsOverlay() {
+  document.getElementById('analytics-overlay').classList.add('visible');
+  const data = await readAnalyticsForPeek();
+  const s = summarizeForPeek(data);
+  document.getElementById('anl-sessions').textContent = s.count || '0';
+  document.getElementById('anl-duration').textContent = fmtDuration(s.avgDuration);
+  document.getElementById('anl-qr').textContent = s.qrTaps;
+  renderAnlBars('anl-tab-bars', Object.entries(s.tabCounts));
+  renderAnlBars('anl-lang-bars', Object.entries(s.langCounts).map(([k, v]) => [LANG_LABEL_PEEK[k] || k, v]));
+  const venueEl = document.getElementById('anl-venues');
+  if (s.venues.length) {
+    venueEl.innerHTML = s.venues.map(v =>
+      `<li><span>${v.name}</span><span class="anl-venue-taps">${v.taps} taps</span></li>`
+    ).join('');
+  } else {
+    venueEl.innerHTML = '<li style="color:var(--muted);font-size:12px">No venue taps yet</li>';
+  }
+}
+
+function closeAnalyticsOverlay(e) {
+  if (e && e.target !== document.getElementById('analytics-overlay')) return;
+  document.getElementById('analytics-overlay').classList.remove('visible');
+}
+
+// ════════════════════════════════════════════════════════════
+// IMAGE LIGHTBOX (#35)
+// ════════════════════════════════════════════════════════════
+function openImage(src) {
+  if (!src) return;
+  const lb = document.getElementById('img-lightbox');
+  const img = document.getElementById('img-lightbox-img');
+  img.src = src;
+  lb.classList.add('visible');
+}
+
+function closeImage() {
+  document.getElementById('img-lightbox').classList.remove('visible');
 }
 
 // ════════════════════════════════════════════════════════════
