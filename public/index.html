@@ -823,6 +823,25 @@
     .rest-btn i { font-size: 15px; }
     .rest-btn:active { opacity: 0.8; }
 
+    /* ── Image Lightbox ──────────────────────────────────────── */
+    #img-lightbox {
+      position: fixed; inset: 0; z-index: 130;
+      background: rgba(0,0,0,0.92);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 200ms ease;
+      cursor: zoom-out;
+    }
+    #img-lightbox.visible { opacity: 1; pointer-events: all; }
+    #img-lightbox img {
+      max-width: 92vw; max-height: 88vh;
+      object-fit: contain; border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      transition: transform 200ms ease;
+      transform: scale(0.94);
+    }
+    #img-lightbox.visible img { transform: scale(1); }
+
     /* ── Secret Menu + Analytics Overlay ──────────────────────── */
     .secret-menu-overlay {
       position: fixed; inset: 0; z-index: 115;
@@ -2097,6 +2116,11 @@
   <div class="rotate-sub" data-key="rotate.sub">This guide works best in landscape. Turn your phone sideways to continue.</div>
 </div>
 
+<!-- ── Image Lightbox ── -->
+<div id="img-lightbox" onclick="closeImage()">
+  <img id="img-lightbox-img" src="" alt="">
+</div>
+
 <!-- ── Secret Menu ── -->
 <div class="secret-menu-overlay" id="secret-menu-overlay" onclick="closeSecretMenu(event)">
   <div class="secret-menu-box" onclick="event.stopPropagation()">
@@ -2258,13 +2282,14 @@ function buildContentCards() {
   if (w && w.hourly && w.hourly.length) {
     const currentHour = new Date().getHours().toString().padStart(2, '0') + ':00';
     const slot = w.hourly.find(h => h.hour === currentHour) || w.hourly[0];
-    if (slot && slot.temp != null) tempVal = Math.round(slot.temp);
+    if (slot && slot.temp_f != null) tempVal = Math.round(slot.temp_f);
   }
+  const cVal = tempVal != null ? toC(tempVal) : null;
   const weatherHeadline = tempVal != null ? {
-    en: `${tempVal}° in Miami right now`,
-    es: `${tempVal}° en Miami ahora mismo`,
-    pt: `${tempVal}° em Miami agora`,
-    fr: `${tempVal}° à Miami en ce moment`,
+    en: `${tempVal}°F (${cVal}°C) in Miami right now`,
+    es: `${tempVal}°F (${cVal}°C) en Miami ahora mismo`,
+    pt: `${tempVal}°F (${cVal}°C) em Miami agora`,
+    fr: `${tempVal}°F (${cVal}°C) à Miami en ce moment`,
   } : {
     en: 'Miami weather right now',
     es: 'El tiempo en Miami ahora',
@@ -2612,7 +2637,7 @@ function renderDriver() {
   const bioInitial = document.getElementById('dp-bio-initial');
   if (bioInitial) bioInitial.textContent = (d.name || 'A')[0];
   if (d.photo) {
-    document.getElementById('dp-bio-photo').innerHTML = `<img src="${d.photo}" alt="">`;
+    document.getElementById('dp-bio-photo').innerHTML = `<img src="${d.photo}" alt="" onclick="openImage(this.src)" style="cursor:zoom-in">`;
   }
   document.getElementById('dp-bio-name').textContent = d.name || '';
   document.getElementById('dp-bio-from').textContent = tx(d.fromLine);
@@ -2686,7 +2711,7 @@ function renderDriver() {
     document.getElementById('dp-pets-grid').innerHTML = items.map(p => `
       <div class="dp-pet">
         <div class="dp-pet-photo ${p.species || 'dog'}">
-          ${p.photo ? `<img src="${p.photo}" alt="">` : `<div class="dp-pet-emoji">${petEmoji(p.species)}</div>`}
+          ${p.photo ? `<img src="${p.photo}" alt="" onclick="openImage(this.src)" style="cursor:zoom-in">` : `<div class="dp-pet-emoji">${petEmoji(p.species)}</div>`}
         </div>
         <div class="dp-pet-name">${p.name || ''}</div>
         <div class="dp-pet-desc">${tx(p.description)}</div>
@@ -3100,7 +3125,7 @@ function buildHeroHTML(v) {
     : v.sponsored
       ? `<div class="gp-hero-tag"><i class="ti ti-star"></i>${t('guide.sponsored')||'Sponsored'}</div>`
       : '';
-  const photoBg = v.photo ? `<img src="${v.photo}" alt="">` : '';
+  const photoBg = v.photo ? `<img src="${v.photo}" alt="" onclick="openImage(this.src)" style="cursor:zoom-in">` : '';
   const metaBits = [v.neighborhood, capitalize(v.category), priceStr, distStr].filter(Boolean);
   const metaHTML = metaBits.map((bit, i) => i === 0 ? bit : `<span class="dot"></span>${bit}`).join('');
 
@@ -3160,6 +3185,8 @@ function openVenueSheet(venueId) {
     const img = document.createElement('img');
     img.src = v.photo;
     img.alt = '';
+    img.style.cursor = 'zoom-in';
+    img.onclick = () => openImage(v.photo);
     photo.insertBefore(img, photo.firstChild);
   }
 
@@ -3225,7 +3252,7 @@ function buildVenueCard(v) {
     ? `<span class="venue-dist"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles') || 'mi'}</span>`
     : '';
 
-  const featBadge = v.featured
+  const featBadge = v.sponsored
     ? `<div class="featured-badge"><i class="ti ti-star"></i><span>${t('guide.sponsored') || 'Sponsored'}</span></div>` : '';
 
   const pickBadge = v.abdullahsPick
@@ -3310,7 +3337,7 @@ function buildEventCard(e) {
   const hi = e.image ? fullResImage(e.image) : '';
   card.className = hi ? 'event-card has-photo' : 'event-card';
   const photoBand = hi
-    ? `<div class="event-photo">
+    ? `<div class="event-photo" onclick="openImage('${hi}')" style="cursor:zoom-in">
          <img class="event-photo-bg" src="${hi}" alt="" aria-hidden="true">
          <img class="event-photo-fg" src="${hi}" alt="" loading="lazy" data-thumb="${e.image}" onerror="restoreEventThumb(this)">
        </div>`
@@ -3340,6 +3367,9 @@ function buildEventCard(e) {
 // ════════════════════════════════════════════════════════════
 // WEATHER RENDER
 // ════════════════════════════════════════════════════════════
+const toC = (f) => Math.round((f - 32) * 5 / 9);
+const dualTemp = (f) => `${Math.round(f)}°F (${toC(f)}°C)`;
+
 function renderWeather() {
   if (!CONTENT) return;
   const w = CONTENT.weather;
@@ -3385,8 +3415,8 @@ function renderWeather() {
           <div class="current-label">Miami · ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} reading</div>
           <div class="current-top">
             <div>
-              <div class="current-temp">${Math.round(hourData.temp_f)}°</div>
-              <div class="current-desc">${w.current.description[lang] || w.current.description.en} · ${t('weather.feelsLike') || 'Feels like'} ${Math.round(w.current.feels_f)}°</div>
+              <div class="current-temp">${Math.round(hourData.temp_f)}°<span style="font-size:22px;font-weight:400;opacity:0.6"> (${toC(hourData.temp_f)}°C)</span></div>
+              <div class="current-desc">${w.current.description[lang] || w.current.description.en} · ${t('weather.feelsLike') || 'Feels like'} ${dualTemp(w.current.feels_f)}</div>
             </div>
             <div style="font-size:40px;opacity:0.85">${WEATHER_ICONS[w.current.weathercode] || '🌤️'}</div>
           </div>
@@ -3411,11 +3441,11 @@ function renderWeather() {
           <div class="range-temps">
             <div>
               <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:2px">${t('weather.high') || 'High'}</div>
-              <div class="range-high">${today.high_f}°</div>
+              <div class="range-high">${today.high_f}°<span style="font-size:13px;font-weight:400;opacity:0.65"> (${toC(today.high_f)}°C)</span></div>
             </div>
             <div style="padding-bottom:5px">
               <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:2px">${t('weather.low') || 'Low'}</div>
-              <div class="range-low">${today.low_f}°</div>
+              <div class="range-low">${today.low_f}°<span style="font-size:13px;font-weight:400;opacity:0.65"> (${toC(today.low_f)}°C)</span></div>
             </div>
             <div class="range-icon">${WEATHER_ICONS[today.weathercode] || '🌤️'}</div>
           </div>
@@ -3452,8 +3482,8 @@ function renderWeather() {
         <div class="day-name ${nameCls}">${dayName}</div>
         <div class="day-icon">${WEATHER_ICONS[f.weathercode] || '🌤️'}</div>
         <div class="day-desc">${f.description[lang] || f.description.en}</div>
-        <div class="day-high">${f.high_f}°</div>
-        <div class="day-low">${f.low_f}°</div>
+        <div class="day-high">${f.high_f}°<span style="font-size:10px;font-weight:400;opacity:0.6"> ${toC(f.high_f)}°C</span></div>
+        <div class="day-low">${f.low_f}°<span style="font-size:10px;font-weight:400;opacity:0.6"> ${toC(f.low_f)}°C</span></div>
         <div class="day-rain"><i class="ti ti-droplet"></i>${f.rain_chance}%</div>
       </div>`;
   }).join('');
@@ -5047,6 +5077,21 @@ async function openAnalyticsOverlay() {
 function closeAnalyticsOverlay(e) {
   if (e && e.target !== document.getElementById('analytics-overlay')) return;
   document.getElementById('analytics-overlay').classList.remove('visible');
+}
+
+// ════════════════════════════════════════════════════════════
+// IMAGE LIGHTBOX (#35)
+// ════════════════════════════════════════════════════════════
+function openImage(src) {
+  if (!src) return;
+  const lb = document.getElementById('img-lightbox');
+  const img = document.getElementById('img-lightbox-img');
+  img.src = src;
+  lb.classList.add('visible');
+}
+
+function closeImage() {
+  document.getElementById('img-lightbox').classList.remove('visible');
 }
 
 // ════════════════════════════════════════════════════════════

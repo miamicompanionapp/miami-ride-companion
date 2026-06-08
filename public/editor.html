@@ -476,6 +476,24 @@
           </select>
         </div>
         <div style="font-size:11px;color:var(--muted);margin-top:8px">Tip: swap this through the day — different pick for breakfast vs. dinner crowd. Leave on Auto to let GPS decide.</div>
+        <div style="margin-top:16px;border-top:0.5px solid var(--border);padding-top:14px">
+          <div style="font-size:12px;font-weight:600;color:var(--heading);margin-bottom:10px">Featured mini cards <span style="font-weight:400;color:var(--muted)">(the 3 cards under the hero)</span></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <div class="field" style="margin:0;flex:1;min-width:140px">
+              <label style="font-size:10px">Slot 1</label>
+              <select id="mini-slot-0" onchange="saveFeaturedMinis()" style="font-size:12px"></select>
+            </div>
+            <div class="field" style="margin:0;flex:1;min-width:140px">
+              <label style="font-size:10px">Slot 2</label>
+              <select id="mini-slot-1" onchange="saveFeaturedMinis()" style="font-size:12px"></select>
+            </div>
+            <div class="field" style="margin:0;flex:1;min-width:140px">
+              <label style="font-size:10px">Slot 3</label>
+              <select id="mini-slot-2" onchange="saveFeaturedMinis()" style="font-size:12px"></select>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:8px">Leave all three on Auto to fall back to the 3 nearest Local Favorites.</div>
+        </div>
       </div>
 
       <div class="card">
@@ -799,7 +817,11 @@
       </div>
       <div class="toggle-row" style="padding:0;gap:8px">
         <button class="toggle" id="vm-featured-toggle" onclick="this.classList.toggle('on')"></button>
-        <div><div class="toggle-lbl" style="font-size:12px">Featured (Sponsored) 💛</div></div>
+        <div><div class="toggle-lbl" style="font-size:12px">Featured 🏷️ (gold border)</div></div>
+      </div>
+      <div class="toggle-row" style="padding:0;gap:8px">
+        <button class="toggle" id="vm-sponsored-toggle" onclick="this.classList.toggle('on')"></button>
+        <div><div class="toggle-lbl" style="font-size:12px">Sponsored 💛 (shows badge)</div></div>
       </div>
     </div>
     <div style="display:flex;gap:8px;margin-top:16px;justify-content:flex-end">
@@ -872,6 +894,7 @@ async function loadContent() {
     renderDriverEditor();
     renderAppSettings();
     renderFeaturedDropdown();
+    renderFeaturedMiniDropdowns();
     updateLastPub();
   } catch (e) {
     showToast('Could not load content.json — check connection', 'error');
@@ -995,6 +1018,7 @@ function openVenueModal(id) {
   document.getElementById('vm-note-en').value = v ? (v.abdullahsNote ? v.abdullahsNote.en || '' : '') : '';
   document.getElementById('vm-pick-toggle').classList.toggle('on', v ? !!v.abdullahsPick : false);
   document.getElementById('vm-featured-toggle').classList.toggle('on', v ? !!v.featured : false);
+  document.getElementById('vm-sponsored-toggle').classList.toggle('on', v ? !!v.sponsored : false);
   modal.classList.add('open');
 }
 
@@ -1020,7 +1044,7 @@ function saveVenue() {
     photo: document.getElementById('vm-photo').value.trim() || '',
     abdullahsPick: document.getElementById('vm-pick-toggle').classList.contains('on'),
     featured: document.getElementById('vm-featured-toggle').classList.contains('on'),
-    sponsored: document.getElementById('vm-featured-toggle').classList.contains('on'),
+    sponsored: document.getElementById('vm-sponsored-toggle').classList.contains('on'),
     description: {
       en: document.getElementById('vm-desc-en').value.trim(),
       es: document.getElementById('vm-desc-es').value.trim(),
@@ -1042,6 +1066,7 @@ function saveVenue() {
 
   renderVenueList();
   renderFeaturedDropdown();
+  renderFeaturedMiniDropdowns();
   closeVenueModal();
   showToast('Venue saved — hit Publish to go live');
 }
@@ -1050,8 +1075,11 @@ function deleteVenue(id) {
   if (!confirm('Delete this venue?')) return;
   CONTENT.guide.venues = CONTENT.guide.venues.filter(v => v.id !== id);
   if (CONTENT.guide.featuredVenueId === id) CONTENT.guide.featuredVenueId = '';
+  if (Array.isArray(CONTENT.guide.featuredMiniIds))
+    CONTENT.guide.featuredMiniIds = CONTENT.guide.featuredMiniIds.map(mid => mid === id ? '' : mid);
   renderVenueList();
   renderFeaturedDropdown();
+  renderFeaturedMiniDropdowns();
   showToast('Venue deleted');
 }
 
@@ -1073,6 +1101,30 @@ function saveFeaturedVenue(id) {
   if (!CONTENT.guide) CONTENT.guide = {};
   CONTENT.guide.featuredVenueId = id || '';
   showToast(id ? 'Featured venue updated — hit Publish to go live' : 'Featured set to Auto — hit Publish to go live');
+}
+
+function renderFeaturedMiniDropdowns() {
+  if (!CONTENT || !CONTENT.guide) return;
+  const venues = CONTENT.guide.venues || [];
+  const ids = Array.isArray(CONTENT.guide.featuredMiniIds) ? CONTENT.guide.featuredMiniIds : ['', '', ''];
+  const optionsHTML = '<option value="">(Auto)</option>' +
+    venues.map(v => `<option value="${v.id}">${v.name} — ${v.neighborhood}</option>`).join('');
+  [0, 1, 2].forEach(i => {
+    const sel = document.getElementById(`mini-slot-${i}`);
+    if (!sel) return;
+    sel.innerHTML = optionsHTML;
+    sel.value = ids[i] || '';
+  });
+}
+
+function saveFeaturedMinis() {
+  if (!CONTENT.guide) CONTENT.guide = {};
+  const ids = [0, 1, 2].map(i => {
+    const sel = document.getElementById(`mini-slot-${i}`);
+    return sel ? sel.value : '';
+  });
+  CONTENT.guide.featuredMiniIds = ids;
+  showToast('Mini cards updated — hit Save & Publish to go live');
 }
 
 function switchAiLang(lang, btn) {
