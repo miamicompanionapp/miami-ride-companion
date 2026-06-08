@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Marcellus&family=Poiret+One&family=Playfair+Display:wght@500;600&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 
   <style>
     /* ── Reset & Root ─────────────────────────────────────────── */
@@ -156,6 +157,112 @@
     }
     .page.active { display: flex; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* ── MAP PAGE ─────────────────────────────────────────────── */
+    #page-map { padding: 0; position: relative; overflow: hidden; }
+    #map { width: 100%; height: 100%; }
+    /* GPS dot */
+    .map-gps-wrapper { position: relative; width: 24px; height: 24px; }
+    .map-gps-pulse {
+      position: absolute; inset: 0; border-radius: 50%;
+      background: rgba(25,160,168,0.25);
+      animation: mapGpsPulse 2s ease-in-out infinite;
+    }
+    .map-gps-dot {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 13px; height: 13px; border-radius: 50%;
+      background: var(--teal); border: 2.5px solid #fff;
+      box-shadow: 0 0 8px rgba(25,160,168,0.5); z-index: 2;
+    }
+    .map-gps-cone {
+      position: absolute; top: -18px; left: 50%;
+      transform: translateX(-50%);
+      width: 0; height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 18px solid rgba(25,160,168,0.5);
+      transform-origin: 50% 100%; z-index: 1;
+      opacity: 0; transition: opacity 0.4s;
+    }
+    @keyframes mapGpsPulse {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(2.2); opacity: 0; }
+    }
+    /* Overlays */
+    .map-badge-top {
+      position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+      z-index: 500; white-space: nowrap; pointer-events: none;
+    }
+    .map-badge-pill {
+      display: flex; align-items: center; gap: 7px;
+      background: rgba(12,26,46,0.82); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 20px;
+      padding: 6px 14px; font-size: 13px; color: rgba(255,255,255,0.55);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .map-badge-pill.cached { border-color: rgba(25,160,168,0.35); color: var(--teal); }
+    .map-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+    .map-zoom-strip {
+      position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+      z-index: 500; display: flex; flex-direction: column;
+      background: rgba(12,26,46,0.82); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; overflow: hidden;
+    }
+    .map-icon-btn {
+      width: 42px; height: 42px; background: none; border: none;
+      color: rgba(255,255,255,0.65); font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background 0.15s;
+    }
+    .map-icon-btn:active { background: rgba(25,160,168,0.25); color: #fff; }
+    .map-zoom-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 0 8px; }
+    .map-recenter-btn {
+      position: absolute; bottom: 22px; right: 64px; z-index: 500;
+      background: var(--teal); border: none; border-radius: 11px;
+      color: #fff; font-family: inherit; font-size: 13px; font-weight: 600;
+      padding: 9px 16px; display: flex; align-items: center; gap: 7px;
+      cursor: pointer; box-shadow: 0 4px 16px rgba(25,160,168,0.4);
+      opacity: 0; transform: translateY(8px);
+      transition: opacity 0.25s, transform 0.25s; pointer-events: none;
+    }
+    .map-recenter-btn.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .map-speed-badge {
+      position: absolute; bottom: 22px; left: 14px; z-index: 500;
+      background: rgba(12,26,46,0.82); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;
+      padding: 9px 14px; text-align: center;
+    }
+    .map-speed-val { font-size: 22px; font-weight: 700; color: #fff; line-height: 1; }
+    .map-speed-unit { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+    .map-compass-badge {
+      position: absolute; bottom: 22px; left: 96px; z-index: 500;
+      background: rgba(12,26,46,0.82); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;
+      padding: 9px 12px; display: flex; align-items: center; gap: 8px;
+    }
+    .map-compass-ring {
+      width: 30px; height: 30px; border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.15);
+      position: relative; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .map-compass-needle {
+      position: absolute; top: 3px; left: 50%; margin-left: -3px;
+      width: 0; height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-bottom: 11px solid var(--teal);
+      transform-origin: 3px 11px; transition: transform 0.3s;
+    }
+    .map-compass-dir { font-size: 13px; font-weight: 600; color: #fff; }
+    .map-compass-deg { font-size: 10px; color: rgba(255,255,255,0.4); }
+    /* Leaflet theme overrides */
+    .leaflet-control-attribution {
+      background: rgba(12,26,46,0.7) !important;
+      color: rgba(255,255,255,0.4) !important; font-size: 10px !important;
+    }
+    .leaflet-control-attribution a { color: var(--teal) !important; }
 
     /* ── GUIDE PAGE ───────────────────────────────────────────── */
     .guide-header { padding: 18px 22px 0; flex-shrink: 0; }
@@ -1540,6 +1647,10 @@
           <i class="ti ti-device-gamepad-2"></i>
           <span data-key="nav.games">Games</span>
         </div>
+        <div class="nav-link" id="nav-map" onclick="switchTab('map')">
+          <i class="ti ti-map-2"></i>
+          <span data-key="nav.map">Map</span>
+        </div>
       </nav>
 
       <div class="driver-bubble" id="nav-driver" onclick="switchTab('driver')">
@@ -1764,6 +1875,43 @@
               </div>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <!-- MAP PAGE -->
+      <div class="page" id="page-map">
+        <div id="map"></div>
+        <!-- Status badge — top center -->
+        <div class="map-badge-top">
+          <div class="map-badge-pill" id="map-status-pill">
+            <span class="map-badge-dot"></span>
+            <span id="map-status-label">Live tiles</span>
+          </div>
+        </div>
+        <!-- Zoom controls — right -->
+        <div class="map-zoom-strip">
+          <button class="map-icon-btn" id="map-zoom-in" aria-label="Zoom in"><i class="ti ti-plus"></i></button>
+          <div class="map-zoom-divider"></div>
+          <button class="map-icon-btn" id="map-zoom-out" aria-label="Zoom out"><i class="ti ti-minus"></i></button>
+        </div>
+        <!-- Re-center — bottom right, appears on pan -->
+        <button class="map-recenter-btn" id="map-recenter">
+          <i class="ti ti-current-location"></i> Re-center
+        </button>
+        <!-- Speed — bottom left -->
+        <div class="map-speed-badge">
+          <div class="map-speed-val" id="map-speed-val">—</div>
+          <div class="map-speed-unit">mph</div>
+        </div>
+        <!-- Compass — bottom left, next to speed -->
+        <div class="map-compass-badge">
+          <div class="map-compass-ring">
+            <div class="map-compass-needle" id="map-compass-needle"></div>
+          </div>
+          <div>
+            <div class="map-compass-dir" id="map-compass-dir">—</div>
+            <div class="map-compass-deg" id="map-compass-deg">—</div>
           </div>
         </div>
       </div>
@@ -2284,6 +2432,10 @@
     <div class="analytics-section">
       <div class="analytics-section-title">Tab Engagement</div>
       <div id="anl-tab-bars"></div>
+    </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">QR scans by type</div>
+      <ul class="anl-venues-list" id="anl-qr-breakdown"></ul>
     </div>
     <div class="analytics-section">
       <div class="analytics-section-title">Games — opened vs played</div>
@@ -2911,6 +3063,103 @@ function renderInlineQR(selector, text) {
 }
 
 // ════════════════════════════════════════════════════════════
+// MAP
+// ════════════════════════════════════════════════════════════
+let mapInstance = null, mapGpsMarker = null, mapAutoCenter = true;
+let mapCurrentHeading = null, mapCurrentSpeedMph = null;
+const MAP_MIAMI = [25.7617, -80.1918];
+
+function initMap() {
+  if (mapInstance) { mapInstance.invalidateSize(); return; }
+
+  mapInstance = L.map('map', {
+    center: userLat ? [userLat, userLng] : MAP_MIAMI,
+    zoom: 14, minZoom: 10, maxZoom: 16,
+    zoomControl: false, attributionControl: true
+  });
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 16
+  }).addTo(mapInstance);
+
+  const gpsIconHtml = `
+    <div class="map-gps-wrapper">
+      <div class="map-gps-pulse"></div>
+      <div class="map-gps-dot"></div>
+      <div class="map-gps-cone" id="map-gps-cone"></div>
+    </div>`;
+  const gpsIcon = L.divIcon({ html: gpsIconHtml, className: '', iconSize: [24, 24], iconAnchor: [12, 12] });
+  mapGpsMarker = L.marker(userLat ? [userLat, userLng] : MAP_MIAMI, { icon: gpsIcon, zIndexOffset: 1000 }).addTo(mapInstance);
+
+  mapInstance.on('dragstart', () => {
+    mapAutoCenter = false;
+    document.getElementById('map-recenter').classList.add('visible');
+  });
+
+  document.getElementById('map-zoom-in').addEventListener('click', () => mapInstance.zoomIn());
+  document.getElementById('map-zoom-out').addEventListener('click', () => mapInstance.zoomOut());
+  document.getElementById('map-recenter').addEventListener('click', () => {
+    mapAutoCenter = true;
+    document.getElementById('map-recenter').classList.remove('visible');
+    if (userLat) mapInstance.flyTo([userLat, userLng], mapInstance.getZoom(), { duration: 0.6 });
+  });
+
+  checkMapTileStatus();
+  if (userLat) updateMapPosition();
+}
+
+function updateMapPosition() {
+  if (!mapInstance || !userLat) return;
+  const latlng = [userLat, userLng];
+  mapGpsMarker.setLatLng(latlng);
+
+  const cone = document.getElementById('map-gps-cone');
+  if (cone) {
+    if (mapCurrentHeading !== null) {
+      cone.style.transform = `translateX(-50%) rotate(${mapCurrentHeading}deg)`;
+      cone.style.opacity = '1';
+    } else {
+      cone.style.opacity = '0';
+    }
+  }
+
+  if (mapAutoCenter) {
+    mapInstance.setView(latlng, mapInstance.getZoom(), { animate: true, duration: 0.5 });
+  }
+
+  const speedEl = document.getElementById('map-speed-val');
+  if (speedEl) speedEl.textContent = mapCurrentSpeedMph !== null ? mapCurrentSpeedMph : '—';
+
+  if (mapCurrentHeading !== null) {
+    const needle = document.getElementById('map-compass-needle');
+    if (needle) needle.style.transform = `rotate(${mapCurrentHeading}deg)`;
+    const dirs = ['N','NE','E','SE','S','SW','W','NW'];
+    const dir = dirs[Math.round(mapCurrentHeading / 45) % 8];
+    const dirEl = document.getElementById('map-compass-dir');
+    const degEl = document.getElementById('map-compass-deg');
+    if (dirEl) dirEl.textContent = dir;
+    if (degEl) degEl.textContent = Math.round(mapCurrentHeading) + '°';
+  }
+}
+
+async function checkMapTileStatus() {
+  const label = document.getElementById('map-status-label');
+  const pill = document.getElementById('map-status-pill');
+  if (!label || !('caches' in window)) return;
+  try {
+    const cache = await caches.open('miami-map-tiles-v1');
+    const keys = await cache.keys();
+    if (keys.length > 0) {
+      label.textContent = `Offline ready · ${keys.length.toLocaleString()} tiles`;
+      pill.classList.add('cached');
+    } else {
+      label.textContent = 'Live tiles · no offline cache';
+    }
+  } catch { /* caches unavailable */ }
+}
+
+// ════════════════════════════════════════════════════════════
 // SUBTITLE ROTATOR
 // ════════════════════════════════════════════════════════════
 // Cycles the greeting subtitle through engaging variants every 15s.
@@ -3040,6 +3289,7 @@ function switchTab(tab) {
     }
   }
   currentTab = tab;
+  if (tab === 'map') initMap();
   resetInactivity();
   logTap('tab_' + tab);
 }
@@ -3052,8 +3302,11 @@ function startGPS() {
   navigator.geolocation.watchPosition(pos => {
     userLat = pos.coords.latitude;
     userLng = pos.coords.longitude;
+    mapCurrentHeading = pos.coords.heading;
+    mapCurrentSpeedMph = pos.coords.speed !== null ? Math.round(pos.coords.speed * 2.237) : null;
     updateLocationDisplay();
     if (currentTab === 'guide') renderGuide();
+    if (currentTab === 'map') updateMapPosition();
   }, () => {
     document.getElementById('location-display').textContent = 'Miami, FL';
   }, { enableHighAccuracy: true, maximumAge: 30000 });
@@ -5318,6 +5571,13 @@ const GAME_LABEL = {
   trivia: 'Trivia', tap: 'Tap Race', word: 'Word', spin: 'Spin', image: 'Guess Image',
   ttt: 'Tic-Tac-Toe', c4: 'Connect Four', duel: 'Duel', buzzer: 'Buzzer',
 };
+// QR scan types (the `type` passed to openQR → key `qr_<type>`). `hero_qr_<id>`
+// is a redundant second log of a hero/featured venue scan — it's tracked as a
+// subset of "Venue page", never added to the QR total again.
+const QR_LABEL = {
+  app: 'App share', venue: 'Venue page', event: 'Event',
+  'driver-phone': 'Save my number', 'driver-thumbtack': 'Thumbtack reviews',
+};
 
 function venueLabel(id) {
   const v = (CONTENT?.guide?.venues || []).find(x => x.id === id);
@@ -5327,7 +5587,7 @@ function venueLabel(id) {
 // Friendly label for an entry-point key (the first in-app tap of a session).
 function entryLabel(key) {
   if (!key) return 'Unknown';
-  const TAB = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver page' };
+  const TAB = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_map: 'Map', tab_driver: 'Driver page' };
   if (TAB[key]) return TAB[key];
   let m;
   if ((m = key.match(/^venue_sheet_(.+)$/))) return venueLabel(m[1]) + ' (details)';
@@ -5345,24 +5605,33 @@ function entryLabel(key) {
 
 // Shared behavioural rollup used by the in-app peek (and mirrored in editor.html).
 function summarizeForPeek({ sessions, taps, cycles = 0 }) {
-  const TAB_LABEL = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver' };
-  const tabCounts = { 'City Guide': 0, Weather: 0, Games: 0, Driver: 0 };
+  const TAB_LABEL = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_map: 'Map', tab_driver: 'Driver' };
+  const tabCounts = { 'City Guide': 0, Weather: 0, Games: 0, Map: 0, Driver: 0 };
   const venueCounts = {};
   const gameOpens = {}, tapCounts = {};
   const driver = { pets: {}, photo: 0, qrThumbtack: 0, qrPhone: 0 };
-  let qrTaps = 0;
+  const qrCounts = {};
+  let qrTaps = 0, heroQr = 0;
   for (const tp of taps) {
     const k = tp.key || '';
     tapCounts[k] = (tapCounts[k] || 0) + 1;
     if (TAB_LABEL[k]) tabCounts[TAB_LABEL[k]]++;
-    else if (k === 'qr_driver-thumbtack') { qrTaps++; driver.qrThumbtack++; }
-    else if (k === 'qr_driver-phone')     { qrTaps++; driver.qrPhone++; }
-    else if (k.startsWith('qr_') || k.startsWith('hero_qr_')) qrTaps++;
+    else if (k.startsWith('qr_')) {
+      const type = k.slice(3);
+      qrCounts[type] = (qrCounts[type] || 0) + 1;
+      qrTaps++;
+      if (type === 'driver-thumbtack') driver.qrThumbtack++;
+      else if (type === 'driver-phone') driver.qrPhone++;
+    }
+    else if (k.startsWith('hero_qr_')) heroQr++;  // subset of qr_venue, not re-counted
     else if (k === 'driver_photo') driver.photo++;
     else if (k.startsWith('driver_pet_')) driver.pets[k.slice(11)] = (driver.pets[k.slice(11)] || 0) + 1;
     else { const m = k.match(/^venue_(?!sheet_)(.+)$/); if (m) venueCounts[m[1]] = (venueCounts[m[1]] || 0) + 1; }
     const g = k.match(/^game_open_(.+)$/); if (g) gameOpens[g[1]] = (gameOpens[g[1]] || 0) + 1;
   }
+  const qrBreakdown = Object.entries(qrCounts)
+    .map(([type, n]) => [QR_LABEL[type] || type, n])
+    .sort((a, b) => b[1] - a[1]);
   const langCounts = {};
   for (const l of (sessions.length ? sessions.map(s => s.lang) : taps.map(t => t.lang))) {
     const k = l || 'en'; langCounts[k] = (langCounts[k] || 0) + 1;
@@ -5396,7 +5665,7 @@ function summarizeForPeek({ sessions, taps, cycles = 0 }) {
   const byDay = Object.entries(dayCounts).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 7);
 
   const engagementPct = cycles ? Math.round(sessions.length / cycles * 100) : null;
-  return { count: sessions.length, cycles, engagementPct, avgDuration, qrTaps,
+  return { count: sessions.length, cycles, engagementPct, avgDuration, qrTaps, qrBreakdown, heroQr,
            tabCounts, langCounts, venues, entryPoints, games, driver, byDay };
 }
 
@@ -5437,6 +5706,8 @@ async function openAnalyticsOverlay() {
   renderAnlBars('anl-lang-bars', Object.entries(s.langCounts).map(([k, v]) => [LANG_LABEL_PEEK[k] || k, v]));
 
   renderAnlList('anl-entry', s.entryPoints.map(([label, n]) => [label, n + (n === 1 ? ' start' : ' starts')]), 'No sessions yet');
+  renderAnlList('anl-qr-breakdown', s.qrBreakdown.map(([label, n]) =>
+    [label === 'Venue page' && s.heroQr ? `Venue page (${s.heroQr} from hero)` : label, n + ' scans']), 'No QR scans yet');
   renderAnlList('anl-games', s.games.map(g =>
     [g.label, g.plays == null ? `${g.opens} opened` : `${g.plays}/${g.opens} played`]), 'No games opened yet');
 
@@ -5632,5 +5903,6 @@ function logTap(key) {
 }
 </script>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
 </body>
 </html>

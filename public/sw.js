@@ -1,7 +1,10 @@
 // Miami Ride Companion — Service Worker
 // Version this string whenever you deploy a significant update.
 // Changing it forces all clients to re-cache everything fresh.
-const CACHE_VERSION = 'miami-ride-v1.27.0';
+const CACHE_VERSION = 'miami-ride-v1.28.0';
+
+// Tile cache lives separately so it survives app cache version bumps.
+const TILE_CACHE_NAME = 'miami-map-tiles-v1';
 
 // ─── Files to pre-cache on install ───────────────────────────────────────────
 // These are fetched and stored the moment the SW installs (first app open on Wi-Fi).
@@ -21,6 +24,9 @@ const PRECACHE_URLS = [
   'https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/fonts/tabler-icons.woff2',
   // QR code generator
   'https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js',
+  // Leaflet (map tab)
+  'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css',
+  'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js',
   // Game images — stored locally, cached offline
   '/images/games/statue-of-liberty.jpg',
   '/images/games/eiffel-tower.jpg',
@@ -101,7 +107,7 @@ self.addEventListener('activate', event => {
       .then(cacheNames => {
         return Promise.all(
           cacheNames
-            .filter(name => name !== CACHE_VERSION)
+            .filter(name => name !== CACHE_VERSION && name !== TILE_CACHE_NAME)
             .map(name => {
               console.log(`[SW] Deleting old cache: ${name}`);
               return caches.delete(name);
@@ -134,6 +140,23 @@ self.addEventListener('fetch', event => {
         }
         return new Response('', { status: 503, statusText: 'Offline' });
       })
+    );
+    return;
+  }
+
+  // OSM map tiles: cache-first in dedicated tile cache so they survive app
+  // version bumps and can be pre-warmed by the driver dashboard.
+  if (url.hostname === 'tile.openstreetmap.org') {
+    event.respondWith(
+      caches.open(TILE_CACHE_NAME).then(tileCache =>
+        tileCache.match(event.request).then(cached => {
+          if (cached) return cached;
+          return fetch(event.request).then(resp => {
+            if (resp && resp.ok) tileCache.put(event.request, resp.clone());
+            return resp;
+          }).catch(() => new Response('', { status: 503, statusText: 'Offline' }));
+        })
+      )
     );
     return;
   }
@@ -204,10 +227,42 @@ self.addEventListener('fetch', event => {
   );
 });
 
-// ─── Message: force cache refresh ────────────────────────────────────────────
-// The passenger app can send { type: 'SKIP_WAITING' } to trigger an update.
+// ─── Message: force cache refresh / tile pre-warm ────────────────────────────
 self.addEventListener('message', event => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
+    return;
+  }
+  // { type: 'CACHE_TILES', tiles: [{z,x,y}, ...] }
+  // Sent by the driver dashboard to pre-warm offline map tiles.
+  if (event.data && event.data.type === 'CACHE_TILES') {
+    event.waitUntil(cacheTilesJob(event.data.tiles, event.source));
   }
 });
+
+async function cacheTilesJob(tiles, client) {
+  const cache = await caches.open(TILE_CACHE_NAME);
+  const total = tiles.length;
+  let done = 0, cached = 0;
+  const BATCH = 6; // concurrent requests per batch
+
+  for (let i = 0; i < tiles.length; i += BATCH) {
+    const batch = tiles.slice(i, i + BATCH);
+    await Promise.allSettled(batch.map(async ({ z, x, y }) => {
+      const url = `https://tile.openstreetmap.org/${z}/${x}/${y}.png`;
+      const existing = await cache.match(url);
+      if (existing) {
+        cached++;
+      } else {
+        try {
+          const resp = await fetch(url, { credentials: 'omit' });
+          if (resp && resp.ok) { await cache.put(url, resp); cached++; }
+        } catch { /* skip failed tiles */ }
+      }
+      done++;
+    }));
+    try { client.postMessage({ type: 'CACHE_TILES_PROGRESS', done, total }); } catch {}
+    await new Promise(r => setTimeout(r, 40)); // polite rate limit
+  }
+  try { client.postMessage({ type: 'CACHE_TILES_DONE', cached, total }); } catch {}
+}

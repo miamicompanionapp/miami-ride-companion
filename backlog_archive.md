@@ -7,6 +7,27 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #38 — Offline map tab for passengers  *(DONE 2026-06-08)*
+Added a full-screen Map tab to the passenger app powered by Leaflet + OpenStreetMap.
+- MAP TAB: 4th nav item in sidebar (City Guide / Weather / Games / Map), full-bleed Leaflet map.
+- GPS DOT + DIRECTION CONE: live pulsing dot tracks passenger position; cone rotates to show
+  direction of travel using `coords.heading` (fades out when stationary).
+- AUTO-CENTER: map follows GPS by default; panning breaks follow-mode and shows a teal
+  "Re-center" button that floats up from the bottom. Resets to auto-follow on next tab switch.
+- SPEED + COMPASS HUD: bottom-left badges show mph and compass direction/degrees from GPS.
+- ZOOM LIMITS: min 10 (region), max 16 (street detail); custom +/- buttons, no default Leaflet zoom control.
+- OFFLINE TILE CACHE: separate `miami-map-tiles-v1` SW cache (survives app version bumps).
+  OSM tiles cached on first browse, cache-first thereafter. Status badge turns teal and shows
+  tile count when offline tiles are present.
+- DRIVER DASHBOARD — OFFLINE MAPS PANEL: new section under System in editor.html.
+  Radius slider 10–50 mi (default 30 mi), zoom 10–14, live tile/MB estimate. "Download tiles"
+  sends full tile list to SW via postMessage; progress bar fills as SW reports batches.
+  "Clear cache" wipes tile store. Status card reads live tile count from Cache API.
+- SW v1.28.0: Leaflet CDN assets added to pre-cache; tile download job uses 6 concurrent
+  requests + 40 ms batch delay for polite rate limiting; `event.waitUntil` keeps SW alive
+  during long downloads.
+- Analytics: Map tab tracked in TAB/TAB_LABEL/tabCounts.
+
 ### [X] #37 — Analytics overhaul: real sessions + behavioral metrics  *(DONE 2026-06-08)*
 Reworked analytics so the numbers reflect actual passenger use, not idle loops.
 - SESSION REWORK: a session now opens lazily on the FIRST IN-APP TAP (attractor

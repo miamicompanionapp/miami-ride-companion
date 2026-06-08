@@ -418,6 +418,9 @@
     </div>
 
     <div class="nav-section-label" style="margin-top:8px">System</div>
+    <div class="nav-item" id="nav-offline" onclick="showPanel('offline')">
+      <i class="ti ti-wifi-off"></i><span>Offline Maps</span>
+    </div>
     <div class="nav-item" id="nav-settings" onclick="showPanel('settings')">
       <i class="ti ti-settings"></i><span>Settings</span>
     </div>
@@ -476,13 +479,17 @@
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
         <div class="card">
+          <div class="card-header"><div><div class="card-title">QR scans by type</div><div class="card-sub">Which codes passengers actually scan</div></div></div>
+          <div id="qr-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No QR scans yet</div></div>
+        </div>
+        <div class="card">
           <div class="card-header"><div><div class="card-title">Driver page taps</div><div class="card-sub">Pets, your photo, and the contact QR codes</div></div></div>
           <div id="driver-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No driver-page taps yet</div></div>
         </div>
-        <div class="card">
-          <div class="card-header"><div><div class="card-title">Sessions by day</div><div class="card-sub">Real (tapped) sessions per day</div></div></div>
-          <div id="day-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No sessions yet</div></div>
-        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Sessions by day</div><div class="card-sub">Real (tapped) sessions per day</div></div></div>
+        <div id="day-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No sessions yet</div></div>
       </div>
     </div>
 
@@ -769,6 +776,62 @@
       </div>
     </div>
 
+    <!-- OFFLINE MAPS -->
+    <div class="panel" id="panel-offline">
+      <!-- Status card -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Offline tile cache</div>
+            <div class="card-sub">Map tiles stored on this device for use without internet</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:4px 0">
+          <i class="ti ti-circle-x" id="offline-status-icon" style="font-size:20px;color:rgba(255,255,255,0.25)"></i>
+          <span id="offline-status-text" style="font-size:13px;color:var(--muted)">Loading…</span>
+        </div>
+      </div>
+      <!-- Download config card -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Download offline tiles</div>
+            <div class="card-sub">Covers zoom levels 10–14 (city overview → street level) around Miami</div>
+          </div>
+        </div>
+        <div class="field" style="max-width:320px">
+          <label>Coverage radius</label>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:6px">
+            <input type="range" id="offline-radius" min="10" max="50" step="5" value="30"
+              oninput="updateOfflineEstimate()" style="flex:1">
+            <span id="offline-radius-label" style="font-size:13px;font-weight:600;min-width:60px">30 miles</span>
+          </div>
+          <div style="font-size:12px;color:var(--muted);margin-top:4px" id="offline-estimate">~1,800 tiles · ~27 MB</div>
+        </div>
+        <div class="info-box" style="margin:8px 0">
+          <i class="ti ti-info-circle"></i>
+          <span>Tiles download from OpenStreetMap servers — requires internet. Run this once on Wi-Fi. Existing cached tiles are reused to save bandwidth.</span>
+        </div>
+        <!-- Progress bar (hidden until download starts) -->
+        <div id="offline-progress-wrap" style="display:none;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px">
+            <span id="offline-progress-label">Starting…</span>
+          </div>
+          <div style="height:8px;background:rgba(255,255,255,0.08);border-radius:4px;overflow:hidden">
+            <div id="offline-progress-bar" style="height:100%;background:var(--teal);width:0%;transition:width 0.3s;border-radius:4px"></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-primary" id="offline-download-btn" onclick="downloadOfflineTiles()">
+            <i class="ti ti-download"></i>Download tiles
+          </button>
+          <button class="btn btn-danger" onclick="clearOfflineTiles()">
+            <i class="ti ti-trash"></i>Clear cache
+          </button>
+        </div>
+      </div>
+    </div>
+
   </main>
 </div>
 
@@ -976,6 +1039,7 @@ function showPanel(id) {
   const dot = document.createElement('div');
   dot.className = 'nav-dot';
   navEl.appendChild(dot);
+  if (id === 'offline') { loadOfflineStatus(); updateOfflineEstimate(); }
 }
 
 // ══════════════════════════════════════════════════════
@@ -1714,6 +1778,10 @@ const GAME_LABEL = {
   trivia: 'Trivia', tap: 'Tap Race', word: 'Word', spin: 'Spin', image: 'Guess Image',
   ttt: 'Tic-Tac-Toe', c4: 'Connect Four', duel: 'Duel', buzzer: 'Buzzer',
 };
+const QR_LABEL = {
+  app: 'App share', venue: 'Venue page', event: 'Event',
+  'driver-phone': 'Save my number', 'driver-thumbtack': 'Thumbtack reviews',
+};
 
 function entryLabel(key) {
   if (!key) return 'Unknown';
@@ -1740,14 +1808,20 @@ function summarizeAnalytics({ sessions, taps, cycles = 0 }) {
   const venueCounts = {};
   const gameOpens = {}, tapCounts = {};
   const driver = { pets: {}, photo: 0, qrThumbtack: 0, qrPhone: 0 };
-  let qrTaps = 0;
+  const qrCounts = {};
+  let qrTaps = 0, heroQr = 0;
   for (const tp of taps) {
     const k = tp.key || '';
     tapCounts[k] = (tapCounts[k] || 0) + 1;
     if (TAB_LABEL[k]) tabCounts[TAB_LABEL[k]]++;
-    else if (k === 'qr_driver-thumbtack') { qrTaps++; driver.qrThumbtack++; }
-    else if (k === 'qr_driver-phone')     { qrTaps++; driver.qrPhone++; }
-    else if (k.startsWith('qr_') || k.startsWith('hero_qr_')) qrTaps++;
+    else if (k.startsWith('qr_')) {
+      const type = k.slice(3);
+      qrCounts[type] = (qrCounts[type] || 0) + 1;
+      qrTaps++;
+      if (type === 'driver-thumbtack') driver.qrThumbtack++;
+      else if (type === 'driver-phone') driver.qrPhone++;
+    }
+    else if (k.startsWith('hero_qr_')) heroQr++;  // subset of qr_venue, not re-counted
     else if (k === 'driver_photo') driver.photo++;
     else if (k.startsWith('driver_pet_')) driver.pets[k.slice(11)] = (driver.pets[k.slice(11)] || 0) + 1;
     else { const m = k.match(/^venue_(?!sheet_)(.+)$/); if (m) venueCounts[m[1]] = (venueCounts[m[1]] || 0) + 1; }
@@ -1782,8 +1856,12 @@ function summarizeAnalytics({ sessions, taps, cycles = 0 }) {
   for (const s of sessions) { const d = s.day || (s.startTime || '').split('T')[0] || '—'; dayCounts[d] = (dayCounts[d] || 0) + 1; }
   const byDay = Object.entries(dayCounts).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 7);
 
+  const qrBreakdown = Object.entries(qrCounts)
+    .map(([type, n]) => [QR_LABEL[type] || type, n])
+    .sort((a, b) => b[1] - a[1]);
+
   const engagementPct = cycles ? Math.round(sessions.length / cycles * 100) : null;
-  return { sessions: sessions.length, cycles, engagementPct, avgDuration, qrTaps,
+  return { sessions: sessions.length, cycles, engagementPct, avgDuration, qrTaps, qrBreakdown, heroQr,
            tabCounts, langCounts, topVenues, entryPoints, games, driver, byDay };
 }
 
@@ -1830,6 +1908,8 @@ function renderAnalytics(data) {
   else document.getElementById('venue-tops').innerHTML = '<div style="font-size:12px;color:var(--muted);padding:8px 0">No venue taps yet</div>';
 
   renderKvList('entry-tops', s.entryPoints.map(([label, n]) => [label, n + (n === 1 ? ' start' : ' starts')]), 'No sessions yet');
+  renderKvList('qr-tops', s.qrBreakdown.map(([label, n]) =>
+    [label === 'Venue page' && s.heroQr ? `Venue page (${s.heroQr} from hero)` : label, n + ' scans']), 'No QR scans yet');
   renderKvList('game-funnel', s.games.map(g =>
     [g.label, g.plays == null ? `${g.opens} opened` : `${g.plays}/${g.opens} played · ${g.abandoned} left`]), 'No games opened yet');
 
@@ -2359,6 +2439,114 @@ function showToast(msg, type = 'success') {
   icon.className = type === 'error' ? 'ti ti-alert-circle' : 'ti ti-check';
   toast.className = 'toast show ' + type;
   toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+// ── Offline Maps ──────────────────────────────────────────────────────────────
+const TILE_CACHE = 'miami-map-tiles-v1';
+const MIAMI_LAT = 25.7617, MIAMI_LON = -80.1918;
+let offlineRadius = 30;
+
+function lonToX(lon, z) { return Math.floor((lon + 180) / 360 * (1 << z)); }
+function latToY(lat, z) {
+  const r = lat * Math.PI / 180;
+  return Math.floor((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * (1 << z));
+}
+function xToLon(x, z) { return x / (1 << z) * 360 - 180; }
+function yToLat(y, z) {
+  const n = Math.PI - 2 * Math.PI * y / (1 << z);
+  return 180 / Math.PI * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n)));
+}
+function haversineMi(lat1, lon1, lat2, lon2) {
+  const R = 3958.8, dL = (lat2 - lat1) * Math.PI / 180, dO = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dL/2)**2 + Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) * Math.sin(dO/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function getTiles(centerLat, centerLon, radiusMi, minZ, maxZ) {
+  const tiles = [];
+  for (let z = minZ; z <= maxZ; z++) {
+    const dLat = radiusMi / 69.0;
+    const dLon = radiusMi / (69.0 * Math.cos(centerLat * Math.PI / 180));
+    const x0 = lonToX(centerLon - dLon, z), x1 = lonToX(centerLon + dLon, z);
+    const y0 = latToY(centerLat + dLat, z), y1 = latToY(centerLat - dLat, z);
+    for (let x = x0; x <= x1; x++) {
+      for (let y = y0; y <= y1; y++) {
+        if (haversineMi(centerLat, centerLon, yToLat(y + 0.5, z), xToLon(x + 0.5, z)) <= radiusMi) {
+          tiles.push({ z, x, y });
+        }
+      }
+    }
+  }
+  return tiles;
+}
+
+function updateOfflineEstimate() {
+  offlineRadius = parseInt(document.getElementById('offline-radius').value);
+  document.getElementById('offline-radius-label').textContent = offlineRadius + ' miles';
+  const tiles = getTiles(MIAMI_LAT, MIAMI_LON, offlineRadius, 10, 14);
+  const mb = (tiles.length * 15 / 1024).toFixed(0);
+  document.getElementById('offline-estimate').textContent = `~${tiles.length.toLocaleString()} tiles · ~${mb} MB`;
+}
+
+async function loadOfflineStatus() {
+  const iconEl = document.getElementById('offline-status-icon');
+  const textEl = document.getElementById('offline-status-text');
+  if (!iconEl || !textEl) return;
+  try {
+    const cache = await caches.open(TILE_CACHE);
+    const keys = await cache.keys();
+    if (keys.length > 0) {
+      const mb = (keys.length * 15 / 1024).toFixed(0);
+      const meta = JSON.parse(localStorage.getItem('offlineMapsMeta') || 'null');
+      const date = meta ? new Date(meta.date).toLocaleDateString() : '—';
+      textEl.innerHTML = `<strong>${keys.length.toLocaleString()} tiles</strong> cached · ~${mb} MB · Last download: ${date}`;
+      iconEl.className = 'ti ti-circle-check';
+      iconEl.style.color = '#4ade80';
+    } else {
+      textEl.textContent = 'No offline tiles cached yet.';
+      iconEl.className = 'ti ti-circle-x';
+      iconEl.style.color = 'rgba(255,255,255,0.25)';
+    }
+  } catch {
+    textEl.textContent = 'Cache API unavailable.';
+  }
+}
+
+function downloadOfflineTiles() {
+  const sw = navigator.serviceWorker && navigator.serviceWorker.controller;
+  if (!sw) { showToast('Service worker not ready — try refreshing', 'error'); return; }
+  const tiles = getTiles(MIAMI_LAT, MIAMI_LON, offlineRadius, 10, 14);
+  document.getElementById('offline-progress-wrap').style.display = '';
+  document.getElementById('offline-download-btn').disabled = true;
+  document.getElementById('offline-progress-label').textContent = `0 / ${tiles.length.toLocaleString()} tiles (0%)`;
+  document.getElementById('offline-progress-bar').style.width = '0%';
+  sw.postMessage({ type: 'CACHE_TILES', tiles });
+}
+
+async function clearOfflineTiles() {
+  if (!confirm('Clear all cached map tiles? You'll need to re-download for offline use.')) return;
+  await caches.delete(TILE_CACHE);
+  localStorage.removeItem('offlineMapsMeta');
+  loadOfflineStatus();
+  showToast('Map tile cache cleared');
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('message', evt => {
+    if (evt.data.type === 'CACHE_TILES_PROGRESS') {
+      const { done, total } = evt.data;
+      const pct = Math.round(done / total * 100);
+      document.getElementById('offline-progress-bar').style.width = pct + '%';
+      document.getElementById('offline-progress-label').textContent =
+        `${done.toLocaleString()} / ${total.toLocaleString()} tiles (${pct}%)`;
+    }
+    if (evt.data.type === 'CACHE_TILES_DONE') {
+      document.getElementById('offline-download-btn').disabled = false;
+      localStorage.setItem('offlineMapsMeta', JSON.stringify({ date: Date.now(), radius: offlineRadius }));
+      loadOfflineStatus();
+      showToast(`Offline maps ready · ${evt.data.cached.toLocaleString()} tiles`);
+    }
+  });
 }
 </script>
 </body>
