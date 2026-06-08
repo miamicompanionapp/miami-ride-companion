@@ -1,1124 +1,167 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-06-03
+Last updated: 2026-06-08
 Owner: Abdullah
 
 
 WORKING POLICY
 --------------
-- PUSH STATUS (updated 2026-06-03): the long "don't push" freeze is OVER. All the
-  previously-batched redesign work (Phases 1/2a/2b/2c, games, PWA icons, Deco Dusk
-  retheme, translations, event curation) is now COMMITTED + PUSHED to origin/main
-  and live on Cloudflare. The session "UNCOMMITTED / NOT pushed" headers further
-  down are HISTORICAL — treat them as "shipped", not pending.
-- Deploys are real now: every push to origin/main triggers Workers Builds →
-  `wrangler deploy` → live in ~30-60s. So push deliberately, bump the SW cache
-  version on any push that changes public/ assets, and prefer small reviewable
-  commits over giant batches. (Cost note — why the freeze existed: pushing burns
-  Cloudflare free-tier build/invocation credits, so don't push no-op commits.)
+- PUSH STATUS: Pushing to origin/main is the deploy workflow. Every push triggers
+  Workers Builds → `wrangler deploy` → live in ~30-60s. Bump the SW cache version
+  on any push that changes public/ assets. Prefer small reviewable commits.
+  (Cost note: free-tier build/invocation credits — don't push no-op commits.)
 - This is a WORKER project, NOT Pages: deploy = `wrangler deploy` (wrangler.jsonc
-  + src/index.js routes /api/* to the functions/api/* modules). `wrangler deploy`
-  IGNORES the Pages `functions/` auto-routing — src/index.js exists to replace it.
+  + src/index.js routes /api/* to the functions/api/* modules).
 - PROD SECRETS: ANTHROPIC_API_KEY + TICKETMASTER_KEY must be encrypted SECRETS in
-  the Worker's runtime "Variables and Secrets" (NOT plain-text vars — `wrangler
-  deploy` on push wipes those; NOT the Build tab — that's build-time only, the
-  runtime never sees it). See bug #20.
-- Local dev: static testing works with `python -m http.server 8000` inside
-  ./public, BUT RSS refetch and Claude auto-translate require Wrangler (`npm run
-  dev`) to serve the /api/* routes with .dev.vars keys. See "Wrangler setup" below.
+  the Worker's runtime "Variables and Secrets" — `wrangler deploy` on push wipes
+  plain-text vars; Build-tab vars are build-time only.
+- Local dev: `python -m http.server 8000` inside ./public for static testing.
+  RSS refetch and Claude auto-translate require `npm run dev` (Wrangler).
 
 
-NEXT UP — open items, ranked  (updated 2026-06-07)
+NEXT UP — open items, ranked  (updated 2026-06-08)
 ---------------------------------------------------
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
-  1. #28  [X DONE 2026-06-03] Attract/idle screen — shipped, see entry below
-  2. #31  [X DONE 2026-06-07] Secret-tap driver menu + analytics peek — branch sunday-sprint
-  3. #26  [X DONE 2026-06-07] BUG: featured/sponsored flags separated — branch sunday-sprint
-  4. #22  [X DONE 2026-06-07] Celsius support on weather page — branch sunday-sprint
-  5. #35  [X DONE 2026-06-07] Tap any photo to enlarge (shared lightbox) — branch sunday-sprint
-  6. #25  [X DONE 2026-06-07] Editor UI for 3 featured mini cards — branch sunday-sprint
-  7. #29  [X DONE 2026-06-07] Tap Frenzy i18n EN/ES/PT/FR — branch sunday-sprint (Word Puzzle deferred)
-  8. #30d [X DONE 2026-06-07] Connect Four (2P) + 5 logic tests — branch sunday-sprint
-  9. #7   Test the full redesign on the real iPad
- 10. #34  BUG: driver bio photo cropped (shoulders cut)
- 11. #36  BUG: landing images blink on every GPS re-render in a moving car
- 12. #30  Multiplayer games — d done; e) Dots & Boxes, f) tug-of-war, bonus finger-picker still open
- 13. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
- 14. #23  Passenger feedback (storage decision needed)
- 15. #17  Events auto-refresh via Cloudflare Cron (deferred — after #20 trusted ✓)
- NOTE: sunday-sprint branch has 4 commits ready to review + merge to main.
+  1. #7   Test the full redesign on the real iPad
+  2. #34  BUG: driver bio photo cropped (shoulders cut)
+  3. #36  BUG: landing images blink on every GPS re-render in a moving car
+  4. #30  Multiplayer games — e) Dots & Boxes, f) tug-of-war, bonus finger-picker
+  5. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
+  6. #23  Passenger feedback (storage decision needed)
+  7. #17  Events auto-refresh via Cloudflare Cron (deferred)
+  8. #29  Games i18n — Word Puzzle (a) still pending; content.json migration (c) future
 
 
-TEST SUITE & TAGS (Playwright)  — expanded 2026-06-01
------------------------------------------------------
-127 tests. Run all with `npm test`. The suite is TAGGED so you can run just the
-section you touched instead of the whole thing (much faster regressions):
+TEST SUITE & TAGS (Playwright)
+------------------------------
+Run all with `npm test`. TAGGED for fast targeted regressions:
 
-    npm run test:index     # whole passenger app (index.html)   — 56
-    npm run test:games     # all 5 games (logic + i18n + flows)  — 27
-    npm run test:editor    # driver dashboard (editor.html)      — 24
-    npm run test:backend   # Cloudflare Functions pure logic     — 31
-    npm run test:weather / test:content / test:phone / test:rest # index sub-areas
+    npm run test:index     # whole passenger app (index.html)
+    npm run test:games     # all 5 games (logic + i18n + flows)
+    npm run test:editor    # driver dashboard (editor.html)
+    npm run test:backend   # Cloudflare Functions pure logic
+    npm run test:weather / test:content / test:phone / test:rest  # index sub-areas
     npm run test:smoke     # fast critical-path subset
     npm run test:negative  # all failure-path tests
     npm run test:i18n      # translation / language-switch tests
     npm run test:units     # all in-browser pure-function unit tests
-  (under the hood: `playwright test --grep @index`, etc. Tags can be combined,
-   e.g. `npx playwright test --grep "@games" --grep-invert "@i18n"`.)
 
 Tag taxonomy:
   PAGE  : @index @editor @games @backend  (+ sub-areas @weather @content @phone @rest)
-  TYPE  : @unit (pure-fn, in-browser) · @negative (failure paths) · @smoke · @i18n
+  TYPE  : @unit (pure-fn) · @negative (failure paths) · @smoke · @i18n
 
 Layout:
-  - Pure logic lives in *-units.spec.js (index-units, editor-units, games-logic)
-    and backend.spec.js. These use the BASE @playwright/test runner so an
-    unrelated background CDN blip can't fail a pure assertion.
-  - Behavioral E2E flows (passenger/editor/rest/phone/weather/content/games/
-    inactivity-tap) use ./fixtures, which FAILS the test on any console/page
-    error — that strict gate is what catches silent breakage, so keep it on the
-    flow specs only.
-  - backend.spec.js imports the functions/api/* helpers directly (they now have
-    test-only `export {…}`; Playwright's loader transpiles the ESM). No live
-    network — pure parsing/mapping/allowlist logic only.
+  - Pure logic lives in *-units.spec.js + backend.spec.js (base @playwright/test
+    runner — CDN blips can't fail a pure assertion).
+  - Behavioral E2E flows use ./fixtures, which FAILS on any console/page error —
+    that strict gate catches silent breakage; keep it on flow specs only.
+  - backend.spec.js imports functions/api/* helpers directly (test-only `export {…}`).
+    No live network.
 
 Freshness canary: tests/passenger.spec.js "published events are all upcoming"
-goes RED once published events age past today — that's intentional, it nudges a
-re-fetch + "Remove past" in the editor (see bug #19).
+goes RED once published events age past today — intentional, nudges a re-fetch
++ "Remove past" in the editor.
 
 
-WRANGLER SETUP (one-time)
--------------------------
-[X] Install Wrangler so /api/rss-fetch and /api/claude-proxy work locally.
-    DONE — 2026-05-28. Project-local devDep installed.
-    Usage:
-        npm run dev         # starts Wrangler at http://localhost:8788/
-        npm run dev:lan     # binds 0.0.0.0 for iPad LAN testing
-    No Cloudflare credits used — Wrangler executes Functions locally against
-    your filesystem; outbound calls (RSS feeds, Claude API) go from your
-    machine, not via Cloudflare.
+WRANGLER SETUP (one-time, DONE 2026-05-28)
+------------------------------------------
+Usage:
+    npm run dev         # starts Wrangler at http://localhost:8788/
+    npm run dev:lan     # binds 0.0.0.0 for iPad LAN testing
+No Cloudflare credits used — Wrangler executes Functions locally against your
+filesystem; outbound calls (RSS feeds, Claude API) go from your machine.
 
 
-PROD DEPLOY ARCHITECTURE — CRITICAL FIX (2026-05-29)
-----------------------------------------------------
-[X] /api/* was 404ing in PRODUCTION (verified live:
-    miami-ride-companion.miamicompanionapp.workers.dev/api/rss-fetch -> 404).
-    Root cause: this is a WORKERS project (deploy = `npx wrangler deploy`,
-    wrangler.jsonc with assets-only), NOT Pages. The Pages `functions/`
-    directory convention is honored by `wrangler pages dev` (local) but
-    IGNORED by `wrangler deploy` (prod) — so auto-translate/RSS/Ticketmaster
-    all silently 404'd in prod despite working locally.
-    Fix: added src/index.js Worker entry that routes /api/* to the existing
-    function modules and falls through to env.ASSETS for static files;
-    wrangler.jsonc gained "main": "src/index.js" + assets.binding "ASSETS";
-    npm run dev switched `wrangler pages dev public` -> `wrangler dev` so LOCAL
-    NOW MATCHES PROD. Verified via `wrangler dev`: root/content.json 200,
-    /api/rss-fetch + /api/ticketmaster-fetch return data, claude-proxy OPTIONS
-    204. This was the last real deploy blocker.
-
-SECURITY FOLLOW-UP (do before next push)
-----------------------------------------
-[X] GitHub Personal Access Token leak — RESOLVED 2026-05-29.
-      1. [X] Token revoked at https://github.com/settings/tokens (Abdullah).
-      2. [X] Token stripped from .git/config remote URL via
-             `git remote set-url origin https://github.com/.../miami-ride-companion.git`.
-             Next push will prompt for GitHub auth via Windows Credential Manager.
-      3. [X] .gitignore verified (node_modules/, .dev.vars* already ignored).
-    NOTE: if the dashboard publish flow needs a token again, generate a fresh
-    fine-grained token (this repo's contents only) and store it in browser
-    localStorage where the dashboard reads it — NEVER in the remote URL again.
-
-
-PHASE 2c — POLISH
------------------
-[X] 1. Real QR codes on driver page.  (DONE — 2026-05-28)
-       - Inline 60x60 QRs render in both driver-page QR boxes via
-         renderInlineQR() called from renderDriver().
-       - Phone QR encodes a minimal vCard (FN + TEL) — iPhone Camera offers
-         "Add to Contacts" on scan.
-       - Thumbtack QR encodes CONTENT.driver.thumbtack.url. NOTE: this URL is
-         currently empty in content.json; set it via the Dashboard's Driver
-         page panel (Thumbtack profile URL field) for the QR to populate.
-         Until then the inline Thumbtack QR box renders blank.
-       - Tapping either box opens the existing #qr-modal at 144px for
-         back-seat scanning. Two new types added to openQR():
-         'driver-phone' (vCard) and 'driver-thumbtack' (URL).
-       - openDriverQR() stub removed; decorative .dp-qr-pattern CSS removed.
-
-[X] 2. Auto-translate for driver fields (ES / PT / FR).  (DONE — 2026-05-28)
-       - New "Auto-translate to ES / PT / FR" card at the bottom of the
-         Driver-page panel with a "Translate all" button.
-       - Single-call design: aiTranslateDriver() flattens all English driver
-         fields (role, fromLine, bio paragraphs, handyman section + services,
-         Thumbtack label, pets section + descriptions, and the 4 new
-         strings.subtitle entries from item #13) into one keyed JSON object,
-         sends it to Claude in a single proxied request, parses the response,
-         writes ES/PT/FR back into CONTENT in memory.
-       - callClaude() upgraded to accept { maxTokens } option; default still
-         1000, driver translate uses 4000 to fit the full payload.
-       - Translations land in CONTENT but are NOT auto-persisted — user
-         flow: click Translate all → toast shows N fields filled → hit
-         "Save driver data" → "Save & Publish" to commit.
-       - SETUP REQUIRED before first use: copy .dev.vars.example to
-         .dev.vars and paste a real ANTHROPIC_API_KEY. Wrangler reads
-         .dev.vars automatically; the file is gitignored (.dev.vars*).
-         Without the key, the proxy returns 500 "ANTHROPIC_API_KEY is not
-         set" and the toast will say "Translation failed".
-
-[X] 3. Delete the mock files.  (DONE — 2026-05-28)
-       - public/mock-driver.html and public/mock-homepage.html removed.
-
-[X] 4. Remove dead `buildHandymanCard()` in public/index.html.  (DONE — 2026-05-28)
-       - Function deleted; .handyman-* CSS classes deleted;
-         openQR('handyman') branch deleted.
-
-[X] 5. Remove "Handyman (legacy)" editor panel.  (DONE — 2026-05-28)
-       - editor.html: nav-handyman item, panel-handyman block, renderHandyman(),
-         saveHandyman(), aiTranslateHandyman(), stat-handyman card all removed.
-       - content.json: ads.handyman block removed (ads.sponsored stays).
-       - health.html: schema check + dedicated handyman check removed.
-       - Net: all legacy ads.handyman references gone. The driver-page
-         handyman block (CONTENT.driver.handyman) is the only handyman data.
-
-
-STRETCH / BEYOND 2c
--------------------
-[X] 6. Event image extraction + gradient fallback.  (DONE — 2026-05-30)
-       - Scope clarified at build time: there is NO venue<->RSS join key, so
-         "venue mini/browse cards fall back to RSS image" isn't implementable
-         as written. The real consumers of feed images are EVENTS (the things
-         RSS/Ticketmaster actually return), which were text-only cards. So the
-         image strategy was applied to events; venue photos stay manual
-         (v.photo) as the quality bar, unchanged.
-       - rss-fetch.js: new extractImage(block) — tries media:thumbnail,
-         media:content, <enclosure type=image>, then first <img src> in the
-         item HTML; adds `image` to each returned event ('' when none).
-       - ticketmaster-fetch.js: new pickImage(images) — prefers a 16:9 image
-         ~640px wide, else widest; adds `image` to each mapped event.
-       - editor.html fetchEventsFrom: carries image through to the saved event
-         object (image: e.image || '') so it survives fetch -> publish.
-       - index.html: buildEventCard renders a .event-photo banner ONLY when
-         e.image is set (curated events stay clean text-only); broken URLs
-         self-remove (onerror) so the band shows its gradient. New .event-photo
-         CSS (130px, cover, red->gold gradient + bottom scrim).
-       - Verified: rss/tm functions node --check clean; full E2E suite 29 green.
+OPEN ITEMS
+----------
 
 [ ] 7. Test the redesign on the actual iPad.
-       - Only after all features ready (we batch one push to prod).
+       - Only after all features ready (batch one push to prod).
        - For local-network preview without push:
-             npx wrangler pages dev public --ip 0.0.0.0
-         then iPad Safari -> http://<laptop-LAN-IP>:8788/
-       - Caveat: SW won't register over plain HTTP on a LAN IP (only
-         localhost or HTTPS). Layout/UX testing works; offline/PWA install
-         testing needs the real prod deploy.
+             npm run dev:lan
+         then iPad Safari → http://<laptop-LAN-IP>:8788/
+       - Caveat: SW won't register over plain HTTP on a LAN IP (only localhost or
+         HTTPS). Layout/UX testing works; offline/PWA install testing needs prod.
+       - Key things to verify: Deco Dusk theme readability in bright car, dark-screen
+         glare; tap targets; bio photo crop (#34); image blink (#36).
 
+[ ] 17. Events auto-refresh (Cloudflare Cron) — FUTURE ENHANCEMENT.
+       - Once the editor-triggered Ticketmaster flow is trusted, add a Cloudflare
+         Cron Trigger that runs daily: fetch TM → map → auto-translate → commit
+         content.json via GitHub API → redeploys. Set-and-forget.
+       - Trade-off to weigh: daily auto-commits (a build/day, minor credits) + NO
+         human quality gate (odd events could surface live). Mitigation: cron
+         writes to a "pending" list the editor surfaces for one-tap approval.
 
-NEW FROM Abdullah's todo-suggestions (2026-05-28)
--------------------------------------------------
-[X] 8. Add three Turkish restaurants as venues.  (DONE — 2026-05-30)
-       - Decision (as planned): Claude seeded public info (address, coords,
-         category, price, EN/ES/PT/FR description). abdullahsPick=false and
-         abdullahsNote=null on all three — left for Abdullah to personalize /
-         flag "Local Favorite" in the editor.
-       - Added v009/v010/v011 to public/content.json:
-           * v009 El Turco — restaurant, $$$, Buena Vista. 5026 NE 2nd Ave,
-             Miami 33137. Michelin Bib Gourmand. elturcoturkishfood.com.
-             (25.8232, -80.1936)  [name is "El Turco", not "El Turko"]
-           * v010 Doya — restaurant, $$$, Wynwood. 347 NW 24th St, Miami 33127.
-             Modern Aegean Greek+Turkish mezze. doyarestaurant.com.
-             (25.7986, -80.1998)
-           * v011 Alaçatı — restaurant, $$, Hallandale Beach. 1403 E Hallandale
-             Beach Blvd 33009. alacatirestaurantfl.com. (25.9857, -80.124)
-       - NOTE / open decision: the backlog guessed Alaçatı was in Aventura, but
-         its only real FL location is HALLANDALE BEACH (Broward, ~13 mi N of
-         downtown) — so GPS will sort it as a far venue. Abdullah to decide if
-         it's too far to keep.
-       - Coords are derived/approximate (block-level); fine for distance sort.
-         Verified content.json parses; venue count 8 -> 11.
-
-[X] 9. Reset + export analytics + wire the real dashboard.  (DONE — 2026-05-30)
-       - STORAGE CONFIRMED: IndexedDB 'MiamiRideAnalytics' (v1), stores
-         'sessions' + 'taps', written by index.html (startSession/endSession/
-         logTap). There is NO analytics.json — the editor's old loadAnalytics()
-         fetched a file that never existed, and the dashboard bars (City Guide
-         61% etc.) were HARDCODED PLACEHOLDERS. (This is the "is it placeholder?"
-         Abdullah noticed earlier — answer: yes, now real.)
-       - Key insight: editor.html is same-origin as index.html, so ON THE iPAD
-         it reads the same IndexedDB directly — no server sync needed. On the
-         laptop the store is just empty (data lives on the kiosk).
-       - editor.html now:
-           * openAnalyticsDB() opens 'MiamiRideAnalytics' v1 with the SAME
-             upgrade (creates sessions/taps if missing) so it can never leave a
-             store-less DB that would break the passenger app's logging.
-           * readAllAnalytics() + summarizeAnalytics() roll taps up into:
-             session count, avg duration, QR taps (qr_* + hero_qr_*), tab
-             engagement (tab_*), top venues (venue_* minus venue_sheet_*,
-             id->name via CONTENT), language usage (from sessions.lang).
-           * loadAnalytics() renders REAL numbers into the 3 stat cards + the
-             Tab Engagement / Language / Top Venues panels (placeholders gone).
-       - a) RESET: "Reset analytics" (btn-danger) in Settings → confirm() →
-            clears both stores → reloads. b) EXPORT: "Export analytics (JSON)"
-            → downloads analytics-YYYY-MM-DD.json = { app, exportedAt, summary,
-            sessions[], taps[] }. JSON only (decided: Claude digests it fine;
-            summary block is included pre-computed). New "Passenger Analytics"
-            card in Settings explains data is on-device only / run on the iPad.
-       - Verified: full E2E suite 29 green (no console errors on editor load).
-         Live data path only exercisable on a device that has run the app.
-
-[X] 10. Toggle to show/hide the "Meet your driver" bubble.  (DONE — 2026-05-29)
-       - editor.html: toggle "Show 'Meet your driver' on the passenger app" in
-         the Driver panel (#drv-bubble-toggle, default ON); renderDriverEditor
-         reads d.bubbleVisible !== false, saveDriver writes the boolean.
-       - index.html: renderDriver() sets #nav-driver display from the flag;
-         switchTab('driver') redirects to guide when hidden (no orphan tab).
-         The subtitle rotator's "meet my crew" variant already gates on it.
-       - content.json: driver.bubbleVisible = true (explicit default).
-       - Verified (E2E): default shown, hidden when off, tab guarded, restores;
-         editor toggle present. No console errors.
-
-[X] 11. Resize fonts + emoji on Games page.  (DONE — 2026-05-29)
-       - Screenshotted every game first (per the note): all had a small central
-         cluster floating in a big empty canvas.
-       - Fix: a single @media (min-height: 600px) block (the kiosk; phones in
-         landscape are ≤480 tall so they keep compact sizes) scales up all five
-         games — e.g. Tap circle 150→250px / count 44→78px / timer 48→68px;
-         Spinner wheel 140→220px, dice 48→84px; Trivia Q 16→23px, opts 13→17px;
-         Word tiles 36×46→46×58, font 18→24px; Image box clamp 300→420px max,
-         opts →16px. Also capped .game-body at max-width 740px (centered) so
-         options don't stretch across 1024px.
-       - Verified (E2E): tap circle ≥240px at kiosk viewport. Screenshots
-         confirmed the canvas is now well-filled.
-
-[X] 12. Weather page UI — distinguish weekly vs. hourly forecasts.  (DONE — 2026-05-29)
-       - Captured the fresh layout first (forced fetchedAt=now): hourly strip
-         and 5-day list were both plain white cards under faint labels → "look
-         similar." Chose the "sectioned headers + distinct treatment" direction.
-       - Fix: (1) .section-eyebrow with an icon + accent — clock for "Hourly ·
-         Today", calendar for "5-Day Forecast"; (2) wrapped the hourly strip in
-         a teal-tinted .hourly-panel so it reads as its own module vs the white
-         weekly rows. Used safe Tabler icons (ti-clock, ti-calendar).
-         Also fixed a latent precedence bug in the stale-label concat.
-       - Verified (E2E): fresh weather shows .hourly-panel + exactly 2
-         section-eyebrows; no console errors.
-
-[X] 13. Rotating subtitle (replaces standalone seatbelt-modal idea).  (DONE — 2026-05-28)
-       - Greeting subtitle now cycles through 5-6 variants every 15s with a
-         250ms fade transition. Variants:
-           📍 Nearest to you · {neighborhood}  (dynamic via GPS)
-           🛟 Buckle up — Miami's waiting       (the seatbelt nudge)
-           💡 Tap any place to see more
-           🐶 Meet my crew on the driver page — 3 pugs, 2 cats
-              (conditional: only shown if CONTENT.driver.bubbleVisible !== false)
-           ⭐ Today's pick: {venue name}        (dynamic via featuredVenueId)
-           🌴 Did you know? Miami has more Art Deco buildings than anywhere on Earth
-       - Subtitle prominence bumped: 14px → 16px, weight 400 → 500, color
-         darkened from --muted to --body, emoji icon added.
-       - i18n: 4 new strings in CONTENT.strings.subtitle (seatbelt, tapHint,
-         meetCrew, didYouKnow). ES/PT/FR are blank — will be filled by item
-         #2 (auto-translate driver fields) when that ships.
-       - GPS handler refactored: updateLocationDisplay() now stores into
-         `currentNeighborhood` and force-shows the nearest variant when GPS
-         resolves (passenger sees their neighborhood appear immediately
-         instead of waiting up to 15s).
-       - Random starting index per page-load so each ride begins with a
-         different variant.
-       - Bubble-visibility flag is consumed but not yet writable from the
-         editor — that's item #10 below.
-
-
-[X] 14. Rest / blackout mode (passenger comfort).  (DONE — 2026-05-29)
-       - Motivation: some passengers dislike a bright tablet in their face,
-         and with child lock ON they can't close it. One-tap way to make it
-         disappear without leaving the kiosk.
-       - Shipped:
-           * "Rest screen" button (moon icon) in the SIDEBAR — persistent
-             across all tabs (City Guide / Weather / Games / Driver), not just
-             the guide page. i18n via strings.rest.button (EN/ES/PT/FR filled).
-           * enterRest(): pure-black (#000) full-screen overlay (z-index 120,
-             above thanks/inactivity), gray Playfair clock (HH:MM + dim AM/PM,
-             updates every 1s), dim "Tap anywhere to wake the screen" hint
-             (strings.rest.wake, EN/ES/PT/FR filled).
-           * Tap anywhere on the overlay -> exitRest() -> resumes app.
-           * Inactivity flow is suppressed while resting: restActive flag makes
-             resetInactivity() bail so the "Still browsing?" modal / thanks
-             screen can't pop under the black screen; exitRest() restarts the
-             normal 60s timer.
-       - Verified via Playwright (1024x768): button renders, overlay fades to
-         rgb(0,0,0), clock populates, tap-to-wake works, ES translation
-         applies, no JS console errors.
-       - Auto-WAKE (added 2026-05-29, Abdullah's request): rest screen never
-         stays dark indefinitely. REST_MAX_MS = 600000 (10 min). After 10 min
-         dark, autoWakeRest() assumes the previous passenger left and wakes to
-         a FRESH home view (endSession -> switchTab('guide') -> setFilter('all')
-         -> startSession), so the next passenger sees the app, not a black
-         screen. A MANUAL tap-wake (exitRest) just resumes where they were —
-         no forced reset (same passenger). Chosen over motion-detection: 100%
-         reliable on the iPad kiosk, no DeviceMotion permission fragility.
-       - 30s WARNING BOX (added 2026-05-29): in the final REST_WARN_S (30s)
-         before auto-wake, a dim gray box appears: "Waking up in {n}s"
-         (counting down) + "Keep it dark · 10 more min". Tapping the box
-         (extendRest, stopPropagation) re-arms a fresh 10-min cycle so a
-         passenger who still wants dark isn't flashed awake; tapping anywhere
-         else still wakes. Resolves the mid-ride re-light tension. Strings:
-         strings.rest.warnCountdown / warnExtend (EN/ES/PT/FR). Timers:
-         armRestTimers -> showRestWarning -> (countdown) -> autoWakeRest.
-       - NOT done (deferred, optional): auto-TRIGGERING rest as the idle state
-         (explicitly rejected — still 60s -> thanks screen); real hardware
-         backlight dimming (web can't — pure-black bg is the approximation).
-
-[X] 15. Fix "Open on your phone" rendering on phones.  (DONE — 2026-05-29)
-       - SHIPPED (index.html, CSS-only + one overlay div + i18n):
-           * App had ZERO media queries (fixed 220px sidebar + flex main).
-           * Portrait phones: CSS-only #rotate-overlay ("Please rotate your
-             phone" 📱, i18n strings.rotate.title/sub, EN/ES/PT/FR). Gated
-             @media (orientation: portrait) and (max-width: 500px) → auto-hides
-             the instant the phone rotates; pure CSS, no JS.
-           * Landscape phones: @media (orientation: landscape) and
-             (max-height: 480px) shrinks sidebar 220→176px, tightens paddings,
-             hides footer tip/credit, makes sidebar scrollable so nothing clips
-             on a ~390px-tall screen. Verified usable via screenshot.
-           * KIOSK SAFETY: both queries are gated so a ≥768px tablet matches
-             NEITHER — confirmed by E2E (tablet sidebar stays exactly 220px, no
-             overlay). 3 new tests in tests/phone.spec.js (portrait/landscape/
-             tablet). Full suite 25 green.
-           * Emoji 📱 used instead of a Tabler icon (ti-device-mobile-rotate
-             doesn't exist in 2.47.0 — rendered blank).
-       - Original problem (for reference): app built for a landscape TABLET
-         kiosk; scanned-on-PHONE link rendered badly in portrait (sidebar +
-         main assume a wide viewport).
-       - Scope (Abdullah, 2026-05-29):
-           a) Make the app render FINE on a small phone screen in LANDSCAPE
-              (horizontal). This is the primary target — get the existing
-              layout working at narrow widths.
-           b) PORTRAIT adaptation is likely too hard / not worth it. Instead,
-              show an OVERLAY that tells the user to rotate to landscape when
-              the app is opened on a vertical phone screen.
-       - Implementation notes (to flesh out at build time):
-           * Detect phone vs tablet kiosk: don't show the rotate overlay on
-             the in-car tablet. Gate on viewport size (e.g. small-screen
-             media query) AND orientation: portrait — the kiosk is a large
-             landscape display so it won't match.
-           * Rotate overlay: full-screen, simple icon + "Please rotate your
-             phone" message. i18n it (EN/ES/PT/FR) like other strings.
-           * Landscape phone: the sidebar (aside) + main split needs to hold
-             up at ~650-900px wide. Audit the fixed widths / min-widths in
-             the layout CSS; sidebar may need to shrink or collapse.
-           * The QR "open on phone" target is index.html itself, so whatever
-             we fix applies to the scanned link automatically.
-       - Caveat: this changes the SAME index.html the kiosk uses — verify the
-         tablet kiosk still looks right after any responsive CSS changes.
-
-[X] 16. RSS event feeds — RESOLVED 2026-05-30. Real events feed found + wired.
-       *** DONE 2026-05-30: The Soul of Miami (soulofmiami.org/feed/) ***
-       - Probed live candidates: Soul of Miami = WINNER (valid RSS 2.0, ~50
-         items, one post per event). Miami New Times = general news only.
-         Eventbrite = serves HTML not RSS (dead). do305 = DNS dead.
-       - Added to RSS_FEEDS with a per-feed decorate() hook. The feed's pubDate
-         is only the POST date, but each post's structured intro carries the
-         REAL event date/time/venue/address/cost. decorateSoulOfMiami() lifts:
-           * event date  ← first M/D/YYYY in the intro (→ ISO)
-           * free flag   ← "Cost: Free" vs "Cost: $NN"
-           * venue+addr  ← text between the time range and "Website Cost"
-                           (address = street→city→Florida→ZIP; venue = the rest)
-         Returns null for "Front Page …" digest posts so they're dropped.
-       - Generalized rss-fetch.js along the way (also serves #6):
-           * extractImage() now skips emoji/tracking pixels (s.w.org, gravatar,
-             smileys, etc.) — a ™ in a title was being picked as the photo.
-           * stripHtml() now decodes numeric char refs (&#124; → |, &#8217; →’).
-           * handler applies feed.decorate then filters nulls.
-           * Eater Miami commented out (food *articles*, not events).
-       - VERIFIED LIVE via `wrangler dev` → /api/rss-fetch: 5 clean events, 0
-         errors, e.g. "Mainly Mozart @ The Betsy Hotel 5/30", "Patio Jazz @ Art
-         Deco Welcome Center (Free)", real dates/venues/addresses/images. Full
-         E2E suite 29 green; node --check clean.
-       - STILL MANUAL: free street festivals not on any feed (Viernes
-         Culturales etc.) stay hand-added. Soul of Miami + Ticketmaster +
-         curated = the three event sources now.
-       --- original investigation notes (2026-05-29) below ---
-       NOTE: investigation showed the 3 events in
-       content.json are HAND-CURATED + auto-translated (4-lang title/desc, no
-       `source` field), NOT RSS-derived — so RSS never actually populated
-       content. Fixing this is new capability, not a regression repair.
-       - Found via local Wrangler integration test of /api/rss-fetch:
-           a) Timeout Miami (https://www.timeout.com/miami/rss/things-to-do):
-              HTTP 404 on that path AND every common alternate, with browser
-              UA → no RSS feed exists there. DISABLED in RSS_FEEDS (commented
-              out) so it stops polluting `errors`.
-           b) Eater Miami (https://miami.eater.com/rss/index.xml): ALIVE (200)
-              but ATOM (<feed>/<entry>). Old parseRSS only read RSS-2.0 <item>
-              → 0 items, silently.
-       - DONE: parseRSS → parseFeed(), now auto-detects + parses BOTH RSS 2.0
-         <item> and Atom <entry> (+ extractAtomLink for <link href>). Verified:
-         Eater now returns 6 clean items, 0 errors.
-       - REMAINING (deferred): Eater is a FOOD-NEWS feed, so items are articles
-         ("The 16 Best Restaurants in Little Havana", "Miami's Best Happy
-         Hours") — NOT dated events. Need a real Miami things-to-do/events feed
-         to replace the dead Timeout one before RSS "events" are worth showing.
-         Still pairs with #6 (image extraction) for the next rss-fetch.js pass.
-       - SOURCE RESEARCH (2026-05-29, probed live):
-           * Ticketmaster Discovery API → BEST. Live + key-gated (401 w/o key).
-             Free key @ developer.ticketmaster.com (~5k calls/day). Structured
-             JSON w/ name, dates.start.localDate/Time, _embedded.venues (name,
-             address, lat/lng), url, images, classifications. Geo-filter via
-             ?city=Miami or ?latlong=25.76,-80.19&radius=25. Maps 1:1 to our
-             event schema. CAVEAT: skews ticketed/big venues (concerts, sports,
-             shows) — won't have free street festivals (Viernes Culturales) →
-             COMPLEMENTS Abdullah's curated free/local events, doesn't replace.
-           * Miami New Times: only a general /feed/ (articles), no events feed.
-           * Songkick public API: dead. GMCVB miamiandbeaches.com/events: live
-             HTML page but no open feed (scrape = fragile).
-           * Eventbrite/Meetup public event SEARCH: removed years ago. Skip.
-           * AI-generating events w/ Claude alone = hallucination risk (bad
-             dates/venues). Only use Claude to translate/polish REAL API data.
-       - OPTION A — BUILT 2026-05-29 (Ticketmaster, editor-triggered):
-           * functions/api/ticketmaster-fetch.js — GET, reads env.TICKETMASTER_KEY
-             (same pattern as claude-proxy), queries Discovery API
-             (city=Miami, sort=date,asc, size=20, startDateTime=now), maps each
-             event → {title, description, url, date, venue, address, free,
-             source:'Ticketmaster'} (same shape as rss-fetch). Edge-cached 30m.
-             Returns helpful 500 if key missing.
-           * editor.html — refactored fetchEvents() into shared fetchEventsFrom
-             (endpoint, label, idPrefix); added fetchTicketmaster(). New
-             "Fetch Ticketmaster" (primary) + "Re-fetch RSS" buttons in the
-             Events panel; both append-without-dupe (by url) → review → delete
-             unwanted → auto-translate → publish.
-           * .dev.vars.example documents TICKETMASTER_KEY (Consumer Key from
-             developer.ticketmaster.com).
-           * Dedup + tuning: TM returns one row per SHOWTIME (a multi-day
-             exhibition appeared 6+ times). Function now pulls size=100, sort
-             date,asc, collapses by name+venue (keeps soonest), caps at
-             MAX_EVENTS=25. Editor also dedupes within-batch by url (was only
-             deduping vs existing). Live test: 100 raw → 9 distinct events
-             (Rick Ross, MiamiBash, comedy, exhibitions) — good variety.
-           * VERIFIED LIVE 2026-05-29: real TM key in .dev.vars → editor
-             "Fetch Ticketmaster" added +9 events (3→12), rendered in list,
-             zero console errors. Full 22-test E2E suite green.
-           * STILL TODO for prod: set TICKETMASTER_KEY in the Cloudflare
-             dashboard env vars (works locally only until then).
-           * Coverage note: Ticketmaster = ticketed/big-venue events only.
-             Free/local events (street festivals etc.) stay manual-add.
-
-[ ] 17. Events auto-refresh (Cloudflare Cron) — FUTURE ENHANCEMENT (was #16 opt B).
-       - Once the editor-triggered Ticketmaster flow (#16) is trusted, add a
-         Cloudflare Cron Trigger (scheduled Worker) that runs daily:
-         fetch Ticketmaster → map → auto-translate via Claude → commit
-         content.json via the GitHub API → Pages redeploys. Set-and-forget.
-       - Trade-offs to weigh before building: daily auto-commits (a Pages
-         rebuild/day, minor credit use) and NO human quality gate (odd events
-         could surface live). Mitigation: have the cron write to a "pending"
-         list the editor surfaces for one-tap approval, rather than committing
-         straight to live events.
-       - Side note from same test: /api/claude-proxy proxied a real Anthropic
-         call end-to-end (returned expected text) via the .dev.vars key — so
-         auto-translate's backend is sound LOCALLY; prod still needs
-         ANTHROPIC_API_KEY set in the Cloudflare dashboard env vars.
-
-
-NEW FROM Abdullah (2026-05-30) — BUGS + ENHANCEMENTS
-----------------------------------------------------
---- BUGS ---
-[X] 18. Weather page shows "16 PM" instead of "4 PM". (FIXED 2026-05-31, uncommitted)
-        - Root cause: index.html hourly-strip formatter kept the 24h number and
-          just appended am/pm (h.hour.replace(':00','') + (hr<12?'am':'pm')), so
-          16:00 -> "16pm" and 00:00 -> "0am".
-        - Fix: convert to 12-hour — hr12 = hr24 % 12 === 0 ? 12 : hr24 % 12, with
-          am/pm from hr24<12. Now 16:00 -> 4pm, 00:00 -> 12am, 12:00 -> 12pm.
-        - Guarded by tests/weather.spec.js ("hourly strip shows 12-hour labels").
-
-[X] 19. RSS fetch creates old/past events. (FIXED 2026-06-01, uncommitted)
-        - Re-fetching from Soul of Miami was surfacing events whose date had
-          already passed. The passenger app auto-hides past events at render
-          (upcomingEvents()), but they still got written into content.json on
-          publish and cluttered the editor list.
-        - ROOT CAUSE: decorateSoulOfMiami set item.date ONLY when it found an
-          M/D/YYYY in the intro line; otherwise the item kept its pubDate (the
-          POST date, ~today) and masqueraded as a current event — sailing past
-          the editor's `e.date < today` skip.
-        - FIX (functions/api/rss-fetch.js):
-            1. decorateSoulOfMiami now returns null (drops the item) when no
-               parseable event date is in the description — we never let an
-               event inherit the post date.
-            2. New miamiToday() (America/New_York, not edge UTC) + dropPastEvents()
-               applied in onRequestGet as defense-in-depth, mirroring the editor
-               filter so the function itself never returns a past event.
-        - Helpers are now exported for unit testing; guarded by
-          tests/backend.spec.js (@backend), incl. the bug-#19 masquerade case.
-        - DATA CLEANUP: removed two stale 2026-05-31 Ticketmaster events that
-          were already published in content.json (Balloon Museum, Kaseya tour).
-          tests/passenger.spec.js "published events are all upcoming" now green.
-
-[X] 20. Ticketmaster + Anthropic (claude-proxy) functions not always working.
-        RESOLVED 2026-06-03. It WAS the prod Secrets, two compounding causes:
-        - WRONG VAR TYPE / LOCATION: the keys were set as plain-text variables
-          (and/or under the Build tab). On a Worker, `wrangler deploy` (which runs
-          on every git push via Workers Builds) rebuilds bindings from
-          wrangler.jsonc and WIPES dashboard plain-text vars not declared there —
-          so the key vanished on push (worked only after a manual dashboard
-          deploy). Build-tab vars are build-time only; the runtime never sees them.
-          FIX: set ANTHROPIC_API_KEY + TICKETMASTER_KEY as encrypted SECRETS in the
-          Worker's runtime "Variables and Secrets" — Secrets persist across deploys.
-        - TICKETMASTER 401 (after the above): the pasted TM secret had trailing
-          whitespace/newline; URLSearchParams encoded it onto the key (%0A) → TM
-          rejected it. The same key value returned HTTP 200 locally, proving it was
-          a copy artifact, not a bad key. FIX: re-paste the 32-char Consumer Key
-          clean (no trailing newline).
-        - VERIFIED: Anthropic auto-translate works in prod; survives git push. TM
-          re-pasted clean. Final git-push survival confirmed by the #33 deploy
-          (commit 9705a73). Doc comments in functions/api/* + .dev.vars.example
-          updated to say "encrypted Secret in the Worker", not "Pages env vars".
-        - Original symptom (for reference): intermittent 500s on
-          /api/ticketmaster-fetch + /api/claude-proxy after pushes.
-
---- ENHANCEMENTS ---
-[ ] 21. Optimize venue images (added 2026-05-30 after wiring venue photos).
-        - public/images/venues/mandolin.png is ~1.3 MB and alacati.jpg ~807 KB —
+[ ] 21. Optimize venue images (added 2026-05-30).
+        - public/images/venues/mandolin.png ~1.3 MB, alacati.jpg ~807 KB —
           heavy for venue cards (elturco.avif/webp ones are already small).
         - Downscale + recompress with sharp (max ~1000px, q~80, mozjpeg), convert
-          PNG -> JPG/WebP, update the content.json photo refs. Target ~100-150 KB
-          each. Mirror the people/pets optimization pass from earlier.
-
-[ ] 22. Celsius support on the weather page.
-        - Either: show °C in parentheses next to °F always (e.g. "75°F (24°C)"),
-          OR locale-based: °F for US visitors, °C for internationals.
-        - Note we already have a language selector (EN/ES/PT/FR) as a signal for
-          "international" — but language != unit preference (a US Spanish speaker
-          still wants °F). Safer default is the always-show-both parenthetical;
-          consider a unit toggle in the editor/settings if we want per-locale.
+          PNG → JPG/WebP, update content.json photo refs. Target ~100-150 KB each.
 
 [ ] 23. Passenger feedback function.
-        - A way for passengers to leave feedback (rating / quick note) from the
-          app. Decide storage: on-device IndexedDB like analytics (Abdullah reads
-          it on the tablet) vs. a real endpoint (Worker -> somewhere). Keep it
-          low-friction and respect the no-soliciting / no-tip-prompt rules.
+        - A way for passengers to leave feedback (rating / quick note) from the app.
+        - Decide storage: on-device IndexedDB like analytics (read on tablet) vs.
+          a real endpoint (Worker → somewhere). Keep it low-friction and respect
+          the no-soliciting / no-tip-prompt rules.
 
-[X] 24. "Translate all" + "AI Review all" in the editor EVENTS tab. DONE 2026-06-03.
-        - "Translate missing" button: scans all events for empty es/pt/fr fields,
-          bundles them in ONE Claude call, writes translations back. Shows count:
-          "3 events translated ✓ — Save & Publish to persist". Skips events that
-          are already fully translated (zero wasted API tokens).
-        - "AI Review all" button: sends all events to Claude for keep/skip triage
-          with a one-line reason each. Results land as session-only badges on each
-          event row (green ✓ Keep / amber ⚠ Skip + reason in the meta line).
-          NOT stored in content.json — advisory only, clears on page reload.
-        - "needs i18n" badge on each event row when any es/pt/fr field is empty.
-        - Both buttons live at the bottom of the Events card, under the list.
-        - Info-box text updated to describe the new workflow.
-        - SW bumped v1.18.0 → v1.19.0.
-
-[ ] 25. Editor UI to pick the 3 featured-landing "minis".
-        - Shipped 2026-05-30: guide.featuredMiniIds = [v011, v003, v022] curates
-          the 3 cards under the hero on the featured landing (index.html
-          renderHomeView; falls back to nearest-3 when unset). Currently set by
-          hand in content.json — no editor control yet.
-        - Add a small multi-select (or 3 dropdowns) in the editor City Guide /
-          Featured section, next to the existing "featured-venue-select" (which
-          drives the single hero via featuredVenueId). Persist the array order;
-          it already survives publish since the editor carries unknown guide
-          fields through.
-
-[ ] 26. BUG: `featured` venue flag is conflated with `sponsored`.
-        - index.html buildVenueCard: a venue with `featured:true` shows a badge
-          labelled "Sponsored" (t('guide.sponsored')) — wrong label, and clashes
-          with the no-soliciting rule for the driver's own picks.
-        - editor.html saveVenue (~line 998-999): the single "Featured" toggle
-          writes BOTH `featured` AND `sponsored` from the same checkbox, so
-          flagging a venue featured also marks it sponsored. There is no separate
-          sponsored control, so editing Gramps (the real sponsored venue) via the
-          modal could also flip its sponsored state.
-        - Fix: give featured its own correct "Featured" badge (or none), add a
-          separate sponsored toggle, and stop the double-write. This is why the
-          new featured-landing minis use a dedicated featuredMiniIds list instead
-          of the `featured` flag (item #25) — untangle before reusing `featured`.
-
-[X] 27. BUG: editor unreachable offline → raw Safari error. (BUILT 2026-05-31, uncommitted)
-        - SHIPPED: sw.js NEVER_CACHE branch now wraps fetch() in a `.catch()`.
-          Document requests offline → inline OFFLINE_EDITOR_HTML (navy/teal/gold
-          "Dashboard needs a connection" page + Try again button); other
-          never-cached requests (analytics.json, /api/*) → empty 503 the caller
-          can handle. SW cache bumped v1.11.0 → v1.12.0. node --check clean.
-        - Editor stays network-only by design (always fresh, no stale dashboard).
-        - STILL TODO: verify the editor's analytics path is fully offline-capable
-          (reads IndexedDB only) once editor.html is reachable — and confirm on a
-          real device after deploy.
-        - Reported 2026-05-31: opening editor.html in AIRPLANE MODE (end-of-shift,
-          no internet) shows "Safari can't open the page … FetchEvent.respondWith
-          received an error: TypeError: Load failed". Worked again once back on
-          Wi-Fi at home.
-        - Root cause: sw.js NEVER_CACHE includes '/editor.html' (+ '/analytics.json'),
-          and the handler does `event.respondWith(fetch(event.request))` with NO
-          `.catch()` (sw.js ~line 90-93). Offline, fetch() rejects → respondWith
-          gets a rejected promise → that exact Safari error.
-        - DECISION (Abdullah): keep the editor NETWORK-ONLY (always load fresh, no
-          stale dashboard), but FAIL GRACEFULLY. Add a `.catch()` to the NEVER_CACHE
-          branch that returns a small inline offline-fallback Response (a friendly
-          "You're offline — reconnect to open the dashboard" HTML page) instead of
-          letting the promise reject. Bump SW cache version on deploy.
-        - SIDE NOTE: analytics are also network-only (analytics.json in NEVER_CACHE),
-          BUT the real analytics live in IndexedDB 'MiamiRideAnalytics' on the tablet
-          (see item #9) — editor.html reads that store directly, same-origin, no
-          network. So once editor.html itself loads, analytics should display offline.
-          Verify the editor's analytics path has no other network dependency that
-          would block offline review.
-
-[ ] 28. ENHANCEMENT: animated attract/idle screen to grab passenger attention.
-        - Reported 2026-05-31: used the app live in an Uber ride; passengers didn't
-          notice/engage with the tablet. Need a "hook."
-        - DECISION (Abdullah): don't leave the screen static. Add an attract-mode
-          animation that CYCLES through teaser content to draw the eye:
-            * live weather (e.g. "☀️ 84° in Miami right now")
-            * games ("🎮 Beat the driver's high score?")
-            * attraction / venue pages (rotating featured spots)
-            * UPCOMING EVENTS — tease them to incite attention ("This weekend: …").
-        - Tie into the existing inactivity/idle system (60s → countdown → thanks)
-          and the rotating subtitle (item #13) rather than building a parallel timer.
-          Make the IDLE state alive (motion, rotating cards) instead of a quiet menu.
-        - Companion (zero-code) idea logged for Abdullah: a 2-second verbal nudge at
-          pickup ("feel free to play with the screen — Miami guide + games") converts
-          far better than any animation; the app's job is to reward the tap.
-        - REFINED (Abdullah, 2026-06-01) — make it a ROTATING TAPPABLE ATTRACTOR,
-          slotted into the idle window BEFORE the "Still browsing?" countdown:
-            * Flow: idle → after ~20-30s start rotating teaser prompts while the
-              app STAYS usable → (still no touch) → existing 60s→15s countdown →
-              thanks screen. The attractor is a layer in the idle window, not a
-              replacement for the reset safety net.
-            * Every prompt is a TAPPABLE DEEP-LINK; tapping both navigates AND
-              resets the inactivity timer. Map prompts to real destinations:
-                - "See what's happening in Miami this weekend" → Events tab
-                  (tease the soonest upcoming event by name/date)
-                - "Best restaurants closest to you" → venues sorted by GPS distance
-                - "Play Miami trivia" → launch the Trivia game
-                - "Play a game with your friends" → the new multiplayer games (#30)
-                - live weather teaser ("☀️ 84° in Miami right now") → Weather tab
-            * LANGUAGE SELF-SELECT (Abdullah's cleverest one): show
-              "También disponible en español" IN Spanish (+ PT/FR equivalents) so
-              it self-selects the riders who need it; tapping switches language.
-            * TONE: calm, ONE message at a time, slow ~5-6s crossfade, NOT flashing.
-              Keep the handyman/sponsored content OUT of the rotation — helpful-
-              utility framing only, never "buy/click this" (DEPERSONALIZATION RULES).
-            * Reuse the rotating-subtitle machinery (item #13) + the existing
-              inactivity timer; do NOT build a parallel timer.
-
-[~] 30. ENHANCEMENT: multiplayer (2-3) shared-screen games (added 2026-06-01).
-        *** (a) TIC-TAC-TOE SHIPPED 2026-06-01 (uncommitted) — see sub-item (a). ***
-        *** (b) TAP DUEL + (c) TRIVIA BUZZER SHIPPED 2026-06-02 (uncommitted) —
-            the "With friends" category is now 100% playable (no more "Soon"
-            teasers). Both reuse a NEW shared player-count picker (pg-* / the
-            "How many players?" 2-3 chooser — satisfies the #30 "reuse one
-            chooser" rule; ttt keeps its bespoke fixed-2 intro). SW v1.14.0 ->
-            v1.15.0. Added 13 tests (8 logic + 2 i18n + 2 open/close + the
-            i18n-completeness sweep auto-covers the new GAME_UI keys) — all green.
-            NEXT MULTIPLAYER OPTIONS (lower priority, not started): (d) Connect
-            Four (2P), (e) Dots & Boxes (2-3P), (f) tug-of-war (2-3P), BONUS
-            finger-picker. See build order below.
-            STILL OPEN for b/c: verify on real iPad (#7); the duel green-flip uses
-            setTimeout (1.2-4.0s) — confirm it feels fair on-device. ***
-        - WHY (Abdullah's insight): riders default to their own phones the moment
-          they sit down. A phone is single-player-in-the-hand; a shared tablet
-          between friends is something the phone can't replicate — so a multiplayer
-          hot-seat game is a real differentiator, not just "more games."
-          Common case: 2-3 friends share one Uber and sit shoulder-to-shoulder in
-          the back seat, all facing the headrest-mounted tablet the same way up.
-        - LAYOUT NOTE: because they sit side-by-side facing the same direction (NOT
-          across a table), DO NOT rotate any player's side 180°. Same-orientation,
-          shared screen. Split by player into halves (2P) or thirds (3P): P1=left,
-          P2=middle/right, etc. — maps to who sits where.
-        - DESIGN RULE (Abdullah, 2026-06-01): any game that supports 2+ players must
-          ASK "How many players?" at the START (a quick 1/2/3 picker) before the
-          game begins, then lay out the correct number of zones. Single-player games
-          skip straight in. Make this a shared pre-game step so all multiplayer games
-          reuse one player-count chooser.
-        - DESIGN RULE (Abdullah, 2026-06-01): GAMES-PAGE LAYOUT/CATEGORIZATION —
-          passengers have very limited time and must understand the categories and
-          pick the right game FAST. Group games so the choice is obvious at a glance,
-          e.g. "Solo" vs "2-3 Players" (or "Play together"), each game tile showing a
-          clear player-count badge (1 / 2 / 1-3) + icon + one-line "what it is." Big
-          touch targets, minimal reading, i18n the category headers. The goal: a
-          rider grasps "oh, we can play this together" in ~2 seconds. (Pairs with the
-          attractor prompt in #28 that teases "play a game with your friends.")
-        - KEY RULE: reflex/race games scale to ANY player count for free (just add a
-          zone); turn-based BOARD games mostly DON'T. So tic-tac-toe / Connect Four
-          stay 2-only; the 3-player options are the reflex games + dots-and-boxes.
-        - Build order by effort/payoff:
-            a) [X] Tic-tac-toe (2P) — DONE 2026-06-01 (uncommitted), all in
-               index.html. Mocked first (mock-tictactoe.html, project root — NOT
-               in public/, won't deploy) → Abdullah picked: navy board (variant
-               B), "Solo / With friends" category headers, "loser goes first".
-               SHIPPED:
-                 * GAMES-PAGE REDESIGN (the #30 categorization rule): replaced the
-                   old trivia-hero + 2x2 grid with two categories — "Solo" (trivia,
-                   tap, word, spin, image) and "With friends" (tic-tac-toe + "Soon"
-                   teasers for Tap Duel / Trivia Buzzer). Every tile now has a
-                   player-count badge (1 / 2 / 2-3) + icon + one-liner. .games-cats
-                   scrolls if needed. Old .hero-*/.games-layout/.grid-col CSS +
-                   markup removed; trivia is now a normal Solo card (triviaHeroTitle/
-                   triviaHeroDesc GAME_UI keys renamed triviaCardTitle/Desc).
-                 * GAME: #game-ttt screen. P1=X (teal, LEFT), P2=O (gold, RIGHT),
-                   SAME orientation (no 180° flip — riders side-by-side). Turn bar
-                   highlights the active player; running win tally per player.
-                   Win line highlighted; win/draw banner + "Play again". Logic:
-                   tttMove/tttWinningLine/tttRenderBoard/tttRenderStrings, registered
-                   in GAMES registry (reset: initTTT). Taps logged (game_ttt_*).
-                 * "LOSER GOES FIRST": winner-decided round → loser opens next;
-                   draw → alternate opener. Round 1 opens with X.
-                 * PLAYER-COUNT PICKER: tic-tac-toe is fixed-2, so instead of a
-                   1/2/3 chooser (pointless friction for a 2-only board) it shows a
-                   lightweight pre-game INTRO ("2 players · pass & play" + Start).
-                   This establishes the shared pre-game STEP; the real 1/2/3 picker
-                   slots into .ttt-intro's place when the variable-count reflex games
-                   (b/c) land. NOTE: this deviates slightly from mock frame 2 (which
-                   dimmed 1 & 3) — confirm the intro screen on-device.
-                 * i18n EN/ES/PT/FR for everything (categories, badges, teaser
-                   cards, ttt UI + dynamic turn/banner via tttRenderStrings, wired
-                   into refreshOpenGame so an open game flips language cleanly).
-                 * TESTS: 5 logic tests (games-logic.spec.js: alternation, win+tally
-                   +highlight, illegal-move/after-over guards, loser-goes-first,
-                   draw) + 1 i18n re-render test (games.spec.js) + ttt added to the
-                   open/close loop (passenger.spec.js). All ttt tests green; suite
-                   flakes seen were env-only (ERR_INSUFFICIENT_RESOURCES / CDN refused
-                   under repeated parallel runs), not ttt.
-                 * SW cache bumped v1.13.0 -> v1.14.0.
-                 * OPEN: delete mock-tictactoe.html once happy; verify on real iPad
-                   (#7); decide if the fixed-2 intro should instead show the dimmed
-                   1/2/3 picker for consistency with the b/c games.
-            b) [X] Tap-reaction duel (2-3P) — DONE 2026-06-02 (uncommitted).
-               2/3 zones (P1 left … P3 right, same orientation). Arming=red,
-               then a random 1.2-4.0s setTimeout flips all zones green; first
-               valid tap wins + tallies. DESIGN CHOICE: a tap on red = false
-               start that VOIDS the round (no tally) and names the early tapper
-               — one fair rule for any count (vs awarding the win to "opponents,"
-               which is ambiguous at 3P). #game-duel; logic duelArm/duelGo/
-               duelTap/duelRender; reset: initDuel. Timer cleared in closeGames.
-            c) [X] Multiplayer trivia buzzer (2-3P) — DONE 2026-06-02 (uncommitted).
-               Reuses TRIVIA_QUESTIONS + ES/PT/FR (#29) and the .trivia-opt
-               styling. Shared question up top, per-player BUZZ buttons along the
-               bottom. #game-buzzer; logic buzzIn/buzzAnswer/buzzTimeout/buzzNext/
-               buzzRender; reset: initBuzzer. SW v1.15.0 -> v1.16.0.
-               ANTI-EXPLOIT RULES (Abdullah, 2026-06-02 — buzzing early to lock
-               others out then reading at leisure was the problem):
-                 * THE BUZZ IS A COMMITMENT: buzzing starts a per-buzz countdown
-                   (BUZZ_SECONDS = 5s, visible #buzz-timer). Read first, then buzz.
-                 * Correct → +1, question ends.
-                 * Wrong (in time) → locked out, NO point lost; buzz reopens for
-                   the others.
-                 * TIMEOUT (ran out the clock) → LOSE a point and locked out; buzz
-                   reopens. Scores MAY GO NEGATIVE (deliberate — keeps the penalty
-                   biting even at 0; .buzz-score-pts.neg shows red).
-                 * All players out → reveal answer, no winner, Next.
-                 * Rejected ideas: initial 1-2s buzzer lockout (punishes fast
-                   readers / feels broken on kiosk — the per-buzz timer is the real
-                   fix); awarding the point to opponents on timeout (inflates 3P
-                   scores, rewards non-knowledge). buzzTimeout() is split from the
-                   1s setInterval (buzzTick) so tests drive it deterministically;
-                   timer cleared in closeGames.
-            d) Connect Four (2P) — more replay value than tic-tac-toe.
-            e) Dots and Boxes (2-3P) — natively supports 3+ (each player a color,
-               most boxes wins); the one board game that scales to a third player.
-            f) 3-zone button-mash tug-of-war (2-3P) — marker in the center, each
-               player mashes their zone to pull it home. Silly, physical, no rules.
-        - BONUS (not a "game", great for groups): finger-picker / "who's it" decider
-          (Chwazi pattern) — "everyone put a finger on the screen," countdown, it
-          randomly highlights one. Settles who buys drinks / picks music. Works
-          2-5, ~1hr to build, very on-brand for the social angle.
-        - SKIP Battleship-style hidden-info games — they need a private screen,
-          which breaks on one shared tablet.
-        - i18n the UI strings (EN/ES/PT/FR) like the other games (see item #29).
-        - Keep game content/logic in index.html for now (storage decision, #29).
-
-[~] 29. Games i18n. (Trivia + Spinner + Image DONE 2026-05-31; Word + Tap PENDING)
-        - WHY it was missing: games were never wired into i18n at all. All content
-          (TRIVIA_QUESTIONS, SPIN_FACTS, IMG_ROUNDS) + UI was hardcoded English JS in
-          index.html, and setLang() didn't touch games. The content.json audit
-          couldn't see them.
-        - DONE (Trivia, Facts Spinner, Guess the Image): content converted to
-          {en,es,pt,fr} objects in index.html (proper nouns like "Big Ben"/"Petra"
-          kept as plain strings — gL() falls back). Added gL()/gt() helpers, GAME_UI
-          string table, IMG_END_MSGS, applyGameStrings() (data-gkey labels) and
-          refreshOpenGame() (re-renders the open game on language switch). setLang +
-          applyContent now call them. Guarded by tests/games.spec.js (data
-          completeness + live ES/PT/FR re-render for all three). EN/ES/PT/FR.
-        - STORAGE DECISION (Abdullah, 2026-05-31): keep game content IN index.html
-          for now (not content.json) to avoid bloating the data file.
-        - PENDING / future enhancement:
-          a) WORD PUZZLE i18n — deferred because the answer is an English word the
-             rider types (BISCAYNE, SUNSCREEN…); translating the clue while keeping an
+[~] 29. Games i18n — Word Puzzle + migration still pending.
+        - DONE: Trivia, Facts Spinner, Guess the Image, Tap Frenzy.
+        - PENDING:
+          a) WORD PUZZLE i18n — deferred: answer is an English word the rider
+             types (BISCAYNE, SUNSCREEN…); translating the clue while keeping an
              English answer is awkward. Needs a real design (per-language word lists?).
-          b) TAP FRENZY — left English (minimal text: result messages + the games-page
-             "Best tap score" header pill is the only always-visible bit; the in-game
-             "Start!/TAP!/Best" strings are still EN).
-          c) Optionally migrate all game content into content.json + an editor panel
-             so Abdullah can edit/translate questions himself (mirrors venues/events).
+          c) Optionally migrate all game content into content.json + editor panel
+             so Abdullah can edit/translate questions himself.
 
-[ ] 31. ENHANCEMENT: consolidate the secret tap gestures into one hidden menu
-        (added 2026-06-01). Motivation: secret 5-tap shortcuts keep getting
-        added and each one burns another hidden zone. Fold them behind a single
-        entry point that opens a small menu, so new shortcuts are just one more
-        button instead of a new gesture to remember.
-        - ENTRY POINT (Abdullah, 2026-06-01): the SIDEBAR HEADER 5-tap
-          (existing initSecretTap, index.html ~line 3536). Today it jumps
-          straight to /editor.html; change it to open the menu overlay instead.
-        - MENU ITEMS (extensible — adding more later = one button each):
-            a) Open Editor       → window.location.href = '/editor.html'
-                                    (what the header tap does now).
-            b) Analytics         → read-only on-device summary overlay. THIS is
-                                    the original ask: the editor is effectively
-                                    online-first, so a quick OFFLINE peek at
-                                    analytics without leaving the passenger app.
-            c) Driver Bubble on/off → same toggle as the footer gesture.
-        - KEEP the existing FOOTER 5-tap bubble toggle WHERE IT IS (Abdullah:
-          keep the footer shortcut AND add it to the menu). So initBubbleToggle
-          (index.html ~line 3577) stays; the menu just calls the same logic.
-        - ANALYTICS OVERLAY: port readAllAnalytics() + summarizeAnalytics() from
-          editor.html (~line 1556 / 1572) into index.html. READ-ONLY — show
-          sessions, avg duration, QR taps, tab split, language split, top 5
-          venues; NO export/reset (those stay in the editor to avoid accidental
-          taps in the car). Works fully offline: same-origin reads the same
-          IndexedDB 'MiamiRideAnalytics' store index.html already writes (#9).
-        - All in index.html, no new deps (~100 lines: menu overlay + analytics
-          overlay + the two ported pure functions). Easy/quick; not urgent.
-        - CURRENT STATE (for whoever builds it): two separate gestures today —
-          header→editor (initSecretTap) and footer→bubble toggle
-          (initBubbleToggle). This item unifies the FIRST into a menu and
-          surfaces the bubble toggle there too, while leaving the footer
-          gesture intact.
-
-
-NEW FROM Abdullah (2026-06-01) — BUGS + i18n + IMAGE UX
--------------------------------------------------------
-[X] 32. i18n: three passenger-facing strings never translated. (FIXED 2026-06-01,
-        uncommitted)
-        - Root cause (all three the same): hardcoded English with NO data-key, so
-          setLang()/applyStrings() (which only walks [data-key] elements) never
-          touched them.
-        - "Your city guide" (sidebar header, index.html .app-sub) → added
-          data-key="app.subtitle".
-        - "Language" (lang picker label, index.html .lang-label) → added
-          data-key="app.language".
-        - "My Queen" (driver-page eyebrow, rendered in renderDriver innerHTML) →
-          was a hardcoded string; now ${q.eyebrow ? tx(q.eyebrow) : 'My Queen'},
-          matching the tx() pattern used by every other driver-page eyebrow.
-        - content.json: added strings.app.{subtitle,language} (EN/ES/PT/FR) and
-          driver.queen.eyebrow (EN/ES/PT/FR: My Queen / Mi Reina / Minha Rainha /
-          Ma Reine). Editor saveDriver mutates the existing queen object (only
-          name/note/photo), so the new eyebrow field survives publish.
-        - Verified content.json parses. NOTE: done while another session was
-          editing index.html (games/inactivity, lines 2729+) and content.json
-          (events deletion ~735) — disjoint regions, no collision.
-
-[X] 33. "Nearest to you" rotating subtitle is misleading on the featured landing.
-        DONE 2026-06-03 (committed 9705a73, pushed). Chose option (b): SCOPE, not
-        reword — strings untouched.
-        - getSubtitleVariants() now includes the "📍 Nearest to you · {hood}"
-          variant only when currentFilter !== 'featured' (i.e. on the browse views,
-          which ARE distance-sorted, so the label is true). It's dropped from the
-          curated featured landing.
-        - updateLocationDisplay() likewise gates its GPS force-show
-          (setSubtitleVariant(0)) to non-featured filters, where that variant
-          actually exists.
-        - SW cache bumped v1.17.0 → v1.18.0. tests/index-units.spec.js subtitle
-          count test stays green (5 variants on the default landing: seatbelt,
-          tapHint, meetCrew, todaysPick, didYouKnow).
-        - Original problem (for reference): the featured landing minis are
-          HAND-PICKED (guide.featuredMiniIds), so "Nearest to you" falsely implied
-          the shown cards were GPS-nearest.
+[~] 30. Multiplayer games — e/f/bonus still open.
+        - DONE: a) Tic-tac-toe (2P), b) Tap Duel (2-3P), c) Trivia Buzzer (2-3P),
+                d) Connect Four (2P).
+        - OPEN:
+          e) Dots and Boxes (2-3P) — natively scales to 3P (each player a color,
+             most boxes wins); the one board game that scales to a third player.
+          f) 3-zone button-mash tug-of-war (2-3P) — marker in center, mash to pull.
+          BONUS: finger-picker / "who's it" (Chwazi pattern) — ~1hr to build, very
+            on-brand for groups. Everyone puts a finger on screen, one highlighted.
+        - Layout rule: players sit side-by-side SAME direction — do NOT rotate any
+          player's side 180°. P1=left, P2=right (thirds for 3P).
+        - SKIP Battleship-style hidden-info games — need a private screen.
+        - Keep game content/logic in index.html (storage decision, see #29c).
 
 [ ] 34. BUG: driver bio photo is cropped — shoulders cut off.
-        - index.html:858 .dp-bio-photo img uses object-fit:cover; object-position:
-          center 22%. cover fills the tall narrow 36%-wide box and crops the
-          BOTTOM; the 22% bias keeps the face high, worsening the shoulder crop.
-        - Fix options: lower object-position (e.g. center 40-50%) to reveal more
-          torso, or switch to object-fit:contain (whole photo, but adds gradient
-          margins). 1-line change but needs an ON-DEVICE eyeball against the real
-          photo to pick the right value — don't tune blind.
+        - index.html .dp-bio-photo img uses object-fit:cover; object-position:
+          center 22%. Cover fills the tall narrow box and crops the bottom; the
+          22% bias keeps the face high, worsening the shoulder crop.
+        - Fix: lower object-position (e.g. center 40-50%) or switch to
+          object-fit:contain (whole photo, adds gradient margins). 1-line change
+          but needs on-device eyeball against the real photo — don't tune blind.
 
-[ ] 35. ENHANCEMENT: tap any photo to see it larger (people / pets / venues).
-        - Today there's no general image lightbox — only the QR modal and the
-          venue sheet. Add ONE shared image-modal that any photo (driver bio,
-          queen, pets, venue cards/sheet, event banners) opens into at a larger
-          size (not necessarily full-res — just bigger for a clearer look).
-        - Reusable: a single openImage(src) overlay + onclick wired on the photo
-          elements. Moderate (~1hr) but worth doing once and reusing everywhere.
+[ ] 36. BUG: landing images blink/reload on GPS re-render (moving car).
+        - Root cause: startGPS() uses watchPosition({enableHighAccuracy:true,
+          maximumAge:30000}). In a moving car the callback fires every few seconds,
+          each fire runs renderGuide() → rebuilds cards' innerHTML → destroys +
+          recreates every <img> → browser re-decodes → visible blink.
+        - DO NOT FIX YET per Abdullah. Candidate fixes when ready:
+            * Update venue distances in place instead of rebuilding image DOM.
+            * Throttle/debounce GPS-driven re-renders.
+            * Skip renderGuide when sort ORDER is unchanged.
+            * Skip re-render on the featured/home view (curated, not distance-sorted).
+            * Revisit maximumAge / whether watchPosition needs high accuracy at all.
 
-[ ] 36. BUG (INVESTIGATED, not yet fixed): landing images "blink"/reload when the
-        dynamic subtitle refreshes. Investigation done 2026-06-01 — root cause is
-        NOT the subtitle rotator.
-        - Real cause: startGPS() (index.html:2059) uses
-          navigator.geolocation.watchPosition({enableHighAccuracy:true,
-          maximumAge:30000}). In a MOVING car this callback fires every few
-          seconds, and each fire runs `if (currentTab==='guide') renderGuide()`
-          (line 2065). renderGuide → renderHomeView/renderBrowseView rebuild the
-          cards' innerHTML, which destroys + recreates every <img> node → the
-          browser re-decodes the images → visible blink.
-        - Why it LOOKS like the subtitle causes it: the same GPS tick also calls
-          updateLocationDisplay() → setSubtitleVariant(0) (forces the "Nearest to
-          you" variant), so the subtitle changes at the exact moment the images
-          reload. The 15s rotator (rotateSubtitle) only animates #greeting-sub
-          opacity and never reloads images — confirmed.
-        - Candidate fixes (deferred — DO NOT FIX yet per Abdullah): update venue
-          distances in place instead of rebuilding image DOM; throttle/debounce
-          GPS-driven re-renders; skip renderGuide when the sort ORDER is unchanged;
-          or skip re-render on the featured/home view (it's curated, not
-          distance-sorted) and only re-sort the browse list. Also revisit
-          maximumAge / whether watchPosition needs high accuracy at all.
-
-
-2026-06-02/03 SESSION — UNCOMMITTED (PWA icons + Deco Dusk whole-app retheme)
-----------------------------------------------------------------------------
-Staged on main, NOT pushed (no-push policy). First real app icons + a full
-visual redesign. Deploys batched with the other uncommitted work; SW bumped.
-
-  - PWA ICONS (NEW — were 404ing): /icons/icon-192.png + icon-512.png never
-    existed, but manifest.json + the apple-touch-icon referenced them → a 404
-    on every load and a blank install icon on the tablet. Created real icons.
-      * 3 designs mocked (assets/icons/icon-{a,b,c}.svg, rendered to PNG via
-        scripts/render-icons.mjs using `sharp`): A "Sunset Causeway",
-        B "Drop Pin Palm", C "Miami Vice" (purple/pink synthwave palm —
-        Abdullah's brief).
-      * CHOSEN: C. Rendered to public/icons/icon-192.png + icon-512.png (the
-        canonical names the manifest already referenced → no path edits).
-        meta theme-color #0F2137 → #0C1A2E. Icons added to SW PRECACHE_URLS so
-        the installed tablet app has them offline.
-      * Re-render anytime: set CHOSEN in scripts/render-icons.mjs, `node` it.
-      * NOTE: `sharp` is used by the icon/screenshot scripts but is NOT in
-        package.json (only present transitively); add as a devDep if those
-        scripts ever break after a clean install. App itself doesn't need it.
-
-  - DECO DUSK RETHEME (whole app — Guide + Weather + Games + driver page + all
-    game screens + modals). Replaces the cool navy/teal/gold LIGHT theme with a
-    warm DARK "South Beach art-deco at twilight" look (Abdullah: "warm +
-    eye-catching", leaning Miami Vice). Direction picked from 3 full mockups
-    (mocks/home-{a,b,c}-*.html + screenshots).
-      * Approach: TOKEN-FIRST. :root remapped (deep navy/teal/gold + new
-        --pink/--pink-soft, translucent --card, new --card-solid, gold-hairline
-        --border); #app paints a radial+linear dusk gradient. Most components
-        use semantic tokens, so the bulk flipped automatically.
-      * Fonts: added Marcellus (display) + Poiret One (deco labels);
-        --font-display is now Marcellus (was Playfair, still loaded). Greeting
-        "welcome aboard" accented italic gold (.greeting-accent; split on the
-        em-dash, built with DOM nodes so it's injection-safe; works in 4 langs).
-      * Surgical fixes beyond the cascade: filter pills, hero gold deco frame +
-        gold CTA, weather hour/day cards, event cards/badges, ALL game-screen
-        boxes (background:white → dark, EXCEPT the two QR backgrounds which MUST
-        stay white to scan), trivia/word/image correct-wrong-feedback states,
-        tap-duel/buzzer states, inactivity + QR modals. Fixed a real contrast
-        bug surfaced by the brighter gold: P2 buzzer button had white text on
-        gold → now dark text.
-      * VERIFIED: screenshotted all 3 tabs + trivia/QR/driver in the RUNNING
-        app (scripts/shoot-app.mjs, shoot-deep.mjs, shoot-verify.mjs) + every
-        game intro; PLUS programmatic audits (scripts/audit-theme.mjs /
-        audit-special.mjs / audit-tabs.mjs): 0 un-themed light boxes on game
-        play screens; 0 light-bg / 0 low-contrast text on inactivity/thanks/
-        rest. The Guide audit's 2 "low-contrast" hits are false positives
-        (gradient buttons the bg-color audit can't read).
-      * SW cache bumped v1.16.0 → v1.17.0.
-      * OPEN: verify on the real iPad (#7) — esp. dark-screen glare/readability
-        in a bright car (the original reason the theme was light). Consider a
-        Playwright "theme regression" guard (port the audit scripts).
-
-  - MOCKS POLICY (Abdullah, 2026-06-02): keep ALL design mocks permanently in
-    mocks/ and their helper scripts in scripts/ — never delete them as
-    "cleanup". (Saved to Claude memory too.)
-
-
-2026-05-31 SESSION — UNCOMMITTED (translations, events, weather, SW, tests)
----------------------------------------------------------------------------
-Batched with the offline-fallback (#27) work; all staged on main, NOT pushed.
-  - WEATHER FORECAST RAIL BUG (NEW, fixed): the 5-day right rail showed the
-    previous day's card labelled "Today" + weekday labels one day early.
-    Two causes in index.html renderWeather(): (a) `new Date("YYYY-MM-DD")`
-    parsed as UTC → rendered the prior day in Miami; now parseLocalDate().
-    (b) forecast[0] was hard-labelled "Today" regardless of its real date, so
-    a stale snapshot day (weather only refreshes on publish) wore the badge.
-    Fix: drop past forecast days, label "Today" only when date === todayStr().
-    Guarded by tests/weather.spec.js. NOTE: this is NOT item #18 (the hourly
-    "16 PM" 24h-vs-12h bug) — #18 is still OPEN.
-  - TRANSLATIONS (full pass): filled every missing ES/PT/FR — Bucket A (driver
-    handyman subtitle + 8 service labels, 5 pet descriptions, 4 strings.subtitle
-    variants, Versailles/El Turco/Botanical-Garden venue notes) AND all kept
-    events. Done by hand (not via the claude-proxy, to save API credits).
-  - EVENTS CURATION: removed 13 past events; fetched Soul of Miami (6) +
-    Ticketmaster (14) locally via `wrangler dev` (.dev.vars has both keys; only
-    outbound calls, no Cloudflare credits); curated to 12 high-value upcoming
-    events (8 kept + 4 new TM: Balloon Museum/Pop Air, Kaseya tour, Haiti v NZ,
-    YUNGBLUD). Rewrote the junk TM breadcrumb descriptions ("Miscellaneous ·
-    Starts 13:00 ·") into clean factual EN, then translated. Geocoded the one
-    event missing coords (Grove Cup → Peacock Park) for the "mi away" line.
-    CAVEAT (recurring-attraction dates): Balloon Museum + Kaseya tour are dated
-    2026-05-31 because Ticketmaster reports the next showtime; they auto-hide
-    after today unless re-fetched. Same gap as #17 (recurring/pending events) —
-    a re-fetch restores them with a fresh date.
-  - PLAYWRIGHT: suite grew 31 → 36. New tests/content.spec.js (every
-    translatable string + every event has es/pt/fr), tests/weather.spec.js (the
-    forecast-label fix), and 2 in passenger.spec.js (upcomingEvents() drops past
-    + sorts soonest-first; no past events linger in content.json). NOTE: the
-    "no past events linger" test is intentionally a freshness canary — it will
-    go red once the published events age out, nudging a re-fetch + "remove past".
-  - DEPLOY: ready to batch — weather fix + #27 SW (v1.12.0) + content.json
-    (translations + curated events). Push gated on the no-push policy.
 
 KNOWN TRANSITIONAL STATE (not bugs)
 -----------------------------------
-- Driver-page i18n labels are read via the `tx()` helper directly because the
-  existing `t()` keyed lookup only reads CONTENT.strings. If we add more
-  driver-page strings, either follow `tx()` pattern or extend `t()` to also
-  look under CONTENT.driver.
-- CONTENT.guide.featuredVenueId defaults to "v003" (Mandolin). If that venue
-  is deleted from the editor, the dropdown auto-falls back to "" (Auto =
-  nearest Local Favorite).
-- ES/PT/FR translations: as of 2026-05-31 ALL passenger-facing strings are
-  translated (driver bio/handyman/services/pets, strings.subtitle, venue notes,
-  every event title/description). The only blank-translation objects left are
-  ads.sponsored[0..1] headline/body — and their EN is empty too (unused slots),
-  so there is nothing to translate. Enforced by tests/content.spec.js.
-- Service Worker cache version is 'miami-ride-v1.18.0' (bumped 2026-06-03 for the
-  #33 subtitle fix; the prior v1.12.0→v1.17.0 bumps are all COMMITTED + PUSHED and
-  live now). Bump again before any further prod push that changes public/ so
-  existing tablet clients re-cache the new bundle.
-
-EVENT CARD POLISH — UNCOMMITTED (2026-05-30, after the 13ec4ba deploy):
-  Driven by Abdullah reviewing live events. NOT yet pushed — needs a deploy
-  (bump SW + commit + push). Changes:
-  - STALE EVENTS: index.html renderBrowseView now shows upcoming-only (soonest
-    first) via upcomingEvents()/todayStr() — past events auto-drop, zero upkeep.
-    Editor: "Remove past" button (removePastEvents) + fetch skips past events.
-  - IMAGES: WordPress thumbnails (-WxH suffix) upgraded to full-res via
-    fullResImage() with thumb fallback (restoreEventThumb). Banner redesigned:
-    blurred+darkened backdrop with the FULL image object-fit:contain on top
-    (.event-photo-bg/.event-photo-fg) so posters/portraits aren't cropped.
-  - DATE OFF-BY-ONE: new Date("YYYY-MM-DD") parsed as UTC showed events a day
-    early in Miami; parseLocalDate()/fmtEventDate() fix it (index + editor).
-  - DESCRIPTION: decorateSoulOfMiami now extracts just the blurb (between the
-    "Cost:" line and "Read More") instead of dumping the whole structured
-    intro. Cost regex is colon-optional ("Cost: 0"/"Cost FREE" → free).
-  - PRICE TAG: paid events show a gold "$N" badge (.price-badge) beside the
-    Free badge. Soul of Miami parses it from "Cost:"; Ticketmaster from
-    priceRanges.min. Carried through editor fetch → publish; shown in editor list.
-  - MILES AWAY: event cards show "· 2.3 mi" from GPS. Ticketmaster ships venue
-    lat/lng; RSS events are geocoded in the EDITOR via Nominatim (free, no key,
-    client-side to avoid Cloudflare-IP blocks, throttled ~1/sec). eventDistStr()
-    in index.html uses the existing haversine.
-  - Verified: live /api/rss-fetch (5 clean events, correct price/free), injected
-    render test (price badge + "3.9 mi"), full E2E 29 green. SW bump still TODO.
-
-DEPLOYED 2026-05-30 (commit d21195c): left-thumbnail event cards (blur backdrop
-  kept, 2-line clamp); 11 new SoFlo venues (v012-v022: nightlife Medium Cool/
-  E11even/Club Space/LIV/DAER/Original Fat Cat's; attractions Riverwalk Ft
-  Lauderdale/Everglades Holiday Park; gems Flamingo Gardens/Butterfly World/
-  Ichimura Japanese Garden), EN/ES/PT/FR; configurable rest auto-wake
-  (settings.restMinutes, default 5, edited in Settings → Rest screen);
-  driver.queen "My Queen" line above pets (editable, hidden until name set);
-  editor GitHub owner/repo prefilled; SW v1.8.0. POST-DEPLOY for Abdullah:
-  reload editor (loads 22 venues) → add venue photos + fill My Queen name +
-  event cleanup → publish once. Verified live (/ markers, content.json 22 venues).
-
-DEPLOYED 2026-05-30 (commit 13ec4ba, pushed to origin/main → Cloudflare):
-  #6 event photos, #8 Turkish venues (via dashboard publish), #9 real
-  analytics + export/reset, #16 Soul of Miami feed, SoFlo event radius,
-  numeric-entity decode, SW v1.6.0. Verified live: /api/rss-fetch returns
-  Soul of Miami events, 0 errors. STILL PENDING for full prod function:
-  ANTHROPIC_API_KEY + TICKETMASTER_KEY as Cloudflare *Secrets* on the
-  Production env (translate + Ticketmaster 500 until set; RSS needs no key).
+- Driver-page i18n labels use `tx()` helper directly (not `t()` keyed lookup which
+  only reads CONTENT.strings). Follow `tx()` pattern for new driver-page strings.
+- CONTENT.guide.featuredVenueId defaults to "v003" (Mandolin). If deleted, dropdown
+  auto-falls back to "" (Auto = nearest Local Favorite).
+- ES/PT/FR translations: all passenger-facing strings translated. Only blank-
+  translation objects left are ads.sponsored[0..1] (EN also empty — unused slots).
+  Enforced by tests/content.spec.js.
+- Service Worker cache version: check sw.js before pushing — bump it whenever
+  public/ assets change so existing tablet clients re-cache the new bundle.
 
 
 DEPERSONALIZATION RULES (locked decision, do not regress)
@@ -1132,18 +175,16 @@ as editorial / curated, not personally branded:
   - Sidebar driver bubble subtitle is just "Your driver" (no handyman mention
     until the user taps through).
   - No tip prompts anywhere — Lyft/Uber prompts post-ride.
-  - The Meet-Your-Driver page itself is fully personalized — name, NCL,
-    bio, Thumbtack, pets — because passengers chose to land there.
+  - The Meet-Your-Driver page itself is fully personalized (passengers chose to
+    land there).
 
 
 ARCHITECTURE NOTE
 -----------------
-Current: single-file index.html (~2800 lines including CSS + JS) and a
-parallel editor.html (~1500 lines). No build step. SW caches the files
-verbatim.
+Single-file index.html (~2800+ lines including CSS + JS) and editor.html (~1500
+lines). No build step. SW caches files verbatim.
 
 Decision (2026-05-28): KEEP the monolith. Don't migrate to a framework.
-If/when navigation pain forces a refactor: split the JS into native ES
-modules (no bundler) before reaching for React/Vue/Svelte/Vite. The cost
-(build pipeline, learning curve, SW changes, more abstractions = more bug
-surface) hugely outweighs the benefit at this scale.
+If/when navigation pain forces a refactor: split into native ES modules (no bundler)
+before reaching for React/Vue/Svelte/Vite. The cost of a build pipeline hugely
+outweighs the benefit at this scale.

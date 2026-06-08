@@ -2258,7 +2258,15 @@
     <div class="analytics-stats">
       <div class="anl-stat">
         <div class="anl-stat-val" id="anl-sessions">—</div>
-        <div class="anl-stat-lbl">Sessions</div>
+        <div class="anl-stat-lbl">Sessions (tapped)</div>
+      </div>
+      <div class="anl-stat">
+        <div class="anl-stat-val" id="anl-cycles">—</div>
+        <div class="anl-stat-lbl">Cycles (loops)</div>
+      </div>
+      <div class="anl-stat">
+        <div class="anl-stat-val" id="anl-engage">—</div>
+        <div class="anl-stat-lbl">Engagement</div>
       </div>
       <div class="anl-stat">
         <div class="anl-stat-val" id="anl-duration">—</div>
@@ -2270,8 +2278,20 @@
       </div>
     </div>
     <div class="analytics-section">
+      <div class="analytics-section-title">Where passengers start</div>
+      <ul class="anl-venues-list" id="anl-entry"></ul>
+    </div>
+    <div class="analytics-section">
       <div class="analytics-section-title">Tab Engagement</div>
       <div id="anl-tab-bars"></div>
+    </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">Games — opened vs played</div>
+      <ul class="anl-venues-list" id="anl-games"></ul>
+    </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">Driver page taps</div>
+      <ul class="anl-venues-list" id="anl-driver"></ul>
     </div>
     <div class="analytics-section">
       <div class="analytics-section-title">Language</div>
@@ -2612,9 +2632,15 @@ let secretTaps = 0;
 let secretTimer = null;
 
 // Analytics (IndexedDB)
+// A "session" only exists once a passenger taps something inside the app — see
+// logTap(). Empty idle cycles (driving with nobody tapping) record a cycle but
+// no session, so the Sessions count reflects real engagement, not reset loops.
 let sessionStart = null;
 let sessionTaps = {};
+let sessionFirstTap = null;   // first in-app key tapped this session = entry point
 let db = null;
+const ANALYTICS_DB_VERSION = 2;
+function dayKey() { return new Date().toISOString().split('T')[0]; }  // YYYY-MM-DD bucket
 
 // ════════════════════════════════════════════════════════════
 // BOOT
@@ -2664,7 +2690,7 @@ function applyContent() {
   renderWeather();
   renderDriver();
   startSubtitleRotator();
-  startSession();
+  // No startSession() here — a session opens lazily on the first in-app tap.
   // Show content timestamp alongside build hash
   if (CONTENT && CONTENT.meta && CONTENT.meta.lastUpdated) {
     const d = new Date(CONTENT.meta.lastUpdated);
@@ -2747,7 +2773,7 @@ function renderDriver() {
   const bioInitial = document.getElementById('dp-bio-initial');
   if (bioInitial) bioInitial.textContent = (d.name || 'A')[0];
   if (d.photo) {
-    document.getElementById('dp-bio-photo').innerHTML = `<img src="${d.photo}" alt="" onclick="openImage(this.src)" style="cursor:zoom-in">`;
+    document.getElementById('dp-bio-photo').innerHTML = `<img src="${d.photo}" alt="" onclick="logTap('driver_photo'); openImage(this.src)" style="cursor:zoom-in">`;
   }
   document.getElementById('dp-bio-name').textContent = d.name || '';
   document.getElementById('dp-bio-from').textContent = tx(d.fromLine);
@@ -2818,15 +2844,20 @@ function renderDriver() {
     setText('.dp-pets-title',   tx(d.pets.title));
     setText('#dp-pets-sub',     tx(d.pets.summary));
     const items = d.pets.items || [];
-    document.getElementById('dp-pets-grid').innerHTML = items.map(p => `
+    document.getElementById('dp-pets-grid').innerHTML = items.map(p => {
+      const petKey = 'driver_pet_' + (p.name || 'pet').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      return `
       <div class="dp-pet">
         <div class="dp-pet-photo ${p.species || 'dog'}">
-          ${p.photo ? `<img src="${p.photo}" alt="" onclick="openImage(this.src)" style="cursor:zoom-in">` : `<div class="dp-pet-emoji">${petEmoji(p.species)}</div>`}
+          ${p.photo
+            ? `<img src="${p.photo}" alt="" onclick="logTap('${petKey}'); openImage(this.src)" style="cursor:zoom-in">`
+            : `<div class="dp-pet-emoji" onclick="logTap('${petKey}')" style="cursor:pointer">${petEmoji(p.species)}</div>`}
         </div>
         <div class="dp-pet-name">${p.name || ''}</div>
         <div class="dp-pet-desc">${tx(p.description)}</div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 }
 
@@ -5170,7 +5201,6 @@ function autoWakeRest() {
   endSession();
   switchTab('guide');
   setFilter('featured');
-  startSession();
 }
 
 function updateRestClock() {
@@ -5210,7 +5240,6 @@ function showThanks() {
       setTimeout(() => {
         switchTab('guide');
         setFilter('featured');
-        startSession();
         resetInactivity();
       }, 650);
     }
@@ -5267,31 +5296,72 @@ function readStoreAll(db, name) {
 
 async function readAnalyticsForPeek() {
   return new Promise(resolve => {
-    const req = indexedDB.open('MiamiRideAnalytics', 1);
-    req.onupgradeneeded = e => {
-      const d = e.target.result;
-      if (!d.objectStoreNames.contains('sessions')) d.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
-      if (!d.objectStoreNames.contains('taps'))     d.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
-    };
+    const req = indexedDB.open('MiamiRideAnalytics', ANALYTICS_DB_VERSION);
+    req.onupgradeneeded = e => upgradeAnalyticsDB(e.target.result);
     req.onsuccess = async e => {
       const d = e.target.result;
-      const [sessions, taps] = await Promise.all([readStoreAll(d, 'sessions'), readStoreAll(d, 'taps')]);
-      resolve({ sessions, taps });
+      const [sessions, taps, meta] = await Promise.all([readStoreAll(d, 'sessions'), readStoreAll(d, 'taps'), readStoreAll(d, 'meta')]);
+      const cycles = (meta.find(m => m.k === 'cycles') || {}).n || 0;
+      resolve({ sessions, taps, cycles });
     };
-    req.onerror = () => resolve({ sessions: [], taps: [] });
+    req.onerror = () => resolve({ sessions: [], taps: [], cycles: 0 });
   });
 }
 
-function summarizeForPeek({ sessions, taps }) {
+// Per-game signal that the passenger actually played (vs opened and bailed).
+// Games without an explicit start/score event are tracked by opens only.
+const GAME_PLAY_PREFIX = {
+  ttt: ['game_ttt_start'], c4: ['game_c4_start'],
+  duel: ['game_duel_start_'], buzzer: ['game_buzzer_start_'], tap: ['tap_score_'],
+};
+const GAME_LABEL = {
+  trivia: 'Trivia', tap: 'Tap Race', word: 'Word', spin: 'Spin', image: 'Guess Image',
+  ttt: 'Tic-Tac-Toe', c4: 'Connect Four', duel: 'Duel', buzzer: 'Buzzer',
+};
+
+function venueLabel(id) {
+  const v = (CONTENT?.guide?.venues || []).find(x => x.id === id);
+  return v ? v.name : id;
+}
+
+// Friendly label for an entry-point key (the first in-app tap of a session).
+function entryLabel(key) {
+  if (!key) return 'Unknown';
+  const TAB = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver page' };
+  if (TAB[key]) return TAB[key];
+  let m;
+  if ((m = key.match(/^venue_sheet_(.+)$/))) return venueLabel(m[1]) + ' (details)';
+  if ((m = key.match(/^venue_(.+)$/)))       return venueLabel(m[1]);
+  if ((m = key.match(/^game_open_(.+)$/)))    return 'Game: ' + (GAME_LABEL[m[1]] || m[1]);
+  if (key.startsWith('hero_qr_'))            return 'Hero QR';
+  if (key.startsWith('qr_'))                 return 'QR code';
+  if (key.startsWith('filter_'))             return 'Filter: ' + key.slice(7);
+  if (key.startsWith('lang_'))               return 'Language switch';
+  if (key.startsWith('event_'))              return 'Event';
+  if (key.startsWith('driver_pet_'))         return 'Pet photo';
+  if (key === 'driver_photo')                return 'Driver photo';
+  return key;
+}
+
+// Shared behavioural rollup used by the in-app peek (and mirrored in editor.html).
+function summarizeForPeek({ sessions, taps, cycles = 0 }) {
   const TAB_LABEL = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver' };
   const tabCounts = { 'City Guide': 0, Weather: 0, Games: 0, Driver: 0 };
   const venueCounts = {};
+  const gameOpens = {}, tapCounts = {};
+  const driver = { pets: {}, photo: 0, qrThumbtack: 0, qrPhone: 0 };
   let qrTaps = 0;
   for (const tp of taps) {
     const k = tp.key || '';
+    tapCounts[k] = (tapCounts[k] || 0) + 1;
     if (TAB_LABEL[k]) tabCounts[TAB_LABEL[k]]++;
+    else if (k === 'qr_driver-thumbtack') { qrTaps++; driver.qrThumbtack++; }
+    else if (k === 'qr_driver-phone')     { qrTaps++; driver.qrPhone++; }
     else if (k.startsWith('qr_') || k.startsWith('hero_qr_')) qrTaps++;
+    else if (k === 'driver_photo') driver.photo++;
+    else if (k.startsWith('driver_pet_')) driver.pets[k.slice(11)] = (driver.pets[k.slice(11)] || 0) + 1;
     else { const m = k.match(/^venue_(?!sheet_)(.+)$/); if (m) venueCounts[m[1]] = (venueCounts[m[1]] || 0) + 1; }
+    const g = k.match(/^game_open_(.+)$/); if (g) gameOpens[g[1]] = (gameOpens[g[1]] || 0) + 1;
   }
   const langCounts = {};
   for (const l of (sessions.length ? sessions.map(s => s.lang) : taps.map(t => t.lang))) {
@@ -5300,12 +5370,34 @@ function summarizeForPeek({ sessions, taps }) {
   const avgDuration = sessions.length
     ? Math.round(sessions.reduce((a, s) => a + (s.duration || 0), 0) / sessions.length) : 0;
   const venues = Object.entries(venueCounts)
-    .map(([id, n]) => {
-      const v = (CONTENT?.guide?.venues || []).find(x => x.id === id);
-      return { name: v ? v.name : id, taps: n };
-    })
+    .map(([id, n]) => ({ name: venueLabel(id), taps: n }))
     .sort((a, b) => b.taps - a.taps).slice(0, 5);
-  return { count: sessions.length, avgDuration, qrTaps, tabCounts, langCounts, venues };
+
+  // Entry points: where each real session began (first in-app tap)
+  const entryCounts = {};
+  for (const s of sessions) { const lbl = entryLabel(s.firstTap); entryCounts[lbl] = (entryCounts[lbl] || 0) + 1; }
+  const entryPoints = Object.entries(entryCounts).sort((a, b) => b[1] - a[1]).slice(0, 6);
+
+  // Game funnel: opened vs actually played vs abandoned
+  const games = Object.entries(gameOpens).map(([type, opens]) => {
+    const sigs = GAME_PLAY_PREFIX[type];
+    let plays = null;
+    if (sigs) {
+      plays = 0;
+      for (const k in tapCounts) if (sigs.some(p => k === p || k.startsWith(p))) plays += tapCounts[k];
+      plays = Math.min(plays, opens);  // a session can't play more than it opened
+    }
+    return { type, label: GAME_LABEL[type] || type, opens, plays, abandoned: plays == null ? null : opens - plays };
+  }).sort((a, b) => b.opens - a.opens);
+
+  // Sessions per day (most recent first)
+  const dayCounts = {};
+  for (const s of sessions) { const d = s.day || (s.startTime || '').split('T')[0] || '—'; dayCounts[d] = (dayCounts[d] || 0) + 1; }
+  const byDay = Object.entries(dayCounts).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 7);
+
+  const engagementPct = cycles ? Math.round(sessions.length / cycles * 100) : null;
+  return { count: sessions.length, cycles, engagementPct, avgDuration, qrTaps,
+           tabCounts, langCounts, venues, entryPoints, games, driver, byDay };
 }
 
 function renderAnlBars(containerId, entries) {
@@ -5337,10 +5429,25 @@ async function openAnalyticsOverlay() {
   const data = await readAnalyticsForPeek();
   const s = summarizeForPeek(data);
   document.getElementById('anl-sessions').textContent = s.count || '0';
+  document.getElementById('anl-cycles').textContent = s.cycles || '0';
+  document.getElementById('anl-engage').textContent = s.engagementPct == null ? '—' : s.engagementPct + '%';
   document.getElementById('anl-duration').textContent = fmtDuration(s.avgDuration);
   document.getElementById('anl-qr').textContent = s.qrTaps;
   renderAnlBars('anl-tab-bars', Object.entries(s.tabCounts));
   renderAnlBars('anl-lang-bars', Object.entries(s.langCounts).map(([k, v]) => [LANG_LABEL_PEEK[k] || k, v]));
+
+  renderAnlList('anl-entry', s.entryPoints.map(([label, n]) => [label, n + (n === 1 ? ' start' : ' starts')]), 'No sessions yet');
+  renderAnlList('anl-games', s.games.map(g =>
+    [g.label, g.plays == null ? `${g.opens} opened` : `${g.plays}/${g.opens} played`]), 'No games opened yet');
+
+  const driverRows = [];
+  if (s.driver.qrPhone)     driverRows.push(['Save-my-number QR', s.driver.qrPhone]);
+  if (s.driver.qrThumbtack) driverRows.push(['Thumbtack reviews QR', s.driver.qrThumbtack]);
+  if (s.driver.photo)       driverRows.push(['Driver photo', s.driver.photo]);
+  for (const [name, n] of Object.entries(s.driver.pets).sort((a, b) => b[1] - a[1]))
+    driverRows.push([`Pet: ${name}`, n]);
+  renderAnlList('anl-driver', driverRows.map(([l, n]) => [l, n + ' taps']), 'No driver-page taps yet');
+
   const venueEl = document.getElementById('anl-venues');
   if (s.venues.length) {
     venueEl.innerHTML = s.venues.map(v =>
@@ -5349,6 +5456,15 @@ async function openAnalyticsOverlay() {
   } else {
     venueEl.innerHTML = '<li style="color:var(--muted);font-size:12px">No venue taps yet</li>';
   }
+}
+
+// Generic two-column list: [label, value] rows into an .anl-venues-list <ul>.
+function renderAnlList(id, rows, emptyMsg) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (!rows.length) { el.innerHTML = `<li style="color:var(--muted);font-size:12px">${emptyMsg}</li>`; return; }
+  el.innerHTML = rows.map(([label, val]) =>
+    `<li><span>${label}</span><span class="anl-venue-taps">${val}</span></li>`).join('');
 }
 
 function closeAnalyticsOverlay(e) {
@@ -5444,48 +5560,75 @@ function showMiniToast(msg) {
 // ════════════════════════════════════════════════════════════
 // ANALYTICS (IndexedDB)
 // ════════════════════════════════════════════════════════════
+// Shared schema setup. Bumping to v2 drops the legacy sessions/taps stores once
+// per device (the old data was inflated by phantom no-tap "sessions"), then
+// recreates them plus a `meta` store that holds the cycle counter.
+function upgradeAnalyticsDB(db) {
+  for (const name of ['sessions', 'taps']) {
+    if (db.objectStoreNames.contains(name)) db.deleteObjectStore(name);
+  }
+  db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
+  db.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
+  if (!db.objectStoreNames.contains('meta')) db.createObjectStore('meta', { keyPath: 'k' });
+}
+
 function openDB() {
-  const req = indexedDB.open('MiamiRideAnalytics', 1);
-  req.onupgradeneeded = e => {
-    const db = e.target.result;
-    if (!db.objectStoreNames.contains('sessions')) {
-      db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
-    }
-    if (!db.objectStoreNames.contains('taps')) {
-      db.createObjectStore('taps', { keyPath: 'id', autoIncrement: true });
-    }
-  };
+  const req = indexedDB.open('MiamiRideAnalytics', ANALYTICS_DB_VERSION);
+  req.onupgradeneeded = e => upgradeAnalyticsDB(e.target.result);
   req.onsuccess = e => {
     db = e.target.result;
   };
 }
 
-function startSession() {
+function startSession(firstKey) {
   sessionStart = Date.now();
   sessionTaps = {};
+  sessionFirstTap = firstKey || null;
 }
 
+// Every idle reset (idle→thanks, or rest auto-wake) counts as a cycle. A session
+// record is written only if the passenger actually tapped something this cycle.
 function endSession() {
-  if (!db || !sessionStart) return;
-  const duration = Math.round((Date.now() - sessionStart) / 1000);
+  recordCycle();
+  const start = sessionStart;
+  const firstTap = sessionFirstTap;
+  const taps = { ...sessionTaps };
+  sessionStart = null;
+  sessionFirstTap = null;
+  sessionTaps = {};
+  if (!db || !start) return;
+  const tapTotal = Object.values(taps).reduce((a, b) => a + b, 0);
+  if (!tapTotal) return;
   const session = {
-    startTime: new Date(sessionStart).toISOString(),
-    duration,
-    taps: { ...sessionTaps },
+    startTime: new Date(start).toISOString(),
+    endTime: new Date().toISOString(),
+    day: dayKey(),
+    duration: Math.round((Date.now() - start) / 1000),
+    taps,
+    tapTotal,
+    firstTap,
     lang,
     endType: 'inactivity'
   };
-  const tx = db.transaction('sessions', 'readwrite');
-  tx.objectStore('sessions').add(session);
+  db.transaction('sessions', 'readwrite').objectStore('sessions').add(session);
+}
+
+function recordCycle() {
+  if (!db) return;
+  const store = db.transaction('meta', 'readwrite').objectStore('meta');
+  const g = store.get('cycles');
+  g.onsuccess = () => store.put({ k: 'cycles', n: ((g.result && g.result.n) || 0) + 1 });
 }
 
 function logTap(key) {
   resetInactivity();
-  if (!sessionStart) startSession();
-  sessionTaps[key] = (sessionTaps[key] || 0) + 1;
+  // Attractor taps wake the app but don't, on their own, mean engagement — only
+  // an in-app tap opens a session. The raw tap is still logged either way.
+  const inApp = !key.startsWith('attractor_');
+  if (inApp && !sessionStart) startSession(key);
+  if (sessionStart) sessionTaps[key] = (sessionTaps[key] || 0) + 1;
   if (!db) return;
-  const tx = db.transaction('taps', 'readwrite');
-  tx.objectStore('taps').add({ key, time: Date.now(), lang });
+  db.transaction('taps', 'readwrite').objectStore('taps').add({ key, time: Date.now(), day: dayKey(), lang });
 }
 </script>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>

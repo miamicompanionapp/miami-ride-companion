@@ -433,9 +433,21 @@
     <!-- ANALYTICS -->
     <div class="panel active" id="panel-analytics">
       <div class="stats-grid" id="analytics-stats">
-        <div class="stat-card"><div class="stat-val" id="stat-sessions">—</div><div class="stat-lbl">Sessions</div><div class="stat-delta up" id="stat-sessions-d"><i class="ti ti-arrow-up"></i>Loading…</div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-sessions">—</div><div class="stat-lbl">Sessions (tapped)</div><div class="stat-delta up" id="stat-sessions-d"><i class="ti ti-arrow-up"></i>Loading…</div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-cycles">—</div><div class="stat-lbl">Cycles (idle loops)</div><div class="stat-delta up" id="stat-cycles-d"></div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-engage">—</div><div class="stat-lbl">Engagement rate</div><div class="stat-delta up" id="stat-engage-d"></div></div>
         <div class="stat-card"><div class="stat-val" id="stat-duration">—</div><div class="stat-lbl">Avg Duration</div><div class="stat-delta up" id="stat-duration-d"></div></div>
         <div class="stat-card"><div class="stat-val" id="stat-qr">—</div><div class="stat-lbl">QR Taps</div><div class="stat-delta up" id="stat-qr-d"></div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Where passengers start</div><div class="card-sub">First thing they tap each session — your entry points</div></div></div>
+          <div id="entry-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No sessions yet</div></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Games — opened vs played</div><div class="card-sub">Did they play, or open and close?</div></div></div>
+          <div id="game-funnel"><div style="font-size:12px;color:var(--muted);padding:8px 0">No games opened yet</div></div>
+        </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
         <div class="card">
@@ -460,6 +472,16 @@
           <div class="bar-row"><div class="bar-lbl">Spanish</div><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--navy)"></div></div><div class="bar-val">20%</div></div>
           <div class="bar-row"><div class="bar-lbl">Portuguese</div><div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--gold)"></div></div><div class="bar-val">6%</div></div>
           <div class="bar-row"><div class="bar-lbl">French</div><div class="bar-track"><div class="bar-fill" style="width:4%;background:#9BA8B8)"></div></div><div class="bar-val">4%</div></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Driver page taps</div><div class="card-sub">Pets, your photo, and the contact QR codes</div></div></div>
+          <div id="driver-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No driver-page taps yet</div></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Sessions by day</div><div class="card-sub">Real (tapped) sessions per day</div></div></div>
+          <div id="day-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No sessions yet</div></div>
         </div>
       </div>
     </div>
@@ -1639,11 +1661,17 @@ function openAnalyticsDB() {
   return new Promise((resolve, reject) => {
     // Match the passenger app's schema (name + version + stores) exactly, so
     // opening here can never leave a store-less DB that breaks the app's logging.
-    const req = indexedDB.open('MiamiRideAnalytics', 1);
+    const req = indexedDB.open('MiamiRideAnalytics', 2);
     req.onupgradeneeded = e => {
+      // Keep in lockstep with index.html's upgradeAnalyticsDB(): v2 drops the
+      // legacy phantom-inflated sessions/taps once and adds the `meta` store.
       const db = e.target.result;
-      if (!db.objectStoreNames.contains('sessions')) db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
-      if (!db.objectStoreNames.contains('taps'))     db.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
+      for (const name of ['sessions', 'taps']) {
+        if (db.objectStoreNames.contains(name)) db.deleteObjectStore(name);
+      }
+      db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
+      db.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
+      if (!db.objectStoreNames.contains('meta')) db.createObjectStore('meta', { keyPath: 'k' });
     };
     req.onsuccess = e => resolve(e.target.result);
     req.onerror   = () => reject(req.error);
@@ -1663,10 +1691,11 @@ function readStore(db, name) {
 async function readAllAnalytics() {
   try {
     const db = await openAnalyticsDB();
-    const [sessions, taps] = await Promise.all([readStore(db, 'sessions'), readStore(db, 'taps')]);
-    return { sessions, taps };
+    const [sessions, taps, meta] = await Promise.all([readStore(db, 'sessions'), readStore(db, 'taps'), readStore(db, 'meta')]);
+    const cycles = (meta.find(m => m.k === 'cycles') || {}).n || 0;
+    return { sessions, taps, cycles };
   } catch {
-    return { sessions: [], taps: [] };
+    return { sessions: [], taps: [], cycles: 0 };
   }
 }
 
@@ -1675,17 +1704,54 @@ function venueName(id) {
   return v ? v.name : id;
 }
 
+// Per-game "actually played" signal (mirrors index.html). Games without an
+// explicit start/score event are reported by opens only.
+const GAME_PLAY_PREFIX = {
+  ttt: ['game_ttt_start'], c4: ['game_c4_start'],
+  duel: ['game_duel_start_'], buzzer: ['game_buzzer_start_'], tap: ['tap_score_'],
+};
+const GAME_LABEL = {
+  trivia: 'Trivia', tap: 'Tap Race', word: 'Word', spin: 'Spin', image: 'Guess Image',
+  ttt: 'Tic-Tac-Toe', c4: 'Connect Four', duel: 'Duel', buzzer: 'Buzzer',
+};
+
+function entryLabel(key) {
+  if (!key) return 'Unknown';
+  const TAB = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver page' };
+  if (TAB[key]) return TAB[key];
+  let m;
+  if ((m = key.match(/^venue_sheet_(.+)$/))) return venueName(m[1]) + ' (details)';
+  if ((m = key.match(/^venue_(.+)$/)))       return venueName(m[1]);
+  if ((m = key.match(/^game_open_(.+)$/)))    return 'Game: ' + (GAME_LABEL[m[1]] || m[1]);
+  if (key.startsWith('hero_qr_'))            return 'Hero QR';
+  if (key.startsWith('qr_'))                 return 'QR code';
+  if (key.startsWith('filter_'))             return 'Filter: ' + key.slice(7);
+  if (key.startsWith('lang_'))               return 'Language switch';
+  if (key.startsWith('event_'))              return 'Event';
+  if (key.startsWith('driver_pet_'))         return 'Pet photo';
+  if (key === 'driver_photo')                return 'Driver photo';
+  return key;
+}
+
 // Roll the raw rows up into the numbers the dashboard + export both use.
-function summarizeAnalytics({ sessions, taps }) {
+function summarizeAnalytics({ sessions, taps, cycles = 0 }) {
   const TAB_LABEL  = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver' };
   const tabCounts  = { 'City Guide': 0, Weather: 0, Games: 0, Driver: 0 };
   const venueCounts = {};
+  const gameOpens = {}, tapCounts = {};
+  const driver = { pets: {}, photo: 0, qrThumbtack: 0, qrPhone: 0 };
   let qrTaps = 0;
   for (const tp of taps) {
     const k = tp.key || '';
+    tapCounts[k] = (tapCounts[k] || 0) + 1;
     if (TAB_LABEL[k]) tabCounts[TAB_LABEL[k]]++;
+    else if (k === 'qr_driver-thumbtack') { qrTaps++; driver.qrThumbtack++; }
+    else if (k === 'qr_driver-phone')     { qrTaps++; driver.qrPhone++; }
     else if (k.startsWith('qr_') || k.startsWith('hero_qr_')) qrTaps++;
+    else if (k === 'driver_photo') driver.photo++;
+    else if (k.startsWith('driver_pet_')) driver.pets[k.slice(11)] = (driver.pets[k.slice(11)] || 0) + 1;
     else { const m = k.match(/^venue_(?!sheet_)(.+)$/); if (m) venueCounts[m[1]] = (venueCounts[m[1]] || 0) + 1; }
+    const g = k.match(/^game_open_(.+)$/); if (g) gameOpens[g[1]] = (gameOpens[g[1]] || 0) + 1;
   }
   const langCounts = {};
   const langSource = sessions.length ? sessions.map(s => s.lang) : taps.map(t => t.lang);
@@ -1696,7 +1762,29 @@ function summarizeAnalytics({ sessions, taps }) {
   const topVenues = Object.entries(venueCounts)
     .map(([id, taps]) => ({ id, name: venueName(id), taps }))
     .sort((a, b) => b.taps - a.taps).slice(0, 5);
-  return { sessions: sessions.length, avgDuration, qrTaps, tabCounts, langCounts, topVenues };
+
+  const entryCounts = {};
+  for (const s of sessions) { const lbl = entryLabel(s.firstTap); entryCounts[lbl] = (entryCounts[lbl] || 0) + 1; }
+  const entryPoints = Object.entries(entryCounts).sort((a, b) => b[1] - a[1]).slice(0, 8);
+
+  const games = Object.entries(gameOpens).map(([type, opens]) => {
+    const sigs = GAME_PLAY_PREFIX[type];
+    let plays = null;
+    if (sigs) {
+      plays = 0;
+      for (const k in tapCounts) if (sigs.some(p => k === p || k.startsWith(p))) plays += tapCounts[k];
+      plays = Math.min(plays, opens);
+    }
+    return { type, label: GAME_LABEL[type] || type, opens, plays, abandoned: plays == null ? null : opens - plays };
+  }).sort((a, b) => b.opens - a.opens);
+
+  const dayCounts = {};
+  for (const s of sessions) { const d = s.day || (s.startTime || '').split('T')[0] || '—'; dayCounts[d] = (dayCounts[d] || 0) + 1; }
+  const byDay = Object.entries(dayCounts).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 7);
+
+  const engagementPct = cycles ? Math.round(sessions.length / cycles * 100) : null;
+  return { sessions: sessions.length, cycles, engagementPct, avgDuration, qrTaps,
+           tabCounts, langCounts, topVenues, entryPoints, games, driver, byDay };
 }
 
 function renderBars(containerId, entries, colors) {
@@ -1712,17 +1800,48 @@ function renderBars(containerId, entries, colors) {
 
 const LANG_LABEL = { en: 'English', es: 'Spanish', pt: 'Portuguese', fr: 'French' };
 
+// Generic ranked key/value list using the same .top-row markup as venues.
+function renderKvList(id, rows, emptyMsg) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (!rows.length) { el.innerHTML = `<div style="font-size:12px;color:var(--muted);padding:8px 0">${emptyMsg}</div>`; return; }
+  el.innerHTML = rows.map(([name, val], i) => `
+    <div class="top-row">
+      <div class="top-rank">${i + 1}</div>
+      <div class="top-name">${name}</div>
+      <div class="top-count">${val}</div>
+    </div>`).join('');
+}
+
 function renderAnalytics(data) {
   const s = summarizeAnalytics(data);
   const colors = ['var(--teal)', 'var(--navy)', 'var(--gold)', '#9BA8B8'];
   document.getElementById('stat-sessions').textContent = s.sessions;
   document.getElementById('stat-sessions-d').textContent = s.sessions ? 'On this device' : 'No data yet — collected on the iPad';
+  document.getElementById('stat-cycles').textContent = s.cycles;
+  document.getElementById('stat-cycles-d').textContent = 'Idle reset loops';
+  document.getElementById('stat-engage').textContent = s.engagementPct == null ? '—' : s.engagementPct + '%';
+  document.getElementById('stat-engage-d').textContent = 'Sessions ÷ cycles';
   document.getElementById('stat-duration').textContent = s.avgDuration ? formatDuration(s.avgDuration) : '—';
   document.getElementById('stat-qr').textContent = s.qrTaps;
   renderBars('tab-bars', Object.entries(s.tabCounts), colors);
   renderBars('lang-bars', Object.entries(s.langCounts).map(([k, v]) => [LANG_LABEL[k] || k, v]), colors);
   if (s.topVenues.length) renderTopVenues(s.topVenues);
   else document.getElementById('venue-tops').innerHTML = '<div style="font-size:12px;color:var(--muted);padding:8px 0">No venue taps yet</div>';
+
+  renderKvList('entry-tops', s.entryPoints.map(([label, n]) => [label, n + (n === 1 ? ' start' : ' starts')]), 'No sessions yet');
+  renderKvList('game-funnel', s.games.map(g =>
+    [g.label, g.plays == null ? `${g.opens} opened` : `${g.plays}/${g.opens} played · ${g.abandoned} left`]), 'No games opened yet');
+
+  const driverRows = [];
+  if (s.driver.qrPhone)     driverRows.push(['Save-my-number QR', s.driver.qrPhone + ' taps']);
+  if (s.driver.qrThumbtack) driverRows.push(['Thumbtack reviews QR', s.driver.qrThumbtack + ' taps']);
+  if (s.driver.photo)       driverRows.push(['Driver photo', s.driver.photo + ' taps']);
+  for (const [name, n] of Object.entries(s.driver.pets).sort((a, b) => b[1] - a[1]))
+    driverRows.push([`Pet: ${name}`, n + ' taps']);
+  renderKvList('driver-tops', driverRows, 'No driver-page taps yet');
+
+  renderKvList('day-tops', s.byDay.map(([d, n]) => [d, n + (n === 1 ? ' session' : ' sessions')]), 'No sessions yet');
 }
 
 async function loadAnalytics() {
@@ -1735,6 +1854,7 @@ async function exportAnalytics() {
   const payload = {
     app: 'Miami Ride Companion',
     exportedAt: new Date().toISOString(),
+    cycles: data.cycles,
     summary: summarizeAnalytics(data),
     sessions: data.sessions,
     taps: data.taps,
@@ -1752,7 +1872,7 @@ async function resetAnalytics() {
   if (!confirm('Erase ALL passenger analytics stored on this device? This cannot be undone. Consider exporting first.')) return;
   try {
     const db = await openAnalyticsDB();
-    const stores = ['sessions', 'taps'].filter(n => db.objectStoreNames.contains(n));
+    const stores = ['sessions', 'taps', 'meta'].filter(n => db.objectStoreNames.contains(n));
     if (!stores.length) { showToast('No analytics to clear'); return; }
     const tx = db.transaction(stores, 'readwrite');
     stores.forEach(n => tx.objectStore(n).clear());
