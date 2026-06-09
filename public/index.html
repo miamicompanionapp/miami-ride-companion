@@ -159,7 +159,9 @@
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     /* ── MAP PAGE ─────────────────────────────────────────────── */
-    #page-map { padding: 0; position: relative; overflow: hidden; }
+    /* isolation: isolate creates a new stacking context, containing the map overlay
+       z-indices (500) so they can't float above document-level overlays (z-index 115). */
+    #page-map { padding: 0; position: relative; overflow: hidden; isolation: isolate; }
     #map { width: 100%; height: 100%; }
     /* GPS dot */
     .map-gps-wrapper { position: relative; width: 24px; height: 24px; }
