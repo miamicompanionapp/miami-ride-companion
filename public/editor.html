@@ -2008,6 +2008,21 @@ async function callClaude(prompt, opts = {}) {
   }
 }
 
+// Claude sometimes returns JSON with literal newlines inside string values, which
+// is invalid JSON. Walk the text char-by-char and escape them.
+function repairJson(text) {
+  let inString = false, escaped = false, out = '';
+  for (const c of text) {
+    if (escaped)          { out += c; escaped = false; continue; }
+    if (c === '\\')       { escaped = true; out += c; continue; }
+    if (c === '"')        { inString = !inString; }
+    if (inString && c === '\n') { out += '\\n'; continue; }
+    if (inString && c === '\r') { out += '\\r'; continue; }
+    out += c;
+  }
+  return out;
+}
+
 async function aiTranslateVenue() {
   const enText = document.getElementById('vm-desc-en').value.trim();
   if (!enText) return showToast('Add an English description first', 'error');
@@ -2041,7 +2056,7 @@ async function aiTranslateVenueQuick(id) {
 Return ONLY a JSON object: {"es":"...","pt":"...","fr":"..."}
 English: "${v.description.en}"`
     );
-    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    const parsed = JSON.parse(repairJson(result.replace(/```json|```/g, '').trim()));
     if (parsed.es) v.description.es = parsed.es;
     if (parsed.pt) v.description.pt = parsed.pt;
     if (parsed.fr) v.description.fr = parsed.fr;
@@ -2073,7 +2088,7 @@ Return ONLY valid JSON — no markdown, no extra keys:
 Events:
 ${JSON.stringify(payload)}`, { maxTokens: 4000 });
 
-    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    const parsed = JSON.parse(repairJson(result.replace(/```json|```/g, '').trim()));
     let applied = 0;
     missing.forEach(e => {
       const t = parsed[e.id];
@@ -2124,7 +2139,7 @@ Return ONLY valid JSON — no markdown:
 Events:
 ${JSON.stringify(payload)}`, { maxTokens: 1500 });
 
-    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    const parsed = JSON.parse(repairJson(result.replace(/```json|```/g, '').trim()));
     Object.assign(AI_REVIEW, parsed);
     saveAiReviewCache();
     renderEventList();
@@ -2271,7 +2286,7 @@ ${JSON.stringify(input, null, 2)}`;
     if (jsonStart === -1 || jsonEnd === -1) {
       throw new Error('No JSON object found in response');
     }
-    const parsed = JSON.parse(result.slice(jsonStart, jsonEnd + 1));
+    const parsed = JSON.parse(repairJson(result.slice(jsonStart, jsonEnd + 1)));
     const applied = applyDriverTranslations(parsed);
     renderDriverEditor();
     if (applied === 0) {
@@ -2297,7 +2312,7 @@ Return ONLY JSON: {"title_es":"...","title_pt":"...","title_fr":"...","desc_es":
 Title: "${enTitle}"
 Description: "${enDesc}"`
     );
-    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    const parsed = JSON.parse(repairJson(result.replace(/```json|```/g, '').trim()));
     showToast('Event translated — save it to apply ✓');
     return parsed;
   } catch (e) {
@@ -2317,7 +2332,7 @@ Return ONLY JSON: {"title_es":"...","title_pt":"...","title_fr":"...","desc_es":
 Title: "${e.title.en}"
 Description: "${e.description.en}"`
     );
-    const parsed = JSON.parse(result.replace(/```json|```/g, '').trim());
+    const parsed = JSON.parse(repairJson(result.replace(/```json|```/g, '').trim()));
     e.title.es = parsed.title_es || '';
     e.title.pt = parsed.title_pt || '';
     e.title.fr = parsed.title_fr || '';
