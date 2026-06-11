@@ -1662,14 +1662,14 @@
 
     /* Drop-column arrow row */
     .c4-col-btns { display: grid; grid-template-columns: repeat(7, 1fr); width: 336px; gap: 4px; }
-    .c4-col-btn { background: transparent; border: none; padding: 4px 0; color: var(--muted); font-size: 18px; cursor: pointer; opacity: 0.5; transition: opacity 150ms; }
+    .c4-col-btn { background: transparent; border: none; padding: 12px 0; color: var(--muted); font-size: 18px; cursor: pointer; opacity: 0.5; transition: opacity 150ms; touch-action: manipulation; }
     .c4-col-btn:not(:disabled):hover { opacity: 1; color: var(--heading); }
     .c4-col-btn:disabled { opacity: 0.1; cursor: default; }
     .c4-col-btn.p1-turn { color: var(--teal); opacity: 0.8; }
     .c4-col-btn.p2-turn { color: var(--gold); opacity: 0.8; }
 
     /* Grid */
-    .c4-board { display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(6, 1fr); gap: 5px; background: var(--navy-deep); border-radius: 14px; padding: 10px; width: 336px; height: 294px; }
+    .c4-board { display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(6, 1fr); gap: 5px; background: var(--navy-deep); border-radius: 14px; padding: 10px; width: 336px; height: 294px; cursor: pointer; touch-action: manipulation; }
     .c4-cell { border-radius: 50%; background: rgba(255,255,255,0.07); transition: background 150ms; }
     .c4-cell.p1 { background: var(--teal); }
     .c4-cell.p2 { background: var(--gold); }
@@ -2441,7 +2441,7 @@
           <button class="c4-col-btn" onclick="c4Drop(6)"><i class="ti ti-arrow-down"></i></button>
         </div>
         <!-- Board -->
-        <div class="c4-board" id="c4-board"></div>
+        <div class="c4-board" id="c4-board" onclick="c4BoardTap(event)"></div>
         <!-- Banner -->
         <div class="c4-banner" id="c4-banner"></div>
       </div>
@@ -4763,6 +4763,12 @@ function c4Drop(col) {
   }
   c4RenderBoard();
   c4RenderStrings();
+}
+
+function c4BoardTap(e) {
+  const pad = 10;
+  const col = Math.floor((e.offsetX - pad) / (e.currentTarget.offsetWidth - 2 * pad) * C4_COLS);
+  if (col >= 0 && col < C4_COLS) c4Drop(col);
 }
 
 function c4CheckWin(player) {
