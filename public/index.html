@@ -2877,9 +2877,21 @@ function buildContentCards() {
 }
 
 // ── Rotation: first card = language (cycles L0→L1→L2), rest = shuffled content
+// Feedback is pulled out of the random pool and re-injected every 4 regular
+// cards so it appears ~3× per cycle instead of once in thirteen.
 function getNextAttractorCard() {
   if (attractorInCycle === 0) {
-    attractorContentShuffled = shuffle(buildContentCards());
+    const all = buildContentCards();
+    const feedbackCard = all.find(c => c.id === 'feedback');
+    const others = shuffle(all.filter(c => c.id !== 'feedback'));
+    attractorContentShuffled = [];
+    others.forEach((card, i) => {
+      attractorContentShuffled.push(card);
+      if (feedbackCard && (i + 1) % 4 === 0) attractorContentShuffled.push(feedbackCard);
+    });
+    if (feedbackCard && attractorContentShuffled[attractorContentShuffled.length - 1] !== feedbackCard) {
+      attractorContentShuffled.push(feedbackCard);
+    }
   }
   let card;
   if (attractorInCycle === 0) {
