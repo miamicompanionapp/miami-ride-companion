@@ -1,37 +1,49 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-11T06:40:42.785Z",
+    "lastUpdated": "2026-06-11T23:20:53.256Z",
     "publishedBy": "Abdullah",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-06-10T01:07:20.216Z",
+    "fetchedAt": "2026-06-11T23:15:35.881Z",
     "current": {
-      "temp_f": 81,
-      "feels_f": 88,
+      "temp_f": 85,
+      "feels_f": 90,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 79,
-      "wind_mph": 5,
-      "rain_chance": 12,
-      "weathercode": 3
+      "humidity": 65,
+      "wind_mph": 9,
+      "rain_chance": 5,
+      "weathercode": 0
     },
     "hourly": [
       {
+        "hour": "19:00",
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 83,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
         "hour": "21:00",
         "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 1
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "22:00",
         "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "23:00",
@@ -47,9 +59,9 @@
       },
       {
         "hour": "01:00",
-        "temp_f": 79,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 1
       },
       {
         "hour": "02:00",
@@ -67,7 +79,7 @@
         "hour": "04:00",
         "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
@@ -89,90 +101,78 @@
       },
       {
         "hour": "08:00",
-        "temp_f": 79,
-        "weathercode": 81,
-        "rain_chance": 3
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 2
       },
       {
         "hour": "09:00",
-        "temp_f": 80,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 2
       },
       {
         "hour": "10:00",
-        "temp_f": 81,
+        "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 2
       },
       {
         "hour": "11:00",
-        "temp_f": 83,
+        "temp_f": 85,
         "weathercode": 3,
         "rain_chance": 3
       },
       {
         "hour": "12:00",
-        "temp_f": 84,
+        "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 4
       },
       {
         "hour": "13:00",
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "14:00",
         "temp_f": 86,
         "weathercode": 3,
         "rain_chance": 7
       },
       {
-        "hour": "14:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
         "hour": "15:00",
-        "temp_f": 87,
+        "temp_f": 88,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 8
       },
       {
         "hour": "16:00",
         "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 9
       },
       {
         "hour": "17:00",
-        "temp_f": 86,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 9
       },
       {
         "hour": "18:00",
-        "temp_f": 84,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 7
       }
     ],
     "forecast": [
       {
-        "date": "2026-06-09",
-        "high_f": 87,
-        "low_f": 77,
+        "date": "2026-06-11",
+        "high_f": 89,
+        "low_f": 76,
         "weathercode": 95,
-        "rain_chance": 12,
+        "rain_chance": 5,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -181,24 +181,11 @@
         }
       },
       {
-        "date": "2026-06-10",
-        "high_f": 87,
+        "date": "2026-06-12",
+        "high_f": 88,
         "low_f": 77,
-        "weathercode": 81,
-        "rain_chance": 13,
-        "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
-        }
-      },
-      {
-        "date": "2026-06-11",
-        "high_f": 86,
-        "low_f": 75,
         "weathercode": 3,
-        "rain_chance": 21,
+        "rain_chance": 9,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -207,11 +194,24 @@
         }
       },
       {
-        "date": "2026-06-12",
-        "high_f": 85,
-        "low_f": 81,
+        "date": "2026-06-13",
+        "high_f": 87,
+        "low_f": 74,
+        "weathercode": 51,
+        "rain_chance": 21,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-06-14",
+        "high_f": 88,
+        "low_f": 82,
         "weathercode": 53,
-        "rain_chance": 31,
+        "rain_chance": 39,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -220,16 +220,16 @@
         }
       },
       {
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "high_f": 87,
-        "low_f": 80,
-        "weathercode": 81,
-        "rain_chance": 32,
+        "low_f": 81,
+        "weathercode": 53,
+        "rain_chance": 66,
         "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ]
@@ -907,30 +907,6 @@
         "lng": -80.2895565
       },
       {
-        "id": "rss_1780534735153_ei10",
-        "title": {
-          "en": "Piano Masters & New Voices | Tuesdays at The Betsy Hotel 6/9/26",
-          "es": "Maestros del Piano y Nuevas Voces | Martes en The Betsy Hotel 9/6/26",
-          "pt": "Mestres do Piano e Novas Vozes | Terças no The Betsy Hotel 9/6/26",
-          "fr": "Maîtres du Piano et Nouvelles Voix | Mardis au The Betsy Hotel 9/6/26"
-        },
-        "date": "2026-06-09",
-        "venue": "The Betsy Piano Bar",
-        "address": "1440 Ocean Dr, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/06/03/piano-masters-new-voices-tuesdays-at-the-betsy-hotel-6-9-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/Piano-Masters-350x175.png",
-        "description": {
-          "en": "Experience an evening of jazz, mentorship, and community, featuring two",
-          "es": "Vive una noche de jazz, mentoría y comunidad, con la participación de dos",
-          "pt": "Experimente uma noite de jazz, mentoria e comunidade, com a participação de dois",
-          "fr": "Vivez une soirée de jazz, de mentorat et de communauté, avec la participation de deux"
-        },
-        "lat": 25.7864648,
-        "lng": -80.129768
-      },
-      {
         "id": "rss_1780643289015_t2ts",
         "title": {
           "en": "World Cup Gallery Experience In Support Of US Soccer Foundation 6/25/26",
@@ -1045,420 +1021,6 @@
         }
       },
       {
-        "id": "tm_1780896459549_skhr",
-        "title": {
-          "en": "Ride and Dine! Hard Rock Cafe Miami and Big Bus Tours Miami",
-          "es": "¡Paseo y Cena! Hard Rock Cafe Miami y Big Bus Tours Miami",
-          "pt": "Passeio e Jantar! Hard Rock Cafe Miami e Big Bus Tours Miami",
-          "fr": "Balade et Dîner ! Hard Rock Cafe Miami et Big Bus Tours Miami"
-        },
-        "date": "2026-06-08",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-hard-rock-hard-rock-cafe-tickets%2F14043214%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 07:00 · Hard Rock Cafe Miami",
-          "es": "Varios · Comienza a las 07:00 · Hard Rock Cafe Miami",
-          "pt": "Diversos · Começa às 07:00 · Hard Rock Cafe Miami",
-          "fr": "Divers · Commence à 07h00 · Hard Rock Cafe Miami"
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1780896459549_nym1",
-        "title": {
-          "en": "Ride and Dine with Us! Thriller Speedboat Tours",
-          "es": "¡Paseo y Cena con Nosotros! Thriller Speedboat Tours",
-          "pt": "Passeio e Jantar Conosco! Thriller Speedboat Tours",
-          "fr": "Balade et Dîner avec Nous ! Thriller Speedboat Tours"
-        },
-        "date": "2026-06-08",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-with-us-hard-rock-cafe-tickets%2F14038014%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 11:00 · Hard Rock Cafe Miami",
-          "es": "Varios · Comienza a las 11:00 · Hard Rock Cafe Miami",
-          "pt": "Diversos · Começa às 11:00 · Hard Rock Cafe Miami",
-          "fr": "Divers · Commence à 11h00 · Hard Rock Cafe Miami"
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1780896459549_3rag",
-        "title": {
-          "en": "Miami Marlins vs. Arizona Diamondbacks",
-          "es": "Miami Marlins vs. Arizona Diamondbacks",
-          "pt": "Miami Marlins vs. Arizona Diamondbacks",
-          "fr": "Miami Marlins vs. Arizona Diamondbacks"
-        },
-        "date": "2026-06-09",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa-g&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza a las 18:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa às 18:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence à 18h40 · LoanDepot Park"
-        },
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1780896459549_dnbw",
-        "title": {
-          "en": "The Book of Mormon (Touring)",
-          "es": "El Libro de Mormón (Gira)",
-          "pt": "O Livro de Mórmon (Turnê)",
-          "fr": "Le Livre de Mormon (Tournée)"
-        },
-        "date": "2026-06-09",
-        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
-        "address": "1444 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7_OCv&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/70c/f8408501-c120-4b57-a857-a1711722970c_241621_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Theatre · Starts 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "es": "Artes y Teatro · Teatro · Comienza a las 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "pt": "Artes e Teatro · Teatro · Começa às 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "fr": "Arts et Théâtre · Théâtre · Commence à 20h00 · Ziff Ballet Opera House-Adrienne Arsht PAC"
-        },
-        "lat": 25.784901,
-        "lng": -80.189598
-      },
-      {
-        "id": "rss_1780964750234_4sy8",
-        "title": {
-          "en": "Coral Gables is getting its first Italian food hall this summer",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/food-drink/coral-gables-is-getting-its-first-italian-food-hall-this-summer-40556004/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/rendering.jpg",
-        "description": {
-          "en": "A massive Italian food hall will open in Coral Gables along Palermo Ave. with food stations, pasta, a market, and happy hour.",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1780964750234_8zod",
-        "title": {
-          "en": "The best things to do in Miami this week, June 8 to 12",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/arts-culture/things-to-do-in-miami-this-week-18780263/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/George-Lopez-Credit-JSquared-Photography-NBCUniversal.jpg",
-        "description": {
-          "en": "George Lopez, Evanescence, Ca7riel & Paco Amoroso, and more can't-miss events in Miami this week.",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1780964750234_y70m",
-        "title": {
-          "en": "Noche de Arte at Gallery 100 6/8/26",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Gallery",
-        "address": "100 at InterContinental Miami Hotel Gallery 100 at InterContinental Miami Hotel, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/06/08/noche-de-arte-at-gallery-100-6-8-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/Noche-de-Arte-350x175.png",
-        "description": {
-          "en": "Celebrating PRIDE Month with art and community Join us for",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1780964750234_1bcs",
-        "title": {
-          "en": "Free Serenity in Bloom Festival and Marketplace in Miami Springs",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-serenity-in-bloom-festival-and-marketplace-in-miami-springs/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/royal-poinciana-Depositphotos_379344310_XL-728x484.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Come experience the Royal Poincianas in bloom around Miami Springs and spend the day at Curtiss Mansion during the free family-friendly Serenity in Bloom Festival and Marketplace on Saturday, June 13, from 11 a.m. to 5 p.m. They'll have… Outdoor activities Historical tours of Curtiss Mansion Music Local vendors and artisans Art for sale Foods … Copyright South Florida on",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1780964750234_zqir",
-        "title": {
-          "en": "July 4th fireworks displays & events in Miami-Dade",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-miami-fireworks-events-july-4/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2023/06/fireworks-miami-dp-728x485.jpg",
-        "description": {
-          "en": "South Florida on the Cheap When the Fourth of July rolls around this year, what are you especially excited about — the fireworks displays or the holiday picnics? It's America's 250th Birthday so there's plenty to celebrate! Look to us as your guide to what’s going on around Miami-Dade on July 4, 2026 and keep checking back because we'll add … Copyright South Florida on the Cheap. The post July 4th",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1780964750234_8tg0",
-        "title": {
-          "en": "Davie family fun event with safety info & free entry",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/davie-family-fun-event-with-free-entry/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/davie-disaster-preparedness-2026-h-728x486.jpeg",
-        "description": {
-          "en": "South Florida on the Cheap Safety information, bounce houses and food trucks are featured at a free event in Davie. Ready Davie Family Fun and Public Safety event in 2026 is 10 a.m. to 1 p.m. Saturday, June 13, at Bergeron Rodeo arena, 4201 SW 65th Way, Davie 33314. The event offers storm safety information and with activities for youngsters, … Copyright South Florida on the Cheap. The post Davie ",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1780964750234_qvue",
-        "title": {
-          "en": "Pirates exhibit & other displays in Plantation, with free entry",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/plantation-historical-museum-offers-a-free-glimpse-of-model-railroads/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2021/11/Plantation-Florida-vintage-fire-truck--728x480.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Vintage fire truck. History of pirates display. In addition to a variety of exhibits, Plantation Historical Museum offers occasional entertainment and activities like trivia events. The museum usually is open 10 a.m. to 4:30 p.m. on Wednesdays, Thursdays, Fridays and Saturdays, with occasional exceptions. Donations are accepted. It's wise to verify it's open the day … Co",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1780964750234_nma3",
-        "title": {
-          "en": "Shake Shack celebrates limited-time BBQ sandwiches with free ShackBurger",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/shake-shack-celebrates-limited-time-bbq-sandwiches-with-free-shackburger/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/shake-shack-burger-728x447.jpeg",
-        "description": {
-          "en": "South Florida on the Cheap Shake Shack is definitely known for its juicy burgers and creamy shakes, but there is also a delicious option for BBQ sandwich fans on the menu for a limited time. And, for 10 days, customers can enjoy a juicy bonus with the purchase of a BBQ sandwich at the popular restaurant. Photo: Shake Shack From … Copyright South Florida on the Cheap. The post Shake Shack celebrate",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1780964750234_o86g",
-        "title": {
-          "en": "Soccer fans score buy-one-get-one free burrito at Chipotle, June 11",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-08",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/soccer-fans-score-buy-one-get-one-free-burrito-at-chipotle-june-11/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/chipotle-soccer-2-728x410.jpeg",
-        "description": {
-          "en": "South Florida on the Cheap Score! Here’s a deal worth kicking around for hungry soccer fans on a budget! Chipotle is celebrating soccer with a big deal for one day only — June 11, 2026. Gear up and show your team spirit for a buy-one-get-one FREE entrée at the popular restaurant. Wear your favorite team’s soccer jersey and enjoy a … Copyright South Florida on the Cheap. The post Soccer fans score ",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "tm_1780964752474_f9ym",
-        "title": {
-          "en": "Ride and Dine! Hard Rock Cafe Miami and Big Bus Tours Miami",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-hard-rock-hard-rock-cafe-tickets%2F14043354%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 07:00 · Hard Rock Cafe Miami",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1780964752474_oq0n",
-        "title": {
-          "en": "Ride and Dine with Us! Thriller Speedboat Tours",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-with-us-hard-rock-cafe-tickets%2F14038044%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 11:00 · Hard Rock Cafe Miami",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1780964752474_0e30",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.797998,
-        "lng": -80.202062
-      },
-      {
-        "id": "tm_1780964752474_g00n",
-        "title": {
-          "en": "Backstage & Burgers",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fbackstage-burgers-hard-rock-cafe-tickets%2F14529503%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 13:00 · Hard Rock Cafe Miami",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1780964752474_41it",
-        "title": {
-          "en": "Kaseya Center All-Access Tour",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-10",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fkaseya-center-all-access-tour-tickets-82ZSY4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 15:00 · Kaseya Center",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "tm_1780964752474_k5en",
         "title": {
           "en": "Blue Man Group",
@@ -1531,240 +1093,12 @@
         "lng": -80.122143
       },
       {
-        "id": "tm_1781053548371_e6i6",
-        "title": {
-          "en": "Ride and Dine! Hard Rock Cafe Miami and Big Bus Tours Miami",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-10",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-hard-rock-hard-rock-cafe-tickets%2F14043234%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 07:00 · Hard Rock Cafe Miami",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1781053548371_zsl3",
-        "title": {
-          "en": "Ride and Dine with Us! Thriller Speedboat Tours",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-10",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-with-us-hard-rock-cafe-tickets%2F14038354%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 11:00 · Hard Rock Cafe Miami",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1781053548371_tr3g",
-        "title": {
-          "en": "Miami Marlins vs. Arizona Diamondbacks",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-10",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa-U&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1781053548371_nbhh",
-        "title": {
-          "en": "The Book of Mormon (Touring)",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-10",
-        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
-        "address": "1444 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7_OCe&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/70c/f8408501-c120-4b57-a857-a1711722970c_241621_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Theatre · Starts 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "lat": 25.784901,
-        "lng": -80.189598
-      },
-      {
-        "id": "rss_1781053549353_nujy",
-        "title": {
-          "en": "Now you can dance salsa and line dance at The Berry Farm",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/music/now-you-can-dance-salsa-and-line-dance-at-the-berry-farm-40556018/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/Salsa-Dancing.jpg",
-        "description": {
-          "en": "The Berry Farm in The Redland just added salsa, bachata and reggaeton to its popular line dancing nights every Saturday.",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1781053549353_m27w",
-        "title": {
-          "en": "BOGO Deal for final weekend of “Eureka Day” at GableStage",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/bogo-deal-for-final-weekend-of-eureka-day-at-gablestage/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/GableStage-logo-from-FB-728x728.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Only this weekend remains to catch “Eureka Day” at GableStage at the Wolfson Family Theatre in The Biltmore Hotel in Coral Gables. GableStage is offering a BOGO Deal for a few of the final performances, on Wednesday, June 10, at 2 and 7:30 p.m. and Saturday, June 13, at 2 p.m. Use code BOGO at … Copyright South Florida on the Cheap. The post BOGO Deal for final weekend o",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1781053549353_keji",
-        "title": {
-          "en": "Tunes ‘n Trucks with Motown band, food trucks & Juneteenth vibe",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-outdoor-concerts-sunrise/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/05/tunes-and-trucks-sunrise-recreation--728x194.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Fresh air. Live music. Food trucks. Pack a blanket. Entry for Tunes ‘N Trucks in Sunrise is free. Tunes ‘N Trucks outdoor events in Sunrise offer free concerts and dining options from your favorite food trucks. The popular series runs October through June and rotates through Sunrise parks. Live music is at 7 p.m. and … Copyright South Florida on the Cheap. The post Tunes",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1781053549353_g226",
-        "title": {
-          "en": "Food trucks, vendors and lawn games at Volunteer Park in Plantation",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/food-truck-events-in-plantation/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2023/06/Volunteer-Park-Plantation-food-trucks-.png",
-        "description": {
-          "en": "South Florida on the Cheap If you're thinking about going out for dinner, perhaps you'll venture to a park. Food truck fare is featured at Volunteer Park in Plantation. Food trucks are at the park 5 p.m. to 9 p.m. Wednesdays, and the events usually include live entertainment or a DJ, activities and games for youngsters and local artisan vendors … Copyright South Florida on the Cheap. The post Food",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1781053549353_9121",
-        "title": {
-          "en": "Free passes for museums, attractions at Miami-Dade libraries",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-museum-attraction-visits-with-library-card-pass/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2018/11/Downtown-Miami_Museum-Park_Patricia-and-Phillip-Frost-Museum_Children_Gulf-Stream-Aquarium_People_Shark_Exhibition-20180328-356-scaled-728x485.jpg",
-        "description": {
-          "en": "South Florida on the Cheap The Miami-Dade Public Library offers library card holders a chance to visit local museums and attractions free. When available, the Museum Passes are good for a family of four to get into: The Bass Black Police Precinct & Courthouse Museum Coral Gables Museum The Curtiss Mansion Deering Estate Freedom Tower Miami Fruit & Spice Park … Copyright South Florida on the Cheap.",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
-        "id": "rss_1781053549353_12go",
-        "title": {
-          "en": "FIFA 2026 World Cup watch parties and events around Miami",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-06-09",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/fifa-2026-world-cup-watch-parties-around-miami/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/05/FIFA-2026-image.jpg",
-        "description": {
-          "en": "South Florida on the Cheap GOAAAAAALLLLLL!!!!!!!! The FIFA World Cup soccer frenzy is set to descend on Miami from June 11 through July 19. Because tickets to the matches at Hard Rock Stadium in Miami Gardens are not only hard to come by but expensive, we've rounded up a list of watch parties and other FIFA-themed events around Miami. We … Copyright South Florida on the Cheap. The post FIFA 2026 W",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        }
-      },
-      {
         "id": "rss_1781053549353_tzhk",
         "title": {
           "en": "World Soccer Fan Fest Kick Off at Atlantic Village 6/13/26",
-          "es": "",
-          "pt": "",
-          "fr": ""
+          "es": "Inicio del World Soccer Fan Fest en Atlantic Village 13/6/26",
+          "pt": "Início do World Soccer Fan Fest no Atlantic Village 13/06/26",
+          "fr": "Lancement du World Soccer Fan Fest à Atlantic Village le 13/06/26"
         },
         "date": "2026-06-13",
         "venue": "Atlantic Village",
@@ -1775,9 +1109,9 @@
         "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-04-at-15.10.46-1-350x438.jpeg",
         "description": {
           "en": "the start of the World Cup at Atlantic Village’s Soccer Fan Fest in",
-          "es": "",
-          "pt": "",
-          "fr": ""
+          "es": "el inicio de la Copa del Mundo en el Soccer Fan Fest de Atlantic Village",
+          "pt": "o início da Copa do Mundo no Soccer Fan Fest do Atlantic Village",
+          "fr": "le début de la Coupe du Monde au Soccer Fan Fest d'Atlantic Village"
         },
         "lat": 25.9964303,
         "lng": -80.1427416
@@ -1786,9 +1120,9 @@
         "id": "rss_1781053549353_u34m",
         "title": {
           "en": "PURRR Adoption + Sanctuary’s “PURRRS & POPS” Open House 6/14/26",
-          "es": "",
-          "pt": "",
-          "fr": ""
+          "es": "Casa Abierta 'PURRRS & POPS' de PURRR Adoption + Sanctuary el 14/6/26",
+          "pt": "Open House 'PURRRS & POPS' da PURRR Adoption + Sanctuary em 14/06/26",
+          "fr": "Portes Ouvertes 'PURRRS & POPS' de PURRR Adoption + Sanctuary le 14/06/26"
         },
         "date": "2026-06-14",
         "venue": "PURRR Adoption + Sanctuary Ranch",
@@ -1799,9 +1133,9 @@
         "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/PURRRS-POPS-invite1-350x467.png",
         "description": {
           "en": "To commemorate National Adopt a Cat Month and Father’s Day, PURRR",
-          "es": "",
-          "pt": "",
-          "fr": ""
+          "es": "Para conmemorar el Mes Nacional de Adopción de Gatos y el Día del Padre, PURRR",
+          "pt": "Para comemorar o Mês Nacional de Adoção de Gatos e o Dia dos Pais, PURRR",
+          "fr": "Pour commémorer le Mois National de l'Adoption des Chats et la Fête des Pères, PURRR"
         },
         "lat": 26.0812886,
         "lng": -80.3494993
@@ -1810,9 +1144,9 @@
         "id": "rss_1781053549353_rn5j",
         "title": {
           "en": "The City of Hialeah Brings The Mayor’s Cup and FIFA World Cup 26™ Viewing Parties To Factory Town 6/12/26, 6/13/26, 6/14/26",
-          "es": "",
-          "pt": "",
-          "fr": ""
+          "es": "La Ciudad de Hialeah trae la Copa del Alcalde y las Fiestas de Visionado de la Copa Mundial FIFA 26™ a Factory Town 12/6/26, 13/6/26, 14/6/26",
+          "pt": "A Cidade de Hialeah traz a Copa do Prefeito e as Festas de Exibição da Copa do Mundo FIFA 26™ para Factory Town 12/06/26, 13/06/26, 14/06/26",
+          "fr": "La Ville de Hialeah présente la Coupe du Maire et les Soirées de Visionnage de la Coupe du Monde FIFA 26™ à Factory Town les 12/06/26, 13/06/26, 14/06/26"
         },
         "date": "2026-06-12",
         "venue": "Soul of Miami",
@@ -1823,9 +1157,541 @@
         "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/Screenshot-2026-06-08-at-3.28.18-PM-350x349.png",
         "description": {
           "en": "The City of Hialeah Brings The Mayor’s Cup and FIFA World Cup 26™ Viewing Parties To Factory Town Friday, 06/12/2026-06/14/2026, 08:00 pm-12:00 am Factory Town 4800 NW 37th Ave, Miami, Florida, 33142 Buy Tickets Cost: Free The City of HialeahRead More The City of Hialeah Brings The Mayor’s Cup and FIFA World Cup 26™ Viewing Parties To Factory Town 6/12/26, 6/13/26, 6/14/26",
-          "es": "",
-          "pt": "",
-          "fr": ""
+          "es": "La Ciudad de Hialeah trae la Copa del Alcalde y las Fiestas de Visionado de la Copa Mundial FIFA 26™ a Factory Town, viernes 12/06/2026–14/06/2026, de 8:00 pm a 12:00 am. Factory Town, 4800 NW 37th Ave, Miami, Florida, 33142. Entrada gratuita.",
+          "pt": "A Cidade de Hialeah traz a Copa do Prefeito e as Festas de Exibição da Copa do Mundo FIFA 26™ para Factory Town, sexta-feira 12/06/2026–14/06/2026, das 20h às 00h. Factory Town, 4800 NW 37th Ave, Miami, Flórida, 33142. Entrada gratuita.",
+          "fr": "La Ville de Hialeah présente la Coupe du Maire et les Soirées de Visionnage de la Coupe du Monde FIFA 26™ à Factory Town, vendredi 12/06/2026–14/06/2026, de 20h à 00h. Factory Town, 4800 NW 37th Ave, Miami, Floride, 33142. Entrée gratuite."
+        }
+      },
+      {
+        "id": "tm_1781219768849_jd8s",
+        "title": {
+          "en": "Florida Man: Ron DeSantis & Dave Rubin Live in Miami!",
+          "es": "¡Florida Man: Ron DeSantis y Dave Rubin en vivo en Miami!",
+          "pt": "Florida Man: Ron DeSantis e Dave Rubin ao Vivo em Miami!",
+          "fr": "Florida Man : Ron DeSantis et Dave Rubin en Direct à Miami !"
+        },
+        "date": "2026-06-11",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fflorida-man-ron-desantis-dave-rubin-miami-beach-florida-06-11-2026%2Fevent%2F0D00649B4A25709D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/b81/05e1cf04-f517-4595-bf81-cb7ab637bb81_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "For ADA Accommodations questions please reach out to FMBBoxOffice@livenation.com or call (305) 673-7300. Box Office is open Tuesday and Thursday 11 AM - 6 PM. Day of Show the Box Office will open one hour prior to doors. · Starts 19:30 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Para preguntas sobre acomodaciones ADA, comuníquese con FMBBoxOffice@livenation.com o llame al (305) 673-7300. La taquilla está abierta los martes y jueves de 11 AM a 6 PM. El día del evento, la taquilla abrirá una hora antes de las puertas. · Comienza a las 19:30 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "pt": "Para dúvidas sobre acomodações ADA, entre em contato com FMBBoxOffice@livenation.com ou ligue para (305) 673-7300. A bilheteria funciona às terças e quintas-feiras das 11h às 18h. No dia do show, a bilheteria abrirá uma hora antes da abertura das portas. · Início às 19h30 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "fr": "Pour toute question concernant les aménagements ADA, veuillez contacter FMBBoxOffice@livenation.com ou appeler le (305) 673-7300. La billetterie est ouverte le mardi et le jeudi de 11h à 18h. Le jour du spectacle, la billetterie ouvrira une heure avant l'ouverture des portes. · Début à 19h30 · The Fillmore Miami Beach at Jackie Gleason Theater"
+        },
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1781219768849_oyny",
+        "title": {
+          "en": "The Book of Mormon (Touring)",
+          "es": "El Libro de Mormón (Gira)",
+          "pt": "O Livro de Mórmon (Turnê)",
+          "fr": "Le Livre de Mormon (Tournée)"
+        },
+        "date": "2026-06-11",
+        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7_OCd&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/70c/f8408501-c120-4b57-a857-a1711722970c_241621_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Theatre · Starts 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "es": "Artes y Teatro · Teatro · Comienza a las 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "pt": "Artes e Teatro · Teatro · Início às 20h00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "fr": "Arts et Théâtre · Théâtre · Début à 20h00 · Ziff Ballet Opera House-Adrienne Arsht PAC"
+        },
+        "lat": 25.784901,
+        "lng": -80.189598
+      },
+      {
+        "id": "tm_1781219768849_9d8q",
+        "title": {
+          "en": "Ride and Dine! Hard Rock Cafe Miami and Big Bus Tours Miami",
+          "es": "¡Paseo y Cena! Hard Rock Cafe Miami y Big Bus Tours Miami",
+          "pt": "Passeio e Jantar! Hard Rock Cafe Miami e Big Bus Tours Miami",
+          "fr": "Balade et Dîner ! Hard Rock Cafe Miami et Big Bus Tours Miami"
+        },
+        "date": "2026-06-12",
+        "venue": "Hard Rock Cafe Miami",
+        "address": "401 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-hard-rock-hard-rock-cafe-tickets%2F14043644%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Starts 07:00 · Hard Rock Cafe Miami",
+          "es": "Misceláneos · Comienza a las 07:00 · Hard Rock Cafe Miami",
+          "pt": "Diversos · Início às 07h00 · Hard Rock Cafe Miami",
+          "fr": "Divers · Début à 07h00 · Hard Rock Cafe Miami"
+        },
+        "lat": 25.7784353,
+        "lng": -80.1880012
+      },
+      {
+        "id": "tm_1781219768849_dzgd",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Balloon Museum | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Balloon Museum | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Balloon Museum | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-06-12",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneos · Familia · Comienza a las 10:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Início às 10h00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Début à 10h00 · Mana Wynwood Convention Center"
+        },
+        "lat": 25.797998,
+        "lng": -80.202062
+      },
+      {
+        "id": "tm_1781219768849_g8re",
+        "title": {
+          "en": "Ride and Dine with Us! Thriller Speedboat Tours",
+          "es": "¡Paseo y Cena con Nosotros! Thriller Speedboat Tours",
+          "pt": "Passeio e Jantar Conosco! Thriller Speedboat Tours",
+          "fr": "Balade et Dîner avec Nous ! Thriller Speedboat Tours"
+        },
+        "date": "2026-06-12",
+        "venue": "Hard Rock Cafe Miami",
+        "address": "401 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-with-us-hard-rock-cafe-tickets%2F14038094%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Starts 11:00 · Hard Rock Cafe Miami",
+          "es": "Misceláneos · Comienza a las 11:00 · Hard Rock Cafe Miami",
+          "pt": "Diversos · Início às 11h00 · Hard Rock Cafe Miami",
+          "fr": "Divers · Début à 11h00 · Hard Rock Cafe Miami"
+        },
+        "lat": 25.7784353,
+        "lng": -80.1880012
+      },
+      {
+        "id": "tm_1781219768849_cvxv",
+        "title": {
+          "en": "Kaseya Center All-Access Tour",
+          "es": "Tour de Acceso Total al Kaseya Center",
+          "pt": "Tour Acesso Total ao Kaseya Center",
+          "fr": "Visite Accès Total du Kaseya Center"
+        },
+        "date": "2026-06-12",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fkaseya-center-all-access-tour-tickets-82ZSY4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 15:00 · Kaseya Center",
+          "es": "Comienza a las 15:00 · Kaseya Center",
+          "pt": "Começa às 15:00 · Kaseya Center",
+          "fr": "Débute à 15h00 · Kaseya Center"
+        },
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1781219768849_pkci",
+        "title": {
+          "en": "Blue Man Group",
+          "es": "Blue Man Group",
+          "pt": "Blue Man Group",
+          "fr": "Blue Man Group"
+        },
+        "date": "2026-06-12",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fblue-man-group-ft-lauderdale-florida-06-12-2026%2Fevent%2F0D006357919433F0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d17/bb9fb760-a361-476f-8b4e-c54d10e08d17_48471_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Dive into the thrilling Blue Man Group experience ? a blend of captivating music, interactive art and audience engagement. Blue Man Group creates a fun, disruptive and out of the ordinary atmosphere that exhilarates the senses and uplifts spirits for audiences of all ages. Join over 50 million fans who've experienced the magic of Blue Man Group across the world! · Starts 19:00 · Au-Rene Theater at",
+          "es": "Sumérgete en la emocionante experiencia de Blue Man Group: una mezcla de música cautivadora, arte interactivo y participación del público. Blue Man Group crea una atmósfera divertida, disruptiva y fuera de lo común que estimula los sentidos y levanta el ánimo de espectadores de todas las edades. ¡Únete a más de 50 millones de fanáticos que han vivido la magia de Blue Man Group en todo el mundo! · Comienza a las 19:00 · Au-Rene Theater",
+          "pt": "Mergulhe na emocionante experiência do Blue Man Group: uma mistura de música cativante, arte interativa e engajamento do público. O Blue Man Group cria uma atmosfera divertida, disruptiva e fora do comum que estimula os sentidos e eleva o ânimo de plateias de todas as idades. Junte-se a mais de 50 milhões de fãs que já viveram a magia do Blue Man Group ao redor do mundo! · Começa às 19:00 · Au-Rene Theater",
+          "fr": "Plongez dans l'expérience palpitante du Blue Man Group : un mélange de musique captivante, d'art interactif et de participation du public. Le Blue Man Group crée une atmosphère amusante, décalée et hors du commun qui exalte les sens et remonte le moral des spectateurs de tout âge. Rejoignez plus de 50 millions de fans qui ont vécu la magie du Blue Man Group à travers le monde ! · Débute à 19h00 · Au-Rene Theater"
+        },
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1781219768849_eo8k",
+        "title": {
+          "en": "CA7RIEL & Paco Amoroso: FREE SPIRITS WORLD TOUR",
+          "es": "CA7RIEL & Paco Amoroso: FREE SPIRITS WORLD TOUR",
+          "pt": "CA7RIEL & Paco Amoroso: FREE SPIRITS WORLD TOUR",
+          "fr": "CA7RIEL & Paco Amoroso: FREE SPIRITS WORLD TOUR"
+        },
+        "date": "2026-06-12",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fca7riel-paco-amoroso-free-spirits-world-miami-beach-florida-06-12-2026%2Fevent%2F0D006472C8EEF502&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d70/4ae8fa11-7f13-4554-affb-3e5aba487d70_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Las entradas GA corresponden a Admisión General. Esto significa que no hay asientos asignados. Estas áreas son de pie y sentado, y se asignan por orden de llegada. Ten en cuenta que una vez que se alcance la capacidad del área, serás dirigido a otras zonas disponibles. · Comienza a las 20:00 · The Fillmore Miami Beach en el Jackie Gleason Theater",
+          "pt": "Os ingressos GA significam Entrada Geral. Isso significa que não há lugares marcados. Essas áreas são de pé e sentado e funcionam por ordem de chegada. Saiba que, uma vez atingida a capacidade da área, você será direcionado para outras áreas abertas. · Começa às 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
+          "fr": "Les billets GA correspondent à l'Admission Générale. Cela signifie qu'il n'y a pas de places assignées. Ces zones sont debout et assises et sont attribuées selon le principe du premier arrivé, premier servi. Veuillez noter qu'une fois la capacité d'une zone atteinte, vous serez orienté vers d'autres zones disponibles. · Débute à 20h00 · The Fillmore Miami Beach au Jackie Gleason Theater"
+        },
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1781219768849_6lbi",
+        "title": {
+          "en": "Electric Feels: Indie Rock + Electronic Dance Party",
+          "es": "Electric Feels: Fiesta de Rock Indie y Música Electrónica",
+          "pt": "Electric Feels: Festa de Rock Indie e Música Eletrônica",
+          "fr": "Electric Feels: Soirée Rock Indé et Musique Électronique"
+        },
+        "date": "2026-06-12",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Felectric-feels-indie-rock-electronic-dance-ft-lauderdale-florida-06-12-2026%2Fevent%2F0D00649BE4458660&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d99/7d0d36d0-4cf5-4649-b647-d0e85bd55d99_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Electric Feels is an experience driven dance party that plays everything from indie rock to electronic dance music all night with amazing DJs, stage production and more! It's a party with a festival feel. For fans of... Tame Impala | MGMT | The Killers | Miike Snow | Glass Animals | The Strokes | Phoenix | Passion Pit | Arctic Monkeys | Yeah Yeah Yeahs | STRFKR | Hot Chip | Empire Of the Sun | Jun",
+          "es": "Electric Feels es una fiesta bailable enfocada en la experiencia, que suena de todo, desde rock indie hasta música electrónica toda la noche, con increíbles DJs, producción en escena y mucho más. ¡Es una fiesta con ambiente de festival! Para fanáticos de... Tame Impala | MGMT | The Killers | Miike Snow | Glass Animals | The Strokes | Phoenix | Passion Pit | Arctic Monkeys | Yeah Yeah Yeahs | STRFKR | Hot Chip | Empire Of the Sun",
+          "pt": "Electric Feels é uma festa dançante focada na experiência, que toca de tudo, do rock indie à música eletrônica a noite toda, com DJs incríveis, produção no palco e muito mais! É uma festa com clima de festival. Para fãs de... Tame Impala | MGMT | The Killers | Miike Snow | Glass Animals | The Strokes | Phoenix | Passion Pit | Arctic Monkeys | Yeah Yeah Yeahs | STRFKR | Hot Chip | Empire Of the Sun",
+          "fr": "Electric Feels est une soirée dansante axée sur l'expérience, qui joue de tout, du rock indé à la musique électronique toute la nuit, avec des DJs incroyables, une production scénique impressionnante et bien plus encore ! C'est une fête avec une ambiance de festival. Pour les fans de... Tame Impala | MGMT | The Killers | Miike Snow | Glass Animals | The Strokes | Phoenix | Passion Pit | Arctic Monkeys | Yeah Yeah Yeahs | STRFKR | Hot Chip | Empire Of the Sun"
+        },
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1781219768849_nhjm",
+        "title": {
+          "en": "Friday Night Live - Improv Comedy Miami Show",
+          "es": "Noche de Comedia en Vivo del Viernes - Show de Improvisación en Miami",
+          "pt": "Noite de Comédia ao Vivo de Sexta-Feira - Show de Improvisação em Miami",
+          "fr": "Soirée Comédie Live du Vendredi - Spectacle d'Impro à Miami"
+        },
+        "date": "2026-06-12",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14774963&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
+          "es": "¡Noche de Comedia en Vivo del Viernes! - Show de improvisación en Miami. ¡La combinación especial de JTF entre improv de formato corto y largo! Disfruta mientras nuestro galardonado elenco te trae una fantástica improvisación perfecta para tu noche de viernes... ¡EN VIVO! Nuestros shows son descritos frecuentemente como comedia improvisada de ritmo rápido. Imagínatelo como Whose Line Is It Anyway mezclado con SNL, con mucha interacción divertida con el público. ¡Ven y sé parte de ello!",
+          "pt": "Noite de Comédia ao Vivo de Sexta-Feira! - Show de improvisação em Miami. A combinação especial da JTF entre improv de formato curto e longo! Aproveite enquanto nosso premiado elenco traz uma improvisação fantástica perfeita para a sua noite de sexta... AO VIVO! Nossos shows são frequentemente descritos como comédia improvisada em ritmo acelerado. Pense nele como Whose Line Is It Anyway misturado com SNL, com muita interação divertida com o público. Venha fazer parte disso!",
+          "fr": "Soirée Comédie Live du Vendredi ! - Spectacle d'improvisation à Miami. La combinaison spéciale de JTF entre l'impro courte et longue ! Profitez de notre troupe primée qui vous offre une improvisation fantastique, parfaite pour votre soirée du vendredi... EN DIRECT ! Nos spectacles sont souvent décrits comme de la comédie improvisée au rythme effréné. Imaginez Whose Line Is It Anyway rencontrant le SNL, avec beaucoup d'interactions amusantes avec le public. Venez en faire partie !"
+        },
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1781219768849_1vxt",
+        "title": {
+          "en": "Slow Burn Theatre Co: Jagged Little Pill: The Musical",
+          "es": "Slow Burn Theatre Co: Jagged Little Pill: El Musical",
+          "pt": "Slow Burn Theatre Co: Jagged Little Pill: O Musical",
+          "fr": "Slow Burn Theatre Co: Jagged Little Pill: La Comédie Musicale"
+        },
+        "date": "2026-06-13",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fslow-burn-theatre-co-jagged-little-ft-lauderdale-florida-06-13-2026%2Fevent%2F0D0062A7F6CE3F4F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/087/d6ab59f9-9474-47c8-a4c0-511e8d0cb087_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Winner! Two Tony Awards, Two Drama Desk Award, Eight Outer Critics Circle Awards, and a Grammy Award for Best Musical Theater Album Alanis Morissette's Jagged Little Pill: The Musical is an exhilarating new musical inspired by the themes and raw emotions laid bare in Alanis Morissette's seminal album of the same name. The Healys appear to be a picture-perfect suburban family - but looks can be dec",
+          "es": "¡Ganador! Dos Premios Tony, Dos Premios Drama Desk, Ocho Premios Outer Critics Circle y un Grammy al Mejor Álbum de Teatro Musical. Jagged Little Pill: El Musical de Alanis Morissette es un emocionante nuevo musical inspirado en los temas y las emociones en bruto que se expresan en el icónico álbum homónimo de Alanis Morissette. Los Healy parecen ser una familia suburbana perfecta, pero las apariencias pueden engañar.",
+          "pt": "Vencedor! Dois Prêmios Tony, Dois Prêmios Drama Desk, Oito Prêmios Outer Critics Circle e um Grammy de Melhor Álbum de Teatro Musical. Jagged Little Pill: O Musical de Alanis Morissette é um novo e eletrizante musical inspirado nos temas e emoções cruas reveladas no álbum seminal de mesmo nome de Alanis Morissette. Os Healy parecem ser uma família suburbana perfeita, mas as aparências podem enganar.",
+          "fr": "Lauréat ! Deux Tony Awards, Deux Drama Desk Awards, Huit Outer Critics Circle Awards et un Grammy du Meilleur Album de Théâtre Musical. Jagged Little Pill : La Comédie Musicale d'Alanis Morissette est une nouvelle comédie musicale exaltante inspirée des thèmes et des émotions brutes mis à nu dans l'album éponyme d'Alanis Morissette. Les Healy semblent être une famille de banlieue parfaite, mais les apparences peuvent être trompeuses."
+        },
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1781219768849_i23i",
+        "title": {
+          "en": "Orquesta Akokan",
+          "es": "Orquesta Akokan",
+          "pt": "Orquestra Akokan",
+          "fr": "Orchestre Akokan"
+        },
+        "date": "2026-06-13",
+        "venue": "Miami Beach Bandshell",
+        "address": "7275 Collins Avenue, Miami Beach FL 33141, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70Fee&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 18:00 · Miami Beach Bandshell",
+          "es": "Música · Otros · Comienza a las 18:00 · Miami Beach Bandshell",
+          "pt": "Música · Outros · Início às 18:00 · Miami Beach Bandshell",
+          "fr": "Musique · Autre · Début à 18h00 · Miami Beach Bandshell"
+        },
+        "lat": 25.8619,
+        "lng": -80.1259
+      },
+      {
+        "id": "rss_1781219784801_j22a",
+        "title": {
+          "en": "Ron Magill retired from his role at Zoo Miami. Now what?",
+          "es": "Ron Magill se retiró de su cargo en Zoo Miami. ¿Y ahora qué?",
+          "pt": "Ron Magill se aposentou de seu cargo no Zoo Miami. E agora?",
+          "fr": "Ron Magill a pris sa retraite du Zoo de Miami. Et maintenant ?"
+        },
+        "date": "2026-06-11",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/arts-culture/ron-magill-retired-from-his-role-at-zoo-miami-now-what-40543085/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/ww-media/mediaserver/mia/2022-03/ron_magill_photo_by_karli_evans.webp",
+        "description": {
+          "en": "The conservationist will continue to advocate for wildlife, albeit with less \"red tape.\"",
+          "es": "El conservacionista continuará abogando por la vida silvestre, aunque con menos \"burocracia\".",
+          "pt": "O conservacionista continuará defendendo a vida selvagem, embora com menos \"burocracia\".",
+          "fr": "Le défenseur de la nature continuera à plaider pour la faune sauvage, mais avec moins de \"paperasserie\"."
+        }
+      },
+      {
+        "id": "rss_1781219784801_7tcy",
+        "title": {
+          "en": "Live Nation announced new dates for postponed Rosalía Miami shows and refund info",
+          "es": "Live Nation anunció nuevas fechas para los shows pospuestos de Rosalía en Miami e información sobre reembolsos",
+          "pt": "Live Nation anunciou novas datas para os shows adiados de Rosalía em Miami e informações sobre reembolsos",
+          "fr": "Live Nation annonce de nouvelles dates pour les concerts reportés de Rosalía à Miami et les informations de remboursement"
+        },
+        "date": "2026-06-11",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/music/rosalia-announces-new-dates-for-postponed-miami-shows-40556443/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2025/12/Rosalia-Ticketmaster.webp",
+        "description": {
+          "en": "The singer’s three postponed Florida concerts, including two dates in Miami and one in Orlando, have officially been rescheduled.",
+          "es": "Los tres conciertos pospuestos de la cantante en Florida, incluidas dos fechas en Miami y una en Orlando, han sido reagendados oficialmente.",
+          "pt": "Os três shows adiados da cantora na Flórida, incluindo duas datas em Miami e uma em Orlando, foram oficialmente remarcados.",
+          "fr": "Les trois concerts reportés de la chanteuse en Floride, dont deux dates à Miami et une à Orlando, ont été officiellement reprogrammés."
+        }
+      },
+      {
+        "id": "rss_1781219784801_xt0a",
+        "title": {
+          "en": "Giannis-to-Miami buzz grows as proposed trade package emerges",
+          "es": "El rumor de Giannis a Miami crece mientras surge un paquete de intercambio propuesto",
+          "pt": "O rumor de Giannis para Miami cresce à medida que surge um pacote de troca proposto",
+          "fr": "Les rumeurs sur Giannis à Miami s'intensifient avec l'émergence d'un transfert proposé"
+        },
+        "date": "2026-06-11",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/news/giannis-to-miami-buzz-grows-as-proposed-trade-package-emerges-40556405/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/Giannis-Heat-e1781203026232.jpg",
+        "description": {
+          "en": "The Miami Heat are once again at the center of NBA superstar rumors as new reports link Giannis Antetokounmpo to South Florida.",
+          "es": "El Miami Heat está una vez más en el centro de los rumores sobre superestrellas de la NBA, ya que nuevos informes vinculan a Giannis Antetokounmpo con el sur de Florida.",
+          "pt": "O Miami Heat está mais uma vez no centro dos rumores sobre superestrelas da NBA, com novos relatórios ligando Giannis Antetokounmpo ao sul da Flórida.",
+          "fr": "Le Miami Heat est une fois de plus au cœur des rumeurs sur les superstars de la NBA, de nouveaux rapports établissant un lien entre Giannis Antetokounmpo et le sud de la Floride."
+        }
+      },
+      {
+        "id": "rss_1781219784801_pwhh",
+        "title": {
+          "en": "Who are the Miami men cast on the latest season of “Love Island?”",
+          "es": "¿Quiénes son los hombres de Miami en la última temporada de 'Love Island'?",
+          "pt": "Quem são os homens de Miami no último episódio de 'Love Island'?",
+          "fr": "Qui sont les hommes de Miami dans la dernière saison de 'Love Island' ?"
+        },
+        "date": "2026-06-11",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/arts-culture/meet-the-miami-men-cast-on-love-island-season-8-40556276/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/Love-Island-cast-Season-8Photo-by-Ben-Symons-Peacock.jpg",
+        "description": {
+          "en": "A luxury travel consultant, UM track star, and \"Reverse Leonardo DiCaprio\" walk into a villa...",
+          "es": "Un consultor de viajes de lujo, una estrella del atletismo de la UM y un 'Leonardo DiCaprio al revés' llegan a una villa...",
+          "pt": "Um consultor de viagens de luxo, um astro do atletismo da UM e um 'Leonardo DiCaprio ao contrário' chegam a uma vila...",
+          "fr": "Un consultant en voyages de luxe, une star d'athlétisme de l'UM et un 'Leonardo DiCaprio à l'envers' arrivent dans une villa..."
+        }
+      },
+      {
+        "id": "rss_1781219784801_l89w",
+        "title": {
+          "en": "Where to watch the 2026 World Cup in Miami",
+          "es": "Dónde ver la Copa del Mundo 2026 en Miami",
+          "pt": "Onde assistir à Copa do Mundo 2026 em Miami",
+          "fr": "Où regarder la Coupe du Monde 2026 à Miami"
+        },
+        "date": "2026-06-11",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/food-drink/where-to-watch-the-2026-world-cup-in-miami-40552222/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/05/Broken-Shaker-Miami_Pool-Credit-Diana-Todorova.jpg",
+        "description": {
+          "en": "From South Beach to Brickell and everywhere in between, here are the best Miami bars and restaurants to watch the 2026 World Cup.",
+          "es": "Desde South Beach hasta Brickell y todo lo que hay en medio, aquí están los mejores bares y restaurantes de Miami para ver la Copa del Mundo 2026.",
+          "pt": "De South Beach a Brickell e em todos os lugares entre eles, confira os melhores bares e restaurantes de Miami para assistir à Copa do Mundo 2026.",
+          "fr": "De South Beach à Brickell et partout entre les deux, voici les meilleurs bars et restaurants de Miami pour regarder la Coupe du Monde 2026."
+        }
+      },
+      {
+        "id": "rss_1781219784801_w41e",
+        "title": {
+          "en": "Water parks in Dade for refreshing fun",
+          "es": "Parques acuáticos en Dade para una diversión refrescante",
+          "pt": "Parques aquáticos em Dade para uma diversão refrescante",
+          "fr": "Parcs aquatiques à Dade pour un amusement rafraîchissant"
+        },
+        "date": "2026-06-11",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/stay-cool-at-these-miami-water-parks-this-summer/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2014/05/Grapeland-Water-Park.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Miami's gonna get hot this summer - it always does. So the kids will want to stay cool. Best way to do that? Visit a water park where they can... Copyright South Florida on the Cheap. The post Water parks in Dade for refreshing fun appeared first on South Florida on the Cheap.",
+          "es": "Miami se va a calentar este verano, como siempre. Los niños querrán mantenerse frescos. ¿La mejor manera? Visitar un parque acuático donde puedan refrescarse.",
+          "pt": "Miami vai esquentar neste verão, como sempre acontece. As crianças vão querer se refrescar. A melhor forma? Visitar um parque aquático onde possam se divertir na água.",
+          "fr": "Miami va chauffer cet été, comme toujours. Les enfants voudront rester au frais. La meilleure façon ? Visiter un parc aquatique où ils pourront se rafraîchir."
+        }
+      },
+      {
+        "id": "rss_1781219784801_e0b9",
+        "title": {
+          "en": "Juneteenth festivals and events in Broward",
+          "es": "Festivales y eventos de Juneteenth en Broward",
+          "pt": "Festivais e eventos do Juneteenth em Broward",
+          "fr": "Festivals et événements du Juneteenth à Broward"
+        },
+        "date": "2026-06-11",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/juneteenth-events-in-broward/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2023/04/Juneteenth-photos-broward-library-728x480.png",
+        "description": {
+          "en": "South Florida on the Cheap Festive Juneteenth events in Broward include entertainment, speakers and festivals with activities for kids. Juneteenth is a federal holiday representing freedom from slavery in the United States. In Broward, Juneteenth... Copyright South Florida on the Cheap. The post Juneteenth festivals and events in Broward appeared first on South Florida on the Cheap.",
+          "es": "Los festivos eventos de Juneteenth en Broward incluyen entretenimiento, oradores y festivales con actividades para niños. Juneteenth es un feriado federal que representa la libertad de la esclavitud en los Estados Unidos.",
+          "pt": "Os animados eventos do Juneteenth em Broward incluem entretenimento, palestrantes e festivais com atividades para crianças. O Juneteenth é um feriado federal que representa a liberdade da escravidão nos Estados Unidos.",
+          "fr": "Les événements festifs du Juneteenth à Broward comprennent des divertissements, des conférenciers et des festivals avec des activités pour les enfants. Le Juneteenth est un jour férié fédéral représentant la liberté de l'esclavage aux États-Unis."
+        }
+      },
+      {
+        "id": "rss_1781219784801_6gdq",
+        "title": {
+          "en": "Free July Fourth fest at beach in Fort Lauderdale with Walker Hayes, drones & fireworks",
+          "es": "Festival gratuito del 4 de julio en la playa de Fort Lauderdale con Walker Hayes, drones y fuegos artificiales",
+          "pt": "Festival gratuito de 4 de julho na praia de Fort Lauderdale com Walker Hayes, drones e fogos de artifício",
+          "fr": "Festival gratuit du 4 juillet sur la plage de Fort Lauderdale avec Walker Hayes, drones et feux d'artifice"
+        },
+        "date": "2026-06-11",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-july-fourth-fest-in-fort-lauderdale/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2022/12/fireworks-g7a21c7f4c_1920-728x456.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Fort Lauderdale offers a 4th of July Spectacular featuring fireworks and festivities including water slides, fireworks and live bands. Fourth of July Spectacular in 2026 is 12 p.m. to 9:... Copyright South Florida on the Cheap. The post Free July Fourth fest at beach in Fort Lauderdale with Walker Hayes, drones & fireworks appeared first on South Florida on the Cheap.",
+          "es": "Fort Lauderdale ofrece un Espectáculo del 4 de Julio con fuegos artificiales y festividades que incluyen toboganes acuáticos y bandas en vivo. El Espectáculo del Cuatro de Julio 2026 es de 12 p.m. a 9 p.m.",
+          "pt": "Fort Lauderdale oferece um Espetáculo de 4 de Julho com fogos de artifício e festividades que incluem toboáguas e bandas ao vivo. O Espetáculo do Quatro de Julho de 2026 acontece das 12h às 21h.",
+          "fr": "Fort Lauderdale propose un Spectacle du 4 Juillet avec des feux d'artifice et des festivités comprenant des toboggans aquatiques et des groupes en live. Le Spectacle du Quatre Juillet 2026 se déroule de 12h à 21h."
+        }
+      },
+      {
+        "id": "rss_1781219784801_vblw",
+        "title": {
+          "en": "Let’s Wyn: Features Summer Soccer Fan Activities in Wynwood 6/11/26 – 6/17/26",
+          "es": "Let's Wyn: Actividades de fútbol de verano para fanáticos en Wynwood del 11 al 17 de junio de 2026",
+          "pt": "Let's Wyn: Atividades de futebol de verão para fãs em Wynwood de 11 a 17 de junho de 2026",
+          "fr": "Let's Wyn : Activités estivales de football pour les fans à Wynwood du 11 au 17 juin 2026"
+        },
+        "date": "2026-06-11",
+        "venue": "Wynwood BID",
+        "address": "118 NW 25th St, Miami, Florida, 33127",
+        "url": "https://www.soulofmiami.org/2026/06/11/lets-wyn-features-summer-soccer-fan-activities-in-wynwood-6-11-26-6-17-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/4-AF-LW-IKE-BOARD-01-1-281x500.png",
+        "description": {
+          "en": "Let’s Wyn is a summer of art, food, games and free events all across Wynwood.",
+          "es": "Let's Wyn es un verano de arte, gastronomía, juegos y eventos gratuitos en todo Wynwood.",
+          "pt": "Let's Wyn é um verão de arte, gastronomia, jogos e eventos gratuitos por todo o Wynwood.",
+          "fr": "Let's Wyn est un été d'art, de gastronomie, de jeux et d'événements gratuits à travers tout Wynwood."
+        },
+        "lat": 25.8006855,
+        "lng": -80.1975227
+      },
+      {
+        "id": "rss_1781219784801_h7u7",
+        "title": {
+          "en": "Museum of Graffiti Celebrates Grand Opening of Art of Futbol 6/13/26",
+          "es": "El Museo del Grafiti Celebra la Gran Inauguración de Art of Futbol 13/6/26",
+          "pt": "Museu do Graffiti Celebra a Grande Inauguração do Art of Futbol 13/6/26",
+          "fr": "Le Musée du Graffiti Célèbre la Grande Ouverture de l'Art of Futbol 13/06/26"
+        },
+        "date": "2026-06-13",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/06/11/museum-of-graffiti-celebrates-grand-opening-of-art-of-futbol-6-13-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/Museum-of-Graffiti-Celebrates-Grand-Opening-of-Art-of-Futbol-350x250.jpg",
+        "description": {
+          "en": "The Museum of Graffiti celebrates the grand opening of The",
+          "es": "El Museo del Grafiti celebra la gran inauguración de The",
+          "pt": "O Museu do Graffiti celebra a grande inauguração de The",
+          "fr": "Le Musée du Graffiti célèbre la grande ouverture de The"
+        }
+      },
+      {
+        "id": "rss_1781219784801_uus0",
+        "title": {
+          "en": "Celebrate 8 Years Deep with Mama Tried! 6/18/26",
+          "es": "¡Celebra 8 Años con Mama Tried! 18/6/26",
+          "pt": "Celebre 8 Anos com o Mama Tried! 18/6/26",
+          "fr": "Célébrez 8 Ans avec Mama Tried ! 18/06/26"
+        },
+        "date": "2026-06-17",
+        "venue": "Mama Tried",
+        "address": "201 NE First Street, Miami, Florida, 33132",
+        "url": "https://www.soulofmiami.org/2026/06/11/celebrate-8-years-deep-with-mama-tried-6-18-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/MamaTried8thAnniversary_June182026-350x467.png",
+        "description": {
+          "en": "Join us on June 18 as we celebrate Mama Tried’s 8th Birthday Party with a night",
+          "es": "Únete a nosotros el 18 de junio para celebrar la fiesta de cumpleaños número 8 de Mama Tried con una noche",
+          "pt": "Junte-se a nós no dia 18 de junho para celebrar a festa de aniversário de 8 anos do Mama Tried com uma noite",
+          "fr": "Rejoignez-nous le 18 juin pour célébrer le 8e anniversaire de Mama Tried avec une soirée"
         }
       }
     ]
