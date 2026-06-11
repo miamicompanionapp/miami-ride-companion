@@ -2408,7 +2408,7 @@
     <div class="analytics-stats">
       <div class="anl-stat">
         <div class="anl-stat-val" id="anl-sessions">—</div>
-        <div class="anl-stat-lbl">Sessions (tapped)</div>
+        <div class="anl-stat-lbl">Engaged / All</div>
       </div>
       <div class="anl-stat">
         <div class="anl-stat-val" id="anl-cycles">—</div>
@@ -2455,6 +2455,14 @@
       <div class="analytics-section-title">Top Venues</div>
       <ul class="anl-venues-list" id="anl-venues"></ul>
     </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">Sessions by day</div>
+      <ul class="anl-venues-list" id="anl-by-day"></ul>
+    </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">Sessions by hour (local)</div>
+      <div id="anl-by-hour"></div>
+    </div>
     <div style="font-size:11px;color:var(--muted);margin-top:8px;text-align:center">Read-only · use the Editor to export or reset</div>
   </div>
 </div>
@@ -2488,6 +2496,9 @@ let subtitleVariantIdx = 0;
 let subtitleRotatorInterval = null;
 let tapBest = parseInt(localStorage.getItem('tapBest') || '0');
 let wordSolved = 0;
+let liveWeather = null;
+let liveWeatherFetchedAt = 0;
+let liveWeatherPending = false;
 let spinCount = 0;
 let imgScore = 0, imgRound = 0, imgAnswered = false;
 let triviaScore = 0, triviaQ = 0, triviaAnswered = false;
@@ -2560,8 +2571,8 @@ const ATTRACTOR_LANG_CARDS = [
 
 // ── Content card pool (rebuilt each cycle so live data is fresh) ─────────────
 function buildContentCards() {
-  // Weather: live temp per language
-  const w = CONTENT && CONTENT.weather;
+  // Weather: prefer live fetch, fall back to content.json snapshot
+  const w = liveWeather || (CONTENT && CONTENT.weather);
   let tempVal = null;
   if (w && w.hourly && w.hourly.length) {
     const currentHour = new Date().getHours().toString().padStart(2, '0') + ':00';
@@ -3271,7 +3282,7 @@ function updateGreeting() {
 // ════════════════════════════════════════════════════════════
 // NAVIGATION
 // ════════════════════════════════════════════════════════════
-function switchTab(tab) {
+function switchTab(tab, silent = false) {
   // The driver page is only reachable via the bubble; if it's hidden, don't
   // let anything strand the passenger on an orphaned tab.
   if (tab === 'driver' && !isBubbleVisible()) tab = 'guide';
@@ -3292,8 +3303,9 @@ function switchTab(tab) {
   }
   currentTab = tab;
   if (tab === 'map') initMap();
+  if (tab === 'weather') fetchLiveWeather();
   resetInactivity();
-  logTap('tab_' + tab);
+  if (!silent) logTap('tab_' + tab);
 }
 
 // ════════════════════════════════════════════════════════════
@@ -3354,14 +3366,14 @@ function haversine(lat1, lng1, lat2, lng2) {
 // ════════════════════════════════════════════════════════════
 const WEATHER_ICONS = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',51:'🌦️',61:'🌧️',80:'🌦️',95:'⛈️'};
 
-function setFilter(f) {
+function setFilter(f, silent = false) {
   currentFilter = f;
   // Activate matching pill in BOTH rows (below-hero + sticky-top)
   document.querySelectorAll('.pill').forEach(p => {
     p.classList.toggle('active', p.dataset.filter === f);
   });
   renderGuide();
-  logTap('filter_' + f);
+  if (!silent) logTap('filter_' + f);
   resetInactivity();
 }
 
@@ -3626,6 +3638,7 @@ function openVenueSheet(venueId) {
   // Open
   document.getElementById('vs-backdrop').classList.add('open');
   document.getElementById('venue-sheet').classList.add('open');
+  logTap('venue_' + venueId);
   logTap('venue_sheet_' + venueId);
   resetInactivity();
 }
@@ -3679,7 +3692,6 @@ function buildVenueCard(v) {
 
   card.addEventListener('click', (e) => {
     if (e.target.closest('.qr-btn')) return;
-    logTap('venue_' + v.id);
     openVenueSheet(v.id);
   });
   return card;
@@ -3769,18 +3781,92 @@ function buildEventCard(e) {
 const toC = (f) => Math.round((f - 32) * 5 / 9);
 const dualTemp = (f) => `${Math.round(f)}°F (${toC(f)}°C)`;
 
+const WEATHER_DESCS = {
+  0:  { en:'Clear skies',        es:'Cielo despejado',       pt:'Céu limpo',             fr:'Ciel dégagé' },
+  1:  { en:'Mainly clear',       es:'Mayormente despejado',  pt:'Principalmente limpo',  fr:'Principalement dégagé' },
+  2:  { en:'Partly cloudy',      es:'Parcialmente nublado',  pt:'Parcialmente nublado',  fr:'Partiellement nuageux' },
+  3:  { en:'Overcast',           es:'Nublado',               pt:'Encoberto',             fr:'Couvert' },
+  45: { en:'Foggy',              es:'Neblina',               pt:'Nevoeiro',              fr:'Brumeux' },
+  48: { en:'Icy fog',            es:'Niebla helada',         pt:'Nevoeiro gelado',       fr:'Brouillard givrant' },
+  51: { en:'Light drizzle',      es:'Llovizna ligera',       pt:'Chuvisco leve',         fr:'Bruine légère' },
+  61: { en:'Light rain',         es:'Lluvia ligera',         pt:'Chuva leve',            fr:'Pluie légère' },
+  63: { en:'Moderate rain',      es:'Lluvia moderada',       pt:'Chuva moderada',        fr:'Pluie modérée' },
+  65: { en:'Heavy rain',         es:'Lluvia intensa',        pt:'Chuva forte',           fr:'Pluie forte' },
+  71: { en:'Light snow',         es:'Nieve ligera',          pt:'Neve leve',             fr:'Neige légère' },
+  80: { en:'Rain showers',       es:'Chubascos',             pt:'Aguaceiros',            fr:'Averses' },
+  81: { en:'Moderate showers',   es:'Chubascos moderados',   pt:'Aguaceiros moderados',  fr:'Averses modérées' },
+  95: { en:'Thunderstorm',       es:'Tormenta eléctrica',    pt:'Trovoada',              fr:'Orage' },
+  99: { en:'Heavy thunderstorm', es:'Tormenta intensa',      pt:'Trovoada intensa',      fr:'Orage violent' },
+};
+const weatherDesc = (code) => WEATHER_DESCS[code] || WEATHER_DESCS[Math.floor(code / 10) * 10] || WEATHER_DESCS[2];
+
+async function fetchLiveWeather() {
+  const FIFTEEN_MIN = 15 * 60 * 1000;
+  if (liveWeatherPending || (liveWeather && Date.now() - liveWeatherFetchedAt < FIFTEEN_MIN)) return;
+  liveWeatherPending = true;
+  try {
+    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=25.7617&longitude=-80.1918&current=temperature_2m,weathercode,windspeed_10m,relative_humidity_2m,apparent_temperature&daily=temperature_2m_max,temperature_2m_min,weathercode,precipitation_probability_max&hourly=temperature_2m,weathercode,precipitation_probability&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FNew_York&forecast_days=5');
+    const data = await res.json();
+    const c = data.current;
+    const d = data.daily;
+    const now = new Date();
+    const currentHour = now.getHours();
+    liveWeather = {
+      fetchedAt: now.toISOString(),
+      current: {
+        temp_f: Math.round(c.temperature_2m),
+        feels_f: Math.round(c.apparent_temperature),
+        description: weatherDesc(c.weathercode),
+        humidity: Math.round(c.relative_humidity_2m),
+        wind_mph: Math.round(c.windspeed_10m),
+        rain_chance: d.precipitation_probability_max[0] || 0,
+        weathercode: c.weathercode,
+      },
+      hourly: data.hourly.time.slice(currentHour, currentHour + 24).map((t, i) => ({
+        hour: new Date(t).getHours().toString().padStart(2, '0') + ':00',
+        temp_f: Math.round(data.hourly.temperature_2m[currentHour + i]),
+        weathercode: data.hourly.weathercode[currentHour + i],
+        rain_chance: data.hourly.precipitation_probability[currentHour + i],
+      })),
+      forecast: d.time.slice(0, 5).map((date, i) => ({
+        date,
+        high_f: Math.round(d.temperature_2m_max[i]),
+        low_f: Math.round(d.temperature_2m_min[i]),
+        weathercode: d.weathercode[i],
+        rain_chance: d.precipitation_probability_max[i],
+        description: weatherDesc(d.weathercode[i]),
+      })),
+    };
+    liveWeatherFetchedAt = Date.now();
+    if (currentTab === 'weather') renderWeather();
+    buildContentCards();
+  } catch (e) {
+    // offline or API down — renderWeather will fall back to CONTENT.weather
+  } finally {
+    liveWeatherPending = false;
+  }
+}
+
 function renderWeather() {
   if (!CONTENT) return;
-  const w = CONTENT.weather;
+  const isLive = !!liveWeather;
+  const w = liveWeather || CONTENT.weather;
+  if (!w) {
+    document.getElementById('weather-content').innerHTML =
+      '<div style="padding:24px;color:var(--muted);font-size:13px">Fetching weather…</div>';
+    return;
+  }
   const fetchedAt = new Date(w.fetchedAt);
   const now = new Date();
   const hoursSince = (now - fetchedAt) / 3600000;
-  const isStale = hoursSince > 24;
+  const isStale = !isLive && hoursSince > 24;
   const container = document.getElementById('weather-content');
 
-  const syncLabel = isStale
-    ? `<div class="stale-notice"><i class="ti ti-clock"></i><span><strong>${t('weather.staleNotice') || 'Last synced'} ${fetchedAt.toLocaleDateString()} ${t('weather.updatedAt') || 'at'} ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}.</strong> ${t('weather.connectWifi') || 'Connect to Wi-Fi before your next shift.'}</span></div>`
-    : `<div class="sync-badge"><i class="ti ti-refresh"></i><span>${t('weather.updatedAt') || 'Synced'} ${fetchedAt.toLocaleDateString()} ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</span></div>`;
+  const syncLabel = isLive
+    ? `<div class="sync-badge"><i class="ti ti-live-view"></i><span>Live · fetched just now</span></div>`
+    : isStale
+      ? `<div class="stale-notice"><i class="ti ti-clock"></i><span><strong>${t('weather.staleNotice') || 'Last synced'} ${fetchedAt.toLocaleDateString()} ${t('weather.updatedAt') || 'at'} ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}.</strong> ${t('weather.connectWifi') || 'Connect to Wi-Fi before your next shift.'}</span></div>`
+      : `<div class="sync-badge"><i class="ti ti-refresh"></i><span>${t('weather.updatedAt') || 'Synced'} ${fetchedAt.toLocaleDateString()} ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</span></div>`;
 
   let currentHtml = '';
   if (!isStale) {
@@ -3811,7 +3897,7 @@ function renderWeather() {
     currentHtml = `
       <div class="current-card">
         <div>
-          <div class="current-label">Miami · ${fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} reading</div>
+          <div class="current-label">Miami · ${isLive ? 'Live' : fetchedAt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}) + ' reading'}</div>
           <div class="current-top">
             <div>
               <div class="current-temp">${Math.round(hourData.temp_f)}°<span style="font-size:22px;font-weight:400;opacity:0.6"> (${toC(hourData.temp_f)}°C)</span></div>
@@ -4806,6 +4892,7 @@ function renderTriviaQuestion() {
 function answerTrivia(chosen, correct) {
   if (triviaAnswered) return;
   triviaAnswered = true;
+  logTap('game_trivia_answer');
   const btns = document.querySelectorAll('.trivia-opt');
   btns.forEach((b, i) => {
     b.disabled = true;
@@ -4932,6 +5019,7 @@ function checkWord() {
   const guess = document.getElementById('word-input').value.toUpperCase().trim();
   const fb = document.getElementById('word-feedback');
   if (!guess) return;
+  logTap('game_word_guess');
   if (guess === wordCurrent.word) {
     fb.textContent = '🎉 Correct! Amazing!';
     fb.className = 'word-feedback show ok';
@@ -5014,6 +5102,7 @@ function doSpin() {
   const f = SPIN_FACTS[Math.floor(Math.random() * SPIN_FACTS.length)];
   spinCurrent = f;
   spinCount++;
+  logTap('game_spin_spin');
   document.getElementById('spin-count').textContent = spinCount;
   const wheel = document.querySelector('.spinner-wheel');
   wheel.style.transform = 'rotate(360deg)';
@@ -5170,6 +5259,7 @@ function renderImgRoundLabels(r) {
 function answerImg(chosen, correct, explain) {
   if (imgAnswered) return;
   imgAnswered = true;
+  logTap('game_img_answer');
   document.querySelectorAll('.img-opt').forEach((b, i) => {
     b.disabled = true;
     if (i === correct) b.classList.add('correct');
@@ -5454,8 +5544,8 @@ function exitRest() {
 function autoWakeRest() {
   exitRest();
   endSession();
-  switchTab('guide');
-  setFilter('featured');
+  switchTab('guide', true);
+  setFilter('featured', true);
 }
 
 function updateRestClock() {
@@ -5493,8 +5583,8 @@ function showThanks() {
       screen.classList.remove('visible');
       // Reset app to home state after fade out
       setTimeout(() => {
-        switchTab('guide');
-        setFilter('featured');
+        switchTab('guide', true);
+        setFilter('featured', true);
         resetInactivity();
       }, 650);
     }
@@ -5568,6 +5658,8 @@ async function readAnalyticsForPeek() {
 const GAME_PLAY_PREFIX = {
   ttt: ['game_ttt_start'], c4: ['game_c4_start'],
   duel: ['game_duel_start_'], buzzer: ['game_buzzer_start_'], tap: ['tap_score_'],
+  trivia: ['game_trivia_answer'], word: ['game_word_guess'],
+  spin: ['game_spin_spin'], image: ['game_img_answer'],
 };
 const GAME_LABEL = {
   trivia: 'Trivia', tap: 'Tap Race', word: 'Word', spin: 'Spin', image: 'Guess Image',
@@ -5667,8 +5759,18 @@ function summarizeForPeek({ sessions, taps, cycles = 0 }) {
   const byDay = Object.entries(dayCounts).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 7);
 
   const engagementPct = cycles ? Math.round(sessions.length / cycles * 100) : null;
-  return { count: sessions.length, cycles, engagementPct, avgDuration, qrTaps, qrBreakdown, heroQr,
-           tabCounts, langCounts, venues, entryPoints, games, driver, byDay };
+  const engagedSessions = sessions.filter(s => s.tapTotal > 2).length;
+
+  const hourCounts = {};
+  for (const s of sessions) {
+    if (!s.startTime) continue;
+    const hr = new Date(s.startTime).getHours();
+    hourCounts[hr] = (hourCounts[hr] || 0) + 1;
+  }
+  const byHour = Object.entries(hourCounts).map(([h, n]) => [+h, n]).sort((a, b) => a[0] - b[0]);
+
+  return { count: sessions.length, engagedSessions, cycles, engagementPct, avgDuration, qrTaps, qrBreakdown, heroQr,
+           tabCounts, langCounts, venues, entryPoints, games, driver, byDay, byHour };
 }
 
 function renderAnlBars(containerId, entries) {
@@ -5699,7 +5801,7 @@ async function openAnalyticsOverlay() {
   document.getElementById('analytics-overlay').classList.add('visible');
   const data = await readAnalyticsForPeek();
   const s = summarizeForPeek(data);
-  document.getElementById('anl-sessions').textContent = s.count || '0';
+  document.getElementById('anl-sessions').textContent = (s.engagedSessions || '0') + ' / ' + (s.count || '0');
   document.getElementById('anl-cycles').textContent = s.cycles || '0';
   document.getElementById('anl-engage').textContent = s.engagementPct == null ? '—' : s.engagementPct + '%';
   document.getElementById('anl-duration').textContent = fmtDuration(s.avgDuration);
@@ -5729,6 +5831,12 @@ async function openAnalyticsOverlay() {
   } else {
     venueEl.innerHTML = '<li style="color:var(--muted);font-size:12px">No venue taps yet</li>';
   }
+
+  renderAnlList('anl-by-day', s.byDay.map(([d, n]) => [d, n + (n === 1 ? ' session' : ' sessions')]), 'No sessions yet');
+  renderAnlBars('anl-by-hour', s.byHour.map(([h, n]) => {
+    const ampm = h === 0 ? '12am' : h < 12 ? h + 'am' : h === 12 ? '12pm' : (h - 12) + 'pm';
+    return [ampm, n];
+  }));
 }
 
 // Generic two-column list: [label, value] rows into an .anl-venues-list <ul>.

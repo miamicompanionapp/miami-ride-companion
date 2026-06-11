@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map Tab — Mock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root {
+    --navy: #0F2137;
+    --teal: #0B9EA6;
+    --gold: #C9A84C;
+    --sidebar-w: 220px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* ── Sidebar ── */
+  aside {
+    width: var(--sidebar-w);
+    min-width: var(--sidebar-w);
+    background: var(--navy);
+    border-right: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 14px;
+    gap: 16px;
+    z-index: 10;
+  }
+  .app-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    color: #fff;
+  }
+  .app-sub { font-size: 0.7rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+
+  .sidebar-location {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.72rem; color: var(--teal);
+    background: rgba(11,158,166,0.08);
+    border-radius: 8px; padding: 6px 10px;
+  }
+
+  .nav-links { display: flex; flex-direction: column; gap: 4px; }
+  .nav-link {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; border-radius: 10px;
+    cursor: pointer; font-size: 0.85rem; color: rgba(255,255,255,0.55);
+    transition: background 0.15s, color 0.15s;
+    position: relative;
+  }
+  .nav-link:hover { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.8); }
+  .nav-link.active {
+    background: rgba(11,158,166,0.18);
+    color: var(--teal);
+    font-weight: 600;
+  }
+  .nav-link.active .nav-indicator {
+    position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 3px; height: 22px; background: var(--teal); border-radius: 0 3px 3px 0;
+  }
+  .nav-link i { font-size: 1.1rem; }
+
+  .driver-bubble {
+    margin-top: auto;
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 12px; padding: 10px 12px; cursor: pointer;
+  }
+  .driver-avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--gold); color: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+  }
+  .db-name { font-size: 0.8rem; font-weight: 600; color: var(--gold); }
+  .db-role { font-size: 0.65rem; color: rgba(255,255,255,0.45); }
+  .db-arrow { margin-left: auto; color: rgba(255,255,255,0.3); font-size: 0.9rem; }
+
+  .lang-section { display: flex; flex-direction: column; gap: 6px; }
+  .lang-label { font-size: 0.65rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; }
+  .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+  .lang-btn {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 7px; color: rgba(255,255,255,0.55); font-size: 0.7rem;
+    font-family: inherit; padding: 5px; cursor: pointer;
+  }
+  .lang-btn.active { background: rgba(11,158,166,0.2); border-color: var(--teal); color: var(--teal); }
+
+  .sidebar-footer { font-size: 0.6rem; color: rgba(255,255,255,0.2); text-align: center; }
+
+  /* ── Main content ── */
+  main {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: #1a2a3a;
+  }
+
+  /* ── Map page ── */
+  #map-container {
+    position: absolute; inset: 0;
+    z-index: 0;
+  }
+  #map { width: 100%; height: 100%; }
+
+  /* Override Leaflet attribution to match theme */
+  .leaflet-control-attribution {
+    background: rgba(15,33,55,0.75) !important;
+    color: rgba(255,255,255,0.4) !important;
+    font-size: 0.6rem !important;
+  }
+  .leaflet-control-attribution a { color: var(--teal) !important; }
+
+  /* ── GPS dot ── */
+  .gps-dot-outer {
+    width: 22px; height: 22px;
+    background: rgba(11,158,166,0.2);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    animation: pulse 2s infinite;
+  }
+  .gps-dot-inner {
+    width: 12px; height: 12px;
+    background: var(--teal);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(11,158,166,0.6);
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(11,158,166,0.35); }
+    50% { box-shadow: 0 0 0 10px rgba(11,158,166,0); }
+  }
+
+  /* ── Direction cone ── */
+  .direction-cone {
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 22px solid rgba(11,158,166,0.55);
+    position: absolute;
+    top: -24px; left: 50%; transform: translateX(-50%);
+    filter: drop-shadow(0 0 4px rgba(11,158,166,0.4));
+  }
+
+  /* ── Map overlays ── */
+  .map-overlay-top {
+    position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    z-index: 500; display: flex; align-items: center; gap: 8px;
+  }
+  .map-badge {
+    background: rgba(15,33,55,0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 6px 14px;
+    font-size: 0.75rem; font-family: 'DM Sans', sans-serif;
+    display: flex; align-items: center; gap: 6px;
+    color: rgba(255,255,255,0.7);
+  }
+  .map-badge.offline { border-color: rgba(11,158,166,0.4); color: var(--teal); }
+  .map-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+  .map-overlay-right {
+    position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+    z-index: 500; display: flex; flex-direction: column; gap: 6px;
+  }
+  .map-btn {
+    width: 38px; height: 38px;
+    background: rgba(15,33,55,0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 1.1rem;
+    transition: background 0.15s, border-color 0.15s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .map-btn:hover { background: rgba(11,158,166,0.25); border-color: var(--teal); }
+  .map-btn-divider { width: 28px; height: 1px; background: rgba(255,255,255,0.1); margin: 0 auto; }
+
+  .recenter-btn {
+    position: absolute; bottom: 24px; right: 64px;
+    z-index: 500;
+    background: var(--teal);
+    border: none; border-radius: 12px;
+    color: #fff; font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem; font-weight: 600;
+    padding: 9px 16px;
+    display: flex; align-items: center; gap: 7px;
+    cursor: pointer; box-shadow: 0 4px 16px rgba(11,158,166,0.4);
+    transition: opacity 0.25s, transform 0.25s;
+    opacity: 0; transform: translateY(8px);
+  }
+  .recenter-btn.visible { opacity: 1; transform: translateY(0); }
+
+  .speed-badge {
+    position: absolute; bottom: 24px; left: 16px;
+    z-index: 500;
+    background: rgba(15,33,55,0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 10px 16px;
+    text-align: center;
+  }
+  .speed-value { font-size: 1.4rem; font-weight: 700; color: #fff; line-height: 1; }
+  .speed-unit { font-size: 0.62rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
+
+  .compass-badge {
+    position: absolute; bottom: 24px; left: 110px;
+    z-index: 500;
+    background: rgba(15,33,55,0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 10px 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .compass-ring {
+    width: 30px; height: 30px; border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.15);
+    position: relative; display: flex; align-items: center; justify-content: center;
+  }
+  .compass-needle {
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 12px solid var(--teal);
+    position: absolute; top: 2px;
+    transform-origin: bottom center;
+    /* Simulated NW heading */
+    transform: rotate(-45deg) translateY(2px);
+  }
+  .compass-dir { font-size: 0.72rem; font-weight: 600; color: #fff; }
+  .compass-deg { font-size: 0.6rem; color: rgba(255,255,255,0.4); }
+
+  /* ── Mock controls overlay ── */
+  .mock-panel {
+    position: absolute; top: 16px; right: 64px;
+    z-index: 600;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 12px; padding: 12px 16px;
+    font-size: 0.72rem; color: var(--gold);
+    min-width: 200px;
+  }
+  .mock-panel strong { display: block; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; opacity: 0.7; }
+  .mock-row { display: flex; align-items: center; gap: 8px; margin: 5px 0; }
+  .mock-row label { flex: 1; opacity: 0.8; }
+  .mock-toggle {
+    width: 34px; height: 18px; border-radius: 9px;
+    background: rgba(255,255,255,0.1); position: relative; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .mock-toggle.on { background: var(--teal); }
+  .mock-toggle::after {
+    content: ''; position: absolute; top: 2px; left: 2px;
+    width: 14px; height: 14px; border-radius: 50%; background: #fff;
+    transition: transform 0.2s;
+  }
+  .mock-toggle.on::after { transform: translateX(16px); }
+  .mock-note {
+    margin-top: 10px; font-size: 0.62rem;
+    color: rgba(255,255,255,0.3); line-height: 1.4;
+    border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Sidebar ── -->
+<aside>
+  <div>
+    <div class="app-brand">Miami<br>Companion</div>
+    <div class="app-sub">Your city guide</div>
+  </div>
+
+  <div class="sidebar-location">
+    <i class="ti ti-map-pin"></i>
+    <span>Brickell, Miami</span>
+  </div>
+
+  <nav class="nav-links">
+    <div class="nav-link" onclick="setTab(this,'guide')">
+      <i class="ti ti-map-pin"></i>
+      <span>City Guide</span>
+    </div>
+    <div class="nav-link" onclick="setTab(this,'weather')">
+      <i class="ti ti-cloud"></i>
+      <span>Weather</span>
+    </div>
+    <div class="nav-link" onclick="setTab(this,'games')">
+      <i class="ti ti-device-gamepad-2"></i>
+      <span>Games</span>
+    </div>
+    <div class="nav-link active" onclick="setTab(this,'map')">
+      <i class="ti ti-map-2"></i>
+      <span>Map</span>
+      <div class="nav-indicator"></div>
+    </div>
+  </nav>
+
+  <div class="driver-bubble">
+    <div class="driver-avatar">A</div>
+    <div class="db-info">
+      <div class="db-name">Abdullah</div>
+      <div class="db-role">Your driver · also a handyman</div>
+    </div>
+    <i class="ti ti-chevron-right db-arrow"></i>
+  </div>
+
+  <div class="lang-section">
+    <div class="lang-label">Language</div>
+    <div class="lang-grid">
+      <button class="lang-btn active">🇺🇸 EN</button>
+      <button class="lang-btn">🇪🇸 ES</button>
+      <button class="lang-btn">🇧🇷 PT</button>
+      <button class="lang-btn">🇫🇷 FR</button>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">Built with Claude AI · ask your driver</div>
+</aside>
+
+<!-- ── Map Page ── -->
+<main>
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+
+  <!-- Top: offline status badge -->
+  <div class="map-overlay-top">
+    <div class="map-badge offline" id="offline-badge">
+      <span class="dot"></span>
+      <span id="offline-label">Offline tiles ready · Miami 30mi</span>
+    </div>
+    <div class="map-badge" id="online-badge" style="display:none">
+      <span class="dot" style="background:#6be06b"></span>
+      <span>Live tiles · OSM</span>
+    </div>
+  </div>
+
+  <!-- Right: zoom controls -->
+  <div class="map-overlay-right">
+    <div class="map-btn" id="zoom-in" title="Zoom in"><i class="ti ti-plus"></i></div>
+    <div class="map-btn-divider"></div>
+    <div class="map-btn" id="zoom-out" title="Zoom out"><i class="ti ti-minus"></i></div>
+  </div>
+
+  <!-- Recenter button (appears when panned away) -->
+  <button class="recenter-btn" id="recenter-btn">
+    <i class="ti ti-current-location"></i>
+    Re-center
+  </button>
+
+  <!-- Bottom left: speed -->
+  <div class="speed-badge">
+    <div class="speed-value" id="speed-val">28</div>
+    <div class="speed-unit">mph</div>
+  </div>
+
+  <!-- Bottom left: compass / heading -->
+  <div class="compass-badge">
+    <div class="compass-ring">
+      <div class="compass-needle" id="compass-needle"></div>
+    </div>
+    <div>
+      <div class="compass-dir" id="compass-dir">NW</div>
+      <div class="compass-deg" id="compass-deg">315°</div>
+    </div>
+  </div>
+
+  <!-- Mock control panel (dev only) -->
+  <div class="mock-panel">
+    <strong>Mock Controls</strong>
+    <div class="mock-row">
+      <label>Auto-follow GPS</label>
+      <div class="mock-toggle on" id="toggle-follow" onclick="toggleFollow(this)"></div>
+    </div>
+    <div class="mock-row">
+      <label>Offline tiles</label>
+      <div class="mock-toggle on" id="toggle-offline" onclick="toggleOffline(this)"></div>
+    </div>
+    <div class="mock-row">
+      <label>Show speed/heading</label>
+      <div class="mock-toggle on" id="toggle-hud" onclick="toggleHUD(this)"></div>
+    </div>
+    <div class="mock-note">
+      Pan the map to see the Re-center button appear.<br>
+      Zoom is capped at 16 / 10.
+    </div>
+  </div>
+</main>
+
+<script>
+// ── Leaflet map setup ──
+const MIAMI = [25.7617, -80.1918];
+const MIN_ZOOM = 10, MAX_ZOOM = 16, START_ZOOM = 14;
+
+const map = L.map('map', {
+  center: MIAMI,
+  zoom: START_ZOOM,
+  minZoom: MIN_ZOOM,
+  maxZoom: MAX_ZOOM,
+  zoomControl: false,      // we use custom buttons
+  attributionControl: true
+});
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: MAX_ZOOM
+}).addTo(map);
+
+// ── GPS dot marker ──
+const gpsHtml = `
+  <div style="position:relative; width:22px; height:22px;">
+    <div class="gps-dot-outer">
+      <div class="gps-dot-inner"></div>
+    </div>
+    <div class="direction-cone" id="cone"></div>
+  </div>
+`;
+const gpsIcon = L.divIcon({ html: gpsHtml, className: '', iconSize: [22, 22], iconAnchor: [11, 11] });
+const gpsMarker = L.marker(MIAMI, { icon: gpsIcon }).addTo(map);
+
+// ── State ──
+let following = true;
+let heading = 315; // degrees NW for mock
+let speed = 28;
+
+// ── Simulate movement ──
+let simAngle = 0;
+const simCenter = MIAMI;
+setInterval(() => {
+  if (!following) return; // still update marker even when not following
+  simAngle += 0.3;
+  const lat = simCenter[0] + 0.003 * Math.sin(simAngle * Math.PI / 180);
+  const lng = simCenter[1] + 0.003 * Math.cos(simAngle * Math.PI / 180);
+  heading = (simAngle * 2) % 360;
+  speed = Math.round(20 + 15 * Math.abs(Math.sin(simAngle * Math.PI / 90)));
+
+  gpsMarker.setLatLng([lat, lng]);
+  if (following) map.setView([lat, lng], map.getZoom(), { animate: true, duration: 0.8 });
+
+  // Update cone rotation (points in direction of travel)
+  const cone = document.getElementById('cone');
+  if (cone) cone.style.transform = `translateX(-50%) rotate(${heading}deg)`;
+
+  // Update HUD
+  document.getElementById('speed-val').textContent = speed;
+  document.getElementById('compass-needle').style.transform = `rotate(${heading}deg) translateY(2px)`;
+  const dirs = ['N','NE','E','SE','S','SW','W','NW'];
+  document.getElementById('compass-dir').textContent = dirs[Math.round(heading / 45) % 8];
+  document.getElementById('compass-deg').textContent = Math.round(heading) + '°';
+}, 200);
+
+// ── Pan detection: show recenter button ──
+map.on('dragstart', () => {
+  if (following) {
+    following = false;
+    document.getElementById('toggle-follow').classList.remove('on');
+    document.getElementById('recenter-btn').classList.add('visible');
+  }
+});
+
+// ── Recenter ──
+document.getElementById('recenter-btn').addEventListener('click', () => {
+  following = true;
+  document.getElementById('toggle-follow').classList.add('on');
+  document.getElementById('recenter-btn').classList.remove('visible');
+  map.setView(gpsMarker.getLatLng(), map.getZoom(), { animate: true });
+});
+
+// ── Custom zoom buttons ──
+document.getElementById('zoom-in').addEventListener('click', () => map.zoomIn());
+document.getElementById('zoom-out').addEventListener('click', () => map.zoomOut());
+
+// ── Mock toggles ──
+function toggleFollow(el) {
+  el.classList.toggle('on');
+  following = el.classList.contains('on');
+  document.getElementById('recenter-btn').classList.toggle('visible', !following);
+}
+
+function toggleOffline(el) {
+  el.classList.toggle('on');
+  const on = el.classList.contains('on');
+  document.getElementById('offline-badge').style.display = on ? '' : 'none';
+  document.getElementById('online-badge').style.display = on ? 'none' : '';
+}
+
+function toggleHUD(el) {
+  el.classList.toggle('on');
+  const on = el.classList.contains('on');
+  document.querySelector('.speed-badge').style.display = on ? '' : 'none';
+  document.querySelector('.compass-badge').style.display = on ? '' : 'none';
+}
+
+function setTab(el, name) {
+  document.querySelectorAll('.nav-link').forEach(n => {
+    n.classList.remove('active');
+    const ind = n.querySelector('.nav-indicator');
+    if (ind) ind.remove();
+  });
+  el.classList.add('active');
+  const ind = document.createElement('div');
+  ind.className = 'nav-indicator';
+  el.appendChild(ind);
+}
+</script>
+</body>
+</html>

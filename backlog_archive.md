@@ -7,6 +7,21 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Session 2026-06-11 — Love Life Cafe + Live weather fetch
+
+**Love Life Cafe added (v023)**
+- Added as the 23rd venue in `content.json` (id: v023), category: restaurant, Wynwood neighborhood.
+- Address: 545 NW 26th St, Miami FL 33127. Photo from spotapps CDN. All 4 language descriptions included.
+
+**Live weather fetch in index.html (#39)**
+- `index.html` now calls Open-Meteo directly when the Weather tab is opened (no GitHub deploy needed).
+- New `fetchLiveWeather()` async function — fetches, parses, stores in `liveWeather` module var.
+- 15-minute client-side cache: subsequent tab switches within a session reuse the fetched data.
+- `renderWeather()` uses `liveWeather` first, falls back to `CONTENT.weather` snapshot when offline.
+- `isStale` logic disabled when live data is present; badge shows "Live · fetched just now".
+- Attractor card temp (`buildContentCards`) also uses live data when available.
+- No change to editor.html weather workflow — content.json snapshot still serves as offline fallback.
+
 ### [X] #38 — Offline map tab for passengers  *(DONE 2026-06-08)*
 Added a full-screen Map tab to the passenger app powered by Leaflet + OpenStreetMap.
 - MAP TAB: 4th nav item in sidebar (City Guide / Weather / Games / Map), full-bleed Leaflet map.
@@ -49,6 +64,28 @@ Reworked analytics so the numbers reflect actual passenger use, not idle loops.
 - CAVEAT: the one-time wipe fires on whichever page opens the DB first after the
   new build; if app + editor are open in two tabs at that exact moment the v2
   upgrade can `onblocked`-stall until one closes (non-issue on the single tablet).
+
+---
+
+### [X] Analytics: ghost-session fix + data quality improvements  *(DONE 2026-06-11)*
+First real analytics export reviewed (Jun 9–11, 1,078 cycles). Two bugs found and fixed; several data gaps closed.
+
+- GHOST SESSION BUG (fix): `switchTab('guide')` + `setFilter('featured')` called from `showThanks()` and `autoWakeRest()` always fired `logTap()`, creating a 2-tap session skeleton (`tab_guide + filter_featured, ~62s`) on every idle reset cycle. These saved as real sessions, inflating the count ~100x (1,064 of 1,074 sessions were noise). Fix: added `silent=true` param to both functions; reset paths call them silently.
+
+- VENUE TRACKING BUG (fix): hero card and mini-card click handlers called `openVenueSheet()` directly without `logTap('venue_')`, so those taps never reached `topVenues` in the summary. Only the card-grid handler logged it. Fix: moved `logTap('venue_<id>')` into `openVenueSheet()` itself (single source for all entry paths); removed the duplicate call from the card-grid handler.
+
+- GAME PLAY SIGNALS (4 games): trivia, word, spin, and image had `plays: null` in the export because no play-start signal existed. Added:
+  - `answerTrivia()` → `game_trivia_answer`
+  - `checkWord()` → `game_word_guess`
+  - `doSpin()` → `game_spin_spin`
+  - `answerImg()` → `game_img_answer`
+  - `GAME_PLAY_PREFIX` updated in both `index.html` and `editor.html`.
+
+- ENGAGED SESSIONS METRIC: both files now compute `engagedSessions` = sessions with `tapTotal > 2`. Analytics overlay and editor dashboard stat card now show "engaged / all" (e.g., `10 / 1074`) instead of raw session count.
+
+- TIME-OF-DAY BREAKDOWN: `summarizeForPeek` now computes `byHour` (local time). In-app analytics overlay gained two new sections: "Sessions by day" and "Sessions by hour (local)" with bar chart.
+
+- BASELINE: Jun 9–11 real engagement = 10 sessions. City Guide is 100% of entry points; attractor overlays work; venue cards rarely drilled; Weather tab almost invisible; all-English passengers so far.
 
 ---
 

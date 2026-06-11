@@ -436,7 +436,7 @@
     <!-- ANALYTICS -->
     <div class="panel active" id="panel-analytics">
       <div class="stats-grid" id="analytics-stats">
-        <div class="stat-card"><div class="stat-val" id="stat-sessions">—</div><div class="stat-lbl">Sessions (tapped)</div><div class="stat-delta up" id="stat-sessions-d"><i class="ti ti-arrow-up"></i>Loading…</div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-sessions">—</div><div class="stat-lbl">Engaged / All sessions</div><div class="stat-delta up" id="stat-sessions-d"><i class="ti ti-arrow-up"></i>Loading…</div></div>
         <div class="stat-card"><div class="stat-val" id="stat-cycles">—</div><div class="stat-lbl">Cycles (idle loops)</div><div class="stat-delta up" id="stat-cycles-d"></div></div>
         <div class="stat-card"><div class="stat-val" id="stat-engage">—</div><div class="stat-lbl">Engagement rate</div><div class="stat-delta up" id="stat-engage-d"></div></div>
         <div class="stat-card"><div class="stat-val" id="stat-duration">—</div><div class="stat-lbl">Avg Duration</div><div class="stat-delta up" id="stat-duration-d"></div></div>
@@ -1773,6 +1773,8 @@ function venueName(id) {
 const GAME_PLAY_PREFIX = {
   ttt: ['game_ttt_start'], c4: ['game_c4_start'],
   duel: ['game_duel_start_'], buzzer: ['game_buzzer_start_'], tap: ['tap_score_'],
+  trivia: ['game_trivia_answer'], word: ['game_word_guess'],
+  spin: ['game_spin_spin'], image: ['game_img_answer'],
 };
 const GAME_LABEL = {
   trivia: 'Trivia', tap: 'Tap Race', word: 'Word', spin: 'Spin', image: 'Guess Image',
@@ -1861,7 +1863,8 @@ function summarizeAnalytics({ sessions, taps, cycles = 0 }) {
     .sort((a, b) => b[1] - a[1]);
 
   const engagementPct = cycles ? Math.round(sessions.length / cycles * 100) : null;
-  return { sessions: sessions.length, cycles, engagementPct, avgDuration, qrTaps, qrBreakdown, heroQr,
+  const engagedSessions = sessions.filter(s => s.tapTotal > 2).length;
+  return { sessions: sessions.length, engagedSessions, cycles, engagementPct, avgDuration, qrTaps, qrBreakdown, heroQr,
            tabCounts, langCounts, topVenues, entryPoints, games, driver, byDay };
 }
 
@@ -1894,8 +1897,8 @@ function renderKvList(id, rows, emptyMsg) {
 function renderAnalytics(data) {
   const s = summarizeAnalytics(data);
   const colors = ['var(--teal)', 'var(--navy)', 'var(--gold)', '#9BA8B8'];
-  document.getElementById('stat-sessions').textContent = s.sessions;
-  document.getElementById('stat-sessions-d').textContent = s.sessions ? 'On this device' : 'No data yet — collected on the iPad';
+  document.getElementById('stat-sessions').textContent = s.engagedSessions + ' / ' + s.sessions;
+  document.getElementById('stat-sessions-d').textContent = s.sessions ? 'Engaged / all (3+ taps)' : 'No data yet — collected on the iPad';
   document.getElementById('stat-cycles').textContent = s.cycles;
   document.getElementById('stat-cycles-d').textContent = 'Idle reset loops';
   document.getElementById('stat-engage').textContent = s.engagementPct == null ? '—' : s.engagementPct + '%';
