@@ -7,6 +7,28 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #23 — Passenger ride feedback  *(DONE 2026-06-12)*
+
+**Feature: in-app emoji rating with follow-up modal and teaser card**
+
+Flow:
+1. A new **feedback attractor card** ("How's your ride so far?") joins the regular idle-screen rotation (1 in 13 cards). It renders 5 emoji buttons (😄 😊 😐 😕 😢) using `stopPropagation` so each button registers independently.
+2. **Positive path (😄 or 😊):** record saved immediately (rating, no chips, no text, `partial: false`); after 800 ms the teaser card appears.
+3. **Neutral / negative path (😐 😕 😢):** follow-up modal slides up from the bottom. Contains 6 toggleable grievance chips (car cleanliness, driving comfort, pickup location, AC/temperature, music/noise, communication) + an optional 200-char textarea. Buttons: **Submit** (saves all; `partial: false`) and **Skip** (saves empty; `partial: true`). Modal auto-dismisses after 45 s saving any partial chip selection.
+4. **Teaser card** appears after every path (immediately for skip/auto-dismiss, after 200 ms for submit, after 800 ms for positive). Rotates randomly among 4 options: upcoming events, restaurants, weather, Miami Trivia. 10-second animated progress bar auto-dismisses it; tapping the CTA navigates into the app.
+
+Storage:
+- IndexedDB `MiamiRideAnalytics` DB bumped from v2 → v3 (non-destructive: existing `sessions`/`taps` data preserved; only adds the new `feedback` object store).
+- Each record: `{ id, ts, day, rating (1–5), chips: [], text, partial, lang }`.
+- `upgradeAnalyticsDB` now gates destructive wipe behind `oldVersion < 2` so future bumps are safe.
+
+Analytics overlay:
+- New **Ride Feedback** section at the bottom: avg rating, per-emoji counts, chip frequency badges, up to 5 recent comments.
+
+Tests (`tests/feedback.spec.js`, tag `@feedback`):
+- 16 tests: attractor pool membership, emoji-row show/hide, positive/negative paths, chip toggle, submit/skip DB persistence, auto-dismiss partial-save logic, teaser navigation, i18n headline update, analytics overlay rendering + avg-rating math.
+- `npm run test:feedback` added to package.json.
+
 ### [X] Session 2026-06-11 — Love Life Cafe + Live weather fetch
 
 **Love Life Cafe added (v023)**

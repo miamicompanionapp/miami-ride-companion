@@ -21,7 +21,8 @@
     "test:smoke": "playwright test --grep @smoke",
     "test:negative": "playwright test --grep @negative",
     "test:i18n": "playwright test --grep @i18n",
-    "test:units": "playwright test --grep @unit"
+    "test:units": "playwright test --grep @unit",
+    "test:feedback": "playwright test --grep @feedback"
   },
   "repository": {
     "type": "git",

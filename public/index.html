@@ -900,6 +900,142 @@
       background: var(--gold); margin: 0 auto 22px;
     }
 
+    /* ── Feedback: emoji row inside attractor card ──────────────── */
+    .feedback-emoji-row {
+      display: flex; justify-content: center; gap: 10px; margin-top: 18px;
+    }
+    .feedback-emoji-btn {
+      font-size: 34px; line-height: 1; cursor: pointer;
+      background: none; border: none; padding: 8px 10px;
+      border-radius: 14px; transition: transform 140ms ease, background 140ms ease;
+    }
+    .feedback-emoji-btn:hover  { background: rgba(255,255,255,0.07); }
+    .feedback-emoji-btn:active { transform: scale(0.84); }
+
+    /* ── Feedback: follow-up modal ─────────────────────────────── */
+    .feedback-modal {
+      position: fixed; inset: 0; z-index: 88;
+      background: rgba(8,15,26,0.80);
+      backdrop-filter: blur(10px);
+      display: flex; align-items: flex-end; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 350ms ease;
+    }
+    .feedback-modal.visible { opacity: 1; pointer-events: all; }
+    .feedback-box {
+      background: var(--card-solid);
+      border: 1px solid rgba(229,192,107,0.25);
+      border-radius: 26px 26px 0 0;
+      padding: 8px 24px 34px;
+      width: min(540px, 100vw);
+      max-height: 88vh; overflow-y: auto;
+      transform: translateY(36px);
+      transition: transform 350ms ease;
+    }
+    .feedback-modal.visible .feedback-box { transform: translateY(0); }
+    .feedback-box-handle {
+      width: 36px; height: 4px; border-radius: 4px;
+      background: rgba(255,255,255,0.15); margin: 10px auto 18px;
+    }
+    .feedback-box-title {
+      font-family: var(--font-display); font-size: 21px;
+      color: var(--heading); text-align: center;
+      margin-bottom: 7px; line-height: 1.3;
+    }
+    .feedback-box-sub {
+      font-size: 13px; color: var(--muted); text-align: center;
+      line-height: 1.55; margin-bottom: 20px;
+    }
+    .feedback-chips {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+    }
+    .feedback-chip {
+      padding: 8px 14px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      font-size: 13px; font-weight: 500; color: var(--muted);
+      cursor: pointer; transition: all 140ms ease; user-select: none;
+    }
+    .feedback-chip.selected {
+      border-color: var(--teal); background: var(--teal-mist);
+      color: var(--teal-light);
+    }
+    .feedback-chip:active { opacity: 0.75; }
+    .feedback-textarea {
+      width: 100%; border-radius: 12px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.11);
+      color: var(--heading); font-family: var(--font-body); font-size: 14px;
+      padding: 12px 14px; resize: none; outline: none; line-height: 1.5;
+      margin-bottom: 18px; transition: border-color 150ms ease;
+    }
+    .feedback-textarea:focus { border-color: var(--teal-border); }
+    .feedback-textarea::placeholder { color: var(--muted); opacity: 0.55; }
+    .feedback-actions { display: flex; gap: 10px; }
+    .feedback-skip {
+      flex: 1; padding: 13px; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: transparent; color: var(--muted);
+      font-family: var(--font-body); font-size: 14px; font-weight: 500;
+      cursor: pointer; transition: opacity 150ms ease;
+    }
+    .feedback-skip:active { opacity: 0.65; }
+    .feedback-submit {
+      flex: 2; padding: 13px; border-radius: 12px;
+      background: var(--teal); border: none; color: white;
+      font-family: var(--font-body); font-size: 14px; font-weight: 600;
+      cursor: pointer; transition: opacity 150ms ease;
+    }
+    .feedback-submit:active { opacity: 0.82; }
+
+    /* ── Feedback: teaser card ──────────────────────────────────── */
+    .feedback-teaser {
+      position: fixed; inset: 0; z-index: 87;
+      background: rgba(8,15,26,0.84);
+      backdrop-filter: blur(8px);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 400ms ease;
+    }
+    .feedback-teaser.visible { opacity: 1; pointer-events: all; }
+    .feedback-teaser-card {
+      background: var(--card-solid);
+      border: 1px solid rgba(229,192,107,0.25);
+      border-radius: 26px; padding: 40px 36px 30px;
+      width: min(440px, 86vw); text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+    .feedback-teaser-card::before {
+      content: ''; display: block;
+      width: 40px; height: 2px; border-radius: 2px;
+      background: var(--teal); margin: 0 auto 20px;
+    }
+    .feedback-teaser-visual { font-size: 50px; margin-bottom: 14px; line-height: 1; }
+    .feedback-teaser-headline {
+      font-family: var(--font-display); font-size: 22px;
+      color: var(--heading); font-weight: 500;
+      margin-bottom: 7px; line-height: 1.3;
+    }
+    .feedback-teaser-sub { font-size: 14px; color: var(--muted); margin-bottom: 22px; line-height: 1.5; }
+    .feedback-teaser-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--teal); color: white; border: none;
+      border-radius: 12px; padding: 12px 24px;
+      font-family: var(--font-body); font-size: 14px; font-weight: 600;
+      cursor: pointer; transition: opacity 150ms ease;
+    }
+    .feedback-teaser-cta:active { opacity: 0.8; }
+    .feedback-teaser-progress {
+      height: 3px; background: rgba(255,255,255,0.08);
+      border-radius: 3px; margin-top: 18px; overflow: hidden;
+    }
+    .feedback-teaser-bar {
+      height: 100%; width: 100%; background: var(--teal);
+      transform-origin: left; transform: scaleX(1);
+    }
+    .feedback-teaser-bar.running { transform: scaleX(0); transition: transform 10s linear; }
+
     /* ── Thanks Screen ────────────────────────────────────────── */
     .thanks-screen {
       position: fixed; inset: 0; z-index: 95;
@@ -2331,8 +2467,52 @@
     <div class="attractor-visual" id="attractor-visual">☀️</div>
     <div class="attractor-headline" id="attractor-headline">Miami weather right now</div>
     <div class="attractor-sub" id="attractor-sub">Tap to see the hourly forecast</div>
+    <div class="feedback-emoji-row" id="attractor-emoji-row" style="display:none">
+      <button class="feedback-emoji-btn" onclick="event.stopPropagation();onFeedbackEmoji(5)" title="Great">😄</button>
+      <button class="feedback-emoji-btn" onclick="event.stopPropagation();onFeedbackEmoji(4)" title="Good">😊</button>
+      <button class="feedback-emoji-btn" onclick="event.stopPropagation();onFeedbackEmoji(3)" title="OK">😐</button>
+      <button class="feedback-emoji-btn" onclick="event.stopPropagation();onFeedbackEmoji(2)" title="Not great">😕</button>
+      <button class="feedback-emoji-btn" onclick="event.stopPropagation();onFeedbackEmoji(1)" title="Bad">😢</button>
+    </div>
   </div>
   <div class="attractor-hint" id="attractor-hint">Tap anywhere to browse</div>
+</div>
+
+<!-- ── Feedback Follow-up Modal ── -->
+<div class="feedback-modal" id="feedback-modal">
+  <div class="feedback-box" onclick="event.stopPropagation()">
+    <div class="feedback-box-handle"></div>
+    <div class="feedback-box-title" id="fb-modal-title">Sorry to hear that!</div>
+    <div class="feedback-box-sub" id="fb-modal-sub">What could we do better? Tap all that apply.</div>
+    <div class="feedback-chips" id="fb-chips">
+      <div class="feedback-chip" data-chip="cleanliness" onclick="toggleFeedbackChip(this)">🧹 Car cleanliness</div>
+      <div class="feedback-chip" data-chip="driving" onclick="toggleFeedbackChip(this)">🚗 Driving comfort</div>
+      <div class="feedback-chip" data-chip="pickup" onclick="toggleFeedbackChip(this)">📍 Pickup location</div>
+      <div class="feedback-chip" data-chip="ac" onclick="toggleFeedbackChip(this)">❄️ AC / temperature</div>
+      <div class="feedback-chip" data-chip="noise" onclick="toggleFeedbackChip(this)">🔊 Music or noise</div>
+      <div class="feedback-chip" data-chip="communication" onclick="toggleFeedbackChip(this)">💬 Communication</div>
+    </div>
+    <textarea class="feedback-textarea" id="fb-text" placeholder="Anything else? (optional)" maxlength="200" rows="3"></textarea>
+    <div class="feedback-actions">
+      <button class="feedback-skip" onclick="skipFeedback()">Skip</button>
+      <button class="feedback-submit" onclick="submitFeedback()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Feedback Teaser ── -->
+<div class="feedback-teaser" id="feedback-teaser" onclick="onFeedbackTeaserTap()">
+  <div class="feedback-teaser-card" onclick="event.stopPropagation()">
+    <div class="feedback-teaser-visual" id="fb-teaser-visual">🗓</div>
+    <div class="feedback-teaser-headline" id="fb-teaser-headline">What's on in Miami this week</div>
+    <div class="feedback-teaser-sub" id="fb-teaser-sub">Live events, concerts &amp; shows</div>
+    <button class="feedback-teaser-cta" onclick="onFeedbackTeaserTap()">
+      <span id="fb-teaser-cta-txt">See events →</span>
+    </button>
+    <div class="feedback-teaser-progress">
+      <div class="feedback-teaser-bar" id="fb-teaser-bar"></div>
+    </div>
+  </div>
 </div>
 
 <!-- ── Inactivity Modal ── -->
@@ -2462,6 +2642,12 @@
     <div class="analytics-section">
       <div class="analytics-section-title">Sessions by hour (local)</div>
       <div id="anl-by-hour"></div>
+    </div>
+    <div class="analytics-section">
+      <div class="analytics-section-title">Ride Feedback</div>
+      <div id="anl-feedback-summary" style="font-size:13px;color:var(--muted);margin-bottom:8px"></div>
+      <div id="anl-feedback-chips"></div>
+      <ul class="anl-venues-list" id="anl-feedback-comments" style="margin-top:8px"></ul>
     </div>
     <div style="font-size:11px;color:var(--muted);margin-top:8px;text-align:center">Read-only · use the Editor to export or reset</div>
   </div>
@@ -2679,6 +2865,11 @@ function buildContentCards() {
       headline: { en: 'Open this app on your phone', es: 'Abre esta app en tu teléfono', pt: 'Abra este app no seu celular', fr: 'Ouvrez cette appli sur votre téléphone' },
       sub:      { en: 'Take the Miami guide with you after the ride', es: 'Llévate la guía de Miami después del viaje', pt: 'Leve o guia de Miami com você após a corrida', fr: 'Emportez le guide de Miami après votre trajet' },
       action: () => openQR('app') },
+
+    { id: 'feedback', isFeedback: true, visual: '⭐',
+      headline: { en: "How's your ride so far?", es: '¿Cómo va tu viaje hasta ahora?', pt: 'Como está seu passeio até agora?', fr: "Comment se passe votre trajet jusqu'ici?" },
+      sub:      { en: 'Tap a face to let us know', es: 'Toca una cara para decirnos', pt: 'Toque um rosto para nos dizer', fr: 'Appuyez sur un visage pour nous dire' },
+      action: null },
   ];
 }
 
@@ -2706,6 +2897,7 @@ function renderAttractorCard(card) {
   const visualEl   = document.getElementById('attractor-visual');
   const headlineEl = document.getElementById('attractor-headline');
   const subEl      = document.getElementById('attractor-sub');
+  const emojiRow   = document.getElementById('attractor-emoji-row');
   if (card.visualHtml) {
     visualEl.innerHTML = card.visualHtml;
   } else {
@@ -2713,6 +2905,7 @@ function renderAttractorCard(card) {
   }
   headlineEl.textContent = aL(card.headline);
   subEl.textContent      = aL(card.sub);
+  emojiRow.style.display = card.isFeedback ? 'flex' : 'none';
 }
 
 function cycleAttractorCard() {
@@ -2753,6 +2946,14 @@ function onAttractorTap() {
   const card = currentAttractorCard;
   if (!card) { hideAttractor(); resetInactivity(); return; }
 
+  // Feedback card: emoji buttons handle their own taps via stopPropagation.
+  // Tapping the overlay background (outside the card) just dismisses.
+  if (card.isFeedback) {
+    hideAttractor();
+    resetInactivity();
+    return;
+  }
+
   if (card.action === 'spotify') {
     const flash = ATTRACTOR_SPOTIFY_FLASH[lang] || ATTRACTOR_SPOTIFY_FLASH.en;
     document.getElementById('attractor-visual').textContent = '🎶';
@@ -2770,6 +2971,141 @@ function onAttractorTap() {
   logTap('attractor_' + card.id);
   if (typeof card.action === 'function') card.action();
   resetInactivity();
+}
+
+// ════════════════════════════════════════════════════════════
+// RIDE FEEDBACK
+// ════════════════════════════════════════════════════════════
+const FEEDBACK_TEASERS = [
+  { visual: '🗓',
+    headline: { en: "What's on in Miami this week", es: 'Qué hay en Miami esta semana', pt: 'O que tem em Miami esta semana', fr: 'À faire à Miami cette semaine' },
+    sub:      { en: 'Live events, concerts & shows', es: 'Eventos en vivo, conciertos y shows', pt: 'Eventos ao vivo, shows e espetáculos', fr: 'Événements, concerts et spectacles' },
+    cta:      { en: 'See events →', es: 'Ver eventos →', pt: 'Ver eventos →', fr: 'Voir les événements →' },
+    action: () => { switchTab('guide'); setFilter('all'); } },
+  { visual: '🍽',
+    headline: { en: 'Best restaurants your driver recommends', es: 'Los mejores restaurantes que recomienda tu conductor', pt: 'Os melhores restaurantes recomendados pelo seu motorista', fr: 'Les meilleures tables selon votre chauffeur' },
+    sub:      { en: 'Cuban, Japanese, Aegean & more', es: 'Cubano, japonés, egeo y más', pt: 'Cubana, japonesa, egeia e mais', fr: 'Cubain, japonais, égéen et plus' },
+    cta:      { en: 'See restaurants →', es: 'Ver restaurantes →', pt: 'Ver restaurantes →', fr: 'Voir les restaurants →' },
+    action: () => { switchTab('guide'); setFilter('restaurant'); } },
+  { visual: '☀️',
+    headline: { en: "Today's weather in Miami", es: 'El clima hoy en Miami', pt: 'O tempo hoje em Miami', fr: "La météo d'aujourd'hui à Miami" },
+    sub:      { en: 'Hourly forecast & weekly outlook', es: 'Pronóstico por hora y semanal', pt: 'Previsão horária e semanal', fr: 'Prévisions horaires et hebdomadaires' },
+    cta:      { en: 'Check weather →', es: 'Ver clima →', pt: 'Ver tempo →', fr: 'Voir la météo →' },
+    action: () => switchTab('weather') },
+  { visual: '🎮',
+    headline: { en: 'Play Miami Trivia!', es: '¡Juega Miami Trivia!', pt: 'Jogue Miami Trivia!', fr: 'Jouez au Miami Trivia!' },
+    sub:      { en: 'How much do you know about the Magic City?', es: '¿Cuánto sabes sobre la Ciudad Mágica?', pt: 'O quanto você sabe sobre a Cidade Mágica?', fr: 'Que savez-vous sur la Ville Magique?' },
+    cta:      { en: 'Play now →', es: 'Jugar ahora →', pt: 'Jogar agora →', fr: 'Jouer maintenant →' },
+    action: () => openGame('trivia') },
+];
+
+let pendingFeedbackRating = null;
+let feedbackModalTimer    = null;
+let feedbackTeaserTimer   = null;
+let currentTeaserAction   = null;
+let lastTeaserIdx         = -1;
+
+function onFeedbackEmoji(rating) {
+  pendingFeedbackRating = rating;
+  hideAttractor();
+  if (rating >= 4) {
+    // Positive: log and go straight to teaser
+    saveFeedbackRecord({ rating, chips: [], text: '', partial: false });
+    showFeedbackTeaser(800);
+  } else {
+    // Neutral / negative: show follow-up modal
+    showFeedbackModal();
+  }
+}
+
+function showFeedbackModal() {
+  document.querySelectorAll('#fb-chips .feedback-chip').forEach(c => c.classList.remove('selected'));
+  document.getElementById('fb-text').value = '';
+  document.getElementById('feedback-modal').classList.add('visible');
+  feedbackModalTimer = setTimeout(() => {
+    // Auto-dismiss after 45s saving whatever was selected
+    const chips = getSelectedChips();
+    const text  = document.getElementById('fb-text').value.trim();
+    if (chips.length || text) saveFeedbackRecord({ rating: pendingFeedbackRating, chips, text, partial: true });
+    hideFeedbackModal();
+    showFeedbackTeaser(0);
+  }, 45000);
+}
+
+function toggleFeedbackChip(el) { el.classList.toggle('selected'); }
+
+function getSelectedChips() {
+  return [...document.querySelectorAll('#fb-chips .feedback-chip.selected')].map(c => c.dataset.chip);
+}
+
+function submitFeedback() {
+  clearTimeout(feedbackModalTimer);
+  const chips = getSelectedChips();
+  const text  = document.getElementById('fb-text').value.trim();
+  saveFeedbackRecord({ rating: pendingFeedbackRating, chips, text, partial: false });
+  hideFeedbackModal();
+  showFeedbackTeaser(200);
+}
+
+function skipFeedback() {
+  clearTimeout(feedbackModalTimer);
+  saveFeedbackRecord({ rating: pendingFeedbackRating, chips: [], text: '', partial: true });
+  hideFeedbackModal();
+  showFeedbackTeaser(0);
+}
+
+function hideFeedbackModal() {
+  document.getElementById('feedback-modal').classList.remove('visible');
+}
+
+function saveFeedbackRecord({ rating, chips, text, partial }) {
+  logTap('feedback_rating_' + rating);
+  if (!db) return;
+  db.transaction('feedback', 'readwrite').objectStore('feedback').add({
+    ts: new Date().toISOString(), day: dayKey(), rating, chips, text, partial, lang
+  });
+}
+
+function showFeedbackTeaser(delayMs) {
+  setTimeout(() => {
+    // Pick a random teaser, avoiding the last one shown
+    let idx;
+    do { idx = Math.floor(Math.random() * FEEDBACK_TEASERS.length); }
+    while (idx === lastTeaserIdx && FEEDBACK_TEASERS.length > 1);
+    lastTeaserIdx = idx;
+    const t = FEEDBACK_TEASERS[idx];
+    currentTeaserAction = t.action;
+
+    document.getElementById('fb-teaser-visual').textContent    = t.visual;
+    document.getElementById('fb-teaser-headline').textContent  = aL(t.headline);
+    document.getElementById('fb-teaser-sub').textContent       = aL(t.sub);
+    document.getElementById('fb-teaser-cta-txt').textContent   = aL(t.cta);
+
+    document.getElementById('feedback-teaser').classList.add('visible');
+
+    // Animate the progress bar across 10s
+    const bar = document.getElementById('fb-teaser-bar');
+    bar.classList.remove('running');
+    void bar.offsetWidth;
+    bar.classList.add('running');
+
+    feedbackTeaserTimer = setTimeout(() => { hideFeedbackTeaser(); resetInactivity(); }, 10000);
+  }, delayMs);
+}
+
+function onFeedbackTeaserTap() {
+  clearTimeout(feedbackTeaserTimer);
+  hideFeedbackTeaser();
+  if (typeof currentTeaserAction === 'function') {
+    currentTeaserAction();
+    logTap('feedback_teaser_tap');
+  }
+  resetInactivity();
+}
+
+function hideFeedbackTeaser() {
+  document.getElementById('feedback-teaser').classList.remove('visible');
+  currentTeaserAction = null;
 }
 
 // Inactivity
@@ -2804,7 +3140,7 @@ let sessionStart = null;
 let sessionTaps = {};
 let sessionFirstTap = null;   // first in-app key tapped this session = entry point
 let db = null;
-const ANALYTICS_DB_VERSION = 2;
+const ANALYTICS_DB_VERSION = 3;
 function dayKey() { return new Date().toISOString().split('T')[0]; }  // YYYY-MM-DD bucket
 
 // ════════════════════════════════════════════════════════════
@@ -5642,14 +5978,17 @@ function readStoreAll(db, name) {
 async function readAnalyticsForPeek() {
   return new Promise(resolve => {
     const req = indexedDB.open('MiamiRideAnalytics', ANALYTICS_DB_VERSION);
-    req.onupgradeneeded = e => upgradeAnalyticsDB(e.target.result);
+    req.onupgradeneeded = e => upgradeAnalyticsDB(e.target.result, e.oldVersion);
     req.onsuccess = async e => {
       const d = e.target.result;
-      const [sessions, taps, meta] = await Promise.all([readStoreAll(d, 'sessions'), readStoreAll(d, 'taps'), readStoreAll(d, 'meta')]);
+      const [sessions, taps, meta, feedback] = await Promise.all([
+        readStoreAll(d, 'sessions'), readStoreAll(d, 'taps'),
+        readStoreAll(d, 'meta'),    readStoreAll(d, 'feedback'),
+      ]);
       const cycles = (meta.find(m => m.k === 'cycles') || {}).n || 0;
-      resolve({ sessions, taps, cycles });
+      resolve({ sessions, taps, cycles, feedback });
     };
-    req.onerror = () => resolve({ sessions: [], taps: [], cycles: 0 });
+    req.onerror = () => resolve({ sessions: [], taps: [], cycles: 0, feedback: [] });
   });
 }
 
@@ -5837,6 +6176,40 @@ async function openAnalyticsOverlay() {
     const ampm = h === 0 ? '12am' : h < 12 ? h + 'am' : h === 12 ? '12pm' : (h - 12) + 'pm';
     return [ampm, n];
   }));
+
+  // Feedback section
+  const fb = (data.feedback || []).filter(f => !f.partial || f.chips?.length || f.text);
+  const fbSummaryEl = document.getElementById('anl-feedback-summary');
+  const fbChipsEl   = document.getElementById('anl-feedback-chips');
+  const fbCommentsEl = document.getElementById('anl-feedback-comments');
+  if (!fb.length) {
+    fbSummaryEl.textContent = 'No feedback yet';
+    fbChipsEl.innerHTML = '';
+    fbCommentsEl.innerHTML = '';
+  } else {
+    const EMOJI = ['', '😢', '😕', '😐', '😊', '😄'];
+    const counts = [0, 0, 0, 0, 0, 0];
+    const chipTally = {};
+    const comments = [];
+    for (const f of fb) {
+      if (f.rating >= 1 && f.rating <= 5) counts[f.rating]++;
+      for (const c of (f.chips || [])) chipTally[c] = (chipTally[c] || 0) + 1;
+      if (f.text) comments.push(f.text);
+    }
+    const total = fb.length;
+    const avgRating = (fb.reduce((s, f) => s + (f.rating || 0), 0) / total).toFixed(1);
+    fbSummaryEl.innerHTML = `<strong style="color:var(--heading)">${total} rating${total !== 1 ? 's' : ''}</strong> · avg ${avgRating} · `
+      + [5,4,3,2,1].map(r => counts[r] ? `${EMOJI[r]} ${counts[r]}` : '').filter(Boolean).join('  ');
+    const CHIP_LABEL = { cleanliness: '🧹 Cleanliness', driving: '🚗 Driving', pickup: '📍 Pickup', ac: '❄️ AC/temp', noise: '🔊 Noise', communication: '💬 Communication' };
+    const chipRows = Object.entries(chipTally).sort((a, b) => b[1] - a[1]);
+    fbChipsEl.innerHTML = chipRows.length
+      ? chipRows.map(([k, n]) => `<span style="display:inline-block;margin:3px 4px 3px 0;padding:5px 11px;border-radius:999px;background:var(--teal-mist);border:1px solid var(--teal-border);font-size:12px;color:var(--teal-light)">${CHIP_LABEL[k] || k} ×${n}</span>`).join('')
+      : '';
+    const recentComments = comments.slice(-5).reverse();
+    fbCommentsEl.innerHTML = recentComments.length
+      ? recentComments.map(c => `<li style="font-size:12px;color:var(--body);font-style:italic">"${c}"</li>`).join('')
+      : '';
+  }
 }
 
 // Generic two-column list: [label, value] rows into an .anl-venues-list <ul>.
@@ -5941,21 +6314,27 @@ function showMiniToast(msg) {
 // ════════════════════════════════════════════════════════════
 // ANALYTICS (IndexedDB)
 // ════════════════════════════════════════════════════════════
-// Shared schema setup. Bumping to v2 drops the legacy sessions/taps stores once
-// per device (the old data was inflated by phantom no-tap "sessions"), then
-// recreates them plus a `meta` store that holds the cycle counter.
-function upgradeAnalyticsDB(db) {
-  for (const name of ['sessions', 'taps']) {
-    if (db.objectStoreNames.contains(name)) db.deleteObjectStore(name);
+// Schema upgrades are version-gated so existing data survives minor bumps.
+// v1→v2: drop & recreate sessions/taps (old schema had inflated phantom sessions).
+// v2→v3: add feedback store (non-destructive).
+function upgradeAnalyticsDB(db, oldVersion) {
+  if (oldVersion < 2) {
+    for (const name of ['sessions', 'taps']) {
+      if (db.objectStoreNames.contains(name)) db.deleteObjectStore(name);
+    }
+    db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
+    db.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
+    if (!db.objectStoreNames.contains('meta')) db.createObjectStore('meta', { keyPath: 'k' });
   }
-  db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
-  db.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
-  if (!db.objectStoreNames.contains('meta')) db.createObjectStore('meta', { keyPath: 'k' });
+  if (oldVersion < 3) {
+    if (!db.objectStoreNames.contains('feedback'))
+      db.createObjectStore('feedback', { keyPath: 'id', autoIncrement: true });
+  }
 }
 
 function openDB() {
   const req = indexedDB.open('MiamiRideAnalytics', ANALYTICS_DB_VERSION);
-  req.onupgradeneeded = e => upgradeAnalyticsDB(e.target.result);
+  req.onupgradeneeded = e => upgradeAnalyticsDB(e.target.result, e.oldVersion);
   req.onsuccess = e => {
     db = e.target.result;
   };

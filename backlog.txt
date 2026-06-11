@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-06-11
+Last updated: 2026-06-12
 Owner: Abdullah
 
 
@@ -39,9 +39,8 @@ Re-order freely; mark [X] when done.
  13. #48  Rewards / raffle system (sponsored check-in + easter egg variant)
  14. #49  "My other apps" section in driver dashboard
  15. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
- 16. #23  Passenger feedback (storage decision needed)
- 17. #17  Events auto-refresh via Cloudflare Cron (deferred)
- 18. #29  Games i18n — Word Puzzle (a) still pending; content.json migration (c) future
+ 16. #17  Events auto-refresh via Cloudflare Cron (deferred)
+ 17. #29  Games i18n — Word Puzzle (a) still pending; content.json migration (c) future
 
 
 TEST SUITE & TAGS (Playwright)
@@ -53,13 +52,14 @@ Run all with `npm test`. TAGGED for fast targeted regressions:
     npm run test:editor    # driver dashboard (editor.html)
     npm run test:backend   # Cloudflare Functions pure logic
     npm run test:weather / test:content / test:phone / test:rest  # index sub-areas
+    npm run test:feedback  # ride feedback feature (tests/feedback.spec.js)
     npm run test:smoke     # fast critical-path subset
     npm run test:negative  # all failure-path tests
     npm run test:i18n      # translation / language-switch tests
     npm run test:units     # all in-browser pure-function unit tests
 
 Tag taxonomy:
-  PAGE  : @index @editor @games @backend  (+ sub-areas @weather @content @phone @rest)
+  PAGE  : @index @editor @games @backend  (+ sub-areas @weather @content @phone @rest @feedback)
   TYPE  : @unit (pure-fn) · @negative (failure paths) · @smoke · @i18n
 
 Layout:
@@ -111,11 +111,7 @@ OPEN ITEMS
         - Downscale + recompress with sharp (max ~1000px, q~80, mozjpeg), convert
           PNG → JPG/WebP, update content.json photo refs. Target ~100-150 KB each.
 
-[ ] 23. Passenger feedback function.
-        - A way for passengers to leave feedback (rating / quick note) from the app.
-        - Decide storage: on-device IndexedDB like analytics (read on tablet) vs.
-          a real endpoint (Worker → somewhere). Keep it low-friction and respect
-          the no-soliciting / no-tip-prompt rules.
+[X] 23. Passenger feedback — DONE 2026-06-12 (see archive).
 
 [~] 29. Games i18n — Word Puzzle + migration still pending.
         - DONE: Trivia, Facts Spinner, Guess the Image, Tap Frenzy.
@@ -249,7 +245,7 @@ as editorial / curated, not personally branded:
 
 ARCHITECTURE NOTE
 -----------------
-Single-file index.html (~2800+ lines including CSS + JS) and editor.html (~1500
+Single-file index.html (~3200+ lines including CSS + JS) and editor.html (~1500
 lines). No build step. SW caches files verbatim.
 
 Decision (2026-05-28): KEEP the monolith. Don't migrate to a framework.
