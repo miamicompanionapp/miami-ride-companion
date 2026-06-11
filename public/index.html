@@ -1089,6 +1089,15 @@
       transform: scale(0.94);
     }
     #img-lightbox.visible img { transform: scale(1); }
+    #img-lightbox-close {
+      position: absolute; top: 16px; right: 16px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); border: none;
+      color: white; font-size: 22px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 150ms;
+    }
+    #img-lightbox-close:hover { background: rgba(255,255,255,0.28); }
 
     /* ── Secret Menu + Analytics Overlay ──────────────────────── */
     .secret-menu-overlay {
@@ -2558,6 +2567,7 @@
 
 <!-- ── Image Lightbox ── -->
 <div id="img-lightbox" onclick="closeImage()">
+  <button id="img-lightbox-close" onclick="closeImage()" aria-label="Close"><i class="ti ti-x"></i></button>
   <img id="img-lightbox-img" src="" alt="">
 </div>
 

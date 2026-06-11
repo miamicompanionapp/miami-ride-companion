@@ -774,6 +774,13 @@
           <button class="btn btn-danger" onclick="resetAnalytics()"><i class="ti ti-trash"></i>Reset analytics</button>
         </div>
       </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">App update</div><div class="card-sub">Force the iPad to load the latest deployed version right now</div></div></div>
+        <div id="sw-update-status" style="font-size:13px;color:var(--muted);margin-bottom:12px">Checking…</div>
+        <button class="btn btn-primary" id="sw-update-btn" onclick="applySwUpdate()" disabled>
+          <i class="ti ti-refresh"></i>Use latest cache version
+        </button>
+      </div>
     </div>
 
     <!-- OFFLINE MAPS -->
@@ -1040,6 +1047,7 @@ function showPanel(id) {
   dot.className = 'nav-dot';
   navEl.appendChild(dot);
   if (id === 'offline') { loadOfflineStatus(); updateOfflineEstimate(); }
+  if (id === 'settings') checkSwUpdate();
 }
 
 // ══════════════════════════════════════════════════════
@@ -2564,6 +2572,46 @@ async function clearOfflineTiles() {
   localStorage.removeItem('offlineMapsMeta');
   loadOfflineStatus();
   showToast('Map tile cache cleared');
+}
+
+// ── SW update card ────────────────────────────────────────────
+let swWaitingReg = null;
+
+async function checkSwUpdate() {
+  const statusEl = document.getElementById('sw-update-status');
+  const btnEl    = document.getElementById('sw-update-btn');
+  if (!('serviceWorker' in navigator)) {
+    statusEl.textContent = 'Service worker not supported in this browser.';
+    return;
+  }
+  const reg = await navigator.serviceWorker.getRegistration();
+  if (!reg) { statusEl.textContent = 'No service worker registered yet.'; return; }
+
+  const check = () => {
+    if (reg.waiting) {
+      swWaitingReg = reg;
+      statusEl.textContent = 'A new version is ready and waiting to be applied.';
+      statusEl.style.color = 'var(--teal)';
+      btnEl.disabled = false;
+    } else {
+      statusEl.textContent = 'You\'re already on the latest cached version.';
+      statusEl.style.color = '';
+      btnEl.disabled = true;
+    }
+  };
+  check();
+  reg.addEventListener('updatefound', () => {
+    reg.installing && reg.installing.addEventListener('statechange', e => {
+      if (e.target.state === 'installed') check();
+    });
+  });
+  reg.update().catch(() => {});
+}
+
+function applySwUpdate() {
+  if (!swWaitingReg || !swWaitingReg.waiting) return;
+  swWaitingReg.waiting.postMessage({ type: 'SKIP_WAITING' });
+  navigator.serviceWorker.addEventListener('controllerchange', () => location.reload());
 }
 
 if ('serviceWorker' in navigator) {
