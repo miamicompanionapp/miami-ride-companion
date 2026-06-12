@@ -1,43 +1,37 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-11T23:20:53.256Z",
+    "lastUpdated": "2026-06-12T00:21:34.883Z",
     "publishedBy": "Abdullah",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-06-11T23:15:35.881Z",
+    "fetchedAt": "2026-06-12T00:16:33.955Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 90,
+      "temp_f": 83,
+      "feels_f": 89,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 65,
-      "wind_mph": 9,
+      "humidity": 71,
+      "wind_mph": 6,
       "rain_chance": 5,
-      "weathercode": 0
+      "weathercode": 3
     },
     "hourly": [
       {
-        "hour": "19:00",
-        "temp_f": 85,
-        "weathercode": 0,
+        "hour": "20:00",
+        "temp_f": 83,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
-        "hour": "20:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
         "hour": "21:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 82,
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "22:00",
@@ -47,25 +41,25 @@
       },
       {
         "hour": "23:00",
-        "temp_f": 79,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "00:00",
-        "temp_f": 79,
+        "temp_f": 80,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "01:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "02:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 1
       },
@@ -83,87 +77,93 @@
       },
       {
         "hour": "05:00",
-        "temp_f": 78,
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "08:00",
-        "temp_f": 81,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "09:00",
-        "temp_f": 83,
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 2
+        "rain_chance": 3
       },
       {
         "hour": "10:00",
         "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 2
+        "rain_chance": 5
       },
       {
         "hour": "11:00",
         "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 6
       },
       {
         "hour": "12:00",
         "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 4
+        "weathercode": 2,
+        "rain_chance": 6
       },
       {
         "hour": "13:00",
         "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 7
       },
       {
         "hour": "14:00",
         "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 10
       },
       {
         "hour": "15:00",
         "temp_f": 88,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 9
       },
       {
         "hour": "16:00",
         "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 11
       },
       {
         "hour": "17:00",
         "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 12
       },
       {
         "hour": "18:00",
         "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 11
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 11
       }
     ],
     "forecast": [
@@ -183,9 +183,9 @@
       {
         "date": "2026-06-12",
         "high_f": 88,
-        "low_f": 77,
+        "low_f": 76,
         "weathercode": 3,
-        "rain_chance": 9,
+        "rain_chance": 12,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -195,7 +195,7 @@
       },
       {
         "date": "2026-06-13",
-        "high_f": 87,
+        "high_f": 88,
         "low_f": 74,
         "weathercode": 51,
         "rain_chance": 21,
@@ -210,26 +210,26 @@
         "date": "2026-06-14",
         "high_f": 88,
         "low_f": 82,
-        "weathercode": 53,
+        "weathercode": 51,
         "rain_chance": 39,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       },
       {
         "date": "2026-06-15",
-        "high_f": 87,
-        "low_f": 81,
-        "weathercode": 53,
+        "high_f": 88,
+        "low_f": 82,
+        "weathercode": 81,
         "rain_chance": 66,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
         }
       }
     ]
@@ -238,7 +238,7 @@
     "featuredVenueId": "v009",
     "featuredMiniIds": [
       "v011",
-      "v003",
+      "v023",
       "v022"
     ],
     "venues": [
@@ -744,7 +744,7 @@
         "lng": -80.2053,
         "website": "https://lovelifecafe.com/",
         "photo": "https://static.spotapps.co/website_images/ab_websites/89446_website_v2/about_page_1.jpg",
-        "abdullahsPick": false,
+        "abdullahsPick": true,
         "featured": false,
         "sponsored": false,
         "description": {
@@ -754,7 +754,7 @@
           "fr": "Le café végétalien bien-aimé de Wynwood, proposant une cuisine réconfortante sans culpabilité — dont ce que beaucoup appellent le meilleur burger végétal d'Amérique."
         },
         "abdullahsNote": {
-          "en": "",
+          "en": "Their vegan steak is unbelievable.",
           "es": "",
           "pt": "",
           "fr": ""
@@ -1693,6 +1693,188 @@
           "pt": "Junte-se a nós no dia 18 de junho para celebrar a festa de aniversário de 8 anos do Mama Tried com uma noite",
           "fr": "Rejoignez-nous le 18 juin pour célébrer le 8e anniversaire de Mama Tried avec une soirée"
         }
+      },
+      {
+        "id": "rss_1781223426197_oelx",
+        "title": {
+          "en": "Protected: Peroni has you covered for the World Cup in Miami",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-06-11",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/sponsored/where-to-drink-peroni-during-world-cup-in-miami-40556285/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/cafe_prima_pasta_900x600.jpg",
+        "description": {
+          "en": "There is no excerpt because this is a protected post.",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        }
+      },
+      {
+        "id": "rss_1781223426197_wd3u",
+        "title": {
+          "en": "Galleria Fort Lauderdale’s “Arts from A to Z” Free Cultural Showcase 7/25/26",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-07-25",
+        "venue": "Galleria Fort Lauderdale",
+        "address": "2414 E Sunrise Blvd, Fort Lauderdale, Florida, 33304",
+        "url": "https://www.soulofmiami.org/2026/06/11/galleria-fort-lauderdales-arts-from-a-to-z-free-cultural-showcase-7-25-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/1080-x-1080-Social-Post-350x350.jpg",
+        "description": {
+          "en": "Galleria Fort Lauderdale will debut “Arts from A to Z,”",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 26.1369729,
+        "lng": -80.1135854
+      },
+      {
+        "id": "rss_1781223426197_tgrh",
+        "title": {
+          "en": "Roller Derby – Super Derby Galaxy 7/25/26",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-07-25",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/06/11/roller-derby-super-derby-galaxy-7-25-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/Super-derby-galaxy-350x130.jpg",
+        "description": {
+          "en": "on the SoFlo Roller Derby as the yearly Battle for Alligator Alley continues this Summer",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        }
+      },
+      {
+        "id": "rss_1781223426197_stjv",
+        "title": {
+          "en": "Get movie ticket to see new ‘Moana’ and collectible cup for just $1 at Subway",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-06-11",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/get-movie-ticket-to-see-new-moana-15-value-collectible-cup-at-subway/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/subway-e1660767100756-728x337.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Aloha! Moana fans will definitely want to sail over to Subway this summer. Fans and families are excited for the highly anticipated live-action reimagining of the popular family film from... Copyright South Florida on the Cheap. The post Get movie ticket to see new ‘Moana’ and collectible cup for just $1 at Subway appeared first on South Florida on the Cheap.",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        }
+      },
+      {
+        "id": "rss_1781223426197_xox6",
+        "title": {
+          "en": "$10 Art After Dark, Friday: Norton Museum, West Palm Beach",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-06-11",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/art-after-dark-norton-west-palm-beach/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/art-after-dark-fea-img3-728x582.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Each week, after regular hours, the Norton Museum of Art presents a new experience, with an eclectic mix of live performances, film screenings, workshops, tours, and more, called Art After... Copyright South Florida on the Cheap. The post $10 Art After Dark, Friday: Norton Museum, West Palm Beach appeared first on South Florida on the Cheap.",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        }
+      },
+      {
+        "id": "rss_1781223426197_l5tr",
+        "title": {
+          "en": "Free Friday shows: 'Summer in the City,' Mizner Park, June 12-Aug. 7",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-06-11",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/summer-in-the-city/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/05/summer-in-the-city4-e1779925147130-728x602.jpg",
+        "description": {
+          "en": "South Florida on the Cheap The 2026 Summer in the City free concert series in Boca Raton features tribute bands on select Fridays from June 12 to Aug. 7, 2026. Shows start at 8 p.m.... Copyright South Florida on the Cheap. The post Free Friday shows: 'Summer in the City,' Mizner Park, June 12-Aug. 7 appeared first on South Florida on the Cheap.",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        }
+      },
+      {
+        "id": "tm_1781223444523_pmks",
+        "title": {
+          "en": "The Book of Mormon (Touring)",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-06-12",
+        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7_OC7&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/70c/f8408501-c120-4b57-a857-a1711722970c_241621_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Theatre · Starts 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 25.784901,
+        "lng": -80.189598
+      },
+      {
+        "id": "tm_1781223444523_9tk8",
+        "title": {
+          "en": "The Acacia Strain",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "date": "2026-06-13",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-acacia-strain-ft-lauderdale-florida-06-13-2026%2Fevent%2F0D00648D11F02F99&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/5ef/fb5f6bd4-4693-4fd4-a6f4-d738795af5ef_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Acacia Strain with special guests The Callous Daoboys, fromjoy, Mask Doors open 6:00pm · Starts 18:00 · Culture Room",
+          "es": "",
+          "pt": "",
+          "fr": ""
+        },
+        "lat": 26.166888,
+        "lng": -80.117058
       }
     ]
   },
