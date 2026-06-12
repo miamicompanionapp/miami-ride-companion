@@ -311,14 +311,19 @@ test.describe('Ride Feedback', { tag: ['@index', '@feedback'] }, () => {
   });
 
   test('tapping teaser dismisses it and navigates into the app', async ({ page }) => {
-    // Force the events teaser (index 0)
-    await page.evaluate(() => { lastTeaserIdx = 1; showFeedbackTeaser(0); });
+    // Directly wire the events teaser action to avoid random teaser selection
+    await page.evaluate(() => {
+      currentTeaserAction = FEEDBACK_TEASERS[0].action;
+      document.getElementById('feedback-teaser').classList.add('visible');
+    });
     await expect(page.locator('#feedback-teaser')).toHaveClass(/visible/);
 
     await page.evaluate(() => onFeedbackTeaserTap());
     await expect(page.locator('#feedback-teaser')).not.toHaveClass(/visible/);
-    // The app's guide tab should now be active (events teaser navigates there)
+    // The events teaser must navigate to guide AND apply the event filter
     await expect(page.locator('#page-guide')).toHaveClass(/active/);
+    const filter = await page.evaluate(() => currentFilter);
+    expect(filter).toBe('event');
   });
 
   test('teaser auto-dismisses after timer and calls resetInactivity', async ({ page }) => {

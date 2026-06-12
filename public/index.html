@@ -3110,9 +3110,10 @@ function showFeedbackTeaser(delayMs) {
 
 function onFeedbackTeaserTap() {
   clearTimeout(feedbackTeaserTimer);
+  const action = currentTeaserAction;
   hideFeedbackTeaser();
-  if (typeof currentTeaserAction === 'function') {
-    currentTeaserAction();
+  if (typeof action === 'function') {
+    action();
     logTap('feedback_teaser_tap');
   }
   resetInactivity();
