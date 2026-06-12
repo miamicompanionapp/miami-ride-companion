@@ -917,7 +917,7 @@
       position: fixed; inset: 0; z-index: 88;
       background: rgba(8,15,26,0.80);
       backdrop-filter: blur(10px);
-      display: flex; align-items: flex-end; justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       opacity: 0; pointer-events: none;
       transition: opacity 350ms ease;
     }
@@ -925,11 +925,11 @@
     .feedback-box {
       background: var(--card-solid);
       border: 1px solid rgba(229,192,107,0.25);
-      border-radius: 26px 26px 0 0;
+      border-radius: 26px;
       padding: 8px 24px 34px;
-      width: min(540px, 100vw);
+      width: min(540px, 92vw);
       max-height: 88vh; overflow-y: auto;
-      transform: translateY(36px);
+      transform: translateY(24px);
       transition: transform 350ms ease;
     }
     .feedback-modal.visible .feedback-box { transform: translateY(0); }
@@ -2829,7 +2829,7 @@ function buildContentCards() {
     { id: 'events', visual: '🗓',
       headline: evtHeadline,
       sub:      evtSub,
-      action: () => { switchTab('guide'); setFilter('all'); } },
+      action: () => { switchTab('guide'); setFilter('event'); } },
 
     { id: 'weather', visual: '☀️',
       headline: weatherHeadline,
@@ -2996,7 +2996,7 @@ const FEEDBACK_TEASERS = [
     headline: { en: "What's on in Miami this week", es: 'Qué hay en Miami esta semana', pt: 'O que tem em Miami esta semana', fr: 'À faire à Miami cette semaine' },
     sub:      { en: 'Live events, concerts & shows', es: 'Eventos en vivo, conciertos y shows', pt: 'Eventos ao vivo, shows e espetáculos', fr: 'Événements, concerts et spectacles' },
     cta:      { en: 'See events →', es: 'Ver eventos →', pt: 'Ver eventos →', fr: 'Voir les événements →' },
-    action: () => { switchTab('guide'); setFilter('all'); } },
+    action: () => { switchTab('guide'); setFilter('event'); } },
   { visual: '🍽',
     headline: { en: 'Best restaurants your driver recommends', es: 'Los mejores restaurantes que recomienda tu conductor', pt: 'Os melhores restaurantes recomendados pelo seu motorista', fr: 'Les meilleures tables selon votre chauffeur' },
     sub:      { en: 'Cuban, Japanese, Aegean & more', es: 'Cubano, japonés, egeo y más', pt: 'Cubana, japonesa, egeia e mais', fr: 'Cubain, japonais, égéen et plus' },

@@ -491,6 +491,10 @@
         <div class="card-header"><div><div class="card-title">Sessions by day</div><div class="card-sub">Real (tapped) sessions per day</div></div></div>
         <div id="day-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No sessions yet</div></div>
       </div>
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Ride Feedback</div><div class="card-sub">Emoji ratings passengers leave during the ride</div></div></div>
+        <div id="fb-summary"><div style="font-size:12px;color:var(--muted);padding:8px 0">Loading…</div></div>
+      </div>
     </div>
 
     <!-- VENUES -->
@@ -1733,17 +1737,22 @@ function openAnalyticsDB() {
   return new Promise((resolve, reject) => {
     // Match the passenger app's schema (name + version + stores) exactly, so
     // opening here can never leave a store-less DB that breaks the app's logging.
-    const req = indexedDB.open('MiamiRideAnalytics', 2);
+    const req = indexedDB.open('MiamiRideAnalytics', 3);
     req.onupgradeneeded = e => {
-      // Keep in lockstep with index.html's upgradeAnalyticsDB(): v2 drops the
-      // legacy phantom-inflated sessions/taps once and adds the `meta` store.
-      const db = e.target.result;
-      for (const name of ['sessions', 'taps']) {
-        if (db.objectStoreNames.contains(name)) db.deleteObjectStore(name);
+      // Keep in lockstep with index.html's upgradeAnalyticsDB().
+      const db = e.target.result; const old = e.oldVersion;
+      if (old < 2) {
+        for (const name of ['sessions', 'taps']) {
+          if (db.objectStoreNames.contains(name)) db.deleteObjectStore(name);
+        }
+        db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
+        db.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
+        if (!db.objectStoreNames.contains('meta')) db.createObjectStore('meta', { keyPath: 'k' });
       }
-      db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
-      db.createObjectStore('taps',     { keyPath: 'id', autoIncrement: true });
-      if (!db.objectStoreNames.contains('meta')) db.createObjectStore('meta', { keyPath: 'k' });
+      if (old < 3) {
+        if (!db.objectStoreNames.contains('feedback'))
+          db.createObjectStore('feedback', { keyPath: 'id', autoIncrement: true });
+      }
     };
     req.onsuccess = e => resolve(e.target.result);
     req.onerror   = () => reject(req.error);
@@ -1763,11 +1772,11 @@ function readStore(db, name) {
 async function readAllAnalytics() {
   try {
     const db = await openAnalyticsDB();
-    const [sessions, taps, meta] = await Promise.all([readStore(db, 'sessions'), readStore(db, 'taps'), readStore(db, 'meta')]);
+    const [sessions, taps, meta, feedback] = await Promise.all([readStore(db, 'sessions'), readStore(db, 'taps'), readStore(db, 'meta'), readStore(db, 'feedback')]);
     const cycles = (meta.find(m => m.k === 'cycles') || {}).n || 0;
-    return { sessions, taps, cycles };
+    return { sessions, taps, cycles, feedback };
   } catch {
-    return { sessions: [], taps: [], cycles: 0 };
+    return { sessions: [], taps: [], cycles: 0, feedback: [] };
   }
 }
 
@@ -1812,7 +1821,7 @@ function entryLabel(key) {
 }
 
 // Roll the raw rows up into the numbers the dashboard + export both use.
-function summarizeAnalytics({ sessions, taps, cycles = 0 }) {
+function summarizeAnalytics({ sessions, taps, cycles = 0, feedback = [] }) {
   const TAB_LABEL  = { tab_guide: 'City Guide', tab_weather: 'Weather', tab_games: 'Games', tab_driver: 'Driver' };
   const tabCounts  = { 'City Guide': 0, Weather: 0, Games: 0, Driver: 0 };
   const venueCounts = {};
@@ -1872,8 +1881,21 @@ function summarizeAnalytics({ sessions, taps, cycles = 0 }) {
 
   const engagementPct = cycles ? Math.round(sessions.length / cycles * 100) : null;
   const engagedSessions = sessions.filter(s => s.tapTotal > 2).length;
+
+  // Feedback summary
+  const completedFeedback = feedback.filter(f => !f.partial);
+  const ratingDist = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  let ratingSum = 0;
+  for (const f of completedFeedback) { ratingDist[f.rating] = (ratingDist[f.rating] || 0) + 1; ratingSum += f.rating; }
+  const avgRating = completedFeedback.length ? Math.round(ratingSum / completedFeedback.length * 10) / 10 : null;
+  const chipCounts = {};
+  for (const f of feedback) for (const c of (f.chips || [])) chipCounts[c] = (chipCounts[c] || 0) + 1;
+  const topChips = Object.entries(chipCounts).sort((a, b) => b[1] - a[1]);
+  const recentComments = feedback.filter(f => f.text).sort((a, b) => (b.ts || 0) - (a.ts || 0)).slice(0, 5).map(f => ({ text: f.text, rating: f.rating, day: f.day }));
+  const fb = { total: feedback.length, completed: completedFeedback.length, avgRating, ratingDist, topChips, recentComments };
+
   return { sessions: sessions.length, engagedSessions, cycles, engagementPct, avgDuration, qrTaps, qrBreakdown, heroQr,
-           tabCounts, langCounts, topVenues, entryPoints, games, driver, byDay };
+           tabCounts, langCounts, topVenues, entryPoints, games, driver, byDay, fb };
 }
 
 function renderBars(containerId, entries, colors) {
@@ -1933,6 +1955,39 @@ function renderAnalytics(data) {
   renderKvList('driver-tops', driverRows, 'No driver-page taps yet');
 
   renderKvList('day-tops', s.byDay.map(([d, n]) => [d, n + (n === 1 ? ' session' : ' sessions')]), 'No sessions yet');
+
+  // Feedback section
+  const fb = s.fb;
+  const fbSummaryEl = document.getElementById('fb-summary');
+  if (fbSummaryEl) {
+    if (!fb.total) {
+      fbSummaryEl.innerHTML = '<div style="font-size:12px;color:var(--muted);padding:8px 0">No feedback collected yet — it appears after 3+ rides.</div>';
+    } else {
+      const EMOJI = { 1: '😢', 2: '😕', 3: '😐', 4: '😊', 5: '😄' };
+      const maxDist = Math.max(...Object.values(fb.ratingDist), 1);
+      const distHtml = [5,4,3,2,1].map(r => {
+        const n = fb.ratingDist[r] || 0;
+        const pct = Math.round(n / maxDist * 100);
+        return `<div class="bar-row"><div class="bar-lbl">${EMOJI[r]}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:var(--teal)"></div></div><div class="bar-val">${n}</div></div>`;
+      }).join('');
+      const chipsHtml = fb.topChips.length
+        ? fb.topChips.map(([c, n]) => `<span style="display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:4px 10px;font-size:12px;margin:3px">${c} <strong>${n}</strong></span>`).join('')
+        : '<span style="font-size:12px;color:var(--muted)">None yet</span>';
+      const commentsHtml = fb.recentComments.length
+        ? fb.recentComments.map(c => `<div style="padding:8px 0;border-bottom:0.5px solid var(--border)"><div style="font-size:12px;color:var(--heading)">${c.text}</div><div style="font-size:11px;color:var(--muted);margin-top:3px">${EMOJI[c.rating]} · ${c.day || ''}</div></div>`).join('')
+        : '';
+      fbSummaryEl.innerHTML = `
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px">
+          <div style="font-size:36px;font-weight:700;color:var(--heading)">${fb.avgRating ?? '—'}</div>
+          <div style="font-size:13px;color:var(--muted)">${fb.completed} completed · ${fb.total - fb.completed} partial</div>
+        </div>
+        ${distHtml}
+        <div style="margin-top:14px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px">Complaints</div>
+        <div>${chipsHtml}</div>
+        ${fb.recentComments.length ? `<div style="margin-top:14px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px">Recent comments</div>${commentsHtml}` : ''}
+      `;
+    }
+  }
 }
 
 async function loadAnalytics() {
@@ -1949,6 +2004,7 @@ async function exportAnalytics() {
     summary: summarizeAnalytics(data),
     sessions: data.sessions,
     taps: data.taps,
+    feedback: data.feedback,
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
@@ -1956,14 +2012,14 @@ async function exportAnalytics() {
   a.download = `analytics-${new Date().toISOString().split('T')[0]}.json`;
   document.body.appendChild(a); a.click(); a.remove();
   URL.revokeObjectURL(a.href);
-  showToast(`Exported ${data.sessions.length} sessions · ${data.taps.length} taps ✓`);
+  showToast(`Exported ${data.sessions.length} sessions · ${data.taps.length} taps · ${(data.feedback||[]).length} feedback ✓`);
 }
 
 async function resetAnalytics() {
   if (!confirm('Erase ALL passenger analytics stored on this device? This cannot be undone. Consider exporting first.')) return;
   try {
     const db = await openAnalyticsDB();
-    const stores = ['sessions', 'taps', 'meta'].filter(n => db.objectStoreNames.contains(n));
+    const stores = ['sessions', 'taps', 'meta', 'feedback'].filter(n => db.objectStoreNames.contains(n));
     if (!stores.length) { showToast('No analytics to clear'); return; }
     const tx = db.transaction(stores, 'readwrite');
     stores.forEach(n => tx.objectStore(n).clear());
