@@ -2464,8 +2464,8 @@
 </div>
 
 <!-- ── Attractor Overlay ── -->
-<div class="attractor-overlay" id="attractor-overlay" onclick="onAttractorTap()">
-  <div class="attractor-card" id="attractor-card">
+<div class="attractor-overlay" id="attractor-overlay" onclick="onAttractorBackdropTap()">
+  <div class="attractor-card" id="attractor-card" onclick="event.stopPropagation(); onAttractorTap()">
     <div class="attractor-visual" id="attractor-visual">☀️</div>
     <div class="attractor-headline" id="attractor-headline">Miami weather right now</div>
     <div class="attractor-sub" id="attractor-sub">Tap to see the hourly forecast</div>
@@ -2576,6 +2576,9 @@
     </button>
     <button class="secret-menu-btn danger" id="secret-bubble-btn" onclick="secretToggleBubble()">
       <i class="ti ti-user"></i> <span id="secret-bubble-label">Driver Bubble: On</span>
+    </button>
+    <button class="secret-menu-btn danger" id="secret-analytics-btn" onclick="secretToggleAnalytics()">
+      <i class="ti ti-chart-bar-off"></i> <span id="secret-analytics-label">Analytics: On</span>
     </button>
     <button class="secret-menu-close" onclick="closeSecretMenu()">Close</button>
   </div>
@@ -2729,10 +2732,10 @@ function aL(obj) {
 }
 
 const ATTRACTOR_HINT = {
-  en: 'Tap anywhere to browse',
-  es: 'Toca en cualquier lugar para explorar',
-  pt: 'Toque em qualquer lugar para navegar',
-  fr: "Appuyez n'importe où pour naviguer",
+  en: 'Tap the card to explore',
+  es: 'Toca la tarjeta para explorar',
+  pt: 'Toque no cartão para navegar',
+  fr: 'Appuyez sur la carte pour explorer',
 };
 
 const ATTRACTOR_SPOTIFY_FLASH = {
@@ -2988,6 +2991,11 @@ function onAttractorTap() {
   resetInactivity();
 }
 
+function onAttractorBackdropTap() {
+  hideAttractor();
+  resetInactivity();
+}
+
 // ════════════════════════════════════════════════════════════
 // RIDE FEEDBACK
 // ════════════════════════════════════════════════════════════
@@ -3152,6 +3160,7 @@ let secretTimer = null;
 // A "session" only exists once a passenger taps something inside the app — see
 // logTap(). Empty idle cycles (driving with nobody tapping) record a cycle but
 // no session, so the Sessions count reflects real engagement, not reset loops.
+let analyticsDisabled = false;
 let sessionStart = null;
 let sessionTaps = {};
 let sessionFirstTap = null;   // first in-app key tapped this session = entry point
@@ -5991,6 +6000,13 @@ function secretToggleBubble() {
   showMiniToast(nowVisible ? 'Driver bubble hidden' : 'Driver bubble shown');
 }
 
+function secretToggleAnalytics() {
+  analyticsDisabled = !analyticsDisabled;
+  const label = document.getElementById('secret-analytics-label');
+  if (label) label.textContent = 'Analytics: ' + (analyticsDisabled ? 'Off' : 'On');
+  showMiniToast(analyticsDisabled ? 'Analytics paused — taps not recorded' : 'Analytics resumed');
+}
+
 // ── Analytics peek (read-only, no export/reset) ──────────────────────────────
 function readStoreAll(db, name) {
   return new Promise(resolve => {
@@ -6376,14 +6392,14 @@ function startSession(firstKey) {
 // Every idle reset (idle→thanks, or rest auto-wake) counts as a cycle. A session
 // record is written only if the passenger actually tapped something this cycle.
 function endSession() {
-  recordCycle();
+  if (!analyticsDisabled) recordCycle();
   const start = sessionStart;
   const firstTap = sessionFirstTap;
   const taps = { ...sessionTaps };
   sessionStart = null;
   sessionFirstTap = null;
   sessionTaps = {};
-  if (!db || !start) return;
+  if (!db || !start || analyticsDisabled) return;
   const tapTotal = Object.values(taps).reduce((a, b) => a + b, 0);
   if (!tapTotal) return;
   const session = {
@@ -6409,6 +6425,7 @@ function recordCycle() {
 
 function logTap(key) {
   resetInactivity();
+  if (analyticsDisabled) return;
   // Attractor taps wake the app but don't, on their own, mean engagement — only
   // an in-app tap opens a session. The raw tap is still logged either way.
   const inApp = !key.startsWith('attractor_');

@@ -7,6 +7,30 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Attractor backdrop dismiss — tap outside card dismisses without redirecting  *(DONE 2026-06-13)*
+
+Changed attractor overlay tap behavior so tapping the dark backdrop (outside the card) only dismisses the overlay, while tapping the card itself still fires the action (tab switch, game open, etc.).
+
+- `attractor-overlay` onclick changed to `onAttractorBackdropTap()` — hides + resets inactivity, no action.
+- `attractor-card` gains `onclick="event.stopPropagation(); onAttractorTap()"` — fires the card action.
+- New `onAttractorBackdropTap()` function added.
+- Feedback emoji buttons unaffected (they already had their own `stopPropagation`).
+- Hint text updated from "Tap anywhere to browse" → "Tap the card to explore" (all 4 languages).
+- SW bumped to v1.34.2.
+
+**Why:** Passenger mid-game (e.g. Trivia) would tap to dismiss the attractor and accidentally get redirected away from the game.
+
+### [X] Analytics disable toggle in Driver Menu  *(DONE 2026-06-13)*
+
+Added "Analytics: On/Off" toggle to the 5-tap secret Driver Menu so testing sessions don't contaminate real passenger data.
+
+- New `let analyticsDisabled = false` module variable.
+- `logTap()` returns early (no DB write, no session start) when disabled.
+- `endSession()` skips the session DB write and `recordCycle()` call when disabled — so the cycle counter stays clean too.
+- New `secretToggleAnalytics()` function; follows the same pattern as `secretToggleBubble()`.
+- Menu button added below Driver Bubble with same `danger` style and `ti-chart-bar-off` icon.
+- State resets on page reload (intentional — prevents accidentally leaving analytics off for passengers).
+
 ### [X] #23 — Passenger ride feedback  *(DONE 2026-06-12)*
 
 **Feature: in-app emoji rating with follow-up modal and teaser card**
