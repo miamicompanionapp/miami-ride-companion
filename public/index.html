@@ -3358,7 +3358,7 @@ function renderDriver() {
     if (q && q.name) {
       qEl.style.display = '';
       qEl.innerHTML = `
-        <div class="dp-queen-photo">${q.photo ? `<img src="${q.photo}" alt="">` : '<div class="dp-queen-emoji">👑</div>'}</div>
+        <div class="dp-queen-photo">${q.photo ? `<img src="${q.photo}" alt="" style="cursor:zoom-in" onclick="openImage(this.src)">` : '<div class="dp-queen-emoji">👑</div>'}</div>
         <div class="dp-queen-text">
           <div class="dp-queen-eyebrow">${q.eyebrow ? tx(q.eyebrow) : 'My Queen'}</div>
           <div class="dp-queen-name">${q.name}</div>
@@ -5973,6 +5973,11 @@ function showThanks() {
         switchTab('guide', true);
         setFilter('featured', true);
         resetInactivity();
+        if (analyticsDisabled) {
+          analyticsDisabled = false;
+          const lbl = document.getElementById('secret-analytics-label');
+          if (lbl) lbl.textContent = 'Analytics: On';
+        }
       }, 650);
     }
   }, 1000);
