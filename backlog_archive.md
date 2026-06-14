@@ -7,6 +7,31 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Honest regional framing + color-coded distance badges  *(DONE 2026-06-14)*
+
+A passenger riding near Kendall tapped the "Miami nightlife" attractor and reacted that the venues "are not from Miami, these are too far" — because the nightlife list actually spans South Beach → **Hollywood (DAER)** → **Fort Lauderdale (Original Fat Cat's, ~25 mi)**. The "Miami" label was over-promising the coverage area, and distance was effectively invisible.
+
+**Root cause (two parts):**
+1. **Copy over-promised "Miami."** Attractor headlines named a single city the venue pool doesn't honor. Nightlife reaches Broward; attractions include **Fort Lauderdale** and the **Everglades**.
+2. **Distance was invisible/unsorted without GPS.** Venue cards only set `v._dist` and sorted nearest-first inside `if (userLat && userLng)` (`renderGuide`, index.html). When GPS hadn't resolved, far venues appeared in arbitrary order with no distance shown and nothing flagging them as far.
+
+**Changes (`public/index.html`):**
+- **Reframed two attractor cards** in `buildContentCards()` (all 4 languages: EN/ES/PT/FR):
+  - Nightlife: "Miami nightlife" → **"South Florida nightlife"** / sub "…from the beach to Broward".
+  - Attractions: "Top Miami attractions" → **"South Florida attractions"** / sub now names "…the Everglades & more".
+  - **Intentionally left as-is:** Food already said "Best restaurants **near you**"; Gems already said "**Local** hidden gems" (no city claim); Events (Wynwood / Little Havana / South Beach) and Weather/Trivia are genuinely Miami.
+- **Color-coded distance badges** — new `distClass(mi)` helper (next to `haversine`) returns a tier class: green `dist-near` ≤6 mi, gold `dist-mid` ≤12 mi, red `dist-far` >12 mi (`null`/`undefined` → `''`). Applied to all four badge render spots: home hero (`buildHeroHTML`), mini cards (`buildMiniHTML`), browse grid (`buildVenueCard`), and the venue detail sheet (`openVenueSheet`). This treatment is app-wide (per-venue), so every category benefits, not just nightlife.
+- **CSS** (after the `.vs-dist` rules) overrides the default `var(--teal)` with `#34D399` / `var(--gold)` / `#FF6B6B`. The venue-sheet selector is `.vs-meta .vs-dist` (specificity 0,2,0), so the far/mid/near overrides are doubled as `.vs-meta .dist-*` to win the tie; the other three badges are single-class and win on source order.
+- SW bumped to **v1.35.0**.
+
+**Tests (`tests/index-units.spec.js`, +4):**
+- `distClass` tier boundaries (0/6/6.01/12/12.01/25 → near/near/mid/mid/far/far) and the `null`/`undefined` → `''` guard.
+- Attractor-copy honesty: nightlife & attractions headlines/subs contain **no "Miami"** in any of the 4 languages; nightlife English headline === "South Florida nightlife". Guards against a future edit silently reintroducing the over-promise.
+
+**Decision notes / open follow-ups:**
+- Thresholds 6/12 mi are a first guess at "near vs a real drive" for a typical ride; revisit if rides cluster tighter (e.g. Brickell↔Wynwood) — change is centralized in `distClass()`.
+- Weather still fetches a fixed Miami location; a passenger in Broward sees Miami weather. Out of scope here, noted as a possible future item.
+
 ### [X] Attractor backdrop dismiss — tap outside card dismisses without redirecting  *(DONE 2026-06-13)*
 
 Changed attractor overlay tap behavior so tapping the dark backdrop (outside the card) only dismisses the overlay, while tapping the card itself still fires the action (tab switch, game open, etc.).

@@ -1467,6 +1467,11 @@
     .vs-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
     .vs-meta .vs-dist { color: var(--teal); font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
     .vs-meta .vs-dist i { font-size: 14px; }
+    /* Distance color tiers (green=near, gold=mid, red=far). Override the
+       default teal on every badge variant via distClass() — see haversine. */
+    .dist-near, .vs-meta .dist-near { color: #34D399; }
+    .dist-mid,  .vs-meta .dist-mid  { color: var(--gold); }
+    .dist-far,  .vs-meta .dist-far  { color: #FF6B6B; }
     .vs-desc { font-size: 15px; line-height: 1.65; color: var(--body); margin-bottom: 16px; }
     .vs-note { font-size: 15px; line-height: 1.55; color: #6B4D14; font-style: italic; padding: 14px 16px; background: var(--gold-light); border-radius: 10px; border-left: 3px solid var(--gold); margin-bottom: 18px; }
     .vs-addr { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 6px; margin-bottom: 18px; }
@@ -2815,13 +2820,13 @@ function buildContentCards() {
       action: () => { switchTab('guide'); setFilter('restaurant'); } },
 
     { id: 'nightlife', visual: '🌃',
-      headline: { en: 'Miami nightlife', es: 'Vida nocturna en Miami', pt: 'Vida noturna em Miami', fr: 'La vie nocturne de Miami' },
-      sub:      { en: 'Bars, clubs & late-night spots — the night is still young', es: 'Bares, clubs y lugares nocturnos — la noche aún es joven', pt: 'Bares, baladas e locais noturnos — a noite ainda é jovem', fr: 'Bars, clubs et sorties nocturnes — la nuit est encore jeune' },
+      headline: { en: 'South Florida nightlife', es: 'Vida nocturna del sur de Florida', pt: 'Vida noturna do sul da Flórida', fr: 'Vie nocturne du sud de la Floride' },
+      sub:      { en: 'Bars, clubs & late-night spots from the beach to Broward', es: 'Bares, clubs y locales nocturnos, de la playa a Broward', pt: 'Bares, baladas e locais noturnos, da praia a Broward', fr: 'Bars, clubs et lieux nocturnes, de la plage à Broward' },
       action: () => { switchTab('guide'); setFilter('nightlife'); } },
 
     { id: 'attractions', visual: '🏛',
-      headline: { en: 'Top Miami attractions', es: 'Las mejores atracciones de Miami', pt: 'Principais atrações de Miami', fr: 'Les meilleures attractions de Miami' },
-      sub:      { en: 'Wynwood Walls, South Beach & more', es: 'Wynwood Walls, South Beach y más', pt: 'Wynwood Walls, South Beach e muito mais', fr: 'Wynwood Walls, South Beach et bien plus' },
+      headline: { en: 'South Florida attractions', es: 'Atracciones del sur de Florida', pt: 'Atrações do sul da Flórida', fr: 'Attractions du sud de la Floride' },
+      sub:      { en: 'Wynwood Walls, South Beach, the Everglades & more', es: 'Wynwood Walls, South Beach, los Everglades y más', pt: 'Wynwood Walls, South Beach, os Everglades e muito mais', fr: 'Wynwood Walls, South Beach, les Everglades et bien plus' },
       action: () => { switchTab('guide'); setFilter('attraction'); } },
 
     { id: 'gems', visual: '💎',
@@ -3722,6 +3727,16 @@ function haversine(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 }
 
+// Color tier for a distance badge — green (near) / gold (mid) / red (far).
+// Coverage spans South Miami up to Broward (~25mi), so passengers can see at a
+// glance which spots are close vs a real drive. See distance-badge CSS below.
+function distClass(mi) {
+  if (mi == null) return '';
+  if (mi <= 6)  return 'dist-near';
+  if (mi <= 12) return 'dist-mid';
+  return 'dist-far';
+}
+
 // ════════════════════════════════════════════════════════════
 // GUIDE RENDER
 // ════════════════════════════════════════════════════════════
@@ -3883,7 +3898,7 @@ function goHomeView() {
 // Hero card HTML builder
 function buildHeroHTML(v) {
   const distStr = (userLat && v._dist !== undefined)
-    ? `<span class="gp-hero-dist"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles')||'mi'}</span>` : '';
+    ? `<span class="gp-hero-dist ${distClass(v._dist)}"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles')||'mi'}</span>` : '';
   const priceStr = v.price === 'Free'
     ? `<span style="color:var(--teal);font-weight:600">${t('guide.free')||'Free'}</span>`
     : (v.price || '');
@@ -3916,7 +3931,7 @@ function buildHeroHTML(v) {
 // Mini card HTML builder
 function buildMiniHTML(v) {
   const distStr = (userLat && v._dist !== undefined)
-    ? `<span class="gp-mini-dist"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles')||'mi'}</span>` : '';
+    ? `<span class="gp-mini-dist ${distClass(v._dist)}"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles')||'mi'}</span>` : '';
   const photoBg = v.photo ? `<img src="${v.photo}" alt="">` : '';
   const pickBadge = v.abdullahsPick ? `<div class="gp-mini-pickbadge"><i class="ti ti-star-filled"></i></div>` : '';
   const priceStr = v.price === 'Free' ? (t('guide.free')||'Free') : (v.price || '');
@@ -3973,7 +3988,7 @@ function openVenueSheet(venueId) {
   let distHTML = '';
   if (userLat && v.lat) {
     const d = haversine(userLat, userLng, v.lat, v.lng);
-    distHTML = `<span class="vs-dist"><i class="ti ti-map-pin"></i>${d.toFixed(1)} ${t('guide.miles')||'mi'}</span>`;
+    distHTML = `<span class="vs-dist ${distClass(d)}"><i class="ti ti-map-pin"></i>${d.toFixed(1)} ${t('guide.miles')||'mi'}</span>`;
   }
   const priceStr = v.price === 'Free'
     ? `<span style="color:var(--teal);font-weight:600">${t('guide.free')||'Free'}</span>`
@@ -4019,7 +4034,7 @@ function buildVenueCard(v) {
   card.className = 'venue-card' + (v.featured ? ' featured' : '') + (v.abdullahsPick ? ' pick' : '');
 
   const distStr = (userLat && v._dist !== undefined)
-    ? `<span class="venue-dist"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles') || 'mi'}</span>`
+    ? `<span class="venue-dist ${distClass(v._dist)}"><i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles') || 'mi'}</span>`
     : '';
 
   const featBadge = v.sponsored

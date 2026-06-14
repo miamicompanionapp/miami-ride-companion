@@ -195,3 +195,63 @@ test.describe('Index units: venue sheet guards', { tag: ['@index', '@unit'] }, (
     expect(await page.evaluate(() => currentVenueId)).toBeNull();
   });
 });
+
+test.describe('Index units: distance color tiers', { tag: ['@index', '@unit'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof distClass === 'function');
+  });
+
+  // Coverage spans South Miami → Broward, so badges are colored green (near) /
+  // gold (mid) / red (far). Thresholds: ≤6 near, ≤12 mid, >12 far. Guards the
+  // boundaries so a tweak to the cutoffs is a deliberate, visible change.
+  test('distClass: green/gold/red by mileage, boundaries inclusive on the low side', async ({ page }) => {
+    const out = await page.evaluate(() => [
+      distClass(0), distClass(6), distClass(6.01),
+      distClass(12), distClass(12.01), distClass(25),
+    ]);
+    expect(out).toEqual([
+      'dist-near', 'dist-near', 'dist-mid',
+      'dist-mid', 'dist-far', 'dist-far',
+    ]);
+  });
+
+  test('@negative distClass: empty string when distance is null/undefined', async ({ page }) => {
+    const out = await page.evaluate(() => [distClass(null), distClass(undefined)]);
+    expect(out).toEqual(['', '']);
+  });
+});
+
+test.describe('Index units: attractor copy honesty', { tag: ['@index', '@unit', '@i18n'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof buildContentCards === 'function' && !!CONTENT.guide);
+  });
+
+  // The venue pool reaches well beyond Miami (nightlife → Fort Lauderdale,
+  // attractions → the Everglades), so those two cards must NOT promise "Miami"
+  // in any language — a passenger took the literal "Miami" label as a broken
+  // promise. Regional framing only. (Events/weather/trivia legitimately stay
+  // Miami and are intentionally excluded.)
+  test('nightlife & attractions cards never say "Miami" in any language', async ({ page }) => {
+    const offenders = await page.evaluate(() => {
+      const cards = buildContentCards().filter((c) => c.id === 'nightlife' || c.id === 'attractions');
+      const hits = [];
+      for (const c of cards) {
+        for (const lang of ['en', 'es', 'pt', 'fr']) {
+          if (/miami/i.test(c.headline[lang] || '')) hits.push(`${c.id}.headline.${lang}`);
+          if (/miami/i.test(c.sub[lang] || ''))      hits.push(`${c.id}.sub.${lang}`);
+        }
+      }
+      return hits;
+    });
+    expect(offenders).toEqual([]);
+  });
+
+  test('nightlife card carries the South Florida framing in English', async ({ page }) => {
+    const headline = await page.evaluate(
+      () => buildContentCards().find((c) => c.id === 'nightlife').headline.en
+    );
+    expect(headline).toBe('South Florida nightlife');
+  });
+});
