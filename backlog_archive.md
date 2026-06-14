@@ -7,6 +7,24 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Full venue image coverage — 45 images placed, 3 closed venues removed  *(DONE 2026-06-14)*
+
+All 54 venues audited for image coverage. Images were found, staged, reviewed, compressed, and placed.
+
+**What was done:**
+- Found images for all 49 venues that were missing photos (4 already had local files, 1 had an external URL)
+- Sources: Timeout Miami, miamiandbeaches.com, visitlauderdale.com, official venue sites, Cloudflare/Squarespace CDNs
+- 4 oversized files compressed with sharp (mozjpeg, max 1200px wide): `joey-aventura` 6.4MB→182KB, `r-house-wynwood` 3.3MB→376KB, `medium-cool` 2.7MB→146KB, `timo-restaurant` 2.2MB→87KB
+- 45 image files copied to `public/images/venues/`
+- All photo fields in `content.json → guide.venues[*].photo` updated
+
+**3 closed venues removed from content.json:**
+- v004 Gramps — closed May 2026
+- v048 Sugarcane Raw Bar Grill — closed May 2026
+- v050 Beaker & Gray — closed December 2025
+
+Venue count: 54 → 51. SW bumped to v1.38.0.
+
 ### [X] Honest regional framing + color-coded distance badges  *(DONE 2026-06-14)*
 
 A passenger riding near Kendall tapped the "Miami nightlife" attractor and reacted that the venues "are not from Miami, these are too far" — because the nightlife list actually spans South Beach → **Hollywood (DAER)** → **Fort Lauderdale (Original Fat Cat's, ~25 mi)**. The "Miami" label was over-promising the coverage area, and distance was effectively invisible.
