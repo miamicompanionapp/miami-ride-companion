@@ -1,3 +1,434 @@
 {
-  "weeks": []
+  "app": "Miami Ride Companion",
+  "exportedAt": "2026-06-14T07:53:29.250Z",
+  "cycles": 259,
+  "summary": {
+    "sessions": 6,
+    "engagedSessions": 2,
+    "cycles": 259,
+    "engagementPct": 2,
+    "avgDuration": 82,
+    "qrTaps": 0,
+    "qrBreakdown": [],
+    "heroQr": 0,
+    "tabCounts": {
+      "City Guide": 1,
+      "Weather": 0,
+      "Games": 2,
+      "Driver": 1
+    },
+    "langCounts": {
+      "en": 6
+    },
+    "topVenues": [
+      {
+        "id": "v023",
+        "name": "Love Life Cafe",
+        "taps": 2
+      },
+      {
+        "id": "v022",
+        "name": "Miami Botanical Garden",
+        "taps": 1
+      },
+      {
+        "id": "v017",
+        "name": "Original Fat Cat's",
+        "taps": 1
+      }
+    ],
+    "entryPoints": [
+      [
+        "feedback_rating_5",
+        2
+      ],
+      [
+        "Games",
+        1
+      ],
+      [
+        "Miami Botanical Garden",
+        1
+      ],
+      [
+        "City Guide",
+        1
+      ],
+      [
+        "Driver page",
+        1
+      ]
+    ],
+    "games": [
+      {
+        "type": "trivia",
+        "label": "Trivia",
+        "opens": 1,
+        "plays": 1,
+        "abandoned": 0
+      }
+    ],
+    "driver": {
+      "pets": {
+        "nora": 1,
+        "mocha": 2,
+        "chico": 4,
+        "chico-jr-": 1
+      },
+      "photo": 0,
+      "qrThumbtack": 0,
+      "qrPhone": 0
+    },
+    "byDay": [
+      [
+        "2026-06-14",
+        3
+      ],
+      [
+        "2026-06-13",
+        3
+      ]
+    ],
+    "fb": {
+      "total": 2,
+      "completed": 2,
+      "avgRating": 5,
+      "ratingDist": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 2
+      },
+      "topChips": [],
+      "recentComments": []
+    }
+  },
+  "sessions": [
+    {
+      "startTime": "2026-06-13T22:22:56.888Z",
+      "endTime": "2026-06-13T22:23:58.896Z",
+      "day": "2026-06-13",
+      "duration": 62,
+      "taps": {
+        "tab_games": 1
+      },
+      "tapTotal": 1,
+      "firstTap": "tab_games",
+      "lang": "en",
+      "endType": "inactivity",
+      "id": 1091
+    },
+    {
+      "startTime": "2026-06-13T22:33:13.634Z",
+      "endTime": "2026-06-13T22:34:21.657Z",
+      "day": "2026-06-13",
+      "duration": 68,
+      "taps": {
+        "venue_v022": 1,
+        "venue_sheet_v022": 1
+      },
+      "tapTotal": 2,
+      "firstTap": "venue_v022",
+      "lang": "en",
+      "endType": "inactivity",
+      "id": 1092
+    },
+    {
+      "startTime": "2026-06-13T22:38:28.713Z",
+      "endTime": "2026-06-13T22:39:38.995Z",
+      "day": "2026-06-13",
+      "duration": 70,
+      "taps": {
+        "tab_guide": 1,
+        "filter_nightlife": 1,
+        "venue_v017": 1,
+        "venue_sheet_v017": 1,
+        "filter_featured": 1,
+        "venue_v023": 1,
+        "venue_sheet_v023": 1
+      },
+      "tapTotal": 7,
+      "firstTap": "tab_guide",
+      "lang": "en",
+      "endType": "inactivity",
+      "id": 1093
+    },
+    {
+      "startTime": "2026-06-14T04:46:17.100Z",
+      "endTime": "2026-06-14T04:47:29.922Z",
+      "day": "2026-06-14",
+      "duration": 73,
+      "taps": {
+        "feedback_rating_5": 1
+      },
+      "tapTotal": 1,
+      "firstTap": "feedback_rating_5",
+      "lang": "en",
+      "endType": "inactivity",
+      "id": 1094
+    },
+    {
+      "startTime": "2026-06-14T04:49:33.255Z",
+      "endTime": "2026-06-14T04:50:46.073Z",
+      "day": "2026-06-14",
+      "duration": 73,
+      "taps": {
+        "feedback_rating_5": 1
+      },
+      "tapTotal": 1,
+      "firstTap": "feedback_rating_5",
+      "lang": "en",
+      "endType": "inactivity",
+      "id": 1095
+    },
+    {
+      "startTime": "2026-06-14T04:59:33.230Z",
+      "endTime": "2026-06-14T05:01:58.542Z",
+      "day": "2026-06-14",
+      "duration": 145,
+      "taps": {
+        "tab_driver": 1,
+        "driver_pet_nora": 1,
+        "driver_pet_mocha": 2,
+        "driver_pet_chico": 4,
+        "driver_pet_chico-jr-": 1
+      },
+      "tapTotal": 9,
+      "firstTap": "tab_driver",
+      "lang": "en",
+      "endType": "inactivity",
+      "id": 1096,
+      "_exclude": "driver_demo"
+    }
+  ],
+  "taps": [
+    {
+      "key": "tab_games",
+      "time": 1781389376888,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2447
+    },
+    {
+      "key": "venue_v022",
+      "time": 1781389993634,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2448
+    },
+    {
+      "key": "venue_sheet_v022",
+      "time": 1781389993634,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2449
+    },
+    {
+      "key": "attractor_nightlife",
+      "time": 1781390308711,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2450
+    },
+    {
+      "key": "tab_guide",
+      "time": 1781390308714,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2451
+    },
+    {
+      "key": "filter_nightlife",
+      "time": 1781390308720,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2452
+    },
+    {
+      "key": "venue_v017",
+      "time": 1781390309124,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2453
+    },
+    {
+      "key": "venue_sheet_v017",
+      "time": 1781390309125,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2454
+    },
+    {
+      "key": "filter_featured",
+      "time": 1781390313872,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2455
+    },
+    {
+      "key": "venue_v023",
+      "time": 1781390316983,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2456
+    },
+    {
+      "key": "venue_sheet_v023",
+      "time": 1781390316983,
+      "day": "2026-06-13",
+      "lang": "en",
+      "id": 2457
+    },
+    {
+      "key": "feedback_rating_5",
+      "time": 1781412377101,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2458
+    },
+    {
+      "key": "feedback_rating_5",
+      "time": 1781412573255,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2459
+    },
+    {
+      "key": "tab_driver",
+      "time": 1781413173230,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2460,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "driver_pet_nora",
+      "time": 1781413175393,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2461,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "driver_pet_mocha",
+      "time": 1781413177908,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2462,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "driver_pet_chico",
+      "time": 1781413192328,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2463,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "driver_pet_chico",
+      "time": 1781413211840,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2464,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "driver_pet_chico-jr-",
+      "time": 1781413213498,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2465,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "driver_pet_mocha",
+      "time": 1781413219533,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2466,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "driver_pet_chico",
+      "time": 1781413222430,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2467,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "driver_pet_chico",
+      "time": 1781413250189,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2468,
+      "_exclude": "driver_demo"
+    },
+    {
+      "key": "venue_v023",
+      "time": 1781413570071,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2469
+    },
+    {
+      "key": "venue_sheet_v023",
+      "time": 1781413570071,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2470
+    },
+    {
+      "key": "filter_picks",
+      "time": 1781413591992,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2471
+    },
+    {
+      "key": "tab_games",
+      "time": 1781413603709,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2472
+    },
+    {
+      "key": "game_open_trivia",
+      "time": 1781413606792,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2473
+    },
+    {
+      "key": "game_trivia_answer",
+      "time": 1781413616901,
+      "day": "2026-06-14",
+      "lang": "en",
+      "id": 2474
+    }
+  ],
+  "feedback": [
+    {
+      "ts": "2026-06-14T04:46:17.101Z",
+      "day": "2026-06-14",
+      "rating": 5,
+      "chips": [],
+      "text": "",
+      "partial": false,
+      "lang": "en",
+      "id": 5
+    },
+    {
+      "ts": "2026-06-14T04:49:33.256Z",
+      "day": "2026-06-14",
+      "rating": 5,
+      "chips": [],
+      "text": "",
+      "partial": false,
+      "lang": "en",
+      "id": 6
+    }
+  ]
 }
