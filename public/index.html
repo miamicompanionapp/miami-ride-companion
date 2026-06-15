@@ -2867,6 +2867,12 @@ function buildContentCards() {
       sub:      { en: 'Who knows the most useless facts? Find out! 🏆', es: '¿Quién sabe los datos más inútiles? ¡Descúbrelo! 🏆', pt: 'Quem sabe os fatos mais inúteis? Descubra! 🏆', fr: 'Qui connaît les faits les plus inutiles? Découvrez-le! 🏆' },
       action: () => openGame('buzzer') },
 
+    { id: 'c4',
+      visualHtml: `<div class="att-players"><span class="att-p1">🔴</span><span style="font-size:32px">🟡🔴🟡<br>🔴🟡🔴</span><span class="att-p2">🟡</span></div>`,
+      headline: { en: 'Play Connect Four!', es: '¡Juega Conecta Cuatro!', pt: 'Jogue Conecte Quatro!', fr: 'Jouez à Puissance 4!' },
+      sub:      { en: 'Drop discs, connect 4 in a row — challenge your fellow passenger! 🔴🟡', es: 'Deja caer fichas y conecta 4 en fila — ¡reta a tu compañero! 🔴🟡', pt: 'Solte discos e conecte 4 em linha — desafie seu companheiro! 🔴🟡', fr: 'Faites tomber des jetons, alignez 4 — défiez votre voisin! 🔴🟡' },
+      action: () => openGame('c4') },
+
     { id: 'spotify', visual: '🎵',
       headline: { en: 'Want to hear a song?', es: '¿Quieres escuchar una canción?', pt: 'Quer ouvir uma música?', fr: 'Vous voulez écouter une chanson?' },
       sub:      { en: "Tell your driver — I have Spotify and I'm taking requests! 🎶", es: '¡Dile a tu conductor — tengo Spotify y acepto solicitudes! 🎶', pt: 'Fale com seu motorista — tenho Spotify e aceito pedidos! 🎶', fr: "Dites-le à votre chauffeur — j'ai Spotify et j'accepte les demandes! 🎶" },

@@ -50,6 +50,21 @@ A passenger riding near Kendall tapped the "Miami nightlife" attractor and react
 - Thresholds 6/12 mi are a first guess at "near vs a real drive" for a typical ride; revisit if rides cluster tighter (e.g. Brickell↔Wynwood) — change is centralized in `distClass()`.
 - Weather still fetches a fixed Miami location; a passenger in Broward sees Miami weather. Out of scope here, noted as a possible future item.
 
+### [X] #7 — iPad real-device test  *(DONE 2026-06-15)*
+
+Tested the full redesign on the actual iPad in the car. App is stable and passengers can use it comfortably. Deco Dusk theme is readable, tap targets are good. No regressions found.
+
+### [X] #34 — BUG: driver bio photo cropped (shoulders cut off)  *(DONE 2026-06-15)*
+
+Appeared misaligned on desktop (`.dp-bio-photo img` uses `object-fit:cover; object-position:center 22%`), but looks correct on the real iPad. No code change needed — desktop rendering was a non-issue.
+
+### [X] #41 — Editor PIN login back button  *(DONE, confirmed 2026-06-15)*
+
+Added a "← Back to passenger view" link to the editor PIN login screen so drivers can exit without unlocking.
+
+- `<a href="/">← Back to passenger view</a>` link below the Unlock button in the `.auth-box`.
+- No JS needed — plain anchor navigates back to index.html.
+
 ### [X] Attractor backdrop dismiss — tap outside card dismisses without redirecting  *(DONE 2026-06-13)*
 
 Changed attractor overlay tap behavior so tapping the dark backdrop (outside the card) only dismisses the overlay, while tapping the card itself still fires the action (tab switch, game open, etc.).

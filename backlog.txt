@@ -19,28 +19,24 @@ WORKING POLICY
   RSS refetch and Claude auto-translate require `npm run dev` (Wrangler).
 
 
-NEXT UP — open items, ranked  (updated 2026-06-11)
+NEXT UP — open items, ranked  (updated 2026-06-15)
 ---------------------------------------------------
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
-  1. #7   Test the full redesign on the real iPad
-  2. #40  BUG: engagement inciter tap outside box navigates instead of closing
-  3. #34  BUG: driver bio photo cropped (shoulders cut)
-  4. #36  BUG: landing images blink on every GPS re-render in a moving car
-  5. #41  Editor PIN login — add "back" button
-  6. #42  Editor publish — auto-increment SW cache version
-  7. #43  Thanks/inactivity screen — bilingual EN + ES boxes
-  8. #44  Game leaderboards — best scores with seeded placeholders
-  9. #30  Multiplayer games — e) Dots & Boxes, f) tug-of-war, bonus finger-picker
- 10. #45  Wordle-style game (Miami-themed word list)
- 11. #46  Spotify song-request notice for passengers
- 12. #47  All games fully translated (audit + fill gaps)
- 13. #48  Rewards / raffle system (sponsored check-in + easter egg variant)
- 14. #49  "My other apps" section in driver dashboard
- 15. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
- 16. #17  Events auto-refresh via Cloudflare Cron (deferred)
- 17. #50  Ticketmaster — surface high-profile events buried by MAX_EVENTS cap
+  1. #36  BUG: landing images blink on every GPS re-render in a moving car
+  2. #42  Editor publish — auto-increment SW cache version
+  3. #43  Thanks/inactivity screen — bilingual EN + ES boxes
+  4. #44  Game leaderboards — best scores with seeded placeholders
+  5. #30  Multiplayer games — e) Dots & Boxes, f) tug-of-war, bonus finger-picker
+  6. #45  Wordle-style game (Miami-themed word list)
+  7. #46  Spotify song-request notice for passengers
+  8. #47  All games fully translated (audit + fill gaps)
+  9. #48  Rewards / raffle system (sponsored check-in + easter egg variant)
+ 10. #49  "My other apps" section in driver dashboard
+ 11. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
+ 12. #17  Events auto-refresh via Cloudflare Cron (deferred)
+ 13. #50  Ticketmaster — surface high-profile events buried by MAX_EVENTS cap
  18. #29  Games i18n — Word Puzzle (a) still pending; content.json migration (c) future
 
 
@@ -88,15 +84,9 @@ filesystem; outbound calls (RSS feeds, Claude API) go from your machine.
 OPEN ITEMS
 ----------
 
-[ ] 7. Test the redesign on the actual iPad.
-       - Only after all features ready (batch one push to prod).
-       - For local-network preview without push:
-             npm run dev:lan
-         then iPad Safari → http://<laptop-LAN-IP>:8788/
-       - Caveat: SW won't register over plain HTTP on a LAN IP (only localhost or
-         HTTPS). Layout/UX testing works; offline/PWA install testing needs prod.
-       - Key things to verify: Deco Dusk theme readability in bright car, dark-screen
-         glare; tap targets; bio photo crop (#34); image blink (#36).
+[X] 7. Test the redesign on the actual iPad.
+       - DONE (confirmed 2026-06-15): tested on real iPad, app is stable and usable
+         by passengers. Deco Dusk theme readable, tap targets good.
 
 [ ] 17. Events auto-refresh (Cloudflare Cron) — FUTURE ENHANCEMENT.
        - Once the editor-triggered Ticketmaster flow is trusted, add a Cloudflare
@@ -137,13 +127,9 @@ OPEN ITEMS
         - SKIP Battleship-style hidden-info games — need a private screen.
         - Keep game content/logic in index.html (storage decision, see #29c).
 
-[ ] 34. BUG: driver bio photo is cropped — shoulders cut off.
-        - index.html .dp-bio-photo img uses object-fit:cover; object-position:
-          center 22%. Cover fills the tall narrow box and crops the bottom; the
-          22% bias keeps the face high, worsening the shoulder crop.
-        - Fix: lower object-position (e.g. center 40-50%) or switch to
-          object-fit:contain (whole photo, adds gradient margins). 1-line change
-          but needs on-device eyeball against the real photo — don't tune blind.
+[X] 34. BUG: driver bio photo is cropped — shoulders cut off.
+        - DONE (confirmed 2026-06-15): looked misaligned on desktop but looks
+          fine on the real iPad. No code change needed.
 
 [ ] 36. BUG: landing images blink/reload on GPS re-render (moving car).
         - Root cause: startGPS() uses watchPosition({enableHighAccuracy:true,
@@ -160,15 +146,13 @@ OPEN ITEMS
 
 [ ] 39. Live weather fetch in index.html — DONE 2026-06-11 (see archive).
 
-[ ] 40. BUG: engagement inciter — tap outside box should dismiss, not navigate.
-        - Current behavior: tapping anywhere outside the attractor box (including the
-          backdrop) navigates to the target tab/action.
-        - Correct behavior: tap the box → navigate; tap outside the box → close/dismiss.
-        - Fix: add a backdrop click handler that stops propagation + dismisses only.
+[X] 40. BUG: engagement inciter — tap outside box should dismiss, not navigate.
+        - DONE (confirmed 2026-06-15): attractor-overlay has onclick="onAttractorBackdropTap()"
+          (dismiss only); card has event.stopPropagation() + onAttractorTap() (navigate).
 
-[ ] 41. Editor PIN login — add "back" button.
-        - The PIN entry screen has no way to go back. Add a small "← Back" link that
-          closes the login overlay and returns to the passenger view.
+[X] 41. Editor PIN login — add "back" button.
+        - DONE (confirmed 2026-06-15): editor.html line 374 has "← Back to passenger view"
+          as an <a href="/"> link below the Unlock button.
 
 [ ] 42. Editor publish — auto-increment SW cache version.
         - When the editor publishes (commits content.json via GitHub API), also commit
