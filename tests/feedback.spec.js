@@ -362,9 +362,10 @@ test.describe('Ride Feedback', { tag: ['@index', '@feedback'] }, () => {
   });
 
   test('analytics feedback summary reflects avg rating correctly', async ({ page }) => {
-    // Submit two known ratings
+    // Submit two known ratings: 5 saves immediately; 3 opens the modal so we submit it
     await page.evaluate(() => onFeedbackEmoji(5));
     await page.evaluate(() => onFeedbackEmoji(3));
+    await page.evaluate(() => submitFeedback());
     await page.waitForTimeout(150);
     await page.evaluate(() => openAnalyticsOverlay());
     const summary = await page.locator('#anl-feedback-summary').textContent();
