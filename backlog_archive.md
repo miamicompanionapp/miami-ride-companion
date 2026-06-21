@@ -78,6 +78,37 @@ Changed attractor overlay tap behavior so tapping the dark backdrop (outside the
 
 **Why:** Passenger mid-game (e.g. Trivia) would tap to dismiss the attractor and accidentally get redirected away from the game.
 
+### [X] Handyman attractor card + card size bump + language sidebar pulse  *(DONE 2026-06-21, SW v1.42.0)*
+
+Three improvements shipped together based on analytics review (Jun 21 export) and passenger observation (Portuguese passengers not noticing language selection).
+
+**Handyman attractor card**
+- New card `id: 'handyman'` added to `buildContentCards()` in `index.html`.
+- Visual: 🔧. Headline: "Need something repaired in South Florida?" Sub: "Your driver is also a handyman\n[service list] — tap for details". Line break implemented via `\n` in the sub string + `white-space: pre-line` on `.attractor-sub`.
+- Action: `switchTab('driver')` — opens the Driver tab where passengers see the handyman phone number and QR codes.
+- Fully translated EN/ES/PT/FR.
+- Motivation: analytics showed zero handyman QR taps across all sessions; the service info was invisible because nothing in the attractor rotation pointed to the Driver tab.
+
+**Attractor card size bump**
+- Card width: `460px → 560px` (`min(560px, 90vw)`)
+- Headline: `26px → 32px`
+- Sub text: `14px → 16px`
+- Visual emoji: `62px → 72px` (min-height `70px → 80px`)
+- Motivation: tablet is read from ~2 ft away at an angle; larger text is meaningfully more legible from the passenger seat.
+
+**Language sidebar pulse**
+- When `hideAttractor()` fires (every time the attractor overlay is dismissed), `.lang-section` in the sidebar gets the `pulsing` class: a teal glow that pulses 4× (~900ms each) then stops.
+- CSS: `@keyframes lang-pulse` — alternates between transparent background and `rgba(25,160,168,0.15)` + teal box-shadow. Class removed via `animationend` listener with `{ once: true }`.
+- Force-reflow (`void ls.offsetWidth`) ensures re-adding the class always restarts the animation mid-session.
+- Motivation: Portuguese passengers in the car didn't notice the language switcher was in the sidebar. Option 2 (inline strip in guide header) was prototyped and reverted — it only appeared on the guide page and not weather/games. Pulse chosen because the sidebar is always visible across all tabs.
+
+**Tests added** (`tests/index-units.spec.js`, tag `@index @unit`):
+- Handyman card exists in pool with correct shape (visual 🔧, action is function, not feedback card)
+- Handyman card has non-empty headline + sub in all 4 languages
+- Handyman card sub.en contains `\n` for the line break
+- Handyman card action navigates to the driver tab
+- `hideAttractor()` adds `pulsing` class to `.lang-section`
+
 ### [X] Analytics disable toggle in Driver Menu  *(DONE 2026-06-13)*
 
 Added "Analytics: On/Off" toggle to the 5-tap secret Driver Menu so testing sessions don't contaminate real passenger data.

@@ -255,3 +255,72 @@ test.describe('Index units: attractor copy honesty', { tag: ['@index', '@unit', 
     expect(headline).toBe('South Florida nightlife');
   });
 });
+
+test.describe('Index units: handyman attractor card', { tag: ['@index', '@unit'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof buildContentCards === 'function' && !!CONTENT.guide);
+  });
+
+  test('handyman card exists in content pool with correct shape', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const card = buildContentCards().find(c => c.id === 'handyman');
+      return {
+        found:        !!card,
+        visual:       card?.visual,
+        hasAction:    typeof card?.action === 'function',
+        isFeedback:   card?.isFeedback ?? false,
+      };
+    });
+    expect(result.found).toBe(true);
+    expect(result.visual).toBe('🔧');
+    expect(result.hasAction).toBe(true);
+    expect(result.isFeedback).toBe(false);
+  });
+
+  test('handyman card has non-empty headline and sub in all 4 languages', async ({ page }) => {
+    const missing = await page.evaluate(() => {
+      const card = buildContentCards().find(c => c.id === 'handyman');
+      const gaps = [];
+      for (const lang of ['en', 'es', 'pt', 'fr']) {
+        if (!card?.headline?.[lang]) gaps.push(`headline.${lang}`);
+        if (!card?.sub?.[lang])      gaps.push(`sub.${lang}`);
+      }
+      return gaps;
+    });
+    expect(missing).toEqual([]);
+  });
+
+  test('handyman card sub contains a line break for the service list', async ({ page }) => {
+    const subEn = await page.evaluate(
+      () => buildContentCards().find(c => c.id === 'handyman').sub.en
+    );
+    expect(subEn).toContain('\n');
+  });
+
+  test('handyman card action navigates to the driver tab', async ({ page }) => {
+    await page.evaluate(() => {
+      // isBubbleVisible() guards switchTab('driver') — stub it so the tab switch lands
+      window._origBubbleVisible = window.isBubbleVisible;
+      window.isBubbleVisible = () => true;
+      buildContentCards().find(c => c.id === 'handyman').action();
+      window.isBubbleVisible = window._origBubbleVisible;
+    });
+    await expect(page.locator('#page-driver')).toHaveClass(/active/);
+  });
+});
+
+test.describe('Index units: lang-section pulse on attractor dismiss', { tag: ['@index', '@unit'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof hideAttractor === 'function');
+  });
+
+  test('hideAttractor adds pulsing class to .lang-section', async ({ page }) => {
+    await page.evaluate(() => {
+      document.getElementById('attractor-overlay').classList.add('visible');
+      hideAttractor();
+    });
+    await expect(page.locator('.lang-section')).toHaveClass(/pulsing/);
+  });
+});
