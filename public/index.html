@@ -134,6 +134,12 @@
     .lang-btn.active { background: var(--teal); color: white; }
     .lang-btn:active { opacity: 0.8; }
 
+    @keyframes lang-pulse {
+      0%, 100% { background: transparent; box-shadow: none; }
+      50% { background: rgba(25,160,168,0.15); box-shadow: 0 0 0 1px rgba(25,160,168,0.45), inset 0 0 12px rgba(25,160,168,0.08); }
+    }
+    .lang-section.pulsing { border-radius: 10px; animation: lang-pulse 900ms ease-in-out 4; }
+
     .sidebar-footer { padding: 12px 16px; border-top: 0.5px solid rgba(255,255,255,0.08); }
     .tip-text {
       font-size: 12px; color: rgba(255,255,255,0.35);
@@ -849,15 +855,15 @@
       border: 1px solid rgba(201,168,76,0.25);
       border-radius: 26px;
       padding: 44px 40px 36px;
-      width: min(460px, 88vw);
+      width: min(560px, 90vw);
       text-align: center;
       box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.08);
       transition: opacity 350ms ease;
     }
     .attractor-card.fading { opacity: 0; }
     .attractor-visual {
-      font-size: 62px; line-height: 1;
-      margin-bottom: 18px; min-height: 70px;
+      font-size: 72px; line-height: 1;
+      margin-bottom: 18px; min-height: 80px;
       display: flex; align-items: center; justify-content: center;
     }
     /* Game card two-player visual dots */
@@ -881,12 +887,13 @@
       font-size: 13px;
     }
     .attractor-headline {
-      font-family: var(--font-display); font-size: 26px;
+      font-family: var(--font-display); font-size: 32px;
       color: var(--heading); font-weight: 500;
       margin-bottom: 10px; line-height: 1.25;
     }
     .attractor-sub {
-      font-size: 14px; color: var(--muted); line-height: 1.55;
+      font-size: 16px; color: var(--muted); line-height: 1.55;
+      white-space: pre-line;
     }
     .attractor-hint {
       margin-top: 30px; font-size: 11px;
@@ -1820,10 +1827,10 @@
       <div class="lang-section">
         <div class="lang-label" data-key="app.language">Language</div>
         <div class="lang-grid">
-          <button class="lang-btn active" onclick="setLang('en')">🇺🇸 EN</button>
-          <button class="lang-btn" onclick="setLang('es')">🇪🇸 ES</button>
-          <button class="lang-btn" onclick="setLang('pt')">🇧🇷 PT</button>
-          <button class="lang-btn" onclick="setLang('fr')">🇫🇷 FR</button>
+          <button class="lang-btn active" data-lang="en" onclick="setLang('en')">🇺🇸 EN</button>
+          <button class="lang-btn" data-lang="es" onclick="setLang('es')">🇪🇸 ES</button>
+          <button class="lang-btn" data-lang="pt" onclick="setLang('pt')">🇧🇷 PT</button>
+          <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 FR</button>
         </div>
       </div>
 
@@ -2887,6 +2894,11 @@ function buildContentCards() {
       headline: { en: "How's your ride so far?", es: '¿Cómo va tu viaje hasta ahora?', pt: 'Como está seu passeio até agora?', fr: "Comment se passe votre trajet jusqu'ici?" },
       sub:      { en: 'Tap a face to let us know', es: 'Toca una cara para decirnos', pt: 'Toque um rosto para nos dizer', fr: 'Appuyez sur un visage pour nous dire' },
       action: null },
+
+    { id: 'handyman', visual: '🔧',
+      headline: { en: 'Need something repaired in South Florida?', es: '¿Necesitas algo reparado en el sur de Florida?', pt: 'Precisa de algo consertado no sul da Flórida?', fr: 'Besoin d\'une réparation dans le sud de la Floride?' },
+      sub:      { en: 'Your driver is also a handyman\nWall repair, fixture installment, assembly, furniture repair, electrical, plumbing and more — tap for details', es: 'Tu conductor también es técnico de mantenimiento\nReparación de paredes, accesorios, ensamblaje, muebles, electricidad, plomería y más — toca para más detalles', pt: 'Seu motorista também é faz-tudo\nReparo de paredes, acessórios, montagem, móveis, elétrica, encanamento e mais — toque para detalhes', fr: 'Votre chauffeur est aussi artisan\nRéparation de murs, accessoires, assemblage, meubles, électricité, plomberie et plus — appuyez pour les détails' },
+      action: () => switchTab('driver') },
   ];
 }
 
@@ -2964,6 +2976,13 @@ function hideAttractor() {
   attractorActive = false;
   const el = document.getElementById('attractor-overlay');
   if (el) el.classList.remove('visible');
+  const ls = document.querySelector('.lang-section');
+  if (ls) {
+    ls.classList.remove('pulsing');
+    void ls.offsetWidth; // force reflow so re-adding the class restarts animation
+    ls.classList.add('pulsing');
+    ls.addEventListener('animationend', () => ls.classList.remove('pulsing'), { once: true });
+  }
   clearInterval(attractorCardTimer);
   clearTimeout(attractorDoneTimer);
   attractorCardTimer = null;
@@ -3255,9 +3274,7 @@ function t(key) {
 function setLang(l) {
   lang = l;
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  const btns = document.querySelectorAll('.lang-btn');
-  const map = { en: 0, es: 1, pt: 2, fr: 3 };
-  btns[map[l]].classList.add('active');
+  document.querySelectorAll(`.lang-btn[data-lang="${l}"]`).forEach(b => b.classList.add('active'));
   applyStrings();
   applyGameStrings();
   renderGuide();
