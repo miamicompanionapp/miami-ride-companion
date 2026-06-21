@@ -2895,10 +2895,10 @@ function buildContentCards() {
       sub:      { en: 'Tap a face to let us know', es: 'Toca una cara para decirnos', pt: 'Toque um rosto para nos dizer', fr: 'Appuyez sur un visage pour nous dire' },
       action: null },
 
-    { id: 'handyman', visual: '🔧',
+    ...(isBubbleVisible() ? [{ id: 'handyman', visual: '🔧',
       headline: { en: 'Need something repaired in South Florida?', es: '¿Necesitas algo reparado en el sur de Florida?', pt: 'Precisa de algo consertado no sul da Flórida?', fr: 'Besoin d\'une réparation dans le sud de la Floride?' },
       sub:      { en: 'Your driver is also a handyman\nWall repair, fixture installment, assembly, furniture repair, electrical, plumbing and more — tap for details', es: 'Tu conductor también es técnico de mantenimiento\nReparación de paredes, accesorios, ensamblaje, muebles, electricidad, plomería y más — toca para más detalles', pt: 'Seu motorista também é faz-tudo\nReparo de paredes, acessórios, montagem, móveis, elétrica, encanamento e mais — toque para detalhes', fr: 'Votre chauffeur est aussi artisan\nRéparation de murs, accessoires, assemblage, meubles, électricité, plomberie et plus — appuyez pour les détails' },
-      action: () => switchTab('driver') },
+      action: () => switchTab('driver') }] : []),
   ];
 }
 

@@ -260,22 +260,29 @@ test.describe('Index units: handyman attractor card', { tag: ['@index', '@unit']
   test.beforeEach(async ({ page }) => {
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof buildContentCards === 'function' && !!CONTENT.guide);
+    // Make bubble visible by default so the handyman card appears in the pool
+    await page.evaluate(() => { window.isBubbleVisible = () => true; });
   });
 
-  test('handyman card exists in content pool with correct shape', async ({ page }) => {
+  test('handyman card exists in pool when bubble is visible, absent when hidden', async ({ page }) => {
     const result = await page.evaluate(() => {
-      const card = buildContentCards().find(c => c.id === 'handyman');
+      const orig = window.isBubbleVisible;
+      window.isBubbleVisible = () => true;
+      const cardVisible = buildContentCards().find(c => c.id === 'handyman');
+      window.isBubbleVisible = () => false;
+      const cardHidden = buildContentCards().find(c => c.id === 'handyman');
+      window.isBubbleVisible = orig;
       return {
-        found:        !!card,
-        visual:       card?.visual,
-        hasAction:    typeof card?.action === 'function',
-        isFeedback:   card?.isFeedback ?? false,
+        foundWhenVisible: !!cardVisible,
+        visual:           cardVisible?.visual,
+        hasAction:        typeof cardVisible?.action === 'function',
+        foundWhenHidden:  !!cardHidden,
       };
     });
-    expect(result.found).toBe(true);
+    expect(result.foundWhenVisible).toBe(true);
     expect(result.visual).toBe('🔧');
     expect(result.hasAction).toBe(true);
-    expect(result.isFeedback).toBe(false);
+    expect(result.foundWhenHidden).toBe(false);
   });
 
   test('handyman card has non-empty headline and sub in all 4 languages', async ({ page }) => {
