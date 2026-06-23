@@ -5545,7 +5545,15 @@ function checkWord() {
     renderWordLetters();
     setTimeout(newWord, 1800);
   } else {
-    fb.textContent = `❌ Not quite — ${wordCurrent.word.length} letters`;
+    const answer = wordCurrent.word;
+    let msg;
+    if (guess.length !== answer.length) {
+      msg = `❌ Not quite — ${answer.length} letters`;
+    } else {
+      const wrong = [...answer].filter((ch, i) => ch !== guess[i]).length;
+      msg = wrong === 1 ? '❌ So close — just 1 letter off!' : `❌ Not quite — ${wrong} letters off`;
+    }
+    fb.textContent = msg;
     fb.className = 'word-feedback show no';
   }
 }

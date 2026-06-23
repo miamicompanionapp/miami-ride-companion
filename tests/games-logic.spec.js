@@ -125,6 +125,43 @@ test.describe('Word puzzle', { tag: ['@games', '@unit'] }, () => {
     expect(res.fb).toContain('no');
   });
 
+  test('a guess with wrong length shows the letter count hint', async ({ page }) => {
+    const text = await page.evaluate(() => {
+      const word = WORD_LIST[0].word; // e.g. "SUNSCREEN"
+      document.getElementById('word-input').value = word.slice(0, -1); // one letter short
+      checkWord();
+      return document.getElementById('word-feedback').textContent;
+    });
+    expect(text).toContain(`${await page.evaluate(() => WORD_LIST[0].word.length)} letters`);
+  });
+
+  test('a same-length guess 1 letter off shows "just 1 letter off"', async ({ page }) => {
+    const text = await page.evaluate(() => {
+      const word = WORD_LIST[0].word;
+      // Flip the first character to something different
+      const close = (word[0] === 'A' ? 'B' : 'A') + word.slice(1);
+      document.getElementById('word-input').value = close;
+      checkWord();
+      return document.getElementById('word-feedback').textContent;
+    });
+    expect(text).toContain('1 letter off');
+  });
+
+  test('a same-length guess multiple letters off shows the count', async ({ page }) => {
+    const text = await page.evaluate(() => {
+      const word = WORD_LIST[0].word;
+      // Flip first two characters
+      const c0 = word[0] === 'A' ? 'B' : 'A';
+      const c1 = word[1] === 'A' ? 'B' : 'A';
+      const off2 = c0 + c1 + word.slice(2);
+      document.getElementById('word-input').value = off2;
+      checkWord();
+      return document.getElementById('word-feedback').textContent;
+    });
+    // Should say "X letters off" (not the length hint)
+    expect(text).toMatch(/\d+ letters off/);
+  });
+
   test('@negative an empty guess is a no-op (no feedback shown)', async ({ page }) => {
     const res = await page.evaluate(() => {
       const before = wordSolved;
