@@ -7,6 +7,36 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #17 Daily events + weather auto-refresh via GitHub Actions  *(DONE 2026-06-23)*
+
+Full pipeline runs every morning at 8 AM EDT with no manual steps.
+
+**What was built:**
+- `.github/workflows/daily-refresh.yml` — cron at `0 12 * * *` (8 AM EDT), also triggerable manually via workflow_dispatch
+- `scripts/daily-refresh.mjs` — pure Node.js orchestration script (no npm deps, uses built-in fetch)
+
+**Pipeline steps in order:**
+1. Load `public/content.json`
+2. Drop events with `date < today` (Miami timezone)
+3. Call deployed Worker's `/api/rss-fetch` → merge new events (dedupe by URL)
+4. Call deployed Worker's `/api/ticketmaster-fetch` → merge new events (dedupe by URL)
+5. Geocode new RSS events missing lat/lng via Nominatim (1 req/sec rate limit)
+6. AI review (Claude Haiku) — only newly fetched events rated keep/skip; pre-existing events not re-reviewed
+7. Drop "skip" events before writing
+8. Translate new events to ES/PT/FR in batches of 5 (Claude Haiku)
+9. Refresh weather snapshot from Open-Meteo (same URL/shape as the editor's fetch)
+10. Write `content.json`, commit, push → triggers `wrangler deploy` automatically
+
+**AI review prompt uses "outside South Florida (Homestead to Boca Raton)"** — same geography as the editor (updated 2026-06-23 to stop Fort Lauderdale/Davie being flagged as too far).
+
+**Failure handling:** each step is independently try/caught; a Claude outage skips review/translation but still writes updated events + weather.
+
+**Secrets required in GitHub repo settings:**
+- `ANTHROPIC_API_KEY` — Claude API key
+- `WORKER_URL` — deployed Worker base URL (e.g. `https://miami-ride-companion.metrekare.workers.dev`)
+
+---
+
 ### [X] Full venue image coverage — 45 images placed, 3 closed venues removed  *(DONE 2026-06-14)*
 
 All 54 venues audited for image coverage. Images were found, staged, reviewed, compressed, and placed.

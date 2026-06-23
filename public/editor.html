@@ -2216,7 +2216,7 @@ async function aiReviewAllEvents() {
     const result = await callClaude(
 `You are helping curate events for a Miami ride-share companion app. Passengers are tourists or locals on a short Lyft/Uber trip.
 
-For each event rate: "keep" (relevant, appealing, good for Miami visitors/locals) or "skip" (too niche, too far from Miami, low-interest for a general audience). Add one short reason, max 8 words.
+For each event rate: "keep" (relevant, appealing, good for Miami visitors/locals) or "skip" (too niche, outside South Florida (Homestead to Boca Raton), or low-interest for a general audience). Add one short reason, max 8 words.
 
 Return ONLY valid JSON — no markdown:
 { "<id>": { "verdict": "keep"|"skip", "reason": "..." }, ... }

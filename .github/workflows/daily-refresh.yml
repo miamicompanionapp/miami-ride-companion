@@ -1,0 +1,35 @@
+name: Daily Events & Weather Refresh
+
+on:
+  schedule:
+    # 8 AM EDT (UTC-4, Apr–Nov). Runs at 7 AM EST in winter — close enough.
+    - cron: '0 12 * * *'
+  workflow_dispatch: # allow manual trigger from the Actions tab
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit content.json back
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run daily refresh
+        run: node scripts/daily-refresh.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WORKER_URL: ${{ secrets.WORKER_URL }}
+
+      - name: Commit and push if content changed
+        run: |
+          git config user.name  "daily-refresh[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/content.json
+          git diff --staged --quiet && echo "No changes — skipping commit" && exit 0
+          git commit -m "Daily refresh $(date -u +%Y-%m-%d) — events + weather"
+          git push
