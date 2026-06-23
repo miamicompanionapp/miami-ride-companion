@@ -38,7 +38,7 @@ test.describe('Game translations', { tag: ['@games', '@i18n'] }, () => {
     await page.evaluate(() => { openGame('trivia'); triviaNext(); }); // start → show Q1 (EN)
     await page.evaluate(() => setLang('es'));
     const shown = await page.locator('#trivia-question').textContent();
-    const expected = await page.evaluate(() => `1. ${TRIVIA_QUESTIONS[0].q.es}`);
+    const expected = await page.evaluate(() => `1. ${triviaPool[0].q.es}`);
     expect(shown).toBe(expected);
     // Answering reveals the "next" button — it must be localized, not English.
     await page.locator('#trivia-opts .trivia-opt').first().click();
@@ -99,7 +99,7 @@ test.describe('Game translations', { tag: ['@games', '@i18n'] }, () => {
     await page.evaluate(() => { openGame('buzzer'); buzzStart(); buzzIn(0); clearBuzzTimer(); }); // P1 is answering
     await page.evaluate(() => setLang('pt'));
     const q = await page.locator('#buzz-question').textContent();
-    const expectedQ = await page.evaluate(() => `1. ${TRIVIA_QUESTIONS[0].q.pt}`);
+    const expectedQ = await page.evaluate(() => `1. ${TRIVIA_QUESTIONS[buzzQ].q.pt}`);
     expect(q).toBe(expectedQ);
     const fb = await page.locator('#buzz-feedback').textContent();
     const expectedFb = await page.evaluate(() => GAME_UI.buzzYourAnswer.pt.replace('{p}', GAME_UI.pgP1.pt));

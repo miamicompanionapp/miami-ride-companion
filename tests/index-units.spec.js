@@ -315,6 +315,31 @@ test.describe('Index units: handyman attractor card', { tag: ['@index', '@unit']
     });
     await expect(page.locator('#page-driver')).toHaveClass(/active/);
   });
+
+  test('handyman card is boosted: appears multiple times per cycle like feedback', async ({ page }) => {
+    // Page is fresh from beforeEach (attractorInCycle=0, attractorContentShuffled=[])
+    // Walk enough cards to span one full cycle then stop.
+    const counts = await page.evaluate(() => {
+      window.isBubbleVisible = () => true;
+      const cards = [];
+      // A cycle is 1 lang card + up to ~25 content cards — 40 is a safe upper bound
+      for (let i = 0; i < 40; i++) {
+        const c = getNextAttractorCard();
+        // attractorInCycle resets to 0 after every cycle; break when it wraps (i>0)
+        // We can't read the let variable directly, so detect a second lang card
+        if (i > 0 && (c.id === 'lang_es' || c.id === 'lang_pt' || c.id === 'lang_fr')) break;
+        cards.push(c.id);
+      }
+      return {
+        handyman: cards.filter(id => id === 'handyman').length,
+        feedback: cards.filter(id => id === 'feedback').length,
+        total: cards.length,
+      };
+    });
+    // Both boosted cards should appear more than once per cycle
+    expect(counts.handyman).toBeGreaterThan(1);
+    expect(counts.feedback).toBeGreaterThan(1);
+  });
 });
 
 test.describe('Index units: lang-section pulse on attractor dismiss', { tag: ['@index', '@unit'] }, () => {

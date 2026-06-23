@@ -2705,7 +2705,7 @@ let liveWeatherFetchedAt = 0;
 let liveWeatherPending = false;
 let spinCount = 0;
 let imgScore = 0, imgRound = 0, imgAnswered = false;
-let triviaScore = 0, triviaQ = 0, triviaAnswered = false;
+let triviaScore = 0, triviaQ = 0, triviaAnswered = false, triviaPool = [];
 let wordCurrent = null, wordHinted = [];
 let tapCount = 0, tapRunning = false, tapInterval = null;
 
@@ -2903,20 +2903,28 @@ function buildContentCards() {
 }
 
 // ── Rotation: first card = language (cycles L0→L1→L2), rest = shuffled content
-// Feedback is pulled out of the random pool and re-injected every 4 regular
-// cards so it appears ~3× per cycle instead of once in thirteen.
+// Feedback and handyman are pulled out of the random pool and re-injected every
+// 4 regular cards so each appears ~3× per cycle instead of once in thirteen.
 function getNextAttractorCard() {
   if (attractorInCycle === 0) {
     const all = buildContentCards();
     const feedbackCard = all.find(c => c.id === 'feedback');
-    const others = shuffle(all.filter(c => c.id !== 'feedback'));
+    const handymanCard = all.find(c => c.id === 'handyman');
+    const boosted = new Set(['feedback', 'handyman']);
+    const others = shuffle(all.filter(c => !boosted.has(c.id)));
     attractorContentShuffled = [];
     others.forEach((card, i) => {
       attractorContentShuffled.push(card);
-      if (feedbackCard && (i + 1) % 4 === 0) attractorContentShuffled.push(feedbackCard);
+      if ((i + 1) % 4 === 0) {
+        if (feedbackCard) attractorContentShuffled.push(feedbackCard);
+        if (handymanCard) attractorContentShuffled.push(handymanCard);
+      }
     });
     if (feedbackCard && attractorContentShuffled[attractorContentShuffled.length - 1] !== feedbackCard) {
       attractorContentShuffled.push(feedbackCard);
+    }
+    if (handymanCard && attractorContentShuffled[attractorContentShuffled.length - 1] !== handymanCard) {
+      attractorContentShuffled.push(handymanCard);
     }
   }
   let card;
@@ -5231,6 +5239,7 @@ function buzzRenderEnd() {
 // ── Trivia ────────────────────────────────────────────────
 // q/opts may be plain strings (proper nouns kept as-is) or {en,es,pt,fr}; gL() resolves them.
 const TRIVIA_QUESTIONS = [
+  // ── Miami ──────────────────────────────────────────────────────────────────
   { q:{ en:"What is Miami's famous beachside neighborhood?", es:"¿Cuál es el famoso barrio junto a la playa de Miami?", pt:"Qual é o famoso bairro à beira-mar de Miami?", fr:"Quel est le célèbre quartier en bord de mer de Miami ?" },
     opts:["North Shore","South Beach","East End","Key West"], a:1 },
   { q:{ en:"Which famous art fair is held in Miami Beach each December?", es:"¿Qué famosa feria de arte se celebra en Miami Beach cada diciembre?", pt:"Qual famosa feira de arte acontece em Miami Beach todo dezembro?", fr:"Quelle célèbre foire d'art se tient à Miami Beach chaque décembre ?" },
@@ -5250,13 +5259,57 @@ const TRIVIA_QUESTIONS = [
   { q:{ en:"What is the name of Miami's main performing arts center?", es:"¿Cómo se llama el principal centro de artes escénicas de Miami?", pt:"Qual é o nome do principal centro de artes cênicas de Miami?", fr:"Quel est le nom du principal centre des arts du spectacle de Miami ?" },
     opts:["Adrienne Arsht Center","Ziff Ballet Opera","Gusman Hall","Hard Rock Stadium"], a:0 },
   { q:{ en:"Miami is nicknamed 'The Magic City' — why?", es:"Miami es apodada 'La Ciudad Mágica' — ¿por qué?", pt:"Miami é apelidada de 'A Cidade Mágica' — por quê?", fr:"Miami est surnommée « la Ville magique » — pourquoi ?" },
-    opts:[ { en:"It has Disney World", es:"Tiene Disney World", pt:"Tem a Disney World", fr:"Elle a Disney World" }, { en:"It grew so fast it seemed like magic", es:"Creció tan rápido que parecía magia", pt:"Cresceu tão rápido que parecia mágica", fr:"Elle a grandi si vite que cela semblait magique" }, { en:"Its weather changes magically", es:"Su clima cambia mágicamente", pt:"Seu clima muda magicamente", fr:"Sa météo change comme par magie" }, { en:"Built by a magician", es:"Construida por un mago", pt:"Construída por um mágico", fr:"Construite par un magicien" } ], a:1 }
+    opts:[ { en:"It has Disney World", es:"Tiene Disney World", pt:"Tem a Disney World", fr:"Elle a Disney World" }, { en:"It grew so fast it seemed like magic", es:"Creció tan rápido que parecía magia", pt:"Cresceu tão rápido que parecia mágica", fr:"Elle a grandi si vite que cela semblait magique" }, { en:"Its weather changes magically", es:"Su clima cambia mágicamente", pt:"Seu clima muda magicamente", fr:"Sa météo change comme par magie" }, { en:"Built by a magician", es:"Construida por un mago", pt:"Construída por um mágico", fr:"Construite par un magicien" } ], a:1 },
+  // ── USA ────────────────────────────────────────────────────────────────────
+  { q:{ en:"What is the capital city of the United States?", es:"¿Cuál es la capital de los Estados Unidos?", pt:"Qual é a capital dos Estados Unidos?", fr:"Quelle est la capitale des États-Unis ?" },
+    opts:["New York","Los Angeles","Washington, D.C.","Chicago"], a:2 },
+  { q:{ en:"How many stars are on the US flag?", es:"¿Cuántas estrellas tiene la bandera de EE.UU.?", pt:"Quantas estrelas tem a bandeira dos EUA?", fr:"Combien d'étoiles y a-t-il sur le drapeau américain ?" },
+    opts:["48","50","52","54"], a:1 },
+  { q:{ en:"Which US state is nicknamed 'The Sunshine State'?", es:"¿Qué estado de EE.UU. tiene el apodo de 'Estado del Sol'?", pt:"Qual estado dos EUA tem o apelido de 'Estado do Sol'?", fr:"Quel État américain est surnommé « l'État du Soleil » ?" },
+    opts:["California","Texas","Florida","Hawaii"], a:2 },
+  { q:{ en:"In which US state is the Grand Canyon located?", es:"¿En qué estado de EE.UU. se encuentra el Gran Cañón?", pt:"Em qual estado dos EUA fica o Grand Canyon?", fr:"Dans quel État américain se trouve le Grand Canyon ?" },
+    opts:["Utah","Colorado","Nevada","Arizona"], a:3 },
+  { q:{ en:"Walt Disney World is located in which US state?", es:"¿En qué estado de EE.UU. está Walt Disney World?", pt:"Em qual estado dos EUA fica o Walt Disney World?", fr:"Dans quel État américain se trouve Walt Disney World ?" },
+    opts:["California","Georgia","Florida","Texas"], a:2 },
+  { q:{ en:"What year did astronauts first land on the Moon?", es:"¿En qué año llegaron por primera vez astronautas a la Luna?", pt:"Em que ano os astronautas pousaram na Lua pela primeira vez?", fr:"En quelle année des astronautes ont-ils marché sur la Lune pour la première fois ?" },
+    opts:["1965","1967","1969","1972"], a:2 },
+  { q:{ en:"NASA's Kennedy Space Center is in which state?", es:"¿En qué estado está el Centro Espacial Kennedy de la NASA?", pt:"O Centro Espacial Kennedy da NASA fica em qual estado?", fr:"Le Centre spatial Kennedy de la NASA se trouve dans quel État ?" },
+    opts:["Texas","Alabama","California","Florida"], a:3 },
+  { q:{ en:"Which city is nicknamed 'The Big Apple'?", es:"¿Qué ciudad tiene el apodo de 'La Gran Manzana'?", pt:"Qual cidade tem o apelido de 'A Grande Maçã'?", fr:"Quelle ville est surnommée « La Grande Pomme » ?" },
+    opts:["Los Angeles","Chicago","New York","Boston"], a:2 },
+  // ── Pop Culture ────────────────────────────────────────────────────────────
+  { q:{ en:"Which streaming service is home to 'Stranger Things'?", es:"¿En qué plataforma de streaming está 'Stranger Things'?", pt:"Em qual serviço de streaming fica 'Stranger Things'?", fr:"Sur quelle plateforme de streaming se trouve « Stranger Things » ?" },
+    opts:["Hulu","Disney+","Netflix","HBO Max"], a:2 },
+  { q:{ en:"Who plays Iron Man in the Marvel movies?", es:"¿Quién interpreta a Iron Man en las películas de Marvel?", pt:"Quem interpreta o Homem de Ferro nos filmes da Marvel?", fr:"Qui joue Iron Man dans les films Marvel ?" },
+    opts:["Chris Evans","Robert Downey Jr.","Chris Hemsworth","Mark Ruffalo"], a:1 },
+  { q:{ en:"Which singer is known as 'Queen Bey'?", es:"¿Qué cantante es conocida como 'Queen Bey'?", pt:"Qual cantora é conhecida como 'Queen Bey'?", fr:"Quelle chanteuse est connue sous le nom de « Queen Bey » ?" },
+    opts:["Rihanna","Beyoncé","Adele","Taylor Swift"], a:1 },
+  { q:{ en:"Who sang the hit song 'Shape of You'?", es:"¿Quién cantó el exitoso tema 'Shape of You'?", pt:"Quem cantou o hit 'Shape of You'?", fr:"Qui a chanté le tube « Shape of You » ?" },
+    opts:["Justin Bieber","Bruno Mars","Ed Sheeran","Harry Styles"], a:2 },
+  { q:{ en:"Which fast food chain is famous for the Big Mac?", es:"¿Qué cadena de comida rápida es famosa por el Big Mac?", pt:"Qual rede de fast food é famosa pelo Big Mac?", fr:"Quelle chaîne de restauration rapide est connue pour le Big Mac ?" },
+    opts:["Burger King","Wendy's","McDonald's","Five Guys"], a:2 },
+  // ── General Knowledge ──────────────────────────────────────────────────────
+  { q:{ en:"What is the largest ocean on Earth?", es:"¿Cuál es el océano más grande de la Tierra?", pt:"Qual é o maior oceano da Terra?", fr:"Quel est le plus grand océan de la Terre ?" },
+    opts:[ { en:"Atlantic Ocean", es:"Océano Atlántico", pt:"Oceano Atlântico", fr:"Océan Atlantique" }, { en:"Indian Ocean", es:"Océano Índico", pt:"Oceano Índico", fr:"Océan Indien" }, { en:"Arctic Ocean", es:"Océano Ártico", pt:"Oceano Ártico", fr:"Océan Arctique" }, { en:"Pacific Ocean", es:"Océano Pacífico", pt:"Oceano Pacífico", fr:"Océan Pacifique" } ], a:3 },
+  { q:{ en:"What is the fastest land animal?", es:"¿Cuál es el animal terrestre más rápido?", pt:"Qual é o animal terrestre mais rápido?", fr:"Quel est l'animal terrestre le plus rapide ?" },
+    opts:[ { en:"Lion", es:"León", pt:"Leão", fr:"Lion" }, { en:"Horse", es:"Caballo", pt:"Cavalo", fr:"Cheval" }, { en:"Cheetah", es:"Guepardo", pt:"Guepardo", fr:"Guépard" }, { en:"Greyhound", es:"Galgo", pt:"Galgo", fr:"Lévrier" } ], a:2 },
+  { q:{ en:"Which planet is closest to the Sun?", es:"¿Qué planeta está más cerca del Sol?", pt:"Qual planeta é o mais próximo do Sol?", fr:"Quelle planète est la plus proche du Soleil ?" },
+    opts:["Venus","Earth","Mars","Mercury"], a:3 },
+  { q:{ en:"How many colors are in a rainbow?", es:"¿Cuántos colores tiene un arco iris?", pt:"Quantas cores tem um arco-íris?", fr:"Combien de couleurs y a-t-il dans un arc-en-ciel ?" },
+    opts:["5","6","7","8"], a:2 },
+  { q:{ en:"How many players are on the field per team in soccer?", es:"¿Cuántos jugadores hay en el campo por equipo en fútbol?", pt:"Quantos jogadores há em campo por time no futebol?", fr:"Combien de joueurs y a-t-il sur le terrain par équipe au football ?" },
+    opts:["9","10","11","12"], a:2 },
+  { q:{ en:"Which sport uses the terms 'birdie' and 'eagle'?", es:"¿Qué deporte usa los términos 'birdie' y 'eagle'?", pt:"Qual esporte usa os termos 'birdie' e 'eagle'?", fr:"Quel sport utilise les termes « birdie » et « eagle » ?" },
+    opts:[ { en:"Tennis", es:"Tenis", pt:"Tênis", fr:"Tennis" }, { en:"Golf", es:"Golf", pt:"Golfe", fr:"Golf" }, { en:"Baseball", es:"Béisbol", pt:"Beisebol", fr:"Baseball" }, { en:"Bowling", es:"Boliche", pt:"Boliche", fr:"Bowling" } ], a:1 },
+  { q:{ en:"What is the most spoken language in the world?", es:"¿Cuál es el idioma más hablado del mundo?", pt:"Qual é o idioma mais falado no mundo?", fr:"Quelle est la langue la plus parlée dans le monde ?" },
+    opts:[ { en:"English", es:"Inglés", pt:"Inglês", fr:"Anglais" }, { en:"Spanish", es:"Español", pt:"Espanhol", fr:"Espagnol" }, { en:"Mandarin Chinese", es:"Chino mandarín", pt:"Mandarim", fr:"Mandarin" }, { en:"Hindi", es:"Hindi", pt:"Hindi", fr:"Hindi" } ], a:2 },
 ];
 
 function initTrivia() {
   triviaScore = 0; triviaQ = 0; triviaAnswered = false; triviaCurrent = null;
+  triviaPool = [...TRIVIA_QUESTIONS].sort(() => Math.random() - 0.5);
   document.getElementById('trivia-score').textContent = '0';
-  document.getElementById('trivia-total').textContent = TRIVIA_QUESTIONS.length;
+  document.getElementById('trivia-total').textContent = triviaPool.length;
   document.getElementById('trivia-question').textContent = gt('pressStart');
   document.getElementById('trivia-opts').innerHTML = '';
   document.getElementById('trivia-feedback').className = 'trivia-feedback';
@@ -5265,19 +5318,20 @@ function initTrivia() {
 }
 
 function triviaNext() {
-  if (triviaQ >= TRIVIA_QUESTIONS.length) {
+  if (triviaQ >= triviaPool.length) {
     triviaCurrent = null;
     document.getElementById('trivia-question').textContent =
-      gt('gameOver').replace('{s}', triviaScore).replace('{t}', TRIVIA_QUESTIONS.length);
+      gt('gameOver').replace('{s}', triviaScore).replace('{t}', triviaPool.length);
     document.getElementById('trivia-opts').innerHTML = '';
     document.getElementById('trivia-next').textContent = gt('playAgain');
     document.getElementById('trivia-feedback').className = 'trivia-feedback';
     triviaQ = 0; triviaScore = 0;
+    triviaPool = [...TRIVIA_QUESTIONS].sort(() => Math.random() - 0.5);
     document.getElementById('trivia-score').textContent = '0';
     return;
   }
   triviaAnswered = false;
-  triviaCurrent = TRIVIA_QUESTIONS[triviaQ];
+  triviaCurrent = triviaPool[triviaQ];
   document.getElementById('trivia-feedback').className = 'trivia-feedback';
   document.getElementById('trivia-next').className = 'trivia-next';
   renderTriviaQuestion();
@@ -5316,11 +5370,11 @@ function answerTrivia(chosen, correct) {
     fb.textContent = gt('correct');
     fb.className = 'trivia-feedback show ok';
   } else {
-    fb.textContent = `${gt('answerIs')} ${gL(TRIVIA_QUESTIONS[triviaQ].opts[correct])}`;
+    fb.textContent = `${gt('answerIs')} ${gL(triviaCurrent.opts[correct])}`;
     fb.className = 'trivia-feedback show no';
   }
   triviaQ++;
-  document.getElementById('trivia-next').textContent = triviaQ >= TRIVIA_QUESTIONS.length ? gt('seeResults') : gt('nextQuestion');
+  document.getElementById('trivia-next').textContent = triviaQ >= triviaPool.length ? gt('seeResults') : gt('nextQuestion');
   document.getElementById('trivia-next').className = 'trivia-next show';
 }
 
