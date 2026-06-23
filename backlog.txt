@@ -24,7 +24,7 @@ NEXT UP — open items, ranked  (updated 2026-06-15)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
-  1. #36  BUG: landing images blink on every GPS re-render in a moving car
+  1. [X] #36  BUG: landing images blink on every GPS re-render — DONE 2026-06-23
   2. #42  Editor publish — auto-increment SW cache version
   3. #43  Thanks/inactivity screen — bilingual EN + ES boxes
   4. #44  Game leaderboards — best scores with seeded placeholders
@@ -126,17 +126,7 @@ OPEN ITEMS
         - DONE (confirmed 2026-06-15): looked misaligned on desktop but looks
           fine on the real iPad. No code change needed.
 
-[ ] 36. BUG: landing images blink/reload on GPS re-render (moving car).
-        - Root cause: startGPS() uses watchPosition({enableHighAccuracy:true,
-          maximumAge:30000}). In a moving car the callback fires every few seconds,
-          each fire runs renderGuide() → rebuilds cards' innerHTML → destroys +
-          recreates every <img> → browser re-decodes → visible blink.
-        - DO NOT FIX YET per Abdullah. Candidate fixes when ready:
-            * Update venue distances in place instead of rebuilding image DOM.
-            * Throttle/debounce GPS-driven re-renders.
-            * Skip renderGuide when sort ORDER is unchanged.
-            * Skip re-render on the featured/home view (curated, not distance-sorted).
-            * Revisit maximumAge / whether watchPosition needs high accuracy at all.
+[X] 36. BUG: landing images blink/reload on GPS re-render. DONE 2026-06-23. See archive.
 
 
 [ ] 39. Live weather fetch in index.html — DONE 2026-06-11 (see archive).

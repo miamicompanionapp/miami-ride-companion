@@ -2695,6 +2695,8 @@ let lang = 'en';
 let currentFilter = 'featured';   // 'featured' = curated hero+minis landing; 'all' = full grid
 let currentTab = 'guide';
 let userLat = null, userLng = null;
+let _gpsAcquired = false;       // true after first fix — switches home view to in-place distance updates
+let _lastBrowseGpsRender = 0;   // timestamp of last GPS-triggered browse re-render
 let currentNeighborhood = '';
 let subtitleVariantIdx = 0;
 let subtitleRotatorInterval = null;
@@ -3716,11 +3718,60 @@ function startGPS() {
     mapCurrentHeading = pos.coords.heading;
     mapCurrentSpeedMph = pos.coords.speed !== null ? Math.round(pos.coords.speed * 2.237) : null;
     updateLocationDisplay();
-    if (currentTab === 'guide') renderGuide();
+    if (currentTab === 'guide') {
+      if (!_gpsAcquired) {
+        // First fix: full render so distance badges appear for the first time.
+        _gpsAcquired = true;
+        renderGuide();
+      } else if (currentFilter === 'featured') {
+        // Home view: curated cards never reorder — update distance text in-place,
+        // no DOM rebuild, no image blink.
+        updateHomeDistances();
+      } else {
+        // Browse view: sort order can change, but throttle to once per 15 s.
+        const now = Date.now();
+        if (now - _lastBrowseGpsRender >= 15000) {
+          _lastBrowseGpsRender = now;
+          renderGuide();
+        }
+      }
+    }
     if (currentTab === 'map') updateMapPosition();
   }, () => {
     document.getElementById('location-display').textContent = 'Miami, FL';
   }, { enableHighAccuracy: true, maximumAge: 30000 });
+}
+
+// Update distance badges on the home view without rebuilding any DOM.
+// Called on every GPS ping after the first fix when currentFilter === 'featured'.
+function updateHomeDistances() {
+  if (!userLat || !userLng || !CONTENT) return;
+
+  // Hero venue
+  const fid = CONTENT.guide.featuredVenueId;
+  const allVenues = CONTENT.guide.venues;
+  let featured = fid ? allVenues.find(v => v.id === fid) : null;
+  if (!featured) featured = allVenues.find(v => v.abdullahsPick) || allVenues[0];
+  if (featured && featured.lat) {
+    featured._dist = haversine(userLat, userLng, featured.lat, featured.lng);
+    const distEl = document.querySelector('#gp-hero-slot .gp-hero-dist');
+    if (distEl) {
+      distEl.className = `gp-hero-dist ${distClass(featured._dist)}`;
+      distEl.innerHTML = `<i class="ti ti-map-pin"></i>${featured._dist.toFixed(1)} ${t('guide.miles') || 'mi'}`;
+    }
+  }
+
+  // Mini venues (identified by data-vid)
+  document.querySelectorAll('#gp-minis .gp-mini').forEach(miniEl => {
+    const v = allVenues.find(v => v.id === miniEl.dataset.vid);
+    if (!v || !v.lat) return;
+    v._dist = haversine(userLat, userLng, v.lat, v.lng);
+    const distEl = miniEl.querySelector('.gp-mini-dist');
+    if (distEl) {
+      distEl.className = `gp-mini-dist ${distClass(v._dist)}`;
+      distEl.innerHTML = `<i class="ti ti-map-pin"></i>${v._dist.toFixed(1)} ${t('guide.miles') || 'mi'}`;
+    }
+  });
 }
 
 function updateLocationDisplay() {

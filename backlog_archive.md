@@ -7,6 +7,22 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #36 Fix landing image blink on GPS re-render in a moving car  *(DONE 2026-06-23)*
+
+Root cause: `watchPosition` fires every ~2–3 seconds in a moving car. Each fire called `renderGuide()` → full `innerHTML` rebuild → every `<img>` destroyed and recreated → visible blink.
+
+**Fix:** two-pronged approach in `startGPS` callback:
+
+1. **Home/featured view — in-place distance updates.** `updateHomeDistances()` (new function) walks the existing DOM (`#gp-hero-slot .gp-hero-dist`, `#gp-minis .gp-mini[data-vid]`) and updates only the distance badge text and color class. No `innerHTML` rebuild, no image blink at all.
+
+2. **Browse view — 15-second throttle.** Sort order can shift as the car moves, so a full `renderGuide()` is still needed, but limited to once every 15 seconds (down from every ~2–3 s).
+
+3. **First GPS fix** always triggers a full `renderGuide()` (via `_gpsAcquired` flag) so distance badges appear for the first time.
+
+No changes to `watchPosition` options or GPS accuracy settings.
+
+---
+
 ### [X] #50 Ticketmaster VIP query — surface high-profile events buried by MAX_EVENTS cap  *(DONE 2026-06-23)*
 
 Root cause: the main query sorts `date,asc` and caps at 25 results, so near-future small shows fill all slots. A Shakira concert 6 weeks out was silently dropped.
