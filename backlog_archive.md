@@ -7,6 +7,22 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #50 Ticketmaster VIP query — surface high-profile events buried by MAX_EVENTS cap  *(DONE 2026-06-23)*
+
+Root cause: the main query sorts `date,asc` and caps at 25 results, so near-future small shows fill all slots. A Shakira concert 6 weeks out was silently dropped.
+
+**Fix:** added a parallel "VIP" query in `ticketmaster-fetch.js` using `Promise.allSettled`:
+- Filters to `segmentId=KZFzniwnSyZfZ7v7nJ` (Music segment)
+- Same geo center + 45-mile radius
+- 90-day lookahead window (`endDateTime`)
+- `size=50`, `sort=date,asc`
+- Results merged and deduplicated by `title|venue` key across both queries
+- Combined cap raised to `MAX_EVENTS * 2` (50) — AI review in the daily pipeline trims further
+
+Both queries run in parallel; either can fail independently without blocking the other. No changes needed in the editor, daily pipeline, or passenger app.
+
+---
+
 ### [X] #17 Daily events + weather auto-refresh via GitHub Actions  *(DONE 2026-06-23)*
 
 Full pipeline runs every morning at 8 AM EDT with no manual steps.

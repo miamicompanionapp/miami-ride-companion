@@ -34,6 +34,22 @@ const TM_PARAMS = {
 };
 const MAX_EVENTS = 25;
 
+// Second "VIP" query — hunts for major Music events up to 90 days out.
+// Sorted date,asc so the soonest upcoming show surfaces first, but the wider
+// date window means arena-scale concerts (e.g. Shakira, Bad Bunny) aren't
+// crowded out by this week's small shows in the main query.
+// segmentId KZFzniwnSyZfZ7v7nJ = Music segment on Ticketmaster.
+const TM_VIP_PARAMS = {
+  latlong: '25.95,-80.20',
+  radius: '45',
+  unit: 'miles',
+  sort: 'date,asc',
+  size: '50',
+  locale: '*',
+  segmentId: 'KZFzniwnSyZfZ7v7nJ',
+};
+const VIP_LOOKAHEAD_DAYS = 90;
+
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
@@ -58,39 +74,61 @@ export async function onRequestGet({ env }) {
   }
 
   // Only upcoming events. Ticketmaster wants ISO without milliseconds.
-  const startDateTime = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+  const now = new Date();
+  const startDateTime = now.toISOString().replace(/\.\d{3}Z$/, 'Z');
 
-  const params = new URLSearchParams({ ...TM_PARAMS, apikey: apiKey, startDateTime });
-  const url = `https://app.ticketmaster.com/discovery/v2/events.json?${params}`;
+  // VIP query end date: 90 days out.
+  const vipEnd = new Date(now);
+  vipEnd.setDate(vipEnd.getDate() + VIP_LOOKAHEAD_DAYS);
+  const endDateTime = vipEnd.toISOString().replace(/\.\d{3}Z$/, 'Z');
+
+  const mainParams = new URLSearchParams({ ...TM_PARAMS,     apikey: apiKey, startDateTime });
+  const vipParams  = new URLSearchParams({ ...TM_VIP_PARAMS, apikey: apiKey, startDateTime, endDateTime });
+  const BASE = 'https://app.ticketmaster.com/discovery/v2/events.json';
 
   const errors = [];
-  try {
-    const res = await fetch(url, { cf: { cacheEverything: true, cacheTtl: 1800 } });
-    if (!res.ok) {
-      // Surface a useful message without leaking the key (it's only in the query we built).
-      throw new Error(`Ticketmaster HTTP ${res.status}`);
-    }
-    const data = await res.json();
-    const tmEvents = data?._embedded?.events || [];
+  const [mainRes, vipRes] = await Promise.allSettled([
+    fetch(`${BASE}?${mainParams}`, { cf: { cacheEverything: true, cacheTtl: 1800 } }),
+    fetch(`${BASE}?${vipParams}`,  { cf: { cacheEverything: true, cacheTtl: 1800 } }),
+  ]);
 
-    // Ticketmaster returns one entry per showtime, so a multi-day exhibition
-    // (e.g. "Balloon Museum") appears many times. Collapse to one entry per
-    // name+venue. Results are sorted date,asc so the first seen is the soonest.
-    const seen = new Set();
-    const events = [];
-    for (const ev of tmEvents.map(mapEvent)) {
-      if (!ev.title) continue;
-      const key = `${ev.title}|${ev.venue}`.toLowerCase();
-      if (seen.has(key)) continue;
-      seen.add(key);
-      events.push(ev);
-      if (events.length >= MAX_EVENTS) break;
+  const rawEvents = [];
+  for (const [result, label] of [[mainRes, 'main'], [vipRes, 'vip']]) {
+    if (result.status === 'rejected') {
+      errors.push(`Ticketmaster ${label}: ${result.reason?.message}`);
+      continue;
     }
-    return json({ events, errors });
-  } catch (err) {
-    errors.push(`Ticketmaster: ${err.message}`);
+    if (!result.value.ok) {
+      errors.push(`Ticketmaster ${label}: HTTP ${result.value.status}`);
+      continue;
+    }
+    try {
+      const data = await result.value.json();
+      rawEvents.push(...(data?._embedded?.events || []));
+    } catch (err) {
+      errors.push(`Ticketmaster ${label} parse: ${err.message}`);
+    }
+  }
+
+  if (rawEvents.length === 0 && errors.length) {
     return json({ events: [], errors });
   }
+
+  // Ticketmaster returns one entry per showtime, so a multi-day exhibition
+  // (e.g. "Balloon Museum") appears many times. Collapse to one entry per
+  // name+venue across both queries. Results are sorted date,asc within each
+  // query so the first seen is the soonest.
+  const seen = new Set();
+  const events = [];
+  for (const ev of rawEvents.map(mapEvent)) {
+    if (!ev.title) continue;
+    const key = `${ev.title}|${ev.venue}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    events.push(ev);
+    if (events.length >= MAX_EVENTS * 2) break; // combined cap — AI review trims further
+  }
+  return json({ events, errors });
 }
 
 // Ticketmaster returns an images[] array at several ratios/sizes. Prefer a
