@@ -1,43 +1,30 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-25T01:09:20.936Z",
+    "lastUpdated": "2026-06-23T17:37:22.340Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-06-25T01:09:20.935Z",
+    "fetchedAt": "2026-06-23T17:37:22.340Z",
     "current": {
-      "temp_f": 82,
-      "feels_f": 88,
+      "temp_f": 90,
+      "feels_f": 103,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 77,
-      "wind_mph": 8,
-      "rain_chance": 15,
+      "humidity": 66,
+      "wind_mph": 9,
+      "rain_chance": 22,
       "weathercode": 95
     },
     "forecast": [
       {
-        "date": "2026-06-24",
-        "high_f": 92,
-        "low_f": 76,
-        "weathercode": 95,
-        "rain_chance": 15,
-        "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
-        }
-      },
-      {
-        "date": "2026-06-25",
-        "high_f": 89,
-        "low_f": 75,
+        "date": "2026-06-23",
+        "high_f": 90,
+        "low_f": 79,
         "weathercode": 95,
         "rain_chance": 22,
         "description": {
@@ -48,189 +35,202 @@
         }
       },
       {
+        "date": "2026-06-24",
+        "high_f": 90,
+        "low_f": 76,
+        "weathercode": 95,
+        "rain_chance": 14,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-06-25",
+        "high_f": 88,
+        "low_f": 76,
+        "weathercode": 95,
+        "rain_chance": 27,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
         "date": "2026-06-26",
         "high_f": 88,
-        "low_f": 77,
-        "weathercode": 96,
-        "rain_chance": 11,
+        "low_f": 84,
+        "weathercode": 95,
+        "rain_chance": 19,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
         }
       },
       {
         "date": "2026-06-27",
-        "high_f": 89,
-        "low_f": 84,
-        "weathercode": 96,
-        "rain_chance": 17,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
-        "date": "2026-06-28",
         "high_f": 88,
-        "low_f": 84,
-        "weathercode": 51,
-        "rain_chance": 8,
+        "low_f": 83,
+        "weathercode": 99,
+        "rain_chance": 12,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Heavy thunderstorm",
+          "es": "Tormenta intensa",
+          "pt": "Trovoada intensa",
+          "fr": "Orage violent"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "21:00",
-        "temp_f": 82,
-        "weathercode": 95,
-        "rain_chance": 9
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 7
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 79,
+        "hour": "13:00",
+        "temp_f": 90,
         "weathercode": 95,
         "rain_chance": 12
       },
       {
-        "hour": "09:00",
-        "temp_f": 84,
-        "weathercode": 95,
-        "rain_chance": 21
-      },
-      {
-        "hour": "10:00",
-        "temp_f": 83,
-        "weathercode": 95,
-        "rain_chance": 22
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 18
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 87,
-        "weathercode": 95,
-        "rain_chance": 8
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
         "hour": "14:00",
-        "temp_f": 89,
+        "temp_f": 90,
         "weathercode": 95,
-        "rain_chance": 4
+        "rain_chance": 11
       },
       {
         "hour": "15:00",
-        "temp_f": 89,
+        "temp_f": 90,
         "weathercode": 95,
-        "rain_chance": 7
+        "rain_chance": 10
       },
       {
         "hour": "16:00",
         "temp_f": 88,
         "weathercode": 95,
-        "rain_chance": 7
+        "rain_chance": 11
       },
       {
         "hour": "17:00",
         "temp_f": 87,
         "weathercode": 95,
-        "rain_chance": 5
+        "rain_chance": 22
       },
       {
         "hour": "18:00",
-        "temp_f": 86,
-        "weathercode": 95,
-        "rain_chance": 3
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 21
       },
       {
         "hour": "19:00",
-        "temp_f": 85,
-        "weathercode": 95,
-        "rain_chance": 3
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 14
       },
       {
         "hour": "20:00",
         "temp_f": 84,
-        "weathercode": 95,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 7
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 80,
+        "weathercode": 3,
         "rain_chance": 4
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 9
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 5
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 83,
+        "weathercode": 95,
+        "rain_chance": 6
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 86,
+        "weathercode": 95,
+        "rain_chance": 6
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 88,
+        "weathercode": 95,
+        "rain_chance": 7
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 89,
+        "weathercode": 95,
+        "rain_chance": 7
       }
     ]
   },
@@ -1808,6 +1808,102 @@
         "lng": -80.2408222
       },
       {
+        "id": "tm_1782189005647_o5gw",
+        "title": {
+          "en": "Ride and Dine! Hard Rock Cafe Miami and Big Bus Tours Miami",
+          "es": "¡Paseo y Cena! Hard Rock Cafe Miami y Big Bus Tours Miami",
+          "pt": "Passeio e Jantar! Hard Rock Cafe Miami e Big Bus Tours Miami",
+          "fr": "Balade et Dîner ! Hard Rock Cafe Miami et Big Bus Tours Miami"
+        },
+        "date": "2026-06-23",
+        "venue": "Hard Rock Cafe Miami",
+        "address": "401 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-hard-rock-hard-rock-cafe-tickets%2F14043484%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Starts 07:00 · Hard Rock Cafe Miami",
+          "es": "Misceláneos · Comienza a las 07:00 · Hard Rock Cafe Miami",
+          "pt": "Diversos · Começa às 07:00 · Hard Rock Cafe Miami",
+          "fr": "Divers · Commence à 07h00 · Hard Rock Cafe Miami"
+        },
+        "lat": 25.7784353,
+        "lng": -80.1880012
+      },
+      {
+        "id": "tm_1782189005647_wktm",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo del Globo | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu do Balão | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-06-23",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneos · Familiar · Comienza a las 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa às 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence à 11h00 · Mana Wynwood Convention Center"
+        },
+        "lat": 25.797998,
+        "lng": -80.202062
+      },
+      {
+        "id": "tm_1782189005647_no7e",
+        "title": {
+          "en": "Ride and Dine with Us! Thriller Speedboat Tours",
+          "es": "¡Paseo y Cena con Nosotros! Thriller Speedboat Tours",
+          "pt": "Passeio e Jantar Conosco! Thriller Speedboat Tours",
+          "fr": "Balade et Dîner avec Nous ! Thriller Speedboat Tours"
+        },
+        "date": "2026-06-23",
+        "venue": "Hard Rock Cafe Miami",
+        "address": "401 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-with-us-hard-rock-cafe-tickets%2F14038394%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Starts 11:00 · Hard Rock Cafe Miami",
+          "es": "Misceláneos · Comienza a las 11:00 · Hard Rock Cafe Miami",
+          "pt": "Diversos · Começa às 11:00 · Hard Rock Cafe Miami",
+          "fr": "Divers · Commence à 11h00 · Hard Rock Cafe Miami"
+        },
+        "lat": 25.7784353,
+        "lng": -80.1880012
+      },
+      {
+        "id": "tm_1782189005647_nl9a",
+        "title": {
+          "en": "Miami Marlins vs. Texas Rangers",
+          "es": "Miami Marlins vs. Texas Rangers",
+          "pt": "Miami Marlins vs. Texas Rangers",
+          "fr": "Miami Marlins vs. Texas Rangers"
+        },
+        "date": "2026-06-23",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qaxd&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza a las 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa às 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence à 18h40 · LoanDepot Park"
+        },
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
         "id": "tm_1782189005647_hyy0",
         "title": {
           "en": "Scotland vs. Brazil Watch Party",
@@ -1928,6 +2024,100 @@
         "lng": -80.1598615
       },
       {
+        "id": "rss_1782228886378_2b2s",
+        "title": {
+          "en": "Free: Sunset Concert series, Old School Square, June 26",
+          "es": "Gratis: Serie de Conciertos al Atardecer, Old School Square, 26 de junio",
+          "pt": "Gratuito: Série de Concertos ao Pôr do Sol, Old School Square, 26 de junho",
+          "fr": "Gratuit : Série de Concerts au Coucher du Soleil, Old School Square, 26 juin"
+        },
+        "date": "2026-06-26",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/tribute-concert-old-school-square/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/june-26-delray-old-school-728x480.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Monthly Sunset Concert series in Delray Beach features high-energy tribute bands that perform rain or shine. Gates open at 5 p.m. Shows are scheduled on the 4th Friday of each... Copyright South Florida on the Cheap. The post Free: Sunset Concert series, Old School Square, June 26 appeared first on South Florida on the Cheap.",
+          "es": "La serie mensual de Conciertos al Atardecer en Delray Beach presenta bandas tributo de alta energía que tocan con lluvia o sol. Las puertas abren a las 5 p.m. Los espectáculos están programados el 4to viernes de cada mes.",
+          "pt": "A série mensal de Concertos ao Pôr do Sol em Delray Beach apresenta bandas tributo cheias de energia que se apresentam com chuva ou sol. Os portões abrem às 17h. Os shows estão programados para a 4ª sexta-feira de cada mês.",
+          "fr": "La série mensuelle de Concerts au Coucher du Soleil à Delray Beach présente des groupes hommage pleins d'énergie qui se produisent par tous les temps. Les portes ouvrent à 17h. Les spectacles sont programmés le 4ème vendredi de chaque mois."
+        }
+      },
+      {
+        "id": "tm_1782228888791_4rul",
+        "title": {
+          "en": "Backstage & Burgers",
+          "es": "Backstage & Burgers",
+          "pt": "Backstage & Burgers",
+          "fr": "Backstage & Burgers"
+        },
+        "date": "2026-06-23",
+        "venue": "Hard Rock Cafe Miami",
+        "address": "401 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fbackstage-burgers-hard-rock-cafe-tickets%2F14529673%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Starts 13:00 · Hard Rock Cafe Miami",
+          "es": "Misceláneos · Comienza a las 13:00 · Hard Rock Cafe Miami",
+          "pt": "Diversos · Começa às 13h · Hard Rock Cafe Miami",
+          "fr": "Divers · Début à 13h00 · Hard Rock Cafe Miami"
+        },
+        "lat": 25.7784353,
+        "lng": -80.1880012
+      },
+      {
+        "id": "tm_1782228888791_sp8i",
+        "title": {
+          "en": "The Haller Club prior to Todd Rundgren",
+          "es": "El Club Haller antes de Todd Rundgren",
+          "pt": "O Haller Club antes de Todd Rundgren",
+          "fr": "Le Haller Club avant Todd Rundgren"
+        },
+        "date": "2026-06-23",
+        "venue": "The Haller Club at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-todd-fort-lauderdale-florida-06-23-2026%2Fevent%2F0D006478A66D8D66&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
+          "es": "Mejora tu experiencia en The Parker con El Club Haller. Este exclusivo salón premium, con su elegante diseño retro, cuenta con una amplia barra y cómodos asientos. Por un precio único e inclusivo, tu admisión al Club Haller ofrece uso exclusivo comenzando una hora antes del espectáculo y durante el intermedio (cuando esté programado), bebidas sin alcohol gratuitas, cerveza y vino premium, café y té (bebidas mezcladas",
+          "pt": "Aproveite ainda mais sua experiência no The Parker com o Haller Club. Este lounge premium totalmente novo, com seu elegante design retrô, conta com um espaçoso bar e amplos assentos. Por um preço único e inclusivo, sua entrada no Haller Club oferece uso exclusivo a partir de uma hora antes do show e durante o intervalo (quando programado), refrigerantes gratuitos, cerveja e vinho premium, café e chá (drinques",
+          "fr": "Enrichissez votre expérience au The Parker avec le Haller Club. Ce tout nouveau salon premium, au design rétro élégant, dispose d'un grand bar et de nombreuses places assises. Pour un prix tout compris, votre entrée au Haller Club vous offre un accès exclusif dès une heure avant le spectacle et pendant l'entracte (si prévu), des boissons non alcoolisées offertes, de la bière et du vin premium, du café et du thé (boissons mélangées"
+        },
+        "lat": 26.13364,
+        "lng": -80.135769
+      },
+      {
+        "id": "tm_1782228888791_k6h3",
+        "title": {
+          "en": "Todd Rundgren: DAMNED IF I DO TOUR",
+          "es": "Todd Rundgren: GIRA DAMNED IF I DO",
+          "pt": "Todd Rundgren: TURNÊ DAMNED IF I DO",
+          "fr": "Todd Rundgren: TOURNÉE DAMNED IF I DO"
+        },
+        "date": "2026-06-23",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftodd-rundgren-damned-if-i-do-ft-lauderdale-florida-06-23-2026%2Fevent%2F0D006474C153ED01&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/10c/d7303d2f-b6e8-4f0d-a456-902c4abfa10c_1251021_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Todd Rundgren first broke into the music business in the late '60s with the band Nazz, for whom he wrote \"Open Your Eyes\" and \"Hello It's Me.\" He then released several solo albums, including 1972's Something/Anything? (which featured a re-recording of \"Hello It's Me\") and then founded the rock band Utopia, a group that drew on prog, power-pop and new wave. In 1983, Rundgren released one of his bes",
+          "es": "Todd Rundgren irrumpió por primera vez en la industria musical a finales de los años 60 con la banda Nazz, para quien escribió «Open Your Eyes» y «Hello It's Me». Luego lanzó varios álbumes en solitario, incluyendo Something/Anything? de 1972 (que incluía una nueva grabación de «Hello It's Me»), y posteriormente fundó la banda de rock Utopia, un grupo que fusionaba el prog, el power-pop y el new wave. En 1983, Rundgren lanzó uno de sus mejo",
+          "pt": "Todd Rundgren estreou no mercado musical no final dos anos 60 com a banda Nazz, para quem escreveu \"Open Your Eyes\" e \"Hello It's Me\". Em seguida, lançou vários álbuns solo, incluindo Something/Anything? de 1972 (que continha uma regravação de \"Hello It's Me\") e depois fundou a banda de rock Utopia, um grupo que mesclava prog, power-pop e new wave. Em 1983, Rundgren lançou um de seus mel",
+          "fr": "Todd Rundgren a fait son entrée dans l'industrie musicale à la fin des années 60 avec le groupe Nazz, pour lequel il a écrit «Open Your Eyes» et «Hello It's Me». Il a ensuite sorti plusieurs albums solo, dont Something/Anything? en 1972 (qui comprenait un nouvel enregistrement de «Hello It's Me»), puis a fondé le groupe de rock Utopia, qui puisait dans le prog, le power-pop et la new wave. En 1983, Rundgren a sorti l'un de ses meilleu"
+        },
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
         "id": "tm_1782228888791_rwlw",
         "title": {
           "en": "Ride and Dine! Hard Rock Cafe Miami and Big Bus Tours Miami",
@@ -1998,1070 +2188,6 @@
         },
         "lat": 25.781232,
         "lng": -80.187805
-      },
-      {
-        "id": "rss_1782349659721_wglc",
-        "title": {
-          "en": "Keeping up with the Tartans: We’re following the Scots around Miami",
-          "es": "Siguiendo a los Tartans: Estamos rastreando a los escoceses alrededor de Miami",
-          "pt": "Acompanhando os Tartans: Estamos seguindo os escoceses por Miami",
-          "fr": "Suivre les Tartans : nous suivons les Écossais à travers Miami"
-        },
-        "date": "2026-06-24",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/arts-culture/miamis-tartan-takeover-live-blog-40561168/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/Tartan-takeover-in-MIA-Credit-New-Times-collage-via-Flickr.jpg",
-        "description": {
-          "en": "New Times' live coverage will follow the action in real time, deploying the kinds of resources we typically save for hurricanes.",
-          "es": "La cobertura en vivo de New Times seguirá la acción en tiempo real, utilizando los tipos de recursos que normalmente reservamos para huracanes.",
-          "pt": "A cobertura ao vivo do New Times acompanhará a ação em tempo real, utilizando o tipo de recurso que normalmente reservamos para furacões.",
-          "fr": "La couverture en direct de New Times suivra l'action en temps réel, en déployant les types de ressources que nous réservons généralement pour les hurricanes."
-        }
-      },
-      {
-        "id": "rss_1782349659721_6xe3",
-        "title": {
-          "en": "Will Scotland’s Tartan Army drain Miami bars dry?",
-          "es": "¿Agotará el Ejército Tartan de Escocia los bares de Miami?",
-          "pt": "O Exército Tartan da Escócia vai secar os bares de Miami?",
-          "fr": "L'armée Tartan d'Écosse va-t-elle vider les bars de Miami à sec ?"
-        },
-        "date": "2026-06-24",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/food-drink/will-scotlands-tartan-army-drain-miami-bars-dry-40561159/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/IMG_2687.jpg",
-        "description": {
-          "en": "After depleting Boston of beer, Scotland's Tartan Army is swarming Miami bars today ahead of tonight's match. Will bars run dry?",
-          "es": "Después de agotar la cerveza en Boston, el Ejército Tartan de Escocia está invadiendo los bares de Miami hoy antes del partido de esta noche. ¿Se agotarán los bares?",
-          "pt": "Depois de esgotar a cerveja em Boston, o Exército Tartan da Escócia está invadindo os bares de Miami hoje antes da partida de hoje à noite. Os bares vão secar?",
-          "fr": "Après avoir épuisé la bière à Boston, l'armée Tartan d'Écosse envahit les bars de Miami aujourd'hui avant le match de ce soir. Les bars vont-ils être à sec ?"
-        }
-      },
-      {
-        "id": "rss_1782349659721_idg1",
-        "title": {
-          "en": "Watch a Scottish World Cup fan try his first-ever Pub Sub in Miami",
-          "es": "Mira a un aficionado escocés de la Copa Mundial probar su primer Pub Sub en Miami",
-          "pt": "Veja um fã escocês da Copa do Mundo experimentar seu primeiro Pub Sub em Miami",
-          "fr": "Regardez un fan écossais de la Coupe du monde essayer son premier Pub Sub à Miami"
-        },
-        "date": "2026-06-24",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/food-drink/watch-a-scottish-world-cup-fan-try-his-first-ever-pub-sub-40561016/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/BagpipersPublix.png",
-        "description": {
-          "en": "The Tartan Army has discovered Florida's most sacred sandwich.",
-          "es": "El Ejército Tartan ha descubierto el sándwich más sagrado de Florida.",
-          "pt": "O Exército Tartan descobriu o sanduíche mais sagrado da Flórida.",
-          "fr": "L'armée Tartan a découvert le sandwich le plus sacré de la Floride."
-        }
-      },
-      {
-        "id": "rss_1782349659721_khy3",
-        "title": {
-          "en": "PAMM’s Basquiat exhibition arrives in Miami at the perfect moment",
-          "es": "La exposición de Basquiat del PAMM llega a Miami en el momento perfecto",
-          "pt": "A exposição de Basquiat do PAMM chega a Miami no momento perfeito",
-          "fr": "L'exposition Basquiat du PAMM arrive à Miami au moment idéal"
-        },
-        "date": "2026-06-24",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/arts-culture/basquiat-exhibition-arrives-at-miamis-pamm-at-the-perfect-moment-40553908/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/06/Jean-Michel-Basquiat-Untitled-1982-Credit-Kenneth-C.-Griffin-Collection-Artwork-Estate-of-Jean-Michel-Basquiat-Licensed-by-Artestar-New-York.jpg",
-        "description": {
-          "en": "It's one of the most significant presentations of the artist's work ever mounted in South Florida.",
-          "es": "Es una de las presentaciones más significativas del trabajo del artista jamás montada en el sur de Florida.",
-          "pt": "É uma das apresentações mais significativas do trabalho do artista já montadas no sul da Flórida.",
-          "fr": "C'est l'une des présentations les plus importantes du travail de l'artiste jamais exposées dans le sud de la Floride."
-        }
-      },
-      {
-        "id": "rss_1782349659721_yb90",
-        "title": {
-          "en": "Art District Art Walk with DJ, exhibits & food vendors",
-          "es": "Paseo de Arte del Distrito de Arte con DJ, exhibiciones y vendedores de comida",
-          "pt": "Passeio de Arte do Distrito de Arte com DJ, exposições e vendedores de comida",
-          "fr": "Promenade artistique du quartier des arts avec DJ, expositions et vendeurs de nourriture"
-        },
-        "date": "2026-06-24",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/thrive-district-art-walk-in-fort-lauderdale/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2025/12/thrive-art-walk-fort-lauderdale-c.jpeg",
-        "description": {
-          "en": "South Florida on the Cheap Thrive Art District in Fort Lauderdale hosts a monthly (or so) Art Walk called Art Fest with art exhibits, food trucks and vendors. Entertainment is featured at the event. The... Copyright South Florida on the Cheap. The post Art District Art Walk with DJ, exhibits & food vendors appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Thrive Art District en Fort Lauderdale organiza un Art Walk mensual (más o menos) llamado Art Fest con exhibiciones de arte, camiones de comida y vendedores. Se presenta entretenimiento en el evento.",
-          "pt": "South Florida on the Cheap Thrive Art District em Fort Lauderdale organiza um Passeio de Arte mensal (mais ou menos) chamado Art Fest com exposições de arte, food trucks e vendedores. O entretenimento é apresentado no evento.",
-          "fr": "South Florida on the Cheap Thrive Art District à Fort Lauderdale accueille une promenade artistique mensuelle (environ) appelée Art Fest avec des expositions d'art, des camions de nourriture et des vendeurs. Le divertissement est présenté lors de l'événement."
-        }
-      },
-      {
-        "id": "rss_1782349659721_mchs",
-        "title": {
-          "en": "Free outdoor Jazz at MOCA in North Miami",
-          "es": "Jazz gratuito al aire libre en MOCA en North Miami",
-          "pt": "Jazz gratuito ao ar livre em MOCA em North Miami",
-          "fr": "Jazz gratuit en plein air au MOCA à North Miami"
-        },
-        "date": "2026-06-24",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-outdoor-concert-at-moca-north-miami/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2024/11/jazz-at-moca-dec-2024-728x501.png",
-        "description": {
-          "en": "South Florida on the Cheap The long-running, popular - and free - Jazz at MOCA has been a fixture in the North Miami community and Miami's music scene for more than two decades. The monthly... Copyright South Florida on the Cheap. The post Free outdoor Jazz at MOCA in North Miami appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap El popular y gratuito Jazz at MOCA ha sido un referente en la comunidad de North Miami y en la escena musical de Miami durante más de dos décadas. El evento mensual...",
-          "pt": "South Florida on the Cheap O popular e gratuito Jazz at MOCA tem sido um destaque na comunidade de North Miami e na cena musical de Miami por mais de duas décadas. O evento mensal...",
-          "fr": "South Florida on the Cheap Le populaire et gratuit Jazz at MOCA est un incontournable de la communauté de North Miami et de la scène musicale de Miami depuis plus de deux décennies. L'événement mensuel..."
-        }
-      },
-      {
-        "id": "rss_1782349659721_sacu",
-        "title": {
-          "en": "Free Cuban cinema series at Koubek Center in Little Havana",
-          "es": "Serie de cine cubano gratuita en Koubek Center en Little Havana",
-          "pt": "Série de cinema cubano gratuita no Koubek Center em Little Havana",
-          "fr": "Série de cinéma cubain gratuite au Koubek Center à Little Havana"
-        },
-        "date": "2026-06-24",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-cuban-cinema-series-at-koubek-center-in-little-havana/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2022/08/video-1668906_1280-728x324.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Once a month, you can watch Cuban films that represent Cuban filmmaking excellence at the Koubek Center in Little Havana as part of their Cuban Cinema Series. The next screening... Copyright South Florida on the Cheap. The post Free Cuban cinema series at Koubek Center in Little Havana appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Una vez al mes, puedes ver películas cubanas que representan la excelencia del cine cubano en el Koubek Center en Little Havana como parte de su Serie de Cine Cubano. La próxima proyección...",
-          "pt": "South Florida on the Cheap Uma vez por mês, você pode assistir a filmes cubanos que representam a excelência do cinema cubano no Koubek Center em Little Havana como parte de sua Série de Cinema Cubano. A próxima sessão...",
-          "fr": "South Florida on the Cheap Une fois par mois, vous pouvez regarder des films cubains représentant l'excellence du cinéma cubain au Koubek Center à Little Havana dans le cadre de leur Série de Cinéma Cubain. La prochaine projection..."
-        }
-      },
-      {
-        "id": "rss_1782349659721_7uli",
-        "title": {
-          "en": "The Wonderful Wizard of Oz 7/11/26",
-          "es": "El Maravilloso Mago de Oz 7/11/26",
-          "pt": "O Maravilhoso Mágico de Oz 7/11/26",
-          "fr": "Le Merveilleux Magicien d'Oz 7/11/26"
-        },
-        "date": "2026-07-11",
-        "venue": "Sandrell Rivers Theater",
-        "address": "6103 NW 7th Ave, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/06/24/the-wonderful-wizard-of-oz-7-11-26/",
-        "free": false,
-        "price": "$5",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/The-Wonderful-Wizard-of-Oz-FB-350x183.png",
-        "description": {
-          "en": "Follow the Yellow Brick Road in a Thrilling New Adventure! Fantasy Theatre Factory presents a vibrant, reimagined",
-          "es": "¡Sigue el Camino de Ladrillos Amarillos en una Emocionante Nueva Aventura! Fantasy Theatre Factory presenta una versión vibrante y reimaginada",
-          "pt": "Siga a Estrada de Tijolos Amarelos em uma Emocionante Nova Aventura! Fantasy Theatre Factory apresenta uma versão vibrante e reimaginada",
-          "fr": "Suivez la Route de Briques Jaunes dans une Nouvelle Aventure Palpitante! Fantasy Theatre Factory présente une version vibrante et réimaginée"
-        },
-        "lat": 25.8315843,
-        "lng": -80.2082623
-      },
-      {
-        "id": "rss_1782349659721_r9i1",
-        "title": {
-          "en": "MMF Miami Beach Classical Music Festival 6/26/26",
-          "es": "Festival de Música Clásica MMF Miami Beach 6/26/26",
-          "pt": "Festival de Música Clássica MMF Miami Beach 6/26/26",
-          "fr": "Festival de Musique Classique MMF Miami Beach 6/26/26"
-        },
-        "date": "2026-06-26",
-        "venue": "The Betsy Hotel",
-        "address": "1440 Ocean Dr, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/06/24/mmf-miami-beach-classical-music-festival-6-26-26/",
-        "free": false,
-        "price": "$2",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/image-2026-06-24T021421.709.png",
-        "description": {
-          "en": "June 26 at 8:00 PM Opera Aria Night featuring the talented singers from the MMF Opera",
-          "es": "26 de junio a las 8:00 PM Noche de Arias de Ópera con los talentosos cantantes de la Ópera MMF",
-          "pt": "26 de junho às 20:00 Noite de Árias de Ópera com os talentosos cantores da Ópera MMF",
-          "fr": "26 juin à 20h00 Soirée Arias Opéra avec les chanteurs talentueux de l'Opéra MMF"
-        },
-        "lat": 25.7864648,
-        "lng": -80.129768
-      },
-      {
-        "id": "rss_1782349659721_kn2f",
-        "title": {
-          "en": "Red, White & Bloom at Rose Cafe & Restaurant 7/4/26",
-          "es": "Red, White & Bloom en Rose Cafe & Restaurant 7/4/26",
-          "pt": "Red, White & Bloom no Rose Cafe & Restaurant 7/4/26",
-          "fr": "Red, White & Bloom au Rose Cafe & Restaurant 7/4/26"
-        },
-        "date": "2026-07-04",
-        "venue": "Rose Cafe & Restaurant",
-        "address": "16690 Collins Avenue, Suite 102, Sunny Isles Beach, Florida, 33160",
-        "url": "https://www.soulofmiami.org/2026/06/24/red-white-bloom-at-rose-cafe-restaurant-7-4-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/Rose-Cafe-Restaurant-350x233.jpg",
-        "description": {
-          "en": "Mediterranean-Italian-inspired hotspot will host its Red, White & Bloom",
-          "es": "El restaurante de inspiración mediterránea-italiana será anfitrión de su Red, White & Bloom",
-          "pt": "O restaurante de inspiração mediterrânea-italiana será anfitrião de seu Red, White & Bloom",
-          "fr": "Le restaurant d'inspiration méditerranéenne-italienne accueillera son Red, White & Bloom"
-        }
-      },
-      {
-        "id": "tm_1782349660370_3vrc",
-        "title": {
-          "en": "Ride and Dine! Hard Rock Cafe Miami and Big Bus Tours Miami",
-          "es": "¡Paseo y Cena! Hard Rock Cafe Miami y Big Bus Tours Miami",
-          "pt": "Passeio e Jantar! Hard Rock Cafe Miami e Big Bus Tours Miami",
-          "fr": "Balade et Dîner ! Hard Rock Cafe Miami et Big Bus Tours Miami"
-        },
-        "date": "2026-06-25",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-hard-rock-hard-rock-cafe-tickets%2F14043364%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 07:00 · Hard Rock Cafe Miami",
-          "es": "Misceláneo · Comienza 07:00 · Hard Rock Cafe Miami",
-          "pt": "Diversos · Começa 07:00 · Hard Rock Cafe Miami",
-          "fr": "Divers · Commence 07:00 · Hard Rock Cafe Miami"
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1782349660370_znmp",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-06-25",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "lat": 25.797998,
-        "lng": -80.202062
-      },
-      {
-        "id": "tm_1782349660370_dikg",
-        "title": {
-          "en": "Ride and Dine with Us! Thriller Speedboat Tours",
-          "es": "¡Paseo y Cena con Nosotros! Thriller Speedboat Tours",
-          "pt": "Passeio e Jantar Conosco! Thriller Speedboat Tours",
-          "fr": "Balade et Dîner avec Nous ! Thriller Speedboat Tours"
-        },
-        "date": "2026-06-25",
-        "venue": "Hard Rock Cafe Miami",
-        "address": "401 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fride-and-dine-with-us-hard-rock-cafe-tickets%2F14038234%3FREFERRAL_ID%3Dtmfeed&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Starts 11:00 · Hard Rock Cafe Miami",
-          "es": "Misceláneo · Comienza 11:00 · Hard Rock Cafe Miami",
-          "pt": "Diversos · Começa 11:00 · Hard Rock Cafe Miami",
-          "fr": "Divers · Commence 11:00 · Hard Rock Cafe Miami"
-        },
-        "lat": 25.7784353,
-        "lng": -80.1880012
-      },
-      {
-        "id": "tm_1782349660370_u42j",
-        "title": {
-          "en": "Slow Burn Theatre Co: Jagged Little Pill: The Musical",
-          "es": "Slow Burn Theatre Co: Jagged Little Pill: El Musical",
-          "pt": "Slow Burn Theatre Co: Jagged Little Pill: O Musical",
-          "fr": "Slow Burn Theatre Co: Jagged Little Pill: La Comédie Musicale"
-        },
-        "date": "2026-06-25",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fslow-burn-theatre-co-jagged-little-ft-lauderdale-florida-06-25-2026%2Fevent%2F0D0062A7F6E33F92&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/087/d6ab59f9-9474-47c8-a4c0-511e8d0cb087_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Winner! Two Tony Awards, Two Drama Desk Award, Eight Outer Critics Circle Awards, and a Grammy Award for Best Musical Theater Album Alanis Morissette's Jagged Little Pill: The Musical is an exhilarating new musical inspired by the themes and raw emotions laid bare in Alanis Morissette's seminal album of the same name. The Healys appear to be a picture-perfect suburban family - but looks can be dec",
-          "es": "¡Ganador! Dos premios Tony, Dos premios Drama Desk, Ocho premios de los Outer Critics Circle y un Grammy a Mejor Álbum de Teatro Musical. Jagged Little Pill: El Musical de Alanis Morissette es un nuevo musical exhilarante inspirado en los temas y emociones crudas expuestas en el álbum seminal homónimo de Alanis Morissette. Los Healy parecen ser una familia suburbana perfecta, pero las apariencias pueden engañar.",
-          "pt": "Vencedor! Dois prêmios Tony, Dois prêmios Drama Desk, Oito prêmios Outer Critics Circle e um Grammy para Melhor Álbum de Teatro Musical. Jagged Little Pill: O Musical de Alanis Morissette é um novo musical exhilarante inspirado nos temas e emoções cruas expostas no álbum seminal de mesmo nome de Alanis Morissette. Os Healys parecem ser uma família suburbana perfeita, mas as aparências podem enganar.",
-          "fr": "Gagnant ! Deux Tony Awards, Deux Drama Desk Awards, Huit Outer Critics Circle Awards et un Grammy Award pour Meilleur Album de Comédie Musicale. Jagged Little Pill : La Comédie Musicale d'Alanis Morissette est une nouvelle comédie musicale exhilarante inspirée par les thèmes et les émotions brutes exposées dans l'album emblématique du même nom d'Alanis Morissette. Les Healys semblent être une famille de banlieue parfaite, mais les apparences peuvent être trompeuses."
-        },
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1782349660370_oxdg",
-        "title": {
-          "en": "World Cup Kickoff Pool Party featuring Jessi Uribe",
-          "es": "Fiesta en la Piscina del Inicio de la Copa Mundial con Jessi Uribe",
-          "pt": "Festa na Piscina de Abertura da Copa do Mundo com Jessi Uribe",
-          "fr": "Fête au Bord de la Piscine du Coup d'Envoi de la Coupe du Monde avec Jessi Uribe"
-        },
-        "date": "2026-06-25",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fworld-cup-kickoff-pool-party-featuring-hollywood-florida-06-25-2026%2Fevent%2F0D0064A7A34796AE&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/5c8/0f5f03e5-a59a-44bd-a375-c66ac665e5c8_1748961_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Must be 21+ To Attend · Starts 20:30 · Hard Rock Live",
-          "es": "Debe tener 21+ para asistir · Comienza 20:30 · Hard Rock Live",
-          "pt": "Deve ter 21+ para participar · Começa 20:30 · Hard Rock Live",
-          "fr": "Doit avoir 21+ pour assister · Commence 20:30 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1782349660370_bsdx",
-        "title": {
-          "en": "Matt Rife: Stay Golden World Tour",
-          "es": "Matt Rife: Stay Golden World Tour",
-          "pt": "Matt Rife: Stay Golden World Tour",
-          "fr": "Matt Rife: Stay Golden World Tour"
-        },
-        "date": "2026-06-26",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmatt-rife-stay-golden-world-tour-hollywood-florida-06-26-2026%2Fevent%2F0D006365CB937396&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/238/b3bb5076-6b92-45d8-b5a5-e5e700a50238_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "18+ / Mature Audience Only This event is being professionally filmed, recorded and / or photographed. By entering this space you are giving your consent for any audience images or recordings captured to be used for commercial and / or promotional purposes. Please speak to a member of staff should you require further information. · Starts 20:00 · Hard Rock Live",
-          "es": "18+ / Solo para audiencia adulta Este evento está siendo grabado y/o fotografiado profesionalmente. Al entrar en este espacio, da su consentimiento para que cualquier imagen o grabación de la audiencia se utilice con fines comerciales y/o promocionales. Hable con un miembro del personal si requiere más información. · Comienza 20:00 · Hard Rock Live",
-          "pt": "18+ / Apenas para público adulto Este evento está sendo filmado, gravado e/ou fotografado profissionalmente. Ao entrar neste espaço, você está dando seu consentimento para que qualquer imagem ou gravação do público capturada seja usada para fins comerciais e/ou promocionais. Fale com um membro da equipe se precisar de mais informações. · Começa 20:00 · Hard Rock Live",
-          "fr": "18+ / Audiences adultes uniquement Cet événement est filmé, enregistré et/ou photographié de manière professionnelle. En entrant dans cet espace, vous consentez à l'utilisation d'images ou d'enregistrements d'audience à des fins commerciales et/ou promotionnelles. Veuillez parler à un membre du personnel si vous avez besoin de plus d'informations. · Commence 20:00 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1782349660370_3jni",
-        "title": {
-          "en": "Thievery Corporation",
-          "es": "Thievery Corporation",
-          "pt": "Thievery Corporation",
-          "fr": "Thievery Corporation"
-        },
-        "date": "2026-06-26",
-        "venue": "Miami Beach Bandshell",
-        "address": "7275 Collins Avenue, Miami Beach FL 33141, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-Yjw&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/373/ff0e983f-3eba-4afa-8f94-76c9cf88f373_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Dance/Electronic · Starts 20:00 · Miami Beach Bandshell",
-          "es": "Música · Danza/Electrónica · Comienza 20:00 · Miami Beach Bandshell",
-          "pt": "Música · Dança/Eletrônica · Começa 20:00 · Miami Beach Bandshell",
-          "fr": "Musique · Danse/Électronique · Commence 20:00 · Miami Beach Bandshell"
-        },
-        "lat": 25.8619,
-        "lng": -80.1259
-      },
-      {
-        "id": "tm_1782349660370_a3pe",
-        "title": {
-          "en": "Fonseca - Celebracion Mundial",
-          "es": "Fonseca - Celebración Mundial",
-          "pt": "Fonseca - Celebração Mundial",
-          "fr": "Fonseca - Célébration Mondiale"
-        },
-        "date": "2026-06-26",
-        "venue": "Doral Amphitheater at Doral Central Park",
-        "address": "3005 NW 92nd Avenue, Doral, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ffonseca-celebracion-mundial-doral-florida-06-26-2026%2Fevent%2F0D00647188A150FD&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/5f4/f9a9173b-8249-431f-ac8d-95dbfec145f4_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "El bogotano Juan Fernando Fonseca Carrera, 'Fonseca', es un cantautor que fusiona diferentes géneros musicales como el vallenato, pop, rock, salsa, tambora y merengue, mezclando el pop con diversos ritmos folclóricos. Considera sus maestros a artistas como: Rubén Blades, Carlos Vives, Beck, Seal, Miguel Bosé, Phoenix, Soda Stereo... y tiene innumerables discos de oro y varios Grammys latinos.Entre",
-          "es": "El bogotano Juan Fernando Fonseca Carrera, 'Fonseca', es un cantautor que fusiona diferentes géneros musicales como el vallenato, pop, rock, salsa, tambora y merengue, mezclando el pop con diversos ritmos folclóricos. Considera sus maestros a artistas como: Rubén Blades, Carlos Vives, Beck, Seal, Miguel Bosé, Phoenix, Soda Stereo... y tiene innumerables discos de oro y varios Grammys latinos.",
-          "pt": "O bogotano Juan Fernando Fonseca Carrera, 'Fonseca', é um cantor-compositor que funde diferentes gêneros musicais como vallenato, pop, rock, salsa, tambora e merengue, misturando pop com diversos ritmos folclóricos. Considera como seus mestres artistas como: Rubén Blades, Carlos Vives, Beck, Seal, Miguel Bosé, Phoenix, Soda Stereo... e tem inúmeros discos de ouro e vários Grammy latinos.",
-          "fr": "Le bogotain Juan Fernando Fonseca Carrera, 'Fonseca', est un auteur-compositeur qui fusionne différents genres musicaux comme le vallenato, le pop, le rock, la salsa, la tambora et la merengue, mélangeant la pop avec diverses rhythmes folkloriques. Il considère comme ses maîtres des artistes tels que : Rubén Blades, Carlos Vives, Beck, Seal, Miguel Bosé, Phoenix, Soda Stereo... et possède d'innombrables disques d'or et plusieurs Grammy latinos."
-        },
-        "lat": 25.8023,
-        "lng": -80.34397
-      },
-      {
-        "id": "tm_1782349660370_5nt8",
-        "title": {
-          "en": "Friday Night Live - Improv Comedy Miami Show",
-          "es": "Friday Night Live - Espectáculo de Comedia Improvisada en Miami",
-          "pt": "Friday Night Live - Show de Comédia de Improvisação em Miami",
-          "fr": "Friday Night Live - Spectacle de Comédie d'Improvisation à Miami"
-        },
-        "date": "2026-06-26",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14775013&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
-          "es": "¡Friday Night Live! - Comedia improvisada en Miami. Es la especial combinación de improvisación de formato corto y largo de JTF. Disfruta mientras nuestro elenco galardonado te trae una comedia improvisada fantástica perfecta para tu viernes por la noche en vivo. Nuestros shows a menudo se describen como comedia improvisada rápida. Piénsalo como Whose Line is It Anyway conoce SNL con mucha interacción divertida con la audiencia en el camino. Ven y sé parte de esto.",
-          "pt": "Friday Night Live! - Comédia de Improvisação em Miami. É a combinação especial de improvisação de formato curto e longo da JTF. Desfrute enquanto nosso elenco premiado traz a você uma fantástica comédia improvisada perfeita para sua noite de sexta-feira ao vivo. Nossos shows são frequentemente descritos como comédia improvisada acelerada. Pense em Whose Line is It Anyway conhece SNL com muita interação divertida com o público pelo caminho. Venha fazer parte disso.",
-          "fr": "Friday Night Live! - Comédie d'Improvisation à Miami. C'est la combinaison spéciale de l'improvisation de format court et long de JTF. Profitez pendant que notre cast récompensé vous apporte une fantastique comédie improvisée parfaite pour votre vendredi soir en direct. Nos spectacles sont souvent décrits comme de la comédie improvisée rapide. Pensez à Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction amusante avec le public en cours de route. Venez en faire partie."
-        },
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
-        "id": "tm_1782349660370_qdbt",
-        "title": {
-          "en": "¡Dale! Impro - Impro en español",
-          "es": "¡Dale! Impro - Impro en español",
-          "pt": "¡Dale! Impro - Impro em espanhol",
-          "fr": "¡Dale! Impro - Impro en español"
-        },
-        "date": "2026-06-26",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdale-impro-impro-just-the-funny-tickets%2F14195414&utm_medium=affiliate",
-        "free": false,
-        "price": "$18",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Preprate para una noche donde t puedes ser parte del show!Dale! Impro es comedia improvisada en espaol y Spanglish, con toda la energa, sabor y diversidad de Miami.Sin guion y sin filtros, un elenco internacional transforma las sugerencias del pblico en escenas interactivas, inesperadas y llenas de humor. Cada show es nico y cualquier cosa puede pasar.Aqu el pblico tiene la palabra. Ven con ganas ",
-          "es": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único y cualquier cosa puede pasar. Aquí el público tiene la palabra. Ven con ganas.",
-          "pt": "Prepare-se para uma noite onde você pode ser parte do show! ¡Dale! Impro é comédia improvisada em espanhol e Spanglish, com toda a energia, sabor e diversidade de Miami. Sem roteiro e sem filtros, um elenco internacional transforma as sugestões do público em cenas interativas, inesperadas e cheias de humor. Cada show é único e qualquer coisa pode acontecer. Aqui o público tem a palavra. Venha com vontade.",
-          "fr": "Préparez-vous pour une soirée où vous pouvez être partie du spectacle ! ¡Dale! Impro est de la comédie improvisée en espagnol et Spanglish, avec toute l'énergie, la saveur et la diversité de Miami. Sans scénario et sans filtres, un cast international transforme les suggestions du public en scènes interactives, inattendues et pleines d'humour. Chaque spectacle est unique et n'importe quoi peut arriver. Ici, le public a la parole. Venez avec de l'envie."
-        },
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
-        "id": "tm_1782349660370_ksui",
-        "title": {
-          "en": "Gorgon City",
-          "es": "Gorgon City",
-          "pt": "Gorgon City",
-          "fr": "Gorgon City"
-        },
-        "date": "2026-06-26",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fgorgon-city-liv-nightclub-miami-tickets%2F14851283&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/656/eff6ecb9-4244-4021-b640-e29d55f48656_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de boleto que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso que não possa apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
-        "id": "tm_1782349660370_iu2w",
-        "title": {
-          "en": "Emo Night Brooklyn",
-          "es": "Emo Night Brooklyn",
-          "pt": "Emo Night Brooklyn",
-          "fr": "Emo Night Brooklyn"
-        },
-        "date": "2026-06-27",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Femo-night-brooklyn-ft-lauderdale-florida-06-27-2026%2Fevent%2F0D00649CFE356CBD&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/bda/204a558e-2376-42c5-a169-37195950ebda_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Emo Night Brooklyn will be performing at Revolution Live on Saturday, June 27th. This event is 21+. Doors open at 10:30pm. Show starts at 10:45pm. All support acts are subject to change without notice. · Starts 22:30 · Revolution Live",
-          "es": "Emo Night Brooklyn se presentará en Revolution Live el sábado 27 de junio. Este evento es 21+. Las puertas abren a las 10:30 p.m. El show comienza a las 10:45 p.m. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 22:30 · Revolution Live",
-          "pt": "Emo Night Brooklyn se apresentará na Revolution Live no sábado, 27 de junho. Este evento é 21+. As portas abrem às 22:30. O show começa às 22:45. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 22:30 · Revolution Live",
-          "fr": "Emo Night Brooklyn se produira à Revolution Live samedi 27 juin. Cet événement est 21+. Les portes ouvrent à 22:30. Le spectacle commence à 22:45. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 22:30 · Revolution Live"
-        },
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1782349660370_irac",
-        "title": {
-          "en": "Carín León - De Sonora Para El Mundo Tour 2026",
-          "es": "Carín León - De Sonora Para El Mundo Tour 2026",
-          "pt": "Carín León - De Sonora Para El Mundo Tour 2026",
-          "fr": "Carín León - De Sonora Para El Mundo Tour 2026"
-        },
-        "date": "2026-06-28",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcarin-leon-de-sonora-para-el-miami-florida-06-28-2026%2Fevent%2F0D006451E9CA86DB&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/169/a5772a1a-973d-49ac-a04c-ec13429b0169_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Grammy winner Carín León will headline the historic first-ever concert at Nu Stadium, Inter Miami CF's new world-class home at Miami Freedom Park. The global Mexican music star will become the inaugural artist to perform at the landmark venue. · Starts 20:00 · Nu Stadium",
-          "es": "El ganador del Grammy Carín León encabezará el primer concierto histórico en Nu Stadium, el nuevo hogar de clase mundial del Inter Miami CF en Miami Freedom Park. La estrella global de la música mexicana se convertirá en el primer artista en actuar en el lugar emblemático. · Comienza 20:00 · Nu Stadium",
-          "pt": "O vencedor do Grammy Carín León será o destaque do primeiro show histórico no Nu Stadium, o novo lar de classe mundial do Inter Miami CF no Miami Freedom Park. A estrela global da música mexicana se tornará o primeiro artista a se apresentar no icônico local. · Começa 20:00 · Nu Stadium",
-          "fr": "Le lauréat du Grammy Carín León sera en vedette au premier concert historique du Nu Stadium, le nouveau siège de classe mondiale de l'Inter Miami CF à Miami Freedom Park. La superstar mondiale de la musique mexicaine deviendra le premier artiste à se produire dans ce lieu emblématique. · Commence 20:00 · Nu Stadium"
-        },
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
-        "id": "tm_1782349660370_v60s",
-        "title": {
-          "en": "Ariana Grande - The Eternal Sunshine Tour",
-          "es": "Ariana Grande - The Eternal Sunshine Tour",
-          "pt": "Ariana Grande - The Eternal Sunshine Tour",
-          "fr": "Ariana Grande - The Eternal Sunshine Tour"
-        },
-        "date": "2026-06-30",
-        "venue": "Amerant Bank Arena ",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fariana-grande-tickets%2Fsunrise-florida-amerant-bank-arena-2026-06-30-7-30-pm%2Fconcert%2F17690134&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/adb/fc874544-aef0-468d-8db5-0507863cbadb_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:30 · Amerant Bank Arena ",
-          "es": "Música · Rock · Comienza 19:30 · Amerant Bank Arena",
-          "pt": "Música · Rock · Começa 19:30 · Amerant Bank Arena",
-          "fr": "Musique · Rock · Commence 19:30 · Amerant Bank Arena"
-        },
-        "lat": 26.155362,
-        "lng": -80.33023
-      },
-      {
-        "id": "tm_1782349660370_qmqe",
-        "title": {
-          "en": "Ariana Grande - The Eternal Sunshine Tour",
-          "es": "Ariana Grande - The Eternal Sunshine Tour",
-          "pt": "Ariana Grande - The Eternal Sunshine Tour",
-          "fr": "Ariana Grande - The Eternal Sunshine Tour"
-        },
-        "date": "2026-06-30",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qoav&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/adb/fc874544-aef0-468d-8db5-0507863cbadb_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:00 · Amerant Bank Arena",
-          "es": "Música · Pop · Comienza 20:00 · Amerant Bank Arena",
-          "pt": "Música · Pop · Começa 20:00 · Amerant Bank Arena",
-          "fr": "Musique · Pop · Commence 20:00 · Amerant Bank Arena"
-        },
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
-        "id": "tm_1782349660370_8q5d",
-        "title": {
-          "en": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR",
-          "es": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR",
-          "pt": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR",
-          "fr": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR"
-        },
-        "date": "2026-07-01",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fshakira-las-mujeres-ya-no-lloran-miami-florida-07-01-2026%2Fevent%2F0D006471AADBA8DC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3ef/9655451f-d91d-4e8d-af0d-35a3267113ef_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:30 · Kaseya Center",
-          "es": "Música · Pop · Comienza 20:30 · Kaseya Center",
-          "pt": "Música · Pop · Começa 20:30 · Kaseya Center",
-          "fr": "Musique · Pop · Commence 20:30 · Kaseya Center"
-        },
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1782349660370_frcp",
-        "title": {
-          "en": "Madison Beer: the locket tour",
-          "es": "Madison Beer: the locket tour",
-          "pt": "Madison Beer: the locket tour",
-          "fr": "Madison Beer: the locket tour"
-        },
-        "date": "2026-07-02",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmadison-beer-the-locket-tour-hollywood-florida-07-02-2026%2Fevent%2F0D00642E8B874539&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/dbc/7fe79548-3bd3-473a-b130-56d83b3eddbc_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 19:30 · Hard Rock Live",
-          "es": "Música · Pop · Comienza 19:30 · Hard Rock Live",
-          "pt": "Música · Pop · Começa 19:30 · Hard Rock Live",
-          "fr": "Musique · Pop · Commence 19:30 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1782349660370_pant",
-        "title": {
-          "en": "Steve Aoki",
-          "es": "Steve Aoki",
-          "pt": "Steve Aoki",
-          "fr": "Steve Aoki"
-        },
-        "date": "2026-07-02",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsteve-aoki-liv-nightclub-miami-tickets%2F14940203&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/957/e871e3e0-63ee-4c06-828f-844669576957_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier comprador de entrada que no pueda presentar identificación válida que indique que tiene al menos 21 años no será admitido a este evento y no será elegible para reembolso. · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer comprador de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
-        "id": "tm_1782349660370_8slo",
-        "title": {
-          "en": "Loud Luxury",
-          "es": "Loud Luxury",
-          "pt": "Loud Luxury",
-          "fr": "Loud Luxury"
-        },
-        "date": "2026-07-04",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Floud-luxury-liv-nightclub-miami-tickets%2F14967953&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/0a8/08b08804-b82d-45d4-8a1e-fdc11dacc0a8_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier comprador de entrada que no pueda presentar identificación válida que indique que tiene al menos 21 años no será admitido a este evento y no será elegible para reembolso. · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer comprador de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
-        "id": "tm_1782349660370_eqw6",
-        "title": {
-          "en": "Tame Impala - The Deadbeat Tour",
-          "es": "Tame Impala - The Deadbeat Tour",
-          "pt": "Tame Impala - The Deadbeat Tour",
-          "fr": "Tame Impala - The Deadbeat Tour"
-        },
-        "date": "2026-07-06",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftame-impala-the-deadbeat-tour-miami-florida-07-06-2026%2Fevent%2F0D00645172B73179&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/cd0/d26204db-9477-43df-965b-ee262dc05cd0_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "No Resale Over Face Value: Tame Impala is using Ticketmaster's Face Value Exchange to help fans get tickets at the original price. Tickets can only be resold on Ticketmaster at face value. States Blocking Artist Resale Terms: New York, Illinois, Colorado, Virginia, Utah and Connecticut have state laws that prevent resale restrictions. In those states, Ticketmaster will still honor Tame Impala's te",
-          "es": "Sin reventa por encima del valor nominal: Tame Impala utiliza el Intercambio de Valor Nominal de Ticketmaster para ayudar a los fans a obtener entradas al precio original. Las entradas solo se pueden revender en Ticketmaster al valor nominal. Estados que bloquean términos de reventa de artistas: Nueva York, Illinois, Colorado, Virginia, Utah y Connecticut tienen leyes estatales que previenen restricciones de reventa.",
-          "pt": "Sem revenda acima do valor de face: Tame Impala está usando o Face Value Exchange do Ticketmaster para ajudar os fãs a obter ingressos pelo preço original. Os ingressos só podem ser revendidos no Ticketmaster pelo valor de face. Estados que bloqueiam termos de revenda de artistas: Nova York, Illinois, Colorado, Virgínia, Utah e Connecticut têm leis estaduais que impedem restrições de revenda.",
-          "fr": "Pas de revente au-dessus de la valeur nominale : Tame Impala utilise l'échange de valeur nominale de Ticketmaster pour aider les fans à obtenir des billets au prix initial. Les billets ne peuvent être revendus sur Ticketmaster qu'à leur valeur nominale. États bloquant les conditions de revente d'artistes : New York, Illinois, Colorado, Virginie, Utah et Connecticut ont des lois d'État qui empêchent les restrictions de revente."
-        },
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1782349660370_di25",
-        "title": {
-          "en": "In A Nutshell: Tribute To Alice In Chains",
-          "es": "En Pocas Palabras: Tributo a Alice In Chains",
-          "pt": "Em Poucas Palavras: Tributo a Alice In Chains",
-          "fr": "En Bref: Hommage à Alice In Chains"
-        },
-        "date": "2026-07-11",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fin-a-nutshell-tribute-to-alice-ft-lauderdale-florida-07-11-2026%2Fevent%2F0D0064A2064A9BBE&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/6aa/bf1a3390-c389-4ff3-a345-2d83c94996aa_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "In A Nutshell: Tribute To Alice In Chains will be performing at Revolution Live on Saturday, July 11th with special guests Fate No More: Faith No More Tribute. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "En Pocas Palabras: Tributo a Alice In Chains se presentará en Revolution Live el sábado 11 de julio con invitados especiales Fate No More: Tributo a Faith No More. Este evento es para todas las edades. Las puertas abren a las 7pm. El espectáculo comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Inicia 19:00 · Revolution Live",
-          "pt": "Em Poucas Palavras: Tributo a Alice In Chains apresentará no Revolution Live no sábado, 11 de julho com convidados especiais Fate No More: Tributo a Faith No More. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de abertura estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "En Bref: Hommage à Alice In Chains se produira au Revolution Live le samedi 11 juillet avec les invités spéciaux Fate No More: Hommage à Faith No More. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes d'ouverture sont sujets à modification sans préavis. · Débute 19:00 · Revolution Live"
-        },
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1782349660370_9k25",
-        "title": {
-          "en": "Gimme Gimme Disco: A Disco Dance Party in Miami",
-          "es": "Gimme Gimme Disco: Una Fiesta de Baile Disco en Miami",
-          "pt": "Gimme Gimme Disco: Uma Festa de Dança Disco em Miami",
-          "fr": "Gimme Gimme Disco: Une Fête de Danse Disco à Miami"
-        },
-        "date": "2026-07-11",
-        "venue": "Lincoln's Beard",
-        "address": "7360 SW 41st St. , Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fgimme-gimme-disco-a-disco-lincolns-beard-tickets%2F14931883&utm_medium=affiliate",
-        "free": false,
-        "price": "$23",
-        "image": "https://s1.ticketm.net/dam/a/118/4eb4c022-ae5b-49b0-8875-3991a9baa118_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 20:00 · Lincoln's Beard",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de boleto que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Inicia 20:00 · Lincoln's Beard",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso que não consiga apresentar identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 20:00 · Lincoln's Beard",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout porteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Débute 20:00 · Lincoln's Beard"
-        },
-        "lat": 25.7321134,
-        "lng": -80.3143626
-      },
-      {
-        "id": "tm_1782349660370_dwdc",
-        "title": {
-          "en": "J. Cole: The Fall-Off Tour",
-          "es": "J. Cole: The Fall-Off Tour",
-          "pt": "J. Cole: The Fall-Off Tour",
-          "fr": "J. Cole: The Fall-Off Tour"
-        },
-        "date": "2026-07-14",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fj-cole-the-falloff-tour-miami-florida-07-14-2026%2Fevent%2F0D00644AF476CCED&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/4f4/44bb1cf4-fdde-49a8-813a-440dc24234f4_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Hip-Hop/Rap · Starts 20:00 · Kaseya Center",
-          "es": "Música · Hip-Hop/Rap · Inicia 20:00 · Kaseya Center",
-          "pt": "Música · Hip-Hop/Rap · Começa 20:00 · Kaseya Center",
-          "fr": "Musique · Hip-Hop/Rap · Débute 20:00 · Kaseya Center"
-        },
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1782349660370_milc",
-        "title": {
-          "en": "Men at Work w/ Toad the Wet Sprocket",
-          "es": "Men at Work con Toad the Wet Sprocket",
-          "pt": "Men at Work com Toad the Wet Sprocket",
-          "fr": "Men at Work avec Toad the Wet Sprocket"
-        },
-        "date": "2026-07-16",
-        "venue": "Pompano Beach Amphitheatre",
-        "address": "1806 Northeast 6th St., Pompano Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7OwGd&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 19:00 · Pompano Beach Amphitheatre",
-          "es": "Música · Otros · Inicia 19:00 · Pompano Beach Amphitheatre",
-          "pt": "Música · Outros · Começa 19:00 · Pompano Beach Amphitheatre",
-          "fr": "Musique · Autre · Débute 19:00 · Pompano Beach Amphitheatre"
-        },
-        "lat": 26.2349,
-        "lng": -80.120102
-      },
-      {
-        "id": "tm_1782349660370_py15",
-        "title": {
-          "en": "Welcome to Destruction with Talk Dirty 2 Me",
-          "es": "Bienvenido a la Destrucción con Talk Dirty 2 Me",
-          "pt": "Bem-vindo à Destruição com Talk Dirty 2 Me",
-          "fr": "Bienvenue à la Destruction avec Talk Dirty 2 Me"
-        },
-        "date": "2026-07-17",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fwelcome-to-destruction-with-talk-dirty-ft-lauderdale-florida-07-17-2026%2Fevent%2F0D0064BAD1AA15EA&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3bc/b4331eeb-c5ff-4e57-8a80-848e154e53bc_1750081_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Welcome to Destruction - Tribute to Guns N Roses will be coming to Revolution Live on Friday, July 17th with special guests Talk Dirty to Me - Tribute to Poison. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "Welcome to Destruction - Tributo a Guns N Roses llegará a Revolution Live el viernes 17 de julio con invitados especiales Talk Dirty to Me - Tributo a Poison. Este evento es para todas las edades. Las puertas abren a las 7pm. El espectáculo comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Inicia 19:00 · Revolution Live",
-          "pt": "Welcome to Destruction - Tributo a Guns N Roses virá ao Revolution Live na sexta-feira, 17 de julho com convidados especiais Talk Dirty to Me - Tributo a Poison. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de abertura estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "Welcome to Destruction - Hommage à Guns N Roses sera au Revolution Live vendredi 17 juillet avec les invités spéciaux Talk Dirty to Me - Hommage à Poison. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes d'ouverture sont sujets à modification sans préavis. · Débute 19:00 · Revolution Live"
-        },
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1782349660370_ibit",
-        "title": {
-          "en": "Megan Moroney",
-          "es": "Megan Moroney",
-          "pt": "Megan Moroney",
-          "fr": "Megan Moroney"
-        },
-        "date": "2026-07-18",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7O7O4&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/0e5/4cddc4da-bd12-4432-ae88-658d7c2730e5_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 19:00 · Amerant Bank Arena",
-          "es": "Música · Otros · Comienza 19:00 · Amerant Bank Arena",
-          "pt": "Música · Outros · Começa 19:00 · Amerant Bank Arena",
-          "fr": "Musique · Autres · Débute 19:00 · Amerant Bank Arena"
-        },
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
-        "id": "tm_1782349660370_cxi1",
-        "title": {
-          "en": "The Fixx",
-          "es": "The Fixx",
-          "pt": "The Fixx",
-          "fr": "The Fixx"
-        },
-        "date": "2026-07-19",
-        "venue": "Culture Room",
-        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-fixx-ft-lauderdale-florida-07-19-2026%2Fevent%2F0D0064A8AB179780&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/445/6a7fc4f8-0573-4ce3-bfac-c012d0724445_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Fixx with special guests Doors open 7:00pm · Starts 19:00 · Culture Room",
-          "es": "The Fixx con artistas especiales Las puertas abren a las 7:00pm · Comienza 19:00 · Culture Room",
-          "pt": "The Fixx com convidados especiais As portas abrem às 19:00 · Começa 19:00 · Culture Room",
-          "fr": "The Fixx avec artistes invités Les portes ouvrent à 19:00 · Débute 19:00 · Culture Room"
-        },
-        "lat": 26.166888,
-        "lng": -80.117058
-      },
-      {
-        "id": "tm_1782349660370_otz8",
-        "title": {
-          "en": "Louis Tomlinson - How Did We Get Here? World Tour",
-          "es": "Louis Tomlinson - How Did We Get Here? World Tour",
-          "pt": "Louis Tomlinson - How Did We Get Here? World Tour",
-          "fr": "Louis Tomlinson - How Did We Get Here? World Tour"
-        },
-        "date": "2026-07-24",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Flouis-tomlinson-how-did-we-get-miami-florida-07-24-2026%2Fevent%2F0D00633AE3554582&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/68c/b3dcece4-12b0-4210-8bb1-a0a36478768c_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:00 · Kaseya Center",
-          "es": "Música · Rock · Comienza 19:00 · Kaseya Center",
-          "pt": "Música · Rock · Começa 19:00 · Kaseya Center",
-          "fr": "Musique · Rock · Débute 19:00 · Kaseya Center"
-        },
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1782349660370_vrgf",
-        "title": {
-          "en": "Lionel Richie and Earth, Wind & Fire - Sing a Song All Night Long",
-          "es": "Lionel Richie and Earth, Wind & Fire - Sing a Song All Night Long",
-          "pt": "Lionel Richie and Earth, Wind & Fire - Sing a Song All Night Long",
-          "fr": "Lionel Richie and Earth, Wind & Fire - Sing a Song All Night Long"
-        },
-        "date": "2026-07-24",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Flionel-richie-and-earth-wind-fire-hollywood-florida-07-24-2026%2Fevent%2F0D00643785258D8E&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/f8e/4195d6cf-435f-42e5-a4c5-529b6a222f8e_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 19:30 · Hard Rock Live",
-          "es": "Música · Pop · Comienza 19:30 · Hard Rock Live",
-          "pt": "Música · Pop · Começa 19:30 · Hard Rock Live",
-          "fr": "Musique · Pop · Débute 19:30 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1782349660370_57fp",
-        "title": {
-          "en": "The Chili Poppers with American Idiots",
-          "es": "The Chili Poppers with American Idiots",
-          "pt": "The Chili Poppers with American Idiots",
-          "fr": "The Chili Poppers with American Idiots"
-        },
-        "date": "2026-07-25",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-chili-poppers-with-american-idiots-ft-lauderdale-florida-07-25-2026%2Fevent%2F0D0064BAD2781A23&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/76b/e56eb30d-b711-4ef2-833b-fc56f4b7276b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Chili Poppers - A Tribute to Red Hot Chili Peppers will be coming to Revolution Live on Saturday, July 25th with special guests American Idiots - A Tribute to Green Day. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "The Chili Poppers - Un Tributo a Red Hot Chili Peppers vendrá a Revolution Live el sábado 25 de julio con artistas especiales American Idiots - Un Tributo a Green Day. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
-          "pt": "The Chili Poppers - Uma Homenagem ao Red Hot Chili Peppers virá para Revolution Live no sábado, 25 de julho com convidados especiais American Idiots - Uma Homenagem ao Green Day. Este evento é para todas as idades. As portas abrem às 19:00. O show começa às 20:00. Todos os atos de abertura estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "The Chili Poppers - Un Hommage aux Red Hot Chili Peppers viendra à Revolution Live samedi 25 juillet avec artistes invités American Idiots - Un Hommage aux Green Day. Cet événement est pour tous les âges. Les portes ouvrent à 19:00. Le spectacle commence à 20:00. Tous les actes de soutien sont sujets à modification sans préavis. · Débute 19:00 · Revolution Live"
-        },
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1782349660370_oswq",
-        "title": {
-          "en": "Reparton Fest",
-          "es": "Reparton Fest",
-          "pt": "Reparton Fest",
-          "fr": "Reparton Fest"
-        },
-        "date": "2026-07-25",
-        "venue": "Doral Amphitheater at Doral Central Park",
-        "address": "3005 NW 92nd Avenue, Doral, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Freparton-fest-doral-florida-07-25-2026%2Fevent%2F0D0064C8D385BA59&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/838/507dd585-3629-433b-be63-cff6bd7b1838_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 19:00 · Doral Amphitheater at Doral Central Park",
-          "es": "Música · Latino · Comienza 19:00 · Anfiteatro Doral en Doral Central Park",
-          "pt": "Música · Latino · Começa 19:00 · Anfiteatro Doral no Doral Central Park",
-          "fr": "Musique · Latin · Commence 19:00 · Amphithéâtre Doral au Doral Central Park"
-        },
-        "lat": 25.8023,
-        "lng": -80.34397
-      },
-      {
-        "id": "tm_1782349660370_oomf",
-        "title": {
-          "en": "Disturbed",
-          "es": "Disturbed",
-          "pt": "Disturbed",
-          "fr": "Disturbed"
-        },
-        "date": "2026-07-25",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdisturbed-hollywood-florida-07-25-2026%2Fevent%2F0D0064718DB65A41&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3a4/ad94c45b-ab0d-47c3-9bef-a93aa6d983a4_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Metal · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Metal · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · Metal · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · Metal · Commence 20:00 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1782349660370_a9tt",
-        "title": {
-          "en": "Trap Orchestra Live!",
-          "es": "¡Trap Orchestra en Vivo!",
-          "pt": "Trap Orchestra Ao Vivo!",
-          "fr": "Trap Orchestra en Direct!"
-        },
-        "date": "2026-07-25",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftrap-orchestra-live-ft-lauderdale-florida-07-25-2026%2Fevent%2F0D00648DA38973EB&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/242/4f9ceb2a-a078-48fc-a47d-3efd3858a242_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Prepare to experience trap music like never before! Trap Orchestra Live! is an electrifying fusion of classical instrumentation and the hard-hitting beats of your favorite trap songs. Join us for a unique trap concert as one of the best bands takes the city on an unforgettable musical journey! Come out for a night where elegance meets energy, as some of the South's most talented instrumentalists r",
-          "es": "¡Prepárate para experimentar la música trap como nunca antes! Trap Orchestra en Vivo es una fusión electrizante de instrumentación clásica y los ritmos contundentes de tus canciones trap favoritas. ¡Únete a nosotros para un concierto trap único mientras una de las mejores bandas lleva a la ciudad en un viaje musical inolvidable! ¡Ven a pasar una noche donde la elegancia se encuentra con la energía, mientras algunos de los instrumentistas más talentosos del Sur!",
-          "pt": "Prepare-se para experimentar a música trap como nunca antes! Trap Orchestra Ao Vivo é uma fusão eletrificante de instrumentação clássica e os batidas poderosas de suas músicas trap favoritas. Junte-se a nós para um show de trap único enquanto uma das melhores bandas leva a cidade em uma jornada musical inesquecível! Venha para uma noite onde a elegância encontra a energia, com alguns dos instrumentistas mais talentosos do Sul!",
-          "fr": "Préparez-vous à expérimenter la musique trap comme jamais auparavant! Trap Orchestra en Direct est une fusion électrisante d'instrumentation classique et des rythmes puissants de vos chansons trap préférées. Rejoignez-nous pour un concert trap unique alors que l'un des meilleurs groupes emmène la ville dans un voyage musical inoubliable! Venez pour une soirée où l'élégance rencontre l'énergie, avec certains des instrumentistes les plus talentueux du Sud!"
-        },
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1782349660370_aval",
-        "title": {
-          "en": "Emo Night Brooklyn in Miami",
-          "es": "Emo Night Brooklyn en Miami",
-          "pt": "Emo Night Brooklyn em Miami",
-          "fr": "Emo Night Brooklyn à Miami"
-        },
-        "date": "2026-07-25",
-        "venue": "Lincoln's Beard",
-        "address": "7360 SW 41st St. , Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Femo-night-brooklyn-in-miami-lincolns-beard-tickets%2F14961863&utm_medium=affiliate",
-        "free": true,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/bda/204a558e-2376-42c5-a169-37195950ebda_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 20:00 · Lincoln's Beard",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años no será admitido a este evento y no será elegible para reembolso. · Comienza 20:00 · Lincoln's Beard",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso incapaz de apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 20:00 · Lincoln's Beard",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout porteur de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 20:00 · Lincoln's Beard"
-        },
-        "lat": 25.7321134,
-        "lng": -80.3143626
-      },
-      {
-        "id": "tm_1782349660370_vfzj",
-        "title": {
-          "en": "Lord Huron",
-          "es": "Lord Huron",
-          "pt": "Lord Huron",
-          "fr": "Lord Huron"
-        },
-        "date": "2026-07-28",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Flord-huron-miami-beach-florida-07-28-2026%2Fevent%2F0D006471BA9EC61A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/1f2/ccf74303-871a-4b28-b1d6-c00e5d8001f2_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Las entradas GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas son de pie y asiento y se basan en el orden de llegada. Tenga en cuenta que una vez que se alcance la capacidad de un área, se limitará a otras áreas abiertas. · Comienza 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Ingressos GA significam Admissão Geral. Isso significa que não há assentos designados. Estas áreas são em pé e sentadas e funcionam por ordem de chegada. Saiba que uma vez que a capacidade de uma área for atingida, você será limitado a outras áreas abertas. · Começa 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de sièges assignés. Ces zones sont debout et assises et fonctionnent selon le principe du premier arrivé, premier servi. Sachez qu'une fois la capacité d'une zone atteinte, vous serez limité aux autres zones ouvertes. · Commence 20:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "lat": 25.792917,
-        "lng": -80.13314
       }
     ]
   },

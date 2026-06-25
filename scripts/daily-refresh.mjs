@@ -22,6 +22,9 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!WORKER_URL)        { console.error('WORKER_URL is required');        process.exit(1); }
 if (!ANTHROPIC_API_KEY) { console.error('ANTHROPIC_API_KEY is required'); process.exit(1); }
 
+// Log Worker hostname so we can confirm the secret is correct in Actions logs.
+try { console.log(`  Worker: ${new URL(WORKER_URL).hostname}`); } catch { /* invalid URL — fetch will fail */ }
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function miamiToday() {
@@ -215,7 +218,8 @@ async function main() {
       content.guide.events.push(...added);
       console.log(`  ${label}: +${added.length} new`);
     } catch (err) {
-      console.error(`  [${label}] failed: ${err.message}`);
+      const cause = err.cause ? ` — cause: ${err.cause}` : '';
+      console.error(`  [${label}] failed: ${err.message}${cause}`);
     }
   }
 
@@ -246,7 +250,15 @@ async function main() {
       const result = await callClaude(
 `You are helping curate events for a Miami ride-share companion app. Passengers are tourists or locals on a short Lyft/Uber trip.
 
-For each event rate: "keep" (relevant, appealing, good for Miami visitors/locals) or "skip" (too niche, outside South Florida (Homestead to Boca Raton), or low-interest for a general audience). Add one short reason, max 8 words.
+For each item, rate "keep" (a specific, time-bound gathering at a real venue that passengers could attend) or "skip" for anything else.
+
+Rate "skip" if ANY of these apply:
+- It is a news article, blog post, deal, promotion, coupon, or evergreen tourism tip — not a specific dated event
+- venue is empty or is just the source/blog name (e.g. "Miami on the Cheap") — strong signal it is an article
+- It is outside South Florida (Homestead to Boca Raton)
+- It is too niche or low-interest for a general tourist/local audience
+
+Add one short reason, max 8 words.
 
 Return ONLY valid JSON — no markdown:
 { "<id>": { "verdict": "keep"|"skip", "reason": "..." }, ... }
