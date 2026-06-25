@@ -183,7 +183,7 @@ async function main() {
   // Cross-run title+venue dedup: prevents recurring daily packages (e.g. "Ride and Dine")
   // from accumulating one entry per date when Ticketmaster lists each day as a separate URL.
   const seenTitleVenue = new Set(
-    content.guide.events.map(e => `${e.title?.en || ''}|${e.venue || ''}`.toLowerCase())
+    content.guide.events.map(e => `${(e.title?.en || '').trim()}|${(e.venue || '').trim()}`.toLowerCase())
   );
 
   for (const [endpoint, idPrefix, label] of [
@@ -204,7 +204,7 @@ async function main() {
       for (const e of events) {
         if (!e.url || seenUrls.has(e.url)) continue;
         if (e.date && e.date < today) continue;
-        const tvKey = `${e.title}|${e.venue || e.source || ''}`.toLowerCase();
+        const tvKey = `${(e.title || '').trim()}|${(e.venue || e.source || '').trim()}`.toLowerCase();
         if (seenTitleVenue.has(tvKey)) continue;
         seenUrls.add(e.url);
         seenTitleVenue.add(tvKey);

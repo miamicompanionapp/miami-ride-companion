@@ -184,7 +184,7 @@ function mapEvent(ev) {
     description: descParts.join(' · ').slice(0, 400),
     url:         ev?.url || '',
     date:        ev?.dates?.start?.localDate || '',
-    venue:       venue?.name || '',
+    venue:       (venue?.name || '').trim(),
     address:     addressBits.join(', '),
     price,
     lat:         Number.isFinite(lat) ? lat : undefined,
