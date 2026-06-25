@@ -7,6 +7,49 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Daily refresh pipeline hardening  *(DONE 2026-06-25)*
+
+End-to-end fixes to the GitHub Actions daily-refresh job after it was silently failing.
+
+**Root cause:** `WORKER_URL` GitHub secret pointed to `metrekare.workers.dev` (GitHub
+username) instead of `miamicompanionapp.workers.dev` (Cloudflare account subdomain).
+Both RSS and Ticketmaster fetches returned "fetch failed" (network-level) with no
+diagnostics. Script continued and committed unchanged event data every day.
+
+**Fixes shipped:**
+
+1. **Error logging** — script now logs the Worker hostname at startup so the wrong URL
+   is immediately visible in Actions logs; `err.cause` is included in fetch failure
+   messages (Node native fetch buries the real error there, not in `err.message`).
+
+2. **AI review prompt** — tightened skip criteria: news articles, blog posts, deals/
+   coupons, empty/blog-name venue (strong signal it's an article not an event),
+   recurring daily tourist packages (bus tour combos, arena backstage tours), and
+   niche local shows with no recognizable acts. Previously only "too niche" and
+   "outside South Florida" were listed — Sonic deal and airplane museum articles
+   were passing through.
+
+3. **Cross-run title+venue dedup** — the URL dedup prevented exact-URL duplicates but
+   Ticketmaster lists recurring daily packages (e.g. "Ride and Dine!") with a fresh
+   URL per day. Added `seenTitleVenue` Set built from pre-existing events; incoming
+   events are skipped if title+venue already exists, regardless of URL.
+
+4. **Venue trim fix** (`ticketmaster-fetch.js`) — Ticketmaster API returns trailing
+   whitespace on some venue names (e.g. `"Amerant Bank Arena "`). This caused
+   title+venue keys to not match the stored entry, allowing duplicate events. Fixed
+   with `.trim()` in `mapEvent()` and defensively in the dedup key builder.
+   Test added: `backend.spec.js` "trims trailing whitespace from venue name".
+
+5. **Persistent review cache** (`scripts/review-cache.json`) — AI verdict (keep/skip)
+   is now saved by `title|venue` key after each run and committed alongside
+   `content.json`. Skip entries act as a permanent blocklist (event never re-added
+   even if it ages out of content.json and Ticketmaster resurfaces it). Keep entries
+   skip the Claude API call on future runs. GitHub Actions workflow updated to
+   `git add scripts/review-cache.json`. Pre-seeded with 4 known skips: Welcome to
+   Destruction, Off Campus Night, Sonic deal, airplane museum article.
+
+---
+
 ### [X] #36 Fix landing image blink on GPS re-render in a moving car  *(DONE 2026-06-23)*
 
 Root cause: `watchPosition` fires every ~2–3 seconds in a moving car. Each fire called `renderGuide()` → full `innerHTML` rebuild → every `<img>` destroyed and recreated → visible blink.

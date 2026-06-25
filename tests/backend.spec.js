@@ -212,6 +212,14 @@ test.describe('Backend: ticketmaster-fetch — mapEvent', { tag: ['@backend'] },
     expect(ev.price).toBe('');
   });
 
+  test('trims trailing whitespace from venue name', () => {
+    const ev = tm.mapEvent({
+      ...fullEvent,
+      _embedded: { venues: [{ ...fullEvent._embedded.venues[0], name: 'Amerant Bank Arena ' }] },
+    });
+    expect(ev.venue).toBe('Amerant Bank Arena');
+  });
+
   test('@negative degrades gracefully on a near-empty event (no throw, blank fields)', () => {
     const ev = tm.mapEvent({});
     expect(ev).toMatchObject({ title: '', date: '', venue: '', address: '', price: '', free: false, description: '' });
