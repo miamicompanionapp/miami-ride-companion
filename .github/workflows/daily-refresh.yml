@@ -29,7 +29,7 @@ jobs:
         run: |
           git config user.name  "daily-refresh[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/content.json
+          git add public/content.json scripts/review-cache.json
           git diff --staged --quiet && echo "No changes — skipping commit" && exit 0
           git commit -m "Daily refresh $(date -u +%Y-%m-%d) — events + weather"
           git pull --rebase

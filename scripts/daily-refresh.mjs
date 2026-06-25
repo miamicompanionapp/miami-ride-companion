@@ -14,7 +14,8 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const CONTENT_PATH = join(__dirname, '../public/content.json');
+const CONTENT_PATH    = join(__dirname, '../public/content.json');
+const CACHE_PATH      = join(__dirname, 'review-cache.json');
 
 const WORKER_URL = (process.env.WORKER_URL || '').replace(/\/$/, '');
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
@@ -165,10 +166,13 @@ async function main() {
   const today = miamiToday();
   console.log(`\n=== Daily refresh ${today} ===\n`);
 
-  // 1. Load content.json
+  // 1. Load content.json + review cache
   const content = JSON.parse(readFileSync(CONTENT_PATH, 'utf8'));
   if (!content.guide) content.guide = {};
   if (!Array.isArray(content.guide.events)) content.guide.events = [];
+
+  let reviewCache = {};
+  try { reviewCache = JSON.parse(readFileSync(CACHE_PATH, 'utf8')); } catch { /* fresh start */ }
 
   // 2. Drop past events
   const before = content.guide.events.length;
@@ -206,6 +210,7 @@ async function main() {
         if (e.date && e.date < today) continue;
         const tvKey = `${(e.title || '').trim()}|${(e.venue || e.source || '').trim()}`.toLowerCase();
         if (seenTitleVenue.has(tvKey)) continue;
+        if (reviewCache[tvKey]?.verdict === 'skip') continue; // permanently blocklisted
         seenUrls.add(e.url);
         seenTitleVenue.add(tvKey);
         const ev = {
@@ -240,12 +245,21 @@ async function main() {
     for (const ev of toGeocode) await geocodeEvent(ev);
   }
 
-  // 5. AI review — only events added this run
-  const newEvents = content.guide.events.filter(e => !preExistingIds.has(e.id));
-  if (newEvents.length) {
-    console.log(`  AI reviewing ${newEvents.length} new event(s)…`);
+  // 5. AI review — only events added this run that aren't already in the review cache
+  const allNewEvents = content.guide.events.filter(e => !preExistingIds.has(e.id));
+  // Build a map so we can look up title+venue for skipped events when writing to cache.
+  const newEventMeta = new Map(allNewEvents.map(e => [
+    e.id,
+    { tvKey: `${(e.title?.en || '').trim()}|${(e.venue || '').trim()}`.toLowerCase() },
+  ]));
+  const needsReview = allNewEvents.filter(e => !reviewCache[newEventMeta.get(e.id).tvKey]);
+  const cacheHits   = allNewEvents.length - needsReview.length;
+  if (cacheHits) console.log(`  AI review: ${cacheHits} event(s) skipped (already in cache)`);
+
+  if (needsReview.length) {
+    console.log(`  AI reviewing ${needsReview.length} new event(s)…`);
     const payload = {};
-    newEvents.forEach(e => {
+    needsReview.forEach(e => {
       payload[e.id] = {
         title: e.title.en,
         venue: e.venue,
@@ -276,6 +290,13 @@ Events:
 ${JSON.stringify(payload)}`);
 
       const ratings = JSON.parse(extractJson(result));
+
+      // Persist all verdicts to the review cache.
+      for (const [id, r] of Object.entries(ratings)) {
+        const meta = newEventMeta.get(id);
+        if (meta) reviewCache[meta.tvKey] = { verdict: r.verdict, reason: r.reason, cached: today };
+      }
+
       const skipIds = new Set(
         Object.entries(ratings).filter(([, v]) => v.verdict === 'skip').map(([id]) => id)
       );
@@ -287,6 +308,9 @@ ${JSON.stringify(payload)}`);
       console.error(`  AI review failed: ${err.message} — keeping all new events`);
     }
   }
+
+  // Save review cache (skip entries block future re-adds; keep entries avoid redundant API calls).
+  writeFileSync(CACHE_PATH, JSON.stringify(reviewCache, null, 2) + '\n', 'utf8');
 
   // 6. Translate events missing ES/PT/FR (in batches of 5)
   const needsTranslation = content.guide.events.filter(
