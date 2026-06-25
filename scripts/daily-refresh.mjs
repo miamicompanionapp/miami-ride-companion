@@ -180,6 +180,11 @@ async function main() {
 
   // 3. Fetch from Worker endpoints and merge
   const seenUrls = new Set(content.guide.events.map(e => e.url).filter(Boolean));
+  // Cross-run title+venue dedup: prevents recurring daily packages (e.g. "Ride and Dine")
+  // from accumulating one entry per date when Ticketmaster lists each day as a separate URL.
+  const seenTitleVenue = new Set(
+    content.guide.events.map(e => `${e.title?.en || ''}|${e.venue || ''}`.toLowerCase())
+  );
 
   for (const [endpoint, idPrefix, label] of [
     ['/api/rss-fetch',          'rss_', 'RSS'],
@@ -199,7 +204,10 @@ async function main() {
       for (const e of events) {
         if (!e.url || seenUrls.has(e.url)) continue;
         if (e.date && e.date < today) continue;
+        const tvKey = `${e.title}|${e.venue || e.source || ''}`.toLowerCase();
+        if (seenTitleVenue.has(tvKey)) continue;
         seenUrls.add(e.url);
+        seenTitleVenue.add(tvKey);
         const ev = {
           id:          genId(idPrefix),
           title:       { en: e.title, es: '', pt: '', fr: '' },
@@ -255,8 +263,9 @@ For each item, rate "keep" (a specific, time-bound gathering at a real venue tha
 Rate "skip" if ANY of these apply:
 - It is a news article, blog post, deal, promotion, coupon, or evergreen tourism tip — not a specific dated event
 - venue is empty or is just the source/blog name (e.g. "Miami on the Cheap") — strong signal it is an article
+- It is a recurring daily/weekly tourist package or venue tour (e.g. bus tours, combo dining packages, arena backstage tours) rather than a one-off event
 - It is outside South Florida (Homestead to Boca Raton)
-- It is too niche or low-interest for a general tourist/local audience
+- It is too niche or low-interest for a general tourist/local audience (e.g. very small local bands with no recognizable acts)
 
 Add one short reason, max 8 words.
 
