@@ -66,6 +66,22 @@ function extractJson(text) {
   return m[0];
 }
 
+// ── Event category inference ──────────────────────────────────────────────────
+
+const CAT_RULES = [
+  { cat: 'comedy',     re: /comedy|improv|stand.?up|laughing corpse|comic show/i },
+  { cat: 'sports',     re: /world cup|soccer|match day|fan fest|watch party|match \d+|kickoff pool|summer of soccer|michael irvin|el pibe/i },
+  { cat: 'arts',       re: /museum|gallery|theatre|theater|exhibition|ballet|opera|classical|film|cinema|wizard of oz|basquiat|pop air|jagged little pill/i },
+  { cat: 'nightlife',  re: /nightclub|afterparty|after party|welcome to destruction|off campus night|timelux/i },
+  { cat: 'food-drink', re: /brunch|swizzle|deli lane|pop.?up.*drink|rum bar|bloom.*caf|bloom.*restau/i },
+];
+
+function inferEventCategory(e) {
+  const title = e.title?.en || '';
+  for (const { cat, re } of CAT_RULES) if (re.test(title)) return cat;
+  return 'music';
+}
+
 // ── Weather ───────────────────────────────────────────────────────────────────
 
 const WD = {
@@ -349,7 +365,14 @@ ${JSON.stringify(payload)}`, 4000);
     }
   }
 
-  // 7. Refresh weather
+  // 7. Assign category to any event that doesn't have one yet
+  const needsCat = content.guide.events.filter(e => !e.category);
+  if (needsCat.length) {
+    console.log(`  assigning category to ${needsCat.length} event(s)…`);
+    needsCat.forEach(e => { e.category = inferEventCategory(e); });
+  }
+
+  // 8. Refresh weather
   console.log('  refreshing weather…');
   try {
     await refreshWeather(content);
@@ -357,7 +380,7 @@ ${JSON.stringify(payload)}`, 4000);
     console.error(`  weather failed: ${err.message} — keeping existing data`);
   }
 
-  // 8. Write content.json
+  // 9. Write content.json
   content.meta.lastUpdated  = new Date().toISOString();
   content.meta.publishedBy  = 'daily-refresh[bot]';
   writeFileSync(CONTENT_PATH, JSON.stringify(content, null, 2) + '\n', 'utf8');

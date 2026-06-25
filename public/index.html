@@ -330,6 +330,17 @@
     .pill-event { background: rgba(255,92,138,0.14); color: var(--pink-soft); border-color: rgba(255,92,138,0.32); }
     .pill-picks { background: var(--gold-light); color: #F0D08A; border-color: var(--gold-border); }
 
+    .event-cat-chips { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0 14px; scrollbar-width: none; }
+    .event-cat-chips::-webkit-scrollbar { display: none; }
+    .ecat-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 14px; border-radius: 20px;
+      font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap;
+      background: rgba(255,92,138,0.10); border: 1.5px solid rgba(255,92,138,0.25);
+      color: var(--pink-soft); transition: all var(--transition); flex-shrink: 0;
+    }
+    .ecat-chip.active { background: rgba(255,92,138,0.28); border-color: var(--pink-soft); color: #fff; }
+
     .guide-section-label {
       padding: 10px 22px 8px;
       font-size: 11px; font-weight: 700;
@@ -1882,6 +1893,7 @@
             </div>
             <div class="browse-scroll">
               <div class="browse-label" id="browse-label">All places</div>
+              <div class="event-cat-chips" id="event-cat-chips" style="display:none"></div>
               <div class="cards-grid" id="cards-grid">
                 <!-- Rendered by JS -->
               </div>
@@ -2693,6 +2705,7 @@ const APP_BUILD = 'a5c6ecb';
 let CONTENT = null;
 let lang = 'en';
 let currentFilter = 'featured';   // 'featured' = curated hero+minis landing; 'all' = full grid
+let currentEventCat = 'all';      // active event category chip filter
 let currentTab = 'guide';
 let userLat = null, userLng = null;
 let _gpsAcquired = false;       // true after first fix — switches home view to in-place distance updates
@@ -2847,6 +2860,33 @@ function buildContentCards() {
       headline: evtHeadline,
       sub:      evtSub,
       action: () => { switchTab('guide'); setFilter('event'); } },
+
+    // Per-category event cards — one per category with ≥2 upcoming events
+    ...(() => {
+      const upcoming = evts;
+      const countByCat = {};
+      upcoming.forEach(e => { if (e.category) countByCat[e.category] = (countByCat[e.category] || 0) + 1; });
+      return EVENT_CATS.filter(c => c.key !== 'all' && (countByCat[c.key] || 0) >= 2).map(c => {
+        const n = countByCat[c.key];
+        return {
+          id: 'events_cat_' + c.key,
+          visual: c.emoji || '🗓',
+          headline: {
+            en: `${n} ${c.label.en} event${n === 1 ? '' : 's'} near you`,
+            es: `${n} evento${n === 1 ? '' : 's'} de ${c.label.es} cerca`,
+            pt: `${n} evento${n === 1 ? '' : 's'} de ${c.label.pt} perto`,
+            fr: `${n} événement${n === 1 ? '' : 's'} ${c.label.fr} à proximité`,
+          },
+          sub: {
+            en: `Tap to see all ${c.label.en.toLowerCase()} events`,
+            es: `Toca para ver todos los eventos de ${c.label.es.toLowerCase()}`,
+            pt: `Toque para ver todos os eventos de ${c.label.pt.toLowerCase()}`,
+            fr: `Appuyez pour voir tous les événements ${c.label.fr.toLowerCase()}`,
+          },
+          action: () => { currentEventCat = c.key; switchTab('guide'); setFilter('event'); },
+        };
+      });
+    })(),
 
     { id: 'weather', visual: '☀️',
       headline: weatherHeadline,
@@ -3824,14 +3864,33 @@ function distClass(mi) {
 // ════════════════════════════════════════════════════════════
 const WEATHER_ICONS = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',51:'🌦️',61:'🌧️',80:'🌦️',95:'⛈️'};
 
+const EVENT_CATS = [
+  { key: 'all',        emoji: null,  label: { en:'All',       es:'Todos',       pt:'Todos',       fr:'Tout'      } },
+  { key: 'music',      emoji: '🎵',  label: { en:'Music',     es:'Música',      pt:'Música',      fr:'Musique'   } },
+  { key: 'sports',     emoji: '⚽',  label: { en:'Sports',    es:'Deportes',    pt:'Esportes',    fr:'Sports'    } },
+  { key: 'comedy',     emoji: '😂',  label: { en:'Comedy',    es:'Comedia',     pt:'Comédia',     fr:'Comédie'   } },
+  { key: 'arts',       emoji: '🎭',  label: { en:'Arts',      es:'Arte',        pt:'Arte',        fr:'Arts'      } },
+  { key: 'nightlife',  emoji: '🎉',  label: { en:'Nightlife', es:'Vida Nocturna', pt:'Balada',    fr:'Nuit'      } },
+  { key: 'food-drink', emoji: '🍹',  label: { en:'Food & Drink', es:'Gastronomía', pt:'Gastronomia', fr:'Gastronomia' } },
+  { key: 'free',       emoji: '🆓',  label: { en:'Free',         es:'Gratis',       pt:'Grátis',       fr:'Gratuit'    }, freeFlag: true },
+];
+
 function setFilter(f, silent = false) {
   currentFilter = f;
+  if (f !== 'event') currentEventCat = 'all';
   // Activate matching pill in BOTH rows (below-hero + sticky-top)
   document.querySelectorAll('.pill').forEach(p => {
     p.classList.toggle('active', p.dataset.filter === f);
   });
   renderGuide();
   if (!silent) logTap('filter_' + f);
+  resetInactivity();
+}
+
+function setEventCat(cat) {
+  currentEventCat = cat;
+  renderBrowseView([...CONTENT.guide.venues]);
+  logTap('event_filter_' + cat);
   resetInactivity();
 }
 
@@ -3907,26 +3966,48 @@ function renderHomeView(venues) {
 }
 
 function renderBrowseView(venues) {
-  // Filter
+  // Filter venues
   let filtered;
   if (currentFilter === 'picks')      filtered = venues.filter(v => v.abdullahsPick);
   else if (currentFilter === 'event') filtered = [];
-  else if (currentFilter === 'all')   filtered = venues;   // every venue, distance-sorted
+  else if (currentFilter === 'all')   filtered = venues;
   else                                filtered = venues.filter(v => v.category === currentFilter);
 
   // Label per filter
   const labelKey = currentFilter === 'event' ? 'event' : currentFilter;
   document.getElementById('browse-label').textContent = t('categories.' + labelKey) || 'Results';
 
+  // Event category chip strip — show only when Events filter is active
+  const chipsEl = document.getElementById('event-cat-chips');
+  if (currentFilter === 'event') {
+    const upcoming = upcomingEvents(CONTENT.guide.events);
+    const activeCats = new Set(upcoming.map(e => e.category).filter(Boolean));
+    const hasFree = upcoming.some(e => e.free);
+    chipsEl.style.display = 'flex';
+    chipsEl.innerHTML = EVENT_CATS
+      .filter(c => c.key === 'all' || (c.freeFlag ? hasFree : activeCats.has(c.key)))
+      .map(c => {
+        const lbl = c.label[lang] || c.label.en;
+        const isActive = currentEventCat === c.key;
+        return `<button class="ecat-chip${isActive ? ' active' : ''}" onclick="setEventCat('${c.key}')">
+          ${c.emoji ? c.emoji + ' ' : ''}${lbl}
+        </button>`;
+      }).join('');
+  } else {
+    chipsEl.style.display = 'none';
+  }
+
   // Grid
   const grid = document.getElementById('cards-grid');
   grid.innerHTML = '';
   filtered.forEach(v => grid.appendChild(buildVenueCard(v)));
 
-  // Events when Events filter active — only upcoming, soonest first, so past
-  // events drop off on their own with no manual cleanup.
+  // Events when Events filter active — only upcoming, soonest first, filtered by category chip
   if (currentFilter === 'event') {
-    upcomingEvents(CONTENT.guide.events).forEach(e => grid.appendChild(buildEventCard(e)));
+    let evts = upcomingEvents(CONTENT.guide.events);
+    if (currentEventCat === 'free')       evts = evts.filter(e => e.free);
+    else if (currentEventCat !== 'all')   evts = evts.filter(e => e.category === currentEventCat);
+    evts.forEach(e => grid.appendChild(buildEventCard(e)));
   }
 }
 
@@ -4215,7 +4296,7 @@ function buildEventCard(e) {
     ${photoBand}
     <div class="event-inner">
       <div class="event-top">
-        <div class="event-tag">${t('categories.event') || 'Event'}</div>
+        <div class="event-tag">${(() => { const c = EVENT_CATS.find(x => x.key === e.category); return c ? (c.emoji ? c.emoji + ' ' : '') + (c.label[lang] || c.label.en) : (t('categories.event') || 'Event'); })()}</div>
         <div class="event-date">${dateStr}</div>
       </div>
       <div class="event-name">${e.title[lang] || e.title.en}</div>
@@ -4229,7 +4310,7 @@ function buildEventCard(e) {
               : `<div class="price-badge">${t('guide.priceVaries') || 'Price varies'}</div>`)}
       </div>
     </div>`;
-  card.addEventListener('click', () => { logTap('event_' + e.id); openQR('event', e.id); });
+  card.addEventListener('click', () => { logTap('event_open_' + (e.category || 'event')); openQR('event', e.id); });
   return card;
 }
 

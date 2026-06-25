@@ -7,6 +7,27 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #51 — Events category field, filter chips, attractor cards, analytics  *(DONE 2026-06-25)*
+
+**Closed set of 6 categories:** `music | sports | comedy | arts | nightlife | food-drink`
+
+**What shipped:**
+- All 75 existing events in `content.json` assigned a `category` field (keyword heuristic + manual overrides for edge cases).
+- `daily-refresh.mjs` now auto-assigns `inferEventCategory()` to any new event that arrives without one.
+- Filter chip strip (`All · 🎵 Music · ⚽ Sports · 😂 Comedy · 🎭 Arts · 🎉 Nightlife · 🍹 Food`) appears above the event grid when Events filter is active. Only chips with ≥1 upcoming event are shown. Active chip state visually highlighted.
+- Event card badge now shows the category emoji + label instead of the generic "Event" tag.
+- `logTap('event_filter_<cat>')` on chip tap; `logTap('event_open_<cat>')` on card tap.
+- Category-specific attractor cards added to `buildContentCards()` for each category with ≥2 upcoming events — e.g. "42 Music events near you".
+- Attractor card tap pre-selects that category then navigates to the Events tab.
+- Editor: category dropdown in "Add Event Manually" form; category shown in event row meta.
+- SW bumped to `miami-ride-v1.45.0`.
+
+**Analytics unlocked:** `event_open_<cat>` taps are now captured. Feeds into backlog #52 (editor analytics breakdown) and informs manual event curation over time.
+
+**Unlocks:** backlog #52 (analytics category breakdown in editor) and #53 (already implemented as part of this item — attractor cards).
+
+---
+
 ### [X] Daily refresh pipeline hardening  *(DONE 2026-06-25)*
 
 End-to-end fixes to the GitHub Actions daily-refresh job after it was silently failing.

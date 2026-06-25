@@ -586,8 +586,19 @@
         <div class="field"><label>Description (English)</label><textarea id="new-event-desc-en" placeholder="Brief description of the event…"></textarea></div>
         <div class="field-grid">
           <div class="field"><label>URL (optional)</label><input id="new-event-url" type="url" placeholder="https://"></div>
-          <div><label style="display:block;font-size:11px;font-weight:600;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.5px">Free entry?</label>
-          <button class="toggle" id="new-event-free-toggle" onclick="this.classList.toggle('on')"></button></div>
+          <div class="field"><label>Category</label>
+            <select id="new-event-category" style="width:100%;padding:8px 10px;background:var(--card-solid);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px">
+              <option value="music">🎵 Music</option>
+              <option value="sports">⚽ Sports</option>
+              <option value="comedy">😂 Comedy</option>
+              <option value="arts">🎭 Arts</option>
+              <option value="nightlife">🎉 Nightlife</option>
+              <option value="food-drink">🍹 Food &amp; Drink</option>
+            </select>
+          </div>
+        </div>
+        <div><label style="display:block;font-size:11px;font-weight:600;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.5px">Free entry?</label>
+          <button class="toggle" id="new-event-free-toggle" onclick="this.classList.toggle('on')"></button>
         </div>
         <div style="display:flex;gap:8px;margin-top:4px">
           <button class="btn btn-ghost" onclick="aiTranslateEvent()"><i class="ti ti-sparkles"></i>Auto-translate to ES/PT/FR</button>
@@ -1279,7 +1290,7 @@ function renderEventList() {
     <div class="event-row" style="margin-bottom:6px">
       <div class="er-info">
         <div class="er-title" style="display:flex;align-items:center;gap:5px;flex-wrap:wrap">${e.title.en}${revBadge}${i18nBadge}</div>
-        <div class="er-meta">${fmtEventDate(e.date)} · ${e.venue}${e.free ? ' · Free' : (e.price ? ' · ' + e.price : '')}${skipReason}</div>
+        <div class="er-meta">${fmtEventDate(e.date)} · ${e.venue}${e.free ? ' · Free' : (e.price ? ' · ' + e.price : '')}${e.category ? ' · ' + e.category : ''}${skipReason}</div>
       </div>
       <div style="display:flex;gap:6px;align-items:center">
         <button class="btn btn-ghost btn-sm" onclick="aiTranslateEventQuick('${e.id}')"><i class="ti ti-sparkles"></i>Translate</button>
@@ -1331,6 +1342,7 @@ function addManualEvent() {
     venue: document.getElementById('new-event-venue').value.trim(),
     address: document.getElementById('new-event-address').value.trim(),
     url: document.getElementById('new-event-url').value.trim(),
+    category: document.getElementById('new-event-category').value,
     free: document.getElementById('new-event-free-toggle').classList.contains('on'),
     description: { en: document.getElementById('new-event-desc-en').value.trim(), es: '', pt: '', fr: '' }
   };

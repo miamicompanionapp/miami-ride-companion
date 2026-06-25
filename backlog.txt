@@ -37,7 +37,9 @@ Re-order freely; mark [X] when done.
  11. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
  12. [X] #17  Events auto-refresh — DONE 2026-06-23 (GitHub Actions, see archive)
  13. [X] #50  Ticketmaster — surface high-profile events buried by MAX_EVENTS cap (DONE 2026-06-23)
- 14. #51  Events — add category field + analytics tap tracking per category
+ 14. [X] #51  Events — category field + filter chips + analytics — DONE 2026-06-25
+ 15. #52  Analytics — event category breakdown in editor (prereq: #51)
+ 16. #53  Attractor cards — event category count cards (prereq: #51)
  18. #29  Games i18n — Word Puzzle (a) still pending; content.json migration (c) future
 
 
@@ -184,17 +186,36 @@ OPEN ITEMS
         - A panel in editor.html (Settings or a new section) showcasing Abdullah's other built apps.
         - Name, one-line description, and link for each app. Read-only, no editing needed.
 
-[ ] 51. Events — add category field + analytics tap tracking per category.
-        - Add a `category` field to each event in content.json (e.g. "cultural", "food-drink",
-          "nightlife", "sports", "family", "music"). Possible values TBD, keep it a small closed set.
-        - Wire up logTap('event_open_<category>') on event card tap in index.html so analytics
-          captures which categories passengers engage with.
-        - Goal: understand passenger interest patterns over time to inform which event types to
-          surface (e.g. prefer free cultural events if those consistently get more taps).
-        - Prerequisite for analytics: categories must exist first — don't add logTap until the
-          field is in content.json. Do both in the same pass.
-        - Editor: optionally surface category as a dropdown in the event edit panel.
+[X] 51. Events — add category field + filter chips + analytics tap tracking per category. DONE 2026-06-25.
+        - Closed set: music | sports | comedy | arts | nightlife | food-drink
+        - Add `category` field to all events in content.json (keyword heuristic in daily-refresh.mjs
+          assigns it automatically to new events; editor dropdown for manual override).
+        - Filter chip strip (All · 🎵 Music · ⚽ Sports · 😂 Comedy · 🎭 Arts · 🎉 Nightlife · 🍹 Food)
+          appears above the event grid when Events tab is active. Chips only shown for categories
+          that have ≥1 upcoming event.
+        - Wire logTap('event_filter_<cat>') on chip tap and logTap('event_open_<cat>') on card tap.
+        - Category shown as badge on each event card (replaces generic "Event" tag).
+        - Editor: category dropdown in event edit panel + shown in event row meta.
         - Added: 2026-06-19.
+
+[ ] 52. Analytics — event category breakdown in editor dashboard.
+        - In the editor Analytics panel, show a per-category tap count table:
+          Category | Taps | % of event taps
+          (derived from the taps store key prefix 'event_open_<cat>').
+        - Goal: Abdullah can see at a glance which event categories passengers engage with most,
+          then manually bias future event curation toward top performers.
+        - No AI needed — pure read of IndexedDB taps store, same as existing analytics export.
+        - Prerequisite: #51 (category field + logTap) must ship first.
+        - Added: 2026-06-25.
+
+[ ] 53. Attractor cards — event category count cards.
+        - Add dynamic attractor cards to buildContentCards() for categories with ≥2 upcoming events.
+        - Example: { visual:'🎵', headline:'45 concerts this month', sub:'Tap to see all music events',
+                     action: () => { switchTab('guide'); setFilter('event'); setEventCat('music'); } }
+        - Generate one card per active category (music, sports, comedy, arts, nightlife, food-drink).
+        - Headline copy should include the count and a short category label (EN/ES/PT/FR).
+        - Prerequisite: #51 (category field) must ship first.
+        - Added: 2026-06-25.
 
 [X] 50. Ticketmaster fetch — surface high-profile events. DONE 2026-06-23. See archive.
 
