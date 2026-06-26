@@ -7,6 +7,124 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Google Analytics GA4 — comprehensive "all in" tracking  *(DONE 2026-06-26)*
+
+Full GA4 instrumentation added to Miami Ride Companion. Separate from the custom IndexedDB analytics (which generates JSON reports); this tracks phone PWA installs and all user interactions in GA4 property `G-MCCTMMYD5R` (shared account, separate property from Miami Vegan App).
+
+**GA4 snippet** added to `<head>` with `send_page_view: false`; `track()` helper wraps `gtag()` with null-guard.
+
+**Events wired (30+ total):**
+
+| Event | When |
+|---|---|
+| `page_view` | App boot (`pwa_mode: standalone\|browser`) |
+| `install_gate_shown` | Gate shown (`platform: ios\|android\|other`) |
+| `install_gate_bypassed` | 5-tap developer bypass |
+| `language_switch` | Language picker tap |
+| `tab_view` | Tab navigation (`tab_name`) |
+| `filter_applied` | Category filter chip (`filter_name`) |
+| `venue_view` | Venue sheet open (`venue_name`, `venue_category`) |
+| `qr_opened` | QR modal open (`qr_type`, `qr_id`) |
+| `game_open` | Any game opened (`game_name`) |
+| `attractor_shown` | Attractor overlay shown |
+| `attractor_tap` | Attractor card tapped (`card_id`) |
+| `feedback_rating` | Emoji feedback selected (`rating` 1-5) |
+| `feedback_submitted` | Modal submit (`rating`, `chips_count`, `has_text`) |
+| `feedback_skipped` | Modal skip (`rating`) |
+| `feedback_teaser_tap` | Teaser CTA tapped |
+| `game_outcome` | Win/draw for TTT, C4, Duel (`game`, `result`, `winner`) |
+| `game_duel_false` | False start in Reaction Duel (`player`) |
+| `game_buzzer_timeout` | Buzzer timer expired (`player`) |
+| `game_trivia_answer` | Trivia answered (`correct`, `score`) |
+| `tap_final_score` | Tap Frenzy round ends (`score`, `is_best`) |
+| `game_word_guess` | Word puzzle guess (`correct`, `word_length`) |
+| `game_spin` | Facts Spinner spin (`count`, `category`) |
+| `game_img_answer` | Guess the Image answered (`correct`) |
+| `frogger_cross` | Frog crosses Biscayne Blvd (`score`) |
+| `inactivity_modal_shown` | "Still there?" modal appears |
+| `inactivity_dismissed` | User taps to stay |
+| `session_end` | Thanks screen shown |
+| `rest_enter` | Rest/blackout screen activated |
+| `rest_exit` | Rest screen dismissed |
+| `image_lightbox_open` | Photo lightbox opened |
+
+**user_properties** set at boot: `pwa_mode` (`standalone` / `browser`) for segmenting PWA installs vs. browser users.
+
+SW bumped to `miami-ride-v1.53.0`.
+
+---
+
+### [X] Test suite — Biscayne Dash + PWA gate coverage  *(DONE 2026-06-26)*
+
+**Critical fix:** The PWA gate's early `return` in `DOMContentLoaded` was preventing `bootApp()` from running in Playwright's non-standalone browser context — every test loading `index.html` was silently broken.
+- Gate check extended: `|| localStorage.getItem('pwa-bypass') === '1'`
+- `fixtures.js`: `page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'))` added before `use(page)` — all fixture-based tests bypass automatically.
+- `games-logic.spec.js` (uses `@playwright/test` directly): top-level `test.beforeEach` adds the same initScript before each `goto`.
+
+**New `pwa-gate.spec.js`** (4 tests, `@index @smoke`):
+- Gate visible + `#app` hidden in browser context
+- Correct platform panel shown (Chromium → "other")
+- 5 taps on icon bypass gate and boot app
+- `@negative` 4 taps don't bypass
+
+**New Frogger logic tests in `games-logic.spec.js`** (8 tests, `@games @unit`):
+- Start state: correct row/col/score/lives/running
+- All 4 moves change position by exactly 1 cell
+- Reaching row 0 → score +10, `froggerCelebrating = true`
+- Movement blocked during celebration
+- `frogKill` decrements lives, sets dead flag, updates DOM
+- 3 deaths → `froggerOver = true`, shows 💀
+- `@negative` dead blocks movement
+- `@negative` game-over triggers restart on next `frogMove`
+
+**New Frogger i18n test in `games.spec.js`** (1 test):
+- Card title and HUD "Score" label re-render in ES on language switch
+
+SW bumped to `miami-ride-v1.51.0`.
+
+---
+
+### [X] Biscayne Dash (Frogger)  *(DONE 2026-06-26)*
+
+Canvas-based Frogger clone added as a solo game. Miami-themed: cross 6 lanes of traffic on Biscayne Blvd.
+
+**What shipped:**
+- `initFrogger()` / `stopFrogger()` / `froggerFrame()` game loop using `requestAnimationFrame`.
+- 10×9 grid: goal row at top, 3 lanes + safe median + 3 lanes + start row.
+- 6 lane configs (alternating directions, varying speeds), 2-3 cars per lane using emoji (🚗🚙🚕🚌🏎️), colored rounded-rect car bodies.
+- 3 lives (🐸🐸🐸 in header), 💥 on hit with 1s respawn delay, game over overlay.
+- +10 score per crossing; `logTap('game_frogger_cross')` on each.
+- D-pad (3×3 grid of buttons) + swipe detection on the canvas.
+- Tap any direction after game over to restart.
+- Attractor card: "Cross Biscayne Blvd — dare you?" in all 4 languages.
+- Hooked into `closeGames()` so the rAF loop stops cleanly on back.
+- SW bumped to `miami-ride-v1.47.0`.
+
+**Bypass secret (same session):** 5 taps on the install gate icon launches the full app in browser mode — for driver testing on laptop. SW bumped to `miami-ride-v1.48.0` for that addition.
+
+**Follow-up polish (2026-06-26):**
+- Celebration animation on crossing: 40 confetti particles burst from frog position (physics: gravity + velocity, random colors from Miami palette), "+10" gold text rises and fades, flanked by 🎉 emojis. Frog frozen for 1.8s during celeb, then resets.
+- HUD: score/lives moved out of the tiny header badge into a centered two-stat bar (26px gold Marcellus font, deco-font label above each) directly above the canvas.
+- Attractor idle delay: 30s → 60s. Attractor run duration: 28s → 60s (~8 cards). SW bumped to `miami-ride-v1.49.0`.
+
+---
+
+### [X] PWA install gate  *(DONE 2026-06-26)*
+
+Browser-detection screen shown to passengers who open the app link in a mobile browser instead of the installed PWA.
+
+**Why:** Browser chrome (address bar + navigation panels) eats 10-15% of screen height on mobile. The app is designed for full-screen PWA use and looks cramped in a browser tab.
+
+**What shipped:**
+- On `DOMContentLoaded`, checks `matchMedia('(display-mode: standalone)')` and `navigator.standalone` (iOS Safari).
+- If in a browser: hides `#app`, shows `#install-gate` with platform-specific steps, then returns — full app never initializes.
+- If PWA: hides the gate, boots normally.
+- Install gate shows app icon (`icon-192.png`) with rounded corners and gold glow.
+- Three instruction panels (iOS Safari, Android Chrome, generic) — correct one shown via UA detection.
+- SW bumped to `miami-ride-v1.46.0`.
+
+---
+
 ### [X] #51 — Events category field, filter chips, attractor cards, analytics  *(DONE 2026-06-25)*
 
 **Closed set of 6 categories:** `music | sports | comedy | arts | nightlife | food-drink`

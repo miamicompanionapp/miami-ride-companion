@@ -17,6 +17,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCTMMYD5R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MCCTMMYD5R', { send_page_view: false });
+  </script>
+
   <style>
     /* ── Reset & Root ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,6 +57,61 @@
       --font-display:'Marcellus', serif;
       --font-deco:   'Poiret One', sans-serif;  /* deco eyebrows / labels */
       --transition:  200ms ease;
+    }
+
+    /* ── Install Gate (browser-only, hidden when PWA) ────────── */
+    #install-gate {
+      display: none;
+      position: fixed; inset: 0; z-index: 9999;
+      background:
+        radial-gradient(800px 500px at 80% -10%, rgba(255,92,138,0.18), transparent 55%),
+        radial-gradient(600px 450px at 10% 110%, rgba(25,160,168,0.14), transparent 55%),
+        linear-gradient(165deg, #0C1A2E 0%, #15294A 55%, #0B2A3A 100%);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 32px 24px; text-align: center;
+      font-family: var(--font-body);
+    }
+    #install-gate.hidden { display: none !important; }
+    #install-gate .ig-icon {
+      margin-bottom: 20px;
+    }
+    #install-gate .ig-title {
+      font-family: var(--font-display);
+      font-size: 26px; color: var(--gold);
+      margin-bottom: 10px; line-height: 1.2;
+    }
+    #install-gate .ig-sub {
+      font-size: 15px; color: var(--muted);
+      margin-bottom: 32px; max-width: 300px; line-height: 1.5;
+    }
+    #install-gate .ig-steps {
+      background: rgba(20,40,66,0.72);
+      border: 1px solid rgba(229,192,107,0.25);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px; max-width: 340px; width: 100%;
+      text-align: left;
+    }
+    #install-gate .ig-steps-title {
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--teal); font-family: var(--font-deco);
+      margin-bottom: 14px;
+    }
+    #install-gate .ig-step {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 14px; color: var(--body); margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    #install-gate .ig-step:last-child { margin-bottom: 0; }
+    #install-gate .ig-step-num {
+      flex-shrink: 0; width: 24px; height: 24px;
+      border-radius: 50%; background: var(--teal);
+      color: #fff; font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #install-gate .ig-hint {
+      margin-top: 24px; font-size: 12px; color: rgba(157,180,198,0.55);
+      max-width: 300px;
     }
 
     html, body {
@@ -609,7 +673,45 @@
     .game-card.ttt    { border-top: 3px solid var(--teal); }
     .game-card.c4     { border-top: 3px solid #E05252; }
     .game-card.duel   { border-top: 3px solid #E0794B; }
-    .game-card.buzzer { border-top: 3px solid #7C3AED; }
+    .game-card.buzzer  { border-top: 3px solid #7C3AED; }
+    .game-card.frogger { border-top: 3px solid #3DAB5E; }
+
+    /* ── Frogger / Biscayne Dash ──────────────────────────────── */
+    #game-frogger .game-body { align-items: center; justify-content: center; gap: 10px; padding: 8px; }
+    #frogger-canvas { border-radius: 10px; display: block; touch-action: none; }
+    .frogger-dpad {
+      display: grid;
+      grid-template-columns: repeat(3, 48px);
+      grid-template-rows: repeat(3, 48px);
+      gap: 5px;
+    }
+    .frogger-btn {
+      width: 48px; height: 48px;
+      border-radius: 10px;
+      background: var(--card-solid);
+      border: 1px solid rgba(229,192,107,0.3);
+      color: var(--gold);
+      font-size: 20px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .frogger-btn:active { background: rgba(229,192,107,0.18); transform: scale(0.93); }
+    .frogger-btn-center { background: transparent; border-color: transparent; font-size: 22px; cursor: default; pointer-events: none; }
+    .frogger-hud {
+      display: flex; justify-content: center; gap: 40px;
+      width: 100%; padding: 4px 0 2px;
+    }
+    .frogger-stat { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+    .frogger-stat-label {
+      font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); font-family: var(--font-deco);
+    }
+    .frogger-stat-value {
+      font-size: 26px; font-weight: 700; color: var(--gold);
+      font-family: var(--font-display); line-height: 1;
+    }
 
     /* ── Game Screens ─────────────────────────────────────────── */
     .game-screen {
@@ -1791,6 +1893,32 @@
 </head>
 <body>
 
+<!-- ── Install Gate (shown in browser, hidden in PWA) ───────── -->
+<div id="install-gate">
+  <div class="ig-icon" id="ig-icon-tap" style="cursor:default"><img src="/icons/icon-192.png" alt="" style="width:80px;height:80px;border-radius:18px;box-shadow:0 0 24px rgba(229,192,107,0.4)"></div>
+  <div class="ig-title">Miami Ride Companion</div>
+  <div class="ig-sub">Add this app to your home screen for the full experience — no browser bar, full screen.</div>
+  <div class="ig-steps" id="ig-steps-ios" style="display:none">
+    <div class="ig-steps-title">iPhone / iPad</div>
+    <div class="ig-step"><div class="ig-step-num">1</div><span>Tap the <strong>Share</strong> button at the bottom of Safari</span></div>
+    <div class="ig-step"><div class="ig-step-num">2</div><span>Scroll down and tap <strong>Add to Home Screen</strong></span></div>
+    <div class="ig-step"><div class="ig-step-num">3</div><span>Tap <strong>Add</strong> — then open the app from your home screen</span></div>
+  </div>
+  <div class="ig-steps" id="ig-steps-android" style="display:none">
+    <div class="ig-steps-title">Android</div>
+    <div class="ig-step"><div class="ig-step-num">1</div><span>Tap the <strong>⋮ menu</strong> in Chrome (top right)</span></div>
+    <div class="ig-step"><div class="ig-step-num">2</div><span>Tap <strong>Add to Home screen</strong> or <strong>Install app</strong></span></div>
+    <div class="ig-step"><div class="ig-step-num">3</div><span>Tap <strong>Add</strong> — then open the app from your home screen</span></div>
+  </div>
+  <div class="ig-steps" id="ig-steps-other" style="display:none">
+    <div class="ig-steps-title">Add to Home Screen</div>
+    <div class="ig-step"><div class="ig-step-num">1</div><span>Open this page in <strong>Safari</strong> (iPhone) or <strong>Chrome</strong> (Android)</span></div>
+    <div class="ig-step"><div class="ig-step-num">2</div><span>Use the browser menu to <strong>Add to Home Screen</strong></span></div>
+    <div class="ig-step"><div class="ig-step-num">3</div><span>Open the installed app from your home screen</span></div>
+  </div>
+  <div class="ig-hint">Works on iPhone, iPad, and Android phones</div>
+</div>
+
 <div id="app">
   <div class="app-shell">
 
@@ -1993,6 +2121,16 @@
                 <div class="game-card-icon">🖼️</div>
                 <div class="game-card-title" data-gkey="imgCardTitle">Guess the Image</div>
                 <div class="game-card-desc" data-gkey="imgCardDesc">Real photos of world landmarks — can you name them?</div>
+                <div class="game-card-footer">
+                  <span class="pcount solo"><i class="ti ti-user"></i>1</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card frogger" onclick="openGame('frogger')">
+                <div class="badge-new" data-gkey="badgeNew">NEW</div>
+                <div class="game-card-icon">🐸</div>
+                <div class="game-card-title" data-gkey="froggerCardTitle">Biscayne Dash</div>
+                <div class="game-card-desc" data-gkey="froggerCardDesc">Cross the boulevard — dodge Miami traffic to reach the other side.</div>
                 <div class="game-card-footer">
                   <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
@@ -2476,6 +2614,39 @@
   </div>
 </div>
 
+<!-- Biscayne Dash (Frogger) -->
+<div class="game-screen" id="game-frogger">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title" data-gkey="froggerScreenTitle">🐸 Biscayne Dash</div>
+    <div></div>
+  </div>
+  <div class="game-body">
+    <div class="frogger-hud">
+      <div class="frogger-stat">
+        <span class="frogger-stat-label" data-gkey="froggerScoreLabel">Score</span>
+        <span class="frogger-stat-value" id="frogger-score">0</span>
+      </div>
+      <div class="frogger-stat">
+        <span class="frogger-stat-label" data-gkey="froggerLivesLabel">Lives</span>
+        <span class="frogger-stat-value" id="frogger-lives">🐸🐸🐸</span>
+      </div>
+    </div>
+    <canvas id="frogger-canvas"></canvas>
+    <div class="frogger-dpad">
+      <div></div>
+      <button class="frogger-btn" ontouchstart="event.preventDefault();frogMove('up')" onclick="frogMove('up')">▲</button>
+      <div></div>
+      <button class="frogger-btn" ontouchstart="event.preventDefault();frogMove('left')" onclick="frogMove('left')">◀</button>
+      <div class="frogger-btn frogger-btn-center">🐸</div>
+      <button class="frogger-btn" ontouchstart="event.preventDefault();frogMove('right')" onclick="frogMove('right')">▶</button>
+      <div></div>
+      <button class="frogger-btn" ontouchstart="event.preventDefault();frogMove('down')" onclick="frogMove('down')">▼</button>
+      <div></div>
+    </div>
+  </div>
+</div>
+
 <!-- ── QR Modal ── -->
 <div class="qr-modal" id="qr-modal">
   <div class="qr-modal-box">
@@ -2735,11 +2906,11 @@ let attractorCycleNum  = 0;      // which cycle we're on → picks language card
 let attractorInCycle   = 0;      // position within current cycle (0=lang, 1..N=content)
 let attractorContentShuffled = [];
 
-const ATTRACTOR_DURATION_MS = 28000;  // 28s → ~4 cards at 7s each
+const ATTRACTOR_DURATION_MS = 60000;  // 60s → ~8 cards at 7s each
 const ATTRACTOR_CARD_MS     = 7000;   // 7s per card
 
 function attractorDelayMs() {
-  return ((CONTENT && CONTENT.settings && CONTENT.settings.attractorDelay) || 30) * 1000;
+  return ((CONTENT && CONTENT.settings && CONTENT.settings.attractorDelay) || 60) * 1000;
 }
 
 function shuffle(arr) {
@@ -2898,6 +3069,11 @@ function buildContentCards() {
       sub:      { en: 'How much do you really know about the Magic City?', es: '¿Cuánto sabes realmente sobre la Ciudad Mágica?', pt: 'O quanto você realmente sabe sobre a Cidade Mágica?', fr: 'Que savez-vous vraiment sur la Ville Magique?' },
       action: () => openGame('trivia') },
 
+    { id: 'frogger', visual: '🐸',
+      headline: { en: 'Cross Biscayne Blvd — dare you?', es: '¿Te atreves a cruzar Biscayne Blvd?', pt: 'Cruze a Biscayne Blvd — você tem coragem?', fr: 'Traverser Biscayne Blvd — vous l\'osez?' },
+      sub:      { en: 'Dodge Miami traffic in this classic arcade game 🚗🚙🚕', es: 'Esquiva el tráfico de Miami en este clásico juego arcade 🚗🚙🚕', pt: 'Desvie do trânsito de Miami neste clássico arcade 🚗🚙🚕', fr: 'Évitez le trafic de Miami dans ce jeu arcade classique 🚗🚙🚕' },
+      action: () => openGame('frogger') },
+
     { id: 'ttt',
       visualHtml: `<div class="att-ttt">${['❌','','⭕','','❌','','⭕','','❌'].map(c=>`<div class="att-ttt-cell">${c}</div>`).join('')}</div>`,
       headline: { en: 'Play Tic-Tac-Toe with your friend!', es: '¡Juega Tres en Raya con tu amigo!', pt: 'Jogue Jogo da Velha com seu amigo!', fr: 'Jouez au Morpion avec votre ami!' },
@@ -3011,6 +3187,7 @@ function cycleAttractorCard() {
 function showAttractor() {
   if (restActive) return;
   attractorActive = true;
+  track('attractor_shown');
   document.getElementById('attractor-hint').textContent = aL(ATTRACTOR_HINT);
   renderAttractorCard(getNextAttractorCard());
   document.getElementById('attractor-overlay').classList.add('visible');
@@ -3067,6 +3244,7 @@ function onAttractorTap() {
 
   hideAttractor();
   logTap('attractor_' + card.id);
+  track('attractor_tap', { card_id: card.id });
   if (typeof card.action === 'function') card.action();
   resetInactivity();
 }
@@ -3110,6 +3288,7 @@ let lastTeaserIdx         = -1;
 
 function onFeedbackEmoji(rating) {
   pendingFeedbackRating = rating;
+  track('feedback_rating', { rating });
   hideAttractor();
   if (rating >= 4) {
     // Positive: log and go straight to teaser
@@ -3145,6 +3324,7 @@ function submitFeedback() {
   clearTimeout(feedbackModalTimer);
   const chips = getSelectedChips();
   const text  = document.getElementById('fb-text').value.trim();
+  track('feedback_submitted', { rating: pendingFeedbackRating, chips_count: chips.length, has_text: !!text });
   saveFeedbackRecord({ rating: pendingFeedbackRating, chips, text, partial: false });
   hideFeedbackModal();
   showFeedbackTeaser(200);
@@ -3152,6 +3332,7 @@ function submitFeedback() {
 
 function skipFeedback() {
   clearTimeout(feedbackModalTimer);
+  track('feedback_skipped', { rating: pendingFeedbackRating });
   saveFeedbackRecord({ rating: pendingFeedbackRating, chips: [], text: '', partial: true });
   hideFeedbackModal();
   showFeedbackTeaser(0);
@@ -3203,6 +3384,7 @@ function onFeedbackTeaserTap() {
   if (typeof action === 'function') {
     action();
     logTap('feedback_teaser_tap');
+    track('feedback_teaser_tap');
   }
   resetInactivity();
 }
@@ -3216,7 +3398,7 @@ function hideFeedbackTeaser() {
 let inactivityTimer = null;
 let countdownTimer = null;
 let countdownVal = 10;
-const ATTRACTOR_MS = 30000;   // kept for reference; actual delay reads settings
+const ATTRACTOR_MS = 60000;   // kept for reference; actual delay reads settings
 const COUNTDOWN_S  = 4;
 const THANKS_S     = 5;
 
@@ -3252,6 +3434,50 @@ function dayKey() { return new Date().toISOString().split('T')[0]; }  // YYYY-MM
 // BOOT
 // ════════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
+  // ── PWA gate: hide app in browser, show install instructions ──
+  const isPWA = window.matchMedia('(display-mode: standalone)').matches
+             || window.navigator.standalone === true
+             || localStorage.getItem('pwa-bypass') === '1';
+  if (!isPWA) {
+    document.getElementById('app').style.display = 'none';
+    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    const isAndroid = /android/i.test(navigator.userAgent);
+    document.getElementById('ig-steps-ios').style.display = isIOS ? '' : 'none';
+    document.getElementById('ig-steps-android').style.display = isAndroid ? '' : 'none';
+    document.getElementById('ig-steps-other').style.display = (!isIOS && !isAndroid) ? '' : 'none';
+    track('install_gate_shown', { platform: isIOS ? 'ios' : isAndroid ? 'android' : 'other' });
+    // Secret bypass: 5 taps on the app icon within 4s skips the gate
+    let igTaps = 0, igTapTimer = null;
+    document.getElementById('ig-icon-tap').addEventListener('click', () => {
+      igTaps++;
+      clearTimeout(igTapTimer);
+      if (igTaps >= 5) {
+        track('install_gate_bypassed');
+        document.getElementById('install-gate').classList.add('hidden');
+        document.getElementById('app').style.display = '';
+        bootApp();
+        return;
+      }
+      igTapTimer = setTimeout(() => { igTaps = 0; }, 4000);
+    });
+    return; // skip full app init
+  }
+  document.getElementById('install-gate').classList.add('hidden');
+  bootApp();
+});
+
+function track(event, params) {
+  if (typeof gtag !== 'function') return;
+  gtag('event', event, params || {});
+}
+
+function bootApp() {
+  // Tell GA4 whether this is a PWA install or a browser session
+  const mode = (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) ? 'standalone' : 'browser';
+  if (typeof gtag === 'function') {
+    gtag('set', 'user_properties', { pwa_mode: mode });
+    gtag('event', 'page_view', { page_title: 'Miami Ride Companion', pwa_mode: mode });
+  }
   registerSW();
   openDB();
   loadContent();
@@ -3265,7 +3491,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('tap-best-txt').textContent = tapBest;
   document.getElementById('high-score-display').textContent = `${gt('tapBestLabel')} ${tapBest}`;
   document.getElementById('build-tag').textContent = `build ${APP_BUILD}`;
-});
+}
 
 // ── Service Worker Registration ──────────────────────────────
 function registerSW() {
@@ -3323,6 +3549,7 @@ function t(key) {
 
 function setLang(l) {
   lang = l;
+  track('language_switch', { language: l });
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll(`.lang-btn[data-lang="${l}"]`).forEach(b => b.classList.add('active'));
   applyStrings();
@@ -3725,6 +3952,7 @@ function switchTab(tab, silent = false) {
   // The driver page is only reachable via the bubble; if it's hidden, don't
   // let anything strand the passenger on an orphaned tab.
   if (tab === 'driver' && !isBubbleVisible()) tab = 'guide';
+  if (!silent) track('tab_view', { tab_name: tab });
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link, .driver-bubble').forEach(n => n.classList.remove('active'));
   const page = document.getElementById('page-' + tab);
@@ -3877,6 +4105,7 @@ const EVENT_CATS = [
 
 function setFilter(f, silent = false) {
   currentFilter = f;
+  if (!silent) track('filter_applied', { filter_name: f });
   if (f !== 'event') currentEventCat = 'all';
   // Activate matching pill in BOTH rows (below-hero + sticky-top)
   document.querySelectorAll('.pill').forEach(p => {
@@ -4123,6 +4352,7 @@ let currentVenueId = null;
 function openVenueSheet(venueId) {
   const v = CONTENT.guide.venues.find(x => x.id === venueId);
   if (!v) return;
+  track('venue_view', { venue_name: v.name, venue_category: v.type });
   currentVenueId = venueId;
 
   // Photo (re-attach img if any)
@@ -4606,6 +4836,17 @@ const GAME_UI = {
   tttWinMsg:     { en:'{p} wins! 🎉', es:'¡{p} gana! 🎉', pt:'{p} venceu! 🎉', fr:'{p} gagne ! 🎉' },
   tttDrawMsg:    { en:"It's a draw 🤝", es:'Empate 🤝', pt:'Empate 🤝', fr:'Match nul 🤝' },
   tttPlayAgain:  { en:'Play again', es:'Jugar de nuevo', pt:'Jogar de novo', fr:'Rejouer' },
+  // Biscayne Dash (Frogger)
+  froggerCardTitle:  { en:'Biscayne Dash', es:'Biscayne Dash', pt:'Biscayne Dash', fr:'Biscayne Dash' },
+  froggerCardDesc:   { en:'Cross the boulevard — dodge Miami traffic to reach the other side.', es:'Cruza el bulevar: esquiva el tráfico de Miami para llegar al otro lado.', pt:'Cruze o bulevar — desvie do trânsito de Miami para chegar ao outro lado.', fr:'Traversez le boulevard — évitez le trafic de Miami pour atteindre l\'autre côté.' },
+  froggerScreenTitle:{ en:'🐸 Biscayne Dash', es:'🐸 Biscayne Dash', pt:'🐸 Biscayne Dash', fr:'🐸 Biscayne Dash' },
+  froggerScoreLabel: { en:'Score', es:'Puntos', pt:'Pontos', fr:'Score' },
+  froggerLivesLabel: { en:'Lives', es:'Vidas', pt:'Vidas', fr:'Vies' },
+  froggerStart:      { en:'START', es:'INICIO', pt:'INÍCIO', fr:'DÉPART' },
+  froggerGoal:       { en:'🏁  BISCAYNE BLVD  🏁', es:'🏁  BISCAYNE BLVD  🏁', pt:'🏁  BISCAYNE BLVD  🏁', fr:'🏁  BISCAYNE BLVD  🏁' },
+  froggerGameOver:   { en:'GAME OVER', es:'FIN DEL JUEGO', pt:'FIM DE JOGO', fr:'PARTIE TERMINÉE' },
+  froggerPlayAgain:  { en:'Tap ▲ or swipe up to play again', es:'Toca ▲ o desliza hacia arriba para jugar de nuevo', pt:'Toque ▲ ou deslize para cima para jogar de novo', fr:'Appuyez sur ▲ ou glissez vers le haut pour rejouer' },
+  froggerScoreWord:  { en:'Score:', es:'Puntos:', pt:'Pontos:', fr:'Score :' },
   // Connect Four (#30d)
   c4CardTitle:  { en:'Connect Four', es:'Conecta Cuatro', pt:'Conecte Quatro', fr:'Puissance 4' },
   c4CardDesc:   { en:'Drop discs to connect 4 in a row.', es:'Deja caer fichas para conectar 4 en fila.', pt:'Solte discos para conectar 4 em linha.', fr:'Faites tomber des jetons pour aligner 4 d\'affilée.' },
@@ -4710,13 +4951,15 @@ const GAMES = {
   ttt:    { screen: 'game-ttt',    reset: initTTT },
   c4:     { screen: 'game-c4',     reset: initC4 },
   duel:   { screen: 'game-duel',   reset: initDuel },
-  buzzer: { screen: 'game-buzzer', reset: initBuzzer },
+  buzzer:  { screen: 'game-buzzer',  reset: initBuzzer },
+  frogger: { screen: 'game-frogger', reset: initFrogger },
 };
 
 function openGame(type) {
   document.getElementById('game-' + type).classList.add('open');
   resetInactivity();
   logTap('game_open_' + type);
+  track('game_open', { game_name: type });
   const g = GAMES[type];
   if (g && g.reset) g.reset();
 }
@@ -4731,6 +4974,7 @@ function closeGames() {
     if (s.id === 'game-tap') stopTapTimer();
     if (s.id === 'game-duel') clearDuelTimer();
     if (s.id === 'game-buzzer') clearBuzzTimer();
+    if (s.id === 'game-frogger') stopFrogger();
   });
 }
 
@@ -4821,9 +5065,11 @@ function tttMove(i) {
     document.getElementById(tttTurn === 'X' ? 'ttt-p1-wins' : 'ttt-p2-wins').textContent = tttWins[tttTurn];
     tttStarter = tttTurn === 'X' ? 'O' : 'X';      // loser opens next round
     logTap('game_ttt_win');
+    track('game_outcome', { game: 'ttt', result: 'win', winner: tttTurn });
   } else if (tttBoard.every(c => c)) {
     tttOver = true;
     tttStarter = tttStarter === 'X' ? 'O' : 'X';   // draw → alternate the opener
+    track('game_outcome', { game: 'ttt', result: 'draw' });
   } else {
     tttTurn = tttTurn === 'X' ? 'O' : 'X';
   }
@@ -4957,10 +5203,12 @@ function c4Drop(col) {
     document.getElementById(`c4-p${c4Turn}-wins`).textContent = c4Wins[c4Turn];
     c4Starter = c4Turn === 1 ? 2 : 1;  // loser opens next round
     logTap('game_c4_win');
+    track('game_outcome', { game: 'c4', result: 'win', winner: c4Turn });
   } else if (c4Board[0].every((_, c) => c4Board[0][c] !== 0)) {
     c4Over = true;
     c4Starter = c4Starter === 1 ? 2 : 1; // draw → alternate starter
     logTap('game_c4_draw');
+    track('game_outcome', { game: 'c4', result: 'draw' });
   } else {
     c4Turn = c4Turn === 1 ? 2 : 1;
   }
@@ -5091,11 +5339,13 @@ function duelTap(p) {
     clearDuelTimer();
     duelPhase = 'done'; duelFalse = p; duelWinner = null;
     logTap('game_duel_false');
+    track('game_duel_false', { player: p + 1 });
     duelRender();
   } else if (duelPhase === 'ready') {  // first valid green tap wins the round
     duelPhase = 'done'; duelWinner = p; duelFalse = null;
     duelWins[p]++;
     logTap('game_duel_win');
+    track('game_outcome', { game: 'duel', result: 'win', winner: p + 1 });
     duelRender();
   }
   // idle / done → ignore
@@ -5237,6 +5487,7 @@ function buzzTimeout() {
   buzzActive = null;
   buzzPhase = buzzLocked.slice(0, buzzCount).every(Boolean) ? 'revealed' : 'buzzing';
   logTap('game_buzzer_timeout');
+  track('game_buzzer_timeout', { player: p + 1 });
   buzzRender();
 }
 
@@ -5498,10 +5749,12 @@ function answerTrivia(chosen, correct) {
   const fb = document.getElementById('trivia-feedback');
   if (chosen === correct) {
     triviaScore++;
+    track('game_trivia_answer', { correct: true, score: triviaScore });
     document.getElementById('trivia-score').textContent = triviaScore;
     fb.textContent = gt('correct');
     fb.className = 'trivia-feedback show ok';
   } else {
+    track('game_trivia_answer', { correct: false, score: triviaScore });
     fb.textContent = `${gt('answerIs')} ${gL(triviaCurrent.opts[correct])}`;
     fb.className = 'trivia-feedback show no';
   }
@@ -5557,6 +5810,7 @@ function startTap() {
       const msgs = ['tapMsg0','tapMsg1','tapMsg2','tapMsg3','tapMsg4'];
       document.getElementById('tap-result').textContent = `${tapCount} ${gt('tapTapsWord')}! ${gt(msgs[Math.floor(Math.random()*msgs.length)])}`;
       logTap('tap_score_' + tapCount);
+      track('tap_final_score', { score: tapCount, is_best: tapCount >= tapBest });
     }
   }, 1000);
 }
@@ -5616,7 +5870,9 @@ function checkWord() {
   const fb = document.getElementById('word-feedback');
   if (!guess) return;
   logTap('game_word_guess');
-  if (guess === wordCurrent.word) {
+  const wordCorrect = guess === wordCurrent.word;
+  track('game_word_guess', { correct: wordCorrect, word_length: wordCurrent.word.length });
+  if (wordCorrect) {
     fb.textContent = '🎉 Correct! Amazing!';
     fb.className = 'word-feedback show ok';
     wordSolved++;
@@ -5707,6 +5963,7 @@ function doSpin() {
   spinCurrent = f;
   spinCount++;
   logTap('game_spin_spin');
+  track('game_spin', { count: spinCount, category: gL(f.cat) });
   document.getElementById('spin-count').textContent = spinCount;
   const wheel = document.querySelector('.spinner-wheel');
   wheel.style.transform = 'rotate(360deg)';
@@ -5864,6 +6121,7 @@ function answerImg(chosen, correct, explain) {
   if (imgAnswered) return;
   imgAnswered = true;
   logTap('game_img_answer');
+  track('game_img_answer', { correct: chosen === correct });
   document.querySelectorAll('.img-opt').forEach((b, i) => {
     b.disabled = true;
     if (i === correct) b.classList.add('correct');
@@ -5915,6 +6173,7 @@ function restartImgGame() {
 let qrInstance = null;
 
 function openQR(type, id) {
+  track('qr_opened', { qr_type: type, qr_id: id || null });
   const modal = document.getElementById('qr-modal');
   const title = document.getElementById('qr-modal-title');
   const sub = document.getElementById('qr-modal-sub');
@@ -5988,6 +6247,300 @@ function closeQR() {
 }
 
 // ════════════════════════════════════════════════════════════
+// BISCAYNE DASH (Frogger)  #frogger
+// ════════════════════════════════════════════════════════════
+const FROG_COLS = 10;
+const FROG_ROWS = 9;
+// row 0 = goal, row 8 = start, row 4 = median (safe), rest = traffic
+const FROG_LANE_DEFS = [
+  { row: 1, dir:  1, speed: 3.4, cars: 2, color: '#E05252', emoji: '🚗' },
+  { row: 2, dir: -1, speed: 2.6, cars: 3, color: '#E0794B', emoji: '🚙' },
+  { row: 3, dir:  1, speed: 1.9, cars: 2, color: '#7C3AED', emoji: '🚕' },
+  { row: 5, dir: -1, speed: 2.9, cars: 3, color: '#E05252', emoji: '🚌' },
+  { row: 6, dir:  1, speed: 2.2, cars: 2, color: '#19A0A8', emoji: '🏎️' },
+  { row: 7, dir: -1, speed: 3.3, cars: 3, color: '#E5C06B', emoji: '🚗' },
+];
+
+let froggerRunning = false;
+let froggerAnimId  = null;
+let froggerScore   = 0;
+let froggerLives   = 3;
+let froggerLastTs  = 0;
+let frogRow        = FROG_ROWS - 1;
+let frogCol        = Math.floor(FROG_COLS / 2);
+let froggerCars    = [];
+let froggerDead    = false;
+let froggerDeadTimer = 0;
+let froggerOver    = false;
+let froggerCS      = 40; // cell size px
+let froggerCelebrating = false;
+let froggerCelebTimer  = 0;
+let froggerParticles   = [];
+const FROG_CELEB_S = 1.8;
+const FROG_CONFETTI = ['#FF5C8A','#E5C06B','#19A0A8','#fff','#3DAB5E','#37C7CE'];
+
+function initFrogger() {
+  const canvas = document.getElementById('frogger-canvas');
+  const body   = document.getElementById('game-frogger').querySelector('.game-body');
+  const availW = Math.min((body.offsetWidth || 360) - 16, 400);
+  froggerCS    = Math.floor(availW / FROG_COLS);
+  canvas.width  = froggerCS * FROG_COLS;
+  canvas.height = froggerCS * FROG_ROWS;
+
+  // Swipe support on canvas
+  let touchStart = null;
+  canvas.ontouchstart = e => { touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY }; };
+  canvas.ontouchend   = e => {
+    if (!touchStart) return;
+    const dx = e.changedTouches[0].clientX - touchStart.x;
+    const dy = e.changedTouches[0].clientY - touchStart.y;
+    touchStart = null;
+    if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+    if (Math.abs(dx) > Math.abs(dy)) frogMove(dx > 0 ? 'right' : 'left');
+    else frogMove(dy > 0 ? 'down' : 'up');
+  };
+
+  froggerScore = 0; froggerLives = 3;
+  frogRow = FROG_ROWS - 1; frogCol = Math.floor(FROG_COLS / 2);
+  froggerDead = false; froggerOver = false;
+  froggerCelebrating = false; froggerParticles = [];
+  document.getElementById('frogger-score').textContent = 0;
+  document.getElementById('frogger-lives').textContent = '🐸🐸🐸';
+
+  froggerCars = [];
+  FROG_LANE_DEFS.forEach((def, i) => {
+    for (let c = 0; c < def.cars; c++) {
+      froggerCars.push({ laneIdx: i, x: (c / def.cars) * FROG_COLS, w: 1.9 });
+    }
+  });
+
+  if (froggerAnimId) cancelAnimationFrame(froggerAnimId);
+  froggerRunning = true; froggerLastTs = 0;
+  froggerAnimId = requestAnimationFrame(froggerFrame);
+}
+
+function stopFrogger() {
+  froggerRunning = false;
+  if (froggerAnimId) { cancelAnimationFrame(froggerAnimId); froggerAnimId = null; }
+}
+
+function froggerStartCeleb() {
+  froggerCelebrating = true;
+  froggerCelebTimer  = FROG_CELEB_S;
+  froggerParticles   = [];
+  const cs = froggerCS;
+  const cx = (frogCol + 0.5) * cs;
+  for (let i = 0; i < 40; i++) {
+    const angle = -Math.PI / 2 + (Math.random() - 0.5) * Math.PI * 1.6;
+    const spd   = 80 + Math.random() * 220;
+    froggerParticles.push({
+      x: cx + (Math.random() - 0.5) * cs * 3,
+      y: cs * 0.5,
+      vx: Math.cos(angle) * spd,
+      vy: Math.sin(angle) * spd,
+      color: FROG_CONFETTI[Math.floor(Math.random() * FROG_CONFETTI.length)],
+      w: 5 + Math.random() * 5,
+      h: 3 + Math.random() * 3,
+      rot: Math.random() * Math.PI * 2,
+      rotV: (Math.random() - 0.5) * 8,
+    });
+  }
+}
+
+function froggerFrame(ts) {
+  if (!froggerRunning) return;
+  const dt = froggerLastTs ? Math.min((ts - froggerLastTs) / 1000, 0.1) : 0;
+  froggerLastTs = ts;
+
+  if (froggerCelebrating) {
+    froggerCelebTimer -= dt;
+    // Update confetti particles
+    froggerParticles.forEach(p => {
+      p.vy += 480 * dt; // gravity
+      p.x  += p.vx * dt;
+      p.y  += p.vy * dt;
+      p.rot += p.rotV * dt;
+    });
+    if (froggerCelebTimer <= 0) {
+      froggerCelebrating = false;
+      froggerParticles = [];
+      frogRow = FROG_ROWS - 1; frogCol = Math.floor(FROG_COLS / 2);
+    }
+  } else if (froggerDead) {
+    froggerDeadTimer -= dt;
+    if (froggerDeadTimer <= 0) {
+      froggerDead = false;
+      if (froggerOver) { froggerDrawFrame(); return; }
+      frogRow = FROG_ROWS - 1; frogCol = Math.floor(FROG_COLS / 2);
+    }
+  } else {
+    // Move cars
+    froggerCars.forEach(car => {
+      const def = FROG_LANE_DEFS[car.laneIdx];
+      car.x += def.dir * def.speed * dt;
+      if (def.dir === 1  && car.x > FROG_COLS)          car.x -= FROG_COLS + car.w;
+      if (def.dir === -1 && car.x < -(car.w))            car.x += FROG_COLS + car.w;
+    });
+    // Collision
+    for (const car of froggerCars) {
+      const def = FROG_LANE_DEFS[car.laneIdx];
+      if (def.row === frogRow && frogCol + 0.85 > car.x && frogCol + 0.15 < car.x + car.w) {
+        frogKill(); break;
+      }
+    }
+  }
+
+  froggerDrawFrame();
+  froggerAnimId = requestAnimationFrame(froggerFrame);
+}
+
+function frogKill() {
+  froggerLives--;
+  froggerDead = true; froggerDeadTimer = 1.0;
+  const livesEl = document.getElementById('frogger-lives');
+  livesEl.textContent = froggerLives > 0 ? '🐸'.repeat(froggerLives) : '💀';
+  if (froggerLives <= 0) { froggerOver = true; }
+}
+
+function frogMove(dir) {
+  if (froggerOver) { initFrogger(); return; } // restart after game over
+  if (!froggerRunning || froggerDead || froggerCelebrating) return;
+  resetInactivity();
+  if (dir === 'up'    && frogRow > 0)              frogRow--;
+  if (dir === 'down'  && frogRow < FROG_ROWS - 1)  frogRow++;
+  if (dir === 'left'  && frogCol > 0)               frogCol--;
+  if (dir === 'right' && frogCol < FROG_COLS - 1)   frogCol++;
+  // Reached goal row — celebrate before resetting
+  if (frogRow === 0) {
+    froggerScore += 10;
+    document.getElementById('frogger-score').textContent = froggerScore;
+    logTap('game_frogger_cross');
+    track('frogger_cross', { score: froggerScore });
+    froggerStartCeleb();
+  }
+}
+
+function froggerDrawFrame() {
+  const canvas = document.getElementById('frogger-canvas');
+  const ctx = canvas.getContext('2d');
+  const cs = froggerCS;
+  const W = canvas.width, H = canvas.height;
+
+  // Row backgrounds
+  for (let r = 0; r < FROG_ROWS; r++) {
+    if (r === 0)              ctx.fillStyle = '#0B3A2A';       // goal
+    else if (r === 4)         ctx.fillStyle = '#172030';       // median
+    else if (r === FROG_ROWS-1) ctx.fillStyle = '#172030';     // start
+    else                      ctx.fillStyle = '#111828';       // road
+    ctx.fillRect(0, r * cs, W, cs);
+
+    // dashed lane dividers on road rows
+    if (r !== 0 && r !== 4 && r !== FROG_ROWS - 1 && r < FROG_ROWS - 1) {
+      ctx.strokeStyle = 'rgba(229,192,107,0.12)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([cs * 0.28, cs * 0.32]);
+      ctx.beginPath();
+      ctx.moveTo(0, (r + 1) * cs - 0.5);
+      ctx.lineTo(W, (r + 1) * cs - 0.5);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  }
+
+  // Goal strip decoration
+  ctx.fillStyle = 'rgba(25,160,168,0.22)';
+  ctx.fillRect(0, 0, W, cs);
+  ctx.fillStyle = '#3DAB5E';
+  ctx.font = `bold ${cs * 0.38}px DM Sans,sans-serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(gL(GAME_UI.froggerGoal), W / 2, cs * 0.5);
+
+  // Start label
+  ctx.fillStyle = 'rgba(229,192,107,0.08)';
+  ctx.fillRect(0, (FROG_ROWS - 1) * cs, W, cs);
+  ctx.fillStyle = 'rgba(157,180,198,0.4)';
+  ctx.font = `${cs * 0.3}px DM Sans,sans-serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(gL(GAME_UI.froggerStart), W / 2, (FROG_ROWS - 0.5) * cs);
+
+  // Cars
+  froggerCars.forEach(car => {
+    const def = FROG_LANE_DEFS[car.laneIdx];
+    const x = car.x * cs, y = def.row * cs;
+    const cw = car.w * cs, ch = cs * 0.72;
+    const yo = (cs - ch) / 2, r2 = cs * 0.14;
+    ctx.fillStyle = def.color;
+    ctx.beginPath();
+    ctx.moveTo(x + r2, y + yo);
+    ctx.lineTo(x + cw - r2, y + yo);
+    ctx.quadraticCurveTo(x + cw, y + yo, x + cw, y + yo + r2);
+    ctx.lineTo(x + cw, y + yo + ch - r2);
+    ctx.quadraticCurveTo(x + cw, y + yo + ch, x + cw - r2, y + yo + ch);
+    ctx.lineTo(x + r2, y + yo + ch);
+    ctx.quadraticCurveTo(x, y + yo + ch, x, y + yo + ch - r2);
+    ctx.lineTo(x, y + yo + r2);
+    ctx.quadraticCurveTo(x, y + yo, x + r2, y + yo);
+    ctx.closePath();
+    ctx.fill();
+    ctx.font = `${cs * 0.48}px serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(def.emoji, x + cw / 2, y + cs * 0.5);
+  });
+
+  // Frog / explosion / game-over
+  if (froggerOver && !froggerDead) {
+    // Game over overlay
+    ctx.fillStyle = 'rgba(12,26,46,0.88)';
+    ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#E5C06B';
+    ctx.font = `bold ${cs * 0.78}px DM Sans,sans-serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(gL(GAME_UI.froggerGameOver), W / 2, H / 2 - cs * 0.55);
+    ctx.fillStyle = '#9DB4C6';
+    ctx.font = `${cs * 0.42}px DM Sans,sans-serif`;
+    ctx.fillText(`${gL(GAME_UI.froggerScoreWord)} ${froggerScore}`, W / 2, H / 2 + cs * 0.15);
+    ctx.fillStyle = '#19A0A8';
+    ctx.font = `${cs * 0.36}px DM Sans,sans-serif`;
+    ctx.fillText(gL(GAME_UI.froggerPlayAgain), W / 2, H / 2 + cs * 0.85);
+  } else {
+    ctx.font = `${cs * 0.72}px serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(
+      froggerDead ? '💥' : '🐸',
+      (frogCol + 0.5) * cs, (frogRow + 0.5) * cs
+    );
+  }
+
+  // Celebration overlay
+  if (froggerCelebrating) {
+    const elapsed = FROG_CELEB_S - froggerCelebTimer;
+    // Confetti particles
+    froggerParticles.forEach(p => {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = Math.max(0, froggerCelebTimer / FROG_CELEB_S);
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    });
+    ctx.globalAlpha = 1;
+    // "+10 🎉" text rising from frog position
+    const textY = (frogRow + 0.5) * cs - elapsed * cs * 2.5;
+    const alpha  = Math.max(0, froggerCelebTimer / FROG_CELEB_S);
+    ctx.globalAlpha = alpha;
+    ctx.font = `bold ${cs * 0.9}px DM Sans,sans-serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = '#E5C06B';
+    ctx.fillText('+10', W / 2, textY);
+    ctx.font = `${cs * 1.1}px serif`;
+    ctx.fillText('🎉', W / 2 - cs * 1.6, textY);
+    ctx.fillText('🎉', W / 2 + cs * 1.6, textY);
+    ctx.globalAlpha = 1;
+  }
+}
+
+// ════════════════════════════════════════════════════════════
 // INACTIVITY RESET
 // ════════════════════════════════════════════════════════════
 function initInactivity() {
@@ -6038,6 +6591,7 @@ function resetInactivity() {
 }
 
 function showInactivityModal() {
+  track('inactivity_modal_shown');
   // Close any open game screen, QR modal, or venue detail sheet
   closeGames();
   document.getElementById('qr-modal').classList.remove('open');
@@ -6073,13 +6627,17 @@ function dismissInactivity(silent = false) {
   clearInterval(countdownTimer);
   const overlay = document.getElementById('inactivity-overlay');
   overlay.classList.remove('visible');
-  if (!silent) resetInactivity();
+  if (!silent) {
+    track('inactivity_dismissed');
+    resetInactivity();
+  }
 }
 
 // ════════════════════════════════════════════════════════════
 // REST / BLACKOUT SCREEN
 // ════════════════════════════════════════════════════════════
 function enterRest() {
+  track('rest_enter');
   // Pause the inactivity/reset flow while resting so nothing pops over the
   // dark screen; close any transient overlays so we wake to a clean state.
   clearTimeout(inactivityTimer);
@@ -6133,6 +6691,7 @@ function extendRest(ev) {
 
 function exitRest() {
   restActive = false;
+  track('rest_exit');
   clearInterval(restClockTimer);
   restClockTimer = null;
   clearTimeout(restWarnTimer);
@@ -6163,6 +6722,7 @@ function updateRestClock() {
 }
 
 function showThanks() {
+  track('session_end');
   // Apply strings
   if (CONTENT) {
     document.getElementById('thanks-title').textContent = CONTENT.strings.thanks.title[lang] || 'Thanks for riding!';
@@ -6511,6 +7071,7 @@ function closeAnalyticsOverlay(e) {
 // ════════════════════════════════════════════════════════════
 function openImage(src) {
   if (!src) return;
+  track('image_lightbox_open');
   const lb = document.getElementById('img-lightbox');
   const img = document.getElementById('img-lightbox-img');
   img.src = src;

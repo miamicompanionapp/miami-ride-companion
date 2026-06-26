@@ -9,6 +9,12 @@
 // unrelated background resource blip.
 const { test, expect } = require('@playwright/test');
 
+// Bypass the PWA install gate — this file uses @playwright/test directly
+// (no fixtures.js) so each test gets a fresh page without the bypass initScript.
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
+});
+
 test.describe('Trivia scoring', { tag: ['@games', '@unit'] }, () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/index.html');
@@ -556,5 +562,111 @@ test.describe('Connect Four (#30d)', { tag: ['@games', '@unit'] }, () => {
     });
     expect(res.over).toBe(true);
     expect(res.winsStill).toBe(true);
+  });
+});
+
+test.describe('Biscayne Dash (Frogger) logic', { tag: ['@games', '@unit'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof initFrogger === 'function');
+    await page.locator('#nav-games').click();
+    await page.evaluate(() => openGame('frogger'));
+  });
+
+  test('frog starts at bottom-center, score 0, 3 lives', async ({ page }) => {
+    const res = await page.evaluate(() => ({
+      row: frogRow, col: frogCol,
+      score: froggerScore, lives: froggerLives,
+      running: froggerRunning,
+      expectedRow: FROG_ROWS - 1,
+      expectedCol: Math.floor(FROG_COLS / 2),
+    }));
+    expect(res.row).toBe(res.expectedRow);
+    expect(res.col).toBe(res.expectedCol);
+    expect(res.score).toBe(0);
+    expect(res.lives).toBe(3);
+    expect(res.running).toBe(true);
+  });
+
+  test('frogMove up/down/left/right adjusts position by 1 cell', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      const startRow = frogRow, startCol = frogCol;
+      frogMove('up');    const afterUp   = { row: frogRow, col: frogCol };
+      frogMove('down');  const afterDown = { row: frogRow, col: frogCol };
+      frogMove('left');  const afterLeft = { row: frogRow, col: frogCol };
+      frogMove('right'); const afterRight= { row: frogRow, col: frogCol };
+      return { startRow, startCol, afterUp, afterDown, afterLeft, afterRight };
+    });
+    expect(res.afterUp.row).toBe(res.startRow - 1);
+    expect(res.afterDown.row).toBe(res.startRow);      // back to start
+    expect(res.afterLeft.col).toBe(res.startCol - 1);
+    expect(res.afterRight.col).toBe(res.startCol);     // back to start
+  });
+
+  test('reaching row 0 adds 10 to score and triggers celebration', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      // Teleport frog to row 1 then step up to goal
+      frogRow = 1;
+      frogMove('up');   // frogRow === 0 → celebrate
+      return { score: froggerScore, celebrating: froggerCelebrating, scoreTxt: document.getElementById('frogger-score').textContent };
+    });
+    expect(res.score).toBe(10);
+    expect(res.scoreTxt).toBe('10');
+    expect(res.celebrating).toBe(true);
+  });
+
+  test('frogMove is blocked during celebration', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      frogRow = 1; frogMove('up'); // triggers celebration
+      const celebrating = froggerCelebrating;
+      const rowDuringCeleb = frogRow; // row 0, frog frozen at goal
+      frogMove('up'); frogMove('left'); // blocked — should not change row/col
+      return { celebrating, rowDuringCeleb, rowAfterBlocked: frogRow };
+    });
+    expect(res.celebrating).toBe(true);
+    expect(res.rowAfterBlocked).toBe(res.rowDuringCeleb);
+  });
+
+  test('frogKill decrements lives and sets dead state', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      const before = froggerLives;
+      frogKill();
+      return { before, after: froggerLives, dead: froggerDead, livesEl: document.getElementById('frogger-lives').textContent };
+    });
+    expect(res.before).toBe(3);
+    expect(res.after).toBe(2);
+    expect(res.dead).toBe(true);
+    expect(res.livesEl).toContain('🐸');
+  });
+
+  test('three deaths set froggerOver and show 💀 in lives', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      frogKill(); frogKill(); frogKill();
+      return { over: froggerOver, lives: froggerLives, livesEl: document.getElementById('frogger-lives').textContent };
+    });
+    expect(res.lives).toBe(0);
+    expect(res.over).toBe(true);
+    expect(res.livesEl).toBe('💀');
+  });
+
+  test('@negative frogMove blocked while dead', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      frogKill();
+      const rowBefore = frogRow;
+      frogMove('up');
+      return { rowBefore, rowAfter: frogRow };
+    });
+    expect(res.rowAfter).toBe(res.rowBefore);
+  });
+
+  test('@negative frogMove restarts game when froggerOver', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      froggerScore = 30; froggerOver = true; froggerRunning = false;
+      frogMove('up'); // should restart
+      return { score: froggerScore, running: froggerRunning, over: froggerOver };
+    });
+    expect(res.score).toBe(0);
+    expect(res.running).toBe(true);
+    expect(res.over).toBe(false);
   });
 });

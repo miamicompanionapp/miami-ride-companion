@@ -10,6 +10,8 @@ const test = base.test.extend({
       if (msg.type() === 'error') errors.push(`console.error: ${msg.text()}`);
     });
     page.on('pageerror', (err) => errors.push(`pageerror: ${err.message}`));
+    // Bypass the PWA install gate so tests run in a normal browser context.
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
 
     await use(page);
 

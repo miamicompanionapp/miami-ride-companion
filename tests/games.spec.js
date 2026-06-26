@@ -33,6 +33,16 @@ test.describe('Game translations', { tag: ['@games', '@i18n'] }, () => {
     expect(gaps, `untranslated game fields:\n${gaps.join('\n')}`).toEqual([]);
   });
 
+  test('frogger card title + HUD labels re-render on language switch', async ({ page }) => {
+    await page.locator('#nav-games').click();
+    await page.evaluate(() => setLang('es'));
+    const title = await page.locator('.game-card.frogger .game-card-title').textContent();
+    expect(title).toBe(await page.evaluate(() => GAME_UI.froggerCardTitle.es));
+    await page.evaluate(() => openGame('frogger'));
+    const scoreLabel = await page.locator('.frogger-stat-label').first().textContent();
+    expect(scoreLabel).toBe(await page.evaluate(() => GAME_UI.froggerScoreLabel.es));
+  });
+
   test('trivia question + buttons re-render in Spanish on language switch', async ({ page }) => {
     await page.locator('#nav-games').click();
     await page.evaluate(() => { openGame('trivia'); triviaNext(); }); // start → show Q1 (EN)
