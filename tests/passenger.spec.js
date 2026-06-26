@@ -145,7 +145,7 @@ test.describe('Passenger app', { tag: ['@index'] }, () => {
   });
 
   // Each game should open to its screen and close cleanly.
-  for (const game of ['trivia', 'tap', 'word', 'spin', 'image', 'ttt', 'c4', 'duel', 'buzzer']) {
+  for (const game of ['trivia', 'tap', 'word', 'spin', 'image', 'ttt', 'c4', 'duel', 'buzzer', 'wyr', 'ct']) {
     test(`game "${game}" opens and closes`, { tag: ['@games', '@smoke'] }, async ({ page }) => {
       await page.locator('#nav-games').click();
       await page.evaluate((g) => openGame(g), game);

@@ -675,6 +675,8 @@
     .game-card.duel   { border-top: 3px solid #E0794B; }
     .game-card.buzzer  { border-top: 3px solid #7C3AED; }
     .game-card.frogger { border-top: 3px solid #3DAB5E; }
+    .game-card.wyr     { border-top: 3px solid #D4698B; }
+    .game-card.ct      { border-top: 3px solid #22A7F0; }
 
     /* ── Frogger / Biscayne Dash ──────────────────────────────── */
     #game-frogger .game-body { align-items: center; justify-content: center; gap: 10px; padding: 8px; }
@@ -712,6 +714,57 @@
       font-size: 26px; font-weight: 700; color: var(--gold);
       font-family: var(--font-display); line-height: 1;
     }
+
+    /* ── Would You Rather ─────────────────────────────────────── */
+    .wyr-wrap { display: flex; flex-direction: column; flex: 1; }
+    .wyr-intro { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 30px 20px; text-align: center; flex: 1; }
+    .wyr-intro-icon { font-size: 52px; }
+    .wyr-intro-title { font-family: var(--font-display); font-size: 22px; color: var(--heading); }
+    .wyr-intro-sub { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 280px; }
+    .wyr-play { display: none; flex-direction: column; flex: 1; gap: 11px; padding: 14px 18px; }
+    .wyr-progress { font-size: 11px; color: var(--muted); text-align: center; letter-spacing: 0.08em; text-transform: uppercase; }
+    .wyr-q { font-family: var(--font-display); font-size: 20px; color: var(--heading); line-height: 1.5; background: var(--card-solid); border: 1px solid var(--border); border-radius: 14px; padding: 22px 18px; text-align: center; flex: 1; display: flex; align-items: center; justify-content: center; }
+    .wyr-or { text-align: center; font-size: 10px; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
+    .wyr-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .wyr-opt { padding: 14px 12px; border-radius: 13px; border: 2px solid rgba(255,255,255,0.1); font-size: 13px; font-weight: 600; color: var(--heading); cursor: pointer; background: var(--card-solid); line-height: 1.4; text-align: center; transition: border-color 0.15s, background 0.15s; }
+    .wyr-opt:active { opacity: 0.85; }
+    .wyr-opt.a { border-color: rgba(25,160,168,0.35); }
+    .wyr-opt.a.picked { background: rgba(25,160,168,0.18); border-color: var(--teal); }
+    .wyr-opt.b { border-color: rgba(229,192,107,0.30); }
+    .wyr-opt.b.picked { background: rgba(229,192,107,0.13); border-color: var(--gold); }
+    .wyr-next { width: 100%; padding: 14px; border-radius: 13px; background: var(--teal); border: none; color: white; font-size: 15px; font-weight: 600; cursor: pointer; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+    .wyr-next.show { opacity: 1; pointer-events: auto; }
+    .wyr-end { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 16px; flex: 1; text-align: center; padding: 30px 20px; }
+    .wyr-end-trophy { font-size: 52px; }
+    .wyr-end-title { font-family: var(--font-display); font-size: 22px; color: var(--heading); }
+    .wyr-end-sub { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 260px; }
+
+    /* ── Color Tap (Stroop Effect) ─────────────────────────────── */
+    .ct-intro { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 30px 20px; text-align: center; flex: 1; }
+    .ct-intro-icon { font-size: 52px; }
+    .ct-intro-title { font-family: var(--font-display); font-size: 22px; color: var(--heading); }
+    .ct-intro-sub { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 270px; }
+    .ct-intro-sub em { color: var(--teal); font-style: normal; font-weight: 700; }
+    .ct-play { display: none; flex-direction: column; align-items: center; gap: 14px; flex: 1; padding: 14px 20px; }
+    .ct-round-label { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+    .ct-timer-bar-wrap { width: 100%; max-width: 340px; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+    .ct-timer-bar { height: 100%; background: var(--teal); border-radius: 3px; width: 100%; }
+    .ct-word-wrap { flex: 1; display: flex; align-items: center; justify-content: center; }
+    .ct-word { font-family: var(--font-display); font-size: 52px; font-weight: 700; letter-spacing: 0.04em; }
+    .ct-prompt { font-size: 11px; color: var(--muted); text-align: center; letter-spacing: 0.04em; }
+    .ct-colors { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; max-width: 340px; }
+    .ct-color-btn { height: 60px; border-radius: 13px; border: 2.5px solid rgba(255,255,255,0.12); font-size: 13px; font-weight: 700; color: white; cursor: pointer; text-shadow: 0 1px 3px rgba(0,0,0,0.5); transition: transform 0.1s; }
+    .ct-color-btn:active { transform: scale(0.95); }
+    .ct-color-btn.correct { border-color: #00C9A7; box-shadow: 0 0 0 3px rgba(0,201,167,0.3); }
+    .ct-color-btn.wrong   { border-color: var(--pink); box-shadow: 0 0 0 3px rgba(255,92,138,0.3); }
+    .ct-feedback { font-size: 15px; font-weight: 600; height: 22px; text-align: center; }
+    .ct-end { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; flex: 1; text-align: center; padding: 30px 20px; }
+    .ct-end-trophy { font-size: 52px; }
+    .ct-end-title { font-family: var(--font-display); font-size: 22px; color: var(--heading); }
+    .ct-end-score { font-size: 44px; font-weight: 700; color: var(--gold); font-family: var(--font-display); line-height: 1; }
+    .ct-end-denom { font-size: 18px; color: var(--muted); }
+    .ct-end-msg { font-size: 14px; color: var(--muted); }
+    .ct-end-btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 4px; }
 
     /* ── Game Screens ─────────────────────────────────────────── */
     .game-screen {
@@ -1852,6 +1905,14 @@
       .img-opt { font-size: 16px; padding: 16px 18px; }
       .img-next { font-size: 17px; padding: 16px; }
 
+      .wyr-q { font-size: 24px; padding: 28px 22px; }
+      .wyr-opt { font-size: 15px; padding: 18px 14px; }
+      .wyr-next { font-size: 17px; padding: 16px; }
+
+      .ct-word { font-size: 72px; }
+      .ct-color-btn { height: 76px; font-size: 16px; }
+      .ct-feedback { font-size: 18px; }
+
       .ttt-wrap { gap: 22px; }
       .ttt-board { width: 380px; height: 380px; padding: 14px; }
       .ttt-cell { font-size: 74px; }
@@ -2136,6 +2197,16 @@
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
+              <div class="game-card ct" onclick="openGame('ct')">
+                <div class="badge-new" data-gkey="badgeNew">NEW</div>
+                <div class="game-card-icon">🎨</div>
+                <div class="game-card-title" data-gkey="ctCardTitle">Color Tap</div>
+                <div class="game-card-desc" data-gkey="ctCardDesc">Tap the color you SEE — not the word. Beat your brain!</div>
+                <div class="game-card-footer">
+                  <span class="pcount solo"><i class="ti ti-user"></i>1</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
             </div>
 
             <!-- ── WITH FRIENDS ── -->
@@ -2172,6 +2243,16 @@
                 <div class="game-card-desc" data-gkey="buzzerCardDesc">First to buzz answers. Race your friends.</div>
                 <div class="game-card-footer">
                   <span class="pcount"><i class="ti ti-users"></i>2–3</span>
+                  <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="game-card wyr" onclick="openGame('wyr')">
+                <div class="badge-new" data-gkey="badgeNew">NEW</div>
+                <div class="game-card-icon">🤔</div>
+                <div class="game-card-title" data-gkey="wyrCardTitle">Would You Rather</div>
+                <div class="game-card-desc" data-gkey="wyrCardDesc">Pick your side — no wrong answers, just good conversations.</div>
+                <div class="game-card-footer">
+                  <span class="pcount"><i class="ti ti-users"></i>2+</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
                 </div>
               </div>
@@ -2644,6 +2725,92 @@
       <button class="frogger-btn" ontouchstart="event.preventDefault();frogMove('down')" onclick="frogMove('down')">▼</button>
       <div></div>
     </div>
+  </div>
+</div>
+
+<!-- Would You Rather -->
+<div class="game-screen" id="game-wyr">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title" data-gkey="wyrScreenTitle">🤔 Would You Rather</div>
+    <div class="game-score-badge" id="wyr-progress-badge"></div>
+  </div>
+  <div class="game-body">
+    <div class="wyr-wrap">
+
+      <!-- Intro -->
+      <div class="wyr-intro" id="wyr-intro">
+        <div class="wyr-intro-icon">🤔</div>
+        <div class="wyr-intro-title" data-gkey="wyrCardTitle">Would You Rather</div>
+        <div class="wyr-intro-sub" data-gkey="wyrIntroSub">Take turns reading each question aloud — there are no wrong answers, just good conversations.</div>
+        <div class="ttt-players-chip" style="margin-top:6px"><i class="ti ti-users"></i> <span data-gkey="wyrPlayers">2 or more</span></div>
+        <button class="ttt-start-btn" onclick="wyrStart()"><i class="ti ti-player-play"></i> <span data-gkey="tttStartBtn">Start game</span></button>
+      </div>
+
+      <!-- Play -->
+      <div class="wyr-play" id="wyr-play" style="display:none">
+        <div class="wyr-progress" id="wyr-progress">Question 1 of 20</div>
+        <div class="wyr-q" id="wyr-q" data-gkey="wyrQuestion">Would you rather…</div>
+        <div class="wyr-or" data-gkey="wyrOr">— or —</div>
+        <div class="wyr-opts">
+          <button class="wyr-opt a" id="wyr-opt-a" onclick="wyrPick('a')"></button>
+          <button class="wyr-opt b" id="wyr-opt-b" onclick="wyrPick('b')"></button>
+        </div>
+        <button class="wyr-next" id="wyr-next" onclick="wyrNext()" data-gkey="wyrNext">Next question →</button>
+      </div>
+
+      <!-- End -->
+      <div class="wyr-end" id="wyr-end" style="display:none">
+        <div class="wyr-end-trophy">🎉</div>
+        <div class="wyr-end-title" data-gkey="wyrEndTitle">All done!</div>
+        <div class="wyr-end-sub" data-gkey="wyrEndSub">Hope you learned something new about each other!</div>
+        <button class="ttt-start-btn" onclick="wyrPlayAgain()"><i class="ti ti-refresh"></i> <span data-gkey="pgPlayAgain">Play again</span></button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Color Tap (Stroop Effect) -->
+<div class="game-screen" id="game-ct">
+  <div class="game-screen-header">
+    <button class="game-back-btn" onclick="closeGame()"><i class="ti ti-arrow-left"></i></button>
+    <div class="game-screen-title" data-gkey="ctScreenTitle">🎨 Color Tap</div>
+    <div class="game-score-badge"><span id="ct-score-badge">0 / 10</span></div>
+  </div>
+  <div class="game-body">
+
+    <!-- Intro -->
+    <div class="ct-intro" id="ct-intro">
+      <div class="ct-intro-icon">🎨</div>
+      <div class="ct-intro-title" data-gkey="ctCardTitle">Color Tap</div>
+      <div class="ct-intro-sub" data-gkey="ctIntroSub">A word will appear in a different color. Tap the color you see — not the word!</div>
+      <button class="ttt-start-btn" style="margin-top:8px" onclick="ctStart()"><i class="ti ti-player-play"></i> <span data-gkey="tttStartBtn">Start</span></button>
+    </div>
+
+    <!-- Play -->
+    <div class="ct-play" id="ct-play" style="display:none">
+      <div class="ct-round-label" id="ct-round-label">Round 1 of 10</div>
+      <div class="ct-timer-bar-wrap"><div class="ct-timer-bar" id="ct-timer-bar"></div></div>
+      <div class="ct-word-wrap"><div class="ct-word" id="ct-word">RED</div></div>
+      <div class="ct-prompt" data-gkey="ctPrompt">Tap the COLOR you see — not the word</div>
+      <div class="ct-colors" id="ct-colors"></div>
+      <div class="ct-feedback" id="ct-feedback"></div>
+    </div>
+
+    <!-- End -->
+    <div class="ct-end" id="ct-end" style="display:none">
+      <div class="ct-end-trophy">🏆</div>
+      <div class="ct-end-title" data-gkey="ctRoundComplete">Round Complete!</div>
+      <div class="ct-end-score" id="ct-end-score">8</div>
+      <div class="ct-end-denom" data-gkey="ctOutOf">out of 10 correct</div>
+      <div class="ct-end-msg" id="ct-end-msg"></div>
+      <div class="ct-end-btns">
+        <button class="ttt-start-btn" onclick="ctPlayAgain()"><i class="ti ti-refresh"></i> <span data-gkey="pgPlayAgain">Play again</span></button>
+        <button class="img-end-btn secondary" onclick="closeGame()"><i class="ti ti-arrow-left"></i> <span data-gkey="backToGames">Back</span></button>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -4847,6 +5014,34 @@ const GAME_UI = {
   froggerGameOver:   { en:'GAME OVER', es:'FIN DEL JUEGO', pt:'FIM DE JOGO', fr:'PARTIE TERMINÉE' },
   froggerPlayAgain:  { en:'Tap ▲ or swipe up to play again', es:'Toca ▲ o desliza hacia arriba para jugar de nuevo', pt:'Toque ▲ ou deslize para cima para jogar de novo', fr:'Appuyez sur ▲ ou glissez vers le haut pour rejouer' },
   froggerScoreWord:  { en:'Score:', es:'Puntos:', pt:'Pontos:', fr:'Score :' },
+  // Would You Rather
+  wyrCardTitle:  { en:'Would You Rather', es:'¿Preferirías...?', pt:'Você Prefere?', fr:'Tu préfères ?' },
+  wyrCardDesc:   { en:'Pick your side — no wrong answers, just good conversations.', es:'Elige tu lado: no hay respuestas incorrectas, solo buenas conversaciones.', pt:'Escolha seu lado — não há respostas erradas, só boas conversas.', fr:'Choisissez votre camp — pas de mauvaises réponses, juste de bonnes conversations.' },
+  wyrScreenTitle:{ en:'🤔 Would You Rather', es:'🤔 ¿Preferirías...?', pt:'🤔 Você Prefere?', fr:'🤔 Tu préfères ?' },
+  wyrIntroSub:   { en:'Take turns reading each question aloud — there are no wrong answers, just good conversations.', es:'Túrnense para leer cada pregunta en voz alta: no hay respuestas incorrectas, solo buenas conversaciones.', pt:'Revezem lendo cada pergunta em voz alta — não há respostas erradas, só boas conversas.', fr:'À tour de rôle, lisez chaque question à voix haute — il n\'y a pas de mauvaises réponses, juste de bonnes conversations.' },
+  wyrPlayers:    { en:'2 or more', es:'2 o más', pt:'2 ou mais', fr:'2 ou plus' },
+  wyrQuestion:   { en:'Would you rather…', es:'¿Preferirías…', pt:'Você prefere…', fr:'Tu préfères…' },
+  wyrOr:         { en:'— or —', es:'— o —', pt:'— ou —', fr:'— ou —' },
+  wyrProgress:   { en:'Question {n} of {t}', es:'Pregunta {n} de {t}', pt:'Pergunta {n} de {t}', fr:'Question {n} sur {t}' },
+  wyrNext:       { en:'Next question →', es:'Siguiente pregunta →', pt:'Próxima pergunta →', fr:'Question suivante →' },
+  wyrEndTitle:   { en:'All done!', es:'¡Listo!', pt:'Pronto!', fr:'Terminé !' },
+  wyrEndSub:     { en:'Hope you learned something new about each other!', es:'¡Esperamos que hayan aprendido algo nuevo el uno del otro!', pt:'Esperamos que tenham aprendido algo novo um sobre o outro!', fr:'Nous espérons que vous avez appris quelque chose de nouveau les uns sur les autres !' },
+  // Color Tap
+  ctCardTitle:    { en:'Color Tap', es:'Toca el color', pt:'Toque a cor', fr:'Touche la couleur' },
+  ctCardDesc:     { en:'Tap the color you SEE — not the word. Beat your brain!', es:'¡Toca el color que VES, no la palabra. ¡Engaña a tu cerebro!', pt:'Toque a cor que você VÊ — não a palavra. Desafie seu cérebro!', fr:'Touchez la couleur que vous VOYEZ — pas le mot. Déjouez votre cerveau !' },
+  ctScreenTitle:  { en:'🎨 Color Tap', es:'🎨 Toca el color', pt:'🎨 Toque a cor', fr:'🎨 Touche la couleur' },
+  ctIntroSub:     { en:'A word will appear in a different color. Tap the color you see — not the word!', es:'Aparecerá una palabra en un color diferente. ¡Toca el color que ves, no la palabra!', pt:'Uma palavra aparecerá em uma cor diferente. Toque na cor que você vê — não na palavra!', fr:'Un mot apparaîtra dans une couleur différente. Touchez la couleur que vous voyez — pas le mot !' },
+  ctPrompt:       { en:'Tap the COLOR you see — not the word', es:'Toca el COLOR que ves, no la palabra', pt:'Toque na COR que você vê — não a palavra', fr:'Touchez la COULEUR que vous voyez — pas le mot' },
+  ctRoundComplete:{ en:'Round Complete!', es:'¡Ronda completa!', pt:'Rodada completa!', fr:'Manche terminée !' },
+  ctOutOf:        { en:'out of 10 correct', es:'de 10 correctas', pt:'de 10 corretas', fr:'sur 10 correctes' },
+  ctCorrect:      { en:'✓ Correct!', es:'✓ ¡Correcto!', pt:'✓ Correto!', fr:'✓ Correct !' },
+  ctWrong:        { en:'Not quite!', es:'¡No exactamente!', pt:'Quase!', fr:'Pas tout à fait !' },
+  ctTooSlow:      { en:'Too slow!', es:'¡Demasiado lento!', pt:'Devagar demais!', fr:'Trop lent !' },
+  ctMsgPractice:  { en:'🧠 Keep practicing!', es:'🧠 ¡Sigue practicando!', pt:'🧠 Continue praticando!', fr:'🧠 Continuez à pratiquer !' },
+  ctMsgSolid:     { en:'👍 Solid effort!', es:'👍 ¡Buen esfuerzo!', pt:'👍 Bom esforço!', fr:'👍 Bon effort !' },
+  ctMsgSharp:     { en:'🎯 Sharp mind!', es:'🎯 ¡Mente ágil!', pt:'🎯 Mente afiada!', fr:'🎯 Esprit vif !' },
+  ctMsgMaster:    { en:'🏆 Stroop Master!', es:'🏆 ¡Maestro del Stroop!', pt:'🏆 Mestre do Stroop!', fr:'🏆 Maître Stroop !' },
+  ctMsgUnbeat:    { en:'🌟 Unbeatable!', es:'🌟 ¡Imbatible!', pt:'🌟 Incrível!', fr:'🌟 Imbattable !' },
   // Connect Four (#30d)
   c4CardTitle:  { en:'Connect Four', es:'Conecta Cuatro', pt:'Conecte Quatro', fr:'Puissance 4' },
   c4CardDesc:   { en:'Drop discs to connect 4 in a row.', es:'Deja caer fichas para conectar 4 en fila.', pt:'Solte discos para conectar 4 em linha.', fr:'Faites tomber des jetons pour aligner 4 d\'affilée.' },
@@ -4953,6 +5148,8 @@ const GAMES = {
   duel:   { screen: 'game-duel',   reset: initDuel },
   buzzer:  { screen: 'game-buzzer',  reset: initBuzzer },
   frogger: { screen: 'game-frogger', reset: initFrogger },
+  wyr:     { screen: 'game-wyr',     reset: initWYR },
+  ct:      { screen: 'game-ct',      reset: initCT },
 };
 
 function openGame(type) {
@@ -4975,6 +5172,7 @@ function closeGames() {
     if (s.id === 'game-duel') clearDuelTimer();
     if (s.id === 'game-buzzer') clearBuzzTimer();
     if (s.id === 'game-frogger') stopFrogger();
+    if (s.id === 'game-ct') ctStopTimer();
   });
 }
 
@@ -6802,6 +7000,266 @@ function secretToggleAnalytics() {
   const label = document.getElementById('secret-analytics-label');
   if (label) label.textContent = 'Analytics: ' + (analyticsDisabled ? 'Off' : 'On');
   showMiniToast(analyticsDisabled ? 'Analytics paused — taps not recorded' : 'Analytics resumed');
+}
+
+// ── Would You Rather ──────────────────────────────────────────────────────────
+const WYR_QUESTIONS = [
+  { a: { en:'Live in South Beach',           es:'Vivir en South Beach',              pt:'Morar em South Beach',             fr:'Vivre à South Beach' },
+    b: { en:'Live in Brickell',              es:'Vivir en Brickell',                 pt:'Morar em Brickell',                fr:'Vivre à Brickell' } },
+  { a: { en:'Never hit traffic again',       es:'No topar nunca más con tráfico',    pt:'Nunca mais pegar trânsito',        fr:'Ne jamais être dans les embouteillages' },
+    b: { en:'Always find free parking in Miami Beach', es:'Encontrar siempre estacionamiento gratis en Miami Beach', pt:'Sempre encontrar estacionamento grátis em Miami Beach', fr:'Toujours trouver une place gratuite à Miami Beach' } },
+  { a: { en:'Take a yacht to the Bahamas',   es:'Ir en yate a las Bahamas',          pt:'Ir de iate às Bahamas',            fr:'Prendre un yacht pour les Bahamas' },
+    b: { en:'Take a private jet to New York', es:'Ir en jet privado a Nueva York',   pt:'Ir de jato privado a Nova York',   fr:'Prendre un jet privé pour New York' } },
+  { a: { en:'Visit every country in the world', es:'Visitar todos los países del mundo', pt:'Visitar todos os países do mundo', fr:'Visiter tous les pays du monde' },
+    b: { en:'Own a mansion in Miami Beach',  es:'Tener una mansión en Miami Beach',  pt:'Ter uma mansão em Miami Beach',    fr:'Posséder une villa à Miami Beach' } },
+  { a: { en:'Spend a day at the Everglades', es:'Pasar un día en los Everglades',    pt:'Passar um dia nos Everglades',     fr:'Passer une journée aux Everglades' },
+    b: { en:'Spend a day on South Beach',    es:'Pasar un día en South Beach',       pt:'Passar um dia em South Beach',     fr:'Passer une journée à South Beach' } },
+  { a: { en:'Eat only Cuban food for a year', es:'Comer solo comida cubana por un año', pt:'Comer só comida cubana por um ano', fr:'Manger uniquement cubain pendant un an' },
+    b: { en:'Eat only seafood for a year',   es:'Comer solo mariscos por un año',    pt:'Comer só frutos do mar por um ano', fr:'Manger uniquement des fruits de mer pendant un an' } },
+  { a: { en:'Give up cafecito forever',      es:'Renunciar al cafecito para siempre', pt:'Abrir mão do cafecito para sempre', fr:'Renoncer au cafecito pour toujours' },
+    b: { en:'Give up AC in Miami forever',   es:'Renunciar al aire acondicionado en Miami para siempre', pt:'Abrir mão do ar-condicionado em Miami para sempre', fr:'Renoncer à la clim à Miami pour toujours' } },
+  { a: { en:'Have unlimited pastelitos',     es:'Tener pastelitos ilimitados',       pt:'Ter pastelitos ilimitados',        fr:'Avoir des pastelitos à volonté' },
+    b: { en:'Have unlimited key lime pie',   es:'Tener pay de lima ilimitado',       pt:'Ter key lime pie ilimitado',       fr:'Avoir du key lime pie à volonté' } },
+  { a: { en:'Eat stone crab every day',      es:'Comer cangrejo de piedra todos los días', pt:'Comer caranguejo-pedra todo dia', fr:'Manger du crabe de pierre chaque jour' },
+    b: { en:'Never eat stone crab again',    es:'No comer nunca más cangrejo de piedra', pt:'Nunca mais comer caranguejo-pedra', fr:'Ne plus jamais manger de crabe de pierre' } },
+  { a: { en:'Have a superpower',             es:'Tener un superpoder',               pt:'Ter um superpoder',                fr:'Avoir un superpouvoir' },
+    b: { en:'Have a billion dollars',        es:'Tener mil millones de dólares',     pt:'Ter um bilhão de dólares',         fr:'Avoir un milliard de dollars' } },
+  { a: { en:'Be famous for 1 year',          es:'Ser famoso por 1 año',              pt:'Ser famoso por 1 ano',             fr:'Être célèbre pendant 1 an' },
+    b: { en:'Be quietly rich forever',       es:'Ser discretamente rico para siempre', pt:'Ser discretamente rico para sempre', fr:'Être discrètement riche pour toujours' } },
+  { a: { en:'Always know what people are thinking', es:'Saber siempre lo que piensan los demás', pt:'Sempre saber o que as pessoas pensam', fr:'Toujours savoir ce que pensent les gens' },
+    b: { en:'Never need to sleep',           es:'No necesitar dormir nunca',         pt:'Nunca precisar dormir',            fr:'Ne jamais avoir besoin de dormir' } },
+  { a: { en:'Trade lives with your best friend', es:'Intercambiar vidas con tu mejor amigo', pt:'Trocar de vida com seu melhor amigo', fr:'Échanger votre vie avec votre meilleur ami' },
+    b: { en:'Trade lives with a random celebrity', es:'Intercambiar vidas con una celebridad al azar', pt:'Trocar de vida com uma celebridade aleatória', fr:'Échanger votre vie avec une célébrité au hasard' } },
+  { a: { en:'Have no phone for a week',      es:'No tener teléfono por una semana',  pt:'Ficar sem celular por uma semana', fr:'Ne pas avoir de téléphone pendant une semaine' },
+    b: { en:'Have no AC for a week (in Miami)', es:'No tener aire acondicionado una semana (en Miami)', pt:'Ficar sem ar-condicionado por uma semana (em Miami)', fr:'Ne pas avoir de clim pendant une semaine (à Miami)' } },
+  { a: { en:'Only speak in questions',       es:'Hablar solo con preguntas',         pt:'Falar só em perguntas',            fr:'Ne parler qu\'en posant des questions' },
+    b: { en:'Only speak in rhymes',          es:'Hablar solo en rima',               pt:'Falar só em rimas',                fr:'Ne parler qu\'en rimes' } },
+  { a: { en:'Fight one horse-sized iguana',  es:'Pelear con una iguana del tamaño de un caballo', pt:'Lutar contra uma iguana do tamanho de um cavalo', fr:'Combattre un iguane de la taille d\'un cheval' },
+    b: { en:'Fight 100 iguana-sized horses', es:'Pelear con 100 caballos del tamaño de una iguana', pt:'Lutar contra 100 cavalos do tamanho de uma iguana', fr:'Combattre 100 chevaux de la taille d\'un iguane' } },
+  { a: { en:'Sweat glitter',                 es:'Sudar purpurina',                   pt:'Suar glitter',                    fr:'Transpirer des paillettes' },
+    b: { en:'Sneeze confetti',               es:'Estornudar confeti',                pt:'Espirrar confete',                 fr:'Éternuer des confettis' } },
+  { a: { en:'Have a pet flamingo',           es:'Tener un flamenco como mascota',    pt:'Ter um flamingo de estimação',     fr:'Avoir un flamant rose comme animal de compagnie' },
+    b: { en:'Have a pet manatee',            es:'Tener un manatí como mascota',      pt:'Ter um peixe-boi de estimação',    fr:'Avoir un lamantin comme animal de compagnie' } },
+  { a: { en:'Narrate everything you do out loud', es:'Narrar en voz alta todo lo que haces', pt:'Narrar tudo o que faz em voz alta', fr:'Narrer tout ce que vous faites à voix haute' },
+    b: { en:'Always be narrated by Morgan Freeman', es:'Que Morgan Freeman narre tu vida siempre', pt:'Ser sempre narrado por Morgan Freeman', fr:'Être toujours narré par Morgan Freeman' } },
+  { a: { en:'Speak every language in the world', es:'Hablar todos los idiomas del mundo', pt:'Falar todas as línguas do mundo', fr:'Parler toutes les langues du monde' },
+    b: { en:'Drive any car you want for free', es:'Conducir cualquier coche gratis', pt:'Dirigir qualquer carro de graça',  fr:'Conduire n\'importe quelle voiture gratuitement' } },
+];
+
+let wyrIdx = 0, wyrDeck = [], wyrPicked = false;
+
+function initWYR() {
+  wyrIdx = 0;
+  wyrPicked = false;
+  wyrDeck = [...WYR_QUESTIONS].sort(() => Math.random() - 0.5);
+  document.getElementById('wyr-intro').style.display = '';
+  document.getElementById('wyr-play').style.display = 'none';
+  document.getElementById('wyr-end').style.display = 'none';
+  document.getElementById('wyr-progress-badge').textContent = '';
+}
+
+function wyrStart() {
+  document.getElementById('wyr-intro').style.display = 'none';
+  document.getElementById('wyr-play').style.display = 'flex';
+  wyrIdx = 0;
+  wyrShowQ();
+  logTap('game_wyr_start');
+}
+
+function wyrShowQ() {
+  const q = wyrDeck[wyrIdx];
+  const total = wyrDeck.length;
+  const prog = gt('wyrProgress').replace('{n}', wyrIdx + 1).replace('{t}', total);
+  document.getElementById('wyr-progress').textContent = prog;
+  document.getElementById('wyr-progress-badge').textContent = (wyrIdx + 1) + ' / ' + total;
+  document.getElementById('wyr-q').textContent = gt('wyrQuestion');
+  document.getElementById('wyr-opt-a').textContent = gL(q.a);
+  document.getElementById('wyr-opt-b').textContent = gL(q.b);
+  document.getElementById('wyr-opt-a').classList.remove('picked');
+  document.getElementById('wyr-opt-b').classList.remove('picked');
+  document.getElementById('wyr-opt-a').disabled = false;
+  document.getElementById('wyr-opt-b').disabled = false;
+  document.getElementById('wyr-next').classList.remove('show');
+  wyrPicked = false;
+  resetInactivity();
+}
+
+function wyrPick(which) {
+  if (wyrPicked) return;
+  wyrPicked = true;
+  document.getElementById('wyr-opt-' + which).classList.add('picked');
+  document.getElementById('wyr-next').classList.add('show');
+  resetInactivity();
+  logTap('game_wyr_pick');
+}
+
+function wyrNext() {
+  wyrIdx++;
+  if (wyrIdx >= wyrDeck.length) {
+    wyrShowEnd();
+  } else {
+    wyrShowQ();
+  }
+  resetInactivity();
+}
+
+function wyrShowEnd() {
+  document.getElementById('wyr-play').style.display = 'none';
+  document.getElementById('wyr-end').style.display = 'flex';
+  document.getElementById('wyr-progress-badge').textContent = '';
+}
+
+function wyrPlayAgain() {
+  wyrDeck = [...WYR_QUESTIONS].sort(() => Math.random() - 0.5);
+  wyrIdx = 0;
+  document.getElementById('wyr-end').style.display = 'none';
+  document.getElementById('wyr-play').style.display = 'flex';
+  wyrShowQ();
+  resetInactivity();
+}
+
+// ── Color Tap (Stroop Effect) ──────────────────────────────────────────────────
+const CT_COLORS = [
+  { name: { en:'RED',    es:'ROJO',     pt:'VERMELHO', fr:'ROUGE'  }, hex: '#E05252' },
+  { name: { en:'BLUE',   es:'AZUL',     pt:'AZUL',     fr:'BLEU'   }, hex: '#4A90D9' },
+  { name: { en:'GREEN',  es:'VERDE',    pt:'VERDE',     fr:'VERT'   }, hex: '#3DAB5E' },
+  { name: { en:'YELLOW', es:'AMARILLO', pt:'AMARELO',  fr:'JAUNE'  }, hex: '#E5C06B' },
+  { name: { en:'PINK',   es:'ROSA',     pt:'ROSA',     fr:'ROSE'   }, hex: '#FF5C8A' },
+  { name: { en:'ORANGE', es:'NARANJA',  pt:'LARANJA',  fr:'ORANGE' }, hex: '#E0794B' },
+];
+const CT_ROUNDS = 10;
+const CT_MS = 3000;
+
+let ctRound = 0, ctScore = 0, ctTimeoutId = null, ctRafId = null, ctRoundStart = 0, ctAnswered = false;
+
+function initCT() {
+  ctStopTimer();
+  ctRound = 0; ctScore = 0; ctAnswered = false;
+  document.getElementById('ct-intro').style.display = '';
+  document.getElementById('ct-play').style.display = 'none';
+  document.getElementById('ct-end').style.display = 'none';
+  document.getElementById('ct-score-badge').textContent = '0 / ' + CT_ROUNDS;
+}
+
+function ctStopTimer() {
+  clearTimeout(ctTimeoutId);
+  cancelAnimationFrame(ctRafId);
+  ctTimeoutId = null; ctRafId = null;
+}
+
+function ctStart() {
+  document.getElementById('ct-intro').style.display = 'none';
+  document.getElementById('ct-play').style.display = 'flex';
+  ctRound = 0; ctScore = 0;
+  document.getElementById('ct-score-badge').textContent = '0 / ' + CT_ROUNDS;
+  ctNextRound();
+  logTap('game_ct_start');
+}
+
+function ctNextRound() {
+  if (ctRound >= CT_ROUNDS) { ctShowEnd(); return; }
+  ctRound++;
+  ctAnswered = false;
+  document.getElementById('ct-round-label').textContent = 'Round ' + ctRound + ' of ' + CT_ROUNDS;
+  document.getElementById('ct-feedback').textContent = '';
+  document.getElementById('ct-feedback').style.color = '';
+
+  // word and display color are always different
+  const wi = Math.floor(Math.random() * CT_COLORS.length);
+  let ci;
+  do { ci = Math.floor(Math.random() * CT_COLORS.length); } while (ci === wi);
+  const wordColor = CT_COLORS[wi];
+  const displayColor = CT_COLORS[ci];
+
+  const wordEl = document.getElementById('ct-word');
+  wordEl.textContent = gL(wordColor.name);
+  wordEl.style.color = displayColor.hex;
+
+  // 4 choices always include the correct displayColor + 3 random others
+  const pool = CT_COLORS.filter((_, i) => i !== ci);
+  const choices = [displayColor];
+  const shuffledPool = pool.sort(() => Math.random() - 0.5);
+  for (let i = 0; i < 3; i++) choices.push(shuffledPool[i]);
+  choices.sort(() => Math.random() - 0.5);
+
+  const container = document.getElementById('ct-colors');
+  container.innerHTML = '';
+  choices.forEach(c => {
+    const btn = document.createElement('button');
+    btn.className = 'ct-color-btn';
+    btn.style.background = c.hex;
+    btn.textContent = gL(c.name);
+    btn.onclick = () => ctAnswer(c === displayColor, btn, container);
+    container.appendChild(btn);
+  });
+
+  // timer bar animation
+  ctStopTimer();
+  ctRoundStart = Date.now();
+  const animBar = () => {
+    const elapsed = Date.now() - ctRoundStart;
+    const pct = Math.max(0, 100 - (elapsed / CT_MS) * 100);
+    const bar = document.getElementById('ct-timer-bar');
+    if (bar) {
+      bar.style.width = pct + '%';
+      bar.style.background = pct > 50 ? 'var(--teal)' : pct > 25 ? 'var(--gold)' : 'var(--pink)';
+    }
+    if (pct > 0 && !ctAnswered) ctRafId = requestAnimationFrame(animBar);
+  };
+  ctRafId = requestAnimationFrame(animBar);
+  ctTimeoutId = setTimeout(() => {
+    if (!ctAnswered) ctAnswer(false, null, container);
+  }, CT_MS);
+}
+
+function ctAnswer(correct, clickedBtn, container) {
+  if (ctAnswered) return;
+  ctAnswered = true;
+  ctStopTimer();
+  // freeze timer bar at 0
+  const bar = document.getElementById('ct-timer-bar');
+  if (bar) { bar.style.width = '0%'; bar.style.background = 'var(--pink)'; }
+
+  if (correct) {
+    ctScore++;
+    if (clickedBtn) clickedBtn.classList.add('correct');
+    document.getElementById('ct-feedback').textContent = gt('ctCorrect');
+    document.getElementById('ct-feedback').style.color = '#4FE0C0';
+  } else {
+    if (clickedBtn) clickedBtn.classList.add('wrong');
+    document.getElementById('ct-feedback').textContent = ctRoundStart && (Date.now() - ctRoundStart >= CT_MS) ? gt('ctTooSlow') : gt('ctWrong');
+    document.getElementById('ct-feedback').style.color = 'var(--pink)';
+  }
+  document.getElementById('ct-score-badge').textContent = ctScore + ' / ' + CT_ROUNDS;
+  container.querySelectorAll('.ct-color-btn').forEach(b => {
+    b.disabled = true;
+    if (!b.classList.contains('correct') && !b.classList.contains('wrong')) b.style.opacity = '0.35';
+  });
+  setTimeout(() => {
+    if (document.getElementById('game-ct').classList.contains('open')) ctNextRound();
+  }, 900);
+}
+
+function ctShowEnd() {
+  document.getElementById('ct-play').style.display = 'none';
+  const end = document.getElementById('ct-end');
+  end.style.display = 'flex';
+  document.getElementById('ct-end-score').textContent = ctScore;
+  const msgs = [
+    gt('ctMsgPractice'), gt('ctMsgSolid'), gt('ctMsgSolid'), gt('ctMsgSolid'),
+    gt('ctMsgSharp'), gt('ctMsgSharp'), gt('ctMsgSharp'),
+    gt('ctMsgMaster'), gt('ctMsgMaster'), gt('ctMsgMaster'), gt('ctMsgUnbeat')
+  ];
+  document.getElementById('ct-end-msg').textContent = msgs[Math.min(ctScore, 10)];
+}
+
+function ctPlayAgain() {
+  document.getElementById('ct-end').style.display = 'none';
+  document.getElementById('ct-play').style.display = 'flex';
+  ctRound = 0; ctScore = 0;
+  document.getElementById('ct-score-badge').textContent = '0 / ' + CT_ROUNDS;
+  ctNextRound();
+  resetInactivity();
 }
 
 // ── Analytics peek (read-only, no export/reset) ──────────────────────────────
