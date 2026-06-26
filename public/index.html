@@ -718,15 +718,15 @@
     /* ── Would You Rather ─────────────────────────────────────── */
     .wyr-wrap { display: flex; flex-direction: column; flex: 1; }
     .wyr-intro { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 30px 20px; text-align: center; flex: 1; }
-    .wyr-intro-icon { font-size: 52px; }
-    .wyr-intro-title { font-family: var(--font-display); font-size: 22px; color: var(--heading); }
-    .wyr-intro-sub { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 280px; }
-    .wyr-play { display: none; flex-direction: column; flex: 1; gap: 11px; padding: 14px 18px; }
+    .wyr-intro-icon { font-size: 58px; }
+    .wyr-intro-title { font-family: var(--font-display); font-size: 28px; color: var(--heading); }
+    .wyr-intro-sub { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 300px; }
+    .wyr-play { display: none; flex-direction: column; flex: 1; gap: 10px; padding: 12px 16px; }
     .wyr-progress { font-size: 11px; color: var(--muted); text-align: center; letter-spacing: 0.08em; text-transform: uppercase; }
-    .wyr-q { font-family: var(--font-display); font-size: 20px; color: var(--heading); line-height: 1.5; background: var(--card-solid); border: 1px solid var(--border); border-radius: 14px; padding: 22px 18px; text-align: center; flex: 1; display: flex; align-items: center; justify-content: center; }
+    .wyr-q { font-family: var(--font-display); font-size: 16px; color: var(--muted); background: var(--card-solid); border: 1px solid var(--border); border-radius: 11px; padding: 12px 16px; text-align: center; }
     .wyr-or { text-align: center; font-size: 10px; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
-    .wyr-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .wyr-opt { padding: 14px 12px; border-radius: 13px; border: 2px solid rgba(255,255,255,0.1); font-size: 13px; font-weight: 600; color: var(--heading); cursor: pointer; background: var(--card-solid); line-height: 1.4; text-align: center; transition: border-color 0.15s, background 0.15s; }
+    .wyr-opts { display: flex; flex-direction: column; flex: 1; gap: 10px; }
+    .wyr-opt { flex: 1; border-radius: 14px; border: 2px solid rgba(255,255,255,0.1); font-size: 17px; font-weight: 600; color: var(--heading); cursor: pointer; background: var(--card-solid); line-height: 1.4; text-align: center; transition: border-color 0.15s, background 0.15s; display: flex; align-items: center; justify-content: center; padding: 16px; }
     .wyr-opt:active { opacity: 0.85; }
     .wyr-opt.a { border-color: rgba(25,160,168,0.35); }
     .wyr-opt.a.picked { background: rgba(25,160,168,0.18); border-color: var(--teal); }
@@ -741,9 +741,9 @@
 
     /* ── Color Tap (Stroop Effect) ─────────────────────────────── */
     .ct-intro { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 30px 20px; text-align: center; flex: 1; }
-    .ct-intro-icon { font-size: 52px; }
-    .ct-intro-title { font-family: var(--font-display); font-size: 22px; color: var(--heading); }
-    .ct-intro-sub { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 270px; }
+    .ct-intro-icon { font-size: 58px; }
+    .ct-intro-title { font-family: var(--font-display); font-size: 28px; color: var(--heading); }
+    .ct-intro-sub { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 300px; }
     .ct-intro-sub em { color: var(--teal); font-style: normal; font-weight: 700; }
     .ct-play { display: none; flex-direction: column; align-items: center; gap: 14px; flex: 1; padding: 14px 20px; }
     .ct-round-label { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
@@ -1711,15 +1711,15 @@
 
     /* Pre-game intro — the shared pre-game step; the player-count picker
        slots in here for the variable-count games coming next (#30 b/c). */
-    .ttt-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 5px; }
-    .ttt-intro-icon { font-size: 46px; }
-    .ttt-intro-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--heading); }
-    .ttt-intro-sub { font-size: 13px; color: var(--muted); }
-    .ttt-players-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--teal-mist); border: 0.5px solid var(--teal-border); color: #6FD3D9; border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 600; margin: 8px 0 4px; }
-    .ttt-players-chip i { font-size: 13px; }
-    .ttt-start-btn { background: var(--navy-deep); color: white; border: none; border-radius: 12px; padding: 13px 34px; font-family: var(--font-body); font-size: 15px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+    .ttt-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .ttt-intro-icon { font-size: 54px; }
+    .ttt-intro-title { font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--heading); }
+    .ttt-intro-sub { font-size: 14px; color: var(--muted); }
+    .ttt-players-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--teal-mist); border: 0.5px solid var(--teal-border); color: #6FD3D9; border-radius: 20px; padding: 7px 16px; font-size: 13px; font-weight: 600; margin: 10px 0 4px; }
+    .ttt-players-chip i { font-size: 14px; }
+    .ttt-start-btn { background: var(--navy-deep); color: white; border: none; border-radius: 12px; padding: 14px 36px; font-family: var(--font-body); font-size: 16px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
     .ttt-start-btn:active { opacity: 0.85; }
-    .ttt-start-btn i { font-size: 16px; }
+    .ttt-start-btn i { font-size: 17px; }
 
     /* Turn / score bar — P1 left (teal X), P2 right (gold O), no rotation. */
     .ttt-turnbar { display: flex; gap: 10px; width: 100%; }
@@ -1760,10 +1760,10 @@
        One "How many players?" chooser reused by every variable-count game
        (Tap Duel, Trivia Buzzer). Mirrors the ttt-intro pattern but with a
        2/3 count picker in place of the fixed "2 players" chip. */
-    .pg-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
-    .pg-icon { font-size: 46px; }
-    .pg-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--heading); }
-    .pg-sub { font-size: 13px; color: var(--muted); max-width: 360px; }
+    .pg-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .pg-icon { font-size: 54px; }
+    .pg-title { font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--heading); }
+    .pg-sub { font-size: 14px; color: var(--muted); max-width: 360px; }
     .pg-count-label { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
     .pg-count { display: flex; gap: 10px; }
     .pg-count-btn { width: 54px; height: 54px; border-radius: 13px; border: 2px solid var(--border); background: var(--card-solid); font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--heading); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all var(--transition); }
@@ -1839,10 +1839,10 @@
     /* ── Connect Four (#30d) ──────────────────────────────────── */
     #game-c4 .game-body { align-items: center; justify-content: center; }
     .c4-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 490px; }
-    .c4-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
-    .c4-intro-icon { font-size: 46px; }
-    .c4-intro-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--heading); }
-    .c4-intro-sub { font-size: 13px; color: var(--muted); }
+    .c4-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .c4-intro-icon { font-size: 54px; }
+    .c4-intro-title { font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--heading); }
+    .c4-intro-sub { font-size: 14px; color: var(--muted); }
 
     /* Score bar */
     .c4-turnbar { display: flex; gap: 10px; width: 100%; }
@@ -1905,9 +1905,9 @@
       .img-opt { font-size: 16px; padding: 16px 18px; }
       .img-next { font-size: 17px; padding: 16px; }
 
-      .wyr-q { font-size: 24px; padding: 28px 22px; }
-      .wyr-opt { font-size: 15px; padding: 18px 14px; }
-      .wyr-next { font-size: 17px; padding: 16px; }
+      .wyr-q { font-size: 18px; padding: 14px 20px; }
+      .wyr-opt { font-size: 22px; padding: 20px; }
+      .wyr-next { font-size: 19px; padding: 18px; }
 
       .ct-word { font-size: 72px; }
       .ct-color-btn { height: 76px; font-size: 16px; }
@@ -1920,16 +1920,29 @@
       .ttt-pwho { font-size: 14px; }
       .ttt-pturn { font-size: 12px; }
       .ttt-pwins b { font-size: 19px; }
-      .ttt-intro-icon { font-size: 60px; }
-      .ttt-intro-title { font-size: 32px; }
-      .ttt-intro-sub { font-size: 15px; }
+      .ttt-intro-icon { font-size: 84px; }
+      .ttt-intro-title { font-size: 42px; }
+      .ttt-intro-sub { font-size: 18px; }
+      .ttt-players-chip { font-size: 16px; padding: 10px 22px; margin: 18px 0 8px; }
+      .ttt-players-chip i { font-size: 17px; }
+      .ttt-start-btn { font-size: 21px; padding: 19px 52px; margin-top: 6px; }
+      .ttt-start-btn i { font-size: 22px; }
       .ttt-banner-title { font-size: 26px; }
 
-      .pg-icon { font-size: 60px; }
-      .pg-title { font-size: 32px; }
-      .pg-sub { font-size: 15px; }
-      .pg-count-btn { width: 64px; height: 64px; font-size: 26px; }
-      .pg-start { font-size: 17px; padding: 15px 40px; }
+      .pg-icon { font-size: 84px; }
+      .pg-title { font-size: 42px; }
+      .pg-sub { font-size: 18px; max-width: 520px; }
+      .pg-count-label { font-size: 14px; margin-top: 24px; }
+      .pg-count-btn { width: 80px; height: 80px; font-size: 30px; }
+      .pg-start { font-size: 21px; padding: 19px 52px; margin-top: 16px; }
+      .pg-start i { font-size: 22px; }
+
+      .wyr-intro-icon { font-size: 84px; }
+      .wyr-intro-title { font-size: 42px; }
+      .wyr-intro-sub { font-size: 18px; max-width: 520px; }
+      .ct-intro-icon { font-size: 84px; }
+      .ct-intro-title { font-size: 42px; }
+      .ct-intro-sub { font-size: 18px; max-width: 520px; }
 
       .duel-zone { min-height: 300px; }
       .duel-zone-player { font-size: 16px; }
@@ -1947,8 +1960,9 @@
       .c4-board { width: 414px; height: 360px; }
       .c4-col-btns { width: 414px; }
       .c4-cell { width: 50px; height: 50px; }
-      .c4-intro-icon { font-size: 60px; }
-      .c4-intro-title { font-size: 32px; }
+      .c4-intro-icon { font-size: 84px; }
+      .c4-intro-title { font-size: 42px; }
+      .c4-intro-sub { font-size: 18px; }
     }
   </style>
 </head>
@@ -6451,12 +6465,12 @@ const FROG_COLS = 10;
 const FROG_ROWS = 9;
 // row 0 = goal, row 8 = start, row 4 = median (safe), rest = traffic
 const FROG_LANE_DEFS = [
-  { row: 1, dir:  1, speed: 3.4, cars: 2, color: '#E05252', emoji: '🚗' },
-  { row: 2, dir: -1, speed: 2.6, cars: 3, color: '#E0794B', emoji: '🚙' },
-  { row: 3, dir:  1, speed: 1.9, cars: 2, color: '#7C3AED', emoji: '🚕' },
-  { row: 5, dir: -1, speed: 2.9, cars: 3, color: '#E05252', emoji: '🚌' },
-  { row: 6, dir:  1, speed: 2.2, cars: 2, color: '#19A0A8', emoji: '🏎️' },
-  { row: 7, dir: -1, speed: 3.3, cars: 3, color: '#E5C06B', emoji: '🚗' },
+  { row: 1, dir:  1, speed: 2.3, cars: 2, color: '#E05252', emoji: '🚗' },
+  { row: 2, dir: -1, speed: 1.8, cars: 3, color: '#E0794B', emoji: '🚙' },
+  { row: 3, dir:  1, speed: 1.3, cars: 2, color: '#7C3AED', emoji: '🚕' },
+  { row: 5, dir: -1, speed: 2.0, cars: 3, color: '#E05252', emoji: '🚌' },
+  { row: 6, dir:  1, speed: 1.5, cars: 2, color: '#19A0A8', emoji: '🏎️' },
+  { row: 7, dir: -1, speed: 2.2, cars: 3, color: '#E5C06B', emoji: '🚗' },
 ];
 
 let froggerRunning = false;
@@ -6508,7 +6522,7 @@ function initFrogger() {
   froggerCars = [];
   FROG_LANE_DEFS.forEach((def, i) => {
     for (let c = 0; c < def.cars; c++) {
-      froggerCars.push({ laneIdx: i, x: (c / def.cars) * FROG_COLS, w: 1.9 });
+      froggerCars.push({ laneIdx: i, x: (c / def.cars) * FROG_COLS, w: 1.4 });
     }
   });
 
