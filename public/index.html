@@ -2471,9 +2471,9 @@
             <div class="dp-apps-head">
               <div class="dp-apps-head-ico"><i class="ti ti-device-mobile-code"></i></div>
               <div>
-                <div class="dp-apps-head-eyebrow">Also by me</div>
-                <div class="dp-apps-head-title">My apps</div>
-                <div class="dp-apps-head-sub">Scan any code to open on your phone — all free.</div>
+                <div class="dp-apps-head-eyebrow" data-key="myApps.eyebrow">Also by me</div>
+                <div class="dp-apps-head-title" data-key="myApps.title">My apps</div>
+                <div class="dp-apps-head-sub" data-key="myApps.sub">Scan any code to open on your phone — all free.</div>
               </div>
             </div>
             <div class="dp-apps-grid">
@@ -2484,12 +2484,12 @@
                   <img src="/icons/icon-192.png" alt="Miami Ride Companion">
                 </div>
                 <div class="dp-app-cell-name">Miami Ride<br>Companion</div>
-                <div class="dp-app-cell-tag">You're on it<br>right now</div>
+                <div class="dp-app-cell-tag" data-key="myApps.companionTag">You're on it right now</div>
                 <div class="dp-app-cell-active">
                   <span class="chk">✓</span>
-                  <span class="lbl">Active<br>now</span>
+                  <span class="lbl" data-key="myApps.companionActive">Active now</span>
                 </div>
-                <div class="dp-app-cell-now">Using now</div>
+                <div class="dp-app-cell-now" data-key="myApps.companionUsing">Using now</div>
               </div>
 
               <!-- SoFlo Vegan Eateries -->
@@ -2511,11 +2511,11 @@
                   </svg>
                 </div>
                 <div class="dp-app-cell-name">SoFlo Vegan<br>Eateries</div>
-                <div class="dp-app-cell-tag">Plant-based spots<br>near you</div>
+                <div class="dp-app-cell-tag" data-key="myApps.sofloTag">Plant-based spots near you</div>
                 <div class="dp-app-cell-qr" onclick="openQR('app-soflo')" title="SoFlo Vegan Eateries">
                   <div class="dp-qr-content" id="dp-app-soflo-qr"></div>
                 </div>
-                <div class="dp-app-cell-scan"><i class="ti ti-qrcode" style="font-size:10px"></i>Scan to visit</div>
+                <div class="dp-app-cell-scan"><i class="ti ti-qrcode" style="font-size:10px"></i><span data-key="myApps.scanLabel">Scan to visit</span></div>
               </div>
 
               <!-- LifeOS Planner -->
@@ -2547,11 +2547,11 @@
                   </svg>
                 </div>
                 <div class="dp-app-cell-name">LifeOS<br>Planner</div>
-                <div class="dp-app-cell-tag">Goals · habits<br>journal · expenses</div>
+                <div class="dp-app-cell-tag" data-key="myApps.lifeosTag">Goals · habits · journal · expenses</div>
                 <div class="dp-app-cell-qr" onclick="openQR('app-lifeos')" title="LifeOS Planner">
                   <div class="dp-qr-content" id="dp-app-lifeos-qr"></div>
                 </div>
-                <div class="dp-app-cell-scan"><i class="ti ti-qrcode" style="font-size:10px"></i>Scan to visit</div>
+                <div class="dp-app-cell-scan"><i class="ti ti-qrcode" style="font-size:10px"></i><span data-key="myApps.scanLabel">Scan to visit</span></div>
               </div>
 
             </div><!-- /dp-apps-grid -->
@@ -6707,13 +6707,13 @@ function openQR(type, id) {
     } catch { urlEl.textContent = qrUrl || 'Not configured'; }
   } else if (type === 'app-soflo') {
     title.textContent = 'SoFlo Vegan Eateries';
-    sub.textContent = 'Plant-based restaurants & cafés near you across South Florida';
+    sub.textContent = t('myApps.sofloDesc');
     qrUrl = 'https://soflo-vegan-eateries.miamivegan2026.workers.dev/';
     urlEl.textContent = 'soflo-vegan-eateries.miamivegan2026.workers.dev';
     logTap('driver_app_soflo_qr');
   } else if (type === 'app-lifeos') {
     title.textContent = 'LifeOS Planner';
-    sub.textContent = 'Goals, habits, journal, calendar, expenses & exercise — all in one place';
+    sub.textContent = t('myApps.lifeosDesc');
     qrUrl = 'https://unalplanner.netlify.app/';
     urlEl.textContent = 'unalplanner.netlify.app';
     logTap('driver_app_lifeos_qr');
