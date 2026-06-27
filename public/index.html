@@ -1239,6 +1239,26 @@
       transform-origin: left; transform: scaleX(1);
     }
     .feedback-teaser-bar.running { transform: scaleX(0); transition: transform 10s linear; }
+    .feedback-teaser-bar.running-5s { transform: scaleX(0); transition: transform 5s linear; }
+
+    /* ── Feedback Thank-you card ───────────────────────────────── */
+    .feedback-ty-card {
+      display: none;
+      background: var(--card-solid);
+      border: 1px solid rgba(229,192,107,0.35);
+      border-radius: 26px; padding: 44px 36px 32px;
+      width: min(440px, 86vw); text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+    .feedback-teaser.ty-mode .feedback-ty-card    { display: block; }
+    .feedback-teaser.ty-mode .feedback-teaser-card { display: none; }
+    .feedback-ty-visual { font-size: 54px; margin-bottom: 16px; line-height: 1; }
+    .feedback-ty-headline {
+      font-family: var(--font-display); font-size: 22px;
+      color: var(--heading); font-weight: 500;
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .feedback-ty-sub { font-size: 14px; color: var(--muted); margin-bottom: 22px; line-height: 1.5; }
 
     /* ── Thanks Screen ────────────────────────────────────────── */
     .thanks-screen {
@@ -2910,6 +2930,16 @@
 
 <!-- ── Feedback Teaser ── -->
 <div class="feedback-teaser" id="feedback-teaser" onclick="onFeedbackTeaserTap()">
+  <!-- Thank-you card (shown for 5s after submit before the teaser) -->
+  <div class="feedback-ty-card" onclick="event.stopPropagation()">
+    <div class="feedback-ty-visual">🙏</div>
+    <div class="feedback-ty-headline" id="fb-ty-headline">Thank you for your feedback!</div>
+    <div class="feedback-ty-sub" id="fb-ty-sub">It helps us make your ride better.</div>
+    <div class="feedback-teaser-progress">
+      <div class="feedback-teaser-bar" id="fb-ty-bar"></div>
+    </div>
+  </div>
+  <!-- Teaser card (shown after thank-you) -->
   <div class="feedback-teaser-card" onclick="event.stopPropagation()">
     <div class="feedback-teaser-visual" id="fb-teaser-visual">🗓</div>
     <div class="feedback-teaser-headline" id="fb-teaser-headline">What's on in Miami this week</div>
@@ -3539,7 +3569,30 @@ function submitFeedback() {
   track('feedback_submitted', { rating: pendingFeedbackRating, chips_count: chips.length, has_text: !!text });
   saveFeedbackRecord({ rating: pendingFeedbackRating, chips, text, partial: false });
   hideFeedbackModal();
-  showFeedbackTeaser(200);
+  showFeedbackThanks();
+}
+
+function showFeedbackThanks() {
+  const TY = {
+    headline: { en: 'Thank you for your feedback!', es: '¡Gracias por tu opinión!', pt: 'Obrigado pelo seu feedback!', fr: 'Merci pour votre avis !' },
+    sub:      { en: 'It helps us make your ride better.', es: 'Nos ayuda a mejorar tu viaje.', pt: 'Nos ajuda a melhorar sua viagem.', fr: 'Cela nous aide à améliorer votre trajet.' },
+  };
+  document.getElementById('fb-ty-headline').textContent = aL(TY.headline);
+  document.getElementById('fb-ty-sub').textContent      = aL(TY.sub);
+
+  const overlay = document.getElementById('feedback-teaser');
+  overlay.classList.add('ty-mode');
+  overlay.classList.add('visible');
+
+  const bar = document.getElementById('fb-ty-bar');
+  bar.classList.remove('running', 'running-5s');
+  void bar.offsetWidth;
+  bar.classList.add('running-5s');
+
+  feedbackTeaserTimer = setTimeout(() => {
+    overlay.classList.remove('ty-mode');
+    showFeedbackTeaser(0);
+  }, 5000);
 }
 
 function skipFeedback() {
@@ -3591,6 +3644,13 @@ function showFeedbackTeaser(delayMs) {
 
 function onFeedbackTeaserTap() {
   clearTimeout(feedbackTeaserTimer);
+  // If tapping during the thank-you phase, skip straight to the teaser
+  const overlay = document.getElementById('feedback-teaser');
+  if (overlay.classList.contains('ty-mode')) {
+    overlay.classList.remove('ty-mode');
+    showFeedbackTeaser(0);
+    return;
+  }
   const action = currentTeaserAction;
   hideFeedbackTeaser();
   if (typeof action === 'function') {
@@ -3602,7 +3662,8 @@ function onFeedbackTeaserTap() {
 }
 
 function hideFeedbackTeaser() {
-  document.getElementById('feedback-teaser').classList.remove('visible');
+  const overlay = document.getElementById('feedback-teaser');
+  overlay.classList.remove('visible', 'ty-mode');
   currentTeaserAction = null;
 }
 
