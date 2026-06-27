@@ -1573,6 +1573,28 @@
     .dp-pet-name { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--heading); line-height: 1.2; }
     .dp-pet-desc { font-size: 11px; color: var(--muted); margin-top: 2px; letter-spacing: 0.3px; line-height: 1.4; }
 
+    /* My Apps section */
+    .dp-apps-section { margin-top: 18px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(25,160,168,0.28); }
+    .dp-apps-head { background: linear-gradient(135deg, rgba(25,160,168,0.26), rgba(25,160,168,0.07)); padding: 15px 20px; border-bottom: 1px solid rgba(25,160,168,0.13); display: flex; align-items: center; gap: 13px; }
+    .dp-apps-head-ico { width: 40px; height: 40px; border-radius: 12px; background: var(--teal); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 19px; box-shadow: 0 4px 14px rgba(25,160,168,0.4); }
+    .dp-apps-head-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--teal); }
+    .dp-apps-head-title { font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
+    .dp-apps-head-sub { font-size: 12px; color: rgba(255,255,255,0.48); margin-top: 2px; }
+    .dp-apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.05); }
+    .dp-app-cell { background: var(--card-solid); padding: 18px 12px 16px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 9px; }
+    .dp-app-cell-ico { width: 52px; height: 52px; border-radius: 15px; overflow: hidden; flex-shrink: 0; }
+    .dp-app-cell-ico img, .dp-app-cell-ico svg { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .dp-app-cell-name { font-size: 11px; font-weight: 700; color: white; line-height: 1.25; }
+    .dp-app-cell-tag  { font-size: 10px; color: rgba(255,255,255,0.44); line-height: 1.35; margin-top: -2px; }
+    .dp-app-cell-qr { width: 62px; height: 62px; border-radius: 11px; background: white; display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    .dp-app-cell-qr .dp-qr-content { position: absolute; inset: 5px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 4px; }
+    .dp-app-cell-qr .dp-qr-content canvas, .dp-app-cell-qr .dp-qr-content img { display: block; width: 100% !important; height: 100% !important; }
+    .dp-app-cell-active { width: 62px; height: 62px; border-radius: 11px; border: 1.5px dashed rgba(25,160,168,0.35); background: rgba(25,160,168,0.07); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; }
+    .dp-app-cell-active .chk { font-size: 22px; color: var(--teal); line-height: 1; }
+    .dp-app-cell-active .lbl { font-size: 8px; font-weight: 700; color: var(--teal); letter-spacing: 0.06em; text-transform: uppercase; text-align: center; line-height: 1.3; }
+    .dp-app-cell-scan { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 3px; }
+    .dp-app-cell-now  { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(25,160,168,0.55); }
+
     /* ── GUIDE PAGE — Home / Browse view switch ───────────────── */
     .guide-main { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
     .home-view, .browse-view { flex: 1; flex-direction: column; min-height: 0; }
@@ -2443,6 +2465,97 @@
             </div>
             <div class="dp-pets-grid" id="dp-pets-grid"><!-- Rendered by renderDriver() --></div>
           </div>
+
+          <!-- My Apps section -->
+          <div class="dp-apps-section">
+            <div class="dp-apps-head">
+              <div class="dp-apps-head-ico"><i class="ti ti-device-mobile-code"></i></div>
+              <div>
+                <div class="dp-apps-head-eyebrow">Also by me</div>
+                <div class="dp-apps-head-title">My apps</div>
+                <div class="dp-apps-head-sub">Scan any code to open on your phone — all free.</div>
+              </div>
+            </div>
+            <div class="dp-apps-grid">
+
+              <!-- Miami Ride Companion — active now -->
+              <div class="dp-app-cell">
+                <div class="dp-app-cell-ico" style="box-shadow:0 4px 14px rgba(25,160,168,0.3)">
+                  <img src="/icons/icon-192.png" alt="Miami Ride Companion">
+                </div>
+                <div class="dp-app-cell-name">Miami Ride<br>Companion</div>
+                <div class="dp-app-cell-tag">You're on it<br>right now</div>
+                <div class="dp-app-cell-active">
+                  <span class="chk">✓</span>
+                  <span class="lbl">Active<br>now</span>
+                </div>
+                <div class="dp-app-cell-now">Using now</div>
+              </div>
+
+              <!-- SoFlo Vegan Eateries -->
+              <div class="dp-app-cell" onclick="logTap('driver_app_soflo')" style="cursor:pointer">
+                <div class="dp-app-cell-ico" style="box-shadow:0 4px 14px rgba(40,200,200,0.28)">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="sfg" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#28C8C8"/>
+                        <stop offset="100%" stop-color="#C86494"/>
+                      </linearGradient>
+                    </defs>
+                    <rect width="100" height="100" fill="url(#sfg)"/>
+                    <path d="M50 12 C36 12 25 23 25 37 C25 54 50 80 50 80 C50 80 75 54 75 37 C75 23 64 12 50 12Z" fill="white" opacity="0.97"/>
+                    <circle cx="50" cy="36" r="13" fill="white"/>
+                    <path d="M50 26 C50 26 38 32 38 40 C38 46 44 50 50 50 C50 50 50 36 58 30 C56 28 52 26 50 26Z" fill="#3DAA6A"/>
+                    <path d="M50 50 C50 50 56 44 62 40 C62 34 58 28 58 30 C50 36 50 50 50 50Z" fill="#2E8A54"/>
+                    <line x1="50" y1="50" x2="50" y2="28" stroke="white" stroke-width="1.2" opacity="0.6"/>
+                  </svg>
+                </div>
+                <div class="dp-app-cell-name">SoFlo Vegan<br>Eateries</div>
+                <div class="dp-app-cell-tag">Plant-based spots<br>near you</div>
+                <div class="dp-app-cell-qr" onclick="openQR('app-soflo')" title="SoFlo Vegan Eateries">
+                  <div class="dp-qr-content" id="dp-app-soflo-qr"></div>
+                </div>
+                <div class="dp-app-cell-scan"><i class="ti ti-qrcode" style="font-size:10px"></i>Scan to visit</div>
+              </div>
+
+              <!-- LifeOS Planner -->
+              <div class="dp-app-cell" onclick="logTap('driver_app_lifeos')" style="cursor:pointer">
+                <div class="dp-app-cell-ico" style="box-shadow:0 4px 14px rgba(114,72,214,0.32)">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="log" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#2B1B72"/>
+                        <stop offset="100%" stop-color="#7248D6"/>
+                      </linearGradient>
+                    </defs>
+                    <rect width="100" height="100" fill="url(#log)"/>
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="2.5" opacity="0.9"/>
+                    <line x1="50" y1="50" x2="50"    y2="20"    stroke="white" stroke-width="2" opacity="0.85"/>
+                    <line x1="50" y1="50" x2="75.98" y2="65"    stroke="white" stroke-width="2" opacity="0.85"/>
+                    <line x1="50" y1="50" x2="75.98" y2="35"    stroke="white" stroke-width="2" opacity="0.85"/>
+                    <line x1="50" y1="50" x2="50"    y2="80"    stroke="white" stroke-width="2" opacity="0.85"/>
+                    <line x1="50" y1="50" x2="24.02" y2="65"    stroke="white" stroke-width="2" opacity="0.85"/>
+                    <line x1="50" y1="50" x2="24.02" y2="35"    stroke="white" stroke-width="2" opacity="0.85"/>
+                    <path d="M50 50 L50 20 A30 30 0 0 1 75.98 35 Z"    fill="white" opacity="0.25"/>
+                    <path d="M50 50 L75.98 35 A30 30 0 0 1 75.98 65 Z" fill="white" opacity="0.18"/>
+                    <path d="M50 50 L75.98 65 A30 30 0 0 1 50 80 Z"    fill="white" opacity="0.25"/>
+                    <path d="M50 50 L50 80 A30 30 0 0 1 24.02 65 Z"    fill="white" opacity="0.16"/>
+                    <path d="M50 50 L24.02 65 A30 30 0 0 1 24.02 35 Z" fill="white" opacity="0.22"/>
+                    <path d="M50 50 L24.02 35 A30 30 0 0 1 50 20 Z"    fill="white" opacity="0.25"/>
+                    <circle cx="50" cy="50" r="14" fill="none" stroke="white" stroke-width="1.5" opacity="0.22"/>
+                    <circle cx="50" cy="50" r="4.5" fill="white" opacity="0.95"/>
+                  </svg>
+                </div>
+                <div class="dp-app-cell-name">LifeOS<br>Planner</div>
+                <div class="dp-app-cell-tag">Goals · habits<br>journal · expenses</div>
+                <div class="dp-app-cell-qr" onclick="openQR('app-lifeos')" title="LifeOS Planner">
+                  <div class="dp-qr-content" id="dp-app-lifeos-qr"></div>
+                </div>
+                <div class="dp-app-cell-scan"><i class="ti ti-qrcode" style="font-size:10px"></i>Scan to visit</div>
+              </div>
+
+            </div><!-- /dp-apps-grid -->
+          </div><!-- /dp-apps-section -->
         </div>
       </div>
 
@@ -4032,6 +4145,10 @@ function renderDriver() {
     `;
     }).join('');
   }
+
+  // My Apps — inline QR codes
+  renderInlineQR('#dp-app-soflo-qr',  'https://soflo-vegan-eateries.miamivegan2026.workers.dev/');
+  renderInlineQR('#dp-app-lifeos-qr', 'https://unalplanner.netlify.app/');
 }
 
 function setText(sel, text) {
@@ -6588,6 +6705,18 @@ function openQR(type, id) {
     try {
       urlEl.textContent = qrUrl ? new URL(qrUrl).hostname : 'Not configured';
     } catch { urlEl.textContent = qrUrl || 'Not configured'; }
+  } else if (type === 'app-soflo') {
+    title.textContent = 'SoFlo Vegan Eateries';
+    sub.textContent = 'Plant-based restaurants & cafés near you across South Florida';
+    qrUrl = 'https://soflo-vegan-eateries.miamivegan2026.workers.dev/';
+    urlEl.textContent = 'soflo-vegan-eateries.miamivegan2026.workers.dev';
+    logTap('driver_app_soflo_qr');
+  } else if (type === 'app-lifeos') {
+    title.textContent = 'LifeOS Planner';
+    sub.textContent = 'Goals, habits, journal, calendar, expenses & exercise — all in one place';
+    qrUrl = 'https://unalplanner.netlify.app/';
+    urlEl.textContent = 'unalplanner.netlify.app';
+    logTap('driver_app_lifeos_qr');
   }
 
   // Generate real QR code
