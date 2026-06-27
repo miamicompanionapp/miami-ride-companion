@@ -7,6 +7,41 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Would You Rather + Color Tap games — polish pass  *(DONE 2026-06-26)*
+
+Follow-up improvements to the two new games added same session:
+
+- **WYR play layout**: "Would you rather…" shrinks to a compact header; both options stack vertically and each fills half the remaining screen height with 22px text (was a side-by-side 2-column grid with 13px text)
+- **All pre-game intro screens** (TTT, C4, Tap Duel, Trivia Buzzer, WYR, Color Tap): dramatically larger on iPad — icon 84px, title 42px, body 18px; base sizes also bumped. Used full screen real estate instead of small centered card.
+- **Biscayne Dash**: car speeds reduced ~35% and car width narrowed 1.9→1.4 cells to make the game playable in a moving car
+
+SW bumped to `miami-ride-v1.55.0`.
+
+---
+
+### [X] Would You Rather + Color Tap games  *(DONE 2026-06-26)*
+
+Two new games added to the Games tab, fully translated EN/ES/PT/FR.
+
+**Would You Rather** (With Friends section)
+- 20 questions covering Miami/travel, food, lifestyle, and silly topics
+- Each question's A/B options are multilingual objects rendered with `gL()` — fully translated into ES/PT/FR
+- Shuffled deck each game; tap A or B to pick (highlights in teal/gold), Next button appears after pick, end screen after all 20
+- Registered in `GAMES` registry; smoke-tested open/close
+
+**Color Tap — Stroop Effect** (Solo section)
+- Color word (e.g. "RED") displayed in a different color (e.g. blue); tap the color you see, not the word
+- 6 colors fully translated (RED/ROJO/VERMELHO/ROUGE etc.) rendered with `gL()`
+- 3-second countdown bar that shifts teal→gold→pink; auto-advances 900ms after answer; 10 rounds
+- End screen with score and performance label (Stroop Master at 8+)
+- `ctStopTimer()` hooked into `closeGames()` so no RAF leaks on close
+
+**Translation system**: all UI chrome (`data-gkey` on every static string), dynamic strings use `gt()` / `gL()` at render time. Smoke test coverage added for both games (`wyr`, `ct`).
+
+SW bumped to `miami-ride-v1.54.0`.
+
+---
+
 ### [X] Google Analytics GA4 — comprehensive "all in" tracking  *(DONE 2026-06-26)*
 
 Full GA4 instrumentation added to Miami Ride Companion. Separate from the custom IndexedDB analytics (which generates JSON reports); this tracks phone PWA installs and all user interactions in GA4 property `G-MCCTMMYD5R` (shared account, separate property from Miami Vegan App).

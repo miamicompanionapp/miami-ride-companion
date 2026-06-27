@@ -85,6 +85,36 @@
       font-size: 15px; color: var(--muted);
       margin-bottom: 32px; max-width: 300px; line-height: 1.5;
     }
+    /* platform tabs */
+    #install-gate .ig-tabs {
+      display: flex; gap: 8px; margin-bottom: 16px; max-width: 340px; width: 100%;
+    }
+    #install-gate .ig-tab {
+      flex: 1; padding: 10px 8px; border-radius: 10px;
+      border: 1px solid rgba(229,192,107,0.25);
+      background: rgba(20,40,66,0.5); color: var(--muted);
+      font-family: var(--font-body); font-size: 14px; cursor: pointer;
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
+    }
+    #install-gate .ig-tab.active {
+      background: rgba(25,160,168,0.18); color: var(--teal);
+      border-color: var(--teal);
+    }
+    /* browser picker */
+    #install-gate .ig-browser-pick {
+      max-width: 340px; width: 100%; margin-bottom: 16px; text-align: left;
+    }
+    #install-gate .ig-browser-pick label {
+      display: block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--teal); font-family: var(--font-deco); margin-bottom: 8px;
+    }
+    #install-gate .ig-browser-pick select {
+      width: 100%; padding: 10px 12px; border-radius: 10px;
+      border: 1px solid rgba(229,192,107,0.25);
+      background: rgba(20,40,66,0.72); color: var(--body);
+      font-family: var(--font-body); font-size: 14px;
+    }
+    /* steps box */
     #install-gate .ig-steps {
       background: rgba(20,40,66,0.72);
       border: 1px solid rgba(229,192,107,0.25);
@@ -92,11 +122,7 @@
       padding: 20px 24px; max-width: 340px; width: 100%;
       text-align: left;
     }
-    #install-gate .ig-steps-title {
-      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--teal); font-family: var(--font-deco);
-      margin-bottom: 14px;
-    }
+    #install-gate .ig-steps ol { list-style: none; margin: 0; padding: 0; }
     #install-gate .ig-step {
       display: flex; align-items: flex-start; gap: 12px;
       font-size: 14px; color: var(--body); margin-bottom: 12px;
@@ -108,6 +134,11 @@
       border-radius: 50%; background: var(--teal);
       color: #fff; font-size: 12px; font-weight: 600;
       display: flex; align-items: center; justify-content: center;
+    }
+    #install-gate .ig-key {
+      display: inline-block; padding: 1px 7px; border-radius: 6px;
+      background: rgba(229,192,107,0.15); border: 1px solid rgba(229,192,107,0.35);
+      color: var(--gold); font-size: 13px;
     }
     #install-gate .ig-hint {
       margin-top: 24px; font-size: 12px; color: rgba(157,180,198,0.55);
@@ -1973,24 +2004,23 @@
   <div class="ig-icon" id="ig-icon-tap" style="cursor:default"><img src="/icons/icon-192.png" alt="" style="width:80px;height:80px;border-radius:18px;box-shadow:0 0 24px rgba(229,192,107,0.4)"></div>
   <div class="ig-title">Miami Ride Companion</div>
   <div class="ig-sub">Add this app to your home screen for the full experience — no browser bar, full screen.</div>
-  <div class="ig-steps" id="ig-steps-ios" style="display:none">
-    <div class="ig-steps-title">iPhone / iPad</div>
-    <div class="ig-step"><div class="ig-step-num">1</div><span>Tap the <strong>Share</strong> button at the bottom of Safari</span></div>
-    <div class="ig-step"><div class="ig-step-num">2</div><span>Scroll down and tap <strong>Add to Home Screen</strong></span></div>
-    <div class="ig-step"><div class="ig-step-num">3</div><span>Tap <strong>Add</strong> — then open the app from your home screen</span></div>
+  <!-- Platform tabs -->
+  <div class="ig-tabs">
+    <button class="ig-tab" id="ig-tab-ios" data-platform="ios">🍏 iPhone / iPad</button>
+    <button class="ig-tab" id="ig-tab-android" data-platform="android">🤖 Android</button>
   </div>
-  <div class="ig-steps" id="ig-steps-android" style="display:none">
-    <div class="ig-steps-title">Android</div>
-    <div class="ig-step"><div class="ig-step-num">1</div><span>Tap the <strong>⋮ menu</strong> in Chrome (top right)</span></div>
-    <div class="ig-step"><div class="ig-step-num">2</div><span>Tap <strong>Add to Home screen</strong> or <strong>Install app</strong></span></div>
-    <div class="ig-step"><div class="ig-step-num">3</div><span>Tap <strong>Add</strong> — then open the app from your home screen</span></div>
+  <!-- Android browser picker (hidden on iOS) -->
+  <div class="ig-browser-pick" id="ig-browser-pick" style="display:none">
+    <label for="ig-browser-select">Which browser are you using?</label>
+    <select id="ig-browser-select">
+      <option value="chrome">Chrome</option>
+      <option value="samsung">Samsung Internet</option>
+      <option value="firefox">Firefox</option>
+      <option value="edge">Edge</option>
+    </select>
   </div>
-  <div class="ig-steps" id="ig-steps-other" style="display:none">
-    <div class="ig-steps-title">Add to Home Screen</div>
-    <div class="ig-step"><div class="ig-step-num">1</div><span>Open this page in <strong>Safari</strong> (iPhone) or <strong>Chrome</strong> (Android)</span></div>
-    <div class="ig-step"><div class="ig-step-num">2</div><span>Use the browser menu to <strong>Add to Home Screen</strong></span></div>
-    <div class="ig-step"><div class="ig-step-num">3</div><span>Open the installed app from your home screen</span></div>
-  </div>
+  <!-- Dynamic steps -->
+  <div class="ig-steps"><ol id="ig-steps-list"></ol></div>
   <div class="ig-hint">Works on iPhone, iPad, and Android phones</div>
 </div>
 
@@ -3621,12 +3651,81 @@ document.addEventListener('DOMContentLoaded', () => {
              || localStorage.getItem('pwa-bypass') === '1';
   if (!isPWA) {
     document.getElementById('app').style.display = 'none';
-    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-    const isAndroid = /android/i.test(navigator.userAgent);
-    document.getElementById('ig-steps-ios').style.display = isIOS ? '' : 'none';
-    document.getElementById('ig-steps-android').style.display = isAndroid ? '' : 'none';
-    document.getElementById('ig-steps-other').style.display = (!isIOS && !isAndroid) ? '' : 'none';
-    track('install_gate_shown', { platform: isIOS ? 'ios' : isAndroid ? 'android' : 'other' });
+
+    const IG_INSTRUCTIONS = {
+      ios: [
+        'Tap the <span class="ig-key">Share</span> button (square with arrow) in Safari\'s toolbar.',
+        'Scroll down and tap <span class="ig-key">Add to Home Screen</span>.',
+        'Tap <span class="ig-key">Add</span> in the top-right corner.',
+        'Close Safari, then open the app from the new icon on your home screen.',
+      ],
+      android: {
+        chrome: [
+          'Tap the <span class="ig-key">⋮</span> menu in the top-right of Chrome.',
+          'Tap <span class="ig-key">Add to Home screen</span> or <span class="ig-key">Install app</span>.',
+          'Tap <span class="ig-key">Add</span> / <span class="ig-key">Install</span> to confirm.',
+          'Open the app from the new icon on your home screen.',
+        ],
+        samsung: [
+          'Tap the <span class="ig-key">☰</span> menu at the bottom of Samsung Internet.',
+          'Tap <span class="ig-key">Add page to</span>, then choose <span class="ig-key">Home screen</span>.',
+          'Tap <span class="ig-key">Add</span> to confirm.',
+          'Open the app from the new icon on your home screen.',
+        ],
+        firefox: [
+          'Tap the <span class="ig-key">⋮</span> menu in Firefox.',
+          'Tap <span class="ig-key">Install</span> or <span class="ig-key">Add to Home screen</span>.',
+          'Confirm by tapping <span class="ig-key">Add</span>.',
+          'Open the app from the new icon on your home screen.',
+        ],
+        edge: [
+          'Tap the <span class="ig-key">⋯</span> menu at the bottom of Edge.',
+          'Tap <span class="ig-key">Add to phone</span> or <span class="ig-key">Add to Home screen</span>.',
+          'Tap <span class="ig-key">Add</span> / <span class="ig-key">Install</span> to confirm.',
+          'Open the app from the new icon on your home screen.',
+        ],
+      },
+    };
+
+    const ua = navigator.userAgent || '';
+    const detectedPlatform = /iphone|ipad|ipod/i.test(ua) || (/Macintosh/.test(ua) && 'ontouchend' in document)
+      ? 'ios' : 'android';
+    const detectedBrowser = /SamsungBrowser/i.test(ua) ? 'samsung'
+      : /EdgA|Edge|Edg\//i.test(ua) ? 'edge'
+      : /Firefox|FxiOS/i.test(ua) ? 'firefox'
+      : 'chrome';
+
+    let igPlatform = detectedPlatform;
+    let igBrowser = detectedBrowser;
+
+    function renderIgSteps() {
+      const steps = igPlatform === 'ios'
+        ? IG_INSTRUCTIONS.ios
+        : (IG_INSTRUCTIONS.android[igBrowser] || IG_INSTRUCTIONS.android.chrome);
+      document.getElementById('ig-steps-list').innerHTML = steps
+        .map((s, i) => `<li class="ig-step"><div class="ig-step-num">${i+1}</div><span>${s}</span></li>`)
+        .join('');
+      document.getElementById('ig-browser-pick').style.display = igPlatform === 'android' ? '' : 'none';
+      document.querySelectorAll('.ig-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.platform === igPlatform);
+      });
+    }
+
+    document.querySelectorAll('.ig-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        igPlatform = btn.dataset.platform;
+        renderIgSteps();
+      });
+    });
+    document.getElementById('ig-browser-select').value = igBrowser;
+    document.getElementById('ig-browser-select').addEventListener('change', e => {
+      igBrowser = e.target.value;
+      renderIgSteps();
+    });
+
+    renderIgSteps();
+    track('install_gate_shown', { platform: igPlatform, browser: igBrowser });
+
     // Secret bypass: 5 taps on the app icon within 4s skips the gate
     let igTaps = 0, igTapTimer = null;
     document.getElementById('ig-icon-tap').addEventListener('click', () => {
