@@ -1,43 +1,30 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-28T13:28:19.112Z",
+    "lastUpdated": "2026-06-29T05:49:24.659Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-06-28T13:28:19.112Z",
+    "fetchedAt": "2026-06-29T05:47:40.110Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 93,
+      "temp_f": 81,
+      "feels_f": 87,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 75,
-      "wind_mph": 11,
-      "rain_chance": 7,
-      "weathercode": 95
+      "humidity": 72,
+      "wind_mph": 5,
+      "rain_chance": 1,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-06-28",
-        "high_f": 91,
-        "low_f": 80,
-        "weathercode": 95,
-        "rain_chance": 7,
-        "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
-        }
-      },
-      {
         "date": "2026-06-29",
         "high_f": 91,
-        "low_f": 77,
+        "low_f": 79,
         "weathercode": 95,
         "rain_chance": 1,
         "description": {
@@ -49,36 +36,49 @@
       },
       {
         "date": "2026-06-30",
-        "high_f": 89,
-        "low_f": 81,
-        "weathercode": 3,
-        "rain_chance": 20,
+        "high_f": 90,
+        "low_f": 76,
+        "weathercode": 95,
+        "rain_chance": 22,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
         }
       },
       {
         "date": "2026-07-01",
         "high_f": 89,
-        "low_f": 84,
-        "weathercode": 51,
-        "rain_chance": 68,
+        "low_f": 75,
+        "weathercode": 96,
+        "rain_chance": 74,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-07-02",
-        "high_f": 88,
+        "high_f": 89,
+        "low_f": 81,
+        "weathercode": 96,
+        "rain_chance": 62,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-07-03",
+        "high_f": 89,
         "low_f": 84,
         "weathercode": 95,
-        "rain_chance": 47,
+        "rain_chance": 44,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,146 +89,146 @@
     ],
     "hourly": [
       {
+        "hour": "01:00",
+        "temp_f": 81,
+        "weathercode": 95,
+        "rain_chance": 0
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 80,
+        "weathercode": 95,
+        "rain_chance": 0
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 79,
+        "weathercode": 1,
+        "rain_chance": 0
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 83,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
         "hour": "09:00",
         "temp_f": 86,
-        "weathercode": 95,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "10:00",
-        "temp_f": 86,
-        "weathercode": 95,
-        "rain_chance": 5
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 0
       },
       {
         "hour": "11:00",
-        "temp_f": 87,
-        "weathercode": 95,
-        "rain_chance": 6
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "12:00",
         "temp_f": 90,
-        "weathercode": 95,
-        "rain_chance": 6
+        "weathercode": 1,
+        "rain_chance": 0
       },
       {
         "hour": "13:00",
-        "temp_f": 90,
-        "weathercode": 95,
-        "rain_chance": 7
+        "temp_f": 91,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "14:00",
         "temp_f": 91,
-        "weathercode": 95,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "15:00",
-        "temp_f": 90,
-        "weathercode": 95,
-        "rain_chance": 5
+        "temp_f": 91,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "16:00",
-        "temp_f": 88,
-        "weathercode": 95,
-        "rain_chance": 5
+        "temp_f": 90,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "17:00",
-        "temp_f": 88,
+        "temp_f": 89,
         "weathercode": 95,
-        "rain_chance": 4
+        "rain_chance": 0
       },
       {
         "hour": "18:00",
         "temp_f": 88,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 0
       },
       {
         "hour": "19:00",
         "temp_f": 87,
         "weathercode": 95,
-        "rain_chance": 2
+        "rain_chance": 0
       },
       {
         "hour": "20:00",
         "temp_f": 85,
         "weathercode": 95,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "21:00",
         "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 95,
+        "rain_chance": 0
       },
       {
         "hour": "22:00",
         "temp_f": 82,
         "weathercode": 95,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 95,
         "rain_chance": 0
       },
       {
         "hour": "00:00",
         "temp_f": 81,
-        "weathercode": 95,
-        "rain_chance": 0
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 80,
-        "weathercode": 95,
-        "rain_chance": 1
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 78,
-        "weathercode": 1,
-        "rain_chance": 1
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 82,
         "weathercode": 0,
         "rain_chance": 0
       }
@@ -3734,7 +3734,11 @@
     "attractorDelay": 30
   },
   "businessCard": {
-    "redirectUrl": "https://www.thumbtack.com/fl/miami/handyman/abdullah-unal/service/488964971988189188",
-    "sources": ["card", "flyer", "magnet"]
+    "redirectUrl": "https://www.thumbtack.com/fl/miami/handyman/river-nora/service/566364781473906693",
+    "sources": [
+      "card",
+      "flyer",
+      "magnet"
+    ]
   }
 }
