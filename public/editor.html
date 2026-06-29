@@ -2795,26 +2795,32 @@ function renderBizcardGrid(statsData) {
         <button class="btn btn-danger" style="padding:5px 8px;font-size:11px" onclick="removeBizcardSource('${src}')" title="Remove"><i class="ti ti-trash"></i></button>
       </div>`;
     grid.appendChild(item);
-    renderInlineQRBiz('biz-qr-' + src, goUrl);
+    renderInlineQRBiz('biz-qr-' + src, goUrl, src);
   });
 }
 
-function renderInlineQRBiz(elId, url) {
+const _bizcardQRInstances = {};
+
+function renderInlineQRBiz(elId, url, src) {
   const el = document.getElementById(elId);
-  if (!el || !url || typeof QRCode === 'undefined') return;
+  if (!el || !url || typeof QRCodeStyling === 'undefined') return;
   el.innerHTML = '';
-  try {
-    new QRCode(el, { text: url, width: 108, height: 108, colorDark: '#0F2137', colorLight: '#FFFFFF', correctLevel: QRCode.CorrectLevel.M });
-  } catch { el.innerHTML = '<div style="font-size:10px;color:#7A8FA6">QR error</div>'; }
+  const qr = new QRCodeStyling({
+    width: 108, height: 108,
+    data: url,
+    dotsOptions: { type: 'dots', color: '#0F2137' },
+    cornersSquareOptions: { type: 'square', color: '#0F2137' },
+    cornersDotOptions: { type: 'dot', color: '#0F2137' },
+    backgroundOptions: { color: '#FFFFFF' },
+  });
+  qr.append(el);
+  if (src) _bizcardQRInstances[src] = qr;
 }
 
 function downloadBizcardQR(src) {
-  const canvas = document.querySelector('#biz-qr-' + src + ' canvas');
-  if (!canvas) return showToast('QR not ready', 'error');
-  const a = document.createElement('a');
-  a.download = 'qr-go-' + src + '.png';
-  a.href = canvas.toDataURL('image/png');
-  a.click();
+  const qr = _bizcardQRInstances[src];
+  if (!qr) return showToast('QR not ready', 'error');
+  qr.download({ name: 'qr-go-' + src, extension: 'png' });
 }
 
 function addBizcardSource() {
@@ -2887,6 +2893,6 @@ function renderBizcardStats(data) {
     </div>`;
 }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
 </body>
 </html>
