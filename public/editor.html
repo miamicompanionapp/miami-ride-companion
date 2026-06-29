@@ -335,6 +335,20 @@
     .info-box i { font-size: 14px; color: var(--teal); flex-shrink: 0; margin-top: 1px; }
     .info-box span { font-size: 11px; color: #0B6E72; line-height: 1.6; }
 
+    /* ── Business Card QR grid ── */
+    .biz-qr-item { display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px;background:var(--bg);border-radius:12px;border:1px solid var(--border);width:160px; }
+    .biz-qr-box { width:120px;height:120px;background:white;border-radius:8px;padding:6px;display:flex;align-items:center;justify-content:center; }
+    .biz-qr-slug { font-size:11px;font-weight:600;color:var(--teal);font-family:monospace; }
+    .biz-qr-count { font-size:22px;font-weight:700;color:var(--navy);line-height:1; }
+    .biz-qr-count-lbl { font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-top:-4px; }
+    .biz-qr-actions { display:flex;gap:6px; }
+    .biz-stat-row { display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);font-size:13px; }
+    .biz-stat-row:last-child { border-bottom:none; }
+    .biz-day-bar { display:flex;align-items:flex-end;gap:3px;height:40px;margin-top:10px; }
+    .biz-day-col { display:flex;flex-direction:column;align-items:center;gap:2px;flex:1; }
+    .biz-day-fill { background:var(--teal);border-radius:2px 2px 0 0;width:100%;min-height:2px;transition:height 0.3s; }
+    .biz-day-lbl { font-size:9px;color:var(--muted);white-space:nowrap; }
+
     /* ── GitHub Setup ── */
     .github-setup { background: var(--gold-l); border-radius: 12px; padding: 16px 20px; border: 0.5px solid var(--gold-b); }
     .github-setup h3 { font-size: 13px; font-weight: 600; color: #7A5500; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
@@ -413,6 +427,9 @@
     <div class="nav-section-label" style="margin-top:8px">Promote</div>
     <div class="nav-item" id="nav-driver" onclick="showPanel('driver')">
       <i class="ti ti-user-heart"></i><span>Driver page</span>
+    </div>
+    <div class="nav-item" id="nav-bizcard" onclick="showPanel('bizcard')">
+      <i class="ti ti-id"></i><span>Business Card</span>
     </div>
     <div class="nav-item" id="nav-sponsored" onclick="showPanel('sponsored')">
       <i class="ti ti-star"></i><span>Sponsored</span>
@@ -726,6 +743,47 @@
     </div>
 
     <!-- SPONSORED -->
+    <!-- BUSINESS CARD -->
+    <div class="panel" id="panel-bizcard">
+
+      <!-- Stats -->
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">Scan analytics</div><div class="card-sub">Total scans across all your printed QR codes</div></div>
+          <button class="btn" style="padding:6px 12px;font-size:12px" onclick="loadBizcardStats()"><i class="ti ti-refresh"></i>Refresh</button>
+        </div>
+        <div id="bizcard-stats-body" style="font-size:13px;color:var(--muted)">Open this panel to load stats.</div>
+      </div>
+
+      <!-- Destination URL -->
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Redirect destination</div><div class="card-sub">Where every QR sends people — swap it any time without reprinting</div></div></div>
+        <div class="info-box" style="margin-bottom:14px">
+          <i class="ti ti-info-circle"></i>
+          <span>All your QR codes point to permanent URLs on Cloudflare (<code style="font-size:11px">/go/card</code>, <code style="font-size:11px">/go/flyer</code>, …). Change the destination here and every printed card updates within ~30 seconds.</span>
+        </div>
+        <div class="field">
+          <label>Destination URL</label>
+          <input type="url" id="bizcard-url-input" placeholder="https://www.thumbtack.com/…" style="width:100%">
+        </div>
+        <button class="btn btn-primary" onclick="saveBizcardUrl()"><i class="ti ti-check"></i>Save & Publish</button>
+      </div>
+
+      <!-- QR codes per source -->
+      <div class="card">
+        <div class="card-header"><div><div class="card-title">Your QR codes</div><div class="card-sub">Each placement gets its own code so you know which material drives scans</div></div></div>
+        <div id="bizcard-qr-grid" style="display:flex;flex-wrap:wrap;gap:20px;margin-bottom:20px"></div>
+        <div style="display:flex;gap:8px;align-items:flex-end">
+          <div class="field" style="flex:1;margin:0">
+            <label>Add a placement</label>
+            <input type="text" id="bizcard-new-source" placeholder="e.g. truck, instagram, door-hanger" maxlength="24" onkeydown="if(event.key==='Enter')addBizcardSource()">
+          </div>
+          <button class="btn btn-primary" style="flex-shrink:0" onclick="addBizcardSource()"><i class="ti ti-plus"></i>Add</button>
+        </div>
+      </div>
+
+    </div>
+
     <div class="panel" id="panel-sponsored">
       <div class="card">
         <div class="card-header"><div><div class="card-title">Sponsored Slots</div><div class="card-sub">Up to 2 paid local business slots — shown in City Guide with "Sponsored" label</div></div></div>
@@ -1064,6 +1122,7 @@ function showPanel(id) {
   navEl.appendChild(dot);
   if (id === 'offline') { loadOfflineStatus(); updateOfflineEstimate(); }
   if (id === 'settings') checkSwUpdate();
+  if (id === 'bizcard') initBizcardPanel();
 }
 
 // ══════════════════════════════════════════════════════
@@ -2700,6 +2759,134 @@ if ('serviceWorker' in navigator) {
     }
   });
 }
+
+// ══════════════════════════════════════════════════════
+// BUSINESS CARD QR
+// ══════════════════════════════════════════════════════
+
+function initBizcardPanel() {
+  if (!CONTENT) return;
+  if (!CONTENT.businessCard) CONTENT.businessCard = { redirectUrl: '', sources: ['card', 'flyer', 'magnet'] };
+  document.getElementById('bizcard-url-input').value = CONTENT.businessCard.redirectUrl || '';
+  renderBizcardGrid();
+  loadBizcardStats();
+}
+
+function bizcardSources() {
+  return CONTENT?.businessCard?.sources || ['card', 'flyer', 'magnet'];
+}
+
+function renderBizcardGrid(statsData) {
+  const grid = document.getElementById('bizcard-qr-grid');
+  grid.innerHTML = '';
+  bizcardSources().forEach(src => {
+    const goUrl = window.location.origin + '/go/' + src;
+    const count = statsData?.bySource?.[src] ?? '—';
+    const item = document.createElement('div');
+    item.className = 'biz-qr-item';
+    item.id = 'biz-item-' + src;
+    item.innerHTML = `
+      <div class="biz-qr-box" id="biz-qr-${src}"></div>
+      <div class="biz-qr-slug">/go/${src}</div>
+      <div class="biz-qr-count" id="biz-count-${src}">${count}</div>
+      <div class="biz-qr-count-lbl">scans</div>
+      <div class="biz-qr-actions">
+        <button class="btn" style="padding:5px 10px;font-size:11px" onclick="downloadBizcardQR('${src}')"><i class="ti ti-download"></i>PNG</button>
+        <button class="btn btn-danger" style="padding:5px 8px;font-size:11px" onclick="removeBizcardSource('${src}')" title="Remove"><i class="ti ti-trash"></i></button>
+      </div>`;
+    grid.appendChild(item);
+    renderInlineQRBiz('biz-qr-' + src, goUrl);
+  });
+}
+
+function renderInlineQRBiz(elId, url) {
+  const el = document.getElementById(elId);
+  if (!el || !url || typeof QRCode === 'undefined') return;
+  el.innerHTML = '';
+  try {
+    new QRCode(el, { text: url, width: 108, height: 108, colorDark: '#0F2137', colorLight: '#FFFFFF', correctLevel: QRCode.CorrectLevel.M });
+  } catch { el.innerHTML = '<div style="font-size:10px;color:#7A8FA6">QR error</div>'; }
+}
+
+function downloadBizcardQR(src) {
+  const canvas = document.querySelector('#biz-qr-' + src + ' canvas');
+  if (!canvas) return showToast('QR not ready', 'error');
+  const a = document.createElement('a');
+  a.download = 'qr-go-' + src + '.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+}
+
+function addBizcardSource() {
+  const inp = document.getElementById('bizcard-new-source');
+  const raw = inp.value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+  if (!raw) return showToast('Enter a placement name', 'error');
+  const sources = bizcardSources();
+  if (sources.includes(raw)) return showToast('Already exists', 'error');
+  sources.push(raw);
+  CONTENT.businessCard.sources = sources;
+  inp.value = '';
+  renderBizcardGrid();
+  publishContent();
+}
+
+function removeBizcardSource(src) {
+  if (!confirm(`Remove QR code for "${src}"? This won't break any scans — it just removes it from the editor.`)) return;
+  CONTENT.businessCard.sources = bizcardSources().filter(s => s !== src);
+  renderBizcardGrid();
+  publishContent();
+}
+
+function saveBizcardUrl() {
+  const url = document.getElementById('bizcard-url-input').value.trim();
+  if (!url) return showToast('Enter a destination URL first', 'error');
+  try { new URL(url); } catch { return showToast('Invalid URL — include https://', 'error'); }
+  CONTENT.businessCard.redirectUrl = url;
+  publishContent();
+}
+
+async function loadBizcardStats() {
+  const body = document.getElementById('bizcard-stats-body');
+  body.innerHTML = '<div style="font-size:13px;color:var(--muted)">Loading…</div>';
+  try {
+    const sources = bizcardSources().join(',');
+    const res = await fetch('/api/bizcard-stats?sources=' + encodeURIComponent(sources));
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+    renderBizcardStats(data);
+    renderBizcardGrid(data);
+  } catch (e) {
+    body.innerHTML = `<div style="font-size:13px;color:var(--red)">${e.message === 'KV not configured' ? 'KV not set up yet — see setup instructions below.' : 'Error: ' + e.message}</div>`;
+  }
+}
+
+function renderBizcardStats(data) {
+  const body = document.getElementById('bizcard-stats-body');
+  const maxDay = Math.max(...data.byDay.map(d => d.count), 1);
+  const bars = data.byDay.map(d => {
+    const h = Math.round((d.count / maxDay) * 36);
+    const lbl = d.date.slice(5); // MM-DD
+    return `<div class="biz-day-col"><div class="biz-day-fill" style="height:${h}px" title="${d.date}: ${d.count} scans"></div><div class="biz-day-lbl">${lbl}</div></div>`;
+  }).join('');
+
+  const sourceRows = Object.entries(data.bySource)
+    .sort((a, b) => b[1] - a[1])
+    .map(([src, n]) => `<div class="biz-stat-row"><span>/go/${src}</span><strong>${n}</strong></div>`)
+    .join('');
+
+  body.innerHTML = `
+    <div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <div style="font-size:36px;font-weight:700;color:var(--navy);line-height:1">${data.total}</div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px">Total scans</div>
+        <div class="biz-day-bar" style="margin-top:16px">${bars}</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Last 14 days</div>
+      </div>
+      ${sourceRows ? `<div style="flex:1;min-width:160px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">By source</div>${sourceRows}</div>` : ''}
+    </div>`;
+}
 </script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 </body>
 </html>
