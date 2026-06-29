@@ -2818,9 +2818,16 @@ function renderInlineQRBiz(elId, url, src) {
 }
 
 function downloadBizcardQR(src) {
-  const qr = _bizcardQRInstances[src];
-  if (!qr) return showToast('QR not ready', 'error');
-  qr.download({ name: 'qr-go-' + src, extension: 'png' });
+  if (!_bizcardQRInstances[src]) return showToast('QR not ready', 'error');
+  const hiRes = new QRCodeStyling({
+    width: 1200, height: 1200,
+    data: window.location.origin + '/go/' + src,
+    dotsOptions: { type: 'dots', color: '#0F2137' },
+    cornersSquareOptions: { type: 'square', color: '#0F2137' },
+    cornersDotOptions: { type: 'dot', color: '#0F2137' },
+    backgroundOptions: { color: '#FFFFFF' },
+  });
+  hiRes.download({ name: 'qr-go-' + src, extension: 'png' });
 }
 
 function addBizcardSource() {
