@@ -7,6 +7,12 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [~] #42 — Editor publish: auto-increment SW cache version  *(DROPPED 2026-06-30)*
+
+Won't build. The daily GitHub Actions refresh already bumps the SW version every morning, so any manual editor publish is live within 24 hours anyway. The complexity of a two-file GitHub API commit isn't justified by the marginal benefit.
+
+---
+
 ### [X] Pre-warm event images into offline cache  *(DONE 2026-06-30, SW v1.65.0)*
 
 Event images (from Ticketmaster CDN and soulofmiami.org) were never cached unless the passenger browsed the events list. Opening the app at home on Wi-Fi then driving to the car with no internet meant images were missing.

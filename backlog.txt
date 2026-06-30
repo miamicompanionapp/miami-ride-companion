@@ -25,7 +25,7 @@ Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
   1. [X] #36  BUG: landing images blink on every GPS re-render — DONE 2026-06-23
-  2. #42  Editor publish — auto-increment SW cache version
+  2. [~] #42  Editor publish — auto-increment SW cache version — DROPPED (daily refresh handles it)
   3. #43  Thanks/inactivity screen — bilingual EN + ES boxes
   4. #44  Game leaderboards — best scores with seeded placeholders
   5. #30  Multiplayer games — e) Dots & Boxes, f) tug-of-war, bonus finger-picker
@@ -141,11 +141,9 @@ OPEN ITEMS
         - DONE (confirmed 2026-06-15): editor.html line 374 has "← Back to passenger view"
           as an <a href="/"> link below the Unlock button.
 
-[ ] 42. Editor publish — auto-increment SW cache version.
-        - When the editor publishes (commits content.json via GitHub API), also commit
-          an updated sw.js with a bumped patch version (e.g. miami-ride-v1.4.0 → v1.4.1).
-        - Ensures passenger clients pick up the new content.json on next visit.
-        - Two-file commit via GitHub API (content.json + sw.js in the same push).
+[~] 42. Editor publish — auto-increment SW cache version. DROPPED.
+        - Daily refresh already bumps the SW version every morning, so manual editor
+          publishes are live within 24 hours regardless. Not worth the complexity.
 
 [ ] 43. Thanks / inactivity screen — bilingual EN + ES boxes.
         - After the inactivity countdown, the thanks screen shows a single message.
