@@ -238,6 +238,24 @@ Browser-detection screen shown to passengers who open the app link in a mobile b
 
 ---
 
+### [X] Handyman attractor card gated on driver bubble visibility  *(DONE 2026-06-23)*
+
+`buildContentCards()` now gates the handyman card on `isBubbleVisible()`. When the bubble is hidden (driver chose to hide the driver page), the card never enters the attractor rotation — no broken "tap for details" promise landing passengers on City Guide instead of the driver page. Tests updated: verifies card present when bubble visible and absent when hidden; `beforeEach` stubs `isBubbleVisible()=true` so other card-pool tests aren't affected.
+
+---
+
+### [X] Word puzzle: show letters-off count on wrong guess  *(DONE 2026-06-23)*
+
+Same-length wrong guess now says "1 letter off" or "N letters off" (counting mismatched positions) instead of always showing the word length. Wrong-length guesses keep the letter-count hint. 3 tests added covering each branch.
+
+---
+
+### [X] Trivia pool expanded 10→30 questions, shuffled per play  *(DONE 2026-06-23, SW v1.43.0→v1.44.0)*
+
+Added 20 US/pop-culture/general-knowledge questions alongside the original 10 Miami-specific ones. Questions shuffled into `triviaPool` at game start and reshuffled on Play Again so repeat riders get variety. Two test assertions fixed that assumed `TRIVIA_QUESTIONS[0]` was always shown first. Trivia game card copy updated to say "30 questions."
+
+---
+
 ### [X] #51 + #53 — Events category field, filter chips, attractor cards, analytics  *(DONE 2026-06-25)*
 
 **Closed set of 6 categories:** `music | sports | comedy | arts | nightlife | food-drink`
