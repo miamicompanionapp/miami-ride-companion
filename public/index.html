@@ -3252,6 +3252,7 @@ const APP_BUILD = 'a5c6ecb';
 // STATE
 // ════════════════════════════════════════════════════════════
 let CONTENT = null;
+let lastContentFetch = 0;         // timestamp of last successful content.json fetch
 let lang = 'en';
 let currentFilter = 'featured';   // 'featured' = curated hero+minis landing; 'all' = full grid
 let currentEventCat = 'all';      // active event category chip filter
@@ -3960,6 +3961,9 @@ function bootApp() {
   registerSW();
   openDB();
   loadContent();
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') refreshContent();
+  });
   initInactivity();
   initSecretTap();
   initBubbleToggle();
@@ -3986,11 +3990,33 @@ async function loadContent() {
   try {
     const res = await fetch('/content.json');
     CONTENT = await res.json();
+    lastContentFetch = Date.now();
     applyContent();
   } catch (e) {
     console.warn('[App] Content load failed:', e);
     document.getElementById('cards-grid').innerHTML =
       '<p style="color:var(--muted);font-size:13px;padding:16px;grid-column:span 2">Content unavailable. Please open the app on Wi-Fi to sync.</p>';
+  }
+}
+
+// Silent background refresh — only fetches if content is >10 min stale.
+async function refreshContent() {
+  if (Date.now() - lastContentFetch < 10 * 60 * 1000) return;
+  try {
+    const res = await fetch('/content.json');
+    const fresh = await res.json();
+    const prevUpdated = CONTENT && CONTENT.meta && CONTENT.meta.lastUpdated;
+    const nextUpdated = fresh && fresh.meta && fresh.meta.lastUpdated;
+    if (prevUpdated === nextUpdated) {
+      lastContentFetch = Date.now(); // still fresh, reset timer
+      return;
+    }
+    CONTENT = fresh;
+    lastContentFetch = Date.now();
+    applyContent();
+    console.log('[App] Content refreshed:', nextUpdated);
+  } catch (e) {
+    // No network — keep current content silently
   }
 }
 
@@ -4594,7 +4620,8 @@ function setFilter(f, silent = false) {
   document.querySelectorAll('.pill').forEach(p => {
     p.classList.toggle('active', p.dataset.filter === f);
   });
-  renderGuide();
+  if (f === 'event') refreshContent().then(() => renderGuide()).catch(() => renderGuide());
+  else renderGuide();
   if (!silent) logTap('filter_' + f);
   resetInactivity();
 }
