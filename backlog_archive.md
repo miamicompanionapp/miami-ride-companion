@@ -7,6 +7,84 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Pre-warm event images into offline cache  *(DONE 2026-06-30, SW v1.65.0)*
+
+Event images (from Ticketmaster CDN and soulofmiami.org) were never cached unless the passenger browsed the events list. Opening the app at home on Wi-Fi then driving to the car with no internet meant images were missing.
+
+- `prewarmEventImages()` runs from `applyContent()` on every startup and content refresh
+- Opens a dedicated `miami-event-images` cache; walks all event image URLs; fetches any not yet cached; skips already-cached entries; fails silently if CORS blocked or offline
+- SW activate handler now preserves `miami-event-images` across version bumps (previously only `CACHE_VERSION` and `miami-map-tiles-v1` were protected)
+- SW's `caches.match()` already searches all caches, so images serve offline automatically without any additional SW routing logic
+
+---
+
+### [X] Auto-refresh content on foreground / events tab  *(DONE 2026-06-30, SW v1.64.0)*
+
+Content loaded at startup was never refreshed while the app stayed open. New events pushed overnight from RSS/Ticketmaster were invisible until a manual app reload.
+
+- `refreshContent()` — silent background re-fetch; skips if content is <10 min stale; compares `meta.lastUpdated` to avoid unnecessary re-renders when nothing changed
+- Triggered on `visibilitychange` (tablet wake, tab focus) — covers the "next day" scenario
+- Also triggered on every Events filter switch so the events list always reflects current content when the passenger taps Events
+- Attractor event-count cards update on the next attractor cycle (they rebuild from `CONTENT` via `buildContentCards()` at cycle start)
+
+---
+
+### [X] Business card QR with per-source analytics  *(DONE 2026-06-29, SW v1.63.0)*
+
+- `/go/:source` Cloudflare Worker route redirects to `content.json businessCard.redirectUrl`; each placement (card, flyer, magnet, custom) gets its own QR code so scan source is tracked
+- Cloudflare KV tracks total, per-source, and per-day click counts
+- Editor "Business Card" panel: QR grid with PNG download per source, live stats (total scans, 14-day bar chart, breakdown by source), add/remove placements, editable destination URL
+- QR library switched from qrcodejs to qr-code-styling for round dots with square corner markers for scannability
+- Download exports at 1200×1200 for print quality (preview on screen stays compact; a separate high-res instance is generated for download so Canva/print shops get a crisp image)
+
+---
+
+### [X] Thanks card visual redesign + C4 attractor fix  *(DONE 2026-06-28, SW v1.62.0)*
+
+- **Thanks screen** now uses the same card shell as attractor cards: dark background, gold border, 30px radius, 52px padding, matching font sizes — was visually mismatched before
+- **Connect Four attractor card** visual replaced with a proper mini 4×3 CSS grid instead of the awkward 1|6|1 emoji layout
+
+---
+
+### [X] Driver bio ES/PT/FR translations  *(DONE 2026-06-28, SW v1.61.0)*
+
+Both bio paragraphs in `content.json` had empty arrays for non-English languages. Natural translations added for Spanish, Portuguese, and French.
+
+---
+
+### [X] My Apps section on driver page  *(DONE 2026-06-28, SW v1.59.0 → v1.60.0)*
+
+Three-column featured grid below the pets card showcasing Abdullah's other apps: Miami Ride Companion (active-now state), SoFlo Vegan Eateries, and LifeOS Planner.
+
+- Inline QR codes generated via QRCode.js; tap-to-enlarge opens standard QR modal
+- Both app taps logged to analytics (`driver_app_soflo` / `driver_app_lifeos`)
+- All 11 strings (section header, companion state, SoFlo & LifeOS tags, scan label, QR modal descriptions) translated EN/ES/PT/FR in `content.json strings.myApps`; HTML elements wired with `data-key` so `applyStrings()` auto-applies on language switch
+
+---
+
+### [X] Thank-you card after feedback submit  *(DONE 2026-06-28)*
+
+After tapping Submit in the feedback modal, a translated "Thank you for your feedback!" card shows for 5 seconds (with progress bar) before the promotional teaser. Skipping feedback still goes straight to the teaser as before. Tapping during the thank-you phase skips to the teaser early.
+
+---
+
+### [X] Attractor card staleness fix + bigger cards + faster cycling  *(DONE 2026-06-28, SW v1.57.0)*
+
+- **Staleness bug fixed**: `attractorInCycle` reset to 0 on every `showAttractor()` call so `buildContentCards()` always runs fresh — was causing stale dates (showing yesterday's events) and count mismatches (card said "4 events" but list showed 3) when cycles never completed in a 60s session
+- **Larger cards**: width 560→680px, emoji 72→88px, headline 32→38px, sub 16→18px, padding increased
+- **Faster cycling**: card display time 7s→5s (~12 cards per session instead of ~8)
+
+---
+
+### [X] Smarter PWA install gate — platform tabs + browser picker  *(DONE 2026-06-27, SW v1.56.0)*
+
+Replaced the static iOS/Android/other instruction blocks with dynamic step rendering:
+- Platform tabs (iOS / Android) auto-detected from UA with gold `.ig-key` badges for tappable UI elements
+- Android browser picker (Chrome / Samsung / Firefox / Edge) — correct instructions shown per detected browser
+- Same 5-tap icon bypass for driver testing on laptop
+
+---
+
 ### [X] Would You Rather + Color Tap games — polish pass  *(DONE 2026-06-26)*
 
 Follow-up improvements to the two new games added same session:
