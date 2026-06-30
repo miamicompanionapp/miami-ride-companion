@@ -52,7 +52,7 @@ Both bio paragraphs in `content.json` had empty arrays for non-English languages
 
 ---
 
-### [X] My Apps section on driver page  *(DONE 2026-06-28, SW v1.59.0 → v1.60.0)*
+### [X] #49 — My Apps section on driver page  *(DONE 2026-06-28, SW v1.59.0 → v1.60.0)*
 
 Three-column featured grid below the pets card showcasing Abdullah's other apps: Miami Ride Companion (active-now state), SoFlo Vegan Eateries, and LifeOS Planner.
 
@@ -238,7 +238,7 @@ Browser-detection screen shown to passengers who open the app link in a mobile b
 
 ---
 
-### [X] #51 — Events category field, filter chips, attractor cards, analytics  *(DONE 2026-06-25)*
+### [X] #51 + #53 — Events category field, filter chips, attractor cards, analytics  *(DONE 2026-06-25)*
 
 **Closed set of 6 categories:** `music | sports | comedy | arts | nightlife | food-drink`
 
