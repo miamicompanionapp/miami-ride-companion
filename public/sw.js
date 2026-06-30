@@ -1,7 +1,7 @@
 // Miami Ride Companion — Service Worker
 // Version this string whenever you deploy a significant update.
 // Changing it forces all clients to re-cache everything fresh.
-const CACHE_VERSION = 'miami-ride-v1.64.0';
+const CACHE_VERSION = 'miami-ride-v1.65.0';
 
 // Tile cache lives separately so it survives app cache version bumps.
 const TILE_CACHE_NAME = 'miami-map-tiles-v1';
@@ -107,7 +107,7 @@ self.addEventListener('activate', event => {
       .then(cacheNames => {
         return Promise.all(
           cacheNames
-            .filter(name => name !== CACHE_VERSION && name !== TILE_CACHE_NAME)
+            .filter(name => name !== CACHE_VERSION && name !== TILE_CACHE_NAME && name !== 'miami-event-images')
             .map(name => {
               console.log(`[SW] Deleting old cache: ${name}`);
               return caches.delete(name);

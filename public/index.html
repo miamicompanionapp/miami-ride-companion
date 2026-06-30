@@ -4027,6 +4027,7 @@ function applyContent() {
   renderWeather();
   renderDriver();
   startSubtitleRotator();
+  prewarmEventImages();
   // No startSession() here — a session opens lazily on the first in-app tap.
   // Show content timestamp alongside build hash
   if (CONTENT && CONTENT.meta && CONTENT.meta.lastUpdated) {
@@ -4035,6 +4036,27 @@ function applyContent() {
               + ' ' + d.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
     document.getElementById('build-tag').textContent = `build ${APP_BUILD} · content ${ts}`;
   }
+}
+
+// Pre-fetch all event images into a persistent cache so they're available
+// offline in the car after syncing at home on Wi-Fi.
+async function prewarmEventImages() {
+  if (!('caches' in window)) return;
+  if (!CONTENT || !CONTENT.guide || !CONTENT.guide.events) return;
+  const urls = [...new Set(
+    CONTENT.guide.events.filter(e => e.image).map(e => e.image)
+  )];
+  if (!urls.length) return;
+  try {
+    const cache = await caches.open('miami-event-images');
+    for (const url of urls) {
+      try {
+        if (await cache.match(url)) continue;
+        const resp = await fetch(url);
+        if (resp.ok) await cache.put(url, resp);
+      } catch { /* CORS blocked or offline — skip */ }
+    }
+  } catch { /* caches API unavailable */ }
 }
 
 // ════════════════════════════════════════════════════════════
