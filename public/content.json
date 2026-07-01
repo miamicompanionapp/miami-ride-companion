@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-30T14:10:51.693Z",
+    "lastUpdated": "2026-07-01T14:26:50.463Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-06-30T14:10:51.692Z",
+    "fetchedAt": "2026-07-01T14:26:50.463Z",
     "current": {
-      "temp_f": 87,
-      "feels_f": 98,
+      "temp_f": 88,
+      "feels_f": 97,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 72,
-      "wind_mph": 3,
-      "rain_chance": 6,
-      "weathercode": 95
+      "humidity": 62,
+      "wind_mph": 5,
+      "rain_chance": 31,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-06-30",
-        "high_f": 91,
-        "low_f": 78,
-        "weathercode": 95,
-        "rain_chance": 6,
-        "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
-        }
-      },
-      {
         "date": "2026-07-01",
-        "high_f": 90,
-        "low_f": 75,
-        "weathercode": 95,
-        "rain_chance": 42,
+        "high_f": 91,
+        "low_f": 77,
+        "weathercode": 53,
+        "rain_chance": 31,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-07-02",
-        "high_f": 89,
+        "high_f": 88,
         "low_f": 75,
-        "weathercode": 51,
-        "rain_chance": 56,
+        "weathercode": 82,
+        "rain_chance": 29,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-07-03",
         "high_f": 89,
-        "low_f": 84,
+        "low_f": 77,
         "weathercode": 96,
-        "rain_chance": 32,
+        "rain_chance": 44,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -75,7 +62,20 @@
       },
       {
         "date": "2026-07-04",
-        "high_f": 89,
+        "high_f": 88,
+        "low_f": 83,
+        "weathercode": 96,
+        "rain_chance": 39,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-07-05",
+        "high_f": 88,
         "low_f": 83,
         "weathercode": 96,
         "rain_chance": 31,
@@ -90,147 +90,147 @@
     "hourly": [
       {
         "hour": "10:00",
-        "temp_f": 87,
-        "weathercode": 95,
-        "rain_chance": 0
-      },
-      {
-        "hour": "11:00",
         "temp_f": 88,
-        "weathercode": 95,
-        "rain_chance": 0
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 90,
-        "weathercode": 95,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
-        "hour": "13:00",
+        "hour": "11:00",
         "temp_f": 90,
-        "weathercode": 95,
+        "weathercode": 2,
         "rain_chance": 2
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 91,
+        "weathercode": 1,
+        "rain_chance": 5
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 91,
+        "weathercode": 3,
+        "rain_chance": 9
       },
       {
         "hour": "14:00",
         "temp_f": 90,
-        "weathercode": 95,
-        "rain_chance": 3
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "15:00",
-        "temp_f": 91,
-        "weathercode": 95,
-        "rain_chance": 4
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 19
       },
       {
         "hour": "16:00",
-        "temp_f": 90,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 85,
+        "weathercode": 53,
+        "rain_chance": 29
       },
       {
         "hour": "17:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 28
       },
       {
         "hour": "18:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 5
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 30
       },
       {
         "hour": "19:00",
-        "temp_f": 87,
-        "weathercode": 95,
-        "rain_chance": 5
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 31
       },
       {
         "hour": "20:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 5
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 24
       },
       {
         "hour": "21:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "22:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 5
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
-        "weathercode": 1,
-        "rain_chance": 6
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "00:00",
-        "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 5
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "01:00",
-        "temp_f": 79,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 8
       },
       {
         "hour": "02:00",
-        "temp_f": 78,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 8
       },
       {
         "hour": "03:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "04:00",
-        "temp_f": 76,
+        "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 6
       },
       {
         "hour": "05:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 7
       },
       {
         "hour": "06:00",
-        "temp_f": 75,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 2
+        "rain_chance": 9
       },
       {
         "hour": "07:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 2
+        "rain_chance": 10
       },
       {
         "hour": "08:00",
-        "temp_f": 80,
+        "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 10
       },
       {
         "hour": "09:00",
-        "temp_f": 84,
-        "weathercode": 95,
-        "rain_chance": 8
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 9
       }
     ]
   },
@@ -1588,31 +1588,6 @@
         "category": "food-drink"
       },
       {
-        "id": "tm_1782352258062_8ihq",
-        "title": {
-          "en": "Ariana Grande - The Eternal Sunshine Tour",
-          "es": "Ariana Grande - The Eternal Sunshine Tour",
-          "pt": "Ariana Grande - The Eternal Sunshine Tour",
-          "fr": "Ariana Grande - The Eternal Sunshine Tour"
-        },
-        "date": "2026-06-30",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qoav&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/adb/fc874544-aef0-468d-8db5-0507863cbadb_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:00 · Amerant Bank Arena",
-          "es": "Música · Pop · Comienza 20:00 · Amerant Bank Arena",
-          "pt": "Música · Pop · Começa 20:00 · Amerant Bank Arena",
-          "fr": "Musique · Pop · Débute 20:00 · Amerant Bank Arena"
-        },
-        "lat": 26.238701,
-        "lng": -80.370499,
-        "category": "music"
-      },
-      {
         "id": "tm_1782352258062_6p02",
         "title": {
           "en": "Joe Jackson + Band - Hope and Fury Tour 2026",
@@ -2655,29 +2630,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1782653266783_1t1x",
-        "title": {
-          "en": "Capricorn Moon Rising Rooftop Party at Rosa Sky 6/30/26",
-          "es": "Fiesta en Azotea Capricorn Moon Rising en Rosa Sky 6/30/26",
-          "pt": "Festa na Cobertura Capricorn Moon Rising em Rosa Sky 6/30/26",
-          "fr": "Soirée Terrasse Capricorn Moon Rising à Rosa Sky 6/30/26"
-        },
-        "date": "2026-06-30",
-        "venue": "Rosa Sky",
-        "address": "115 SW 8th St 22nd Floor, Miami, Florida, 33130",
-        "url": "https://www.soulofmiami.org/2026/06/27/capricorn-moon-rising-rooftop-party-at-rosa-sky-6-30-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/IMG_4095-350x430.jpg",
-        "description": {
-          "en": "Rosa Sky Rooftop invites guests to celebrate Capricorn Moon Rising, a rooftop night out",
-          "es": "La Azotea Rosa Sky invita a los huéspedes a celebrar Capricorn Moon Rising, una noche en la azotea",
-          "pt": "Rosa Sky Rooftop convida os hóspedes a celebrar Capricorn Moon Rising, uma noite no terraço",
-          "fr": "Rosa Sky Rooftop invite les clients à célébrer Capricorn Moon Rising, une soirée sur le toit"
-        },
-        "category": "music"
-      },
-      {
         "id": "rss_1782653266783_qsyq",
         "title": {
           "en": "Stiltsville & Key Biscayne Sunset Cruise 7/25/26",
@@ -2776,31 +2728,6 @@
         "lat": 25.792917,
         "lng": -80.13314,
         "category": "music"
-      },
-      {
-        "id": "tm_1782747610839_n7p0",
-        "title": {
-          "en": "Disney's Alice In Wonderland, Jr.: A Summer Theater Camp Production",
-          "es": "Alicia en el País de las Maravillas de Disney, Jr.: Una Producción de Campamento de Teatro de Verano",
-          "pt": "Alice no País das Maravilhas da Disney, Jr.: Uma Produção de Acampamento de Teatro de Verão",
-          "fr": "Alice au Pays des Merveilles de Disney, Jr.: Une Production de Camp de Théâtre d'Été"
-        },
-        "date": "2026-06-30",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdisneys-alice-in-wonderland-jr-a-ft-lauderdale-florida-06-30-2026%2Fevent%2F0D0064BCC50488C6&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/07d/fda8c807-42eb-4b81-9f16-f3a8367e107d_106371_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Fall down the rabbit hole with Alice as she navigates the curious world of Wonderland on a journey of self-discovery. When young Alice finds herself in a strange world where everything seems upside down, she must find her way home...and find herself along the way. As she travels through Wonderland, she encounters all of the iconic characters that audiences have come to love: including the ever-tar",
-          "es": "Cae por la madriguera del conejo con Alicia mientras navega el curioso mundo de las Maravillas en un viaje de autodescubrimiento. Cuando la joven Alicia se encuentra en un mundo extraño donde todo parece al revés, debe encontrar el camino a casa... y encontrarse a sí misma en el camino. Mientras viaja por las Maravillas, se encuentra con todos los personajes icónicos que el público ha llegado a amar: incluyendo el siempre-tar",
-          "pt": "Caia pela toca do coelho com Alice enquanto ela navega pelo curioso mundo de Wonderland em uma jornada de autodescoberta. Quando a jovem Alice se vê em um mundo estranho onde tudo parece de cabeça para baixo, ela deve encontrar o caminho para casa... e se encontrar no caminho. Conforme ela viaja por Wonderland, ela encontra todos os personagens icônicos que o público aprendeu a amar: incluindo o sempre-tar",
-          "fr": "Tombez dans le terrier du lapin avec Alice alors qu'elle navigue dans le monde curieux de Wonderland lors d'un voyage de découverte de soi. Quand la jeune Alice se trouve dans un monde étrange où tout semble à l'envers, elle doit trouver le chemin du retour... et se trouver en chemin. Alors qu'elle voyage à travers Wonderland, elle rencontre tous les personnages emblématiques que le public a appris à aimer: y compris le toujours-tar"
-        },
-        "lat": 26.1193,
-        "lng": -80.149426,
-        "category": "arts"
       },
       {
         "id": "tm_1782747610839_0rtx",
@@ -2926,31 +2853,6 @@
         "category": "music"
       },
       {
-        "id": "tm_1782828610941_vx3o",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-06-30",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa às 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1782828610941_pkcx",
         "title": {
           "en": "School Of Rock: Ya Edition: A Summer Theater Camp Production",
@@ -3048,6 +2950,102 @@
         },
         "lat": 25.817805,
         "lng": -80.122143,
+        "category": "music"
+      },
+      {
+        "id": "rss_1782915984470_p8hb",
+        "title": {
+          "en": "5LAN in Miami 7/10/26",
+          "es": "5LAN en Miami 7/10/26",
+          "pt": "5LAN em Miami 7/10/26",
+          "fr": "5LAN à Miami 7/10/26"
+        },
+        "date": "2026-07-10",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/06/30/5lan-in-miami-7-10-26/",
+        "free": false,
+        "price": "$25",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/July-10-350x350.jpg",
+        "description": {
+          "en": "Enjoy a high‑energy night featuring 5LAN Live, with music by DJ Bugz and DJ Bigz & JisMusic",
+          "es": "Disfruta de una noche de alta energía con 5LAN Live, con música de DJ Bugz y DJ Bigz & JisMusic",
+          "pt": "Aproveite uma noite de alta energia com 5LAN Live, com música de DJ Bugz e DJ Bigz & JisMusic",
+          "fr": "Profitez d'une soirée haute en énergie avec 5LAN Live, avec la musique de DJ Bugz et DJ Bigz & JisMusic"
+        },
+        "category": "music"
+      },
+      {
+        "id": "rss_1782915984470_bsqf",
+        "title": {
+          "en": "Free Beau Monde Pilates x Padel X Summer Club on Lincoln Road 7/11/26",
+          "es": "Beau Monde Pilates x Padel X Summer Club en Lincoln Road 7/11/26 Gratis",
+          "pt": "Beau Monde Pilates x Padel X Summer Club em Lincoln Road 7/11/26 Grátis",
+          "fr": "Beau Monde Pilates x Padel X Summer Club sur Lincoln Road 7/11/26 Gratuit"
+        },
+        "date": "2026-07-11",
+        "venue": "Lincoln Road q",
+        "address": "111 Lincoln Road, Ste 8, Miami Beach, FL, Miami, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/06/30/free-beau-monde-pilates-x-padel-x-summer-club-on-lincoln-road-7-11-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/DJI_0991-350x233.jpg",
+        "description": {
+          "en": "Move, stretch, play and connect! Join Beau",
+          "es": "¡Muévete, estira, juega y conecta! Únete a Beau",
+          "pt": "Mexa-se, estique, jogue e conecte! Junte-se a Beau",
+          "fr": "Bougez, étirez-vous, jouez et connectez! Rejoignez Beau"
+        },
+        "category": "music"
+      },
+      {
+        "id": "tm_1782915984921_el9y",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-07-01",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 11:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Débute 11:00 · Centre de Conventions Mana Wynwood"
+        },
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1782915984921_fc9t",
+        "title": {
+          "en": "Ariana Grande - The Eternal Sunshine Tour",
+          "es": "Ariana Grande - The Eternal Sunshine Tour",
+          "pt": "Ariana Grande - The Eternal Sunshine Tour",
+          "fr": "Ariana Grande - The Eternal Sunshine Tour"
+        },
+        "date": "2026-07-02",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fariana-grande-tickets%2Fsunrise-florida-amerant-bank-arena-2026-07-02-7-30-pm%2Fconcert%2F17691131&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/adb/fc874544-aef0-468d-8db5-0507863cbadb_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:30 · Amerant Bank Arena ",
+          "es": "Música · Rock · Comienza 19:30 · Estadio Amerant Bank Arena",
+          "pt": "Música · Rock · Começa 19:30 · Arena Amerant Bank",
+          "fr": "Musique · Rock · Débute 19:30 · Salle Amerant Bank Arena"
+        },
+        "lat": 26.155362,
+        "lng": -80.33023,
         "category": "music"
       }
     ]
