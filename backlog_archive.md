@@ -7,6 +7,14 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Left rail nav enabled during games  *(DONE 2026-07-02, SW v1.69.0)*
+
+Added `closeGames()` call at the top of `switchTab()` so tapping any sidebar nav item (or driver bubble) while a game is open first closes the game, then navigates. Previously the page behind would switch but the game screen stayed on top, making nav appear broken.
+
+**File:** `public/index.html` — `switchTab()` function (~line 4587)
+
+---
+
 ### [X] Left rail visible during games  *(DONE 2026-07-02, SW v1.68.0)*
 
 Changed `.game-screen` from `position:fixed; inset:0` to `position:fixed; top:0; left:220px; right:0; bottom:0` so the 220px sidebar stays visible while any game is open. Added `left:176px` override inside the existing landscape/short-screen media query (`max-height:480px`). No HTML moves required — game screens are `<body>` children so a CSS-only change was enough. Frogger canvas unaffected (capped at 400px internally). game-body already has `max-width:740px`, so content width is unchanged from full-screen.

@@ -4587,6 +4587,7 @@ function switchTab(tab, silent = false) {
   // The driver page is only reachable via the bubble; if it's hidden, don't
   // let anything strand the passenger on an orphaned tab.
   if (tab === 'driver' && !isBubbleVisible()) tab = 'guide';
+  closeGames();
   if (!silent) track('tab_view', { tab_name: tab });
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link, .driver-bubble').forEach(n => n.classList.remove('active'));
