@@ -2369,7 +2369,7 @@
               <div class="game-card wordle" onclick="openGame('wordle')">
                 <div class="game-card-icon">🌴</div>
                 <div class="game-card-title">Miami Wordle</div>
-                <div class="game-card-desc">Guess 5 Miami words in 6 tries each. Clues reveal places, food &amp; culture.</div>
+                <div class="game-card-desc" data-gkey="wlCardDesc">Guess 5 Miami words in 6 tries each. Clues reveal places, food &amp; culture.</div>
                 <div class="game-card-footer">
                   <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
@@ -3076,13 +3076,13 @@
     <div class="wl-intro" id="wordle-intro">
       <div class="wl-intro-icon">🌴</div>
       <div class="wl-intro-title">Miami Wordle</div>
-      <div class="wl-intro-sub">Guess 5 Miami words — 6 tries each. Score up to <em>30 pts</em>.</div>
+      <div class="wl-intro-sub" data-gkey="wlIntroSub">Guess 5 Miami words — 6 tries each. Score up to 30 pts.</div>
       <div class="wl-legend">
-        <div class="wl-legend-row"><div class="wl-cell correct" style="width:32px;height:32px;font-size:14px;flex-shrink:0">A</div><span>Right letter, right spot</span></div>
-        <div class="wl-legend-row"><div class="wl-cell present" style="width:32px;height:32px;font-size:14px;flex-shrink:0">B</div><span>Right letter, wrong spot</span></div>
-        <div class="wl-legend-row"><div class="wl-cell absent" style="width:32px;height:32px;font-size:14px;flex-shrink:0">C</div><span>Not in the word</span></div>
+        <div class="wl-legend-row"><div class="wl-cell correct" style="width:32px;height:32px;font-size:14px;flex-shrink:0">A</div><span data-gkey="wlLegendRight">Right letter, right spot</span></div>
+        <div class="wl-legend-row"><div class="wl-cell present" style="width:32px;height:32px;font-size:14px;flex-shrink:0">B</div><span data-gkey="wlLegendPresent">Right letter, wrong spot</span></div>
+        <div class="wl-legend-row"><div class="wl-cell absent" style="width:32px;height:32px;font-size:14px;flex-shrink:0">C</div><span data-gkey="wlLegendAbsent">Not in the word</span></div>
       </div>
-      <button class="wl-start-btn" onclick="wStartGame()"><i class="ti ti-player-play"></i> Start game</button>
+      <button class="wl-start-btn" onclick="wStartGame()"><i class="ti ti-player-play"></i> <span data-gkey="wlStartBtn">Start game</span></button>
     </div>
 
     <!-- Play -->
@@ -3091,7 +3091,7 @@
         <div class="wl-score-chip" id="wordle-score-chip">0 pts</div>
       </div>
       <div class="wl-clue">
-        <div class="wl-clue-label">Clue</div>
+        <div class="wl-clue-label" data-gkey="wlClueLabel">Clue</div>
         <div class="wl-clue-text" id="wordle-clue-text"></div>
       </div>
       <div class="wl-grid" id="wordle-grid"></div>
@@ -3106,8 +3106,8 @@
     <!-- End -->
     <div class="wl-end" id="wordle-end">
       <div class="wl-end-trophy">🏆</div>
-      <div class="wl-end-title">Final Score</div>
-      <div><span class="wl-end-score" id="wl-end-score">0</span><span class="wl-end-denom"> / 30</span></div>
+      <div class="wl-end-title" data-gkey="wlEndTitle">Final Score</div>
+      <div><span class="wl-end-score" id="wl-end-score">0</span><span class="wl-end-denom" data-gkey="wlEndDenom"> / 30</span></div>
       <div class="wl-end-msg" id="wl-end-msg"></div>
       <div class="wl-end-btns">
         <button class="img-end-btn primary" onclick="wPlayAgain()"><i class="ti ti-refresh"></i> Play Again</button>
@@ -5554,6 +5554,29 @@ const GAME_UI = {
   youScored:    { en:'You scored {n} out of {t}', es:'Obtuviste {n} de {t}', pt:'Você acertou {n} de {t}', fr:'Vous avez obtenu {n} sur {t}' },
   playAgainImg: { en:'Play Again', es:'Jugar de nuevo', pt:'Jogar novamente', fr:'Rejouer' },
   backToGames:  { en:'Back to Games', es:'Volver a los juegos', pt:'Voltar aos jogos', fr:'Retour aux jeux' },
+  // Miami Wordle (#45)
+  wlCardDesc:     { en:'Guess 5 Miami words in 6 tries each. Clues reveal places, food & culture.', es:'Adivina 5 palabras de Miami en 6 intentos. Las pistas revelan lugares, comida y cultura.', pt:'Adivinhe 5 palavras de Miami em 6 tentativas. As dicas revelam lugares, comida e cultura.', fr:'Devinez 5 mots de Miami en 6 essais. Les indices révèlent lieux, plats et culture.' },
+  wlHeaderBadge:  { en:'Word {n} of {t}', es:'Palabra {n} de {t}', pt:'Palavra {n} de {t}', fr:'Mot {n} sur {t}' },
+  wlHeaderDone:   { en:'Done!', es:'¡Listo!', pt:'Pronto!', fr:'Terminé !' },
+  wlIntroSub:     { en:'Guess 5 Miami words — 6 tries each. Score up to 30 pts.', es:'Adivina 5 palabras de Miami — 6 intentos cada una. Consigue hasta 30 pts.', pt:'Adivinhe 5 palavras de Miami — 6 tentativas cada. Pontue até 30 pts.', fr:'Devinez 5 mots de Miami — 6 essais chacun. Jusqu\'à 30 pts.' },
+  wlLegendRight:  { en:'Right letter, right spot', es:'Letra correcta, posición correcta', pt:'Letra certa, posição certa', fr:'Bonne lettre, bonne position' },
+  wlLegendPresent:{ en:'Right letter, wrong spot', es:'Letra correcta, posición incorrecta', pt:'Letra certa, posição errada', fr:'Bonne lettre, mauvaise position' },
+  wlLegendAbsent: { en:'Not in the word', es:'No está en la palabra', pt:'Não está na palavra', fr:'Pas dans le mot' },
+  wlStartBtn:     { en:'Start game', es:'Empezar', pt:'Começar', fr:'Commencer' },
+  wlClueLabel:    { en:'Clue', es:'Pista', pt:'Dica', fr:'Indice' },
+  wlSolvedMsg:    { en:'✓ Solved in {g} — +{p} pts', es:'✓ Resuelto en {g} — +{p} pts', pt:'✓ Resolvido em {g} — +{p} pts', fr:'✓ Résolu en {g} — +{p} pts' },
+  wlGuess1:       { en:'1 guess', es:'1 intento', pt:'1 tentativa', fr:'1 essai' },
+  wlGuessN:       { en:'{n} guesses', es:'{n} intentos', pt:'{n} tentativas', fr:'{n} essais' },
+  wlFailMsg:      { en:'✗ The word was {w}', es:'✗ La palabra era {w}', pt:'✗ A palavra era {w}', fr:'✗ Le mot était {w}' },
+  wlScoreTotal:   { en:'{n} pts total', es:'{n} pts en total', pt:'{n} pts no total', fr:'{n} pts au total' },
+  wlNextWord:     { en:'Next word ▶', es:'Siguiente ▶', pt:'Próxima ▶', fr:'Suivant ▶' },
+  wlFinalScore:   { en:'See final score ▶', es:'Ver puntuación final ▶', pt:'Ver pontuação final ▶', fr:'Score final ▶' },
+  wlEndTitle:     { en:'Final Score', es:'Puntuación final', pt:'Pontuação final', fr:'Score final' },
+  wlMsg5:         { en:'Outstanding! You really know your Miami. 🌴', es:'¡Extraordinario! De verdad conoces Miami. 🌴', pt:'Excepcional! Você realmente conhece Miami. 🌴', fr:'Remarquable ! Vous connaissez vraiment Miami. 🌴' },
+  wlMsg4:         { en:'Great game! Miami\'s got a friend in you.', es:'¡Gran juego! Miami tiene un amigo en ti.', pt:'Ótimo jogo! Miami tem um amigo em você.', fr:'Super partie ! Miami a un ami en vous.' },
+  wlMsg3:         { en:'Solid! Keep exploring the Magic City.', es:'¡Sólido! Sigue explorando la Ciudad Mágica.', pt:'Sólido! Continue explorando a Cidade Mágica.', fr:'Solide ! Continuez à explorer la ville magique.' },
+  wlMsg2:         { en:'Not bad — there\'s always more Miami to discover.', es:'Nada mal — siempre hay más Miami por descubrir.', pt:'Nada mal — sempre há mais de Miami para descobrir.', fr:'Pas mal — il y a toujours plus de Miami à découvrir.' },
+  wlMsg1:         { en:'Miami has a lot of secrets — come back and find them!', es:'¡Miami tiene muchos secretos — vuelve a encontrarlos!', pt:'Miami tem muitos segredos — volte e encontre-os!', fr:'Miami a beaucoup de secrets — revenez les découvrir !' },
 };
 const gt = (k) => { const v = GAME_UI[k]; return v ? (v[lang] || v.en) : k; };
 
@@ -7798,7 +7821,7 @@ function wStartGame() {
 
 function wBeginRound() {
   wCurrentInput = ''; wGuessCount = 0; wLetterStates = {}; wRoundDone = false;
-  document.getElementById('wordle-header-badge').textContent = 'Word ' + (wRound + 1) + ' of ' + WL_ROUNDS;
+  document.getElementById('wordle-header-badge').textContent = gt('wlHeaderBadge').replace('{n}', wRound + 1).replace('{t}', WL_ROUNDS);
   document.getElementById('wordle-score-chip').textContent = wTotalScore + ' pts';
   document.getElementById('wordle-clue-text').textContent = aL(wSession[wRound].clue);
   document.getElementById('wordle-word-result').style.display = 'none';
@@ -7942,13 +7965,13 @@ function wShowWordResult(won, pts, answer) {
   const el = document.getElementById('wordle-word-result');
   el.style.display = 'flex';
   el.className = 'wl-word-result ' + (won ? 'won' : 'lost');
-  const guessWord = won ? (wGuessCount === 1 ? '1 guess' : wGuessCount + ' guesses') : '';
+  const guessWord = wGuessCount === 1 ? gt('wlGuess1') : gt('wlGuessN').replace('{n}', wGuessCount);
   document.getElementById('wl-result-text').textContent = won
-    ? '✓ Solved in ' + guessWord + ' — +' + pts + ' pts'
-    : '✗ The word was ' + answer;
-  document.getElementById('wl-result-score').textContent = wTotalScore + ' pts total';
+    ? gt('wlSolvedMsg').replace('{g}', guessWord).replace('{p}', pts)
+    : gt('wlFailMsg').replace('{w}', answer);
+  document.getElementById('wl-result-score').textContent = gt('wlScoreTotal').replace('{n}', wTotalScore);
   const isLast = wRound >= WL_ROUNDS - 1;
-  document.getElementById('wl-next-btn').textContent = isLast ? 'See final score ▶' : 'Next word ▶';
+  document.getElementById('wl-next-btn').textContent = isLast ? gt('wlFinalScore') : gt('wlNextWord');
 }
 
 function wNextWord() {
@@ -7961,15 +7984,15 @@ function wNextWord() {
 function wShowEnd() {
   document.getElementById('wordle-play').style.display = 'none';
   document.getElementById('wordle-end').style.display = 'flex';
-  document.getElementById('wordle-header-badge').textContent = 'Done!';
+  document.getElementById('wordle-header-badge').textContent = gt('wlHeaderDone');
   document.getElementById('wl-end-score').textContent = wTotalScore;
   const pct = wTotalScore / 30;
   let msg;
-  if (pct >= 0.9)      msg = 'Outstanding! You really know your Miami. 🌴';
-  else if (pct >= 0.7) msg = 'Great game! Miami\'s got a friend in you.';
-  else if (pct >= 0.5) msg = 'Solid! Keep exploring the Magic City.';
-  else if (pct >= 0.3) msg = 'Not bad — there\'s always more Miami to discover.';
-  else                  msg = 'Miami has a lot of secrets — come back and find them!';
+  if (pct >= 0.9)      msg = gt('wlMsg5');
+  else if (pct >= 0.7) msg = gt('wlMsg4');
+  else if (pct >= 0.5) msg = gt('wlMsg3');
+  else if (pct >= 0.3) msg = gt('wlMsg2');
+  else                  msg = gt('wlMsg1');
   document.getElementById('wl-end-msg').textContent = msg;
   logTap('game_wordle_complete');
 }
