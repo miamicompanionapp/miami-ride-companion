@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1024">
+  <title>Games + Left Rail — Layout Mocks</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Marcellus&family=Poiret+One&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy-deep:   #0C1A2E;
+      --navy-mid:    #15294A;
+      --teal:        #19A0A8;
+      --teal-light:  #37C7CE;
+      --teal-mist:   rgba(25,160,168,0.14);
+      --teal-border: rgba(25,160,168,0.34);
+      --gold:        #E5C06B;
+      --gold-light:  rgba(229,192,107,0.12);
+      --gold-border: rgba(229,192,107,0.30);
+      --pink:        #FF5C8A;
+      --bg:          #0C1A2E;
+      --card:        rgba(20,40,66,0.72);
+      --card-solid:  #16294A;
+      --border:      rgba(229,192,107,0.18);
+      --muted:       #9DB4C6;
+      --body:        #CBDAE6;
+      --heading:     #EAF1F6;
+      --radius-sm:   8px;
+      --radius-md:   12px;
+      --radius-lg:   14px;
+      --font-body:   'DM Sans', sans-serif;
+      --font-display:'Marcellus', serif;
+      --font-deco:   'Poiret One', sans-serif;
+      --transition:  200ms ease;
+    }
+
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--navy-deep);
+      font-family: var(--font-body);
+      color: var(--body);
+    }
+
+    /* ── Tab switcher bar ── */
+    .mock-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: #060e1a;
+      border-bottom: 1px solid rgba(229,192,107,0.2);
+      display: flex; align-items: center; gap: 0;
+      overflow-x: auto; scrollbar-width: none; padding: 0 8px;
+      height: 40px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .mock-bar::-webkit-scrollbar { display: none; }
+    .mock-tab {
+      flex-shrink: 0; padding: 0 12px; height: 40px;
+      border: none; background: none; cursor: pointer;
+      font-family: var(--font-body); font-size: 12px; font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .mock-tab.active { color: var(--teal); border-bottom-color: var(--teal); }
+    .mock-tab:hover { color: rgba(255,255,255,0.7); }
+    .mock-bar-label {
+      font-family: var(--font-deco); font-size: 10px; color: rgba(229,192,107,0.5);
+      padding: 0 10px; white-space: nowrap; letter-spacing: 0.1em;
+    }
+    .mock-divider {
+      width: 1px; height: 18px; background: rgba(255,255,255,0.1); margin: 0 4px; flex-shrink: 0;
+    }
+
+    /* ── Root shell (below the bar) ── */
+    .mock-root {
+      position: absolute; top: 40px; left: 0; right: 0; bottom: 0;
+      display: flex;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 220px; flex-shrink: 0;
+      background: var(--navy-deep);
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .sidebar-header { padding: 20px 18px 12px; }
+    .app-brand { font-family: var(--font-display); font-size: 22px; color: white; line-height: 1.25; margin-bottom: 3px; }
+    .app-sub { font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 500; }
+    .sidebar-location {
+      padding: 9px 18px; display: flex; align-items: center; gap: 7px;
+      border-bottom: 0.5px solid rgba(255,255,255,0.08); margin-bottom: 10px;
+    }
+    .sidebar-location i { font-size: 14px; color: var(--teal); }
+    .sidebar-location span { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nav-links { display: flex; flex-direction: column; gap: 3px; padding: 0 10px; flex: 1; }
+    .nav-link {
+      display: flex; align-items: center; gap: 12px;
+      padding: 13px 12px; border-radius: 11px; cursor: pointer;
+    }
+    .nav-link i { font-size: 20px; color: rgba(255,255,255,0.3); }
+    .nav-link span { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.3); }
+    .nav-link.active { background: rgba(255,255,255,0.1); }
+    .nav-link.active i, .nav-link.active span { color: white; }
+    .nav-indicator { width: 3px; height: 22px; background: var(--teal); border-radius: 2px; margin-left: auto; }
+    .driver-bubble {
+      margin: 10px 14px 12px;
+      padding: 12px 12px 12px 10px;
+      background: linear-gradient(135deg, rgba(11,158,166,0.18), rgba(11,158,166,0.06));
+      border: 1px solid rgba(11,158,166,0.35);
+      border-radius: 14px;
+      display: flex; align-items: center; gap: 10px; cursor: pointer;
+    }
+    .driver-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--navy-mid));
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-family: var(--font-display); font-size: 18px; color: white;
+    }
+    .db-info { flex: 1; min-width: 0; }
+    .db-name { font-size: 14px; font-weight: 700; color: white; line-height: 1.2; margin-bottom: 2px; }
+    .db-role { font-size: 11px; color: rgba(255,255,255,0.65); line-height: 1.3; }
+    .db-arrow { color: var(--teal); font-size: 16px; flex-shrink: 0; }
+    .lang-section { padding: 12px 16px; border-top: 0.5px solid rgba(255,255,255,0.08); }
+    .lang-label { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+    .lang-btn {
+      padding: 8px 4px; border-radius: 8px; font-size: 13px; font-weight: 600;
+      color: rgba(255,255,255,0.4); border: none; background: rgba(255,255,255,0.06);
+      font-family: var(--font-body); display: flex; align-items: center; justify-content: center; gap: 4px;
+    }
+    .lang-btn.active { background: var(--teal); color: white; }
+    .rest-section { padding: 10px 16px 0; }
+    .rest-btn {
+      width: 100%; padding: 9px 4px; border-radius: 9px; font-size: 12px; font-weight: 600;
+      color: rgba(255,255,255,0.45); border: none; background: rgba(255,255,255,0.06);
+      font-family: var(--font-body); display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .rest-btn i { font-size: 15px; }
+    .sidebar-footer { padding: 12px 16px; border-top: 0.5px solid rgba(255,255,255,0.08); }
+    .claude-credit { font-size: 10px; color: rgba(255,255,255,0.2); text-align: center; }
+    .build-tag { font-size: 9px; color: rgba(255,255,255,0.12); text-align: center; letter-spacing: 0.4px; font-family: monospace; }
+
+    /* ── Game area (replaces position:fixed game-screen) ── */
+    .game-area {
+      flex: 1; display: flex; flex-direction: column;
+      overflow: hidden; background: var(--bg);
+      position: relative;
+    }
+
+    /* ── Game screen container (one per game, only active one is shown) ── */
+    .game-panel {
+      display: none; flex-direction: column; flex: 1; overflow: hidden;
+    }
+    .game-panel.active { display: flex; }
+
+    /* Game header */
+    .game-screen-header {
+      background: var(--navy-deep); padding: 12px 20px;
+      display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+    }
+    .game-back-btn {
+      background: rgba(255,255,255,0.1); border: none; border-radius: 8px;
+      width: 34px; height: 34px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; color: white;
+    }
+    .game-back-btn i { font-size: 16px; }
+    .game-screen-title { font-family: var(--font-display); font-size: 18px; color: white; font-weight: 500; flex: 1; }
+    .game-score-badge {
+      background: rgba(255,255,255,0.1); border-radius: 20px;
+      padding: 5px 14px; font-size: 12px; font-weight: 600; color: white;
+    }
+
+    /* Game body */
+    .game-body {
+      flex: 1; overflow-y: auto; padding: 30px 24px;
+      display: flex; flex-direction: column; gap: 22px;
+      max-width: 740px; margin: 0 auto; width: 100%;
+    }
+
+    /* ── Width indicator overlay ── */
+    .width-note {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(6,14,26,0.92);
+      border-top: 1px solid rgba(229,192,107,0.15);
+      padding: 6px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 11px; color: rgba(157,180,198,0.6);
+      font-family: monospace; z-index: 10; pointer-events: none;
+    }
+    .width-note .verdict {
+      font-family: var(--font-body); font-size: 11px; font-weight: 700;
+      padding: 2px 10px; border-radius: 20px;
+    }
+    .verdict.ok { background: rgba(29,175,140,0.18); color: #4FE0C0; border: 1px solid rgba(29,175,140,0.3); }
+    .verdict.great { background: rgba(25,160,168,0.18); color: #37C7CE; border: 1px solid rgba(25,160,168,0.3); }
+    .verdict.check { background: rgba(229,192,107,0.14); color: var(--gold); border: 1px solid rgba(229,192,107,0.3); }
+
+    /* ─────────── GAME CONTENT STYLES (from index.html) ─────────── */
+
+    /* Trivia */
+    .trivia-question { font-size: 23px; font-weight: 500; color: var(--heading); line-height: 1.45; padding: 24px; background: var(--card-solid); border-radius: 12px; border: 0.5px solid var(--border); }
+    .trivia-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .trivia-opt {
+      padding: 18px 20px; border-radius: 11px;
+      border: 1.5px solid var(--border); background: var(--card-solid);
+      font-family: var(--font-body); font-size: 17px; font-weight: 500;
+      color: var(--heading); cursor: pointer; text-align: left; line-height: 1.35;
+    }
+    .trivia-opt.mock-hover { border-color: var(--teal); background: var(--teal-mist); }
+
+    /* Tap Frenzy */
+    .tap-center { display: flex; flex-direction: column; align-items: center; padding: 20px 0; flex: 1; justify-content: center; }
+    .tap-timer-display { font-family: var(--font-display); font-size: 68px; color: var(--heading); font-weight: 500; margin-bottom: 12px; }
+    .tap-circle {
+      width: 250px; height: 250px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--navy-mid));
+      border: none; color: white; margin: 22px auto;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; box-shadow: 0 8px 24px rgba(11,158,166,0.3);
+    }
+    .tap-count-num { font-family: var(--font-display); font-size: 78px; font-weight: 500; line-height: 1; }
+    .tap-count-lbl { font-size: 15px; opacity: 0.7; margin-top: 2px; }
+    .tap-best-txt { font-size: 16px; color: var(--muted); margin-bottom: 22px; }
+    .tap-start-btn {
+      padding: 16px 48px; border-radius: 12px; border: none;
+      background: var(--teal); font-family: var(--font-body);
+      font-size: 18px; font-weight: 600; color: white; cursor: pointer;
+    }
+
+    /* Word Puzzle */
+    .word-clue { background: var(--teal-mist); border-radius: 11px; padding: 16px 20px; font-size: 16px; color: #6FD3D9; border: 0.5px solid var(--teal-border); line-height: 1.6; }
+    .word-letters { display: flex; justify-content: center; gap: 7px; flex-wrap: wrap; margin: 8px 0; }
+    .word-letter {
+      width: 46px; height: 58px; border-radius: 9px;
+      border: 1.5px solid var(--border); background: var(--card-solid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; font-weight: 700; color: var(--heading);
+    }
+    .word-letter.filled { background: var(--teal-mist); border-color: var(--teal); }
+    .word-letter.hint { background: rgba(0,200,167,0.16); border-color: #00C9A7; color: #4FE0C0; }
+    .word-input-row { display: flex; gap: 8px; }
+    .word-input {
+      flex: 1; padding: 14px 18px; border-radius: 11px;
+      border: 1.5px solid var(--border); font-family: var(--font-body);
+      font-size: 20px; font-weight: 700; color: var(--heading);
+      text-transform: uppercase; letter-spacing: 2px; background: var(--card-solid);
+    }
+    .word-submit { padding: 14px 24px; border-radius: 11px; border: none; background: var(--teal); font-family: var(--font-body); font-size: 16px; font-weight: 700; color: white; cursor: pointer; }
+    .word-btns { display: flex; gap: 8px; }
+    .word-hint-btn { background: none; border: 1.5px solid var(--teal-border); border-radius: 9px; padding: 11px 22px; font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--teal); cursor: pointer; }
+
+    /* Facts Spinner */
+    .spinner-center { display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center; gap: 24px; }
+    .spinner-wheel {
+      width: 220px; height: 220px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--navy-mid));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 84px; box-shadow: 0 8px 24px rgba(11,158,166,0.3);
+      border: 6px solid white;
+    }
+    .spin-hint { font-size: 15px; color: var(--muted); font-weight: 500; }
+    .spin-fact-card { background: var(--card-solid); border-radius: 12px; border: 0.5px solid var(--border); padding: 28px 32px; max-width: 600px; text-align: center; width: 100%; }
+    .spin-cat { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); margin-bottom: 8px; }
+    .spin-fact-text { font-size: 19px; font-weight: 500; color: var(--heading); line-height: 1.65; }
+
+    /* Guess the Image */
+    .img-game-area { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .img-box { width: 100%; height: clamp(280px, 42vh, 420px); border-radius: 12px; overflow: hidden; background: #0a1420; display: flex; align-items: center; justify-content: center; border: 0.5px solid var(--border); font-size: 80px; }
+    .img-hint { font-size: 13px; font-weight: 600; color: var(--muted); }
+    .img-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .img-opt { padding: 16px 18px; border-radius: 11px; border: 1.5px solid var(--border); background: var(--card-solid); font-family: var(--font-body); font-size: 16px; font-weight: 500; color: var(--heading); cursor: pointer; text-align: left; }
+    .img-opt.mock-hover { border-color: var(--teal); background: var(--teal-mist); }
+
+    /* Frogger */
+    #frogger-canvas { border-radius: 10px; display: block; background: #0a1e10; }
+    .frogger-dpad { display: grid; grid-template-columns: repeat(3, 48px); grid-template-rows: repeat(3, 48px); gap: 5px; }
+    .frogger-btn { width: 48px; height: 48px; border-radius: 10px; border: 1.5px solid rgba(229,192,107,0.25); background: rgba(20,40,66,0.8); display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--gold); cursor: pointer; }
+    .frogger-btn-center { background: transparent; border-color: transparent; font-size: 22px; cursor: default; }
+    .frogger-hud { display: flex; justify-content: space-around; width: 100%; max-width: 400px; background: var(--card-solid); border-radius: 12px; padding: 10px 20px; border: 0.5px solid var(--border); }
+    .frogger-stat { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+    .frogger-stat-label { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .frogger-stat-value { font-family: var(--font-display); font-size: 22px; color: var(--heading); font-weight: 500; }
+
+    /* Color Tap */
+    .ct-intro-wrap { display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center; gap: 16px; }
+    .ct-round-lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .ct-timer-bar { width: 100%; max-width: 340px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+    .ct-timer-fill { width: 70%; height: 100%; background: var(--teal); border-radius: 3px; }
+    .ct-word-wrap { flex: 1; display: flex; align-items: center; justify-content: center; }
+    .ct-word { font-family: var(--font-display); font-size: 72px; font-weight: 700; letter-spacing: 0.04em; color: #FF5C8A; }
+    .ct-instruction { font-size: 13px; color: var(--muted); }
+    .ct-colors { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; max-width: 340px; }
+    .ct-color-btn { height: 76px; border-radius: 13px; border: 2.5px solid rgba(255,255,255,0.12); font-size: 16px; font-weight: 700; color: white; cursor: pointer; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+
+    /* Miami Wordle */
+    .wl-score-row { width: 100%; display: flex; justify-content: flex-end; }
+    .wl-score-chip { background: rgba(229,192,107,0.12); border: 0.5px solid var(--gold-border); border-radius: 20px; padding: 4px 14px; font-size: 12px; font-weight: 700; color: var(--gold); }
+    .wl-clue { width: 100%; background: var(--card-solid); border: 0.5px solid var(--border); border-radius: 12px; padding: 10px 14px; }
+    .wl-clue-label { font-family: var(--font-deco); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+    .wl-clue-text { font-size: 13px; color: var(--heading); font-weight: 500; line-height: 1.45; }
+    .wl-play-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+    .wl-grid { display: flex; flex-direction: column; gap: 5px; }
+    .wl-row { display: flex; gap: 5px; }
+    .wl-cell { width: 52px; height: 52px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.16); background: var(--card-solid); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: var(--heading); font-family: var(--font-body); }
+    .wl-cell.filled  { border-color: rgba(255,255,255,0.40); }
+    .wl-cell.correct { background: #19856A; border-color: #1DAF8C; color: #fff; }
+    .wl-cell.present { background: #856A10; border-color: #B8960E; color: #fff; }
+    .wl-cell.absent  { background: #1A2D42; border-color: rgba(255,255,255,0.07); color: #4A6A80; }
+    .wl-kbd { display: flex; flex-direction: column; gap: 5px; align-items: center; width: 100%; }
+    .wl-kbd-row { display: flex; gap: 4px; }
+    .wl-key { min-width: 31px; height: 42px; border-radius: 7px; background: #1E3350; border: 0.5px solid rgba(255,255,255,0.12); color: var(--heading); font-size: 13px; font-weight: 600; font-family: var(--font-body); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0 2px; }
+    .wl-key.wide { min-width: 46px; font-size: 11px; }
+    .wl-key.correct { background: #19856A; border-color: #1DAF8C; color: #fff; }
+    .wl-key.absent  { background: #0F1E2E; border-color: rgba(255,255,255,0.06); color: #3A5060; }
+
+    /* Tic-Tac-Toe */
+    .ttt-wrap { display: flex; flex-direction: column; align-items: center; gap: 22px; width: 100%; max-width: 520px; margin: 0 auto; }
+    .ttt-turnbar { display: flex; gap: 10px; width: 100%; }
+    .ttt-pscore { flex: 1; background: var(--card-solid); border: 2px solid var(--border); border-radius: 13px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; }
+    .ttt-pscore.active.p1 { border-color: var(--teal); background: var(--teal-mist); }
+    .ttt-pscore.active.p2 { border-color: var(--gold); background: var(--gold-light); }
+    .ttt-mark { font-family: var(--font-display); font-weight: 700; font-size: 32px; width: 38px; text-align: center; flex-shrink: 0; }
+    .ttt-pscore.p1 .ttt-mark { color: var(--teal); }
+    .ttt-pscore.p2 .ttt-mark { color: var(--gold); }
+    .ttt-pinfo { display: flex; flex-direction: column; min-width: 0; }
+    .ttt-pwho { font-size: 14px; font-weight: 700; color: var(--heading); }
+    .ttt-pturn { font-size: 12px; color: var(--muted); font-weight: 600; }
+    .ttt-pwins { margin-left: auto; text-align: right; font-size: 9px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; flex-shrink: 0; }
+    .ttt-pwins b { display: block; font-size: 19px; color: var(--heading); }
+    .ttt-board { display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,1fr); width: 380px; height: 380px; background: var(--navy-deep); border-radius: 16px; padding: 14px; }
+    .ttt-cell { display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 74px; color: white; cursor: pointer; border: 1px solid rgba(255,255,255,0.12); }
+    .ttt-cell.x { color: var(--teal-light); }
+    .ttt-cell.o { color: var(--gold); }
+
+    /* Tap Duel */
+    .duel-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; max-width: 660px; margin: 0 auto; }
+    .duel-zones { display: flex; gap: 12px; width: 100%; }
+    .duel-zone { flex: 1; min-height: 300px; border-radius: 16px; border: 2px solid var(--border); background: var(--card-solid); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; cursor: pointer; padding: 16px 10px; }
+    .duel-zone-player { font-size: 16px; font-weight: 700; }
+    .duel-zone.p1 .duel-zone-player { color: var(--teal); }
+    .duel-zone.p2 .duel-zone-player { color: var(--gold); }
+    .duel-zone-state { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--heading); }
+    .duel-zone-wins { font-size: 10px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .duel-zone.arming { background: rgba(229,115,115,0.18); border-color: #E57373; }
+    .duel-zone.arming .duel-zone-state { color: #FF6B6B; }
+    .duel-zone.ready { background: #1FB85A; border-color: #169248; }
+    .duel-zone.ready .duel-zone-player, .duel-zone.ready .duel-zone-state { color: white; }
+    .duel-banner { text-align: center; min-height: 26px; }
+    .duel-getready { font-size: 16px; color: var(--muted); font-weight: 600; }
+
+    /* Trivia Buzzer */
+    .buzz-scorebar { display: flex; gap: 8px; }
+    .buzz-score { flex: 1; background: var(--card-solid); border: 2px solid var(--border); border-radius: 11px; padding: 7px 8px; text-align: center; }
+    .buzz-score.p1.active { border-color: var(--teal); background: var(--teal-mist); }
+    .buzz-score.p2 .buzz-score-who { color: var(--gold); }
+    .buzz-score.p3 .buzz-score-who { color: #7C3AED; }
+    .buzz-score-who { font-size: 13px; font-weight: 700; }
+    .buzz-score.p1 .buzz-score-who { color: var(--teal); }
+    .buzz-score-pts { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--heading); }
+    .buzz-timer { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--teal); text-align: center; }
+    .buzz-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .buzz-opt { padding: 18px 20px; border-radius: 11px; border: 1.5px solid var(--border); background: var(--card-solid); font-family: var(--font-body); font-size: 17px; font-weight: 500; color: var(--heading); text-align: left; line-height: 1.35; }
+    .buzz-feedback { text-align: center; font-size: 16px; font-weight: 600; color: var(--muted); min-height: 20px; }
+    .buzz-buzzers { display: flex; gap: 12px; }
+    .buzz-btn { flex: 1; border: none; border-radius: 14px; padding: 24px 12px; font-family: var(--font-display); font-size: 22px; font-weight: 700; color: white; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .buzz-btn.p1 { background: var(--teal); }
+    .buzz-btn.p2 { background: var(--gold); color: #0C1A2E; }
+    .buzz-btn.p3 { background: #7C3AED; }
+    .buzz-btn-sub { font-size: 10px; font-weight: 600; opacity: 0.92; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    /* Would You Rather */
+    .wyr-wrap { display: flex; flex-direction: column; flex: 1; }
+    .wyr-play { display: flex; flex-direction: column; flex: 1; gap: 10px; padding: 12px 16px; }
+    .wyr-progress { font-size: 11px; color: var(--muted); text-align: center; letter-spacing: 0.08em; text-transform: uppercase; }
+    .wyr-q { font-family: var(--font-display); font-size: 18px; color: var(--muted); background: var(--card-solid); border: 1px solid var(--border); border-radius: 11px; padding: 14px 20px; text-align: center; }
+    .wyr-or { text-align: center; font-size: 10px; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
+    .wyr-opts { display: flex; flex-direction: column; flex: 1; gap: 10px; }
+    .wyr-opt { flex: 1; border-radius: 14px; border: 2px solid rgba(255,255,255,0.1); font-size: 22px; font-weight: 600; color: var(--heading); cursor: pointer; background: var(--card-solid); line-height: 1.4; text-align: center; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .wyr-opt.a { border-color: rgba(25,160,168,0.35); }
+    .wyr-opt.b { border-color: rgba(229,192,107,0.30); }
+    .wyr-next { width: 100%; padding: 18px; border-radius: 13px; background: var(--teal); border: none; color: white; font-size: 19px; font-weight: 600; cursor: pointer; }
+
+    /* Connect Four */
+    .c4-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 490px; margin: 0 auto; }
+    .c4-turnbar { display: flex; gap: 10px; width: 100%; }
+    .c4-board { display: flex; flex-direction: row; gap: 5px; background: var(--navy-deep); border-radius: 14px; padding: 10px; width: 100%; }
+    .c4-col { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; cursor: pointer; border-radius: 8px; padding: 4px 2px; }
+    .c4-col-arrow { font-size: 16px; height: 24px; display: flex; align-items: center; justify-content: center; color: var(--teal); opacity: 0.85; }
+    .c4-cell { width: 100%; aspect-ratio: 1; border-radius: 50%; background: rgba(255,255,255,0.07); }
+    .c4-cell.p1 { background: var(--teal); }
+    .c4-cell.p2 { background: var(--gold); }
+    .c4-banner { text-align: center; min-height: 56px; width: 100%; font-family: var(--font-display); font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    /* Shared intro/preboard pattern */
+    .pg-intro { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; }
+    .pg-icon { font-size: 84px; }
+    .pg-title { font-family: var(--font-display); font-size: 42px; font-weight: 600; color: var(--heading); }
+    .pg-sub { font-size: 18px; color: var(--muted); max-width: 520px; }
+  </style>
+</head>
+<body>
+
+<!-- ── Tab bar ── -->
+<nav class="mock-bar" id="mockBar">
+  <span class="mock-bar-label">SOLO</span>
+  <button class="mock-tab active" onclick="show('trivia',this)">Trivia</button>
+  <button class="mock-tab" onclick="show('tap',this)">Tap Frenzy</button>
+  <button class="mock-tab" onclick="show('word',this)">Word Puzzle</button>
+  <button class="mock-tab" onclick="show('spin',this)">Facts Spinner</button>
+  <button class="mock-tab" onclick="show('image',this)">Guess Image</button>
+  <button class="mock-tab" onclick="show('frogger',this)">Biscayne Dash</button>
+  <button class="mock-tab" onclick="show('ct',this)">Color Tap</button>
+  <button class="mock-tab" onclick="show('wordle',this)">Wordle</button>
+  <div class="mock-divider"></div>
+  <span class="mock-bar-label">2-3P</span>
+  <button class="mock-tab" onclick="show('ttt',this)">Tic-Tac-Toe</button>
+  <button class="mock-tab" onclick="show('duel',this)">Tap Duel</button>
+  <button class="mock-tab" onclick="show('buzzer',this)">Trivia Buzzer</button>
+  <button class="mock-tab" onclick="show('wyr',this)">Would You Rather</button>
+  <button class="mock-tab" onclick="show('c4',this)">Connect Four</button>
+</nav>
+
+<!-- ── Root shell ── -->
+<div class="mock-root">
+
+  <!-- Left rail (always visible) -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="app-brand">Miami<br>Companion</div>
+      <div class="app-sub">Your city guide</div>
+    </div>
+    <div class="sidebar-location">
+      <i class="ti ti-map-pin"></i>
+      <span>Brickell, Miami</span>
+    </div>
+    <nav class="nav-links">
+      <div class="nav-link">
+        <i class="ti ti-map-pin"></i>
+        <span>City Guide</span>
+      </div>
+      <div class="nav-link">
+        <i class="ti ti-cloud"></i>
+        <span>Weather</span>
+      </div>
+      <div class="nav-link active">
+        <i class="ti ti-device-gamepad-2"></i>
+        <span>Games</span>
+        <div class="nav-indicator"></div>
+      </div>
+      <div class="nav-link">
+        <i class="ti ti-map-2"></i>
+        <span>Map</span>
+      </div>
+    </nav>
+    <div class="driver-bubble">
+      <div class="driver-avatar">A</div>
+      <div class="db-info">
+        <div class="db-name">Abdullah</div>
+        <div class="db-role">Your driver today</div>
+      </div>
+      <i class="ti ti-chevron-right db-arrow"></i>
+    </div>
+    <div class="lang-section">
+      <div class="lang-label">Language</div>
+      <div class="lang-grid">
+        <button class="lang-btn active">🇺🇸 EN</button>
+        <button class="lang-btn">🇪🇸 ES</button>
+        <button class="lang-btn">🇧🇷 PT</button>
+        <button class="lang-btn">🇫🇷 FR</button>
+      </div>
+    </div>
+    <div class="rest-section">
+      <button class="rest-btn"><i class="ti ti-moon"></i> Rest Screen</button>
+    </div>
+    <div class="sidebar-footer">
+      <div class="claude-credit">Built with Claude AI</div>
+      <div class="build-tag">v1.29.0</div>
+    </div>
+  </aside>
+
+  <!-- Game area -->
+  <div class="game-area">
+
+    <!-- ── 1. Miami Trivia ── -->
+    <div class="game-panel active" id="panel-trivia">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Miami Trivia</span>
+        <div class="game-score-badge">Score: 3</div>
+      </div>
+      <div class="game-body">
+        <div class="trivia-question">What year did Miami officially become a city?</div>
+        <div class="trivia-opts">
+          <button class="trivia-opt mock-hover">1896</button>
+          <button class="trivia-opt">1901</button>
+          <button class="trivia-opt">1912</button>
+          <button class="trivia-opt">1888</button>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Sidebar: 220px · Game area: 804px · game-body max-width: 740px (same as full-screen)</span>
+        <span class="verdict great">Great — content identical to full-screen</span>
+      </div>
+    </div>
+
+    <!-- ── 2. Tap Frenzy ── -->
+    <div class="game-panel" id="panel-tap">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Tap Frenzy</span>
+        <div class="game-score-badge">Best: 42</div>
+      </div>
+      <div class="game-body" style="align-items:center; justify-content:center;">
+        <div class="tap-center">
+          <div class="tap-timer-display">15</div>
+          <div class="tap-circle">
+            <div class="tap-count-num">0</div>
+            <div class="tap-count-lbl">taps</div>
+          </div>
+          <div class="tap-best-txt">Best: 42 taps</div>
+          <button class="tap-start-btn">Tap to Start</button>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Circle: 250px · Centered in 804px game area</span>
+        <span class="verdict great">Great — narrow content, tons of breathing room</span>
+      </div>
+    </div>
+
+    <!-- ── 3. Word Puzzle ── -->
+    <div class="game-panel" id="panel-word">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Word Puzzle</span>
+        <div class="game-score-badge">Score: 120</div>
+      </div>
+      <div class="game-body">
+        <div class="word-clue">I'm the neighborhood known for its street art, galleries, and nightlife murals — one of Miami's most colorful districts.</div>
+        <div class="word-letters">
+          <div class="word-letter filled">W</div>
+          <div class="word-letter filled">Y</div>
+          <div class="word-letter filled">N</div>
+          <div class="word-letter">_</div>
+          <div class="word-letter">_</div>
+          <div class="word-letter">_</div>
+          <div class="word-letter hint">O</div>
+          <div class="word-letter">_</div>
+          <div class="word-letter">_</div>
+        </div>
+        <div class="word-input-row">
+          <input class="word-input" placeholder="WYNWOOD" readonly>
+          <button class="word-submit">Check</button>
+        </div>
+        <div class="word-btns">
+          <button class="word-hint-btn">💡 Hint (1 left)</button>
+          <button class="word-hint-btn">Skip →</button>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Letter tiles: flex-wrap, any length word fits · game-body same 740px</span>
+        <span class="verdict great">Great — unaffected by sidebar</span>
+      </div>
+    </div>
+
+    <!-- ── 4. Facts Spinner ── -->
+    <div class="game-panel" id="panel-spin">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Facts Spinner</span>
+      </div>
+      <div class="game-body" style="align-items:center; justify-content:center;">
+        <div class="spinner-center">
+          <div class="spinner-wheel">🌴</div>
+          <div class="spin-hint">Tap the wheel for a Miami fact</div>
+          <div class="spin-fact-card">
+            <div class="spin-cat">History</div>
+            <div class="spin-fact-text">Miami is the only major U.S. city founded by a woman — Julia Tuttle convinced Henry Flagler to extend his railroad south in 1896.</div>
+          </div>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Wheel: 220px centered · Fact card: max-width 600px</span>
+        <span class="verdict great">Great — compact, centered layout</span>
+      </div>
+    </div>
+
+    <!-- ── 5. Guess the Image ── -->
+    <div class="game-panel" id="panel-image">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Guess the Image</span>
+        <div class="game-score-badge">2 / 5</div>
+      </div>
+      <div class="game-body">
+        <div class="img-game-area">
+          <div class="img-box" style="background:linear-gradient(135deg,#0a2a3a,#1a4a2a); font-size:60px;">🌉</div>
+          <div class="img-hint">Question 3 of 5 · What landmark is this?</div>
+          <div class="img-opts">
+            <button class="img-opt mock-hover">Venetian Causeway</button>
+            <button class="img-opt">MacArthur Causeway</button>
+            <button class="img-opt">Rickenbacker Causeway</button>
+            <button class="img-opt">Julia Tuttle Causeway</button>
+          </div>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Image fills full 692px content width · 2×2 grid answer options</span>
+        <span class="verdict great">Great — image is actually wider (less wasted space)</span>
+      </div>
+    </div>
+
+    <!-- ── 6. Biscayne Dash (Frogger) ── -->
+    <div class="game-panel" id="panel-frogger">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Biscayne Dash</span>
+        <div class="game-score-badge">Score: 0</div>
+      </div>
+      <div class="game-body" style="align-items:center; justify-content:center; gap:10px; padding:8px;">
+        <div class="frogger-hud">
+          <div class="frogger-stat"><span class="frogger-stat-label">Score</span><span class="frogger-stat-value">0</span></div>
+          <div class="frogger-stat"><span class="frogger-stat-label">Lives</span><span class="frogger-stat-value">3</span></div>
+          <div class="frogger-stat"><span class="frogger-stat-label">Level</span><span class="frogger-stat-value">1</span></div>
+        </div>
+        <!-- Canvas simulated: cellSize = floor(692/10) = 69, canvas = 690×621 -->
+        <canvas id="frogger-canvas" width="690" height="621"
+          style="background:linear-gradient(180deg,#0a2a10 0%,#0a1820 40%,#0a1230 70%,#0a0a20 100%);
+                 border-radius:10px; max-width:100%; display:block;">
+        </canvas>
+        <div class="frogger-dpad">
+          <div></div>
+          <div class="frogger-btn">▲</div>
+          <div></div>
+          <div class="frogger-btn">◀</div>
+          <div class="frogger-btn frogger-btn-center">🐸</div>
+          <div class="frogger-btn">▶</div>
+          <div></div>
+          <div class="frogger-btn">▼</div>
+          <div></div>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Canvas: 690×621px (same as full-screen — game-body already max-width 740px) · Scrolls for D-pad</span>
+        <span class="verdict ok">OK — canvas size identical; D-pad below fold, scroll to reach (same as today)</span>
+      </div>
+    </div>
+
+    <!-- ── 7. Color Tap ── -->
+    <div class="game-panel" id="panel-ct">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Color Tap</span>
+        <div class="game-score-badge">Round 4</div>
+      </div>
+      <div class="game-body" style="align-items:center;">
+        <div class="ct-intro-wrap" style="width:100%;">
+          <div class="ct-round-lbl">Round 4 of 10</div>
+          <div class="ct-timer-bar"><div class="ct-timer-fill"></div></div>
+          <div class="ct-word-wrap">
+            <div class="ct-word" style="color:#19A0A8;">RED</div>
+          </div>
+          <div class="ct-instruction">Tap the COLOR of the word, not what it says</div>
+          <div class="ct-colors">
+            <button class="ct-color-btn" style="background:#E5C06B;">GOLD</button>
+            <button class="ct-color-btn" style="background:#19A0A8;">TEAL</button>
+            <button class="ct-color-btn" style="background:#FF5C8A;">PINK</button>
+            <button class="ct-color-btn" style="background:#7C3AED;">PURPLE</button>
+          </div>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Color grid: max-width 340px centered · Word display: large centered text</span>
+        <span class="verdict great">Great — compact, narrow content, sidebar adds context</span>
+      </div>
+    </div>
+
+    <!-- ── 8. Miami Wordle ── -->
+    <div class="game-panel" id="panel-wordle">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Miami Wordle</span>
+        <div class="game-score-badge">Word 2 of 5</div>
+      </div>
+      <div class="game-body">
+        <div class="wl-play-wrap">
+          <div class="wl-score-row"><div class="wl-score-chip">150 pts</div></div>
+          <div class="wl-clue">
+            <div class="wl-clue-label">Clue</div>
+            <div class="wl-clue-text">Miami's trendy arts district known for colorful murals</div>
+          </div>
+          <!-- 6-row × 5-col grid: 5×52 + 4×5 = 280px wide -->
+          <div class="wl-grid">
+            <!-- Row 1: submitted guess -->
+            <div class="wl-row">
+              <div class="wl-cell absent">W</div><div class="wl-cell correct">Y</div><div class="wl-cell absent">N</div><div class="wl-cell present">W</div><div class="wl-cell absent">O</div>
+            </div>
+            <!-- Row 2: current input -->
+            <div class="wl-row">
+              <div class="wl-cell filled">M</div><div class="wl-cell filled">I</div><div class="wl-cell filled">A</div><div class="wl-cell">_</div><div class="wl-cell">_</div>
+            </div>
+            <!-- Rows 3-6: empty -->
+            <div class="wl-row"><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div></div>
+            <div class="wl-row"><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div></div>
+            <div class="wl-row"><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div></div>
+            <div class="wl-row"><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div><div class="wl-cell"></div></div>
+          </div>
+          <!-- Keyboard: 3 rows -->
+          <div class="wl-kbd">
+            <div class="wl-kbd-row">
+              <div class="wl-key">Q</div><div class="wl-key">W</div><div class="wl-key">E</div><div class="wl-key correct">R</div><div class="wl-key">T</div><div class="wl-key correct">Y</div><div class="wl-key absent">U</div><div class="wl-key">I</div><div class="wl-key">O</div><div class="wl-key absent">P</div>
+            </div>
+            <div class="wl-kbd-row">
+              <div class="wl-key">A</div><div class="wl-key">S</div><div class="wl-key">D</div><div class="wl-key">F</div><div class="wl-key">G</div><div class="wl-key">H</div><div class="wl-key">J</div><div class="wl-key">K</div><div class="wl-key">L</div>
+            </div>
+            <div class="wl-kbd-row">
+              <div class="wl-key wide">↵</div><div class="wl-key">Z</div><div class="wl-key">X</div><div class="wl-key">C</div><div class="wl-key">V</div><div class="wl-key">B</div><div class="wl-key">N</div><div class="wl-key">M</div><div class="wl-key wide">⌫</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Grid: 280px wide · Keyboard: ~350px wide · Both centered in 692px content area</span>
+        <span class="verdict great">Great — Wordle content is narrow; sidebar doesn't affect it</span>
+      </div>
+    </div>
+
+    <!-- ── 9. Tic-Tac-Toe ── -->
+    <div class="game-panel" id="panel-ttt">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Tic-Tac-Toe</span>
+      </div>
+      <div class="game-body" style="align-items:center; justify-content:center;">
+        <div class="ttt-wrap">
+          <div class="ttt-turnbar">
+            <div class="ttt-pscore p1 active">
+              <span class="ttt-mark">X</span>
+              <div class="ttt-pinfo"><div class="ttt-pwho">Player 1</div><div class="ttt-pturn">Your turn</div></div>
+              <div class="ttt-pwins">WINS<b>1</b></div>
+            </div>
+            <div class="ttt-pscore p2">
+              <span class="ttt-mark">O</span>
+              <div class="ttt-pinfo"><div class="ttt-pwho">Player 2</div><div class="ttt-pturn">Waiting</div></div>
+              <div class="ttt-pwins">WINS<b>0</b></div>
+            </div>
+          </div>
+          <div class="ttt-board">
+            <div class="ttt-cell x">X</div><div class="ttt-cell"></div><div class="ttt-cell o">O</div>
+            <div class="ttt-cell"></div><div class="ttt-cell x">X</div><div class="ttt-cell"></div>
+            <div class="ttt-cell o">O</div><div class="ttt-cell"></div><div class="ttt-cell"></div>
+          </div>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Board: 380×380px · Centered in 804px game area (max-width 520px wrap)</span>
+        <span class="verdict great">Great — board fits easily, both players can see clearly</span>
+      </div>
+    </div>
+
+    <!-- ── 10. Tap Duel ── -->
+    <div class="game-panel" id="panel-duel">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Tap Duel</span>
+      </div>
+      <div class="game-body" style="align-items:center; justify-content:center;">
+        <div class="duel-wrap">
+          <div class="duel-banner"><div class="duel-getready">Get ready…</div></div>
+          <div class="duel-zones">
+            <div class="duel-zone p1 arming">
+              <div class="duel-zone-player">Player 1</div>
+              <div class="duel-zone-state">Wait…</div>
+              <div class="duel-zone-wins">WINS: 1</div>
+            </div>
+            <div class="duel-zone p2">
+              <div class="duel-zone-player">Player 2</div>
+              <div class="duel-zone-state">Wait…</div>
+              <div class="duel-zone-wins">WINS: 0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Two zones side-by-side · max-width 660px (fits in 804px) · Each zone min-height 300px</span>
+        <span class="verdict ok">OK — zone tap area is slightly smaller than full-screen but still large</span>
+      </div>
+    </div>
+
+    <!-- ── 11. Trivia Buzzer ── -->
+    <div class="game-panel" id="panel-buzzer">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Trivia Buzzer</span>
+      </div>
+      <div class="game-body">
+        <div class="buzz-scorebar">
+          <div class="buzz-score p1 active"><div class="buzz-score-who">P1</div><div class="buzz-score-pts">3</div></div>
+          <div class="buzz-score p2"><div class="buzz-score-who">P2</div><div class="buzz-score-pts">1</div></div>
+        </div>
+        <div class="buzz-timer">12</div>
+        <div class="trivia-question" style="font-size:17px; padding:16px;">What is the largest park in Miami-Dade County?</div>
+        <div class="buzz-opts">
+          <div class="buzz-opt">Everglades National Park</div>
+          <div class="buzz-opt">Crandon Park</div>
+          <div class="buzz-opt">Oleta River State Park</div>
+          <div class="buzz-opt">Matheson Hammock</div>
+        </div>
+        <div class="buzz-feedback">Buzz in to answer!</div>
+        <div class="buzz-buzzers">
+          <button class="buzz-btn p1">BUZZ<div class="buzz-btn-sub">Player 1</div></button>
+          <button class="buzz-btn p2">BUZZ<div class="buzz-btn-sub">Player 2</div></button>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Buzz buttons: flex row filling content width · Question + 2×2 options grid above</span>
+        <span class="verdict ok">OK — buzzer buttons are slightly narrower but still easily tappable</span>
+      </div>
+    </div>
+
+    <!-- ── 12. Would You Rather ── -->
+    <div class="game-panel" id="panel-wyr">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Would You Rather</span>
+        <div class="game-score-badge">3 / 8</div>
+      </div>
+      <div class="wyr-wrap">
+        <div class="wyr-play" style="display:flex;">
+          <div class="wyr-progress">Question 3 of 8</div>
+          <div class="wyr-q">Would you rather…</div>
+          <div class="wyr-or">– or –</div>
+          <div class="wyr-opts">
+            <button class="wyr-opt a">Visit Art Basel Miami Beach every year</button>
+            <button class="wyr-opt b">Have VIP access to Ultra Music Festival forever</button>
+          </div>
+          <button class="wyr-next" style="opacity:0.4;">Next →</button>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Two option buttons flex: 1 (fill remaining height) · No max-width constraint · Buttons are very tall</span>
+        <span class="verdict great">Great — tall option buttons still fill the screen, easy to tap</span>
+      </div>
+    </div>
+
+    <!-- ── 13. Connect Four ── -->
+    <div class="game-panel" id="panel-c4">
+      <div class="game-screen-header">
+        <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+        <span class="game-screen-title">Connect Four</span>
+      </div>
+      <div class="game-body" style="align-items:center; justify-content:center;">
+        <div class="c4-wrap">
+          <div class="c4-turnbar">
+            <div class="ttt-pscore p1 active" style="flex:1;border:2px solid var(--teal);background:var(--teal-mist)">
+              <span class="ttt-mark" style="color:var(--teal)">●</span>
+              <div class="ttt-pinfo"><div class="ttt-pwho">Player 1</div><div class="ttt-pturn">Your turn</div></div>
+              <div class="ttt-pwins">WINS<b>0</b></div>
+            </div>
+            <div class="ttt-pscore p2" style="flex:1">
+              <span class="ttt-mark" style="color:var(--gold)">●</span>
+              <div class="ttt-pinfo"><div class="ttt-pwho">Player 2</div><div class="ttt-pturn">Waiting</div></div>
+              <div class="ttt-pwins">WINS<b>0</b></div>
+            </div>
+          </div>
+          <!-- 7-column board -->
+          <div class="c4-board">
+            <div class="c4-col"><div class="c4-col-arrow">▼</div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell p2"></div><div class="c4-cell p1"></div></div>
+            <div class="c4-col"><div class="c4-col-arrow">▼</div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell p1"></div><div class="c4-cell p2"></div><div class="c4-cell p1"></div></div>
+            <div class="c4-col"><div class="c4-col-arrow">▼</div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell p1"></div><div class="c4-cell p2"></div></div>
+            <div class="c4-col"><div class="c4-col-arrow">▼</div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell p2"></div><div class="c4-cell p1"></div><div class="c4-cell p2"></div><div class="c4-cell p1"></div></div>
+            <div class="c4-col"><div class="c4-col-arrow">▼</div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell p2"></div></div>
+            <div class="c4-col"><div class="c4-col-arrow">▼</div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell p1"></div></div>
+            <div class="c4-col"><div class="c4-col-arrow">▼</div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div><div class="c4-cell"></div></div>
+          </div>
+          <div class="c4-banner" style="color:var(--muted);font-size:14px;">Player 1's turn — drop a piece</div>
+        </div>
+      </div>
+      <div class="width-note">
+        <span>Board: max-width 490px · 7 columns fill that space · Centered in 804px</span>
+        <span class="verdict great">Great — board fits perfectly, both players reach their columns</span>
+      </div>
+    </div>
+
+  </div><!-- /game-area -->
+</div><!-- /mock-root -->
+
+<script>
+  // Draw frogger canvas with some visual lane content
+  const canvas = document.getElementById('frogger-canvas');
+  if (canvas && canvas.getContext) {
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const rows = 9, cols = 10;
+    const cW = W / cols, cH = H / rows;
+    const colors = [
+      '#0a2a10','#1a3a18','#0a2a10','#1a3020','#0a1828',
+      '#0a0a20','#0a1228','#0a1828','#1a2a10'
+    ];
+    for (let r = 0; r < rows; r++) {
+      ctx.fillStyle = colors[r % colors.length];
+      ctx.fillRect(0, r * cH, W, cH);
+      if (r === 4) { ctx.fillStyle = '#1a2a3a'; ctx.fillRect(0, r*cH, W, cH); }
+    }
+    // Draw frog
+    ctx.fillStyle = '#3DAB5E';
+    const fx = 4 * cW + cW/4, fy = 8 * cH + cH/8;
+    ctx.fillRect(fx, fy, cW * 0.5, cH * 0.8);
+    // Cars on rows 5-7
+    [[2,5,0.95],[5,6,0.2],[1,7,0.8]].forEach(([col,row,shade]) => {
+      ctx.fillStyle = shade > 0.5 ? '#E05252' : '#E5C06B';
+      ctx.beginPath();
+      ctx.roundRect(col * cW + 2, row * cH + cH*0.15, cW * 1.8, cH * 0.7, 4);
+      ctx.fill();
+    });
+    // Logs on rows 1-3
+    [[1,1],[4,2],[2,3]].forEach(([col,row]) => {
+      ctx.fillStyle = '#5a3a1a';
+      ctx.beginPath();
+      ctx.roundRect(col * cW + 2, row * cH + cH*0.2, cW * 2.5, cH * 0.6, 6);
+      ctx.fill();
+    });
+  }
+
+  function show(id, btn) {
+    document.querySelectorAll('.game-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    document.querySelectorAll('.mock-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

@@ -7,6 +7,14 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Left rail visible during games  *(DONE 2026-07-02, SW v1.68.0)*
+
+Changed `.game-screen` from `position:fixed; inset:0` to `position:fixed; top:0; left:220px; right:0; bottom:0` so the 220px sidebar stays visible while any game is open. Added `left:176px` override inside the existing landscape/short-screen media query (`max-height:480px`). No HTML moves required — game screens are `<body>` children so a CSS-only change was enough. Frogger canvas unaffected (capped at 400px internally). game-body already has `max-width:740px`, so content width is unchanged from full-screen.
+
+**File:** `public/index.html` line 854 (`.game-screen`)
+
+---
+
 ### [X] #45 — Miami Wordle game  *(DONE 2026-07-01, SW v1.67.0)*
 
 Added a 5-word-per-session Wordle-style game adapted for the ride context. Stripped all "returning user" features (streaks, daily seed, personal best) — every ride is a fresh start.
