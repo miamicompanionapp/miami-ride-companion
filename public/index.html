@@ -809,8 +809,10 @@
     .wl-start-btn { padding:13px 40px; border-radius:12px; border:none; background:var(--teal); color:white; font-family:var(--font-body); font-size:15px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px; }
     .wl-start-btn:active { opacity:0.88; }
     .wl-play { display:none; flex-direction:column; align-items:center; gap:10px; width:100%; }
-    .wl-score-row { width:100%; display:flex; justify-content:flex-end; }
+    .wl-score-row { width:100%; display:flex; justify-content:space-between; align-items:center; }
     .wl-score-chip { background:rgba(229,192,107,0.12); border:0.5px solid var(--gold-border); border-radius:20px; padding:4px 14px; font-size:12px; font-weight:700; color:var(--gold); }
+    .wl-skip-btn { padding:4px 12px; border-radius:20px; border:0.5px solid rgba(255,255,255,0.14); background:transparent; color:var(--muted); font-family:var(--font-body); font-size:12px; font-weight:500; cursor:pointer; }
+    .wl-skip-btn:active { opacity:0.65; }
     .wl-clue { width:100%; background:var(--card-solid); border:0.5px solid var(--border); border-radius:12px; padding:10px 14px; }
     .wl-clue-label { font-family:var(--font-deco); font-size:9px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:3px; }
     .wl-clue-text { font-size:13px; color:var(--heading); font-weight:500; line-height:1.45; }
@@ -3096,6 +3098,7 @@
     <!-- Play -->
     <div class="wl-play" id="wordle-play">
       <div class="wl-score-row">
+        <button class="wl-skip-btn" id="wl-skip-btn" onclick="wSkip()"><span data-gkey="wlSkipBtn">Skip</span> ▶</button>
         <div class="wl-score-chip" id="wordle-score-chip">0 pts</div>
       </div>
       <div class="wl-clue">
@@ -5597,6 +5600,7 @@ const GAME_UI = {
   wlHintUsed:     { en:'Letter revealed (−2 pts)', es:'Letra revelada (−2 pts)', pt:'Letra revelada (−2 pts)', fr:'Lettre révélée (−2 pts)' },
   wlHint2Label:   { en:'Extra Hint', es:'Pista extra', pt:'Dica extra', fr:'Indice supplémentaire' },
   wlHintReveal:   { en:'💡 Letter {n} is {l}', es:'💡 La letra {n} es {l}', pt:'💡 A letra {n} é {l}', fr:'💡 La lettre {n} est {l}' },
+  wlSkipBtn:      { en:'Skip', es:'Saltar', pt:'Pular', fr:'Passer' },
 };
 const gt = (k) => { const v = GAME_UI[k]; return v ? (v[lang] || v.en) : k; };
 
@@ -7857,12 +7861,13 @@ function wBeginRound() {
   document.getElementById('wordle-clue-text').textContent = aL(wSession[wRound].clue);
   document.getElementById('wordle-word-result').style.display = 'none';
   document.getElementById('wordle-word-result').className = 'wl-word-result';
-  // reset hint UI
+  // reset hint + skip UI
   const hintBtn = document.getElementById('wl-hint-btn');
   hintBtn.disabled = false; hintBtn.style.display = '';
   hintBtn.querySelector('[data-gkey]').textContent = gt('wlHintBtn');
   document.getElementById('wl-hint-reveal').style.display = 'none';
   document.getElementById('wordle-hint2').style.display = 'none';
+  document.getElementById('wl-skip-btn').style.display = '';
   wRenderGrid();
   wRenderKeyboard();
   document.getElementById('wordle-kbd').style.display = '';
@@ -8009,6 +8014,7 @@ function wEnter() {
     wTotalScore += pts;
     document.getElementById('wordle-score-chip').textContent = wTotalScore + ' pts';
     document.getElementById('wl-hint-btn').style.display = 'none';
+    document.getElementById('wl-skip-btn').style.display = 'none';
     setTimeout(() => wShowWordResult(won, pts, answer), 600);
   } else {
     if (wGuessCount >= 3) wMaybeShowHint2();
@@ -8033,8 +8039,19 @@ function wEvaluate(guess, answer) {
   return result;
 }
 
+function wSkip() {
+  if (wRoundDone) return;
+  wRoundDone = true;
+  const answer = wSession[wRound].word;
+  document.getElementById('wl-hint-btn').style.display = 'none';
+  document.getElementById('wl-skip-btn').style.display = 'none';
+  wShowWordResult(false, 0, answer);
+  logTap('game_wordle_skip');
+}
+
 function wShowWordResult(won, pts, answer) {
   document.getElementById('wordle-kbd').style.display = 'none';
+  document.getElementById('wl-skip-btn').style.display = 'none';
   const el = document.getElementById('wordle-word-result');
   el.style.display = 'flex';
   el.className = 'wl-word-result ' + (won ? 'won' : 'lost');

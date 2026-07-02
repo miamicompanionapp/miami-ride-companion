@@ -7,6 +7,14 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Wordle: Skip button (0 pts, reveals answer)  *(DONE 2026-07-02, SW v1.72.0)*
+
+Added a muted "Skip ▶" button to the score row (left side, score chip stays right) so passengers who have no idea can bail out of a word and get 0 pts rather than exhausting all 6 guesses. Tapping it calls `wSkip()`: sets `wRoundDone`, hides both the Skip and Hint buttons, hides the keyboard, and calls `wShowWordResult(false, 0, answer)` to show the lost-state card with the answer revealed. Guards: a no-op if the round is already done. Translated in all 4 languages (`wlSkipBtn`). 2 new unit tests added (skip flow + double-skip guard), all 8 Wordle tests pass.
+
+**File:** `public/index.html` — CSS (`.wl-skip-btn`); HTML (`#wordle-play` score row); `GAME_UI` (`wlSkipBtn`); JS (`wSkip`, `wBeginRound`, `wShowWordResult`, `wEnter`). `public/sw.js` bumped to v1.72.0.
+
+---
+
 ### [X] Wordle: hide keyboard when word-result card is shown  *(DONE 2026-07-02, SW v1.71.0)*
 
 iPad screen was scrollable when the result card appeared because the keyboard + result card + grid exceeded the viewport height. Fixed by hiding `#wordle-kbd` at the start of `wShowWordResult()` and restoring it at the end of `wBeginRound()` (after `wRenderKeyboard()` rebuilds it). No layout changes needed — toggling `display` is sufficient.

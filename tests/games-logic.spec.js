@@ -740,6 +740,39 @@ test.describe('Miami Wordle hints', { tag: ['@games', '@unit'] }, () => {
     expect(res.shown).toBe(false);
   });
 
+  test('skip awards 0 pts and shows the word-result card', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      const answer = wSession[wRound].word;
+      wSkip();
+      const resultEl = document.getElementById('wordle-word-result');
+      return {
+        roundDone: wRoundDone,
+        totalScore: wTotalScore,
+        resultVisible: resultEl.style.display !== 'none',
+        resultText: document.getElementById('wl-result-text').textContent,
+        kbdHidden: document.getElementById('wordle-kbd').style.display === 'none',
+        skipHidden: document.getElementById('wl-skip-btn').style.display === 'none',
+        answer,
+      };
+    });
+    expect(res.roundDone).toBe(true);
+    expect(res.totalScore).toBe(0);
+    expect(res.resultVisible).toBe(true);
+    expect(res.resultText).toContain(res.answer);
+    expect(res.kbdHidden).toBe(true);
+    expect(res.skipHidden).toBe(true);
+  });
+
+  test('@negative skip is a no-op when the round is already done', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      wSkip(); // first skip — valid
+      const scoreAfterFirst = wTotalScore;
+      wSkip(); // second skip — should be ignored
+      return { score: wTotalScore, sameScore: wTotalScore === scoreAfterFirst };
+    });
+    expect(res.sameScore).toBe(true);
+  });
+
   test('all WL_POOL words have a hint2 field in all 4 languages', async ({ page }) => {
     const missing = await page.evaluate(() =>
       WL_POOL.filter(w => !w.hint2 || !w.hint2.en || !w.hint2.es || !w.hint2.pt || !w.hint2.fr)
