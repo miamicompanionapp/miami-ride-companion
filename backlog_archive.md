@@ -7,6 +7,29 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Miami Wordle hints: reveal-a-letter button + auto secondary clue  *(DONE 2026-07-02, SW v1.70.0)*
+
+Added two hint features to the Miami Wordle game after feedback that the Miami-themed words were too hard for non-locals:
+
+**1. Reveal a Letter button (−2 pts)**
+- A 💡 button appears at the start of each round in the play area (between the clue and the grid).
+- Tapping it reveals one randomly chosen unrevealed letter with its position: "💡 Letter 3 is A".
+- The button then shows "Letter revealed (−2 pts)" and disables. The −2 penalty is applied at round end: `pts = max(0, (7 − guessCount) − 2)`.
+- New state vars: `wHintUsed`, `wHintPos`, `wHintLetter`. New function: `wRevealHint()`. Logs `game_wordle_hint` tap event.
+
+**2. Auto secondary clue after 3 wrong guesses**
+- Each word in `WL_POOL` now has a `hint2` field with a shorter, more direct hint in all 4 languages (EN/ES/PT/FR). Example for CALLE: "Spanish for 'street' — ___ Ocho is Little Havana's main drag."
+- After the 3rd failed guess, `wMaybeShowHint2()` appends this inside the clue card under a gold "Extra Hint" label.
+- Shows automatically — no player action needed.
+
+**Language switch support:** `refreshOpenGame()` gained a `game-wordle` branch that re-renders the clue text, hint2 text, hint2 label, and reveal string when the language changes mid-game.
+
+**Files:** `public/index.html` — CSS (`.wl-hint2`, `.wl-hint-row`, `.wl-hint-btn`, `.wl-hint-reveal`); HTML (`#wordle-play`); `GAME_UI` (4 new keys: `wlHintBtn`, `wlHintUsed`, `wlHint2Label`, `wlHintReveal`); `WL_POOL` (all 20 entries got `hint2`); JS (`wRevealHint`, `wMaybeShowHint2`, `wBeginRound`, `wEnter`, `refreshOpenGame`). `public/sw.js` bumped to v1.70.0.
+
+**Tests:** 6 new tests added to `tests/games-logic.spec.js` under "Miami Wordle hints" — all pass.
+
+---
+
 ### [X] Left rail nav enabled during games  *(DONE 2026-07-02, SW v1.69.0)*
 
 Added `closeGames()` call at the top of `switchTab()` so tapping any sidebar nav item (or driver bubble) while a game is open first closes the game, then navigates. Previously the page behind would switch but the game screen stayed on top, making nav appear broken.

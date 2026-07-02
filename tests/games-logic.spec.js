@@ -670,3 +670,81 @@ test.describe('Biscayne Dash (Frogger) logic', { tag: ['@games', '@unit'] }, () 
     expect(res.over).toBe(false);
   });
 });
+
+test.describe('Miami Wordle hints', { tag: ['@games', '@unit'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof initWordle === 'function');
+    await page.locator('#nav-games').click();
+    await page.evaluate(() => { openGame('wordle'); wStartGame(); });
+  });
+
+  test('hint button reveals one letter from the answer at a valid position', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      const answer = wSession[wRound].word;
+      wRevealHint();
+      return { used: wHintUsed, pos: wHintPos, letter: wHintLetter, correctLetter: answer[wHintPos] };
+    });
+    expect(res.used).toBe(true);
+    expect(res.pos).toBeGreaterThanOrEqual(0);
+    expect(res.pos).toBeLessThan(5);
+    expect(res.letter).toBe(res.correctLetter);
+  });
+
+  test('@negative calling wRevealHint twice is a no-op on the second call', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      wRevealHint();
+      const pos1 = wHintPos;
+      wRevealHint(); // second call — should be ignored
+      return { pos1, pos2: wHintPos };
+    });
+    expect(res.pos1).toBe(res.pos2);
+  });
+
+  test('hint penalty: solving with hint used deducts 2 pts from the round score', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      wRevealHint(); // use the hint
+      const answer = wSession[wRound].word;
+      // type the correct answer and submit
+      for (const ch of answer) wType(ch);
+      wEnter();
+      // pts = max(0, 7 - 1 guesses - 2 hint penalty) = 4
+      return { totalScore: wTotalScore };
+    });
+    // 1 guess → 7-1=6, minus 2 for hint → 4
+    expect(res.totalScore).toBe(4);
+  });
+
+  test('extra hint (hint2) auto-shows after the 3rd wrong guess', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      // submit 3 wrong guesses (using a word that is definitely wrong)
+      const wrong = 'ZZZZZ';
+      for (let i = 0; i < 3; i++) {
+        wCurrentInput = wrong;
+        wEnter();
+      }
+      const hint2El = document.getElementById('wordle-hint2');
+      return { shown: hint2El.style.display !== 'none', flag: wHint2Shown };
+    });
+    expect(res.shown).toBe(true);
+    expect(res.flag).toBe(true);
+  });
+
+  test('@negative extra hint does not show before the 3rd wrong guess', async ({ page }) => {
+    const res = await page.evaluate(() => {
+      wCurrentInput = 'ZZZZZ';
+      wEnter(); // 1 wrong guess
+      const hint2El = document.getElementById('wordle-hint2');
+      return { shown: hint2El.style.display !== 'none' };
+    });
+    expect(res.shown).toBe(false);
+  });
+
+  test('all WL_POOL words have a hint2 field in all 4 languages', async ({ page }) => {
+    const missing = await page.evaluate(() =>
+      WL_POOL.filter(w => !w.hint2 || !w.hint2.en || !w.hint2.es || !w.hint2.pt || !w.hint2.fr)
+              .map(w => w.word)
+    );
+    expect(missing).toEqual([]);
+  });
+});
