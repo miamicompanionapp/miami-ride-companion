@@ -7865,6 +7865,7 @@ function wBeginRound() {
   document.getElementById('wordle-hint2').style.display = 'none';
   wRenderGrid();
   wRenderKeyboard();
+  document.getElementById('wordle-kbd').style.display = '';
 }
 
 function wRevealHint() {
@@ -8033,6 +8034,7 @@ function wEvaluate(guess, answer) {
 }
 
 function wShowWordResult(won, pts, answer) {
+  document.getElementById('wordle-kbd').style.display = 'none';
   const el = document.getElementById('wordle-word-result');
   el.style.display = 'flex';
   el.className = 'wl-word-result ' + (won ? 'won' : 'lost');

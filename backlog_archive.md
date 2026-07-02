@@ -7,6 +7,14 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Wordle: hide keyboard when word-result card is shown  *(DONE 2026-07-02, SW v1.71.0)*
+
+iPad screen was scrollable when the result card appeared because the keyboard + result card + grid exceeded the viewport height. Fixed by hiding `#wordle-kbd` at the start of `wShowWordResult()` and restoring it at the end of `wBeginRound()` (after `wRenderKeyboard()` rebuilds it). No layout changes needed — toggling `display` is sufficient.
+
+**File:** `public/index.html` — `wShowWordResult()` and `wBeginRound()`
+
+---
+
 ### [X] Miami Wordle hints: reveal-a-letter button + auto secondary clue  *(DONE 2026-07-02, SW v1.70.0)*
 
 Added two hint features to the Miami Wordle game after feedback that the Miami-themed words were too hard for non-locals:
