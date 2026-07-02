@@ -46,6 +46,16 @@ backlog_archive.md — Completed items with full implementation notes
 
 ---
 
+## Definition of Done
+
+Every code change — including one-liners and small bug fixes — is not done until all three of these are complete. No exceptions for "small" changes.
+
+1. **`backlog.txt`** — bump "Last updated" date; mark the item `[X]` if it corresponds to an open item; add a new `[X]` entry if it was an untracked bug or improvement.
+2. **`backlog_archive.md`** — add a `### [X]` entry with: what changed, why, file/line touched, SW version if bumped.
+3. **Tests** — add a test if the change is testable; run the relevant suite (`npm run test:i18n`, `npm run test:index`, etc.) and confirm it passes before considering the task done.
+
+---
+
 ## Code Patterns Reference
 
 ### Overlay / modal pattern

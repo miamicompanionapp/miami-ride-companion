@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock — Hangman Game Screen</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Marcellus&family=Poiret+One&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy-deep: #0C1A2E; --navy-mid: #15294A; --card-solid: #16294A;
+  --teal: #19A0A8; --teal-light: #37C7CE; --teal-mist: rgba(25,160,168,0.14);
+  --gold: #E5C06B; --gold-border: rgba(229,192,107,0.30);
+  --pink: #FF5C8A; --bg: #0C1A2E;
+  --card: rgba(20,40,66,0.72); --border: rgba(229,192,107,0.18);
+  --muted: #9DB4C6; --body: #CBDAE6; --heading: #EAF1F6;
+  --font-body:'DM Sans',sans-serif; --font-display:'Marcellus',serif; --font-deco:'Poiret One',sans-serif;
+}
+html, body { background: var(--bg); font-family: var(--font-body); color: #fff; min-height: 100vh; }
+
+.page-title { font-family: var(--font-display); font-size: 20px; color: var(--gold); padding: 20px 20px 4px; }
+.page-sub { font-size: 12px; color: var(--muted); padding: 0 20px 20px; line-height: 1.6; }
+.section-label { font-family: var(--font-deco); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); padding: 16px 20px 8px; }
+
+/* game card */
+.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 9px; padding: 0 20px 24px; }
+.game-card { background: var(--card); border-radius: 11px; border: 0.5px solid var(--border); padding: 11px 12px; display: flex; flex-direction: column; position: relative; }
+.game-card.hangman { border-top: 3px solid #A855F7; }
+.game-card-icon { font-size: 24px; margin-bottom: 5px; }
+.game-card-title { font-size: 12px; font-weight: 600; color: var(--heading); margin-bottom: 2px; }
+.game-card-desc { font-size: 10px; color: var(--muted); line-height: 1.45; flex: 1; }
+.game-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 7px; }
+.pcount { display: inline-flex; align-items: center; gap: 4px; background: rgba(157,180,198,0.12); color: #9DB4C6; border: 0.5px solid rgba(157,180,198,0.26); padding: 3px 8px; border-radius: 14px; font-size: 9px; font-weight: 700; }
+.play-arrow { width: 22px; height: 22px; background: var(--teal-mist); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.play-arrow i { font-size: 12px; color: var(--teal); }
+.badge-new { position: absolute; top: 9px; right: 9px; background: var(--gold); color: white; font-size: 8px; font-weight: 700; padding: 2px 7px; border-radius: 10px; letter-spacing: 0.05em; }
+
+/* game screen */
+.game-screen { display: flex; flex-direction: column; background: var(--bg); }
+.game-screen-header { background: var(--navy-deep); padding: 12px 20px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.game-back-btn { background: rgba(255,255,255,0.1); border: none; border-radius: 8px; width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; }
+.game-back-btn i { font-size: 16px; }
+.game-screen-title { font-family: var(--font-display); font-size: 18px; color: white; font-weight: 500; flex: 1; }
+.lives-badge { display: flex; gap: 4px; align-items: center; }
+.life-dot { width: 10px; height: 10px; border-radius: 50%; }
+.life-dot.alive { background: var(--teal); }
+.life-dot.dead  { background: rgba(255,255,255,0.15); }
+
+.game-body { overflow-y: auto; padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+
+/* drawing area */
+.hm-gallows-wrap {
+  width: 100%; display: flex; justify-content: center;
+  background: var(--card-solid); border-radius: 14px; border: 0.5px solid var(--border);
+  padding: 16px 24px;
+}
+.hm-gallows-svg { width: 180px; height: 180px; }
+
+/* clue */
+.hm-clue {
+  width: 100%; background: var(--card-solid);
+  border: 0.5px solid var(--border); border-radius: 12px; padding: 10px 16px; text-align: center;
+}
+.hm-clue-label { font-family: var(--font-deco); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.hm-clue-text { font-size: 13px; color: var(--heading); font-weight: 500; }
+
+/* word blanks */
+.hm-word { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.hm-letter {
+  width: 36px; text-align: center;
+  font-size: 22px; font-weight: 700; color: var(--heading);
+  border-bottom: 2px solid rgba(229,192,107,0.5);
+  padding-bottom: 4px; line-height: 1.1;
+  font-family: var(--font-body);
+}
+.hm-letter.blank { color: transparent; }
+.hm-letter.wrong-reveal { color: var(--pink); }
+.hm-space { width: 12px; }
+
+/* wrong guesses */
+.hm-wrong-wrap { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.hm-wrong-key {
+  width: 30px; height: 30px; border-radius: 7px;
+  background: rgba(255,92,138,0.15); border: 0.5px solid rgba(255,92,138,0.4);
+  color: var(--pink); font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-body);
+}
+
+/* keyboard */
+.hm-kbd { display: flex; flex-direction: column; gap: 5px; align-items: center; width: 100%; }
+.hm-kbd-row { display: flex; gap: 5px; }
+.hm-key {
+  width: 32px; height: 40px; border-radius: 7px;
+  background: #1E3350; border: 0.5px solid rgba(255,255,255,0.13);
+  color: var(--heading); font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-family: var(--font-body);
+}
+.hm-key.used-correct { background: #19856A; border-color: #1DAF8C; color: #fff; }
+.hm-key.used-wrong   { background: rgba(255,92,138,0.15); border-color: rgba(255,92,138,0.4); color: var(--pink); }
+
+/* category chip */
+.hm-cat-chip { display: inline-flex; align-items: center; gap: 5px; background: rgba(168,85,247,0.15); border: 0.5px solid rgba(168,85,247,0.4); border-radius: 14px; padding: 4px 10px; font-size: 10px; color: #C084FC; font-weight: 600; }
+
+/* annotations */
+.annot-wrap { padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.annot { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--muted); line-height: 1.5; }
+.annot .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 5px; }
+</style>
+</head>
+<body>
+
+<div class="page-title">Hangman — Game Mock</div>
+<div class="page-sub">Solo word-guessing game with a Miami twist. Gallows is rendered in SVG with the Deco Dusk palette — teal scaffold, gold rope, pink danger state.</div>
+
+<!-- card -->
+<div class="section-label">Game card</div>
+<div class="game-grid">
+  <div class="game-card hangman">
+    <span class="badge-new">NEW</span>
+    <div class="game-card-icon">🪢</div>
+    <div class="game-card-title">Hangman</div>
+    <div class="game-card-desc">Guess the hidden Miami word letter by letter before time runs out.</div>
+    <div class="game-card-footer">
+      <span class="pcount"><i class="ti ti-user"></i> 1P</span>
+      <div class="play-arrow"><i class="ti ti-player-play-filled"></i></div>
+    </div>
+  </div>
+</div>
+
+<!-- game screen -->
+<div class="section-label">Game screen — 4 wrong guesses, word: BISCAYNE</div>
+<div class="game-screen">
+  <div class="game-screen-header">
+    <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+    <span class="game-screen-title">Hangman</span>
+    <div class="lives-badge">
+      <div class="life-dot alive"></div>
+      <div class="life-dot alive"></div>
+      <div class="life-dot dead"></div>
+      <div class="life-dot dead"></div>
+      <div class="life-dot dead"></div>
+      <div class="life-dot dead"></div>
+    </div>
+  </div>
+
+  <div class="game-body">
+
+    <div class="hm-cat-chip">🌊 Neighborhoods &amp; Landmarks</div>
+
+    <!-- gallows SVG — 4 parts drawn: post, beam, rope, head -->
+    <div class="hm-gallows-wrap">
+      <svg class="hm-gallows-svg" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- base -->
+        <line x1="20" y1="165" x2="160" y2="165" stroke="#19A0A8" stroke-width="4" stroke-linecap="round"/>
+        <!-- vertical post -->
+        <line x1="50" y1="165" x2="50" y2="20" stroke="#19A0A8" stroke-width="4" stroke-linecap="round"/>
+        <!-- top beam -->
+        <line x1="50" y1="20" x2="120" y2="20" stroke="#19A0A8" stroke-width="4" stroke-linecap="round"/>
+        <!-- rope -->
+        <line x1="120" y1="20" x2="120" y2="44" stroke="#E5C06B" stroke-width="3" stroke-linecap="round"/>
+        <!-- head (wrong guess 1) -->
+        <circle cx="120" cy="56" r="12" stroke="#FF5C8A" stroke-width="3"/>
+        <!-- body (wrong guess 2) -->
+        <line x1="120" y1="68" x2="120" y2="108" stroke="#FF5C8A" stroke-width="3" stroke-linecap="round"/>
+        <!-- left arm (wrong guess 3) -->
+        <line x1="120" y1="78" x2="100" y2="96" stroke="#FF5C8A" stroke-width="3" stroke-linecap="round"/>
+        <!-- right arm (wrong guess 4) -->
+        <line x1="120" y1="78" x2="140" y2="96" stroke="#FF5C8A" stroke-width="3" stroke-linecap="round"/>
+        <!-- legs not drawn yet (2 remaining) -->
+      </svg>
+    </div>
+
+    <!-- clue -->
+    <div class="hm-clue">
+      <div class="hm-clue-label">Clue</div>
+      <div class="hm-clue-text">A scenic bay and boulevard that stretches from Downtown to the Design District.</div>
+    </div>
+
+    <!-- word: B I S C A Y N E  (8 letters) — B, I, S, C known; rest hidden -->
+    <div class="hm-word">
+      <div class="hm-letter">B</div>
+      <div class="hm-letter">I</div>
+      <div class="hm-letter">S</div>
+      <div class="hm-letter">C</div>
+      <div class="hm-letter blank">_</div>
+      <div class="hm-letter blank">_</div>
+      <div class="hm-letter blank">_</div>
+      <div class="hm-letter blank">_</div>
+    </div>
+
+    <!-- wrong guesses -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;width:100%">
+      <div style="font-family:var(--font-deco);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)">Wrong guesses</div>
+      <div class="hm-wrong-wrap">
+        <div class="hm-wrong-key">T</div>
+        <div class="hm-wrong-key">L</div>
+        <div class="hm-wrong-key">R</div>
+        <div class="hm-wrong-key">O</div>
+      </div>
+    </div>
+
+    <!-- keyboard -->
+    <div class="hm-kbd">
+      <div class="hm-kbd-row">
+        <div class="hm-key">Q</div><div class="hm-key">W</div><div class="hm-key">E</div>
+        <div class="hm-key used-wrong">R</div><div class="hm-key used-wrong">T</div>
+        <div class="hm-key">Y</div><div class="hm-key">U</div><div class="hm-key used-correct">I</div>
+        <div class="hm-key used-wrong">O</div><div class="hm-key">P</div>
+      </div>
+      <div class="hm-kbd-row">
+        <div class="hm-key">A</div><div class="hm-key used-correct">S</div>
+        <div class="hm-key">D</div><div class="hm-key">F</div><div class="hm-key">G</div>
+        <div class="hm-key">H</div><div class="hm-key">J</div><div class="hm-key">K</div>
+        <div class="hm-key used-wrong">L</div>
+      </div>
+      <div class="hm-kbd-row">
+        <div class="hm-key">Z</div><div class="hm-key">X</div><div class="hm-key used-correct">C</div>
+        <div class="hm-key">V</div><div class="hm-key used-correct">B</div>
+        <div class="hm-key">N</div><div class="hm-key">M</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- annotations -->
+<div class="section-label">Design notes</div>
+<div class="annot-wrap">
+  <div class="annot"><div class="dot"></div>SVG gallows uses palette colors: teal scaffold, gold rope, pink for body parts so each wrong guess "lights up" in the danger accent color.</div>
+  <div class="annot"><div class="dot"></div>6 wrong guesses allowed: head → body → left arm → right arm → left leg → right leg. No noose — keeping it family-friendly with a stylized art-deco figure.</div>
+  <div class="annot"><div class="dot"></div>Word list: Miami neighborhoods, landmarks, slang. Categories shown as chip (Neighborhoods, Food, Culture, etc.) so passengers learn something even if they lose.</div>
+  <div class="annot"><div class="dot"></div>Lives shown as dots in header (teal = alive, dim = lost). Max 6 dots.</div>
+  <div class="annot"><div class="dot"></div>Accent color for card border-top: #A855F7 (purple — distinct from existing games).</div>
+  <div class="annot"><div class="dot"></div>On win: word cells animate gold. On loss: word fills in pink + "The word was BISCAYNE" reveal. Play Again button.</div>
+</div>
+
+</body>
+</html>

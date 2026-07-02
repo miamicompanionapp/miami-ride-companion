@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock — Finger Picker Game Screen</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Marcellus&family=Poiret+One&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy-deep:#0C1A2E; --navy-mid:#15294A; --card-solid:#16294A;
+  --teal:#19A0A8; --teal-light:#37C7CE; --teal-mist:rgba(25,160,168,0.14);
+  --gold:#E5C06B; --gold-border:rgba(229,192,107,0.30);
+  --pink:#FF5C8A; --bg:#0C1A2E;
+  --card:rgba(20,40,66,0.72); --border:rgba(229,192,107,0.18);
+  --muted:#9DB4C6; --body:#CBDAE6; --heading:#EAF1F6;
+  --font-body:'DM Sans',sans-serif; --font-display:'Marcellus',serif; --font-deco:'Poiret One',sans-serif;
+}
+html, body { background: var(--bg); font-family: var(--font-body); color: #fff; min-height: 100vh; }
+
+.page-title { font-family: var(--font-display); font-size: 20px; color: var(--gold); padding: 20px 20px 4px; }
+.page-sub { font-size: 12px; color: var(--muted); padding: 0 20px 20px; line-height: 1.6; }
+.section-label { font-family: var(--font-deco); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); padding: 16px 20px 8px; }
+
+/* game card */
+.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 9px; padding: 0 20px 24px; }
+.game-card { background: var(--card); border-radius: 11px; border: 0.5px solid var(--border); padding: 11px 12px; display: flex; flex-direction: column; position: relative; }
+.game-card.picker { border-top: 3px solid #C084FC; }
+.game-card-icon { font-size: 24px; margin-bottom: 5px; }
+.game-card-title { font-size: 12px; font-weight: 600; color: var(--heading); margin-bottom: 2px; }
+.game-card-desc { font-size: 10px; color: var(--muted); line-height: 1.45; flex: 1; }
+.game-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 7px; }
+.pcount { display: inline-flex; align-items: center; gap: 4px; background: var(--teal-mist); color: #6FD3D9; border: 0.5px solid rgba(25,160,168,0.34); padding: 3px 8px; border-radius: 14px; font-size: 9px; font-weight: 700; }
+.play-arrow { width: 22px; height: 22px; background: var(--teal-mist); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.play-arrow i { font-size: 12px; color: var(--teal); }
+.badge-new { position: absolute; top: 9px; right: 9px; background: var(--gold); color: white; font-size: 8px; font-weight: 700; padding: 2px 7px; border-radius: 10px; }
+
+/* game screen */
+.game-screen { display: flex; flex-direction: column; background: var(--bg); border-radius: 12px; overflow: hidden; }
+.game-screen-header { background: var(--navy-deep); padding: 12px 20px; display: flex; align-items: center; gap: 12px; }
+.game-back-btn { background: rgba(255,255,255,0.1); border: none; border-radius: 8px; width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; }
+.game-back-btn i { font-size: 16px; }
+.game-screen-title { font-family: var(--font-display); font-size: 18px; color: white; font-weight: 500; flex: 1; }
+
+/* ── Stage 1: instruction ── */
+.fp-instruction {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 24px; gap: 20px; text-align: center; min-height: 300px;
+}
+.fp-instr-icon { font-size: 56px; }
+.fp-instr-title { font-family: var(--font-display); font-size: 22px; color: var(--heading); }
+.fp-instr-sub { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 280px; }
+.fp-instr-sub strong { color: var(--gold); }
+
+/* ── Stage 2: fingers down — the big canvas area ── */
+.fp-canvas-area {
+  position: relative; min-height: 380px; width: 100%;
+  background:
+    radial-gradient(600px 400px at 30% 60%, rgba(192,132,252,0.07), transparent 60%),
+    radial-gradient(500px 350px at 80% 20%, rgba(25,160,168,0.07), transparent 55%),
+    var(--navy-deep);
+  overflow: hidden;
+}
+.fp-canvas-prompt {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-family: var(--font-deco); font-size: 14px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(255,255,255,0.2); text-align: center;
+  pointer-events: none; white-space: nowrap;
+}
+/* finger dots — each person's fingertip shown as a colored circle */
+.fp-dot {
+  position: absolute;
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; font-family: var(--font-body);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 16px rgba(0,0,0,0.4);
+}
+.fp-dot-ring {
+  position: absolute; inset: -4px; border-radius: 50%;
+  border: 2px solid;
+  opacity: 0.5;
+}
+/* "waiting" state — dim, not yet chosen */
+.fp-dot.waiting { opacity: 0.75; }
+/* "chosen" state — bright with glow */
+.fp-dot.chosen { opacity: 1; }
+
+/* countdown overlay that appears before revealing */
+.fp-countdown {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-family: var(--font-display); font-size: 80px; font-weight: 700;
+  color: white; text-shadow: 0 0 40px rgba(229,192,107,0.6);
+  pointer-events: none;
+}
+
+/* ── Stage 3: result ── */
+.fp-result {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 32px 24px; gap: 16px; text-align: center; min-height: 380px;
+  position: relative;
+}
+.fp-result-winner-dot {
+  width: 96px; height: 96px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 700;
+  box-shadow: 0 0 40px rgba(192,132,252,0.5);
+}
+.fp-result-label { font-family: var(--font-deco); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.fp-result-title { font-family: var(--font-display); font-size: 28px; color: white; }
+.fp-again-btn {
+  margin-top: 8px; padding: 13px 36px; border-radius: 12px; border: none;
+  background: rgba(192,132,252,0.2); border: 1px solid rgba(192,132,252,0.5);
+  color: #C084FC; font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  cursor: pointer;
+}
+
+/* annotations */
+.annot-wrap { padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.annot { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--muted); line-height: 1.5; }
+.annot .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 5px; }
+.flow-steps { display: flex; gap: 0; padding: 0 20px; overflow-x: auto; }
+.flow-step { flex-shrink: 0; width: 120px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+.flow-step-num { width: 28px; height: 28px; border-radius: 50%; background: rgba(192,132,252,0.2); border: 1px solid rgba(192,132,252,0.5); color: #C084FC; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.flow-step-label { font-size: 10px; color: var(--muted); line-height: 1.4; }
+.flow-arrow { align-self: center; color: rgba(255,255,255,0.2); font-size: 18px; flex-shrink: 0; padding: 0 4px; padding-bottom: 22px; }
+</style>
+</head>
+<body>
+
+<div class="page-title">Finger Picker — Game Mock</div>
+<div class="page-sub">Group "who goes first" / "who's it" utility. Everyone puts a finger on screen; one lights up as the chosen one. Based on the Chwazi pattern — ~1 hour to build.</div>
+
+<!-- card -->
+<div class="section-label">Game card</div>
+<div class="game-grid">
+  <div class="game-card picker">
+    <span class="badge-new">NEW</span>
+    <div class="game-card-icon">☝️</div>
+    <div class="game-card-title">Finger Picker</div>
+    <div class="game-card-desc">Everyone puts a finger on screen. One random finger lights up — that's "it"!</div>
+    <div class="game-card-footer">
+      <span class="pcount"><i class="ti ti-users"></i> 2–5P</span>
+      <div class="play-arrow"><i class="ti ti-player-play-filled"></i></div>
+    </div>
+  </div>
+</div>
+
+<!-- flow overview -->
+<div class="section-label">3-state flow</div>
+<div class="flow-steps">
+  <div class="flow-step">
+    <div class="flow-step-num">1</div>
+    <div class="flow-step-label">Instruction screen<br>("put fingers down")</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step">
+    <div class="flow-step-num">2</div>
+    <div class="flow-step-label">Canvas: dots appear as fingers land. 3s countdown.</div>
+  </div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step">
+    <div class="flow-step-num">3</div>
+    <div class="flow-step-label">One dot glows. Result: "Purple is it!" Play again.</div>
+  </div>
+</div>
+
+<!-- stage 1: instruction -->
+<div class="section-label">Stage 1 — Instruction</div>
+<div class="game-screen" style="margin:0 20px;">
+  <div class="game-screen-header">
+    <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+    <span class="game-screen-title">Finger Picker</span>
+  </div>
+  <div class="fp-instruction">
+    <div class="fp-instr-icon">☝️</div>
+    <div class="fp-instr-title">Who's It?</div>
+    <div class="fp-instr-sub">Everyone place <strong>one finger</strong> anywhere on the screen at the same time. The chosen finger will glow!</div>
+  </div>
+</div>
+
+<!-- stage 2: fingers down -->
+<div class="section-label">Stage 2 — Fingers down (4 players, countdown at 2)</div>
+<div class="game-screen" style="margin:0 20px;">
+  <div class="game-screen-header">
+    <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+    <span class="game-screen-title">Finger Picker</span>
+  </div>
+  <div class="fp-canvas-area" style="min-height:360px;">
+    <div class="fp-canvas-prompt">Place your fingers…</div>
+
+    <!-- countdown overlay -->
+    <div class="fp-countdown">2</div>
+
+    <!-- finger dot 1 — teal, top-left area -->
+    <div class="fp-dot waiting" style="left:22%;top:28%;background:rgba(55,199,206,0.85);">
+      <div class="fp-dot-ring" style="border-color:#37C7CE;"></div>
+    </div>
+
+    <!-- finger dot 2 — pink, bottom-left -->
+    <div class="fp-dot waiting" style="left:30%;top:72%;background:rgba(255,92,138,0.85);">
+      <div class="fp-dot-ring" style="border-color:#FF5C8A;"></div>
+    </div>
+
+    <!-- finger dot 3 — purple, top-right -->
+    <div class="fp-dot waiting" style="left:72%;top:32%;background:rgba(192,132,252,0.85);">
+      <div class="fp-dot-ring" style="border-color:#C084FC;"></div>
+    </div>
+
+    <!-- finger dot 4 — gold, bottom-right -->
+    <div class="fp-dot waiting" style="left:78%;top:68%;background:rgba(229,192,107,0.85);">
+      <div class="fp-dot-ring" style="border-color:#E5C06B;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- stage 3: result -->
+<div class="section-label">Stage 3 — Result (purple chosen)</div>
+<div class="game-screen" style="margin:0 20px;">
+  <div class="game-screen-header">
+    <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+    <span class="game-screen-title">Finger Picker</span>
+  </div>
+  <div class="fp-result">
+    <!-- confetti hint: gold dots scattered (CSS only in real impl) -->
+    <div class="fp-result-winner-dot" style="background:rgba(192,132,252,0.9);">☝️</div>
+    <div class="fp-result-label">The chosen one</div>
+    <div class="fp-result-title">Purple is it!</div>
+    <button class="fp-again-btn">Pick Again</button>
+  </div>
+</div>
+
+<!-- annotations -->
+<div class="section-label">Design notes</div>
+<div class="annot-wrap">
+  <div class="annot"><div class="dot"></div>Uses multi-touch events (touchstart). Each unique touch point gets a colored dot. Colors cycle: teal → pink → purple → gold → orange → green (up to 5 simultaneous touches on most tablets).</div>
+  <div class="annot"><div class="dot"></div>3-second countdown starts when ≥2 fingers are detected. Any finger lifting before the 3s is up resets the countdown (prevents early lift-and-cheat).</div>
+  <div class="annot"><div class="dot"></div>Chosen finger: random index among all live touch points at countdown end. The chosen dot animates (scale pulse + glow + radial shimmer). All others dim.</div>
+  <div class="annot"><div class="dot"></div>No "player names" needed — colors are the identity. Result says "Purple is it!" — everyone knows which finger that is.</div>
+  <div class="annot"><div class="dot"></div>No back-end, no storage. Pure touch event toy. Estimated ~1 hour to build.</div>
+  <div class="annot"><div class="dot"></div>Accent color for card border-top: #C084FC (lavender-purple — same purple family as the image game's #7C3AED but lighter/distinct).</div>
+  <div class="annot"><div class="dot"></div>This is a utility, not really a "game" — could be labeled as a Bonus or Quick-Play card in the grid to set expectations.</div>
+</div>
+
+</body>
+</html>

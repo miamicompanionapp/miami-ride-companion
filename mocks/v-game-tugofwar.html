@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock — Tug of War Game Screen</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Marcellus&family=Poiret+One&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy-deep:#0C1A2E; --navy-mid:#15294A; --card-solid:#16294A;
+  --teal:#19A0A8; --teal-light:#37C7CE; --teal-mist:rgba(25,160,168,0.14);
+  --gold:#E5C06B; --gold-border:rgba(229,192,107,0.30);
+  --pink:#FF5C8A; --bg:#0C1A2E;
+  --card:rgba(20,40,66,0.72); --border:rgba(229,192,107,0.18);
+  --muted:#9DB4C6; --body:#CBDAE6; --heading:#EAF1F6;
+  --font-body:'DM Sans',sans-serif; --font-display:'Marcellus',serif; --font-deco:'Poiret One',sans-serif;
+  --p1:#37C7CE; --p2:#FF5C8A; --p3:#E5C06B;
+}
+html, body { background: var(--bg); font-family: var(--font-body); color: #fff; min-height: 100vh; }
+
+.page-title { font-family: var(--font-display); font-size: 20px; color: var(--gold); padding: 20px 20px 4px; }
+.page-sub { font-size: 12px; color: var(--muted); padding: 0 20px 20px; line-height: 1.6; }
+.section-label { font-family: var(--font-deco); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); padding: 16px 20px 8px; }
+
+/* game card */
+.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 9px; padding: 0 20px 24px; }
+.game-card { background: var(--card); border-radius: 11px; border: 0.5px solid var(--border); padding: 11px 12px; display: flex; flex-direction: column; position: relative; }
+.game-card.tug { border-top: 3px solid #F43F5E; }
+.game-card-icon { font-size: 24px; margin-bottom: 5px; }
+.game-card-title { font-size: 12px; font-weight: 600; color: var(--heading); margin-bottom: 2px; }
+.game-card-desc { font-size: 10px; color: var(--muted); line-height: 1.45; flex: 1; }
+.game-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 7px; }
+.pcount { display: inline-flex; align-items: center; gap: 4px; background: var(--teal-mist); color: #6FD3D9; border: 0.5px solid rgba(25,160,168,0.34); padding: 3px 8px; border-radius: 14px; font-size: 9px; font-weight: 700; }
+.play-arrow { width: 22px; height: 22px; background: var(--teal-mist); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.play-arrow i { font-size: 12px; color: var(--teal); }
+.badge-new { position: absolute; top: 9px; right: 9px; background: var(--gold); color: white; font-size: 8px; font-weight: 700; padding: 2px 7px; border-radius: 10px; }
+
+/* game screen */
+.game-screen { display: flex; flex-direction: column; background: var(--bg); }
+.game-screen-header { background: var(--navy-deep); padding: 12px 20px; display: flex; align-items: center; gap: 12px; }
+.game-back-btn { background: rgba(255,255,255,0.1); border: none; border-radius: 8px; width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; }
+.game-back-btn i { font-size: 16px; }
+.game-screen-title { font-family: var(--font-display); font-size: 18px; color: white; font-weight: 500; flex: 1; }
+.countdown-badge { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 5px 14px; font-size: 18px; font-weight: 700; color: var(--gold); font-family: var(--font-display); }
+
+.game-body { padding: 0; display: flex; flex-direction: column; }
+
+/* 2P layout: left zone | center rope | right zone */
+/* Each zone is a big tap button taking 50% width */
+.tug-layout {
+  display: flex;
+  height: 380px;
+  position: relative;
+}
+
+/* zones */
+.tug-zone {
+  flex: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none; -webkit-tap-highlight-color: transparent;
+  position: relative; overflow: hidden;
+}
+.tug-zone.p1 { background: linear-gradient(135deg, rgba(55,199,206,0.08) 0%, rgba(55,199,206,0.18) 100%); border-right: none; }
+.tug-zone.p2 { background: linear-gradient(225deg, rgba(255,92,138,0.08) 0%, rgba(255,92,138,0.18) 100%); }
+.tug-zone.p3 { background: linear-gradient(225deg, rgba(229,192,107,0.08) 0%, rgba(229,192,107,0.18) 100%); }
+
+.tug-zone-label {
+  font-family: var(--font-deco); font-size: 11px; letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.tug-zone.p1 .tug-zone-label { color: var(--p1); }
+.tug-zone.p2 .tug-zone-label { color: var(--p2); }
+.tug-zone.p3 .tug-zone-label { color: var(--p3); }
+
+.tug-tap-icon { font-size: 48px; opacity: 0.6; }
+.tug-tap-cue { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.05em; }
+
+/* tap burst ripple (visual only in mock) */
+.tug-ripple {
+  position: absolute; width: 80px; height: 80px; border-radius: 50%;
+  opacity: 0.3; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.tug-zone.p1 .tug-ripple { background: var(--p1); }
+.tug-zone.p2 .tug-ripple { background: var(--p2); }
+
+/* center rope track */
+.tug-rope-track {
+  position: absolute; top: 0; bottom: 0;
+  left: 50%; transform: translateX(-50%);
+  width: 60px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; z-index: 2;
+}
+.tug-rope-line {
+  width: 4px; height: 300px; border-radius: 2px;
+  background: linear-gradient(to bottom, var(--p1) 0%, var(--p1) 40%, var(--p2) 60%, var(--p2) 100%);
+  position: relative;
+}
+/* marker — P1 leads so it's shifted right of center */
+.tug-marker {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: white; border: 3px solid var(--gold);
+  position: absolute;
+  /* rope is 300px, marker at 40% (P1 slightly ahead) → top: 120px - 12px = 108px */
+  top: 108px; left: 50%; transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(229,192,107,0.6);
+}
+/* win zones at top and bottom of rope */
+.tug-win-zone { font-size: 9px; font-family: var(--font-deco); letter-spacing: 0.1em; text-transform: uppercase; text-align: center; }
+.tug-win-zone.p1 { color: var(--p1); }
+.tug-win-zone.p2 { color: var(--p2); }
+
+/* tap counters */
+.tug-tap-counts {
+  display: flex; justify-content: space-between;
+  padding: 10px 20px; background: var(--navy-deep);
+}
+.tug-count { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.tug-count-label { font-family: var(--font-deco); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; }
+.tug-count-label.p1 { color: var(--p1); }
+.tug-count-label.p2 { color: var(--p2); }
+.tug-count-label.p3 { color: var(--p3); }
+.tug-count-val { font-size: 28px; font-weight: 700; font-family: var(--font-display); line-height: 1; }
+.tug-count-val.p1 { color: var(--p1); }
+.tug-count-val.p2 { color: var(--p2); }
+.tug-count-val.p3 { color: var(--p3); }
+
+/* 3P layout preview */
+.tug-layout-3p { display: flex; height: 280px; border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border); }
+
+/* picker (same style as dots) */
+.picker-wrap { width: 100%; background: var(--card-solid); border-radius: 12px; border: 0.5px solid var(--border); padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.picker-label { font-family: var(--font-deco); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.picker-btns { display: flex; gap: 8px; }
+.picker-btn { flex: 1; padding: 10px; border-radius: 10px; border: 1.5px solid rgba(255,255,255,0.12); background: var(--navy-mid); color: var(--heading); font-size: 13px; font-weight: 600; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.picker-btn.selected { border-color: var(--teal); background: var(--teal-mist); color: var(--teal-light); }
+.picker-btn span { font-size: 10px; color: var(--muted); font-weight: 400; }
+.picker-btn.selected span { color: var(--teal); }
+.picker-btn .picker-duration { display: flex; gap: 6px; margin-top: 6px; }
+.picker-btn .dur-opt { font-size: 10px; padding: 3px 8px; border-radius: 8px; background: rgba(255,255,255,0.07); border: 0.5px solid rgba(255,255,255,0.12); color: var(--muted); }
+.picker-btn .dur-opt.sel { background: var(--teal-mist); border-color: rgba(25,160,168,0.4); color: var(--teal); }
+
+/* annotations */
+.annot-wrap { padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.annot { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--muted); line-height: 1.5; }
+.annot .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 5px; }
+</style>
+</head>
+<body>
+
+<div class="page-title">Tug of War — Game Mock</div>
+<div class="page-sub">2–3 player mash battle. Each player has their own half of the screen. Tap as fast as possible to pull the rope marker to your side. Most taps in the time limit wins.</div>
+
+<!-- card -->
+<div class="section-label">Game card</div>
+<div class="game-grid">
+  <div class="game-card tug">
+    <span class="badge-new">NEW</span>
+    <div class="game-card-icon">🪢</div>
+    <div class="game-card-title">Tug of War</div>
+    <div class="game-card-desc">Mash your side of the screen as fast as possible. Pull the rope to win!</div>
+    <div class="game-card-footer">
+      <span class="pcount"><i class="ti ti-users"></i> 2–3P</span>
+      <div class="play-arrow"><i class="ti ti-player-play-filled"></i></div>
+    </div>
+  </div>
+</div>
+
+<!-- picker -->
+<div class="section-label">Setup screen (player count + duration)</div>
+<div style="padding: 0 20px 16px;">
+  <div class="picker-wrap">
+    <div class="picker-label">How many players?</div>
+    <div class="picker-btns">
+      <div class="picker-btn selected">2P<span>2 players</span></div>
+      <div class="picker-btn">3P<span>3 players</span></div>
+    </div>
+  </div>
+  <div style="margin-top:8px;">
+    <div class="picker-wrap">
+      <div class="picker-label">Duration</div>
+      <div class="picker-btns">
+        <div class="picker-btn selected">10s<span>Quick</span></div>
+        <div class="picker-btn">20s<span>Standard</span></div>
+        <div class="picker-btn">30s<span>Intense</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- game screen 2P -->
+<div class="section-label">Game screen — 2P, 10s countdown, P1 slightly ahead</div>
+<div class="game-screen">
+  <div class="game-screen-header">
+    <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+    <span class="game-screen-title">Tug of War</span>
+    <div class="countdown-badge">7</div>
+  </div>
+
+  <!-- main play area -->
+  <div class="tug-layout">
+    <!-- P1 zone -->
+    <div class="tug-zone p1">
+      <div class="tug-ripple"></div>
+      <div class="tug-zone-label">Player 1</div>
+      <div class="tug-tap-icon">👈</div>
+      <div class="tug-tap-cue">TAP FAST!</div>
+    </div>
+    <!-- rope track in center -->
+    <div class="tug-rope-track">
+      <div class="tug-win-zone p1">← WIN</div>
+      <div class="tug-rope-line">
+        <div class="tug-marker"></div>
+      </div>
+      <div class="tug-win-zone p2">WIN →</div>
+    </div>
+    <!-- P2 zone -->
+    <div class="tug-zone p2">
+      <div class="tug-zone-label">Player 2</div>
+      <div class="tug-tap-icon">👉</div>
+      <div class="tug-tap-cue">TAP FAST!</div>
+    </div>
+  </div>
+
+  <!-- tap counts bar -->
+  <div class="tug-tap-counts">
+    <div class="tug-count">
+      <div class="tug-count-label p1">P1 Taps</div>
+      <div class="tug-count-val p1">47</div>
+    </div>
+    <div class="tug-count">
+      <div class="tug-count-label p2">P2 Taps</div>
+      <div class="tug-count-val p2">39</div>
+    </div>
+  </div>
+</div>
+
+<!-- 3P layout sketch -->
+<div class="section-label">3-player layout (3 equal columns, gold = P3)</div>
+<div style="padding: 0 20px 16px;">
+  <div class="tug-layout-3p">
+    <div class="tug-zone p1" style="border-radius:0; justify-content:center;">
+      <div class="tug-zone-label">P1</div>
+      <div style="font-size:32px;opacity:0.5;">👈</div>
+    </div>
+    <div class="tug-zone p3" style="border-radius:0; justify-content:center; border-left:1px solid rgba(229,192,107,0.2); border-right:1px solid rgba(229,192,107,0.2);">
+      <div class="tug-zone-label" style="color:var(--p3);">P3</div>
+      <div style="font-size:32px;opacity:0.5;">🤲</div>
+    </div>
+    <div class="tug-zone p2" style="border-radius:0; justify-content:center;">
+      <div class="tug-zone-label">P2</div>
+      <div style="font-size:32px;opacity:0.5;">👉</div>
+    </div>
+  </div>
+  <div style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6">3P: each of the 3 columns has its own tap zone. The rope marker moves based on tap-count differential. P3 mashing in the center means both P1 and P2 are pulling against P3 plus each other — last player to reach one end wins.</div>
+</div>
+
+<!-- annotations -->
+<div class="section-label">Design notes</div>
+<div class="annot-wrap">
+  <div class="annot"><div class="dot"></div>Rope marker position = (P1 taps − P2 taps) / total_target. A lead of ~25% pulls marker near the win zone. At 100% lead — all the way to the edge — game ends immediately.</div>
+  <div class="annot"><div class="dot"></div>When time runs out: whoever has the marker on their side wins. If marker is at center = draw (both get a point in a best-of-3 option).</div>
+  <div class="annot"><div class="dot"></div>Each tap plays a small haptic pulse (if browser vibration API is available) — critical for feel on tablet.</div>
+  <div class="annot"><div class="dot"></div>Tap zones are maximally large (full half-screen) — no button to mis-tap. Touch events not click events so rapid mashing registers every contact.</div>
+  <div class="annot"><div class="dot"></div>Accent color for card border-top: #F43F5E (rose-red — distinct from pink #FF5C8A and existing game colors).</div>
+  <div class="annot"><div class="dot"></div>3P logic: marker = weighted centroid of all three tap counts. P3 pulling center zone against both others gives the game interesting dynamics.</div>
+</div>
+
+</body>
+</html>

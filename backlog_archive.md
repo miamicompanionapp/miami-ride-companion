@@ -7,6 +7,37 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #45 — Miami Wordle game  *(DONE 2026-07-01, SW v1.67.0)*
+
+Added a 5-word-per-session Wordle-style game adapted for the ride context. Stripped all "returning user" features (streaks, daily seed, personal best) — every ride is a fresh start.
+
+**Design decisions:**
+- Pool of 20 Miami-themed 5-letter words (GROVE, OCEAN, CORAL, CUBAN, SALSA, CALLE, DORAL, PALMS, ALTON, MANGO, NEONS, PLAZA, HUMID, BONGO, CONGA, VILLA, TAPAS, GLITZ, BEACH, VIBES). Shuffled randomly on each game open.
+- 5 words per session, 6 guesses each. Score: `7 − guessCount` pts for a solve, 0 for failure. Max 30 pts.
+- Each word has a clue in EN/ES/PT/FR (uses `aL()` — picks the active language automatically).
+- Standard Wordle evaluation algorithm (two-pass: greens first, then yellows).
+- "Skip" replaced by `wNextWord()` via the "Next word" button shown after each word result.
+- No localStorage — session score lives in memory only.
+- Card accent color: #F97316 (orange — distinct from all existing games).
+
+**Files touched:** `index.html` (CSS, game card, game screen HTML, GAMES registry, JS ~280 lines), `sw.js` (v1.66.0 → v1.67.0).
+
+Also removed `badge-new` ("NEW") badges from all 7 game cards — passengers are first-time visitors so "NEW" has no meaning.
+
+---
+
+### [X] #54 — BUG: language persists after inactivity reset  *(DONE 2026-06-30, SW v1.66.0)*
+
+When a passenger switched language (ES/PT/FR) and then left the tablet idle, the thanks screen played and the app reset to the home view — but `lang` remained at the passenger's chosen language. The next passenger always saw a non-English UI.
+
+**Fix:** Added `setLang('en')` as the first call in the post-countdown reset callback inside `showThanks()` (`index.html` ~line 7324). This resets the `lang` global, re-applies all `[data-key]` strings, and re-renders guide/weather/driver content in English before `switchTab` and `setFilter` fire.
+
+There is only one reset path — inactivity modal countdown always ends in `showThanks()` — so a single call covers all scenarios.
+
+SW bumped `v1.65.0 → v1.66.0`.
+
+---
+
 ### [~] #42 — Editor publish: auto-increment SW cache version  *(DROPPED 2026-06-30)*
 
 Won't build. The daily GitHub Actions refresh already bumps the SW version every morning, so any manual editor publish is live within 24 hours anyway. The complexity of a two-file GitHub API commit isn't justified by the marginal benefit.

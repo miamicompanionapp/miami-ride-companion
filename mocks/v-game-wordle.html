@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock — Miami Wordle Game Screen</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Marcellus&family=Poiret+One&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy-deep: #0C1A2E;
+  --navy-mid:  #15294A;
+  --card-solid:#16294A;
+  --teal:      #19A0A8;
+  --teal-light:#37C7CE;
+  --teal-mist: rgba(25,160,168,0.14);
+  --teal-border:rgba(25,160,168,0.34);
+  --gold:      #E5C06B;
+  --gold-border:rgba(229,192,107,0.30);
+  --pink:      #FF5C8A;
+  --bg:        #0C1A2E;
+  --card:      rgba(20,40,66,0.72);
+  --border:    rgba(229,192,107,0.18);
+  --muted:     #9DB4C6;
+  --body:      #CBDAE6;
+  --heading:   #EAF1F6;
+  --font-body: 'DM Sans', sans-serif;
+  --font-display:'Marcellus', serif;
+  --font-deco: 'Poiret One', sans-serif;
+}
+html, body { background: var(--bg); font-family: var(--font-body); color: #fff; min-height: 100vh; }
+
+/* ── Layout shell ── */
+.page-wrap { display: flex; flex-direction: column; min-height: 100vh; }
+.section-label {
+  font-family: var(--font-deco); font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--muted); padding: 24px 20px 8px;
+}
+
+/* ── Game card (grid preview) ── */
+.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 9px; padding: 0 20px 24px; }
+.game-card {
+  background: var(--card); border-radius: 11px;
+  border: 0.5px solid var(--border); padding: 11px 12px;
+  display: flex; flex-direction: column; position: relative;
+}
+.game-card.wordle { border-top: 3px solid #F97316; }
+.game-card-icon { font-size: 24px; margin-bottom: 5px; }
+.game-card-title { font-size: 12px; font-weight: 600; color: var(--heading); margin-bottom: 2px; }
+.game-card-desc { font-size: 10px; color: var(--muted); line-height: 1.45; flex: 1; }
+.game-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 7px; }
+.pcount { display: inline-flex; align-items: center; gap: 4px; background: rgba(157,180,198,0.12); color: #9DB4C6; border: 0.5px solid rgba(157,180,198,0.26); padding: 3px 8px; border-radius: 14px; font-size: 9px; font-weight: 700; }
+.play-arrow { width: 22px; height: 22px; background: var(--teal-mist); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.play-arrow i { font-size: 12px; color: var(--teal); }
+.badge-new { position: absolute; top: 9px; right: 9px; background: var(--gold); color: white; font-size: 8px; font-weight: 700; padding: 2px 7px; border-radius: 10px; letter-spacing: 0.05em; }
+
+/* ── Game screen ── */
+.game-screen {
+  display: flex; flex-direction: column;
+  background: var(--bg); flex: 1;
+}
+.game-screen-header {
+  background: var(--navy-deep); padding: 12px 20px;
+  display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+}
+.game-back-btn {
+  background: rgba(255,255,255,0.1); border: none; border-radius: 8px;
+  width: 34px; height: 34px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; color: white;
+}
+.game-back-btn i { font-size: 16px; }
+.game-screen-title { font-family: var(--font-display); font-size: 18px; color: white; font-weight: 500; flex: 1; }
+.game-score-badge {
+  background: rgba(255,255,255,0.1); border-radius: 20px;
+  padding: 5px 14px; font-size: 12px; font-weight: 600; color: white;
+}
+.game-body { flex: 1; overflow-y: auto; padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+
+/* ── Wordle clue banner ── */
+.wordle-clue {
+  width: 100%; background: var(--card-solid);
+  border: 0.5px solid var(--border); border-radius: 12px;
+  padding: 12px 16px; text-align: center;
+}
+.wordle-clue-label { font-family: var(--font-deco); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.wordle-clue-text { font-size: 14px; font-weight: 500; color: var(--heading); line-height: 1.4; }
+
+/* ── Guess grid ── */
+.wordle-grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 6px;
+}
+.wordle-row { display: flex; gap: 6px; }
+.wordle-cell {
+  width: 52px; height: 52px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  background: var(--card-solid);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 700; color: var(--heading);
+  font-family: var(--font-body);
+  letter-spacing: 0;
+}
+/* tile states */
+.wordle-cell.correct  { background: #19856A; border-color: #1DAF8C; color: #fff; }
+.wordle-cell.present  { background: #8A6A10; border-color: #C49A18; color: #fff; }
+.wordle-cell.absent   { background: #1E334D; border-color: rgba(255,255,255,0.10); color: #6A8399; }
+.wordle-cell.active   { border-color: var(--teal); }
+.wordle-cell.filled   { border-color: rgba(255,255,255,0.38); }
+
+/* ── Keyboard ── */
+.wordle-kbd { display: flex; flex-direction: column; gap: 6px; align-items: center; width: 100%; }
+.wordle-kbd-row { display: flex; gap: 5px; }
+.wordle-key {
+  min-width: 32px; height: 42px; border-radius: 7px;
+  background: #1E3350; border: 0.5px solid rgba(255,255,255,0.13);
+  color: var(--heading); font-size: 12px; font-weight: 600;
+  font-family: var(--font-body); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 4px;
+}
+.wordle-key.wide { min-width: 48px; font-size: 10px; }
+.wordle-key.correct { background: #19856A; border-color: #1DAF8C; color: #fff; }
+.wordle-key.present { background: #8A6A10; border-color: #C49A18; color: #fff; }
+.wordle-key.absent  { background: #0F1E30; border-color: rgba(255,255,255,0.07); color: #4A6278; }
+
+/* ── Daily streak chip ── */
+.streak-row { display: flex; gap: 10px; justify-content: center; }
+.streak-chip {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--card-solid); border: 0.5px solid var(--border);
+  border-radius: 20px; padding: 5px 12px; font-size: 11px; color: var(--muted);
+}
+.streak-chip strong { color: var(--gold); }
+
+/* ── Section divider ── */
+.divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 8px 0; width: 100%; }
+
+/* ── Annotations ── */
+.annot-wrap { padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.annot { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--muted); line-height: 1.5; }
+.annot .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 5px; }
+.page-title { font-family: var(--font-display); font-size: 20px; color: var(--gold); padding: 20px 20px 4px; }
+.page-sub { font-size: 12px; color: var(--muted); padding: 0 20px 20px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<div class="page-title">Miami Wordle — Game Mock</div>
+<div class="page-sub">Solo guessing game. 6 attempts to guess the hidden 5-letter Miami word. Color tiles reveal match quality.</div>
+
+<!-- ── Game card preview ── -->
+<div class="section-label">Game card (in the grid)</div>
+<div class="game-grid">
+  <div class="game-card wordle">
+    <span class="badge-new">NEW</span>
+    <div class="game-card-icon">🌴</div>
+    <div class="game-card-title">Miami Wordle</div>
+    <div class="game-card-desc">Guess the hidden Miami word in 6 tries. New puzzle every day.</div>
+    <div class="game-card-footer">
+      <span class="pcount"><i class="ti ti-user"></i> 1P</span>
+      <div class="play-arrow"><i class="ti ti-player-play-filled"></i></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Game screen ── -->
+<div class="section-label">Game screen — mid-game (guess 3 of 6)</div>
+<div class="game-screen">
+  <div class="game-screen-header">
+    <button class="game-back-btn"><i class="ti ti-arrow-left"></i></button>
+    <span class="game-screen-title">Miami Wordle</span>
+    <div class="game-score-badge">Day 182</div>
+  </div>
+
+  <div class="game-body">
+
+    <!-- streak -->
+    <div class="streak-row">
+      <div class="streak-chip">🔥 Streak <strong>4</strong></div>
+      <div class="streak-chip">Best <strong>3/6</strong></div>
+    </div>
+
+    <!-- clue banner -->
+    <div class="wordle-clue">
+      <div class="wordle-clue-label">Today's clue</div>
+      <div class="wordle-clue-text">A famous bayside entertainment complex with shops, restaurants &amp; live music.</div>
+    </div>
+
+    <!-- answer: BAYSIDE (truncate to 7 letters? Actually backlog says 5-letter. Let's do GROVE for Coconut Grove) -->
+    <!-- answer: GROVE — 5 letters -->
+    <div class="wordle-grid">
+      <!-- row 1: CORAL — absent O, correct R? no. Let's do BEACH — B absent, E absent, A present, C absent, H absent -->
+      <div class="wordle-row">
+        <div class="wordle-cell absent">B</div>
+        <div class="wordle-cell absent">E</div>
+        <div class="wordle-cell present">A</div>
+        <div class="wordle-cell absent">C</div>
+        <div class="wordle-cell absent">H</div>
+      </div>
+      <!-- row 2: GROAN — G correct, R correct, O absent, A present, N absent -->
+      <div class="wordle-row">
+        <div class="wordle-cell correct">G</div>
+        <div class="wordle-cell correct">R</div>
+        <div class="wordle-cell absent">O</div>
+        <div class="wordle-cell present">A</div>
+        <div class="wordle-cell absent">N</div>
+      </div>
+      <!-- row 3 active — typed GR so far -->
+      <div class="wordle-row">
+        <div class="wordle-cell filled">G</div>
+        <div class="wordle-cell filled">R</div>
+        <div class="wordle-cell active"></div>
+        <div class="wordle-cell"></div>
+        <div class="wordle-cell"></div>
+      </div>
+      <!-- rows 4-6 empty -->
+      <div class="wordle-row">
+        <div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div>
+      </div>
+      <div class="wordle-row">
+        <div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div>
+      </div>
+      <div class="wordle-row">
+        <div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div><div class="wordle-cell"></div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- keyboard -->
+    <div class="wordle-kbd">
+      <div class="wordle-kbd-row">
+        <div class="wordle-key absent">Q</div>
+        <div class="wordle-key absent">W</div>
+        <div class="wordle-key absent">E</div>
+        <div class="wordle-key correct">R</div>
+        <div class="wordle-key">T</div>
+        <div class="wordle-key">Y</div>
+        <div class="wordle-key">U</div>
+        <div class="wordle-key">I</div>
+        <div class="wordle-key absent">O</div>
+        <div class="wordle-key">P</div>
+      </div>
+      <div class="wordle-kbd-row">
+        <div class="wordle-key">A</div>
+        <div class="wordle-key">S</div>
+        <div class="wordle-key">D</div>
+        <div class="wordle-key">F</div>
+        <div class="wordle-key correct">G</div>
+        <div class="wordle-key absent">H</div>
+        <div class="wordle-key">J</div>
+        <div class="wordle-key">K</div>
+        <div class="wordle-key">L</div>
+      </div>
+      <div class="wordle-kbd-row">
+        <div class="wordle-key wide">↵ Enter</div>
+        <div class="wordle-key">Z</div>
+        <div class="wordle-key">X</div>
+        <div class="wordle-key absent">C</div>
+        <div class="wordle-key">V</div>
+        <div class="wordle-key absent">B</div>
+        <div class="wordle-key absent">N</div>
+        <div class="wordle-key">M</div>
+        <div class="wordle-key wide">⌫ Del</div>
+      </div>
+    </div>
+
+  </div><!-- /game-body -->
+</div><!-- /game-screen -->
+
+<!-- ── Design notes ── -->
+<div class="section-label">Design notes</div>
+<div class="annot-wrap">
+  <div class="annot"><div class="dot"></div>Word list: Miami proper nouns + slang (GROVE, DORAL, WYNWD, BORAL, LUMMUS, etc.) — 5-letter answers only; clue is in the active language but answer stays English.</div>
+  <div class="annot"><div class="dot"></div>Color legend: <strong style="color:#1DAF8C">green</strong> = correct position · <strong style="color:#C49A18">gold</strong> = right letter wrong spot · <strong style="color:#4A6278">grey</strong> = not in word.</div>
+  <div class="annot"><div class="dot"></div>One puzzle per day (date-seeded index into word list). "Day 182" counter replaces a calendar.</div>
+  <div class="annot"><div class="dot"></div>Streak + personal best stored in localStorage, shown in header chips.</div>
+  <div class="annot"><div class="dot"></div>Accent color for border-top: #F97316 (warm orange — distinct from all existing game cards).</div>
+</div>
+
+</div>
+</body>
+</html>
