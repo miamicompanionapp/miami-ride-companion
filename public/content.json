@@ -1,13 +1,13 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-01T14:26:50.463Z",
+    "lastUpdated": "2026-07-02T13:50:40.777Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-07-01T14:26:50.463Z",
+    "fetchedAt": "2026-07-02T13:50:40.777Z",
     "current": {
-      "temp_f": 88,
+      "temp_f": 84,
       "feels_f": 97,
       "description": {
         "en": "Current conditions",
@@ -15,31 +15,31 @@
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 62,
-      "wind_mph": 5,
-      "rain_chance": 31,
-      "weathercode": 0
+      "humidity": 90,
+      "wind_mph": 3,
+      "rain_chance": 42,
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-07-01",
-        "high_f": 91,
+        "date": "2026-07-02",
+        "high_f": 84,
         "low_f": 77,
-        "weathercode": 53,
-        "rain_chance": 31,
+        "weathercode": 95,
+        "rain_chance": 42,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
         }
       },
       {
-        "date": "2026-07-02",
-        "high_f": 88,
-        "low_f": 75,
-        "weathercode": 82,
-        "rain_chance": 29,
+        "date": "2026-07-03",
+        "high_f": 89,
+        "low_f": 76,
+        "weathercode": 80,
+        "rain_chance": 18,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -48,24 +48,11 @@
         }
       },
       {
-        "date": "2026-07-03",
-        "high_f": 89,
-        "low_f": 77,
-        "weathercode": 96,
-        "rain_chance": 44,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-07-04",
-        "high_f": 88,
-        "low_f": 83,
+        "high_f": 89,
+        "low_f": 79,
         "weathercode": 96,
-        "rain_chance": 39,
+        "rain_chance": 41,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -75,10 +62,23 @@
       },
       {
         "date": "2026-07-05",
+        "high_f": 89,
+        "low_f": 84,
+        "weathercode": 95,
+        "rain_chance": 36,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-07-06",
         "high_f": 88,
-        "low_f": 83,
+        "low_f": 84,
         "weathercode": 96,
-        "rain_chance": 31,
+        "rain_chance": 27,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -89,148 +89,148 @@
     ],
     "hourly": [
       {
+        "hour": "09:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 17
+      },
+      {
         "hour": "10:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "11:00",
-        "temp_f": 90,
-        "weathercode": 2,
-        "rain_chance": 2
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "12:00",
-        "temp_f": 91,
-        "weathercode": 1,
-        "rain_chance": 5
+        "temp_f": 77,
+        "weathercode": 95,
+        "rain_chance": 13
       },
       {
         "hour": "13:00",
-        "temp_f": 91,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 77,
+        "weathercode": 95,
+        "rain_chance": 16
       },
       {
         "hour": "14:00",
-        "temp_f": 90,
-        "weathercode": 3,
-        "rain_chance": 12
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 80,
-        "weathercode": 3,
+        "temp_f": 78,
+        "weathercode": 95,
         "rain_chance": 19
       },
       {
+        "hour": "15:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
         "hour": "16:00",
-        "temp_f": 85,
-        "weathercode": 53,
-        "rain_chance": 29
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 18
       },
       {
         "hour": "17:00",
-        "temp_f": 82,
+        "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 28
+        "rain_chance": 18
       },
       {
         "hour": "18:00",
-        "temp_f": 79,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 30
+        "rain_chance": 20
       },
       {
         "hour": "19:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 31
+        "rain_chance": 21
       },
       {
         "hour": "20:00",
         "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 24
+        "rain_chance": 18
       },
       {
         "hour": "21:00",
-        "temp_f": 79,
+        "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 14
       },
       {
         "hour": "22:00",
-        "temp_f": 78,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 16
       },
       {
         "hour": "23:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 11
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 14
       },
       {
         "hour": "00:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 13
       },
       {
         "hour": "01:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 11
       },
       {
         "hour": "02:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 77,
+        "weathercode": 80,
+        "rain_chance": 10
       },
       {
         "hour": "03:00",
         "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 8
       },
       {
         "hour": "04:00",
-        "temp_f": 75,
+        "temp_f": 76,
+        "weathercode": 1,
+        "rain_chance": 4
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 76,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 6
       },
       {
-        "hour": "05:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 7
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
         "hour": "07:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 3
       },
       {
         "hour": "08:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
-        "hour": "09:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 80,
+        "weathercode": 1,
+        "rain_chance": 4
       }
     ]
   },
@@ -1392,31 +1392,6 @@
     ],
     "events": [
       {
-        "id": "manual_shakira_20260701",
-        "title": {
-          "en": "Shakira – Las Mujeres Ya No Lloran World Tour (Night 1)",
-          "es": "Shakira – Las Mujeres Ya No Lloran World Tour (Noche 1)",
-          "pt": "Shakira – Las Mujeres Ya No Lloran World Tour (Noite 1)",
-          "fr": "Shakira – Las Mujeres Ya No Lloran World Tour (Soirée 1)"
-        },
-        "date": "2026-07-01",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, Florida, 33132",
-        "url": "https://www.ticketmaster.com/shakira-las-mujeres-ya-no-lloran-miami-florida-07-01-2026/event/0D006471AADBA8DC",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3ef/9655451f-d91d-4e8d-af0d-35a3267113ef_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Shakira brings her record-breaking Las Mujeres Ya No Lloran World Tour to Miami for two nights at Kaseya Center. Starts 7:30 PM.",
-          "es": "Shakira trae su gira mundial Las Mujeres Ya No Lloran a Miami por dos noches en el Kaseya Center. Empieza a las 7:30 PM.",
-          "pt": "Shakira traz sua turnê mundial Las Mujeres Ya No Lloran para Miami por duas noites no Kaseya Center. Começa às 19h30.",
-          "fr": "Shakira apporte sa tournée mondiale Las Mujeres Ya No Lloran à Miami pour deux soirées au Kaseya Center. Début à 19h30."
-        },
-        "lat": 25.7814,
-        "lng": -80.187,
-        "category": "music"
-      },
-      {
         "id": "manual_shakira_20260702",
         "title": {
           "en": "Shakira – Las Mujeres Ya No Lloran World Tour (Night 2)",
@@ -1586,81 +1561,6 @@
           "fr": "Le restaurant d'inspiration méditerranéenne-italienne accueillera son événement Rouge, Blanc et Floraison"
         },
         "category": "food-drink"
-      },
-      {
-        "id": "tm_1782352258062_6p02",
-        "title": {
-          "en": "Joe Jackson + Band - Hope and Fury Tour 2026",
-          "es": "Joe Jackson + Band - Hope and Fury Tour 2026",
-          "pt": "Joe Jackson + Band - Hope and Fury Tour 2026",
-          "fr": "Joe Jackson + Band - Hope and Fury Tour 2026"
-        },
-        "date": "2026-07-01",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjoe-jackson-band-hope-and-fury-ft-lauderdale-florida-07-01-2026%2Fevent%2F0D00636D9CF18607&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/5fb/488397da-45e8-4642-ada9-1c79f252e5fb_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Joe Jackson, born in 1954 in Burton-on-Trent, England, is a genre-defying musician known for his sharp songwriting and stylistic versatility. He rose to fame with 1979's Look Sharp! and its hit \"Is She Really Going Out With Him?\", blending punk, pop, and reggae. Jackson's career spans swing (Jumpin' Jive), Latin jazz (Night and Day), and orchestral composition, earning a Grammy for Symphony No. 1.",
-          "es": "Joe Jackson, nacido en 1954 en Burton-on-Trent, Inglaterra, es un músico versátil conocido por su aguda composición y versatilidad estilística. Saltó a la fama con Look Sharp! en 1979 y su éxito \"Is She Really Going Out With Him?\", combinando punk, pop y reggae. La carrera de Jackson abarca swing (Jumpin' Jive), jazz latino (Night and Day) y composición orquestal, ganando un Grammy por Symphony No. 1.",
-          "pt": "Joe Jackson, nascido em 1954 em Burton-on-Trent, Inglaterra, é um músico versátil conhecido por sua composição perspicaz e versatilidade estilística. Alcançou a fama com Look Sharp! em 1979 e seu sucesso \"Is She Really Going Out With Him?\", combinando punk, pop e reggae. A carreira de Jackson abrange swing (Jumpin' Jive), jazz latino (Night and Day) e composição orquestral, ganhando um Grammy por Symphony No. 1.",
-          "fr": "Joe Jackson, né en 1954 à Burton-on-Trent, en Angleterre, est un musicien polyvalent connu pour son écriture acérée et sa versatilité stylistique. Il a accédé à la célébrité avec Look Sharp! en 1979 et son succès \"Is She Really Going Out With Him?\", mélangeant punk, pop et reggae. La carrière de Jackson couvre le swing (Jumpin' Jive), le jazz latino (Night and Day) et la composition orchestrale, remportant un Grammy pour Symphony No. 1."
-        },
-        "lat": 26.134246,
-        "lng": -80.136172,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782352258062_e871",
-        "title": {
-          "en": "RATONES PARANOICOS - Edición Mundial",
-          "es": "RATONES PARANOICOS - Edición Mundial",
-          "pt": "RATONES PARANOICOS - Edição Mundial",
-          "fr": "RATONES PARANOICOS - Édition Mondiale"
-        },
-        "date": "2026-07-01",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fratones-paranoicos-edicion-mundial-hollywood-florida-07-01-2026%2Fevent%2F0D006479C5CFBCCC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/be1/b9e060ea-a9d4-4c29-8b92-54be99169be1_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Latino · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · Latino · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · Latino · Débute 20:00 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782352258062_c1zo",
-        "title": {
-          "en": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR",
-          "es": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR",
-          "pt": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR",
-          "fr": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR"
-        },
-        "date": "2026-07-01",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fshakira-las-mujeres-ya-no-lloran-miami-florida-07-01-2026%2Fevent%2F0D006471AADBA8DC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3ef/9655451f-d91d-4e8d-af0d-35a3267113ef_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:30 · Kaseya Center",
-          "es": "Música · Pop · Comienza 20:30 · Kaseya Center",
-          "pt": "Música · Pop · Começa 20:30 · Kaseya Center",
-          "fr": "Musique · Pop · Commence 20:30 · Kaseya Center"
-        },
-        "lat": 25.781232,
-        "lng": -80.187805,
-        "category": "music"
       },
       {
         "id": "tm_1782352258062_do8m",
@@ -2853,56 +2753,6 @@
         "category": "music"
       },
       {
-        "id": "tm_1782828610941_pkcx",
-        "title": {
-          "en": "School Of Rock: Ya Edition: A Summer Theater Camp Production",
-          "es": "School Of Rock: Ya Edition: Una Producción de Campamento de Teatro de Verano",
-          "pt": "School Of Rock: Ya Edition: Uma Produção de Acampamento de Teatro de Verão",
-          "fr": "School Of Rock: Ya Edition: Une Production de Camp de Théâtre d'Été"
-        },
-        "date": "2026-07-01",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fschool-of-rock-ya-edition-a-ft-lauderdale-florida-07-01-2026%2Fevent%2F0D0064C1D9C2E151&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/38f/a3101cd8-58e6-4a2e-aa98-b889e704738f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Rock got no reason, rock got no rhyme... You better get me to school on time! Andrew Lloyd Webber's School of Rock: Young Actors Edition follows Dewey Finn, a failed, wannabe rock star who decides to earn an extra bit of cash by posing as a substitute teacher at a prestigious prep school. There he turns a class of straight-A pupils into a guitar-shredding, bass-slapping, mind-blowing rock band. Bu",
-          "es": "¡El rock no tiene razón, el rock no tiene rima! La School of Rock: Young Actors Edition de Andrew Lloyd Webber sigue a Dewey Finn, una estrella de rock fracasada que decide ganar dinero extra haciéndose pasar por un maestro sustituto en una escuela preparatoria prestigiosa. Allí transforma a una clase de estudiantes con calificaciones perfectas en una banda de rock que toca guitarra, bajo y música que vuela la mente.",
-          "pt": "O rock não tem razão, o rock não tem rima... Você é melhor me levar para a escola no horário! A School of Rock: Young Actors Edition de Andrew Lloyd Webber segue Dewey Finn, uma estrela de rock fracassada que decide ganhar dinheiro extra fingindo ser um professor substituto em uma escola preparatória prestigiosa. Lá ele transforma uma classe de alunos com notas altas em uma banda de rock que toca guitarra, baixo e música impressionante.",
-          "fr": "Le rock n'a pas de raison, le rock n'a pas de rime... Tu ferais mieux de m'amener à l'école à l'heure ! La School of Rock: Young Actors Edition d'Andrew Lloyd Webber suit Dewey Finn, une star du rock ratée qui décide de gagner un peu d'argent supplémentaire en se faisant passer pour un professeur suppléant dans une école préparatoire prestigieuse. Là, il transforme une classe d'élèves avec des notes parfaites en un groupe de rock qui joue de la guitare, de la basse et de la musique époustouflante."
-        },
-        "lat": 26.1193,
-        "lng": -80.149426,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1782828610941_ce8n",
-        "title": {
-          "en": "World Cup Watch Party - USA vs Bosnia-Herzegovina",
-          "es": "Fiesta de Ver la Copa Mundial - USA vs Bosnia-Herzegovina",
-          "pt": "Festa de Assistir à Copa do Mundo - USA vs Bósnia-Herzegovina",
-          "fr": "Fête de Visionnage de la Coupe du Monde - USA vs Bosnie-Herzégovine"
-        },
-        "date": "2026-07-01",
-        "venue": "Miramar Regional Park Amphitheater",
-        "address": "16805 Miramar Parkway, Miramar, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fworld-cup-watch-party-usa-vs-miramar-florida-07-01-2026%2Fevent%2F0D0064DD896838BD&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/2e4/ab317b8c-ff20-4f7a-a0f0-84af7dece2e4_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Experience the excitement under the iconic roof! Join fans from around the world for a high-energy day of soccer, community, and celebration. Watch the match live on the giant screen as the sun sets over Miramar. Bring your flags, your friends, and your passion as we watch the world's beautiful game. · Starts 20:00 · Miramar Regional Park Amphitheater",
-          "es": "¡Vive la emoción bajo el techo icónico! Únete a aficionados de todo el mundo para un día de fútbol de alta energía, comunidad y celebración. Mira el partido en vivo en la pantalla gigante mientras el sol se pone sobre Miramar. Trae tus banderas, tus amigos y tu pasión mientras vemos el hermoso juego del mundo. · Comienza a las 20:00 · Anfiteatro del Parque Regional de Miramar",
-          "pt": "Experimente a emoção sob o teto icônico! Junte-se a fãs de todo o mundo para um dia de futebol de alta energia, comunidade e celebração. Assista à partida ao vivo na tela gigante enquanto o sol se põe sobre Miramar. Traga suas bandeiras, seus amigos e sua paixão enquanto assistimos ao lindo jogo do mundo. · Começa às 20:00 · Anfiteatro do Parque Regional de Miramar",
-          "fr": "Vivez l'excitation sous le toit emblématique ! Rejoignez des fans du monde entier pour une journée de football haute en énergie, de communauté et de célébration. Regardez le match en direct sur l'écran géant alors que le soleil se couche sur Miramar. Apportez vos drapeaux, vos amis et votre passion alors que nous regardons le beau jeu du monde. · Commence à 20:00 · Amphithéâtre du Parc Régional de Miramar"
-        },
-        "lat": 25.98589,
-        "lng": -80.37224,
-        "category": "sports"
-      },
-      {
         "id": "tm_1782828610941_c2gc",
         "title": {
           "en": "Shrek Jr.: A Summer Theater Camp Production",
@@ -2999,31 +2849,6 @@
         "category": "music"
       },
       {
-        "id": "tm_1782915984921_el9y",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-07-01",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 11:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 11:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Débute 11:00 · Centre de Conventions Mana Wynwood"
-        },
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1782915984921_fc9t",
         "title": {
           "en": "Ariana Grande - The Eternal Sunshine Tour",
@@ -3047,6 +2872,156 @@
         "lat": 26.155362,
         "lng": -80.33023,
         "category": "music"
+      },
+      {
+        "id": "tm_1783000207901_ipyv",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-07-02",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Varios · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1783000207901_uffz",
+        "title": {
+          "en": "SHAKIRA - LAS MUJERES YA NO LLORAN WORLD TOUR",
+          "es": "SHAKIRA - LAS MUJERES YA NO LLORAN GIRA MUNDIAL",
+          "pt": "SHAKIRA - AS MULHERES JÁ NÃO CHORAM TURNÊ MUNDIAL",
+          "fr": "SHAKIRA - LES FEMMES NE PLEURENT PLUS TOURNÉE MONDIALE"
+        },
+        "date": "2026-07-02",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fshakira-las-mujeres-ya-no-lloran-miami-florida-07-02-2026%2Fevent%2F0D00647790676966&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/3ef/9655451f-d91d-4e8d-af0d-35a3267113ef_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 20:30 · Kaseya Center",
+          "es": "Música · Pop · Comienza 20:30 · Kaseya Center",
+          "pt": "Música · Pop · Começa 20:30 · Kaseya Center",
+          "fr": "Musique · Pop · Commence 20:30 · Kaseya Center"
+        },
+        "lat": 25.781232,
+        "lng": -80.187805,
+        "category": "music"
+      },
+      {
+        "id": "tm_1783000207901_5sxt",
+        "title": {
+          "en": "La Casa De La Sele: Colombia Official Fan Zone",
+          "es": "La Casa De La Sele: Zona Oficial de Aficionados de Colombia",
+          "pt": "La Casa De La Sele: Zona Oficial de Torcedores da Colômbia",
+          "fr": "La Casa De La Sele: Zone Officielle des Supporters de la Colombie"
+        },
+        "date": "2026-07-03",
+        "venue": "Doral Amphitheater at Doral Central Park",
+        "address": "3005 NW 92nd Avenue, Doral, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fla-casa-de-la-sele-colombia-doral-florida-07-03-2026%2Fevent%2F0D0064DEA4FE51ED&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/a5e/b431a932-01a8-46b1-bbda-40f9c78c9a5e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "¡ATENCIÓN MIAMI! ¡EL Fan Zone Oficial de la Federación Colombiana de Fútbol sigue en Miami y ya abrió boletería! Colombia vs Ghana Transmisión oficial Argentina vs Cabo Verde VIP Cumbia House by Carlos Vives Special Guest Encuentro con tus leyendas de la Sele Food trucks y gastronomía colombiana Premios, activaciones y experiencias exclusivas Música en vivo + DJ ¡Compra tus entradas AHORA antes de",
+          "es": "¡ATENCIÓN MIAMI! ¡La Zona Oficial de Aficionados de la Federación Colombiana de Fútbol continúa en Miami y ya abrió boletería! Colombia vs Ghana Transmisión oficial Argentina vs Cabo Verde VIP Cumbia House by Carlos Vives Artista Especial Encuentro con tus leyendas de la Sele Food trucks y gastronomía colombiana Premios, activaciones y experiencias exclusivas Música en vivo + DJ ¡Compra tus entradas AHORA antes de",
+          "pt": "¡ATENÇÃO MIAMI! A Zona Oficial de Torcedores da Federação Colombiana de Futebol continua em Miami e já abriu a venda de ingressos! Colômbia vs Gana Transmissão oficial Argentina vs Cabo Verde VIP Cumbia House by Carlos Vives Artista Especial Encontro com suas lendas da Sele Food trucks e gastronomia colombiana Prêmios, ativações e experiências exclusivas Música ao vivo + DJ Compre seus ingressos AGORA antes de",
+          "fr": "¡ATTENTION MIAMI! La Zone Officielle des Supporters de la Fédération Colombienne de Football continue à Miami et a ouvert la vente de billets ! Colombie vs Ghana Diffusion officielle Argentine vs Cap-Vert VIP Cumbia House by Carlos Vives Artiste Spécial Rencontre avec vos légendes de la Sele Food trucks et gastronomie colombienne Prix, activations et expériences exclusives Musique en direct + DJ Achetez vos billets MAINTENANT avant"
+        },
+        "lat": 25.8023,
+        "lng": -80.34397,
+        "category": "music"
+      },
+      {
+        "id": "tm_1783000207901_p580",
+        "title": {
+          "en": "World Cup Round of 32: Argentina vs. Cape Verde (Match 86)",
+          "es": "Copa Mundial Octavos de Final: Argentina vs. Cabo Verde (Partido 86)",
+          "pt": "Copa do Mundo Oitavas de Final: Argentina vs. Cabo Verde (Jogo 86)",
+          "fr": "Coupe du Monde Huitièmes de Finale: Argentine vs. Cap-Vert (Match 86)"
+        },
+        "date": "2026-07-03",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7434P&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/9d4/101abbaa-1635-4f78-a6a7-ef820ced19d4_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Soccer · Starts 18:00 · Hard Rock Stadium",
+          "es": "Deportes · Fútbol · Comienza 18:00 · Hard Rock Stadium",
+          "pt": "Esportes · Futebol · Começa 18:00 · Hard Rock Stadium",
+          "fr": "Sports · Football · Commence 18:00 · Hard Rock Stadium"
+        },
+        "lat": 25.9489,
+        "lng": -80.245697,
+        "category": "sports"
+      },
+      {
+        "id": "tm_1783000207901_t60x",
+        "title": {
+          "en": "World Cup Watch Party",
+          "es": "Transmisión en Vivo de la Copa Mundial",
+          "pt": "Transmissão ao Vivo da Copa do Mundo",
+          "fr": "Diffusion en Direct de la Coupe du Monde"
+        },
+        "date": "2026-07-03",
+        "venue": "Miramar Regional Park Amphitheater",
+        "address": "16805 Miramar Parkway, Miramar, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fworld-cup-watch-party-miramar-florida-07-03-2026%2Fevent%2F0D0064DD899338EE&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/07d/9a707668-0a66-4aa5-97cf-81823dfdf07d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Experience the excitement under the iconic roof! Join fans from around the world for a high-energy day of soccer, community, and celebration. Watch the match live on the giant screen as the sun sets over Miramar. Bring your flags, your friends, and your passion as we watch the world's beautiful game. · Starts 18:00 · Miramar Regional Park Amphitheater",
+          "es": "¡Vive la emoción bajo el icónico techo! Únete a aficionados de todo el mundo para un día lleno de energía con fútbol, comunidad y celebración. Mira el partido en directo en la pantalla gigante mientras el sol se pone sobre Miramar. Trae tus banderas, tus amigos y tu pasión mientras vemos el hermoso juego del mundo. · Comienza 18:00 · Anfiteatro del Parque Regional de Miramar",
+          "pt": "Viva a emoção sob o icônico teto! Junte-se a torcedores de todo o mundo para um dia cheio de energia com futebol, comunidade e celebração. Assista à partida ao vivo na tela gigante enquanto o sol se põe sobre Miramar. Traga suas bandeiras, seus amigos e sua paixão enquanto assistimos ao belo jogo do mundo. · Começa 18:00 · Anfiteatro do Parque Regional de Miramar",
+          "fr": "Vivez l'excitation sous le toit emblématique ! Rejoignez les fans du monde entier pour une journée remplie d'énergie avec du football, de la communauté et de la célébration. Regardez le match en direct sur l'écran géant tandis que le soleil se couche sur Miramar. Apportez vos drapeaux, vos amis et votre passion alors que nous regardons le beau jeu du monde. · Commence 18:00 · Amphithéâtre du Parc Régional de Miramar"
+        },
+        "lat": 25.98589,
+        "lng": -80.37224,
+        "category": "sports"
+      },
+      {
+        "id": "tm_1783000207901_gcst",
+        "title": {
+          "en": "DeathMatch - Competitive Improv Show",
+          "es": "DeathMatch - Show de Improvisación Competitiva",
+          "pt": "DeathMatch - Show de Improvisação Competitiva",
+          "fr": "DeathMatch - Spectacle d'Improvisation Compétitive"
+        },
+        "date": "2026-07-03",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdeathmatch-competitive-improv-just-the-funny-tickets%2F14897643&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "DeathMatch - Short-Form Improv Comedy in MiamiTwo teams enter - one team wins! Two teams of improvisors complete in an all out comedy brawl performing fast-paced improv games completing for your laughs. Who wins? You decide!This show features members of our award-winning JTF cast and invited alums and improv celebrity performers.Tickets are PER PERSON for this show. We will seat parties together i",
+          "es": "DeathMatch - Comedia de Improvisación de Forma Corta en MiamiDos equipos entran - ¡un equipo gana! Dos equipos de improvisadores compiten en una batalla de comedia total realizando juegos de improvisación de ritmo rápido compitiendo por tus risas. ¿Quién gana? ¡Tú decides! Este espectáculo presenta miembros de nuestro elenco galardonado de JTF y artistas invitados de comedia improvisada de renombre.",
+          "pt": "DeathMatch - Comédia de Improvisação de Forma Curta em MiamiDois times entram - um time vence! Dois times de improvisadores competem em uma batalha de comédia total realizando jogos de improvisação em ritmo acelerado competindo pelas suas risadas. Quem vence? Você decide! Este show apresenta membros do nosso elenco premiado da JTF e artistas convidados de celebridades da improvisação.",
+          "fr": "DeathMatch - Comédie d'Improvisation de Forme Courte à MiamiDeux équipes entrent - une équipe gagne! Deux équipes d'improvisateurs s'affrontent dans une bataille comique totale en jouant à des jeux d'improvisation au rythme rapide pour votre divertissement. Qui gagne? Vous décidez! Ce spectacle présente des membres de notre distribution JTF primée et des artistes célèbres invités de l'improvisation."
+        },
+        "lat": 25.750417,
+        "lng": -80.244412,
+        "category": "comedy"
       }
     ]
   },
