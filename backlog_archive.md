@@ -7,6 +7,16 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] BUG: stale session survives long screen-sleep gap  *(DONE 2026-07-04, SW v1.73.0)*
+
+Analytics export on 2026-07-04 turned up a session recorded at 3873s (64.5 min) that included a 49-minute stretch with zero taps in the middle — far longer than the app's entire idle→attractor→"Still browsing?"→thanks→reset chain is designed to take (~2 minutes: 60s idle delay + 60s attractor + 4s countdown + 5s thanks). Root cause: the app has no Screen Wake Lock, and the only `visibilitychange` handler just called `refreshContent()` on wake — it never checked or re-armed the inactivity flow. When the tablet's screen slept or the tab was backgrounded, `setTimeout`/`setInterval` paused (browser-standard behavior), so the already-armed `inactivityTimer`/`attractorDoneTimer` silently missed their fire time. The next real tap after waking went through the normal `resetInactivity()` path, which just wiped the stale timer and armed a fresh one — the attractor/modal/end-session sequence never got a chance to run, so the "session" silently absorbed the entire sleep gap instead of ending.
+
+**Fix:** added `lastActivityTime` (module-level, updated at the top of `resetInactivity()`) and `STALE_SESSION_MS` (10 min). The `visibilitychange` handler now checks, on becoming visible again, whether `Date.now() - lastActivityTime > STALE_SESSION_MS` while a session is open (`sessionStart` set); if so it force-closes the session via `endSession('stale_gap')` (new optional `endType` param, default `'inactivity'`, so these are distinguishable in exports), clears any stale attractor/inactivity-modal state, and resets to the home guide view — same as a normal passenger-changeover reset, just triggered by the wake event instead of the timer chain.
+
+**File:** `public/index.html` — `resetInactivity()` (sets `lastActivityTime`), `endSession()` (now takes `endType` param), `bootApp()`'s `visibilitychange` listener (stale-gap check + force reset), new constants `lastActivityTime`/`STALE_SESSION_MS` near `COUNTDOWN_S`/`THANKS_S`. `public/sw.js` bumped to v1.73.0.
+
+---
+
 ### [X] Wordle: Skip button (0 pts, reveals answer)  *(DONE 2026-07-02, SW v1.72.0)*
 
 Added a muted "Skip ▶" button to the score row (left side, score chip stays right) so passengers who have no idea can bail out of a word and get 0 pts rather than exhausting all 6 guesses. Tapping it calls `wSkip()`: sets `wRoundDone`, hides both the Skip and Hint buttons, hides the keyboard, and calls `wShowWordResult(false, 0, answer)` to show the lost-state card with the answer revealed. Guards: a no-op if the round is already done. Translated in all 4 languages (`wlSkipBtn`). 2 new unit tests added (skip flow + double-skip guard), all 8 Wordle tests pass.

@@ -3934,6 +3934,14 @@ const ATTRACTOR_MS = 60000;   // kept for reference; actual delay reads settings
 const COUNTDOWN_S  = 4;
 const THANKS_S     = 5;
 
+// Screen sleep / tab backgrounding pauses setTimeout/setInterval (no wake lock),
+// so the idle→attractor→modal→reset chain can silently miss its whole window.
+// lastActivityTime lets the visibilitychange handler detect that and force-close
+// a session that's been sitting untouched for way longer than the ~2min the
+// normal flow takes end to end.
+let lastActivityTime = Date.now();
+const STALE_SESSION_MS = 10 * 60 * 1000;
+
 // Rest / blackout screen
 let restActive = false;
 let restClockTimer = null;
@@ -4083,7 +4091,22 @@ function bootApp() {
   openDB();
   loadContent();
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') refreshContent();
+    if (document.visibilityState !== 'visible') return;
+    // The tab/screen may have been asleep or backgrounded for a while — timers
+    // don't run then, so the normal idle→attractor→modal→reset chain (which
+    // only takes ~2min) can never have fired. Force-close a session that's been
+    // untouched way longer than that instead of silently stitching it onto
+    // whatever the passenger does next.
+    if (sessionStart && Date.now() - lastActivityTime > STALE_SESSION_MS) {
+      hideAttractor();
+      dismissInactivity(true);
+      clearTimeout(inactivityTimer);
+      endSession('stale_gap');
+      switchTab('guide', true);
+      setFilter('featured', true);
+      resetInactivity();
+    }
+    refreshContent();
   });
   initInactivity();
   initSecretTap();
@@ -7312,6 +7335,7 @@ function inactivityTapGuard(e) {
 }
 
 function resetInactivity() {
+  lastActivityTime = Date.now();
   // While the rest screen is up, taps are handled by exitRest.
   if (restActive) return;
   // While the attractor is up, only onAttractorTap() dismisses it. The global
@@ -8478,7 +8502,7 @@ function startSession(firstKey) {
 
 // Every idle reset (idle→thanks, or rest auto-wake) counts as a cycle. A session
 // record is written only if the passenger actually tapped something this cycle.
-function endSession() {
+function endSession(endType = 'inactivity') {
   if (!analyticsDisabled) recordCycle();
   const start = sessionStart;
   const firstTap = sessionFirstTap;
@@ -8498,7 +8522,7 @@ function endSession() {
     tapTotal,
     firstTap,
     lang,
-    endType: 'inactivity'
+    endType
   };
   db.transaction('sessions', 'readwrite').objectStore('sessions').add(session);
 }
