@@ -1,7 +1,7 @@
 // Miami Ride Companion — Service Worker
 // Version this string whenever you deploy a significant update.
 // Changing it forces all clients to re-cache everything fresh.
-const CACHE_VERSION = 'miami-ride-v1.74.0';
+const CACHE_VERSION = 'miami-ride-v1.75.0';
 
 // Tile cache lives separately so it survives app cache version bumps.
 const TILE_CACHE_NAME = 'miami-map-tiles-v1';
@@ -69,15 +69,21 @@ const OFFLINE_EDITOR_HTML = `<!DOCTYPE html>
   .icon{font-size:54px;margin-bottom:12px}
   h1{font-size:22px;margin:0 0 10px;color:#C9A84C;font-weight:600}
   p{font-size:15px;line-height:1.5;color:rgba(255,255,255,.82);margin:0 0 22px}
+  .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
   button{background:#0B9EA6;color:#fff;border:0;border-radius:10px;
     padding:13px 26px;font-size:15px;font-weight:600;cursor:pointer}
   button:active{opacity:.85}
+  button.secondary{background:transparent;color:rgba(255,255,255,.82);
+    border:1px solid rgba(255,255,255,.3)}
 </style></head><body>
   <div class="card">
     <div class="icon">📡</div>
     <h1>Dashboard needs a connection</h1>
-    <p>The driver dashboard always loads fresh, so it can't open offline. Reconnect to Wi-Fi or cellular, then try again.</p>
-    <button onclick="location.reload()">Try again</button>
+    <p>The driver dashboard always loads fresh, so it can't open offline. Reconnect to Wi-Fi or cellular, then try again — or head back to the passenger app, which works offline.</p>
+    <div class="actions">
+      <button onclick="location.reload()">Try again</button>
+      <button class="secondary" onclick="location.href='/'">Back to passenger app</button>
+    </div>
   </div>
 </body></html>`;
 

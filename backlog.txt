@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-04 ("Still browsing?" inactivity modal resized to match attractor/thanks cards)
+Last updated: 2026-07-05 (Offline dashboard fallback page gets a "Back to passenger app" button)
 Owner: Abdullah
 
 
@@ -234,6 +234,14 @@ OPEN ITEMS
           to .attractor-card/.thanks-inner (width, padding, border-radius, gold
           border/shadow, gold accent bar, title/sub font sizes), scaled up the
           countdown ring and CTA button proportionally. See backlog_archive.md.
+
+[X] 57. BUG: offline dashboard fallback page had no way out. DONE 2026-07-05.
+        - Opening editor.html with zero connectivity served the SW's inlined
+          OFFLINE_EDITOR_HTML fallback, which only had a "Try again" button
+          (location.reload()) — a dead end if there's genuinely no signal.
+          Fix: added a second "Back to passenger app" button (location.href='/')
+          since index.html is fully cached and works offline. SW v1.75.0.
+          See backlog_archive.md.
 
 
 KNOWN TRANSITIONAL STATE (not bugs)

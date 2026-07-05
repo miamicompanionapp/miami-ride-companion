@@ -7,6 +7,16 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] BUG: offline dashboard fallback page had no way out  *(DONE 2026-07-05, SW v1.75.0)*
+
+Abdullah reported that opening the driver dashboard with no internet connection served the SW's offline fallback page, but that page only had a "Try again" button — a dead end if the car genuinely has no signal (dead zone, airplane mode, etc.), with no way to get back to the passenger-facing app.
+
+**Fix:** added a second "Back to passenger app" button to `OFFLINE_EDITOR_HTML` in sw.js, styled as a secondary/outline button next to the existing primary "Try again". It navigates to `/` (`index.html`), which is fully precached and works offline, so passengers/drivers are never stuck on a dead-end screen.
+
+**File:** `public/sw.js` — `OFFLINE_EDITOR_HTML` (added `.actions`/`.secondary` CSS + second button). Bumped to v1.75.0.
+
+---
+
 ### [X] BUG: "Still browsing?" inactivity modal small vs attractor/thanks cards  *(DONE 2026-07-04, SW v1.74.0)*
 
 The attractor overlay card and thanks screen had both been sized up earlier (680px width, 30px radius, 52px padding, gold border/shadow/accent bar, 38px headline, 18px sub, 88px icon) but the "Still browsing?" inactivity modal in between them was left at its old compact size (340px, 20px title, 12px sub, 36px icon), so it looked visually inconsistent sandwiched between the two larger screens in the idle→attractor→modal→thanks flow.
