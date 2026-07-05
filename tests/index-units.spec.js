@@ -355,4 +355,15 @@ test.describe('Index units: lang-section pulse on attractor dismiss', { tag: ['@
     });
     await expect(page.locator('.lang-section')).toHaveClass(/pulsing/);
   });
+
+  test('pulsing animation fires exactly once, not multiple flashes', async ({ page }) => {
+    await page.evaluate(() => {
+      document.getElementById('attractor-overlay').classList.add('visible');
+      hideAttractor();
+    });
+    const iterationCount = await page.locator('.lang-section').evaluate(
+      el => getComputedStyle(el).animationIterationCount
+    );
+    expect(iterationCount).toBe('1');
+  });
 });

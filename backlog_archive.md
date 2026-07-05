@@ -7,6 +7,16 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] BUG: language section pulse flashed 4x on attractor dismiss  *(DONE 2026-07-05, SW v1.76.0)*
+
+Abdullah reported the language section (sidebar footer) flashing multiple times in a row every time the attractor screen was dismissed — too distracting. The `.lang-section.pulsing` CSS animation was set to repeat 4 iterations (`animation: lang-pulse 900ms ease-in-out 4;`), triggered once per tap in `hideAttractor()`.
+
+**Fix:** changed the iteration count from `4` to `1` so the pulse fires exactly once per dismissal.
+
+**File:** `public/index.html` — CSS rule `.lang-section.pulsing` (line ~236). Bumped `public/sw.js` to v1.76.0.
+
+---
+
 ### [X] BUG: offline dashboard fallback page had no way out  *(DONE 2026-07-05, SW v1.75.0)*
 
 Abdullah reported that opening the driver dashboard with no internet connection served the SW's offline fallback page, but that page only had a "Try again" button — a dead end if the car genuinely has no signal (dead zone, airplane mode, etc.), with no way to get back to the passenger-facing app.
