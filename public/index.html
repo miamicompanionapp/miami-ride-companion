@@ -3372,11 +3372,6 @@
 
 <script>
 // ════════════════════════════════════════════════════════════
-// BUILD INFO
-// ════════════════════════════════════════════════════════════
-const APP_BUILD = 'a5c6ecb';
-
-// ════════════════════════════════════════════════════════════
 // STATE
 // ════════════════════════════════════════════════════════════
 let CONTENT = null;
@@ -4124,7 +4119,6 @@ function bootApp() {
   document.getElementById('tap-best-display').textContent = tapBest;
   document.getElementById('tap-best-txt').textContent = tapBest;
   document.getElementById('high-score-display').textContent = `${gt('tapBestLabel')} ${tapBest}`;
-  document.getElementById('build-tag').textContent = `build ${APP_BUILD}`;
 }
 
 // ── Service Worker Registration ──────────────────────────────
@@ -4180,12 +4174,12 @@ function applyContent() {
   startSubtitleRotator();
   prewarmEventImages();
   // No startSession() here — a session opens lazily on the first in-app tap.
-  // Show content timestamp alongside build hash
+  // Show content timestamp so we can tell how fresh the last sync was
   if (CONTENT && CONTENT.meta && CONTENT.meta.lastUpdated) {
     const d = new Date(CONTENT.meta.lastUpdated);
     const ts = d.toLocaleDateString('en-US', { month:'short', day:'numeric' })
               + ' ' + d.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
-    document.getElementById('build-tag').textContent = `build ${APP_BUILD} · content ${ts}`;
+    document.getElementById('build-tag').textContent = `content ${ts}`;
   }
 }
 

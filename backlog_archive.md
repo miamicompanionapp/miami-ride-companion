@@ -7,6 +7,16 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Remove stale hardcoded build hash from footer  *(DONE 2026-07-05, SW v1.77.0)*
+
+Abdullah noticed a "build a5c6ecb" tag in the bottom-left footer and asked where it came from. It was a manually hardcoded `const APP_BUILD = 'a5c6ecb'` (a real but very old commit hash — no build step ever updates it, since this project intentionally has no bundler/build process). Decision: not worth wiring up a real build-hash injection; just drop it and keep the useful part — the content.json last-sync timestamp.
+
+**Fix:** removed the `APP_BUILD` constant and both places that read it; `#build-tag` now shows only `content ${ts}` (no `build ...` prefix).
+
+**File:** `public/index.html` — removed `APP_BUILD` const (was ~line 3377), `init()` (~line 4127), `applyContent()` (~line 4188). Bumped `public/sw.js` to v1.77.0.
+
+---
+
 ### [X] BUG: language section pulse flashed 4x on attractor dismiss  *(DONE 2026-07-05, SW v1.76.0)*
 
 Abdullah reported the language section (sidebar footer) flashing multiple times in a row every time the attractor screen was dismissed — too distracting. The `.lang-section.pulsing` CSS animation was set to repeat 4 iterations (`animation: lang-pulse 900ms ease-in-out 4;`), triggered once per tap in `hideAttractor()`.
