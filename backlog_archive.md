@@ -7,6 +7,16 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] BUG: "Still browsing?" inactivity modal small vs attractor/thanks cards  *(DONE 2026-07-04, SW v1.74.0)*
+
+The attractor overlay card and thanks screen had both been sized up earlier (680px width, 30px radius, 52px padding, gold border/shadow/accent bar, 38px headline, 18px sub, 88px icon) but the "Still browsing?" inactivity modal in between them was left at its old compact size (340px, 20px title, 12px sub, 36px icon), so it looked visually inconsistent sandwiched between the two larger screens in the idle→attractor→modal→thanks flow.
+
+**Fix:** matched `.inactivity-box` to `.attractor-card`/`.thanks-inner`: width `min(680px, 92vw)`, `border-radius: 30px`, `padding: 52px 52px 44px`, gold border + box-shadow, added the `::before` gold accent bar. Scaled up `.inactivity-icon` (36px→88px), `.inactivity-title` (20px→38px, added `font-weight`/`line-height` to match), `.inactivity-sub` (12px→18px), the countdown ring (64px→84px, number 26px→32px), and the CTA button/dismiss text proportionally.
+
+**File:** `public/index.html` — CSS rules `.inactivity-box`, `.inactivity-icon`, `.inactivity-title`, `.inactivity-sub`, `.countdown-ring`, `.countdown-num`, `.inactivity-cta`, `.inactivity-dismiss`. `public/sw.js` bumped to v1.74.0.
+
+---
+
 ### [X] BUG: stale session survives long screen-sleep gap  *(DONE 2026-07-04, SW v1.73.0)*
 
 Analytics export on 2026-07-04 turned up a session recorded at 3873s (64.5 min) that included a 49-minute stretch with zero taps in the middle — far longer than the app's entire idle→attractor→"Still browsing?"→thanks→reset chain is designed to take (~2 minutes: 60s idle delay + 60s attractor + 4s countdown + 5s thanks). Root cause: the app has no Screen Wake Lock, and the only `visibilitychange` handler just called `refreshContent()` on wake — it never checked or re-armed the inactivity flow. When the tablet's screen slept or the tab was backgrounded, `setTimeout`/`setInterval` paused (browser-standard behavior), so the already-armed `inactivityTimer`/`attractorDoneTimer` silently missed their fire time. The next real tap after waking went through the normal `resetInactivity()` path, which just wiped the stale timer and armed a fresh one — the attractor/modal/end-session sequence never got a chance to run, so the "session" silently absorbed the entire sleep gap instead of ending.

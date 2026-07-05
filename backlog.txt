@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-04 (BUG: stale session on tab wake after long sleep gap)
+Last updated: 2026-07-04 ("Still browsing?" inactivity modal resized to match attractor/thanks cards)
 Owner: Abdullah
 
 
@@ -24,6 +24,7 @@ NEXT UP — open items, ranked  (updated 2026-07-01)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #56  BUG: "Still browsing?" inactivity modal small vs attractor/thanks — DONE 2026-07-04
   1. [X] #55  BUG: stale session survives long screen-sleep gap — DONE 2026-07-04
   2. [X] #36  BUG: landing images blink on every GPS re-render — DONE 2026-06-23
   2. [~] #42  Editor publish — auto-increment SW cache version — DROPPED (daily refresh handles it)
@@ -224,6 +225,15 @@ OPEN ITEMS
           lastActivityTime (updated in resetInactivity()); on visibilitychange
           back to visible, force endSession('stale_gap') if the gap exceeds
           STALE_SESSION_MS (10 min), then reset to home. See backlog_archive.md.
+
+[X] 56. BUG: "Still browsing?" inactivity modal small vs attractor/thanks cards. DONE 2026-07-04.
+        - Attractor card and thanks screen were previously sized up (680px width,
+          38px headline, 88px icon) but the inactivity ("Still browsing?") modal
+          in between was left at its old small size (340px, 20px title, 36px
+          icon), making it look out of place. Fix: matched .inactivity-box sizing
+          to .attractor-card/.thanks-inner (width, padding, border-radius, gold
+          border/shadow, gold accent bar, title/sub font sizes), scaled up the
+          countdown ring and CTA button proportionally. See backlog_archive.md.
 
 
 KNOWN TRANSITIONAL STATE (not bugs)
