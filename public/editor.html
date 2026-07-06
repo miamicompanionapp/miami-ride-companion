@@ -611,6 +611,7 @@
               <option value="arts">🎭 Arts</option>
               <option value="nightlife">🎉 Nightlife</option>
               <option value="food-drink">🍹 Food &amp; Drink</option>
+              <option value="community">🎪 Community</option>
             </select>
           </div>
         </div>
@@ -1454,6 +1455,8 @@ async function fetchEventsFrom(endpoint, label, idPrefix) {
         image:       e.image || '',
         description: { en: e.description, es: '', pt: '', fr: '' },
       };
+      // Ticketmaster ships a segment/genre-derived category; RSS events have none.
+      if (e.category) ev.category = e.category;
       // Ticketmaster ships coords; RSS gives only an address (geocoded below).
       if (Number.isFinite(e.lat) && Number.isFinite(e.lng)) { ev.lat = e.lat; ev.lng = e.lng; }
       newEvents.push(ev);

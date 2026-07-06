@@ -70,16 +70,29 @@ function extractJson(text) {
 
 const CAT_RULES = [
   { cat: 'comedy',     re: /comedy|improv|stand.?up|laughing corpse|comic show/i },
-  { cat: 'sports',     re: /world cup|soccer|match day|fan fest|watch party|match \d+|kickoff pool|summer of soccer|michael irvin|el pibe/i },
-  { cat: 'arts',       re: /museum|gallery|theatre|theater|exhibition|ballet|opera|classical|film|cinema|wizard of oz|basquiat|pop air|jagged little pill/i },
+  // Nightclub name is a stronger, more specific signal than a generic "watch
+  // party" — check it before 'sports' so e.g. a nightclub's watch-party
+  // series stays 'nightlife' instead of being pulled into 'sports'.
   { cat: 'nightlife',  re: /nightclub|afterparty|after party|welcome to destruction|off campus night|timelux/i },
-  { cat: 'food-drink', re: /brunch|swizzle|deli lane|pop.?up.*drink|rum bar|bloom.*caf|bloom.*restau/i },
+  { cat: 'sports',     re: /world cup|soccer|match day|fan fest|watch party|match \d+|kickoff pool|summer of soccer|michael irvin|el pibe|marathon|5k\b|run club|pickleball/i },
+  { cat: 'arts',       re: /museum|gallery|theatre|theater|exhibit|ballet|opera|classical|film|cinema|screening|wizard of oz|basquiat|pop air|jagged little pill|art walk/i },
+  { cat: 'food-drink', re: /brunch|swizzle|deli lane|pop.?up.*drink|rum bar|bloom.*caf|bloom.*restau|paella|cooking class|byob/i },
+  { cat: 'community',  re: /market|artisan|fair\b|festival(?!.*(music|concert))|pilates|yoga|meditation|wellness|paws|pet friendly|dog park|family day|kids|children/i },
+  // Concert/show signals — checked last so e.g. "Comedy Music Fest" still hits comedy first,
+  // and titles with no signal at all fall through to the generic bucket below.
+  { cat: 'music',      re: /concert|tour\b|\blive\b|the tour|world tour|orchestra|\bband\b|sings?|\bdj\b|festival.*(music|concert)/i },
 ];
 
+// Anything that doesn't match a specific signal above used to silently default
+// to 'music' — which is wrong for things like art exhibits, pet meetups, or
+// wellness classes that slip past the regexes. 'community' is an honest
+// catch-all instead of a wrong specific guess. Checks title + description
+// together since RSS titles are often bare event names (e.g. "5LAN in Miami")
+// with the actual genre signal ("DJ", "Live") only in the blurb.
 function inferEventCategory(e) {
-  const title = e.title?.en || '';
-  for (const { cat, re } of CAT_RULES) if (re.test(title)) return cat;
-  return 'music';
+  const text = `${e.title?.en || ''} ${e.description?.en || ''}`;
+  for (const { cat, re } of CAT_RULES) if (re.test(text)) return cat;
+  return 'community';
 }
 
 // ── Weather ───────────────────────────────────────────────────────────────────
@@ -241,6 +254,10 @@ async function main() {
           image:       e.image || '',
           description: { en: e.description || '', es: '', pt: '', fr: '' },
         };
+        // Ticketmaster ships a real segment/genre-derived category — keep it
+        // instead of guessing later. RSS events have none, so step 7 below
+        // (inferEventCategory) fills those in from the title.
+        if (e.category) ev.category = e.category;
         if (Number.isFinite(e.lat) && Number.isFinite(e.lng)) { ev.lat = e.lat; ev.lng = e.lng; }
         added.push(ev);
       }

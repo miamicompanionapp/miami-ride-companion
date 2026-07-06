@@ -144,6 +144,22 @@ function pickImage(images) {
   return widest[0]?.url || '';
 }
 
+// Ticketmaster's own segment/genre already tells us the category — using it
+// beats guessing from the title (which used to default everything unmatched
+// to "music", mislabeling exhibits, family days, and wellness events).
+// segment/genre names seen in the wild: Music, Sports, Arts & Theatre, Film,
+// Miscellaneous, Undefined; genre "Comedy" nests under Arts & Theatre.
+function mapCategory(cls) {
+  const segment = (cls?.segment?.name || '').toLowerCase();
+  const genre    = (cls?.genre?.name  || '').toLowerCase();
+  if (genre === 'comedy') return 'comedy';
+  if (segment === 'music') return 'music';
+  if (segment === 'sports') return 'sports';
+  if (segment === 'arts & theatre' || segment === 'film') return 'arts';
+  if (segment === 'miscellaneous' || segment === 'undefined' || !segment) return '';
+  return '';
+}
+
 function mapEvent(ev) {
   const venue = ev?._embedded?.venues?.[0] || {};
   const addressBits = [
@@ -158,6 +174,7 @@ function mapEvent(ev) {
   const clsBits = [cls?.segment?.name, cls?.genre?.name]
     .filter(Boolean)
     .filter(v => v.toLowerCase() !== 'undefined');
+  const category = mapCategory(cls);
   const startTime = ev?.dates?.start?.localTime
     ? ev.dates.start.localTime.slice(0, 5)
     : '';
@@ -192,8 +209,9 @@ function mapEvent(ev) {
     free,
     image:       pickImage(ev?.images),
     source:      'Ticketmaster',
+    category:    category || undefined,
   };
 }
 
 // Test-only exports (see tests/backend.spec.js) — harmless to the bundler.
-export { mapEvent, pickImage };
+export { mapEvent, pickImage, mapCategory };

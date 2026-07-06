@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-06 (Hardened Claude proxy + resized venue images; logged review follow-ups #61-63)
+Last updated: 2026-07-06 (Fixed event category mis-tagging — "music" was the silent catch-all for unmatched events, #64)
 Owner: Abdullah
 
 
@@ -24,6 +24,7 @@ NEXT UP — open items, ranked  (updated 2026-07-01)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #64  BUG: events with no category signal silently defaulted to "music" — added Ticketmaster segment/genre mapping + a "community" catch-all — DONE 2026-07-06
   1. [X] #60  PERF: venue images oversized (27MB) — resized to ≤1400px, dropped 3 orphans — DONE 2026-07-06 (SW v1.78.0)
   1. [X] #59  SECURITY: Claude proxy open to abuse — same-origin gate, model/token caps, per-IP rate limit — DONE 2026-07-06
   1. [X] #58  Remove stale hardcoded build hash from footer (kept content-sync timestamp) — DONE 2026-07-05
@@ -273,6 +274,20 @@ OPEN ITEMS
           Fix: added a second "Back to passenger app" button (location.href='/')
           since index.html is fully cached and works offline. SW v1.75.0.
           See backlog_archive.md.
+
+[X] 64. BUG: events with no category signal silently defaulted to "music". DONE 2026-07-06.
+        - scripts/daily-refresh.mjs's inferEventCategory() fell through to
+          `return 'music'` for any title that didn't match its CAT_RULES regexes
+          — mislabeling art exhibits, family days, pet meetups, wellness classes,
+          and artisan markets as "Music". 22 RSS-sourced events in content.json
+          were affected. Fix: (1) Ticketmaster events now get their category
+          from the API's own segment/genre classification instead of a title
+          guess (functions/api/ticketmaster-fetch.js mapEvent/mapCategory);
+          (2) RSS events (which carry no classification) fall through a wider
+          set of regex rules checked against title+description, and the
+          catch-all default changed from 'music' to a new 'community' category
+          instead of guessing a specific wrong one. Reclassified the 16
+          affected events already in content.json. See backlog_archive.md.
 
 
 KNOWN TRANSITIONAL STATE (not bugs)

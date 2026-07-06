@@ -201,6 +201,27 @@ test.describe('Backend: ticketmaster-fetch — mapEvent', { tag: ['@backend'] },
     expect(ev.description).toBe('Music · Hip-Hop · Starts 20:00 · Kaseya Center');
   });
 
+  test('derives category from the Ticketmaster segment/genre instead of guessing', () => {
+    expect(tm.mapEvent(fullEvent).category).toBe('music');
+    expect(tm.mapEvent({
+      ...fullEvent,
+      classifications: [{ segment: { name: 'Arts & Theatre' }, genre: { name: 'Comedy' } }],
+    }).category).toBe('comedy');
+    expect(tm.mapEvent({
+      ...fullEvent,
+      classifications: [{ segment: { name: 'Sports' } }],
+    }).category).toBe('sports');
+    expect(tm.mapEvent({
+      ...fullEvent,
+      classifications: [{ segment: { name: 'Arts & Theatre' } }],
+    }).category).toBe('arts');
+  });
+
+  test('@negative leaves category unset for an unclassified/miscellaneous event rather than guessing', () => {
+    expect(tm.mapEvent({ ...fullEvent, classifications: [{ segment: { name: 'Miscellaneous' } }] }).category).toBeUndefined();
+    expect(tm.mapEvent({ ...fullEvent, classifications: [] }).category).toBeUndefined();
+  });
+
   test('takes the lowest price range as a rounded "$N"', () => {
     expect(tm.mapEvent(fullEvent).price).toBe('$35');
     expect(tm.mapEvent(fullEvent).free).toBe(false);

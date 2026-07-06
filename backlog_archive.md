@@ -7,6 +7,21 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] BUG: events with no category signal silently defaulted to "music"  *(DONE 2026-07-06)*
+
+Abdullah noticed clearly non-music events tagged "Music" in the passenger app's event chips — a fine-art exhibit, a "Family Day: Fiber, Texture and Storytelling" kids event, a Pilates/padel club meetup, "Paws Patio™". Root cause: `scripts/daily-refresh.mjs`'s `inferEventCategory()` ran a small set of regex rules (comedy/sports/arts/nightlife/food-drink) against the title, and **anything that matched none of them fell through to `return 'music'`** — "music" was an undocumented catch-all, not a real classification. This only affected RSS-sourced events (Soul of Miami / Miami on the Cheap / Miami New Times), since those feeds carry no structured category — 22 of them existed in `content.json`, 16 were mislabeled.
+
+**Fix:**
+1. **Ticketmaster events stop guessing entirely.** `functions/api/ticketmaster-fetch.js` already receives `classifications[0].segment/genre` from the API (previously only used to build the description string). Added `mapCategory(cls)` mapping `Music→music`, `Sports→sports`, `Arts & Theatre`/`Film→arts`, genre `Comedy→comedy`; anything `Miscellaneous`/`Undefined`/absent is left `undefined` rather than defaulted. `mapEvent()` now returns this as `category`, and both `scripts/daily-refresh.mjs` and `public/editor.html`'s `fetchEventsFrom()` preserve `e.category` when the fetch already supplied one instead of discarding it.
+2. **RSS events get a wider net + an honest catch-all.** `CAT_RULES` in `daily-refresh.mjs` gained more signals (`exhibit`, `screening`, `market`/`artisan`, `pilates`/`yoga`/`wellness`, `paws`, `family day`, `cooking class`/`paella`/`byob`, a real `music` rule requiring `concert|tour|live|dj|band|orchestra` etc.) and now matches against **title + description** combined (RSS titles are often bare event names like "5LAN in Miami" — the actual "DJ"/"Live" signal is in the blurb). Nightlife is checked before sports so a nightclub's own watch-party series doesn't get pulled into "sports". The new **`community`** category (🎪, added to `EVENT_CATS` in `public/index.html` and the manual-add dropdown in `public/editor.html`) is the fallback for anything that matches nothing — an honest "uncategorized" bucket instead of a specific wrong guess.
+3. **Backfilled `content.json`** — reclassified the 16 affected RSS events in place (14 → `community`, `food-drink`, or `arts`; 1 nightlife regression from the rule reorder caught and corrected; 1 corrected to `music` since it turned out to genuinely be a live-performance event per its description).
+
+**Result:** Ticketmaster (43 of 66 current events) now gets ground-truth categories straight from the API. RSS events get a much better title+description-based guess, and anything ambiguous lands in "Community" instead of silently becoming "Music". Added `tests/backend.spec.js` coverage for `mapCategory`/`mapEvent`'s new `category` field (positive cases per segment, and the negative case of an unclassified event leaving `category` `undefined`). Full suite (138 tests) still green.
+
+**Files:** `functions/api/ticketmaster-fetch.js`, `scripts/daily-refresh.mjs`, `public/editor.html`, `public/index.html` (`EVENT_CATS`), `public/content.json` (16 events reclassified), `tests/backend.spec.js`.
+
+---
+
 ### [X] PERF: venue images oversized — resized 27MB → 9MB  *(DONE 2026-07-06, SW v1.78.0)*
 
 A full-repo review flagged `public/images/venues/` at **31 MB total**, dominated by source-resolution originals shown in small tablet cards: `joey-aventura.jpg` was **6.6 MB at 3500×2334**, `r-house-wynwood.jpg` 3.4 MB, plus 1–1.4 MB PAMM/club-space/gulfstream/mandolin/underline files. Wasted first-load bandwidth and bloated the git repo.
