@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-06 (Security: hardened Claude proxy; Perf: resized venue images 27MB→9MB)
+Last updated: 2026-07-06 (Hardened Claude proxy + resized venue images; logged review follow-ups #61-63)
 Owner: Abdullah
 
 
@@ -32,6 +32,9 @@ Re-order freely; mark [X] when done.
   1. [X] #55  BUG: stale session survives long screen-sleep gap — DONE 2026-07-04
   2. [X] #36  BUG: landing images blink on every GPS re-render — DONE 2026-06-23
   2. [~] #42  Editor publish — auto-increment SW cache version — DROPPED (daily refresh handles it)
+  1. #63  SECURITY: escape RSS/Ticketmaster feed text before innerHTML in buildEventCard (stored-XSS path)
+  1. #62  SECURITY: add Content-Security-Policy meta + Subresource Integrity on jsdelivr CDN tags
+  2. #61  PERF/UI: drop unused Playfair Display font from passenger app font URL (index.html only; editor uses it)
   3. #43  Thanks/inactivity screen — bilingual EN + ES boxes
   4. #44  Game leaderboards — best scores with seeded placeholders
   5. #30  Multiplayer games — e) Dots & Boxes, f) tug-of-war, bonus finger-picker
@@ -41,7 +44,7 @@ Re-order freely; mark [X] when done.
   9. #48  Rewards / raffle system (sponsored check-in + easter egg variant)
  10. [X] #49  "My other apps" section in driver dashboard — DONE 2026-06-28
  17. [X] #54  BUG: language selection persists after inactivity reset — DONE 2026-06-30
- 11. #21  Optimize heavy venue images (mandolin.png ~1.3 MB, alacati.jpg ~807 KB)
+ 11. [X] #21  Optimize heavy venue images — DONE 2026-07-06 as #60 (venues dir 27MB→9MB, ≤1400px)
  12. [X] #17  Events auto-refresh — DONE 2026-06-23 (GitHub Actions, see archive)
  13. [X] #50  Ticketmaster — surface high-profile events buried by MAX_EVENTS cap (DONE 2026-06-23)
  14. [X] #51  Events — category field + filter chips + analytics — DONE 2026-06-25
@@ -100,11 +103,35 @@ OPEN ITEMS
 
 [X] 17. Events auto-refresh — DONE 2026-06-23. See backlog_archive.md.
 
-[ ] 21. Optimize venue images (added 2026-05-30).
-        - public/images/venues/mandolin.png ~1.3 MB, alacati.jpg ~807 KB —
-          heavy for venue cards (elturco.avif/webp ones are already small).
-        - Downscale + recompress with sharp (max ~1000px, q~80, mozjpeg), convert
-          PNG → JPG/WebP, update content.json photo refs. Target ~100-150 KB each.
+[X] 21. Optimize venue images — DONE 2026-07-06 (shipped as #60, SW v1.78.0).
+        - Re-encoded venues dir to ≤1400px, format-preserving (no content.json
+          edits), + dropped 3 orphans. 27.4 MB → 9.2 MB. See archive for details.
+
+[ ] 61. PERF/UI: drop unused Playfair Display font from the passenger app.
+        - index.html:16 loads Playfair Display in the Google Fonts URL, but no
+          CSS font-family in index.html uses it (design system = Marcellus /
+          Poiret One / DM Sans). Remove it from the index.html <link> AND the
+          matching entry in sw.js PRECACHE_URLS, then bump SW. editor.html DOES
+          use Playfair — leave that one. From the 2026-07-06 full-repo review.
+
+[ ] 62. SECURITY: add a Content-Security-Policy + Subresource Integrity.
+        - No CSP anywhere (index.html / editor.html). Add a <meta http-equiv
+          "Content-Security-Policy"> restricting script-src to 'self' + the
+          pinned jsdelivr CDN; add integrity="…" (SRI) to the jsdelivr <script>/
+          <link> tags so a compromised/hijacked CDN can't inject arbitrary JS.
+          Mitigates #63 too. Watch the SW: CDN URLs are precached, so hashes must
+          match the pinned versions. From the 2026-07-06 full-repo review.
+
+[ ] 63. SECURITY: escape third-party feed text before innerHTML (stored XSS).
+        - buildEventCard (index.html ~5203-5213) interpolates e.title / e.venue /
+          e.description / e.address straight into an innerHTML template literal.
+          Those come from RSS + Ticketmaster feeds. rss-fetch stripHtml removes
+          tags but re-decodes entities (&#60; → <), and Ticketmaster fields aren't
+          stripped at all — so a crafted feed item can inject live DOM on the
+          kiosk. Fix: escape at render (reuse an escapeHtml helper) or build the
+          card with textContent/createElement like buildVenueCard's safe bits.
+          Low blast radius (captive kiosk) but a real stored-XSS path. From the
+          2026-07-06 full-repo review.
 
 [X] 23. Passenger feedback — DONE 2026-06-12 (see archive).
 
