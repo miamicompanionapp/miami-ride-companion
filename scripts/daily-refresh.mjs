@@ -68,31 +68,60 @@ function extractJson(text) {
 
 // ── Event category inference ──────────────────────────────────────────────────
 
-const CAT_RULES = [
-  { cat: 'comedy',     re: /comedy|improv|stand.?up|laughing corpse|comic show/i },
-  // Nightclub name is a stronger, more specific signal than a generic "watch
-  // party" — check it before 'sports' so e.g. a nightclub's watch-party
-  // series stays 'nightlife' instead of being pulled into 'sports'.
+// Ticketmaster's own description often starts with its segment/genre
+// classification text (e.g. "Music · Hip-Hop · Starts 20:00 · Kaseya Center"
+// — see ticketmaster-fetch.js's mapEvent/mapCategory, the ground-truth source
+// for *new* fetches). This mirrors that mapping for events whose description
+// still carries the raw classification prefix.
+function fromDescriptionSegment(desc) {
+  const m = /^(Music|Sports|Arts & Theatre|Film|Miscellaneous|Undefined)\s*(?:·\s*([^·]+))?/i.exec(desc || '');
+  if (!m) return null;
+  const segment = m[1].toLowerCase();
+  const genre = (m[2] || '').trim().toLowerCase();
+  if (genre === 'comedy') return 'comedy';
+  if (segment === 'music') return 'music';
+  if (segment === 'sports') return 'sports';
+  if (segment === 'arts & theatre' || segment === 'film') return 'arts';
+  return null; // Miscellaneous/Undefined/absent — fall through to keyword rules
+}
+
+// Rules whose trigger words are prone to matching a VENUE'S proper name
+// (e.g. "Jackie Gleason Theater" hosting a concert, "LIV Nightclub" hosting a
+// DJ set) are checked against the TITLE only, so a venue name embedded in the
+// description can't misclassify an otherwise-plain event.
+const TITLE_ONLY_RULES = [
   { cat: 'nightlife',  re: /nightclub|afterparty|after party|welcome to destruction|off campus night|timelux/i },
-  { cat: 'sports',     re: /world cup|soccer|match day|fan fest|watch party|match \d+|kickoff pool|summer of soccer|michael irvin|el pibe|marathon|5k\b|run club|pickleball/i },
-  { cat: 'arts',       re: /museum|gallery|theatre|theater|exhibit|ballet|opera|classical|film|cinema|screening|wizard of oz|basquiat|pop air|jagged little pill|art walk/i },
+  { cat: 'arts',       re: /museum|gallery|theatre|theater|ballet|opera|classical|cinema|wizard of oz|basquiat|pop air|jagged little pill|art walk|tony award/i },
+];
+// These keywords are safe to match against the full title+description text —
+// checked against title + description together since RSS titles are often
+// bare event names (e.g. "5LAN in Miami") with the actual genre signal
+// ("DJ", "Live") only in the blurb.
+const FULL_TEXT_RULES = [
+  { cat: 'comedy',     re: /comedy|improv|comic show|one-man-show|storyteller|stand-up\b/i },
+  { cat: 'sports',     re: /world cup|soccer|match day|fan fest|watch party|match \d+|kickoff pool|summer of soccer|michael irvin|el pibe|marathon|5k\b|run club|pickleball|wrestl|marlins|dolphins|\bmlb\b|\bnba\b|\bnfl\b|\bnhl\b/i },
+  { cat: 'arts',       re: /exhibit|screening/i },
   { cat: 'food-drink', re: /brunch|swizzle|deli lane|pop.?up.*drink|rum bar|bloom.*caf|bloom.*restau|paella|cooking class|byob/i },
-  { cat: 'community',  re: /market|artisan|fair\b|festival(?!.*(music|concert))|pilates|yoga|meditation|wellness|paws|pet friendly|dog park|family day|kids|children/i },
-  // Concert/show signals — checked last so e.g. "Comedy Music Fest" still hits comedy first,
-  // and titles with no signal at all fall through to the generic bucket below.
-  { cat: 'music',      re: /concert|tour\b|\blive\b|the tour|world tour|orchestra|\bband\b|sings?|\bdj\b|festival.*(music|concert)/i },
+  { cat: 'community',  re: /market|artisan|fair\b|festival(?!.*(music|concert))|pilates|yoga|meditation|wellness|paws|pet friendly|dog park|family day|back to school/i },
+  { cat: 'music',      re: /concert|tour\b|\blive\b|the tour|world tour|orchestra|\bband\b|sings?|\bdj\b|festival.*(music|concert)|jazz/i },
 ];
 
 // Anything that doesn't match a specific signal above used to silently default
 // to 'music' — which is wrong for things like art exhibits, pet meetups, or
-// wellness classes that slip past the regexes. 'community' is an honest
-// catch-all instead of a wrong specific guess. Checks title + description
-// together since RSS titles are often bare event names (e.g. "5LAN in Miami")
-// with the actual genre signal ("DJ", "Live") only in the blurb.
+// wellness classes that slip past the regexes. Ticketmaster is a ticketed
+// concert/sports/arts platform, so an unclassified listing there (no segment,
+// no keyword match — usually a bare artist name) is overwhelmingly a concert,
+// so 'tm_' events default to 'music'. RSS blogs/listicles have no such bias,
+// so 'rss_'/'manual_' events get the honest 'community' catch-all instead.
 function inferEventCategory(e) {
-  const text = `${e.title?.en || ''} ${e.description?.en || ''}`;
-  for (const { cat, re } of CAT_RULES) if (re.test(text)) return cat;
-  return 'community';
+  const title = e.title?.en || '';
+  const desc = e.description?.en || '';
+  const segCat = fromDescriptionSegment(desc);
+  if (segCat) return segCat;
+  for (const { cat, re } of TITLE_ONLY_RULES) if (re.test(title)) return cat;
+  const fullText = `${title} ${desc}`;
+  for (const { cat, re } of FULL_TEXT_RULES) if (re.test(fullText)) return cat;
+  return e.id.startsWith('tm_') ? 'music' : 'community';
 }
 
 // ── Weather ───────────────────────────────────────────────────────────────────

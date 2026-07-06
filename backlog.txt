@@ -279,16 +279,18 @@ OPEN ITEMS
         - scripts/daily-refresh.mjs's inferEventCategory() fell through to
           `return 'music'` for any title that didn't match its CAT_RULES regexes
           — mislabeling art exhibits, family days, pet meetups, wellness classes,
-          and artisan markets as "Music". 22 RSS-sourced events in content.json
-          were affected. Fix: (1) Ticketmaster events now get their category
-          from the API's own segment/genre classification instead of a title
-          guess (functions/api/ticketmaster-fetch.js mapEvent/mapCategory);
-          (2) RSS events (which carry no classification) fall through a wider
-          set of regex rules checked against title+description, and the
-          catch-all default changed from 'music' to a new 'community' category
-          instead of guessing a specific wrong one. Reclassified the 16
-          affected events already in content.json. SW v1.79.0. See
-          backlog_archive.md.
+          and artisan markets as "Music". Fix: (1) Ticketmaster events now get
+          their category from the API's own segment/genre classification instead
+          of a title guess (functions/api/ticketmaster-fetch.js mapEvent/
+          mapCategory); (2) RSS events (no classification) fall through
+          title-only rules (for venue-name-prone words like theater/nightclub)
+          then title+description rules, with the catch-all default changed
+          from 'music' to a new 'community' category for RSS/manual events —
+          Ticketmaster still defaults unmatched events to 'music' since that
+          platform is concert/sports/arts-ticketed by nature. Full audit of all
+          62 current events (follow-up ask, not just the original 4 examples)
+          found 15 more mislabeled beyond the first pass's 16 — 31 total
+          reclassified in content.json. SW v1.79.0. See backlog_archive.md.
 
 
 KNOWN TRANSITIONAL STATE (not bugs)
