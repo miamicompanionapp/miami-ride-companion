@@ -1,7 +1,7 @@
 // Miami Ride Companion — Service Worker
 // Version this string whenever you deploy a significant update.
 // Changing it forces all clients to re-cache everything fresh.
-const CACHE_VERSION = 'miami-ride-v1.78.0';
+const CACHE_VERSION = 'miami-ride-v1.79.0';
 
 // Tile cache lives separately so it survives app cache version bumps.
 const TILE_CACHE_NAME = 'miami-map-tiles-v1';

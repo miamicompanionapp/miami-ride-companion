@@ -18,7 +18,7 @@ Abdullah noticed clearly non-music events tagged "Music" in the passenger app's 
 
 **Result:** Ticketmaster (43 of 66 current events) now gets ground-truth categories straight from the API. RSS events get a much better title+description-based guess, and anything ambiguous lands in "Community" instead of silently becoming "Music". Added `tests/backend.spec.js` coverage for `mapCategory`/`mapEvent`'s new `category` field (positive cases per segment, and the negative case of an unclassified event leaving `category` `undefined`). Full suite (138 tests) still green.
 
-**Files:** `functions/api/ticketmaster-fetch.js`, `scripts/daily-refresh.mjs`, `public/editor.html`, `public/index.html` (`EVENT_CATS`), `public/content.json` (16 events reclassified), `tests/backend.spec.js`.
+**Files:** `functions/api/ticketmaster-fetch.js`, `scripts/daily-refresh.mjs`, `public/editor.html`, `public/index.html` (`EVENT_CATS`), `public/content.json` (16 events reclassified), `tests/backend.spec.js`. Bumped `public/sw.js` to **v1.79.0**.
 
 ---
 
