@@ -254,24 +254,49 @@ test.describe('Backend: ticketmaster-fetch — pickImage', { tag: ['@backend'] }
 });
 
 test.describe('Backend: claude-proxy — origin allowlist', { tag: ['@backend'] }, () => {
-  test('allows same-origin (no Origin header) and *.pages.dev', () => {
-    expect(proxy.isAllowedOrigin('', {})).toBe(true);
-    expect(proxy.isAllowedOrigin('https://miami-ride.pages.dev', {})).toBe(true);
+  const SELF = 'https://miami-ride.example.com';
+
+  test('allows a same-origin request (editor calling its own Worker)', () => {
+    expect(proxy.isAllowedOrigin(SELF, {}, SELF)).toBe(true);
+    // Same-origin covers preview hosts too — the editor and proxy share a host.
+    expect(proxy.isAllowedOrigin('https://miami-ride.pages.dev', {}, 'https://miami-ride.pages.dev')).toBe(true);
   });
 
   test('allows any loopback origin/port (Wrangler dev)', () => {
-    expect(proxy.isAllowedOrigin('http://localhost:8788', {})).toBe(true);
-    expect(proxy.isAllowedOrigin('http://127.0.0.1:5500', {})).toBe(true);
-    expect(proxy.isAllowedOrigin('http://[::1]:3000', {})).toBe(true);
+    expect(proxy.isAllowedOrigin('http://localhost:8788', {}, SELF)).toBe(true);
+    expect(proxy.isAllowedOrigin('http://127.0.0.1:5500', {}, SELF)).toBe(true);
+    expect(proxy.isAllowedOrigin('http://[::1]:3000', {}, SELF)).toBe(true);
   });
 
   test('honors an explicit ALLOWED_ORIGIN from env', () => {
-    expect(proxy.isAllowedOrigin('https://my.app', { ALLOWED_ORIGIN: 'https://my.app' })).toBe(true);
+    expect(proxy.isAllowedOrigin('https://my.app', { ALLOWED_ORIGIN: 'https://my.app' }, SELF)).toBe(true);
   });
 
-  test('@negative denies arbitrary and malformed origins', () => {
-    expect(proxy.isAllowedOrigin('https://evil.com', {})).toBe(false);
-    expect(proxy.isAllowedOrigin('https://notpages.dev.evil.com', {})).toBe(false);
-    expect(proxy.isAllowedOrigin('not-a-url', {})).toBe(false);
+  test('@negative denies a missing Origin (non-browser client / curl)', () => {
+    // The old proxy allowed empty Origin, which let any non-browser client in.
+    expect(proxy.isAllowedOrigin('', {}, SELF)).toBe(false);
+  });
+
+  test('@negative denies cross-site, unrelated CDN, and malformed origins', () => {
+    expect(proxy.isAllowedOrigin('https://evil.com', {}, SELF)).toBe(false);
+    // A page an attacker hosts on their own *.pages.dev must NOT be allowed —
+    // it is not same-origin with our Worker.
+    expect(proxy.isAllowedOrigin('https://attacker.pages.dev', {}, SELF)).toBe(false);
+    expect(proxy.isAllowedOrigin('https://notpages.dev.evil.com', {}, SELF)).toBe(false);
+    expect(proxy.isAllowedOrigin('not-a-url', {}, SELF)).toBe(false);
+  });
+});
+
+test.describe('Backend: claude-proxy — prompt size guard', { tag: ['@backend'] }, () => {
+  test('counts string and structured message content', () => {
+    expect(proxy.promptChars([{ role: 'user', content: 'hello' }])).toBe(5);
+    expect(proxy.promptChars([
+      { role: 'user', content: [{ type: 'text', text: 'ab' }, { type: 'text', text: 'cde' }] },
+    ])).toBe(5);
+  });
+
+  test('@negative treats a non-array as unbounded (rejected upstream)', () => {
+    expect(proxy.promptChars('nope')).toBe(Infinity);
+    expect(proxy.promptChars(undefined)).toBe(Infinity);
   });
 });

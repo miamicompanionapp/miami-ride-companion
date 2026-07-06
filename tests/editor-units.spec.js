@@ -7,6 +7,8 @@
 // Tags: @editor @unit  →  `npm run test:editor` covers all dashboard tests.
 // Base runner (not ./fixtures): pure-logic assertions, no console-error gate.
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
 
 // Unlock once per test so init() has loaded CONTENT (the default PIN per CLAUDE.md).
 async function unlock(page) {
@@ -201,5 +203,16 @@ test.describe('Editor units: PIN + publish guards', { tag: ['@editor', '@unit'] 
   test('@negative publishContent without GitHub settings bounces to the Settings panel', async ({ page }) => {
     await page.evaluate(() => { localStorage.removeItem('githubSettings'); return publishContent(); });
     await expect(page.locator('#panel-settings')).toHaveClass(/active/);
+  });
+});
+
+test.describe('SW offline fallback page: dashboard opened with no connection', { tag: ['@editor', '@unit'] }, () => {
+  test('offline fallback offers both a retry and a way back to the passenger app', () => {
+    const swSrc = fs.readFileSync(path.join(__dirname, '..', 'public', 'sw.js'), 'utf8');
+    const match = swSrc.match(/const OFFLINE_EDITOR_HTML = `([\s\S]*?)`;/);
+    expect(match).not.toBeNull();
+    const html = match[1];
+    expect(html).toContain("onclick=\"location.reload()\"");
+    expect(html).toContain("onclick=\"location.href='/'\"");
   });
 });

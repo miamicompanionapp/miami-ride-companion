@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-02 (Wordle skip button)
+Last updated: 2026-07-06 (Security: hardened Claude proxy; Perf: resized venue images 27MB→9MB)
 Owner: Abdullah
 
 
@@ -24,7 +24,13 @@ NEXT UP — open items, ranked  (updated 2026-07-01)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
-  1. [X] #36  BUG: landing images blink on every GPS re-render — DONE 2026-06-23
+  1. [X] #60  PERF: venue images oversized (27MB) — resized to ≤1400px, dropped 3 orphans — DONE 2026-07-06 (SW v1.78.0)
+  1. [X] #59  SECURITY: Claude proxy open to abuse — same-origin gate, model/token caps, per-IP rate limit — DONE 2026-07-06
+  1. [X] #58  Remove stale hardcoded build hash from footer (kept content-sync timestamp) — DONE 2026-07-05
+  1. [X] #57  BUG: language section pulse flashed 4x on attractor dismiss, too distracting — DONE 2026-07-05
+  1. [X] #56  BUG: "Still browsing?" inactivity modal small vs attractor/thanks — DONE 2026-07-04
+  1. [X] #55  BUG: stale session survives long screen-sleep gap — DONE 2026-07-04
+  2. [X] #36  BUG: landing images blink on every GPS re-render — DONE 2026-06-23
   2. [~] #42  Editor publish — auto-increment SW cache version — DROPPED (daily refresh handles it)
   3. #43  Thanks/inactivity screen — bilingual EN + ES boxes
   4. #44  Game leaderboards — best scores with seeded placeholders
@@ -213,6 +219,33 @@ OPEN ITEMS
           Tap pre-selects that category and navigates to Events tab. See #51 in backlog_archive.md.
 
 [X] 50. Ticketmaster fetch — surface high-profile events. DONE 2026-06-23. See archive.
+
+[X] 55. BUG: stale session survives long screen-sleep gap. DONE 2026-07-04.
+        - Found via analytics: a session's tap gap included a 49-minute silent
+          stretch instead of ending via the normal ~2min idle→attractor→modal→
+          reset chain. Root cause: no Wake Lock, so a sleeping/backgrounded tab
+          pauses setTimeout/setInterval; the stale inactivityTimer got silently
+          wiped and re-armed by the next tap instead of ever firing. Fix: track
+          lastActivityTime (updated in resetInactivity()); on visibilitychange
+          back to visible, force endSession('stale_gap') if the gap exceeds
+          STALE_SESSION_MS (10 min), then reset to home. See backlog_archive.md.
+
+[X] 56. BUG: "Still browsing?" inactivity modal small vs attractor/thanks cards. DONE 2026-07-04.
+        - Attractor card and thanks screen were previously sized up (680px width,
+          38px headline, 88px icon) but the inactivity ("Still browsing?") modal
+          in between was left at its old small size (340px, 20px title, 36px
+          icon), making it look out of place. Fix: matched .inactivity-box sizing
+          to .attractor-card/.thanks-inner (width, padding, border-radius, gold
+          border/shadow, gold accent bar, title/sub font sizes), scaled up the
+          countdown ring and CTA button proportionally. See backlog_archive.md.
+
+[X] 57. BUG: offline dashboard fallback page had no way out. DONE 2026-07-05.
+        - Opening editor.html with zero connectivity served the SW's inlined
+          OFFLINE_EDITOR_HTML fallback, which only had a "Try again" button
+          (location.reload()) — a dead end if there's genuinely no signal.
+          Fix: added a second "Back to passenger app" button (location.href='/')
+          since index.html is fully cached and works offline. SW v1.75.0.
+          See backlog_archive.md.
 
 
 KNOWN TRANSITIONAL STATE (not bugs)

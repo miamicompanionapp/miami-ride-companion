@@ -233,7 +233,7 @@
       0%, 100% { background: transparent; box-shadow: none; }
       50% { background: rgba(25,160,168,0.15); box-shadow: 0 0 0 1px rgba(25,160,168,0.45), inset 0 0 12px rgba(25,160,168,0.08); }
     }
-    .lang-section.pulsing { border-radius: 10px; animation: lang-pulse 900ms ease-in-out 4; }
+    .lang-section.pulsing { border-radius: 10px; animation: lang-pulse 900ms ease-in-out 1; }
 
     .sidebar-footer { padding: 12px 16px; border-top: 0.5px solid rgba(255,255,255,0.08); }
     .tip-text {
@@ -1071,31 +1071,38 @@
     }
     .inactivity-overlay.visible { opacity: 1; pointer-events: all; }
     .inactivity-box {
-      background: var(--card-solid); border-radius: 18px;
-      padding: 28px 32px; width: 340px; text-align: center;
-      border: 0.5px solid var(--border);
+      background: var(--card-solid);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 30px;
+      padding: 52px 52px 44px; width: min(680px, 92vw); text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.08);
       transform: scale(0.96);
       transition: transform 400ms ease;
     }
     .inactivity-overlay.visible .inactivity-box { transform: scale(1); }
-    .inactivity-icon { font-size: 36px; margin-bottom: 12px; }
-    .inactivity-title { font-family: var(--font-display); font-size: 20px; color: var(--heading); font-weight: 500; margin-bottom: 6px; }
-    .inactivity-sub { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
-    .countdown-ring { width: 64px; height: 64px; margin: 0 auto 18px; position: relative; display: flex; align-items: center; justify-content: center; }
+    .inactivity-box::before {
+      content: ''; display: block;
+      width: 40px; height: 2px; border-radius: 2px;
+      background: var(--gold); margin: 0 auto 22px;
+    }
+    .inactivity-icon { font-size: 88px; line-height: 1; margin-bottom: 22px; }
+    .inactivity-title { font-family: var(--font-display); font-size: 38px; color: var(--heading); font-weight: 500; margin-bottom: 14px; line-height: 1.25; }
+    .inactivity-sub { font-size: 18px; color: var(--muted); line-height: 1.55; margin-bottom: 28px; }
+    .countdown-ring { width: 84px; height: 84px; margin: 0 auto 26px; position: relative; display: flex; align-items: center; justify-content: center; }
     .countdown-svg { position: absolute; inset: 0; transform: rotate(-90deg); }
     .countdown-track { fill: none; stroke: var(--teal-mist); stroke-width: 4; }
     .countdown-progress { fill: none; stroke: var(--teal); stroke-width: 4; stroke-linecap: round; stroke-dasharray: 175.9; transition: stroke-dashoffset 1s linear; }
-    .countdown-num { font-family: var(--font-display); font-size: 26px; color: var(--heading); font-weight: 500; position: relative; z-index: 1; }
+    .countdown-num { font-family: var(--font-display); font-size: 32px; color: var(--heading); font-weight: 500; position: relative; z-index: 1; }
     .inactivity-cta {
-      width: 100%; padding: 13px; border-radius: 11px; border: none;
+      width: 100%; padding: 16px; border-radius: 13px; border: none;
       background: var(--navy-deep); color: white;
-      font-family: var(--font-body); font-size: 13px; font-weight: 600;
+      font-family: var(--font-body); font-size: 15px; font-weight: 600;
       cursor: pointer; display: flex; align-items: center; justify-content: center;
-      gap: 6px; margin-bottom: 8px;
+      gap: 8px; margin-bottom: 12px;
     }
-    .inactivity-cta i { font-size: 14px; }
+    .inactivity-cta i { font-size: 16px; }
     .inactivity-cta:active { opacity: 0.85; }
-    .inactivity-dismiss { font-size: 11px; color: #B0BCC8; cursor: pointer; }
+    .inactivity-dismiss { font-size: 13px; color: #B0BCC8; cursor: pointer; }
 
     /* ── Attractor / Idle Teaser Overlay ─────────────────────── */
     .attractor-overlay {
@@ -3365,11 +3372,6 @@
 
 <script>
 // ════════════════════════════════════════════════════════════
-// BUILD INFO
-// ════════════════════════════════════════════════════════════
-const APP_BUILD = 'a5c6ecb';
-
-// ════════════════════════════════════════════════════════════
 // STATE
 // ════════════════════════════════════════════════════════════
 let CONTENT = null;
@@ -3934,6 +3936,14 @@ const ATTRACTOR_MS = 60000;   // kept for reference; actual delay reads settings
 const COUNTDOWN_S  = 4;
 const THANKS_S     = 5;
 
+// Screen sleep / tab backgrounding pauses setTimeout/setInterval (no wake lock),
+// so the idle→attractor→modal→reset chain can silently miss its whole window.
+// lastActivityTime lets the visibilitychange handler detect that and force-close
+// a session that's been sitting untouched for way longer than the ~2min the
+// normal flow takes end to end.
+let lastActivityTime = Date.now();
+const STALE_SESSION_MS = 10 * 60 * 1000;
+
 // Rest / blackout screen
 let restActive = false;
 let restClockTimer = null;
@@ -4083,7 +4093,22 @@ function bootApp() {
   openDB();
   loadContent();
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') refreshContent();
+    if (document.visibilityState !== 'visible') return;
+    // The tab/screen may have been asleep or backgrounded for a while — timers
+    // don't run then, so the normal idle→attractor→modal→reset chain (which
+    // only takes ~2min) can never have fired. Force-close a session that's been
+    // untouched way longer than that instead of silently stitching it onto
+    // whatever the passenger does next.
+    if (sessionStart && Date.now() - lastActivityTime > STALE_SESSION_MS) {
+      hideAttractor();
+      dismissInactivity(true);
+      clearTimeout(inactivityTimer);
+      endSession('stale_gap');
+      switchTab('guide', true);
+      setFilter('featured', true);
+      resetInactivity();
+    }
+    refreshContent();
   });
   initInactivity();
   initSecretTap();
@@ -4094,7 +4119,6 @@ function bootApp() {
   document.getElementById('tap-best-display').textContent = tapBest;
   document.getElementById('tap-best-txt').textContent = tapBest;
   document.getElementById('high-score-display').textContent = `${gt('tapBestLabel')} ${tapBest}`;
-  document.getElementById('build-tag').textContent = `build ${APP_BUILD}`;
 }
 
 // ── Service Worker Registration ──────────────────────────────
@@ -4150,12 +4174,12 @@ function applyContent() {
   startSubtitleRotator();
   prewarmEventImages();
   // No startSession() here — a session opens lazily on the first in-app tap.
-  // Show content timestamp alongside build hash
+  // Show content timestamp so we can tell how fresh the last sync was
   if (CONTENT && CONTENT.meta && CONTENT.meta.lastUpdated) {
     const d = new Date(CONTENT.meta.lastUpdated);
     const ts = d.toLocaleDateString('en-US', { month:'short', day:'numeric' })
               + ' ' + d.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
-    document.getElementById('build-tag').textContent = `build ${APP_BUILD} · content ${ts}`;
+    document.getElementById('build-tag').textContent = `content ${ts}`;
   }
 }
 
@@ -7312,6 +7336,7 @@ function inactivityTapGuard(e) {
 }
 
 function resetInactivity() {
+  lastActivityTime = Date.now();
   // While the rest screen is up, taps are handled by exitRest.
   if (restActive) return;
   // While the attractor is up, only onAttractorTap() dismisses it. The global
@@ -8478,7 +8503,7 @@ function startSession(firstKey) {
 
 // Every idle reset (idle→thanks, or rest auto-wake) counts as a cycle. A session
 // record is written only if the passenger actually tapped something this cycle.
-function endSession() {
+function endSession(endType = 'inactivity') {
   if (!analyticsDisabled) recordCycle();
   const start = sessionStart;
   const firstTap = sessionFirstTap;
@@ -8498,7 +8523,7 @@ function endSession() {
     tapTotal,
     firstTap,
     lang,
-    endType: 'inactivity'
+    endType
   };
   db.transaction('sessions', 'readwrite').objectStore('sessions').add(session);
 }

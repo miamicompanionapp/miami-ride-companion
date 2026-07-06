@@ -7,6 +7,86 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] PERF: venue images oversized — resized 27MB → 9MB  *(DONE 2026-07-06, SW v1.78.0)*
+
+A full-repo review flagged `public/images/venues/` at **31 MB total**, dominated by source-resolution originals shown in small tablet cards: `joey-aventura.jpg` was **6.6 MB at 3500×2334**, `r-house-wynwood.jpg` 3.4 MB, plus 1–1.4 MB PAMM/club-space/gulfstream/mandolin/underline files. Wasted first-load bandwidth and bloated the git repo.
+
+**Fix:** ran a one-off `sharp` script (buffered input + rename-retry to dodge Windows file locks) over the venues dir — resize to max **1400px** wide (ample for a 1024px tablet at ~1.3×), re-encode format-preserving (jpeg q82 mozjpeg / webp q82 / avif q60 / png level-9 palette), and only keep the output when it actually shrank. Filenames and extensions unchanged, so **no `content.json` path edits and no SW precache-list changes**. Also removed 3 confirmed-orphan files not referenced anywhere in `public/`/`src/`/`functions/`: `el-turco.jpg` (also a corrupt/undecodable format), `medium-cool.png`, `timo-restaurant.png` (content references the `.jpg` variants).
+
+**Result:** `public/images/venues/` **27.4 MB → 9.2 MB** (14 files re-encoded, 3 orphans deleted). Verified every re-encode still decodes to a valid ≤1400px image via `file`. No test is practical for binary assets; the passenger suite (venue cards/sheets) stays green.
+
+**Files:** `public/images/venues/*` (re-encoded/removed). Bumped `public/sw.js` to **v1.78.0**.
+
+---
+
+### [X] SECURITY: hardened the Claude proxy against abuse  *(DONE 2026-07-06)*
+
+A full-repo review found `/api/claude-proxy` (which spends Abdullah's Anthropic credits) was effectively open: `isAllowedOrigin` returned `true` for a **missing Origin header**, so any non-browser client (curl/bot) sailed through; the `*.pages.dev`/`*.workers.dev` wildcard let an attacker's own Cloudflare-hosted page call it cross-site; and `body.model` + `body.max_tokens` were passed through unclamped, so a caller could request the most expensive model at max tokens. No rate limit → direct billing-drain vector.
+
+**Fix (defense in depth, in `functions/api/claude-proxy.js`):**
+1. **Origin gate rewritten** — `isAllowedOrigin(origin, env, selfOrigin)` now requires Origin to be present and to **equal the Worker's own origin** (`new URL(request.url).origin`), plus loopback for dev and an optional `env.ALLOWED_ORIGIN`. Missing Origin and the broad CDN wildcards are gone. (Same-origin covers real prod *and* preview hosts, since the editor and proxy share a host — nothing legitimate lost.) Documented that Origin can be spoofed by a non-browser client, so layers 2–4 are the real backstop.
+2. **Model pin** — the model is forced to an `ALLOWED_MODELS` allowlist (Sonnet/Haiku), else `DEFAULT_MODEL`.
+3. **Token + prompt caps** — `max_tokens` clamped to `MAX_TOKENS` (4096); total message text capped at `MAX_PROMPT_CHARS` (24k) via the new `promptChars()` helper; empty/invalid `messages[]` rejected 400.
+4. **Per-IP rate limit** — `isRateLimited()` uses the existing `BIZCARD_STATS` KV (no new binding) for a fixed-window `RATE_LIMIT_PER_HOUR` (40) per `cf-connecting-ip`, TTL'd; fails open if KV is absent so dev never blocks. Returns 429 when exceeded.
+
+The editor (`callClaude`, same-origin POST) is unaffected; the daily-refresh script calls Anthropic directly and never touches the proxy.
+
+**Tests:** `tests/backend.spec.js` — rewrote the origin-allowlist suite for the new `selfOrigin` signature (now asserts missing Origin and cross-site `*.pages.dev` are **denied**), added a `promptChars` size-guard suite. **35 backend tests pass.**
+
+**Files:** `functions/api/claude-proxy.js` (rewrite), `tests/backend.spec.js`.
+
+---
+
+### [X] Remove stale hardcoded build hash from footer  *(DONE 2026-07-05, SW v1.77.0)*
+
+Abdullah noticed a "build a5c6ecb" tag in the bottom-left footer and asked where it came from. It was a manually hardcoded `const APP_BUILD = 'a5c6ecb'` (a real but very old commit hash — no build step ever updates it, since this project intentionally has no bundler/build process). Decision: not worth wiring up a real build-hash injection; just drop it and keep the useful part — the content.json last-sync timestamp.
+
+**Fix:** removed the `APP_BUILD` constant and both places that read it; `#build-tag` now shows only `content ${ts}` (no `build ...` prefix).
+
+**File:** `public/index.html` — removed `APP_BUILD` const (was ~line 3377), `init()` (~line 4127), `applyContent()` (~line 4188). Bumped `public/sw.js` to v1.77.0.
+
+---
+
+### [X] BUG: language section pulse flashed 4x on attractor dismiss  *(DONE 2026-07-05, SW v1.76.0)*
+
+Abdullah reported the language section (sidebar footer) flashing multiple times in a row every time the attractor screen was dismissed — too distracting. The `.lang-section.pulsing` CSS animation was set to repeat 4 iterations (`animation: lang-pulse 900ms ease-in-out 4;`), triggered once per tap in `hideAttractor()`.
+
+**Fix:** changed the iteration count from `4` to `1` so the pulse fires exactly once per dismissal.
+
+**File:** `public/index.html` — CSS rule `.lang-section.pulsing` (line ~236). Bumped `public/sw.js` to v1.76.0.
+
+---
+
+### [X] BUG: offline dashboard fallback page had no way out  *(DONE 2026-07-05, SW v1.75.0)*
+
+Abdullah reported that opening the driver dashboard with no internet connection served the SW's offline fallback page, but that page only had a "Try again" button — a dead end if the car genuinely has no signal (dead zone, airplane mode, etc.), with no way to get back to the passenger-facing app.
+
+**Fix:** added a second "Back to passenger app" button to `OFFLINE_EDITOR_HTML` in sw.js, styled as a secondary/outline button next to the existing primary "Try again". It navigates to `/` (`index.html`), which is fully precached and works offline, so passengers/drivers are never stuck on a dead-end screen.
+
+**File:** `public/sw.js` — `OFFLINE_EDITOR_HTML` (added `.actions`/`.secondary` CSS + second button). Bumped to v1.75.0.
+
+---
+
+### [X] BUG: "Still browsing?" inactivity modal small vs attractor/thanks cards  *(DONE 2026-07-04, SW v1.74.0)*
+
+The attractor overlay card and thanks screen had both been sized up earlier (680px width, 30px radius, 52px padding, gold border/shadow/accent bar, 38px headline, 18px sub, 88px icon) but the "Still browsing?" inactivity modal in between them was left at its old compact size (340px, 20px title, 12px sub, 36px icon), so it looked visually inconsistent sandwiched between the two larger screens in the idle→attractor→modal→thanks flow.
+
+**Fix:** matched `.inactivity-box` to `.attractor-card`/`.thanks-inner`: width `min(680px, 92vw)`, `border-radius: 30px`, `padding: 52px 52px 44px`, gold border + box-shadow, added the `::before` gold accent bar. Scaled up `.inactivity-icon` (36px→88px), `.inactivity-title` (20px→38px, added `font-weight`/`line-height` to match), `.inactivity-sub` (12px→18px), the countdown ring (64px→84px, number 26px→32px), and the CTA button/dismiss text proportionally.
+
+**File:** `public/index.html` — CSS rules `.inactivity-box`, `.inactivity-icon`, `.inactivity-title`, `.inactivity-sub`, `.countdown-ring`, `.countdown-num`, `.inactivity-cta`, `.inactivity-dismiss`. `public/sw.js` bumped to v1.74.0.
+
+---
+
+### [X] BUG: stale session survives long screen-sleep gap  *(DONE 2026-07-04, SW v1.73.0)*
+
+Analytics export on 2026-07-04 turned up a session recorded at 3873s (64.5 min) that included a 49-minute stretch with zero taps in the middle — far longer than the app's entire idle→attractor→"Still browsing?"→thanks→reset chain is designed to take (~2 minutes: 60s idle delay + 60s attractor + 4s countdown + 5s thanks). Root cause: the app has no Screen Wake Lock, and the only `visibilitychange` handler just called `refreshContent()` on wake — it never checked or re-armed the inactivity flow. When the tablet's screen slept or the tab was backgrounded, `setTimeout`/`setInterval` paused (browser-standard behavior), so the already-armed `inactivityTimer`/`attractorDoneTimer` silently missed their fire time. The next real tap after waking went through the normal `resetInactivity()` path, which just wiped the stale timer and armed a fresh one — the attractor/modal/end-session sequence never got a chance to run, so the "session" silently absorbed the entire sleep gap instead of ending.
+
+**Fix:** added `lastActivityTime` (module-level, updated at the top of `resetInactivity()`) and `STALE_SESSION_MS` (10 min). The `visibilitychange` handler now checks, on becoming visible again, whether `Date.now() - lastActivityTime > STALE_SESSION_MS` while a session is open (`sessionStart` set); if so it force-closes the session via `endSession('stale_gap')` (new optional `endType` param, default `'inactivity'`, so these are distinguishable in exports), clears any stale attractor/inactivity-modal state, and resets to the home guide view — same as a normal passenger-changeover reset, just triggered by the wake event instead of the timer chain.
+
+**File:** `public/index.html` — `resetInactivity()` (sets `lastActivityTime`), `endSession()` (now takes `endType` param), `bootApp()`'s `visibilitychange` listener (stale-gap check + force reset), new constants `lastActivityTime`/`STALE_SESSION_MS` near `COUNTDOWN_S`/`THANKS_S`. `public/sw.js` bumped to v1.73.0.
+
+---
+
 ### [X] Wordle: Skip button (0 pts, reveals answer)  *(DONE 2026-07-02, SW v1.72.0)*
 
 Added a muted "Skip ▶" button to the score row (left side, score chip stays right) so passengers who have no idea can bail out of a word and get 0 pts rather than exhausting all 6 guesses. Tapping it calls `wSkip()`: sets `wRoundDone`, hides both the Skip and Hint buttons, hides the keyboard, and calls `wShowWordResult(false, 0, answer)` to show the lost-state card with the answer revealed. Guards: a no-op if the round is already done. Translated in all 4 languages (`wlSkipBtn`). 2 new unit tests added (skip flow + double-skip guard), all 8 Wordle tests pass.
