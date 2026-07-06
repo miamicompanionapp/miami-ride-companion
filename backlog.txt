@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-05 (Removed stale build hash from footer, kept content-sync timestamp)
+Last updated: 2026-07-06 (Security: hardened Claude proxy; Perf: resized venue images 27MB→9MB)
 Owner: Abdullah
 
 
@@ -24,6 +24,8 @@ NEXT UP — open items, ranked  (updated 2026-07-01)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #60  PERF: venue images oversized (27MB) — resized to ≤1400px, dropped 3 orphans — DONE 2026-07-06 (SW v1.78.0)
+  1. [X] #59  SECURITY: Claude proxy open to abuse — same-origin gate, model/token caps, per-IP rate limit — DONE 2026-07-06
   1. [X] #58  Remove stale hardcoded build hash from footer (kept content-sync timestamp) — DONE 2026-07-05
   1. [X] #57  BUG: language section pulse flashed 4x on attractor dismiss, too distracting — DONE 2026-07-05
   1. [X] #56  BUG: "Still browsing?" inactivity modal small vs attractor/thanks — DONE 2026-07-04

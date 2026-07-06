@@ -7,6 +7,36 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] PERF: venue images oversized — resized 27MB → 9MB  *(DONE 2026-07-06, SW v1.78.0)*
+
+A full-repo review flagged `public/images/venues/` at **31 MB total**, dominated by source-resolution originals shown in small tablet cards: `joey-aventura.jpg` was **6.6 MB at 3500×2334**, `r-house-wynwood.jpg` 3.4 MB, plus 1–1.4 MB PAMM/club-space/gulfstream/mandolin/underline files. Wasted first-load bandwidth and bloated the git repo.
+
+**Fix:** ran a one-off `sharp` script (buffered input + rename-retry to dodge Windows file locks) over the venues dir — resize to max **1400px** wide (ample for a 1024px tablet at ~1.3×), re-encode format-preserving (jpeg q82 mozjpeg / webp q82 / avif q60 / png level-9 palette), and only keep the output when it actually shrank. Filenames and extensions unchanged, so **no `content.json` path edits and no SW precache-list changes**. Also removed 3 confirmed-orphan files not referenced anywhere in `public/`/`src/`/`functions/`: `el-turco.jpg` (also a corrupt/undecodable format), `medium-cool.png`, `timo-restaurant.png` (content references the `.jpg` variants).
+
+**Result:** `public/images/venues/` **27.4 MB → 9.2 MB** (14 files re-encoded, 3 orphans deleted). Verified every re-encode still decodes to a valid ≤1400px image via `file`. No test is practical for binary assets; the passenger suite (venue cards/sheets) stays green.
+
+**Files:** `public/images/venues/*` (re-encoded/removed). Bumped `public/sw.js` to **v1.78.0**.
+
+---
+
+### [X] SECURITY: hardened the Claude proxy against abuse  *(DONE 2026-07-06)*
+
+A full-repo review found `/api/claude-proxy` (which spends Abdullah's Anthropic credits) was effectively open: `isAllowedOrigin` returned `true` for a **missing Origin header**, so any non-browser client (curl/bot) sailed through; the `*.pages.dev`/`*.workers.dev` wildcard let an attacker's own Cloudflare-hosted page call it cross-site; and `body.model` + `body.max_tokens` were passed through unclamped, so a caller could request the most expensive model at max tokens. No rate limit → direct billing-drain vector.
+
+**Fix (defense in depth, in `functions/api/claude-proxy.js`):**
+1. **Origin gate rewritten** — `isAllowedOrigin(origin, env, selfOrigin)` now requires Origin to be present and to **equal the Worker's own origin** (`new URL(request.url).origin`), plus loopback for dev and an optional `env.ALLOWED_ORIGIN`. Missing Origin and the broad CDN wildcards are gone. (Same-origin covers real prod *and* preview hosts, since the editor and proxy share a host — nothing legitimate lost.) Documented that Origin can be spoofed by a non-browser client, so layers 2–4 are the real backstop.
+2. **Model pin** — the model is forced to an `ALLOWED_MODELS` allowlist (Sonnet/Haiku), else `DEFAULT_MODEL`.
+3. **Token + prompt caps** — `max_tokens` clamped to `MAX_TOKENS` (4096); total message text capped at `MAX_PROMPT_CHARS` (24k) via the new `promptChars()` helper; empty/invalid `messages[]` rejected 400.
+4. **Per-IP rate limit** — `isRateLimited()` uses the existing `BIZCARD_STATS` KV (no new binding) for a fixed-window `RATE_LIMIT_PER_HOUR` (40) per `cf-connecting-ip`, TTL'd; fails open if KV is absent so dev never blocks. Returns 429 when exceeded.
+
+The editor (`callClaude`, same-origin POST) is unaffected; the daily-refresh script calls Anthropic directly and never touches the proxy.
+
+**Tests:** `tests/backend.spec.js` — rewrote the origin-allowlist suite for the new `selfOrigin` signature (now asserts missing Origin and cross-site `*.pages.dev` are **denied**), added a `promptChars` size-guard suite. **35 backend tests pass.**
+
+**Files:** `functions/api/claude-proxy.js` (rewrite), `tests/backend.spec.js`.
+
+---
+
 ### [X] Remove stale hardcoded build hash from footer  *(DONE 2026-07-05, SW v1.77.0)*
 
 Abdullah noticed a "build a5c6ecb" tag in the bottom-left footer and asked where it came from. It was a manually hardcoded `const APP_BUILD = 'a5c6ecb'` (a real but very old commit hash — no build step ever updates it, since this project intentionally has no bundler/build process). Decision: not worth wiring up a real build-hash injection; just drop it and keep the useful part — the content.json last-sync timestamp.
