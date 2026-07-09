@@ -1,30 +1,30 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-08T13:53:23.524Z",
+    "lastUpdated": "2026-07-09T14:49:19.958Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-07-08T13:53:23.524Z",
+    "fetchedAt": "2026-07-09T14:49:19.958Z",
     "current": {
-      "temp_f": 86,
-      "feels_f": 96,
+      "temp_f": 87,
+      "feels_f": 95,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 72,
-      "wind_mph": 7,
+      "humidity": 68,
+      "wind_mph": 8,
       "rain_chance": 3,
-      "weathercode": 0
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-07-08",
+        "date": "2026-07-09",
         "high_f": 91,
-        "low_f": 81,
+        "low_f": 80,
         "weathercode": 3,
         "rain_chance": 3,
         "description": {
@@ -35,11 +35,11 @@
         }
       },
       {
-        "date": "2026-07-09",
+        "date": "2026-07-10",
         "high_f": 90,
         "low_f": 79,
         "weathercode": 3,
-        "rain_chance": 6,
+        "rain_chance": 23,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -48,37 +48,37 @@
         }
       },
       {
-        "date": "2026-07-10",
-        "high_f": 89,
-        "low_f": 82,
-        "weathercode": 53,
-        "rain_chance": 23,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-07-11",
         "high_f": 89,
-        "low_f": 81,
-        "weathercode": 95,
-        "rain_chance": 23,
+        "low_f": 78,
+        "weathercode": 3,
+        "rain_chance": 17,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-07-12",
         "high_f": 89,
-        "low_f": 80,
+        "low_f": 82,
         "weathercode": 3,
-        "rain_chance": 7,
+        "rain_chance": 11,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
+      },
+      {
+        "date": "2026-07-13",
+        "high_f": 89,
+        "low_f": 84,
+        "weathercode": 3,
+        "rain_chance": 20,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -89,51 +89,45 @@
     ],
     "hourly": [
       {
-        "hour": "09:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
         "hour": "10:00",
-        "temp_f": 86,
-        "weathercode": 0,
+        "temp_f": 87,
+        "weathercode": 1,
         "rain_chance": 1
       },
       {
         "hour": "11:00",
-        "temp_f": 87,
-        "weathercode": 0,
+        "temp_f": 88,
+        "weathercode": 1,
         "rain_chance": 1
       },
       {
         "hour": "12:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 91,
+        "temp_f": 90,
         "weathercode": 1,
         "rain_chance": 2
       },
       {
+        "hour": "13:00",
+        "temp_f": 90,
+        "weathercode": 1,
+        "rain_chance": 2
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 90,
+        "weathercode": 1,
+        "rain_chance": 3
+      },
+      {
         "hour": "15:00",
         "temp_f": 91,
-        "weathercode": 0,
+        "weathercode": 1,
         "rain_chance": 3
       },
       {
         "hour": "16:00",
-        "temp_f": 90,
-        "weathercode": 0,
+        "temp_f": 89,
+        "weathercode": 1,
         "rain_chance": 3
       },
       {
@@ -146,7 +140,7 @@
         "hour": "18:00",
         "temp_f": 88,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 3
       },
       {
         "hour": "19:00",
@@ -156,19 +150,19 @@
       },
       {
         "hour": "20:00",
-        "temp_f": 83,
+        "temp_f": 85,
         "weathercode": 0,
         "rain_chance": 2
       },
       {
         "hour": "21:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 3
       },
       {
         "hour": "22:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 0,
         "rain_chance": 2
       },
@@ -181,56 +175,62 @@
       {
         "hour": "00:00",
         "temp_f": 81,
-        "weathercode": 2,
-        "rain_chance": 1
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "01:00",
         "temp_f": 81,
-        "weathercode": 2,
+        "weathercode": 0,
         "rain_chance": 2
       },
       {
         "hour": "02:00",
         "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 1
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "03:00",
         "temp_f": 81,
-        "weathercode": 2,
-        "rain_chance": 1
+        "weathercode": 0,
+        "rain_chance": 8
       },
       {
         "hour": "04:00",
-        "temp_f": 80,
+        "temp_f": 81,
         "weathercode": 1,
-        "rain_chance": 1
+        "rain_chance": 5
       },
       {
         "hour": "05:00",
         "temp_f": 80,
-        "weathercode": 0,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "06:00",
         "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 2,
+        "rain_chance": 2
       },
       {
         "hour": "07:00",
-        "temp_f": 79,
+        "temp_f": 80,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "08:00",
-        "temp_f": 82,
+        "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 3
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 85,
+        "weathercode": 2,
+        "rain_chance": 7
       }
     ]
   },
@@ -2780,31 +2780,6 @@
         "category": "music"
       },
       {
-        "id": "tm_1783434150569_x7el",
-        "title": {
-          "en": "School Of Rock: Ya Edition: A Summer Theater Camp Production",
-          "es": "Escuela de Rock: Edición Ya: Una Producción del Campamento de Teatro de Verano",
-          "pt": "School of Rock: Ya Edition: Uma Produção do Acampamento de Teatro de Verão",
-          "fr": "School of Rock: Ya Edition: Une Production du Camp de Théâtre d'Été"
-        },
-        "date": "2026-07-08",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fschool-of-rock-ya-edition-a-ft-lauderdale-florida-07-08-2026%2Fevent%2F0D0064C1D9CAE15E&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/38f/a3101cd8-58e6-4a2e-aa98-b889e704738f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Rock got no reason, rock got no rhyme... You better get me to school on time! Andrew Lloyd Webber's School of Rock: Young Actors Edition follows Dewey Finn, a failed, wannabe rock star who decides to earn an extra bit of cash by posing as a substitute teacher at a prestigious prep school. There he turns a class of straight-A pupils into a guitar-shredding, bass-slapping, mind-blowing rock band. Bu",
-          "es": "El rock no tiene razón, el rock no tiene rima... ¡Mejor me llevas a la escuela a tiempo! La Escuela de Rock de Andrew Lloyd Webber: Edición de Actores Jóvenes sigue a Dewey Finn, una estrella de rock fracasada y aspirante que decide ganar dinero extra haciéndose pasar por maestro sustituto en una prestigiosa escuela preparatoria. Allí convierte una clase de estudiantes con calificaciones perfectas en una banda de rock que toca guitarra, bajo y es simplemente alucinante.",
-          "pt": "Rock não tem razão, rock não tem rima... É melhor você me levar para a escola na hora! A School of Rock de Andrew Lloyd Webber: Young Actors Edition segue Dewey Finn, uma estrela de rock fracassada e aspirante que decide ganhar um dinheiro extra fingindo ser um professor substituto em uma prestigiosa escola preparatória. Lá ele transforma uma classe de alunos com notas A em uma banda de rock que toca guitarra, baixo e é absolutamente impressionante.",
-          "fr": "Le rock n'a pas de raison, le rock n'a pas de rime... Tu ferais mieux de m'amener à l'école à l'heure! La School of Rock d'Andrew Lloyd Webber: Young Actors Edition suit Dewey Finn, une star du rock ratée et en herbe qui décide de gagner un peu d'argent supplémentaire en se faisant passer pour un professeur remplaçant dans une prestigieuse école préparatoire. Là, il transforme une classe d'élèves ayant des notes impeccables en un groupe de rock incroyable qui joue de la guitare et de la basse."
-        },
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
         "id": "tm_1783434150569_4m2i",
         "title": {
           "en": "Shrek Jr.: A Summer Theater Camp Production",
@@ -2901,81 +2876,6 @@
         "category": "arts"
       },
       {
-        "id": "rss_1783518779646_m5qs",
-        "title": {
-          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 7/8/26",
-          "es": "Damas que Almuerzan: Espectáculo de Drag Show Miércoles por la Tarde 7/8/26",
-          "pt": "Damas que Almoçam: Show de Drag Quarta-feira à Tarde 7/8/26",
-          "fr": "Les Dames qui Déjeunent: Spectacle de Drag Show Mercredi Après-midi 7/8/26"
-        },
-        "date": "2026-07-08",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/07/07/ladies-who-lunch-wednesday-afternoon-drag-show-7-8-26/",
-        "free": true,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los miércoles son para los chicos que desayunan bellamente en Palace South Beach. Únete a nosotros",
-          "pt": "Quartas são para os rapazes que almoçam lindamente no Palace South Beach. Junte-se a nós",
-          "fr": "Les mercredis sont pour les garçons qui brunchent magnifiquement au Palace South Beach. Rejoignez-nous"
-        },
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
-      },
-      {
-        "id": "tm_1783518780253_cui3",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-07-08",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza a las 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa às 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence à 11h00 · Mana Wynwood Convention Center"
-        },
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1783518780253_s6bc",
-        "title": {
-          "en": "Miami Marlins vs. Seattle Mariners",
-          "es": "Miami Marlins vs. Seattle Mariners",
-          "pt": "Miami Marlins vs. Seattle Mariners",
-          "fr": "Miami Marlins contre Seattle Mariners"
-        },
-        "date": "2026-07-08",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qaxk&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Début 18:40 · LoanDepot Park"
-        },
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
         "id": "tm_1783518780253_aici",
         "title": {
           "en": "Dennis Watkins' The Magic Parlour",
@@ -3024,6 +2924,277 @@
         "category": "music",
         "lat": 25.817805,
         "lng": -80.122143
+      },
+      {
+        "id": "rss_1783608520221_25f6",
+        "title": {
+          "en": "Shes All That Social: Pilates HIIT 7/11/26",
+          "es": "Shes All That Social: Pilates HIIT 7/11/26",
+          "pt": "Shes All That Social: Pilates HIIT 7/11/26",
+          "fr": "Shes All That Social: Pilates HIIT 7/11/26"
+        },
+        "date": "2026-07-11",
+        "venue": "W Miami",
+        "address": "485 Brickell Ave, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/07/08/shes-all-that-social-pilates-hiit-7-11-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/IMG_7194-350x441.jpg",
+        "description": {
+          "en": "us on Saturday, July 11th from 10AM–1PM at the iconic W Miami in Brickell for Pilates HIIT: Summer",
+          "es": "Únete el sábado 11 de julio de 10AM–1PM en el icónico W Miami en Brickell para Pilates HIIT: Summer",
+          "pt": "Junte-se a nós no sábado, 11 de julho de 10h–13h no icônico W Miami em Brickell para Pilates HIIT: Summer",
+          "fr": "Rejoignez-nous samedi 11 juillet de 10h à 13h au W Miami emblématique à Brickell pour Pilates HIIT: Summer"
+        },
+        "lat": 25.7687546,
+        "lng": -80.1895971,
+        "category": "community"
+      },
+      {
+        "id": "rss_1783608520221_19db",
+        "title": {
+          "en": "Pisco y Nazca Ceviche Making Class 7/28/26",
+          "es": "Clase de Elaboración de Ceviche Pisco y Nazca 7/28/26",
+          "pt": "Aula de Preparação de Ceviche Pisco y Nazca 7/28/26",
+          "fr": "Cours de Préparation de Ceviche Pisco y Nazca 7/28/26"
+        },
+        "date": "2026-07-28",
+        "venue": "Pisco y Nazca Ceviche Gastrobar",
+        "address": "8551 NW 53rd St A101, Doral, Florida, 33166",
+        "url": "https://www.soulofmiami.org/2026/07/08/pisco-y-nazca-ceviche-making-class-7-28-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/PISCOOOOOOOOOOOOOOOOO-350x420.jpg",
+        "description": {
+          "en": "y Nazca Ceviche Gastrobar invites guests to an exclusive Ceviche & Cocktail Making",
+          "es": "Pisco y Nazca Ceviche Gastrobar invita a sus huéspedes a una exclusiva clase de Ceviche y Cócteles",
+          "pt": "Pisco y Nazca Ceviche Gastrobar convida os hóspedes para uma aula exclusiva de Ceviche e Coquetéis",
+          "fr": "Pisco y Nazca Ceviche Gastrobar invite les clients à un cours exclusif de Ceviche et Cocktails"
+        },
+        "category": "community"
+      },
+      {
+        "id": "rss_1783608520221_hgbi",
+        "title": {
+          "en": "Final Match Screening & French Cuisine at Vilebrequin La Plage 7/19/26",
+          "es": "Transmisión de la Final y Cocina Francesa en Vilebrequin La Plage 7/19/26",
+          "pt": "Transmissão da Final e Culinária Francesa em Vilebrequin La Plage 7/19/26",
+          "fr": "Diffusion de la Finale et Cuisine Française à Vilebrequin La Plage 7/19/26"
+        },
+        "date": "2026-07-19",
+        "venue": "Vilebrequin La Plage",
+        "address": "1685 Washington Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/08/final-match-screening-french-cuisine-at-vilebrequin-la-plage-7-19-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/19853CAN_2133-Edit-2-350x263.jpg",
+        "description": {
+          "en": "Catch fan fever and French cuisine at Vilebrequin La Plage for a",
+          "es": "Siéntete la fiebre del fútbol y disfruta de cocina francesa en Vilebrequin La Plage",
+          "pt": "Sinta a febre do futebol e desfrute de culinária francesa em Vilebrequin La Plage",
+          "fr": "Ressentez la fièvre du football et savourez la cuisine française à Vilebrequin La Plage"
+        },
+        "lat": 25.7893993,
+        "lng": -80.1307242,
+        "category": "arts"
+      },
+      {
+        "id": "rss_1783608520221_5cvn",
+        "title": {
+          "en": "Sensory Friendly Session at Superblue 7/16/26",
+          "es": "Sesión Sensorial Amigable en Superblue 7/16/26",
+          "pt": "Sessão Sensorial Amigável em Superblue 7/16/26",
+          "fr": "Séance Sensorielle Accueillante à Superblue 7/16/26"
+        },
+        "date": "2026-07-16",
+        "venue": "Superblue Miami",
+        "address": "1101 Northwest 23rd Street, Miami, 33127, Miami, Florida, 33127",
+        "url": "https://www.soulofmiami.org/2026/07/08/sensory-friendly-session-at-superblue-7-16-26/",
+        "free": false,
+        "price": "$5",
+        "image": "",
+        "description": {
+          "en": "– $15 This program supports and welcomes guests who are neurodiverse or have sensory input disorders, sensory",
+          "es": "– $15 Este programa apoya y acoge a huéspedes neurodiversos o con trastornos de entrada sensorial",
+          "pt": "– $15 Este programa apoia e acolhe hóspedes neurodiversos ou com transtornos de entrada sensorial",
+          "fr": "– $15 Ce programme soutient et accueille les clients neurodiverses ou ayant des troubles sensoriels"
+        },
+        "category": "community"
+      },
+      {
+        "id": "tm_1783608520978_ilj3",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-07-09",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Diverso · Familia · Comienza 11:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Variado · Família · Começa 11:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 11:00 · Centre de Congrès Mana Wynwood"
+        },
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1783608520978_ffhm",
+        "title": {
+          "en": "Miami Marlins vs. Seattle Mariners",
+          "es": "Miami Marlins vs. Seattle Mariners",
+          "pt": "Miami Marlins vs. Seattle Mariners",
+          "fr": "Miami Marlins vs. Seattle Mariners"
+        },
+        "date": "2026-07-09",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qax6&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 20:40 · LoanDepot Park"
+        },
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1783608520978_3pvk",
+        "title": {
+          "en": "Miami Marlins vs. Cleveland Guardians",
+          "es": "Miami Marlins vs. Cleveland Guardians",
+          "pt": "Miami Marlins vs. Cleveland Guardians",
+          "fr": "Miami Marlins vs. Cleveland Guardians"
+        },
+        "date": "2026-07-10",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7QaxF&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 19:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 19:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 19:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 21:10 · LoanDepot Park"
+        },
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1783608520978_gosd",
+        "title": {
+          "en": "Gabriel Fluffy Iglesias Live",
+          "es": "Gabriel Fluffy Iglesias en Vivo",
+          "pt": "Gabriel Fluffy Iglesias ao Vivo",
+          "fr": "Gabriel Fluffy Iglesias en Direct"
+        },
+        "date": "2026-07-10",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgabriel-fluffy-iglesias-live-hollywood-florida-07-10-2026%2Fevent%2F0D00635FC244541D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/f5d/dd2f4de8-155a-4ae6-9cdc-473f77937f5d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Comedy · Starts 20:00 · Hard Rock Live",
+          "es": "Artes y Teatro · Comedia · Comienza 20:00 · Hard Rock Live",
+          "pt": "Artes e Teatro · Comédia · Começa 20:00 · Hard Rock Live",
+          "fr": "Arts et Théâtre · Comédie · Commence 20:00 · Hard Rock Live"
+        },
+        "category": "comedy",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1783608520978_w6ya",
+        "title": {
+          "en": "Friday Night Live - Improv Comedy Miami Show",
+          "es": "Viernes por la Noche en Vivo - Espectáculo de Comedia Improvisada Miami",
+          "pt": "Sexta à Noite ao Vivo - Show de Comédia Improvisada Miami",
+          "fr": "Vendredi Soir en Direct - Spectacle de Comédie Improvisée Miami"
+        },
+        "date": "2026-07-10",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897603&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
+          "es": "¡Viernes por la Noche! - Comedia Improvisada en Miami. La combinación especial de JTF de improvisación de forma corta y larga. Disfruta mientras nuestro elenco galardonado te trae una comedia improvisada fantástica perfecta para tu viernes por la noche. Nuestros espectáculos a menudo se describen como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway se reúne con SNL con mucha interacción divertida con la audiencia.",
+          "pt": "Sexta à Noite ao Vivo! - Comédia Improvisada em Miami. A combinação especial de JTF de improvisação de forma curta e longa. Aproveite enquanto nosso elenco premiado traz você comédia improvisada fantástica perfeita para sua noite de sexta. Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense nisso como Whose Line is It Anyway encontra SNL com muita interação divertida com o público.",
+          "fr": "Vendredi Soir en Direct ! - Comédie Improvisée à Miami. La combinaison spéciale de JTF de l'improvisation sous forme courte et longue. Profitez alors que notre troupe primée vous apporte une comédie improvisée fantastique parfaite pour votre vendredi soir. Nos spectacles sont souvent décrits comme une comédie improvisée rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction amusante avec le public."
+        },
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1783608520978_ysj9",
+        "title": {
+          "en": "Sensory-Inclusive Shrek the Musical JR.",
+          "es": "Shrek el Musical JR. Inclusivo Sensorial",
+          "pt": "Shrek o Musical JR. Inclusivo Sensorial",
+          "fr": "Shrek la Comédie Musicale JR. Inclusive Sensorielle"
+        },
+        "date": "2026-07-11",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsensoryinclusive-shrek-the-musical-jr-ft-lauderdale-florida-07-11-2026%2Fevent%2F0D00646AD88ED671&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/51d/3b3308c4-f283-42b0-96dc-4bb28b1e251d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "PLEASE NOTE: THIS EVENT IS A SENSORY-INCLUSIVE PERFORMANCE WHICH HAS BEEN MODIFIED. Once upon a time, in a far away swamp, there lived an ogre named Shrek. Based on the Oscar-winning DreamWorks Animation film and fantastic Broadway musical, It's a \"big bright beautiful world\" as everyone's favorite ogre, and his new pal Donkey lead a cast of fairytale misfits on an adventure to rescue a Princess F",
+          "es": "NOTA IMPORTANTE: ESTE EVENTO ES UNA PRESENTACIÓN INCLUSIVA SENSORIAL QUE HA SIDO MODIFICADA. Érase una vez, en un pantano lejano, vivía un ogro llamado Shrek. Basado en la película ganadora del Oscar de DreamWorks Animation y la fantástica comedia musical de Broadway, es un \"mundo grande, brillante y hermoso\" mientras el ogro favorito de todos y su nuevo amigo Burro encabezan un elenco de seres mitológicos inadaptados en una aventura para rescatar a una Princesa.",
+          "pt": "OBSERVAÇÃO IMPORTANTE: ESTE EVENTO É UMA APRESENTAÇÃO INCLUSIVA SENSORIAL QUE FOI MODIFICADA. Era uma vez, em um pântano distante, vivia um ogro chamado Shrek. Baseado no filme vencedor do Oscar da DreamWorks Animation e na fantástica comédia musical da Broadway, é um \"mundo grande, brilhante e bonito\" enquanto o ogro favorito de todos e seu novo amigo Burro lideram um elenco de seres mitológicos inadaptados em uma aventura para resgatar uma Princesa.",
+          "fr": "REMARQUE IMPORTANTE : CET ÉVÉNEMENT EST UNE PRÉSENTATION INCLUSIVE SENSORIELLE QUI A ÉTÉ MODIFIÉE. Il était une fois, dans un marais lointain, vivait un ogre nommé Shrek. Basé sur le film primé aux Oscars de DreamWorks Animation et la fantastique comédie musicale de Broadway, c'est un \"monde grand, brillant et beau\" alors que l'ogre préféré de tous et son nouveau ami Âne mènent une distribution de créatures mythologiques inadaptées dans une aventure pour sauver une Princesse."
+        },
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1783608520978_t6rv",
+        "title": {
+          "en": "Unchained: A Tribute to Van Halen with Rattitude: A Tribute to Ratt",
+          "es": "Unchained: Un Tributo a Van Halen con Rattitude: Un Tributo a Ratt",
+          "pt": "Unchained: Uma Homenagem a Van Halen com Rattitude: Uma Homenagem a Ratt",
+          "fr": "Unchained : Un Hommage à Van Halen avec Rattitude : Un Hommage à Ratt"
+        },
+        "date": "2026-08-07",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Funchained-a-tribute-to-van-halen-ft-lauderdale-florida-08-07-2026%2Fevent%2F0D0064E9931F44A0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/720/e2b901c4-ef22-4936-a80a-bda8d6f34720_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Unchained: A Tribute to Van Halen will be performing at Revolution Live on Friday, August 7th with special guests Rattitude: A Tribute to Ratt . This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
+          "es": "Unchained: A Tribute to Van Halen se presentará en Revolution Live el viernes 7 de agosto con invitados especiales Rattitude: A Tribute to Ratt. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
+          "pt": "Unchained: A Tribute to Van Halen se apresentará na Revolution Live na sexta-feira, 7 de agosto com convidados especiais Rattitude: A Tribute to Ratt. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
+          "fr": "Unchained: A Tribute to Van Halen se produira à Revolution Live vendredi 7 août avec les invités spéciaux Rattitude: A Tribute to Ratt. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 19:00 · Revolution Live"
+        },
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
       }
     ]
   },
