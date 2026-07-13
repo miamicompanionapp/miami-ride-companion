@@ -7,6 +7,29 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Real QR-scan tracking via server-side redirect  *(DONE 2026-07-13, SW v1.82.0)*
+
+Abdullah pointed out that every QR "scan" logged so far (`qr_venue`, `qr_app`, `qr_event`, etc. — see [[analytics_history]]) was really just "the passenger tapped the box and the modal opened," not confirmation a phone actually scanned the code. He wanted real scan counts without changing what the destination-preview text under the QR code shows (e.g. still "versaillesrestaurant.com", not our own domain).
+
+**Approach:** the QR image itself now encodes `https://<our-origin>/qr/<type>/<id>` instead of the raw destination URL. A phone that scans it hits our Worker, which resolves the real destination server-side, logs the hit, then 302-redirects — so the phone's browser lands on the same place it always did, but we now have a signal that only fires on an actual scan (not a tablet tap). The preview `<span>` under the QR code (`urlEl.textContent` in `openQR()`) is computed exactly as before, straight from the real destination — nothing changes visually.
+
+**Backend (`src/index.js`):**
+- New pure `resolveQrDestination(type, id, content, origin)`, exported for testing — mirrors the destination logic that already lived client-side in `openQR()` (venue website/maps fallback, event url, advisory sourceUrl, driver-thumbtack url, the three hardcoded My Apps URLs, and `app` → own origin).
+- New route: any `/qr/*` path fetches `content.json` via `env.ASSETS` (same pattern the existing `/go` bizcard-redirect route already uses), resolves the destination, fires-and-forgets a KV write via `ctx.waitUntil(trackQrScan(...))`, then either 302s or 404s if nothing resolved.
+- `trackQrScan()` reuses the existing `BIZCARD_STATS` KV binding under a `qr:` key prefix (`qr:total`, `qr:type:<type>`, `qr:day:<day>`, `qr:id:<type>:<id>`) rather than provisioning a second KV namespace. Counters are never deleted — Abdullah specifically asked that full history be preserved even though the dashboard only charts a recent window, same as bizcard stats already do.
+
+**New `functions/api/qr-stats.js`:** GET endpoint returning `{ total, byType, byId, byDay }`, using `kv.list({ prefix })` to enumerate whatever `qr:type:*`/`qr:id:*` keys exist rather than a hardcoded type list (unlike `bizcard-stats.js`, which needs an explicit `sources` param — QR types are more numerous and can grow without a code change here). `?days=N` (default 14, capped 90) controls the day-chart window only; the underlying day counters are never pruned.
+
+**Frontend (`public/index.html`):** in `openQR()`, after each type-specific branch computes `qrUrl` (the real destination) and `urlEl.textContent` (the preview) exactly as before, a single trailing step overwrites `qrUrl` to `origin + '/qr/' + type + '/' + id` for every type except `driver-phone` — vCard data is a raw payload the phone parses directly out of the QR code, not a URL it navigates to, so there's nothing for a server hop to confirm; that one keeps logging the tap-based `qr_driver-phone` signal as its only proxy, same as before.
+
+**Editor dashboard (`public/editor.html`):** new "Real QR scans (server-confirmed)" card in the Analytics panel, next to the existing tap-based "QR scans by type" card — deliberately kept separate rather than merged, so the two numbers (assumed vs. confirmed) stay comparable. `loadQrScanStats()`/`renderQrScanStats()` mirror the existing `loadBizcardStats()`/`renderBizcardStats()` pattern (day-bar chart + breakdown rows), fetching `/api/qr-stats?days=14`. Wired into `init()` alongside `loadAnalytics()`.
+
+**Tests:** `tests/backend.spec.js` gained a `resolveQrDestination` suite (7 cases) covering the app/static/venue/event/advisory/driver-thumbtack branches, the venue website→Maps fallback, and negative cases (unknown id, missing url, unrecognized type, null content.json — never throws).
+
+**Not done:** `wrangler.jsonc` needed no changes since the existing `BIZCARD_STATS` KV binding was reused rather than provisioning a new namespace.
+
+---
+
 ### [X] Local Advisories — beach water quality + NWS weather/safety alerts  *(DONE 2026-07-13, SW v1.81.0)*
 
 Abdullah saw a news story about elevated Enterococcus bacteria at Miami beaches and wanted passengers to see active health/safety advisories (bacteria, weather hazards) rather than have to seek that out themselves. First researched what's reliably fetchable (see conversation), then built it end-to-end.

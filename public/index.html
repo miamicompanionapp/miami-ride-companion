@@ -7152,6 +7152,8 @@ function openQR(type, id) {
     const d = CONTENT.driver;
     title.textContent = d.name || 'Driver';
     sub.textContent = tx(d.handyman && d.handyman.qrLabel) || 'Scan to save my contact';
+    // Not a redirect candidate — this is raw vCard data, not a URL the phone
+    // navigates to, so there's nothing for a server hop to confirm.
     qrUrl = buildVCard(d);
     urlEl.textContent = formatPhone(d.phone || '');
   } else if (type === 'driver-thumbtack' && CONTENT && CONTENT.driver) {
@@ -7188,6 +7190,17 @@ function openQR(type, id) {
       qrUrl = a.sourceUrl || '';
       try { urlEl.textContent = qrUrl ? new URL(qrUrl).hostname : ''; } catch { urlEl.textContent = qrUrl; }
     }
+  }
+
+  // The preview text above (urlEl) always shows the real destination
+  // hostname — unchanged. But for anything that's an actual link (i.e. not
+  // the vCard case), point the encoded QR image at our own /qr/:type/:id
+  // redirect instead of the raw URL, so a real phone scan round-trips
+  // through the Worker and gets counted (see resolveQrDestination in
+  // src/index.js). Tapping the on-screen box to open this modal is not a
+  // scan — only a phone hitting /qr/... is.
+  if (qrUrl && type !== 'driver-phone') {
+    qrUrl = window.location.origin + '/qr/' + type + (id ? '/' + encodeURIComponent(id) : '');
   }
 
   // Generate real QR code

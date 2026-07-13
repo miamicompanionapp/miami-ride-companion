@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-13 (Local advisories: beach water quality + NWS alerts)
+Last updated: 2026-07-13 (Real QR-scan tracking via server-side redirect)
 Owner: Abdullah
 
 
@@ -24,6 +24,12 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #72  QR scans were only ever "assumed" (box tapped ≠ phone scanned) — encoded QR images
+       now point at a /qr/:type/:id Worker redirect that resolves the real destination
+       server-side and logs the hit before 302'ing, so we can tell an actual scan apart from a
+       tablet tap; the destination preview text under the QR image is unchanged (still shows
+       the real hostname). New "Real QR scans" card in the editor's Analytics panel. Excludes
+       driver-phone (vCard data, not a URL to redirect) — DONE 2026-07-13 (SW v1.82.0)
   1. [X] #70  Local Advisories — beach water quality (Enterococcus) + NWS weather/safety alerts, banner + detail overlay + attractor card, 24h client-side expiry — DONE 2026-07-13 (SW v1.81.0)
   1. #71  Rip current risk per-beach (weather.gov/beach/mfl) — no JSON API, HTML/text product scrape; would slot into the same content.advisories.items pipeline as #70
   1. [X] #69  BUG: Connect Four attractor card's 🔴🟡 pair wrapped mid-line, split across two lines — DONE 2026-07-13 (SW v1.80.1)

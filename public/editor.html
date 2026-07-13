@@ -506,6 +506,13 @@
         </div>
       </div>
       <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">Real QR scans (server-confirmed)</div><div class="card-sub">Counted when a scanned phone actually hits the redirect — not just when the code was shown on the tablet</div></div>
+          <button class="btn" style="padding:6px 12px;font-size:12px" onclick="loadQrScanStats()"><i class="ti ti-refresh"></i>Refresh</button>
+        </div>
+        <div id="qr-scan-stats-body" style="font-size:13px;color:var(--muted)">Click Refresh to load stats.</div>
+      </div>
+      <div class="card">
         <div class="card-header"><div><div class="card-title">Sessions by day</div><div class="card-sub">Real (tapped) sessions per day</div></div></div>
         <div id="day-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No sessions yet</div></div>
       </div>
@@ -2902,6 +2909,57 @@ function renderBizcardStats(data) {
         <div style="font-size:10px;color:var(--muted);margin-top:4px">Last 14 days</div>
       </div>
       ${sourceRows ? `<div style="flex:1;min-width:160px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">By source</div>${sourceRows}</div>` : ''}
+    </div>`;
+}
+
+// Real (redirect-confirmed) QR scans — separate from the tap-based "QR scans
+// by type" card above, which only knows the code was shown, not that a phone
+// actually scanned it. Counters are cumulative in KV forever; only the chart
+// window is capped (default 14 days, ?days= up to 90 via the API).
+async function loadQrScanStats() {
+  const body = document.getElementById('qr-scan-stats-body');
+  body.innerHTML = '<div style="font-size:13px;color:var(--muted)">Loading…</div>';
+  try {
+    const res = await fetch('/api/qr-stats?days=14');
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+    renderQrScanStats(data);
+  } catch (e) {
+    body.innerHTML = `<div style="font-size:13px;color:var(--red)">${e.message === 'KV not configured' ? 'KV not set up yet.' : 'Error: ' + e.message}</div>`;
+  }
+}
+
+function renderQrScanStats(data) {
+  const body = document.getElementById('qr-scan-stats-body');
+  const maxDay = Math.max(...data.byDay.map(d => d.count), 1);
+  const bars = data.byDay.map(d => {
+    const h = Math.round((d.count / maxDay) * 36);
+    const lbl = d.date.slice(5); // MM-DD
+    return `<div class="biz-day-col"><div class="biz-day-fill" style="height:${h}px" title="${d.date}: ${d.count} scans"></div><div class="biz-day-lbl">${lbl}</div></div>`;
+  }).join('');
+
+  const typeRows = Object.entries(data.byType)
+    .sort((a, b) => b[1] - a[1])
+    .map(([type, n]) => `<div class="biz-stat-row"><span>${type}</span><strong>${n}</strong></div>`)
+    .join('');
+
+  const idRows = Object.entries(data.byId)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([key, n]) => `<div class="biz-stat-row"><span>${key}</span><strong>${n}</strong></div>`)
+    .join('');
+
+  body.innerHTML = `
+    <div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <div style="font-size:36px;font-weight:700;color:var(--navy);line-height:1">${data.total}</div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px">Total confirmed scans</div>
+        <div class="biz-day-bar" style="margin-top:16px">${bars}</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px">Last 14 days (full history kept in KV — ask Claude to pull older ranges via /api/qr-stats?days=N)</div>
+      </div>
+      ${typeRows ? `<div style="flex:1;min-width:160px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">By QR type</div>${typeRows}</div>` : ''}
+      ${idRows ? `<div style="flex:1;min-width:160px"><div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">Top individual codes</div>${idRows}</div>` : ''}
     </div>`;
 }
 </script>

@@ -15,6 +15,7 @@ const tm = require('../functions/api/ticketmaster-fetch.js');
 const mbcc = require('../functions/api/mbcc-fetch.js');
 const proxy = require('../functions/api/claude-proxy.js');
 const beachAdvisories = require('../functions/api/beach-advisories-fetch.js');
+const worker = require('../src/index.js');
 
 // A realistic Soul of Miami intro line — date, time range, venue + address,
 // "Website Cost: <x>", then the real blurb, then the "Read More" teaser tail.
@@ -453,6 +454,57 @@ test.describe('Backend: claude-proxy — origin allowlist', { tag: ['@backend'] 
     expect(proxy.isAllowedOrigin('https://attacker.pages.dev', {}, SELF)).toBe(false);
     expect(proxy.isAllowedOrigin('https://notpages.dev.evil.com', {}, SELF)).toBe(false);
     expect(proxy.isAllowedOrigin('not-a-url', {}, SELF)).toBe(false);
+  });
+});
+
+test.describe('Backend: /qr redirect — resolveQrDestination', { tag: ['@backend'] }, () => {
+  const ORIGIN = 'https://miami-ride.example.com';
+  const content = {
+    guide: {
+      venues: [
+        { id: 'v001', website: 'https://versaillesrestaurant.com', address: '3555 SW 8th St, Miami, FL' },
+        { id: 'v002', website: '', address: '100 Ocean Dr, Miami, FL' },
+      ],
+      events: [{ id: 'e1', url: 'https://tickets.example.com/e1' }, { id: 'e2' }],
+    },
+    advisories: { items: [{ id: 'a1', sourceUrl: 'https://healthybeaches.example.com/a1' }] },
+    driver: { thumbtack: { url: 'https://www.thumbtack.com/pro/123' } },
+  };
+
+  test('app type redirects to the app origin itself, no content.json needed', () => {
+    expect(worker.resolveQrDestination('app', null, null, ORIGIN)).toBe(ORIGIN);
+  });
+
+  test('the three hardcoded My Apps QR types resolve without content.json', () => {
+    expect(worker.resolveQrDestination('app-soflo', null, null, ORIGIN)).toBe('https://soflo-vegan-eateries.miamivegan2026.workers.dev/');
+    expect(worker.resolveQrDestination('app-lifeos', null, null, ORIGIN)).toBe('https://unalplanner.netlify.app/');
+    expect(worker.resolveQrDestination('app-tend', null, null, ORIGIN)).toBe('https://tend-dma.pages.dev/');
+  });
+
+  test('venue type prefers the venue website', () => {
+    expect(worker.resolveQrDestination('venue', 'v001', content, ORIGIN)).toBe('https://versaillesrestaurant.com');
+  });
+
+  test('venue type falls back to a Google Maps search when there is no website', () => {
+    const dest = worker.resolveQrDestination('venue', 'v002', content, ORIGIN);
+    expect(dest).toBe('https://maps.google.com/?q=' + encodeURIComponent('100 Ocean Dr, Miami, FL'));
+  });
+
+  test('event, advisory, and driver-thumbtack types resolve their respective URLs', () => {
+    expect(worker.resolveQrDestination('event', 'e1', content, ORIGIN)).toBe('https://tickets.example.com/e1');
+    expect(worker.resolveQrDestination('advisory', 'a1', content, ORIGIN)).toBe('https://healthybeaches.example.com/a1');
+    expect(worker.resolveQrDestination('driver-thumbtack', null, content, ORIGIN)).toBe('https://www.thumbtack.com/pro/123');
+  });
+
+  test('@negative returns null for an unknown id, missing url, or unrecognized type', () => {
+    expect(worker.resolveQrDestination('venue', 'v999', content, ORIGIN)).toBeNull();
+    expect(worker.resolveQrDestination('event', 'e2', content, ORIGIN)).toBeNull();
+    expect(worker.resolveQrDestination('driver-phone', null, content, ORIGIN)).toBeNull();
+  });
+
+  test('@negative returns null (not a throw) when content.json failed to load', () => {
+    expect(worker.resolveQrDestination('venue', 'v001', null, ORIGIN)).toBeNull();
+    expect(worker.resolveQrDestination('advisory', 'a1', null, ORIGIN)).toBeNull();
   });
 });
 
