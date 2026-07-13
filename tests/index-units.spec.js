@@ -14,6 +14,7 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('Index units: helpers', { tag: ['@index', '@unit'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof haversine === 'function' && typeof CONTENT !== 'undefined');
   });
@@ -98,6 +99,7 @@ test.describe('Index units: helpers', { tag: ['@index', '@unit'] }, () => {
 
 test.describe('Index units: localization helpers', { tag: ['@index', '@unit', '@i18n'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof tx === 'function' && typeof CONTENT !== 'undefined');
   });
@@ -121,6 +123,7 @@ test.describe('Index units: localization helpers', { tag: ['@index', '@unit', '@
 
 test.describe('Index units: featured / subtitle selection', { tag: ['@index', '@unit'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof pickFeaturedVenue === 'function' && !!CONTENT.guide);
   });
@@ -154,6 +157,7 @@ test.describe('Index units: featured / subtitle selection', { tag: ['@index', '@
 
 test.describe('Index units: event distance', { tag: ['@index', '@unit'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof eventDistStr === 'function');
   });
@@ -185,6 +189,7 @@ test.describe('Index units: event distance', { tag: ['@index', '@unit'] }, () =>
 
 test.describe('Index units: venue sheet guards', { tag: ['@index', '@unit'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForSelector('#gp-minis .gp-mini', { timeout: 10_000 });
   });
@@ -198,6 +203,7 @@ test.describe('Index units: venue sheet guards', { tag: ['@index', '@unit'] }, (
 
 test.describe('Index units: distance color tiers', { tag: ['@index', '@unit'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof distClass === 'function');
   });
@@ -224,6 +230,7 @@ test.describe('Index units: distance color tiers', { tag: ['@index', '@unit'] },
 
 test.describe('Index units: attractor copy honesty', { tag: ['@index', '@unit', '@i18n'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof buildContentCards === 'function' && !!CONTENT.guide);
   });
@@ -258,6 +265,7 @@ test.describe('Index units: attractor copy honesty', { tag: ['@index', '@unit', 
 
 test.describe('Index units: handyman attractor card', { tag: ['@index', '@unit'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof buildContentCards === 'function' && !!CONTENT.guide);
     // Make bubble visible by default so the handyman card appears in the pool
@@ -340,10 +348,21 @@ test.describe('Index units: handyman attractor card', { tag: ['@index', '@unit']
     expect(counts.handyman).toBeGreaterThan(1);
     expect(counts.feedback).toBeGreaterThan(1);
   });
+
+  test('c4 attractor card puts the circle emoji pair on its own line', async ({ page }) => {
+    const subs = await page.evaluate(() => {
+      const card = buildContentCards().find(c => c.id === 'c4');
+      return card?.sub;
+    });
+    for (const lang of ['en', 'es', 'pt', 'fr']) {
+      expect(subs[lang]).toMatch(/\n🔴🟡$/);
+    }
+  });
 });
 
 test.describe('Index units: lang-section pulse on attractor dismiss', { tag: ['@index', '@unit'] }, () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
     await page.goto('/index.html');
     await page.waitForFunction(() => typeof hideAttractor === 'function');
   });
@@ -365,5 +384,87 @@ test.describe('Index units: lang-section pulse on attractor dismiss', { tag: ['@
       el => getComputedStyle(el).animationIterationCount
     );
     expect(iterationCount).toBe('1');
+  });
+});
+
+test.describe('Index units: advisories expiry + attractor card', { tag: ['@index', '@unit'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof getActiveAdvisories === 'function' && !!CONTENT.guide);
+  });
+
+  test('getActiveAdvisories filters out items past their expiresAt, keeps items not yet expired', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const orig = CONTENT.advisories;
+      const now = Date.now();
+      CONTENT.advisories = {
+        fetchedAt: new Date().toISOString(),
+        items: [
+          { id: 'expired',  expiresAt: new Date(now - 1000).toISOString() },
+          { id: 'active',   expiresAt: new Date(now + 60 * 60 * 1000).toISOString() },
+          { id: 'no-expiry' }, // malformed/missing expiresAt must not be shown
+        ],
+      };
+      const active = getActiveAdvisories().map(a => a.id);
+      CONTENT.advisories = orig;
+      return active;
+    });
+    expect(result).toEqual(['active']);
+  });
+
+  test('getActiveAdvisories returns an empty array when CONTENT.advisories is absent', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const orig = CONTENT.advisories;
+      delete CONTENT.advisories;
+      const active = getActiveAdvisories();
+      CONTENT.advisories = orig;
+      return active;
+    });
+    expect(result).toEqual([]);
+  });
+
+  test('advisories attractor card only appears in the pool while an advisory is active', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const orig = CONTENT.advisories;
+      CONTENT.advisories = { fetchedAt: new Date().toISOString(), items: [] };
+      const withoutAdvisory = buildContentCards().some(c => c.id === 'advisories');
+      CONTENT.advisories = {
+        fetchedAt: new Date().toISOString(),
+        items: [{ id: 'x', expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString() }],
+      };
+      const withAdvisory = buildContentCards().find(c => c.id === 'advisories');
+      CONTENT.advisories = orig;
+      return {
+        withoutAdvisory,
+        foundWithAdvisory: !!withAdvisory,
+        hasAction: typeof withAdvisory?.action === 'function',
+      };
+    });
+    expect(result.withoutAdvisory).toBe(false);
+    expect(result.foundWithAdvisory).toBe(true);
+    expect(result.hasAction).toBe(true);
+  });
+
+  test('advisories attractor card headline/sub carry all 4 languages, with {n} interpolated', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const orig = CONTENT.advisories;
+      CONTENT.advisories = {
+        fetchedAt: new Date().toISOString(),
+        items: [
+          { id: 'a', expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString() },
+          { id: 'b', expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString() },
+        ],
+      };
+      const card = buildContentCards().find(c => c.id === 'advisories');
+      CONTENT.advisories = orig;
+      return card ? { headline: card.headline, sub: card.sub } : null;
+    });
+    for (const lang of ['en', 'es', 'pt', 'fr']) {
+      expect(result.headline[lang]).toBeTruthy();
+      expect(result.sub[lang]).toBeTruthy();
+      expect(result.sub[lang]).not.toContain('{n}');
+      expect(result.sub[lang]).toContain('2');
+    }
   });
 });

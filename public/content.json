@@ -3725,11 +3725,73 @@
         "pt": "Objetivos, hábitos, diário, calendário, despesas e exercício — tudo num lugar",
         "fr": "Objectifs, habitudes, journal, calendrier, dépenses et exercice — tout en un"
       },
+      "tendTag": {
+        "en": "Goals · weekly plan · AI assistant",
+        "es": "Metas · plan semanal · asistente IA",
+        "pt": "Objetivos · plano semanal · assistente IA",
+        "fr": "Objectifs · plan hebdo · assistant IA"
+      },
+      "tendDesc": {
+        "en": "Set goals and get an AI-built weekly schedule — tell it about a disruption and it replans automatically",
+        "es": "Define metas y obtén un horario semanal creado por IA — cuéntale un imprevisto y lo replanifica automáticamente",
+        "pt": "Defina objetivos e obtenha um horário semanal criado por IA — conte um imprevisto e ele replaneja automaticamente",
+        "fr": "Définissez des objectifs et obtenez un planning hebdomadaire créé par IA — signalez un imprévu et il replanifie automatiquement"
+      },
       "scanLabel": {
         "en": "Scan to visit",
         "es": "Escanear para visitar",
         "pt": "Digitalizar para visitar",
         "fr": "Scanner pour visiter"
+      }
+    },
+    "advisories": {
+      "title": {
+        "en": "Local Advisories",
+        "es": "Avisos Locales",
+        "pt": "Avisos Locais",
+        "fr": "Avis Locaux"
+      },
+      "bannerOne": {
+        "en": "⚠ 1 active advisory nearby — tap for details",
+        "es": "⚠ 1 aviso activo cerca — toca para más detalles",
+        "pt": "⚠ 1 aviso ativo por perto — toque para detalhes",
+        "fr": "⚠ 1 avis actif à proximité — touchez pour les détails"
+      },
+      "bannerMany": {
+        "en": "⚠ {n} active advisories nearby — tap for details",
+        "es": "⚠ {n} avisos activos cerca — toca para más detalles",
+        "pt": "⚠ {n} avisos ativos por perto — toque para detalhes",
+        "fr": "⚠ {n} avis actifs à proximité — touchez pour les détails"
+      },
+      "empty": {
+        "en": "No active advisories right now.",
+        "es": "No hay avisos activos en este momento.",
+        "pt": "Nenhum aviso ativo no momento.",
+        "fr": "Aucun avis actif pour le moment."
+      },
+      "sourceLabel": {
+        "en": "Source",
+        "es": "Fuente",
+        "pt": "Fonte",
+        "fr": "Source"
+      },
+      "attractorHeadline": {
+        "en": "Heads up before you swim",
+        "es": "Aviso antes de nadar",
+        "pt": "Atenção antes de nadar",
+        "fr": "Attention avant de nager"
+      },
+      "attractorSubOne": {
+        "en": "1 local advisory is active right now — tap to see it",
+        "es": "1 aviso local está activo ahora — toca para verlo",
+        "pt": "1 aviso local está ativo agora — toque para ver",
+        "fr": "1 avis local est actif en ce moment — touchez pour le voir"
+      },
+      "attractorSubMany": {
+        "en": "{n} local advisories are active right now — tap to see them",
+        "es": "{n} avisos locales están activos ahora — toca para verlos",
+        "pt": "{n} avisos locais estão ativos agora — toque para ver",
+        "fr": "{n} avis locaux sont actifs en ce moment — touchez pour les voir"
       }
     }
   },
@@ -3743,6 +3805,53 @@
       "card",
       "flyer",
       "magnet"
+    ]
+  },
+  "advisories": {
+    "fetchedAt": "2026-07-13T07:16:02.192Z",
+    "items": [
+      {
+        "id": "beach_bark-beach",
+        "type": "water_quality",
+        "severity": "advisory",
+        "title": {
+          "en": "BARK BEACH — Water Quality Advisory",
+          "es": "BARK BEACH — Aviso de Calidad del Agua",
+          "pt": "BARK BEACH — Aviso de Qualidade da Água",
+          "fr": "BARK BEACH — Avis de Qualité de l'Eau"
+        },
+        "detail": {
+          "en": "Elevated Enterococcus bacteria detected (300 CFU/100mL, sampled 7/8/2026). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (300 UFC/100mL, muestreado el 7/8/2026). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (300 UFC/100mL, amostrado em 7/8/2026). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (300 UFC/100mL, échantillonné le 7/8/2026). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
+        },
+        "source": "Florida Dept. of Health — Healthy Beaches",
+        "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/bark-beach",
+        "effectiveAt": "7/8/2026",
+        "expiresAt": "2026-07-14T07:16:02.192Z"
+      },
+      {
+        "id": "beach_golden-beach",
+        "type": "water_quality",
+        "severity": "advisory",
+        "title": {
+          "en": "GOLDEN BEACH — Water Quality Advisory",
+          "es": "GOLDEN BEACH — Aviso de Calidad del Agua",
+          "pt": "GOLDEN BEACH — Aviso de Qualidade da Água",
+          "fr": "GOLDEN BEACH — Avis de Qualité de l'Eau"
+        },
+        "detail": {
+          "en": "Elevated Enterococcus bacteria detected (820 CFU/100mL, sampled 7/8/2026). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (820 UFC/100mL, muestreado el 7/8/2026). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (820 UFC/100mL, amostrado em 7/8/2026). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (820 UFC/100mL, échantillonné le 7/8/2026). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
+        },
+        "source": "Florida Dept. of Health — Healthy Beaches",
+        "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/golden-beach",
+        "effectiveAt": "7/8/2026",
+        "expiresAt": "2026-07-14T07:16:02.192Z"
+      }
     ]
   }
 }

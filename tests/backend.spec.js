@@ -12,7 +12,9 @@ const { test, expect } = require('@playwright/test');
 
 const rss = require('../functions/api/rss-fetch.js');
 const tm = require('../functions/api/ticketmaster-fetch.js');
+const mbcc = require('../functions/api/mbcc-fetch.js');
 const proxy = require('../functions/api/claude-proxy.js');
+const beachAdvisories = require('../functions/api/beach-advisories-fetch.js');
 
 // A realistic Soul of Miami intro line — date, time range, venue + address,
 // "Website Cost: <x>", then the real blurb, then the "Read More" teaser tail.
@@ -271,6 +273,152 @@ test.describe('Backend: ticketmaster-fetch — pickImage', { tag: ['@backend'] }
     expect(tm.pickImage([])).toBe('');
     expect(tm.pickImage(undefined)).toBe('');
     expect(tm.pickImage(null)).toBe('');
+  });
+});
+
+test.describe('Backend: mbcc-fetch — parseMbccPage', { tag: ['@backend'] }, () => {
+  // Trimmed real markup from https://www.miamibeachconvention.com/events (2026-07-13):
+  // one real event card, one non-event "mega-menu" article that must be skipped.
+  const pageHtml = `
+    <article data-history-node-id="3" class="entity--type-node node--mega-menu-teaser node--landing-page--mega-menu-teaser node--landing-page node--promoted">
+      <div><a href="/plan">Plan an Event</a></div>
+    </article>
+    <article data-history-node-id="7476" data-dename="Florida Supercon 2026" data-detrackingid="" data-detype="event" data-decity="" data-deregion="" class="entity--type-node node--teaser node--event--teaser node--listing--teaser node--event node--promoted">
+      <div class="node__content">
+        <div class="date-summary"><div class="start-date"><span class="dayofweek">Friday</span><span class="date">07/10/2026</span></div><span class="hr"></span><div class="end-date"><span class="dayofweek">Sunday</span><span class="date">07/12/2026</span></div></div>
+        <div class="info">
+          <div class="field field--name-field-display-title field--type-string field--label-hidden field__item"><div><a href="/events/florida-supercon-2026" hreflang="en">Florida Supercon 2026</a></div></div>
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">  <p>Florida Supercon is an annual 3-day pop culture and comic convention in Miami Beach, FL &amp; more...</p></div>
+          <div class="more"><a href="/events/florida-supercon-2026" aria-label="Read more about Florida Supercon 2026" class="arrow-cta">Learn More</a></div>
+        </div>
+        <div class="img"><div class="field field--name-field-listing-main-image-media field--type-entity-reference field--label-hidden field__item"><img loading="lazy" src="/sites/default/files/styles/events_calendar_teaser/public/2026-06/supercon.png.webp?itok=GmahViwc" width="300" height="200" alt="supercon" /></div></div>
+      </div>
+    </article>
+  `;
+
+  test('extracts only real event cards, skipping mega-menu teasers', () => {
+    const events = mbcc.parseMbccPage(pageHtml);
+    expect(events).toHaveLength(1);
+  });
+
+  test('maps title, ISO start date, absolute url/image, and the fixed venue', () => {
+    const [ev] = mbcc.parseMbccPage(pageHtml);
+    expect(ev).toMatchObject({
+      title: 'Florida Supercon 2026',
+      date: '2026-07-10',
+      url: 'https://www.miamibeachconvention.com/events/florida-supercon-2026',
+      venue: 'Miami Beach Convention Center',
+      address: '1901 Convention Center Drive, Miami Beach, FL 33139',
+      source: 'Miami Beach Convention Center',
+      free: false,
+    });
+    expect(ev.image).toBe('https://www.miamibeachconvention.com/sites/default/files/styles/events_calendar_teaser/public/2026-06/supercon.png.webp?itok=GmahViwc');
+    expect(ev.description).toContain('Florida Supercon is an annual 3-day pop culture and comic convention');
+    expect(typeof ev.lat).toBe('number');
+    expect(typeof ev.lng).toBe('number');
+  });
+
+  test('@negative returns an empty array for markup with no event articles', () => {
+    expect(mbcc.parseMbccPage('<html><body>no events here</body></html>')).toEqual([]);
+    expect(mbcc.parseMbccPage('')).toEqual([]);
+  });
+});
+
+test.describe('Backend: mbcc-fetch — dropPastEvents / miamiToday', { tag: ['@backend'] }, () => {
+  test('dropPastEvents removes past dates, keeps today/future/undated', () => {
+    const events = [
+      { id: 'past', date: '2026-05-01' },
+      { id: 'today', date: '2026-06-01' },
+      { id: 'future', date: '2026-12-25' },
+      { id: 'undated' },
+    ];
+    const kept = mbcc.dropPastEvents(events, '2026-06-01').map((e) => e.id);
+    expect(kept).toEqual(['today', 'future', 'undated']);
+  });
+
+  test('miamiToday returns an ISO YYYY-MM-DD string', () => {
+    expect(mbcc.miamiToday()).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+});
+
+test.describe('Backend: beach-advisories-fetch — parseBeachAdvisories', { tag: ['@backend'] }, () => {
+  // Trimmed real __NEXT_DATA__ shape from https://www.floridahealthybeaches.com/county/dade
+  // (2026-07-13): one beach under an active advisory, one clean, one with no
+  // samples yet (empty data array — must not throw).
+  const pageHtml = (beaches) => `<!DOCTYPE html><html><head></head><body>
+    <script id="__NEXT_DATA__" type="application/json">
+      ${JSON.stringify({ props: { pageProps: { county: { name: 'Dade', slug: 'dade', beaches } } } })}
+    </script>
+  </body></html>`;
+
+  const barkBeach = {
+    id: '4c6ca404-e285-4dd8-bbf0-485cf5574d99',
+    name: 'BARK BEACH',
+    slug: 'bark-beach',
+    data: [{
+      updatedAt: '2026-07-11T06:00:46.519798+00:00',
+      sampleDate: '7/8/2026',
+      enterococcusValue: '300',
+      enterococcusStatus: 'Good',
+      advisoryStatus: 'Yes',
+      latitude: '25.86425',
+      longitude: '-80.11905',
+    }],
+  };
+  const cleanBeach = {
+    id: '84c24bef-28ba-40fc-bb5f-db084028d790',
+    name: '53RD ST - MIAMI BEACH',
+    slug: '53rd-st-miami-beach',
+    data: [{
+      updatedAt: '2026-07-10T06:00:38.961622+00:00',
+      sampleDate: '7/7/2026',
+      enterococcusValue: '22',
+      enterococcusStatus: 'Good',
+      advisoryStatus: 'No',
+      latitude: '25.83100573',
+      longitude: '-80.11923913',
+    }],
+  };
+  const unsampledBeach = { id: 'x', name: 'NEW BEACH', slug: 'new-beach', data: [] };
+
+  test('maps advisoryStatus (not enterococcusStatus) to status: advisory/good', () => {
+    const beaches = beachAdvisories.parseBeachAdvisories(pageHtml([barkBeach, cleanBeach]));
+    expect(beaches).toHaveLength(2);
+    const bark = beaches.find(b => b.name === 'BARK BEACH');
+    expect(bark).toMatchObject({
+      status: 'advisory',
+      value: 300,
+      sampleDate: '2026-07-08',
+      url: 'https://www.floridahealthybeaches.com/county/dade/beach/bark-beach',
+    });
+    expect(bark.lat).toBeCloseTo(25.86425);
+    expect(bark.lng).toBeCloseTo(-80.11905);
+    const clean = beaches.find(b => b.name === '53RD ST - MIAMI BEACH');
+    expect(clean.status).toBe('good');
+  });
+
+  test('a beach with no samples yet gets status "good" and null value, not a throw', () => {
+    const beaches = beachAdvisories.parseBeachAdvisories(pageHtml([unsampledBeach]));
+    expect(beaches).toEqual([expect.objectContaining({ name: 'NEW BEACH', status: 'good', value: null, sampleDate: '' })]);
+  });
+
+  test('@negative returns an empty array when __NEXT_DATA__ is missing or unparsable', () => {
+    expect(beachAdvisories.parseBeachAdvisories('<html><body>no data here</body></html>')).toEqual([]);
+    expect(beachAdvisories.parseBeachAdvisories('')).toEqual([]);
+    expect(beachAdvisories.parseBeachAdvisories('<script id="__NEXT_DATA__">not json</script>')).toEqual([]);
+  });
+});
+
+test.describe('Backend: beach-advisories-fetch — parseSampleDate', { tag: ['@backend'] }, () => {
+  test('converts M/D/YYYY to ISO YYYY-MM-DD, zero-padded', () => {
+    expect(beachAdvisories.parseSampleDate('7/8/2026')).toBe('2026-07-08');
+    expect(beachAdvisories.parseSampleDate('12/25/2026')).toBe('2026-12-25');
+  });
+
+  test('@negative returns empty string for missing/malformed input', () => {
+    expect(beachAdvisories.parseSampleDate('')).toBe('');
+    expect(beachAdvisories.parseSampleDate(undefined)).toBe('');
+    expect(beachAdvisories.parseSampleDate('not-a-date')).toBe('');
   });
 });
 

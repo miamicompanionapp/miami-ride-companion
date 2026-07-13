@@ -199,6 +199,158 @@ async function refreshWeather(content) {
   console.log(`  weather: ${content.weather.current.temp_f}°F, code ${content.weather.current.weathercode}`);
 }
 
+// ── Advisories (beach water quality + NWS weather/safety alerts) ──────────────
+// All items get a hard 24h expiresAt so a missed daily-refresh run can never
+// leave a stale advisory showing in the app — the client re-checks this on
+// every render, it doesn't just trust that content.json was refreshed today.
+const ADVISORY_TTL_MS = 24 * 60 * 60 * 1000;
+
+// Water quality copy is a fixed template (beach name + CFU value are the only
+// variables), so it's hand-translated once here rather than round-tripped
+// through Claude on every run like event descriptions are.
+function beachAdvisoryItem(beach, fetchedAt) {
+  return {
+    id:         `beach_${beach.slug || beach.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+    type:       'water_quality',
+    severity:   'advisory',
+    title: {
+      en: `${beach.name} — Water Quality Advisory`,
+      es: `${beach.name} — Aviso de Calidad del Agua`,
+      pt: `${beach.name} — Aviso de Qualidade da Água`,
+      fr: `${beach.name} — Avis de Qualité de l'Eau`,
+    },
+    detail: {
+      en: `Elevated Enterococcus bacteria detected (${beach.value} CFU/100mL, sampled ${beach.sampleDate}). Health officials advise against swimming here until levels return to normal.`,
+      es: `Se detectaron niveles elevados de bacterias Enterococcus (${beach.value} UFC/100mL, muestreado el ${beach.sampleDate}). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.`,
+      pt: `Foram detectados níveis elevados de bactérias Enterococcus (${beach.value} UFC/100mL, amostrado em ${beach.sampleDate}). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.`,
+      fr: `Des niveaux élevés de bactéries Enterococcus ont été détectés (${beach.value} UFC/100mL, échantillonné le ${beach.sampleDate}). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale.`,
+    },
+    source:      'Florida Dept. of Health — Healthy Beaches',
+    sourceUrl:   beach.url,
+    effectiveAt: beach.sampleDate,
+    expiresAt:   new Date(fetchedAt.getTime() + ADVISORY_TTL_MS).toISOString(),
+  };
+}
+
+async function refreshBeachAdvisories(content, fetchedAt) {
+  const res = await fetch(WORKER_URL + '/api/beach-advisories-fetch');
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const { beaches, errors } = await res.json();
+  if (errors?.length) console.warn('  [beach-advisories] warnings:', errors.join('; '));
+  const advisories = (beaches || []).filter(b => b.status === 'advisory');
+  console.log(`  beach advisories: ${advisories.length} active (of ${beaches?.length || 0} monitored)`);
+  return advisories.map(b => beachAdvisoryItem(b, fetchedAt));
+}
+
+// Small set of recurring South Florida hazard types — translated once here so
+// weather items don't need a Claude round-trip just for the title badge.
+// Anything not in this list falls back to the English NWS event name in every
+// language (aL() on the client also falls back to .en for any missing key).
+const NWS_EVENT_NAMES = {
+  'Rip Current Statement':        { en: 'Rip Current Statement',        es: 'Aviso de Corrientes de Resaca',      pt: 'Aviso de Correntes de Retorno',       fr: 'Avis de Courants de Baïn' },
+  'Coastal Flood Advisory':       { en: 'Coastal Flood Advisory',       es: 'Aviso de Inundación Costera',        pt: 'Aviso de Inundação Costeira',         fr: "Avis d'Inondation Côtière" },
+  'Coastal Flood Warning':        { en: 'Coastal Flood Warning',        es: 'Alerta de Inundación Costera',       pt: 'Alerta de Inundação Costeira',        fr: "Alerte d'Inondation Côtière" },
+  'Heat Advisory':                { en: 'Heat Advisory',                es: 'Aviso de Calor',                     pt: 'Aviso de Calor',                      fr: 'Avis de Chaleur' },
+  'Excessive Heat Warning':       { en: 'Excessive Heat Warning',       es: 'Alerta de Calor Extremo',            pt: 'Alerta de Calor Extremo',             fr: 'Alerte de Chaleur Extrême' },
+  'Small Craft Advisory':         { en: 'Small Craft Advisory',         es: 'Aviso para Embarcaciones Pequeñas',  pt: 'Aviso para Pequenas Embarcações',     fr: "Avis pour Petites Embarcations" },
+  'Tropical Storm Watch':         { en: 'Tropical Storm Watch',         es: 'Vigilancia de Tormenta Tropical',    pt: 'Vigilância de Tempestade Tropical',   fr: 'Veille de Tempête Tropicale' },
+  'Tropical Storm Warning':       { en: 'Tropical Storm Warning',       es: 'Alerta de Tormenta Tropical',        pt: 'Alerta de Tempestade Tropical',       fr: 'Alerte de Tempête Tropicale' },
+  'Hurricane Watch':              { en: 'Hurricane Watch',              es: 'Vigilancia de Huracán',              pt: 'Vigilância de Furacão',                fr: "Veille d'Ouragan" },
+  'Hurricane Warning':            { en: 'Hurricane Warning',            es: 'Alerta de Huracán',                  pt: 'Alerta de Furacão',                    fr: "Alerte d'Ouragan" },
+  'Severe Thunderstorm Warning':  { en: 'Severe Thunderstorm Warning',  es: 'Alerta de Tormenta Severa',          pt: 'Alerta de Tempestade Severa',         fr: 'Alerte de Orage Violent' },
+  'Flash Flood Warning':          { en: 'Flash Flood Warning',          es: 'Alerta de Inundación Repentina',     pt: 'Alerta de Enchente Repentina',        fr: "Alerte de Crue Éclair" },
+};
+
+function nwsAdvisoryItem(alert, fetchedAt) {
+  const p = alert.properties;
+  const titles = NWS_EVENT_NAMES[p.event] || { en: p.event, es: p.event, pt: p.event, fr: p.event };
+  const sourceExpires = p.expires ? new Date(p.expires).getTime() : null;
+  const capExpires = fetchedAt.getTime() + ADVISORY_TTL_MS;
+  return {
+    id:         `nws_${p.id || p.event}`.replace(/[^a-zA-Z0-9_.-]+/g, '-').slice(0, 80),
+    type:       'weather',
+    severity:   (p.severity || 'moderate').toLowerCase(),
+    title:      titles,
+    // detail is the NWS's own free-text description — es/pt/fr start blank and
+    // get filled in by translateAdvisoryDetails() below (same as event
+    // descriptions). content.spec.js's translation-completeness check requires
+    // every {en,...} string to carry all 4 languages, no English-fallback exception.
+    detail:     { en: (p.description || p.headline || '').slice(0, 400), es: '', pt: '', fr: '' },
+    source:      'National Weather Service',
+    sourceUrl:   p['@id'] || 'https://www.weather.gov/mfl/',
+    effectiveAt: p.effective || p.onset || fetchedAt.toISOString(),
+    expiresAt:   new Date(sourceExpires && sourceExpires < capExpires ? sourceExpires : capExpires).toISOString(),
+  };
+}
+
+async function refreshNwsAlerts(fetchedAt) {
+  // Same Miami point used for the weather fetch above — coastal alerts for
+  // this point cover the beaches passengers are asking about.
+  const url = 'https://api.weather.gov/alerts/active?point=25.7617,-80.1918';
+  const res = await fetch(url, { headers: { 'User-Agent': 'MiamiRideCompanion/1.0 (daily-refresh@github-actions)' } });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const { features } = await res.json();
+  console.log(`  NWS alerts: ${features?.length || 0} active`);
+  return (features || []).slice(0, 5).map(a => nwsAdvisoryItem(a, fetchedAt));
+}
+
+async function refreshAdvisories(content) {
+  const fetchedAt = new Date();
+  const items = [];
+
+  try {
+    items.push(...await refreshBeachAdvisories(content, fetchedAt));
+  } catch (err) {
+    console.error(`  beach advisories failed: ${err.message} — keeping existing entries`);
+    // Keep prior beach_* items (client-side expiry will drop them once stale)
+    // rather than silently wiping a real advisory because one fetch hiccuped.
+    if (content.advisories?.items) items.push(...content.advisories.items.filter(i => i.id.startsWith('beach_')));
+  }
+
+  try {
+    items.push(...await refreshNwsAlerts(fetchedAt));
+  } catch (err) {
+    console.error(`  NWS alerts failed: ${err.message} — keeping existing entries`);
+    if (content.advisories?.items) items.push(...content.advisories.items.filter(i => i.id.startsWith('nws_')));
+  }
+
+  await translateAdvisoryDetails(items);
+
+  content.advisories = { fetchedAt: fetchedAt.toISOString(), items };
+}
+
+// NWS alert descriptions are free text (unlike the templated beach copy
+// above), so they go through Claude like event descriptions do. Batched to
+// stay well under a single prompt's practical size even if several alerts
+// are active at once.
+async function translateAdvisoryDetails(items) {
+  const needsTranslation = items.filter(i => i.detail && !i.detail.es);
+  if (!needsTranslation.length) return;
+  console.log(`  translating ${needsTranslation.length} advisory detail(s)…`);
+  const payload = {};
+  needsTranslation.forEach(i => { payload[i.id] = i.detail.en; });
+  try {
+    const result = await callClaude(
+`Translate these official weather/safety advisory notices into Spanish (Latin American), Portuguese (Brazilian), and French. Keep the tone official and concise, matching the source.
+Return ONLY valid JSON — no markdown, no extra keys:
+{ "<id>": { "es":"...","pt":"...","fr":"..." }, ... }
+
+Notices:
+${JSON.stringify(payload)}`, 2000);
+
+    const translations = JSON.parse(extractJson(result));
+    needsTranslation.forEach(i => {
+      const t = translations[i.id];
+      if (!t) return;
+      if (t.es) i.detail.es = t.es;
+      if (t.pt) i.detail.pt = t.pt;
+      if (t.fr) i.detail.fr = t.fr;
+    });
+  } catch (err) {
+    console.error(`  advisory translation failed: ${err.message} — these items will keep an English-only detail until next run`);
+  }
+}
+
 // ── Geocoding (Nominatim, 1 req/sec per usage policy) ────────────────────────
 
 async function geocodeEvent(ev) {
@@ -249,8 +401,9 @@ async function main() {
   );
 
   for (const [endpoint, idPrefix, label] of [
-    ['/api/rss-fetch',          'rss_', 'RSS'],
-    ['/api/ticketmaster-fetch', 'tm_',  'Ticketmaster'],
+    ['/api/rss-fetch',          'rss_',  'RSS'],
+    ['/api/ticketmaster-fetch', 'tm_',   'Ticketmaster'],
+    ['/api/mbcc-fetch',         'mbcc_', 'MBCC'],
   ]) {
     try {
       const res = await fetch(WORKER_URL + endpoint);
@@ -426,13 +579,22 @@ ${JSON.stringify(payload)}`, 4000);
     console.error(`  weather failed: ${err.message} — keeping existing data`);
   }
 
-  // 9. Write content.json
+  // 9. Refresh advisories (beach water quality + NWS weather/safety alerts)
+  console.log('  refreshing advisories…');
+  try {
+    await refreshAdvisories(content);
+  } catch (err) {
+    console.error(`  advisories failed: ${err.message} — keeping existing data`);
+  }
+
+  // 10. Write content.json
   content.meta.lastUpdated  = new Date().toISOString();
   content.meta.publishedBy  = 'daily-refresh[bot]';
   writeFileSync(CONTENT_PATH, JSON.stringify(content, null, 2) + '\n', 'utf8');
 
   const finalCount = content.guide.events.length;
-  console.log(`\n✓ Done — ${finalCount} events in content.json\n`);
+  const advisoryCount = content.advisories?.items?.length || 0;
+  console.log(`\n✓ Done — ${finalCount} events, ${advisoryCount} active advisories in content.json\n`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });

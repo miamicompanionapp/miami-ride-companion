@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-06 (Fixed event category mis-tagging — "music" was the silent catch-all for unmatched events, #64)
+Last updated: 2026-07-13 (Local advisories: beach water quality + NWS alerts)
 Owner: Abdullah
 
 
@@ -19,11 +19,16 @@ WORKING POLICY
   RSS refetch and Claude auto-translate require `npm run dev` (Wrangler).
 
 
-NEXT UP — open items, ranked  (updated 2026-07-01)
+NEXT UP — open items, ranked  (updated 2026-07-13)
 ---------------------------------------------------
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #70  Local Advisories — beach water quality (Enterococcus) + NWS weather/safety alerts, banner + detail overlay + attractor card, 24h client-side expiry — DONE 2026-07-13 (SW v1.81.0)
+  1. #71  Rip current risk per-beach (weather.gov/beach/mfl) — no JSON API, HTML/text product scrape; would slot into the same content.advisories.items pipeline as #70
+  1. [X] #69  BUG: Connect Four attractor card's 🔴🟡 pair wrapped mid-line, split across two lines — DONE 2026-07-13 (SW v1.80.1)
+  1. [X] #68  My Apps — added Tend (4th tile, driver page) — DONE 2026-07-13 (SW v1.80.0)
+  1. [X] #67  DX: Playwright default workers pegged the laptop — capped to 2 locally — DONE 2026-07-13
   1. [X] #64  BUG: events with no category signal silently defaulted to "music" — added Ticketmaster segment/genre mapping + a "community" catch-all — DONE 2026-07-06
   1. [X] #60  PERF: venue images oversized (27MB) — resized to ≤1400px, dropped 3 orphans — DONE 2026-07-06 (SW v1.78.0)
   1. [X] #59  SECURITY: Claude proxy open to abuse — same-origin gate, model/token caps, per-IP rate limit — DONE 2026-07-06
@@ -52,6 +57,8 @@ Re-order freely; mark [X] when done.
  15. #52  Analytics — event category breakdown in editor (prereq: #51)
  16. [X] #53  Attractor cards — event category count cards — DONE 2026-06-25 (shipped as part of #51)
  18. #29  Games i18n — Word Puzzle (a) still pending; content.json migration (c) future
+ 19. [X] #65  Events — Miami Beach Convention Center scrape source — DONE 2026-07-13
+ 20. #66  BUG: 34 pre-existing test failures (feedback, index-units, passenger, pwa-gate) — app/test drift
 
 
 TEST SUITE & TAGS (Playwright)
@@ -291,6 +298,56 @@ OPEN ITEMS
           62 current events (follow-up ask, not just the original 4 examples)
           found 15 more mislabeled beyond the first pass's 16 — 31 total
           reclassified in content.json. SW v1.79.0. See backlog_archive.md.
+
+[X] 65. Events — Miami Beach Convention Center scrape source. DONE 2026-07-13. See archive.
+        - Root cause: Florida Supercon 2026 (self-ticketed, not on Ticketmaster) never entered
+          the pipeline. New third source `/api/mbcc-fetch` scrapes miamibeachconvention.com's
+          events calendar directly (no RSS/API exists there).
+        - Added: 2026-07-13.
+
+[ ] 66. BUG: 34 pre-existing test failures — app markup/logic has drifted from its tests.
+        - Found while running the full suite (`npm test`) after pulling 23 commits this local
+          clone was behind. `npm test` = 231 tests, 196 passed / 35 failed. 1 of the 35 is the
+          intentional "published events are all upcoming" freshness canary (self-resolving once
+          the next daily-refresh runs) — the other 34 are real drift, not caused by #65's changes
+          (confirmed: `npm run test:backend` 42/42 and `npm run test:editor` 25/25 still pass clean).
+        - Breakdown of the 34 real failures by spec file:
+            index-units.spec.js  13   — tx/t helpers, pickFeaturedVenue, getSubtitleVariants,
+                                         openVenueSheet, attractor-copy honesty, handyman card tests
+            feedback.spec.js     11   — ride feedback rating/chips/modal/teaser/analytics flow
+            passenger.spec.js     8   — home view, browse filter, footer override, games canvas,
+                                         QR modal, 3x "game X opens and closes" (word/duel/wyr)
+            games.spec.js          1  — game-translation i18n completeness check
+            pwa-gate.spec.js       1  — "other-platform panel" (confirmed root cause below)
+        - Confirmed root cause for pwa-gate.spec.js: the install-gate markup was refactored to a
+          single dynamic `#ig-steps-list` (public/index.html ~line 2158), but the test still
+          queries the old three-panel ids `#ig-steps-ios` / `#ig-steps-android` / `#ig-steps-other`,
+          which no longer exist — `document.getElementById(...).style` throws on null. The other
+          33 failures (index-units/feedback/passenger/games) have NOT been individually root-caused
+          yet — needs the same file-by-file drift check as pwa-gate got.
+        - Added: 2026-07-13.
+
+[X] 67. DX: Playwright's default worker count was pegging the laptop. DONE 2026-07-13.
+        - playwright.config.js had no `workers` setting, so with `fullyParallel: true` it
+          defaulted to spinning up one Chromium instance per CPU core — Abdullah reported
+          `npm test` making the laptop struggle and occasionally crash.
+        - Fix: capped `workers: process.env.CI ? '50%' : 2` — 2 locally (CI keeps its own
+          50% cap). Verified `npm run test:phone` now reports "Running 3 tests using 2 workers"
+          instead of one-per-core. Drop to 1 if it's still too heavy.
+        - Added: 2026-07-13.
+
+[X] 68. My Apps — added Tend (4th tile on the driver page). DONE 2026-07-13.
+        - Abdullah's new project (~/projects/tend) — a goals-based weekly planner: set
+          goals, Claude generates a week schedule, and an in-app Assistant replans when
+          told about a disruption. Hosted at https://tend-dma.pages.dev (Cloudflare Pages).
+        - Added as the 4th `dp-app-cell` in the "My apps" grid (public/index.html), after
+          Miami Ride Companion / SoFlo Vegan Eateries / LifeOS Planner — grid changed from
+          `repeat(3, 1fr)` to `repeat(4, 1fr)`. Icon reuses Tend's own logo mark (plant/leaf
+          on dark teal #3b5d63) inline as SVG. Inline QR + tap-to-enlarge modal wired the
+          same way as the other two apps (`renderInlineQR`, `openQR('app-tend')`,
+          `logTap('driver_app_tend')` / `driver_app_tend_qr`). New `myApps.tendTag` /
+          `myApps.tendDesc` strings added in content.json, all 4 languages.
+        - Added: 2026-07-13.
 
 
 KNOWN TRANSITIONAL STATE (not bugs)

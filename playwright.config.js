@@ -7,6 +7,9 @@ const BASE_URL = `http://127.0.0.1:${PORT}`;
 module.exports = defineConfig({
   testDir: './tests',
   fullyParallel: true,
+  // Cap parallel Chromium workers — unset defaults to one per CPU core, which
+  // was pegging the laptop (each worker is a full browser instance).
+  workers: process.env.CI ? '50%' : 2,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? [['list'], ['html', { open: 'never' }]] : [['list']],

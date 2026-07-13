@@ -575,6 +575,7 @@
           <div style="display:flex;gap:6px">
             <button class="btn btn-primary btn-sm" onclick="fetchTicketmaster()"><i class="ti ti-ticket"></i>Fetch Ticketmaster</button>
             <button class="btn btn-ghost btn-sm" onclick="fetchEvents()"><i class="ti ti-rss"></i>Re-fetch RSS</button>
+            <button class="btn btn-ghost btn-sm" onclick="fetchMbcc()"><i class="ti ti-building"></i>Fetch MBCC</button>
             <button class="btn btn-danger btn-sm" onclick="removePastEvents()"><i class="ti ti-calendar-off"></i>Remove past</button>
           </div>
         </div>
@@ -1420,6 +1421,7 @@ function addManualEvent() {
 //   { events: [{title, description, url, date, venue, address, free, source}], errors }
 function fetchEvents()       { return fetchEventsFrom('/api/rss-fetch', 'RSS', 'rss_'); }
 function fetchTicketmaster() { return fetchEventsFrom('/api/ticketmaster-fetch', 'Ticketmaster', 'tm_'); }
+function fetchMbcc()         { return fetchEventsFrom('/api/mbcc-fetch', 'MBCC', 'mbcc_'); }
 
 async function fetchEventsFrom(endpoint, label, idPrefix) {
   showToast(`Fetching events from ${label}…`);

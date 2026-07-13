@@ -36,13 +36,16 @@ test.describe('Driver dashboard', { tag: ['@editor'] }, () => {
     }
   });
 
-  test('events panel offers both Ticketmaster and RSS fetch sources', async ({ page }) => {
+  test('events panel offers Ticketmaster, RSS, and MBCC fetch sources', async ({ page }) => {
     await unlock(page);
     await page.evaluate(() => showPanel('events'));
     await expect(page.locator('#panel-events').getByRole('button', { name: /Ticketmaster/i })).toBeVisible();
     await expect(page.locator('#panel-events').getByRole('button', { name: /RSS/i })).toBeVisible();
+    await expect(page.locator('#panel-events').getByRole('button', { name: /MBCC/i })).toBeVisible();
     // The fetch wrappers must exist (wired to the Pages Functions).
-    expect(await page.evaluate(() => typeof fetchTicketmaster === 'function' && typeof fetchEvents === 'function')).toBe(true);
+    expect(await page.evaluate(() =>
+      typeof fetchTicketmaster === 'function' && typeof fetchEvents === 'function' && typeof fetchMbcc === 'function'
+    )).toBe(true);
   });
 
   test('driver panel has the show-bubble toggle', async ({ page }) => {

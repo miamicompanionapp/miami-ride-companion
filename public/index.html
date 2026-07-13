@@ -580,6 +580,19 @@
     .stale-notice i { font-size: 16px; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
     .stale-notice span { font-size: 13px; color: #E5C06B; line-height: 1.55; }
 
+    /* ── Advisory Banner (beach/weather safety alerts) ─────────── */
+    .advisory-banner {
+      display: none; align-items: center; gap: 10px;
+      background: rgba(255,92,138,0.14); border: 0.5px solid rgba(255,92,138,0.32);
+      border-radius: 10px; padding: 10px 14px; margin-top: 10px;
+      cursor: pointer; transition: all var(--transition);
+    }
+    .advisory-banner:active { transform: scale(0.98); }
+    .advisory-banner.visible { display: flex; }
+    .advisory-banner i.ti-alert-triangle { font-size: 18px; color: var(--pink-soft); flex-shrink: 0; }
+    .advisory-banner-text { font-size: 13px; color: #FFD3E0; line-height: 1.4; flex: 1; }
+    .advisory-banner i.ti-chevron-right { font-size: 16px; color: var(--pink-soft); flex-shrink: 0; }
+
     .current-card {
       background: var(--navy-deep); border-radius: 14px;
       padding: 18px 20px; flex: 1;
@@ -1043,6 +1056,49 @@
     }
     .img-end-btn.primary { background: var(--teal); color: white; }
     .img-end-btn.secondary { background: rgba(255,255,255,0.08); color: var(--heading); border: 1px solid var(--border); }
+
+    /* ── Advisories Overlay ───────────────────────────────────── */
+    .advisories-overlay {
+      position: fixed; inset: 0; z-index: 75;
+      background: rgba(8,15,26,0.84); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 260ms ease;
+      padding: 24px;
+    }
+    .advisories-overlay.visible { opacity: 1; pointer-events: all; }
+    .advisories-panel {
+      background: var(--card-solid); border: 1px solid rgba(255,92,138,0.30);
+      border-radius: 24px; width: min(560px, 100%); max-height: 84vh;
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .advisories-panel-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 24px 16px; flex-shrink: 0;
+      border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    }
+    .advisories-panel-title {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-display); font-size: 22px; color: var(--heading);
+    }
+    .advisories-panel-title i { font-size: 22px; color: var(--pink-soft); }
+    .advisories-close {
+      background: rgba(255,255,255,0.08); border: none; border-radius: 50%;
+      width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
+      color: var(--heading); cursor: pointer; flex-shrink: 0;
+    }
+    .advisories-list { overflow-y: auto; padding: 16px 24px 24px; display: flex; flex-direction: column; gap: 12px; }
+    .advisory-item {
+      background: rgba(255,92,138,0.10); border: 0.5px solid rgba(255,92,138,0.26);
+      border-radius: 14px; padding: 16px 18px;
+    }
+    .advisory-item-title { font-size: 15px; font-weight: 700; color: #FFD3E0; margin-bottom: 6px; }
+    .advisory-item-detail { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 10px; }
+    .advisory-item-meta {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      font-size: 11px; color: rgba(255,255,255,0.4);
+    }
+    .advisory-item-source { text-decoration: none; color: var(--teal); font-weight: 600; }
+    .advisories-empty { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px; }
 
     /* ── QR Modal ─────────────────────────────────────────────── */
     .qr-modal {
@@ -1672,7 +1728,7 @@
     .dp-apps-head-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--teal); }
     .dp-apps-head-title { font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
     .dp-apps-head-sub { font-size: 12px; color: rgba(255,255,255,0.48); margin-top: 2px; }
-    .dp-apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.05); }
+    .dp-apps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.05); }
     .dp-app-cell { background: var(--card-solid); padding: 18px 12px 16px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 9px; }
     .dp-app-cell-ico { width: 52px; height: 52px; border-radius: 15px; overflow: hidden; flex-shrink: 0; }
     .dp-app-cell-ico img, .dp-app-cell-ico svg { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -2250,6 +2306,11 @@
               </button>
             </div>
           </div>
+          <div class="advisory-banner" id="advisory-banner" onclick="openAdvisoriesOverlay('banner')">
+            <i class="ti ti-alert-triangle"></i>
+            <span class="advisory-banner-text" id="advisory-banner-text"></span>
+            <i class="ti ti-chevron-right"></i>
+          </div>
         </div>
 
         <div class="guide-main" id="guide-main" data-view="home">
@@ -2639,6 +2700,24 @@
                 <div class="dp-app-cell-tag" data-key="myApps.lifeosTag">Goals · habits · journal · expenses</div>
                 <div class="dp-app-cell-qr" onclick="openQR('app-lifeos')" title="LifeOS Planner">
                   <div class="dp-qr-content" id="dp-app-lifeos-qr"></div>
+                </div>
+                <div class="dp-app-cell-scan"><i class="ti ti-qrcode" style="font-size:10px"></i><span data-key="myApps.scanLabel">Scan to visit</span></div>
+              </div>
+
+              <!-- Tend -->
+              <div class="dp-app-cell" onclick="logTap('driver_app_tend')" style="cursor:pointer">
+                <div class="dp-app-cell-ico" style="box-shadow:0 4px 14px rgba(59,93,99,0.36)">
+                  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="9" fill="#3b5d63"/>
+                    <path d="M16 25.5c-.5-5.4.5-10.8 0-16.3" stroke="#f6f4ee" stroke-width="2.1" stroke-linecap="round" fill="none"/>
+                    <path d="M16.3 20.4c-2.8-.8-5.3-2.6-6.6-5.2 2.9-.3 5.6 1.5 6.6 5.2z" fill="#f6f4ee"/>
+                    <path d="M15.8 12.6c2.7-.9 5.2-2.6 6.5-5.1-2.9-.4-5.6 1.3-6.5 5.1z" fill="#f6f4ee"/>
+                  </svg>
+                </div>
+                <div class="dp-app-cell-name">Tend</div>
+                <div class="dp-app-cell-tag" data-key="myApps.tendTag">Goals · weekly plan · AI assistant</div>
+                <div class="dp-app-cell-qr" onclick="openQR('app-tend')" title="Tend">
+                  <div class="dp-qr-content" id="dp-app-tend-qr"></div>
                 </div>
                 <div class="dp-app-cell-scan"><i class="ti ti-qrcode" style="font-size:10px"></i><span data-key="myApps.scanLabel">Scan to visit</span></div>
               </div>
@@ -3143,6 +3222,17 @@
   </div>
 </div>
 
+<!-- ── Advisories Overlay ── -->
+<div class="advisories-overlay" id="advisories-overlay" onclick="if(event.target===this) closeAdvisoriesOverlay()">
+  <div class="advisories-panel">
+    <div class="advisories-panel-header">
+      <div class="advisories-panel-title"><i class="ti ti-alert-triangle"></i> <span data-key="advisories.title">Local Advisories</span></div>
+      <button class="advisories-close" onclick="closeAdvisoriesOverlay()" aria-label="Close"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="advisories-list" id="advisories-list"><!-- Rendered by JS --></div>
+  </div>
+</div>
+
 <!-- ── QR Modal ── -->
 <div class="qr-modal" id="qr-modal">
   <div class="qr-modal-box">
@@ -3597,7 +3687,7 @@ function buildContentCards() {
     { id: 'c4',
       visualHtml: `<div class="att-c4">${['','','','','p2','p1','','','p1','p2','p1','p2'].map(c=>`<div class="att-c4-cell${c?' '+c:''}"></div>`).join('')}</div>`,
       headline: { en: 'Play Connect Four!', es: '¡Juega Conecta Cuatro!', pt: 'Jogue Conecte Quatro!', fr: 'Jouez à Puissance 4!' },
-      sub:      { en: 'Drop discs, connect 4 in a row — challenge your fellow passenger! 🔴🟡', es: 'Deja caer fichas y conecta 4 en fila — ¡reta a tu compañero! 🔴🟡', pt: 'Solte discos e conecte 4 em linha — desafie seu companheiro! 🔴🟡', fr: 'Faites tomber des jetons, alignez 4 — défiez votre voisin! 🔴🟡' },
+      sub:      { en: 'Drop discs, connect 4 in a row — challenge your fellow passenger!\n🔴🟡', es: 'Deja caer fichas y conecta 4 en fila — ¡reta a tu compañero!\n🔴🟡', pt: 'Solte discos e conecte 4 em linha — desafie seu companheiro!\n🔴🟡', fr: 'Faites tomber des jetons, alignez 4 — défiez votre voisin!\n🔴🟡' },
       action: () => openGame('c4') },
 
     { id: 'spotify', visual: '🎵',
@@ -3619,6 +3709,17 @@ function buildContentCards() {
       headline: { en: 'Need something repaired in South Florida?', es: '¿Necesitas algo reparado en el sur de Florida?', pt: 'Precisa de algo consertado no sul da Flórida?', fr: 'Besoin d\'une réparation dans le sud de la Floride?' },
       sub:      { en: 'Your driver is also a handyman\nWall repair, fixture installment, assembly, furniture repair, electrical, plumbing and more — tap for details', es: 'Tu conductor también es técnico de mantenimiento\nReparación de paredes, accesorios, ensamblaje, muebles, electricidad, plomería y más — toca para más detalles', pt: 'Seu motorista também é faz-tudo\nReparo de paredes, acessórios, montagem, móveis, elétrica, encanamento e mais — toque para detalhes', fr: 'Votre chauffeur est aussi artisan\nRéparation de murs, accessoires, assemblage, meubles, électricité, plomberie et plus — appuyez pour les détails' },
       action: () => switchTab('driver') }] : []),
+
+    ...(getActiveAdvisories().length ? (() => {
+      const n = getActiveAdvisories().length;
+      const tpl = n === 1 ? CONTENT.strings.advisories.attractorSubOne : CONTENT.strings.advisories.attractorSubMany;
+      const sub = {};
+      ['en', 'es', 'pt', 'fr'].forEach(l => { sub[l] = (tpl[l] || tpl.en).replace('{n}', n); });
+      return [{ id: 'advisories', visual: '⚠️',
+        headline: CONTENT.strings.advisories.attractorHeadline,
+        sub,
+        action: () => openAdvisoriesOverlay('attractor') }];
+    })() : []),
   ];
 }
 
@@ -3630,7 +3731,8 @@ function getNextAttractorCard() {
     const all = buildContentCards();
     const feedbackCard = all.find(c => c.id === 'feedback');
     const handymanCard = all.find(c => c.id === 'handyman');
-    const boosted = new Set(['feedback', 'handyman']);
+    const advisoriesCard = all.find(c => c.id === 'advisories');
+    const boosted = new Set(['feedback', 'handyman', 'advisories']);
     const others = shuffle(all.filter(c => !boosted.has(c.id)));
     attractorContentShuffled = [];
     others.forEach((card, i) => {
@@ -3638,6 +3740,7 @@ function getNextAttractorCard() {
       if ((i + 1) % 4 === 0) {
         if (feedbackCard) attractorContentShuffled.push(feedbackCard);
         if (handymanCard) attractorContentShuffled.push(handymanCard);
+        if (advisoriesCard) attractorContentShuffled.push(advisoriesCard);
       }
     });
     if (feedbackCard && attractorContentShuffled[attractorContentShuffled.length - 1] !== feedbackCard) {
@@ -3645,6 +3748,9 @@ function getNextAttractorCard() {
     }
     if (handymanCard && attractorContentShuffled[attractorContentShuffled.length - 1] !== handymanCard) {
       attractorContentShuffled.push(handymanCard);
+    }
+    if (advisoriesCard && attractorContentShuffled[attractorContentShuffled.length - 1] !== advisoriesCard) {
+      attractorContentShuffled.push(advisoriesCard);
     }
   }
   let card;
@@ -4171,6 +4277,7 @@ function applyContent() {
   renderGuide();
   renderWeather();
   renderDriver();
+  renderAdvisories();
   startSubtitleRotator();
   prewarmEventImages();
   // No startSession() here — a session opens lazily on the first in-app tap.
@@ -4229,6 +4336,7 @@ function setLang(l) {
   renderGuide();
   renderWeather();
   renderDriver();
+  renderAdvisories();
   refreshOpenGame();
   setSubtitleVariant(subtitleVariantIdx);
   logTap('lang_' + l);
@@ -4250,6 +4358,96 @@ function tx(o) {
   if (!o) return '';
   if (typeof o === 'string') return o;
   return o[lang] || o['en'] || '';
+}
+
+// ════════════════════════════════════════════════════════════
+// ADVISORIES (beach water quality + NWS weather/safety alerts)
+// ════════════════════════════════════════════════════════════
+// Client-side expiry runs on every render, independent of whether
+// daily-refresh actually ran today — a stale advisory must never display
+// just because content.json didn't get updated.
+function getActiveAdvisories() {
+  if (!CONTENT || !CONTENT.advisories || !Array.isArray(CONTENT.advisories.items)) return [];
+  const now = Date.now();
+  return CONTENT.advisories.items.filter(a => a.expiresAt && new Date(a.expiresAt).getTime() > now);
+}
+
+function renderAdvisories() {
+  const active = getActiveAdvisories();
+  const banner = document.getElementById('advisory-banner');
+  const textEl = document.getElementById('advisory-banner-text');
+  if (!banner || !textEl) return;
+  if (!active.length) {
+    banner.classList.remove('visible');
+  } else {
+    const tpl = active.length === 1 ? t('advisories.bannerOne') : t('advisories.bannerMany');
+    textEl.textContent = tpl.replace('{n}', active.length);
+    banner.classList.add('visible');
+  }
+  // Keep an already-open overlay's list in sync (e.g. a language switch while it's open).
+  if (document.getElementById('advisories-overlay')?.classList.contains('visible')) {
+    renderAdvisoriesList(active);
+  }
+}
+
+// Builds list items via DOM textContent (not innerHTML) since advisory text
+// includes free-form copy from an external source (NWS alert descriptions).
+function renderAdvisoriesList(active) {
+  const list = document.getElementById('advisories-list');
+  if (!list) return;
+  active = active || getActiveAdvisories();
+  list.innerHTML = '';
+  if (!active.length) {
+    const empty = document.createElement('div');
+    empty.className = 'advisories-empty';
+    empty.textContent = t('advisories.empty');
+    list.appendChild(empty);
+    return;
+  }
+  active.forEach(a => {
+    const item = document.createElement('div');
+    item.className = 'advisory-item';
+
+    const title = document.createElement('div');
+    title.className = 'advisory-item-title';
+    title.textContent = aL(a.title);
+    item.appendChild(title);
+
+    const detail = document.createElement('div');
+    detail.className = 'advisory-item-detail';
+    detail.textContent = aL(a.detail);
+    item.appendChild(detail);
+
+    const meta = document.createElement('div');
+    meta.className = 'advisory-item-meta';
+    const dateSpan = document.createElement('span');
+    dateSpan.textContent = a.effectiveAt || '';
+    meta.appendChild(dateSpan);
+    const srcBtn = document.createElement('span');
+    srcBtn.className = 'advisory-item-source';
+    srcBtn.textContent = `${t('advisories.sourceLabel')}: ${a.source || ''}`;
+    if (a.sourceUrl) {
+      srcBtn.style.cursor = 'pointer';
+      srcBtn.onclick = () => openQR('advisory', a.id);
+    }
+    meta.appendChild(srcBtn);
+    item.appendChild(meta);
+
+    list.appendChild(item);
+  });
+}
+
+function openAdvisoriesOverlay(source) {
+  renderAdvisoriesList();
+  document.getElementById('advisories-overlay').classList.add('visible');
+  logTap('advisories_open');
+  track('advisories_open', { source: source || 'banner' });
+  resetInactivity();
+}
+
+function closeAdvisoriesOverlay() {
+  document.getElementById('advisories-overlay').classList.remove('visible');
+  resetInactivity();
 }
 
 function renderDriver() {
@@ -4366,6 +4564,7 @@ function renderDriver() {
   // My Apps — inline QR codes
   renderInlineQR('#dp-app-soflo-qr',  'https://soflo-vegan-eateries.miamivegan2026.workers.dev/');
   renderInlineQR('#dp-app-lifeos-qr', 'https://unalplanner.netlify.app/');
+  renderInlineQR('#dp-app-tend-qr',   'https://tend-dma.pages.dev/');
 }
 
 function setText(sel, text) {
@@ -6975,6 +7174,20 @@ function openQR(type, id) {
     qrUrl = 'https://unalplanner.netlify.app/';
     urlEl.textContent = 'unalplanner.netlify.app';
     logTap('driver_app_lifeos_qr');
+  } else if (type === 'app-tend') {
+    title.textContent = 'Tend';
+    sub.textContent = t('myApps.tendDesc');
+    qrUrl = 'https://tend-dma.pages.dev/';
+    urlEl.textContent = 'tend-dma.pages.dev';
+    logTap('driver_app_tend_qr');
+  } else if (type === 'advisory' && CONTENT) {
+    const a = (CONTENT.advisories?.items || []).find(x => x.id === id);
+    if (a) {
+      title.textContent = aL(a.title);
+      sub.textContent = a.source || '';
+      qrUrl = a.sourceUrl || '';
+      try { urlEl.textContent = qrUrl ? new URL(qrUrl).hostname : ''; } catch { urlEl.textContent = qrUrl; }
+    }
   }
 
   // Generate real QR code

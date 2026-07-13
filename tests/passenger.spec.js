@@ -154,4 +154,71 @@ test.describe('Passenger app', { tag: ['@index'] }, () => {
       await expect(page.locator(`#game-${game}`)).toBeHidden();
     });
   }
+
+  test('advisory banner shows with active advisories (from content.json) and tapping it opens the overlay', async ({ page }) => {
+    // This app's content.json currently carries real active beach advisories,
+    // so no fixture injection needed — assert against the live banner state.
+    const hasActive = await page.evaluate(() => getActiveAdvisories().length > 0);
+    test.skip(!hasActive, 'no active advisories in content.json right now');
+    await expect(page.locator('#advisory-banner')).toHaveClass(/visible/);
+    await page.locator('#advisory-banner').click();
+    await expect(page.locator('#advisories-overlay')).toHaveClass(/visible/);
+    expect(await page.locator('.advisory-item').count()).toBeGreaterThan(0);
+    await page.locator('.advisories-close').click();
+    await expect(page.locator('#advisories-overlay')).not.toHaveClass(/visible/);
+  });
+
+  test('opening advisories logs a tap and a GA4 event tagged with its entry point (banner vs attractor)', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const events = [];
+      const origGtag = window.gtag;
+      window.gtag = (cmd, name, params) => { if (cmd === 'event') events.push({ name, params }); };
+      const origSessionTaps = { ...sessionTaps };
+
+      openAdvisoriesOverlay('banner');
+      closeAdvisoriesOverlay();
+      openAdvisoriesOverlay('attractor');
+      closeAdvisoriesOverlay();
+
+      window.gtag = origGtag;
+      const tapCount = sessionTaps['advisories_open'] || 0;
+      Object.keys(sessionTaps).forEach(k => { if (!(k in origSessionTaps)) delete sessionTaps[k]; });
+      return { events: events.filter(e => e.name === 'advisories_open'), tapCount };
+    });
+    expect(result.tapCount).toBe(2); // logTap fired for both opens
+    expect(result.events.map(e => e.params.source)).toEqual(['banner', 'attractor']);
+  });
+
+  test('advisory banner is hidden when all advisories have expired', async ({ page }) => {
+    await page.evaluate(() => {
+      CONTENT.advisories = {
+        fetchedAt: new Date().toISOString(),
+        items: [{ id: 'x', expiresAt: new Date(Date.now() - 1000).toISOString(), title: { en: 't' }, detail: { en: 'd' } }],
+      };
+      renderAdvisories();
+    });
+    await expect(page.locator('#advisory-banner')).not.toHaveClass(/visible/);
+  });
+
+  test('advisories overlay lists active items with title, detail, and source', async ({ page }) => {
+    await page.evaluate(() => {
+      CONTENT.advisories = {
+        fetchedAt: new Date().toISOString(),
+        items: [{
+          id: 'test_beach', expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString(),
+          title: { en: 'Test Beach — Water Quality Advisory' },
+          detail: { en: 'Elevated bacteria detected.' },
+          source: 'Florida Dept. of Health — Healthy Beaches',
+          sourceUrl: 'https://www.floridahealthybeaches.com/county/dade/beach/test-beach',
+          effectiveAt: '7/8/2026',
+        }],
+      };
+      renderAdvisories();
+      openAdvisoriesOverlay();
+    });
+    await expect(page.locator('.advisory-item-title')).toHaveText('Test Beach — Water Quality Advisory');
+    await expect(page.locator('.advisory-item-detail')).toHaveText('Elevated bacteria detected.');
+    await expect(page.locator('.advisory-item-source')).toContainText('Florida Dept. of Health');
+    await page.evaluate(() => closeAdvisoriesOverlay());
+  });
 });

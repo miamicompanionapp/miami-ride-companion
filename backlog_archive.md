@@ -7,6 +7,87 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Local Advisories — beach water quality + NWS weather/safety alerts  *(DONE 2026-07-13, SW v1.81.0)*
+
+Abdullah saw a news story about elevated Enterococcus bacteria at Miami beaches and wanted passengers to see active health/safety advisories (bacteria, weather hazards) rather than have to seek that out themselves. First researched what's reliably fetchable (see conversation), then built it end-to-end.
+
+**Data sources:**
+- **Beach water quality** — `floridahealthybeaches.com/county/dade` (public front-end for FL Dept. of Health's Healthy Beaches sampling program) is Next.js SSG and ships its full dataset as JSON in a `<script id="__NEXT_DATA__">` tag — far more reliable to parse than scraping rendered card HTML (confirmed 2026-07-13, same discovery process as `mbcc-fetch.js`'s doc comment describes for events). Key finding: `advisoryStatus` (Yes/No) is the field that reflects the county's actual persistent advisory state — NOT `enterococcusStatus`, which only reflects the single latest sample against the EPA threshold and can read "Good" even while `advisoryStatus` stays "Yes" until a clean resample clears it. Verified against live data during dev: Bark Beach (300 CFU/100mL) and Golden Beach (820 CFU/100mL) were both under active advisory, matching the news story.
+- **Weather/safety alerts** — `api.weather.gov` (NOAA/NWS), a free, no-key, well-documented JSON API. `/alerts/active?point=25.7617,-80.1918` (same Miami point already used for the Open-Meteo weather fetch) returns rip current statements, coastal flood advisories, heat advisories, tropical storm/hurricane watches, etc. directly — no scraping needed.
+- **Rip current risk specifically** (`weather.gov/beach/mfl`) was researched but NOT built — it's an HTML/text product, not JSON, so it's logged as backlog #71 for later rather than scope-crept into this session.
+
+**Backend:** `functions/api/beach-advisories-fetch.js` (new) — fetches the Dade county page, extracts and parses the `__NEXT_DATA__` JSON, maps each beach to `{ name, slug, status: 'advisory'|'good', value, sampleDate, updatedAt, url, lat, lng }`. Pure `parseBeachAdvisories()`/`parseSampleDate()` exported for testing, mirroring `mbcc-fetch.js`'s shape. Registered in `src/index.js`'s `API_ROUTES` (this is a Worker-with-static-assets project — `functions/*` isn't auto-routed, see that file's header comment).
+
+**Pipeline:** `scripts/daily-refresh.mjs` gained `refreshAdvisories(content)`, called as step 9 in `main()`. It: (a) calls the new Worker endpoint, filters to `status === 'advisory'`, and builds items via hand-translated EN/ES/PT/FR templates (beach name + CFU value are the only variables, so no Claude round-trip needed — same reasoning as the existing `WD` weather-description dictionary); (b) fetches NWS alerts directly (same pattern as the existing direct Open-Meteo call — no Worker proxy needed, it's a public API); (c) maps common hazard types (rip current, coastal flood, heat, tropical storm/hurricane, severe thunderstorm, flash flood) through a small static `NWS_EVENT_NAMES` title dictionary, and Claude-translates the free-text `detail` via a new `translateAdvisoryDetails()` batch step — **this was a real gap caught by `content.spec.js`'s existing "every translatable string has ES/PT/FR" test**: the original design left NWS detail untranslated on the theory that `aL()` falls back to English, but that test explicitly requires all 4 languages with no fallback exception (same rule events already follow), so it would have broken CI the first time a real NWS alert appeared. Every item — from both sources — gets a hard `expiresAt` (fetchedAt + 24h, capped further by the NWS alert's own `expires` if sooner) so a missed daily-refresh run can never leave a stale advisory showing.
+
+**Frontend (`public/index.html`):**
+- A pink-toned `.advisory-banner` on the guide/home page (`#advisory-banner`), hidden by default, shown via `renderAdvisories()` whenever `getActiveAdvisories()` (client-side expiry filter against `item.expiresAt`, independent of whether `daily-refresh` ran today) returns items. Tapping it opens a full-screen `.advisories-overlay` (backdrop + panel, follows the documented `opacity/pointer-events + .visible` overlay pattern, z-index 75 — above `.main-content` (50) and the venue sheet (70/71), below QR modal (80) and everything above it) listing each active item's title/detail/source, built via DOM `textContent` (not `innerHTML`) since NWS alert text is free-form external content.
+- An `advisories` attractor card (`buildContentCards()`) that only appears in the pool while `getActiveAdvisories().length > 0`, added to the boosted-rotation `Set` alongside `feedback`/`handyman` so it surfaces ~3× per cycle instead of once, with a dynamic `{n}`-interpolated sub-copy built from new `strings.advisories.attractorSubOne`/`attractorSubMany` templates in `content.json`.
+- `renderAdvisories()` wired into both `applyContent()` (initial load) and `setLang()` (language switch re-renders the banner text and any open overlay list).
+- External source links use the existing `openQR(type, id)` QR-modal pattern (new `'advisory'` branch) rather than an `<a target="_blank">` — this kiosk app has no existing pattern for navigating the tablet's browser away from the app; passengers scan with their own phone instead, same as venue websites.
+- New `strings.advisories` block in `content.json` (title, banner/attractor copy, EN/ES/PT/FR) read via the existing `t()`/`data-key` mechanism.
+
+**Analytics follow-up (same session):** Abdullah asked whether banner taps were tracked. `logTap('advisories_open')` (the IndexedDB `taps` store the driver's analytics export reads) was already firing, but there was no GA4 `track()` call — unlike comparable features (`venue_view`, `tab_view`, `qr_opened`, `attractor_tap`) — and the two entry points were indistinguishable: an attractor-card-triggered open logs `attractor_advisories` (via the generic `onAttractorTap()` layer) *then* calls the same `openAdvisoriesOverlay()` as a direct banner tap, so both produced an identical `advisories_open` tap with no way to tell them apart short of subtracting counts. Fixed by giving `openAdvisoriesOverlay(source)` a `source` param (`'banner'` from the banner's `onclick`, `'attractor'` from the attractor card's `action`) and adding `track('advisories_open', { source })` for GA4 parity. Added a test stubbing `gtag` to assert both entry points fire distinct `source` values and both increment the tap counter.
+
+**Verified:** live-fetched and parsed the real Dade county page during dev (16 beaches, 2 under active advisory matching the news story) and the real NWS alerts endpoint (0 active for Miami at the time); drove a real headless browser against the built UI and screenshotted the banner + overlay. `npx playwright test tests/backend.spec.js tests/index-units.spec.js tests/content.spec.js tests/passenger.spec.js` — new tests pass (5 backend parser tests, 4 pure-function unit tests, 3 E2E banner/overlay tests); the existing generic content-translation-completeness test also now covers the new `content.advisories` and `strings.advisories` trees for free.
+
+**Files:** `functions/api/beach-advisories-fetch.js` (new), `src/index.js` (route registration), `scripts/daily-refresh.mjs` (`refreshAdvisories`, `refreshBeachAdvisories`, `refreshNwsAlerts`, `beachAdvisoryItem`, `nwsAdvisoryItem`, `translateAdvisoryDetails`, `NWS_EVENT_NAMES`), `public/index.html` (banner + overlay CSS/HTML/JS, attractor card, `openQR` `'advisory'` branch), `public/content.json` (`advisories` data + `strings.advisories`), `tests/backend.spec.js`, `tests/index-units.spec.js`, `tests/passenger.spec.js`. Bumped `public/sw.js` to **v1.81.0**.
+
+---
+
+### [X] BUG: Connect Four attractor card emoji pair wrapped mid-line  *(DONE 2026-07-13, SW v1.80.1)*
+
+Abdullah spotted that on the "Play Connect Four!" attractor card, the trailing 🔴🟡 pair sometimes broke apart across two lines — the 🔴 ending one line and the 🟡 starting the next — because the browser treats the space before them as a normal wrap point in the flowing sub-copy.
+
+**Fix:** in the `c4` card's `sub` object (`buildContentCards()` in `public/index.html`), replaced the space before `🔴🟡` with a `\n` in all 4 languages. `.attractor-sub` already has `white-space: pre-line` (used by the handyman card's multi-line service list), so the `\n` now forces the emoji pair onto its own line together instead of letting it wrap arbitrarily. `renderAttractorCard()` sets this via `subEl.textContent`, so no HTML injection risk — a literal `<br>` would not have worked since it isn't parsed as markup.
+
+While adding a regression test, discovered `tests/index-units.spec.js` was entirely broken (14/31 tests failing, unrelated to this fix) — a PWA install gate had been added to `index.html` (uncommitted, in-progress work) that blocks `bootApp()`/`loadContent()` unless `localStorage['pwa-bypass'] === '1'` is set first. `tests/fixtures.js` already had the bypass wired in (`page.addInitScript(...)`), but `index-units.spec.js` intentionally uses the plain `@playwright/test` runner (not `./fixtures`, see its file-header comment) and was never updated. Added the same `addInitScript` bypass before each of its 9 `page.goto('/index.html')` calls — brings the whole file back to green, not something I introduced.
+
+**Verified:** `npx playwright test tests/index-units.spec.js` — 31/31 passed (previously 17/31 with 14 pre-existing failures unrelated to this change).
+
+**Files:** `public/index.html` (`c4` card `sub` strings), `tests/index-units.spec.js` (new test + `pwa-bypass` fix). Bumped `public/sw.js` to **v1.80.1**.
+
+---
+
+### [X] My Apps — added Tend (4th tile, driver page)  *(DONE 2026-07-13, SW v1.80.0)*
+
+Abdullah asked to add his new project, `~/projects/tend`, to the "My apps" grid on the driver page. Tend is a goals-based weekly planner (React + Vite + Cloudflare Pages/D1): a user adds goals, `/api/generate-plan` calls Claude to build a concrete week schedule from them, and an in-app Assistant tab takes a plain-language disruption message and replans via `/api/replan`. Live at https://tend-dma.pages.dev.
+
+**Fix:** added a 4th `dp-app-cell` to `public/index.html`'s "My apps" grid, after Miami Ride Companion / SoFlo Vegan Eateries / LifeOS Planner. `.dp-apps-grid` changed from `grid-template-columns: repeat(3, 1fr)` to `repeat(4, 1fr)` to fit it evenly. The icon reuses Tend's actual logo mark verbatim (a growing plant/stem line-drawing on a `#3b5d63` dark-teal rounded square, from `tend/src/components/Logo.tsx`) as an inline SVG, matching the existing pattern of hand-drawn inline SVGs for SoFlo/LifeOS (no external icon asset). Wired through the same source-agnostic plumbing as the other two: `renderInlineQR('#dp-app-tend-qr', 'https://tend-dma.pages.dev/')` for the inline QR, an `app-tend` branch in the QR-modal switch (title/desc/URL + `logTap('driver_app_tend_qr')`), and `onclick="logTap('driver_app_tend')"` on the cell itself. Added `myApps.tendTag` / `myApps.tendDesc` to `content.json`, translated in all 4 languages (EN/ES/PT/FR).
+
+**Verified:** started a local static server (`python -m http.server 8000` in `public/`) and confirmed the served `index.html`/`content.json` contained the new strings; Abdullah confirmed visually in-browser after unregistering a stale Service Worker that was serving a pre-edit cached copy (SW precaches aggressively — a bumped `CACHE_VERSION` doesn't take effect on an already-open tab until it cycles through the update flow). `npx playwright test tests/passenger.spec.js -g "driver page renders bio and pet crew"` still passes in isolation.
+
+**Files:** `public/index.html` (`.dp-apps-grid` CSS, new `dp-app-cell`, `renderInlineQR` call, `app-tend` QR-modal branch), `public/content.json` (`myApps.tendTag`/`tendDesc`, 4 languages). Bumped `public/sw.js` to **v1.80.0**.
+
+---
+
+### [X] DX: capped Playwright's worker count  *(DONE 2026-07-13)*
+
+Abdullah reported `npm test` making his laptop struggle and occasionally crash. `playwright.config.js` had `fullyParallel: true` with no `workers` setting, so Playwright defaulted to spinning up roughly one Chromium instance per CPU core (8 on this machine) — each a full browser process running a test file in parallel.
+
+**Fix:** added `workers: process.env.CI ? '50%' : 2` to `playwright.config.js`, capping local runs to 2 parallel workers (CI keeps its own lighter-weight `50%` share, unaffected). Verified with `npm run test:phone`: output now reads "Running 3 tests using 2 workers" instead of spawning one per core.
+
+**File:** `playwright.config.js`.
+
+---
+
+### [X] Events — Miami Beach Convention Center scrape source  *(DONE 2026-07-13)*
+
+Investigated why Florida Supercon 2026 (July 10–12, Miami Beach Convention Center) never appeared in the app. Turned out to be two separate things, one real and one a false alarm:
+
+1. **False alarm:** `content.json`'s `meta.lastUpdated` looked stuck at 2026-07-02 (11 days stale) when first checked — but that was because this local git clone was simply 23 commits/11 days behind `origin/main`, not because the `daily-refresh` GitHub Action had actually stopped. `gh run list --workflow=daily-refresh.yml` (after authenticating `gh` mid-session) showed it had run and committed successfully every single day, including 2026-07-12. Lesson: always `git fetch`/compare against `origin/main` before trusting a local file's freshness for diagnosis.
+2. **Real cause:** Florida Supercon is self-ticketed via floridasupercon.com, not Ticketmaster, and our only other source (4 RSS blogs) doesn't reliably cover conventions/expos. So even with a perfectly healthy pipeline, it was never going to surface.
+
+Added a third event source targeting that real gap: `functions/api/mbcc-fetch.js` scrapes `miamibeachconvention.com/events` directly. No RSS/JSON feed exists there (confirmed 2026-07-13) — it's server-rendered Drupal HTML with a stable, parseable structure (`<article data-detype="event" data-dename="...">` cards, paginated `?page=N`, 6 events/page, sorted chronologically). Parses the first 2 pages (~12 events, several months out) per call. Venue is a single fixed point (Miami Beach Convention Center, lat/lng resolved once via Nominatim) so no per-event geocoding is needed, unlike the RSS source.
+
+Wired into both ingestion paths: `scripts/daily-refresh.mjs`'s endpoint loop (`mbcc_` id prefix) and the editor's manual "Fetch MBCC" button (`fetchMbcc()` in `public/editor.html`), reusing the existing source-agnostic `fetchEventsFrom()`. Registered the route in `src/index.js`. AI review / translation / category inference in `daily-refresh.mjs` apply to MBCC events automatically since they enter the same `content.guide.events` merge path as RSS/Ticketmaster.
+
+Live-verified against the real site via `wrangler dev` (port 8787): pulled 11 upcoming events correctly, with Florida Supercon itself properly excluded by the past-event filter since it had already occurred by test time.
+
+**File:** `functions/api/mbcc-fetch.js` (new); `src/index.js` (route registration); `scripts/daily-refresh.mjs` (endpoint loop entry); `public/editor.html` (`fetchMbcc()` + button). Tests: `tests/backend.spec.js` (`parseMbccPage`, `dropPastEvents`, `miamiToday` — 6 new cases), `tests/editor.spec.js` (extended fetch-sources test to cover MBCC).
+
+---
+
 ### [X] BUG: events with no category signal silently defaulted to "music"  *(DONE 2026-07-06)*
 
 Abdullah noticed clearly non-music events tagged "Music" in the passenger app's event chips — a fine-art exhibit, a "Family Day: Fiber, Texture and Storytelling" kids event, a Pilates/padel club meetup, "Paws Patio™". Root cause: `scripts/daily-refresh.mjs`'s `inferEventCategory()` ran a small set of regex rules (comedy/sports/arts/nightlife/food-drink) against the title, and **anything that matched none of them fell through to `return 'music'`** — "music" was an undocumented catch-all, not a real classification. This only affected RSS-sourced events (Soul of Miami / Miami on the Cheap / Miami New Times), since those feeds carry no structured category — 22 of them existed in `content.json`, 16 were mislabeled.
