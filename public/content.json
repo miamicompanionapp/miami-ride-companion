@@ -1,69 +1,56 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-12T13:10:32.257Z",
+    "lastUpdated": "2026-07-13T14:24:56.492Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-07-12T13:10:32.256Z",
+    "fetchedAt": "2026-07-13T14:24:55.930Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 96,
+      "temp_f": 87,
+      "feels_f": 98,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 81,
-      "wind_mph": 5,
-      "rain_chance": 18,
-      "weathercode": 3
+      "humidity": 78,
+      "wind_mph": 7,
+      "rain_chance": 6,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-07-12",
-        "high_f": 89,
-        "low_f": 81,
-        "weathercode": 51,
-        "rain_chance": 18,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
         "date": "2026-07-13",
         "high_f": 90,
-        "low_f": 75,
-        "weathercode": 65,
-        "rain_chance": 9,
+        "low_f": 79,
+        "weathercode": 2,
+        "rain_chance": 6,
         "description": {
-          "en": "Heavy rain",
-          "es": "Lluvia intensa",
-          "pt": "Chuva forte",
-          "fr": "Pluie forte"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-07-14",
         "high_f": 89,
-        "low_f": 77,
-        "weathercode": 3,
-        "rain_chance": 9,
+        "low_f": 76,
+        "weathercode": 55,
+        "rain_chance": 4,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-07-15",
         "high_f": 89,
-        "low_f": 84,
+        "low_f": 75,
         "weathercode": 3,
         "rain_chance": 5,
         "description": {
@@ -75,130 +62,137 @@
       },
       {
         "date": "2026-07-16",
+        "high_f": 88,
+        "low_f": 85,
+        "weathercode": 51,
+        "rain_chance": 6,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-07-17",
         "high_f": 89,
         "low_f": 84,
-        "weathercode": 3,
-        "rain_chance": 3,
+        "weathercode": 53,
+        "rain_chance": 17,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "09:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
         "hour": "10:00",
         "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 4
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "11:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 2
       },
       {
         "hour": "12:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 89,
+        "weathercode": 1,
+        "rain_chance": 2
       },
       {
         "hour": "13:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 90,
+        "weathercode": 1,
+        "rain_chance": 2
       },
       {
         "hour": "14:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 5
+        "temp_f": 90,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "15:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 7
+        "temp_f": 90,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "16:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 90,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "17:00",
-        "temp_f": 88,
-        "weathercode": 3,
+        "temp_f": 89,
+        "weathercode": 0,
         "rain_chance": 4
       },
       {
         "hour": "18:00",
         "temp_f": 87,
-        "weathercode": 2,
+        "weathercode": 0,
         "rain_chance": 4
       },
       {
         "hour": "19:00",
         "temp_f": 86,
-        "weathercode": 0,
+        "weathercode": 1,
         "rain_chance": 4
       },
       {
         "hour": "20:00",
-        "temp_f": 84,
+        "temp_f": 85,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 5
       },
       {
         "hour": "21:00",
-        "temp_f": 82,
+        "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 5
       },
       {
         "hour": "22:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 5
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 6
       },
       {
         "hour": "00:00",
-        "temp_f": 80,
+        "temp_f": 77,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 4
       },
       {
         "hour": "01:00",
-        "temp_f": 80,
+        "temp_f": 77,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 4
       },
       {
         "hour": "02:00",
-        "temp_f": 79,
+        "temp_f": 77,
         "weathercode": 0,
         "rain_chance": 2
       },
       {
         "hour": "03:00",
-        "temp_f": 79,
+        "temp_f": 78,
         "weathercode": 0,
         "rain_chance": 2
       },
@@ -206,31 +200,37 @@
         "hour": "04:00",
         "temp_f": 79,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 1
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 1
       },
       {
         "hour": "08:00",
         "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 2
+        "weathercode": 3,
+        "rain_chance": 3
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 3
       }
     ]
   },
@@ -1917,31 +1917,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1782483305139_sgdy",
-        "title": {
-          "en": "Courtside for a Cause Wimbledon Finals Watch Party 7/12/26",
-          "es": "Viendo la Final de Wimbledon desde la Cancha por una Causa 7/12/26",
-          "pt": "Assistindo à Final de Wimbledon da Quadra por uma Causa 7/12/26",
-          "fr": "Regarder la Finale de Wimbledon en Tribune pour une Cause 7/12/26"
-        },
-        "date": "2026-07-12",
-        "venue": "Coral Reef Yacht Club",
-        "address": "2484 Bayshore Dr, Miami, Florida, 33133",
-        "url": "https://www.soulofmiami.org/2026/06/25/courtside-for-a-cause-wimbledon-finals-watch-party-7-12-26/",
-        "free": false,
-        "price": "$75",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/Wimbledon-Watch-Flyer-2026-333x500.jpg",
-        "description": {
-          "en": "Join Patches for an afternoon of tennis-inspired fun, community, and philanthropy as supporters gather",
-          "es": "Únete a Patches para una tarde de diversión inspirada en el tenis, comunidad y filantropía mientras los simpatizantes se reúnen",
-          "pt": "Junte-se a Patches para uma tarde de diversão inspirada no tênis, comunidade e filantropia enquanto apoiadores se reúnem",
-          "fr": "Rejoignez Patches pour un après-midi amusant inspiré du tennis, de communauté et de philanthropie alors que les supporters se rassemblent"
-        },
-        "lat": 25.7321038,
-        "lng": -80.2301197,
-        "category": "sports"
-      },
-      {
         "id": "rss_1782483305139_uegn",
         "title": {
           "en": "Women’s Equality Day 2026 8/26/26",
@@ -2240,31 +2215,6 @@
         "lat": 26.0133424,
         "lng": -80.3122639,
         "category": "arts"
-      },
-      {
-        "id": "tm_1782828610941_fsws",
-        "title": {
-          "en": "XXL Freshman Class 2026",
-          "es": "XXL Freshman Class 2026",
-          "pt": "XXL Freshman Class 2026",
-          "fr": "XXL Freshman Class 2026"
-        },
-        "date": "2026-07-12",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fxxl-freshman-class-2026-liv-nightclub-miami-tickets%2F14226204&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/80b/f3cd8d24-c3ae-4fa0-b4bc-1ba99f9b380b_106091_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier poseedor de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza a las 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso que não possa apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa às 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence à 23:00 · LIV Nightclub Miami"
-        },
-        "lat": 25.817805,
-        "lng": -80.122143,
-        "category": "music"
       },
       {
         "id": "rss_1783086819771_5yyl",
@@ -2636,31 +2586,6 @@
         "lng": -80.146162
       },
       {
-        "id": "rss_1783692777831_c9sq",
-        "title": {
-          "en": "Smirnoff Ice Villa Nights in Miami Sunday 7/12/26",
-          "es": "Smirnoff Ice Villa Nights en Miami domingo 7/12/26",
-          "pt": "Smirnoff Ice Villa Nights em Miami domingo 7/12/26",
-          "fr": "Smirnoff Ice Villa Nights à Miami dimanche 7/12/26"
-        },
-        "date": "2026-07-12",
-        "venue": "Grails",
-        "address": "2800 N Miami Ave, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/07/09/smirnoff-ice-villa-nights-in-miami-sunday-7-12-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/11x17-Miami-2-324x500.png",
-        "description": {
-          "en": "21+ Smirnoff Ice is bringing its Villa Nights pop-up to Grails on Sunday, July 12 giving Miami fans",
-          "es": "Mayores de 21 años. Smirnoff Ice trae su pop-up Villa Nights a Grails el domingo 12 de julio para los fans de Miami",
-          "pt": "Maiores de 21 anos. Smirnoff Ice traz seu pop-up Villa Nights para Grails no domingo, 12 de julho, para os fãs de Miami",
-          "fr": "21 ans et plus. Smirnoff Ice apporte son pop-up Villa Nights à Grails le dimanche 12 juillet pour les fans de Miami"
-        },
-        "lat": 25.8031676,
-        "lng": -80.1953196,
-        "category": "community"
-      },
-      {
         "id": "rss_1783692777831_shgl",
         "title": {
           "en": "lululemon Summer Series | Yogilates at Miami Worldcenter 7/18/26",
@@ -2757,106 +2682,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1783775325737_hh0h",
-        "title": {
-          "en": "Miami Marlins vs Cleveland Guardians: Billy the Marlin Shoulder Plush presented by BrandsMart",
-          "es": "Miami Marlins vs Cleveland Guardians: Peluche de Hombro de Billy the Marlin presentado por BrandsMart",
-          "pt": "Miami Marlins vs Cleveland Guardians: Pelúcia do Ombro de Billy the Marlin apresentada por BrandsMart",
-          "fr": "Miami Marlins vs Cleveland Guardians: Peluche Épaule de Billy the Marlin présentée par BrandsMart"
-        },
-        "date": "2026-07-12",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qax8&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 13:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 13:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 13:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 13:40 · LoanDepot Park"
-        },
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1783775325737_1h33",
-        "title": {
-          "en": "People Profile Awards 2026",
-          "es": "Premios People Profile 2026",
-          "pt": "Prêmios People Profile 2026",
-          "fr": "Prix People Profile 2026"
-        },
-        "date": "2026-07-12",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpeople-profile-awards-2026-ft-lauderdale-florida-07-12-2026%2Fevent%2F0D0064A6CA1EEE81&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The 11th staging of the People Profile Awards continues its tradition as a premier Black-Tie, Red-Carpet Affair, spotlighting the extraordinary accomplishments of individuals, groups, and entities. This milestone event celebrates those who have made a profound impact on their communities and the world, using the power of storytelling to motivate and inspire all in attendance. VIP Tickets include p",
-          "es": "La 11ª edición de los Premios People Profile continúa su tradición como un evento de gala elegante con alfombra roja, destacando los logros extraordinarios de individuos, grupos y entidades. Este evento histórico celebra a aquellos que han dejado un impacto profundo en sus comunidades y el mundo, utilizando el poder de la narrativa para motivar e inspirar a todos los asistentes. Los boletos VIP incluyen",
-          "pt": "A 11ª edição do People Profile Awards continua sua tradição como um evento sofisticado de gala e tapete vermelho, destacando as realizações extraordinárias de indivíduos, grupos e entidades. Este evento histórico celebra aqueles que tiveram um impacto profundo em suas comunidades e no mundo, usando o poder da narrativa para motivar e inspirar todos os presentes. Os ingressos VIP incluem",
-          "fr": "La 11ème édition des People Profile Awards poursuit sa tradition en tant qu'événement sophistiqué de gala et tapis rouge, mettant en lumière les réalisations extraordinaires d'individus, de groupes et d'entités. Cet événement historique célèbre ceux qui ont eu un impact profond sur leurs communautés et le monde, en utilisant le pouvoir de la narration pour motiver et inspirer tous les participants. Les billets VIP incluent"
-        },
-        "lat": 26.1193,
-        "lng": -80.149426,
-        "category": "community"
-      },
-      {
-        "id": "tm_1783861822203_3m0y",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Balloon Museum | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Balloon Museum | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Balloon Museum | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-07-12",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 10:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Début 10:00 · Mana Wynwood Convention Center"
-        },
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1783861822203_7nre",
-        "title": {
-          "en": "Dennis Watkins' The Magic Parlour",
-          "es": "The Magic Parlour de Dennis Watkins",
-          "pt": "The Magic Parlour de Dennis Watkins",
-          "fr": "The Magic Parlour de Dennis Watkins"
-        },
-        "date": "2026-07-12",
-        "venue": "Adrienne Arsht Center For the Performing Arts",
-        "address": "1300 Biscayne Blvd., Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-9ra&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/393/b74d3ddc-a5f3-4e09-a801-89c36b774393_106071_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Miscellaneous · Starts 12:00 · Adrienne Arsht Center For the Performing Arts",
-          "es": "Artes y Teatro · Miscelánea · Comienza 12:00 · Adrienne Arsht Center For the Performing Arts",
-          "pt": "Artes e Teatro · Diversos · Começa 12:00 · Adrienne Arsht Center For the Performing Arts",
-          "fr": "Arts et Théâtre · Divers · Début 12:00 · Adrienne Arsht Center For the Performing Arts"
-        },
-        "category": "arts",
-        "lat": 25.784901,
-        "lng": -80.189598
-      },
-      {
         "id": "tm_1783861822203_foav",
         "title": {
           "en": "Bebeshito",
@@ -2905,6 +2730,204 @@
         "category": "music",
         "lat": 25.817805,
         "lng": -80.122143
+      },
+      {
+        "id": "rss_1783952674602_8i1g",
+        "title": {
+          "en": "Free Miami waterfront World Cup parties keep the beat going",
+          "es": "Las fiestas gratuitas de la Copa Mundial en la costa de Miami mantienen el ritmo",
+          "pt": "As festas gratuitas da Copa do Mundo à beira-mar de Miami mantêm o ritmo",
+          "fr": "Les fêtes gratuites de la Coupe du Monde au bord de l'eau de Miami continuent le rythme"
+        },
+        "date": "2026-07-13",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/music/free-miami-waterfront-world-cup-parties-keep-the-beat-going-40567095/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/07/Bayside-party-series-.jpg",
+        "description": {
+          "en": "The People's Club brings a new event series to The Island at Bayside Marketplace with Walshy Fire, Everyday People, and local collectives.",
+          "es": "The People's Club trae una nueva serie de eventos a The Island en Bayside Marketplace con Walshy Fire, Everyday People y colectivos locales.",
+          "pt": "The People's Club traz uma nova série de eventos para The Island no Bayside Marketplace com Walshy Fire, Everyday People e coletivos locais.",
+          "fr": "The People's Club apporte une nouvelle série d'événements à The Island au Bayside Marketplace avec Walshy Fire, Everyday People et des collectifs locaux."
+        },
+        "category": "sports"
+      },
+      {
+        "id": "rss_1783952674602_ryou",
+        "title": {
+          "en": "Sky High Comedy Showcase 7/16/26",
+          "es": "Espectáculo de Comedia Sky High 7/16/26",
+          "pt": "Sky High Comedy Showcase 7/16/26",
+          "fr": "Sky High Comedy Showcase 7/16/26"
+        },
+        "date": "2026-07-16",
+        "venue": "Rooftop Cinema Club",
+        "address": "1212 Lincoln Road, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/12/sky-high-comedy-showcase-7-16-26/",
+        "free": false,
+        "price": "$25",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/IMG_9540-350x498.jpeg",
+        "description": {
+          "en": "LOL LOUNGE COMEDY and ROOFTOP CINEMA CLUB presents a unique stand up comedy experience on the roof! Great",
+          "es": "LOL LOUNGE COMEDY y ROOFTOP CINEMA CLUB presentan una experiencia única de comedia en vivo en la azotea. Excelente",
+          "pt": "LOL LOUNGE COMEDY e ROOFTOP CINEMA CLUB apresentam uma experiência única de comédia stand-up no telhado. Ótimo",
+          "fr": "LOL LOUNGE COMEDY et ROOFTOP CINEMA CLUB présentent une expérience unique de comédie debout sur le toit. Excellent"
+        },
+        "lat": 25.7893162,
+        "lng": -80.1414404,
+        "category": "comedy"
+      },
+      {
+        "id": "tm_1783952675214_922s",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-07-13",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Centre de Conférences Mana Wynwood"
+        },
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1783952675214_5n0u",
+        "title": {
+          "en": "Dreamville Presents: The Let Out",
+          "es": "Dreamville Presenta: The Let Out",
+          "pt": "Dreamville Apresenta: The Let Out",
+          "fr": "Dreamville Présente: The Let Out"
+        },
+        "date": "2026-07-14",
+        "venue": "Gekko Lounge",
+        "address": "8 SE 8th St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fdreamville-presents-the-let-out-tickets-7B39H0%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 23:00 · Gekko Lounge",
+          "es": "Comienza 23:00 · Gekko Lounge",
+          "pt": "Começa 23:00 · Gekko Lounge",
+          "fr": "Commence 23:00 · Gekko Lounge"
+        },
+        "lat": 25.76618328,
+        "lng": -80.19276967,
+        "category": "music"
+      },
+      {
+        "id": "tm_1783952675214_0qdp",
+        "title": {
+          "en": "Gipsy Kings featuring Tonino Baliardo",
+          "es": "Gipsy Kings presentando a Tonino Baliardo",
+          "pt": "Gipsy Kings apresentando Tonino Baliardo",
+          "fr": "Gipsy Kings présentant Tonino Baliardo"
+        },
+        "date": "2026-08-15",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgipsy-kings-featuring-tonino-baliardo-miami-florida-08-15-2026%2Fevent%2F0D0064AF9D548868&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/cb4/4d1ef663-bcd2-4044-8318-e9dca5b58cb4_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Tonino Baliardo is the founder and leader of Gipsy Kings, but above all he is a guitar virtuoso and a composer recognized worldwide. He composed and produced the greatest hits of the group such as ?Bamboleo? or ?Djobi Djoba?. Undisputed masters of gypsy music, the group has sold over 20 million albums worldwide and has been awarded numerous gold, platinum and diamond discs, a music victory in 1990",
+          "es": "Tonino Baliardo es el fundador y líder de Gipsy Kings, pero sobre todo es un virtuoso de la guitarra y un compositor reconocido mundialmente. Compuso y produjo los mayores éxitos del grupo como \"Bamboleo\" o \"Djobi Djoba\". Los indiscutibles maestros de la música gitana, el grupo ha vendido más de 20 millones de álbumes en todo el mundo y ha recibido numerosos discos de oro, platino y diamante, una victoria musical en 1990.",
+          "pt": "Tonino Baliardo é o fundador e líder do Gipsy Kings, mas acima de tudo é um virtuoso da guitarra e um compositor reconhecido mundialmente. Ele compôs e produziu os maiores sucessos do grupo como \"Bamboleo\" ou \"Djobi Djoba\". Mestres indiscutíveis da música cigana, o grupo vendeu mais de 20 milhões de álbuns em todo o mundo e recebeu numerosos discos de ouro, platina e diamante, uma vitória musical em 1990.",
+          "fr": "Tonino Baliardo est le fondateur et leader des Gipsy Kings, mais avant tout c'est un virtuose de la guitare et un compositeur reconnu mondialement. Il a composé et produit les plus grands succès du groupe comme \"Bamboleo\" ou \"Djobi Djoba\". Les maîtres incontestés de la musique tsigane, le groupe a vendu plus de 20 millions d'albums dans le monde et a reçu de nombreux disques d'or, de platine et de diamant, une victoire musicale en 1990."
+        },
+        "category": "music",
+        "lat": 25.7707756,
+        "lng": -80.1901174
+      },
+      {
+        "id": "tm_1783952675214_051t",
+        "title": {
+          "en": "Nicky Romero",
+          "es": "Nicky Romero",
+          "pt": "Nicky Romero",
+          "fr": "Nicky Romero"
+        },
+        "date": "2026-08-15",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fnicky-romero-liv-nightclub-miami-tickets%2F14235354&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/584/8c7e3c70-348f-4c99-a220-181275a6d584_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier persona que no pueda presentar una identificación válida indicando que tiene al menos 21 años no será admitida y no será elegible para reembolso. · Comienza 23:00 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux personnes de 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
+        },
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1783952675214_rfix",
+        "title": {
+          "en": "Anthony Green - This Tour Won't Save You",
+          "es": "Anthony Green - This Tour Won't Save You",
+          "pt": "Anthony Green - This Tour Won't Save You",
+          "fr": "Anthony Green - This Tour Won't Save You"
+        },
+        "date": "2026-08-19",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fanthony-green-this-tour-wont-save-ft-lauderdale-florida-08-19-2026%2Fevent%2F0D0064AB30735463&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/c6e/aa6c8281-7ac3-48bb-834e-9c910bedec6e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Anthony Green - This Tour Won't Save You with special guests GOON, Keith Goodwin Doors open 7:00pm · Starts 19:00 · Culture Room",
+          "es": "Anthony Green - This Tour Won't Save You con invitados especiales GOON, Keith Goodwin. Las puertas abren a las 7:00pm · Comienza 19:00 · Culture Room",
+          "pt": "Anthony Green - This Tour Won't Save You com convidados especiais GOON, Keith Goodwin. As portas abrem às 19:00 · Começa 19:00 · Culture Room",
+          "fr": "Anthony Green - This Tour Won't Save You avec les invités spéciaux GOON, Keith Goodwin. Les portes ouvrent à 19:00 · Commence 19:00 · Culture Room"
+        },
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1783952675215_80o7",
+        "title": {
+          "en": "SQUEEZE - With Special Guest Adam Ant and Haircut 100",
+          "es": "SQUEEZE - Con invitado especial Adam Ant y Haircut 100",
+          "pt": "SQUEEZE - Com convidado especial Adam Ant e Haircut 100",
+          "fr": "SQUEEZE - Avec invité spécial Adam Ant et Haircut 100"
+        },
+        "date": "2026-08-20",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsqueeze-with-special-guest-adam-ant-hollywood-florida-08-20-2026%2Fevent%2F0D00649ED5391D4D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8c2/6276284b-2bc8-4199-a6d6-87724e5548c2_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:00 · Hard Rock Live",
+          "es": "Música · Rock · Comienza 19:00 · Hard Rock Live",
+          "pt": "Música · Rock · Começa 19:00 · Hard Rock Live",
+          "fr": "Musique · Rock · Commence 19:00 · Hard Rock Live"
+        },
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
       }
     ]
   },
@@ -3808,7 +3831,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-07-13T07:16:02.192Z",
+    "fetchedAt": "2026-07-13T14:24:55.931Z",
     "items": [
       {
         "id": "beach_bark-beach",
@@ -3821,15 +3844,15 @@
           "fr": "BARK BEACH — Avis de Qualité de l'Eau"
         },
         "detail": {
-          "en": "Elevated Enterococcus bacteria detected (300 CFU/100mL, sampled 7/8/2026). Health officials advise against swimming here until levels return to normal.",
-          "es": "Se detectaron niveles elevados de bacterias Enterococcus (300 UFC/100mL, muestreado el 7/8/2026). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
-          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (300 UFC/100mL, amostrado em 7/8/2026). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
-          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (300 UFC/100mL, échantillonné le 7/8/2026). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
+          "en": "Elevated Enterococcus bacteria detected (300 CFU/100mL, sampled 2026-07-08). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (300 UFC/100mL, muestreado el 2026-07-08). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (300 UFC/100mL, amostrado em 2026-07-08). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (300 UFC/100mL, échantillonné le 2026-07-08). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
         },
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/bark-beach",
-        "effectiveAt": "7/8/2026",
-        "expiresAt": "2026-07-14T07:16:02.192Z"
+        "effectiveAt": "2026-07-08",
+        "expiresAt": "2026-07-14T14:24:55.931Z"
       },
       {
         "id": "beach_golden-beach",
@@ -3842,15 +3865,15 @@
           "fr": "GOLDEN BEACH — Avis de Qualité de l'Eau"
         },
         "detail": {
-          "en": "Elevated Enterococcus bacteria detected (820 CFU/100mL, sampled 7/8/2026). Health officials advise against swimming here until levels return to normal.",
-          "es": "Se detectaron niveles elevados de bacterias Enterococcus (820 UFC/100mL, muestreado el 7/8/2026). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
-          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (820 UFC/100mL, amostrado em 7/8/2026). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
-          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (820 UFC/100mL, échantillonné le 7/8/2026). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
+          "en": "Elevated Enterococcus bacteria detected (820 CFU/100mL, sampled 2026-07-08). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (820 UFC/100mL, muestreado el 2026-07-08). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (820 UFC/100mL, amostrado em 2026-07-08). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (820 UFC/100mL, échantillonné le 2026-07-08). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
         },
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/golden-beach",
-        "effectiveAt": "7/8/2026",
-        "expiresAt": "2026-07-14T07:16:02.192Z"
+        "effectiveAt": "2026-07-08",
+        "expiresAt": "2026-07-14T14:24:55.931Z"
       }
     ]
   }
