@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-13 (Real QR-scan tracking via server-side redirect)
+Last updated: 2026-07-14 (Map maxZoom raised 16→19 to match OSM's max tile zoom)
 Owner: Abdullah
 
 
@@ -24,6 +24,17 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #74  Map couldn't zoom in past street level — Leaflet maxZoom was capped at 16
+       while OSM's tile server supports up to 19; raised both L.map() and L.tileLayer()
+       maxZoom to 19. Editor's offline tile pre-warm (z10-14 radius download) intentionally
+       left unchanged — extending pre-warm to z19 would multiply tile counts ~1000x for the
+       same radius; live browsing only lazily caches whatever tiles are actually viewed, so
+       runtime cache growth from this change is negligible — DONE 2026-07-14 (SW v1.84.0)
+  1. [X] #73  BUG: Local Advisories banner (#70) made the home view taller than a tablet
+       viewport, cutting off the bottom filter-pill row and forcing a scroll — home view
+       is now compressed (via body.has-advisory) only when a banner is actually showing:
+       smaller hero card, tighter margins, smaller mini-card photos — DONE 2026-07-14
+       (SW v1.83.0)
   1. [X] #72  QR scans were only ever "assumed" (box tapped ≠ phone scanned) — encoded QR images
        now point at a /qr/:type/:id Worker redirect that resolves the real destination
        server-side and logs the hit before 302'ing, so we can tell an actual scan apart from a

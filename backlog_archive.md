@@ -7,6 +7,20 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] Map maxZoom raised 16→19 to match OSM's tile max  *(DONE 2026-07-14, SW v1.84.0)*
+
+Abdullah noticed the passenger map couldn't zoom in all the way. Leaflet's `maxZoom` was capped at 16 in both places it's set (`public/index.html`, `initMap()`: `L.map()` and the `L.tileLayer()` call) even though `tile.openstreetmap.org` serves tiles up to z19 — bumped both to 19.
+
+**Cache tradeoff considered before making the change:** the editor's offline tile pre-warm feature (`editor.html`, `getTiles(MIAMI_LAT, MIAMI_LON, offlineRadius, 10, 14)`, used by both `updateOfflineEstimate()` and `downloadOfflineTiles()`) bulk-downloads every tile in a radius for a fixed zoom range and was deliberately **left at z10-14** — tile count roughly quadruples per zoom level, so extending that bulk download to z19 would mean ~1000x more tiles for the same radius (tens of thousands of tiles), which is both impractical for a kiosk tablet and pushes into OSM's bulk-tile-usage-policy territory. The live map's runtime tile cache (`sw.js`, the `tile.openstreetmap.org` cache-first handler) is unaffected by this distinction — it only caches tiles actually rendered as someone pans/zooms, so allowing deeper zoom just means a handful more tiles get lazily cached during normal use, not a bulk pre-fetch.
+
+### [X] BUG: advisory banner cut off the bottom pill row on home view  *(DONE 2026-07-14, SW v1.83.0)*
+
+Abdullah reported that on his iPad, once the Local Advisories banner (#70) is showing, the home view content is taller than the screen — the bottom filter-pill row (Featured/All/Food/Nightlife/etc.) is only partially visible and requires a scroll, which he doesn't want on a passenger-facing kiosk home screen.
+
+**Approach:** rather than permanently shrinking the hero card/spacing for everyone (most sessions have no active advisory), `renderAdvisories()` (`public/index.html`, `renderAdvisories()`) now toggles a `has-advisory` class on `<body>` whenever `getActiveAdvisories().length` is non-zero, alongside the existing `.visible` toggle on `#advisory-banner`. New CSS rules scoped to `body.has-advisory` compress the home view just enough to reclaim the banner's height: smaller `.gp-hero` min-height (270→210px) and tighter body padding, smaller hero name/note margins, tighter `.gp-section-head` margin, shorter `.gp-mini-photo` (90→68px) and tighter mini-card padding, and a smaller top margin on the pill row. Verified via a scripted Playwright check that `.gp-hero-scroll`'s `scrollHeight === clientHeight` (no overflow) at the 1024×768 tablet viewport with two advisories forced active.
+
+**Not done:** no change to the no-advisory layout — those spacing values are untouched, since the problem only exists when the banner adds its ~50-60px.
+
 ### [X] Real QR-scan tracking via server-side redirect  *(DONE 2026-07-13, SW v1.82.0)*
 
 Abdullah pointed out that every QR "scan" logged so far (`qr_venue`, `qr_app`, `qr_event`, etc. — see [[analytics_history]]) was really just "the passenger tapped the box and the modal opened," not confirmation a phone actually scanned the code. He wanted real scan counts without changing what the destination-preview text under the QR code shows (e.g. still "versaillesrestaurant.com", not our own domain).

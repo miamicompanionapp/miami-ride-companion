@@ -1824,6 +1824,21 @@
     .filter-row.below-hero { margin: 22px 0 0; padding: 0; border: 0; }
     .filter-row.sticky-top { padding: 14px 28px; background: rgba(12,26,46,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); flex-shrink: 0; margin: 0; }
 
+    /* Advisory banner active: home view content is taller by the banner's height,
+       so compress hero/mini spacing to keep the bottom pill row on-screen without scrolling. */
+    body.has-advisory .advisory-banner { padding: 8px 14px; margin-top: 6px; }
+    body.has-advisory .gp-hero-scroll { padding-top: 2px; }
+    body.has-advisory .gp-hero { min-height: 210px; margin-top: 8px; }
+    body.has-advisory .gp-hero-body { padding: 16px 24px 14px; }
+    body.has-advisory .gp-hero-name { font-size: 24px; margin-bottom: 4px; }
+    body.has-advisory .gp-hero-meta { margin-bottom: 8px; }
+    body.has-advisory .gp-hero-note { margin-bottom: 10px; padding: 8px 12px; font-size: 14px; }
+    body.has-advisory .gp-section-head { margin: 14px 0 8px; }
+    body.has-advisory .gp-mini-photo { height: 68px; }
+    body.has-advisory .gp-mini-body { padding: 8px 12px 10px; }
+    body.has-advisory .gp-mini-name { font-size: 15px; margin-bottom: 5px; }
+    body.has-advisory .filter-row.below-hero { margin-top: 14px; }
+
     /* Browse view */
     .browse-scroll { flex: 1; overflow-y: auto; padding: 14px 28px 24px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
     .browse-scroll::-webkit-scrollbar { width: 4px; }
@@ -4379,10 +4394,12 @@ function renderAdvisories() {
   if (!banner || !textEl) return;
   if (!active.length) {
     banner.classList.remove('visible');
+    document.body.classList.remove('has-advisory');
   } else {
     const tpl = active.length === 1 ? t('advisories.bannerOne') : t('advisories.bannerMany');
     textEl.textContent = tpl.replace('{n}', active.length);
     banner.classList.add('visible');
+    document.body.classList.add('has-advisory');
   }
   // Keep an already-open overlay's list in sync (e.g. a language switch while it's open).
   if (document.getElementById('advisories-overlay')?.classList.contains('visible')) {
@@ -4628,13 +4645,13 @@ function initMap() {
 
   mapInstance = L.map('map', {
     center: userLat ? [userLat, userLng] : MAP_MIAMI,
-    zoom: 14, minZoom: 10, maxZoom: 16,
+    zoom: 14, minZoom: 10, maxZoom: 19,
     zoomControl: false, attributionControl: true
   });
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    maxZoom: 16
+    maxZoom: 19
   }).addTo(mapInstance);
 
   const gpsIconHtml = `

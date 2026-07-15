@@ -99,6 +99,13 @@ test.describe('Passenger app', { tag: ['@index'] }, () => {
     expect(await page.locator('.section-eyebrow').count()).toBe(2); // hourly + 5-day eyebrows
   });
 
+  test('map allows zooming in to OSM tile max (z19)', async ({ page }) => {
+    await page.locator('#nav-map').click();
+    await expect(page.locator('#page-map')).toHaveClass(/active/);
+    const maxZoom = await page.evaluate(() => mapInstance.getMaxZoom());
+    expect(maxZoom).toBe(19);
+  });
+
   test('driver bubble hides (and tab is guarded) when bubbleVisible is false', async ({ page }) => {
     // Default ships hidden now, so force it on first to prove the visible state.
     await page.evaluate(() => { localStorage.removeItem('mrc_bubble'); CONTENT.driver.bubbleVisible = true; renderDriver(); });
