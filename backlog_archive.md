@@ -7,6 +7,22 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] BUG: advisories overlay stayed open after the idle reset-to-home cycle  *(DONE 2026-07-15, SW v1.86.0)*
+
+Abdullah caught this live: open the Local Advisories overlay, then leave the app idle. The idle timer fires `showAttractor()` → after `ATTRACTOR_DURATION_MS` it hands off to `showInactivityModal()` ("Still browsing?") → countdown expires → `endSession()` → `showThanks()` → the reset-to-home cycle (`setLang`, `switchTab`, `setFilter`, `resetInactivity`). Every step in that chain assumes the screen underneath is clean, but `showInactivityModal()` (`public/index.html:7597-7604`) only closed games, the QR modal, and the venue detail sheet — it never closed `#advisories-overlay`. So the overlay (visually covered by the attractor, then the inactivity modal, then the thanks screen) never had its `visible` class removed, and reappeared on top of the freshly-reset home screen once the thanks screen faded out.
+
+**Fix:** added `document.getElementById('advisories-overlay').classList.remove('visible')` alongside the existing `closeGames()` / QR modal / `closeVenueSheet()` cleanup in `showInactivityModal()`. No call to `closeAdvisoriesOverlay()` (which calls `resetInactivity()`) — that would re-arm the idle timer mid-handoff and fight the modal about to be shown, so the class removal is done directly, matching how `closeVenueSheet()` itself has no side effects beyond DOM state.
+
+**Test:** `tests/passenger.spec.js` — opens the advisories overlay, calls `showInactivityModal()` directly (bypassing real timers), and asserts the overlay's `visible` class is gone.
+
+### [X] BUG: advisory attractor headline hardcoded "Heads up before you swim"  *(DONE 2026-07-15, SW v1.85.0)*
+
+Abdullah noticed the Local Advisories attractor card (added in #70) always said "Heads up before you swim" in its headline (`content.json`, `strings.advisories.attractorHeadline`, all 4 languages) — but `getActiveAdvisories()` can surface NWS weather/safety alerts, not just beach water-quality advisories, so the swim framing was wrong whenever the active advisory wasn't about water quality. The `sub` text (`attractorSubOne`/`attractorSubMany`) was already generic ("N local advisories are active — tap to see them"); only the headline was swim-specific.
+
+**Fix:** changed `attractorHeadline` to a generic "Local advisory active" (and translated equivalents) to match the sub text's tone. No JS logic change — `buildContentCards()` (`public/index.html:3728-3737`) already reads the headline straight from `CONTENT.strings.advisories.attractorHeadline` regardless of advisory type.
+
+**Test:** added `tests/passenger.spec.js` — injects a `type: 'weather'` advisory and asserts the attractor card's headline doesn't contain "swim" and equals the new generic string.
+
 ### [X] Map maxZoom raised 16→19 to match OSM's tile max  *(DONE 2026-07-14, SW v1.84.0)*
 
 Abdullah noticed the passenger map couldn't zoom in all the way. Leaflet's `maxZoom` was capped at 16 in both places it's set (`public/index.html`, `initMap()`: `L.map()` and the `L.tileLayer()` call) even though `tile.openstreetmap.org` serves tiles up to z19 — bumped both to 19.

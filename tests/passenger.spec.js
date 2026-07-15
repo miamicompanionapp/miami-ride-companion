@@ -207,6 +207,46 @@ test.describe('Passenger app', { tag: ['@index'] }, () => {
     await expect(page.locator('#advisory-banner')).not.toHaveClass(/visible/);
   });
 
+  test('attractor advisory card headline is generic, not swim-specific (advisories can be weather, not just water quality)', async ({ page }) => {
+    const headline = await page.evaluate(() => {
+      CONTENT.advisories = {
+        fetchedAt: new Date().toISOString(),
+        items: [{
+          id: 'test_weather', type: 'weather', expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString(),
+          title: { en: 'Flood Watch' },
+          detail: { en: 'Heavy rain expected.' },
+          source: 'National Weather Service',
+        }],
+      };
+      const card = buildContentCards().find(c => c.id === 'advisories');
+      return card.headline.en;
+    });
+    expect(headline.toLowerCase()).not.toContain('swim');
+    expect(headline).toBe('Local advisory active');
+  });
+
+  test('BUG #76: advisories overlay left open behind the inactivity flow gets closed, so it does not reappear after the reset-to-home cycle', async ({ page }) => {
+    await page.evaluate(() => {
+      CONTENT.advisories = {
+        fetchedAt: new Date().toISOString(),
+        items: [{
+          id: 'test_beach', expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString(),
+          title: { en: 'Test Beach — Water Quality Advisory' },
+          detail: { en: 'Elevated bacteria detected.' },
+          source: 'Florida Dept. of Health',
+        }],
+      };
+      renderAdvisories();
+      openAdvisoriesOverlay('banner');
+    });
+    await expect(page.locator('#advisories-overlay')).toHaveClass(/visible/);
+
+    // Simulate the idle timeout handing off to the "Still browsing?" modal
+    // while the advisories overlay is still open underneath it.
+    await page.evaluate(() => showInactivityModal());
+    await expect(page.locator('#advisories-overlay')).not.toHaveClass(/visible/);
+  });
+
   test('advisories overlay lists active items with title, detail, and source', async ({ page }) => {
     await page.evaluate(() => {
       CONTENT.advisories = {

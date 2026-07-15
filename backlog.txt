@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-14 (Map maxZoom raised 16→19 to match OSM's max tile zoom)
+Last updated: 2026-07-15 (BUG #76: advisories overlay left open leaking past reset-to-home)
 Owner: Abdullah
 
 
@@ -24,6 +24,15 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #76  BUG: Local Advisories overlay left open when the app went idle stayed open
+       (visually, over the reset home screen) after the attractor → "Still browsing?" →
+       thanks-screen → reset-to-home cycle finished, since showInactivityModal() closed
+       games/QR modal/venue sheet but never closed #advisories-overlay — now closed there
+       too — DONE 2026-07-15 (SW v1.86.0)
+  1. [X] #75  BUG: Local Advisories attractor card headline was hardcoded "Heads up before
+       you swim" (all 4 languages) even when the active advisory was a weather/NWS alert
+       unrelated to swimming — attractorHeadline is now generic ("Local advisory active") to
+       match the already-generic sub text — DONE 2026-07-15 (SW v1.85.0)
   1. [X] #74  Map couldn't zoom in past street level — Leaflet maxZoom was capped at 16
        while OSM's tile server supports up to 19; raised both L.map() and L.tileLayer()
        maxZoom to 19. Editor's offline tile pre-warm (z10-14 radius download) intentionally

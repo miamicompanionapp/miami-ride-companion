@@ -7596,10 +7596,11 @@ function resetInactivity() {
 
 function showInactivityModal() {
   track('inactivity_modal_shown');
-  // Close any open game screen, QR modal, or venue detail sheet
+  // Close any open game screen, QR modal, venue detail sheet, or advisories overlay
   closeGames();
   document.getElementById('qr-modal').classList.remove('open');
   closeVenueSheet();
+  document.getElementById('advisories-overlay').classList.remove('visible');
 
   countdownVal = COUNTDOWN_S;
   document.getElementById('countdown-num').textContent = countdownVal;
