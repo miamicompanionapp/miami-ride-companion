@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-15 (BUG #76: advisories overlay left open leaking past reset-to-home)
+Last updated: 2026-07-15 (BUG #77: grey map tiles at deep zoom now show a "zoom out" notice)
 Owner: Abdullah
 
 
@@ -24,6 +24,10 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #77  BUG: Zooming the map in past what's cached/available (deep zoom, e.g. z19 in
+       areas without cached tiles) showed plain grey squares with no explanation — added a
+       centered "Zoom out for map tiles" notice (i18n'd) that appears on Leaflet tileerror
+       and clears on tileload or the next zoom/pan — DONE 2026-07-15 (SW v1.87.0)
   1. [X] #76  BUG: Local Advisories overlay left open when the app went idle stayed open
        (visually, over the reset home screen) after the attractor → "Still browsing?" →
        thanks-screen → reset-to-home cycle finished, since showInactivityModal() closed

@@ -7,6 +7,14 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] BUG: grey map tiles at deep zoom with no explanation  *(DONE 2026-07-15, SW v1.87.0)*
+
+Abdullah reported that zooming the map in too far shows a plain grey view. Root cause: the recent maxZoom bump to 19 (see below) means the passenger map can now reach zoom levels where Leaflet's runtime tile cache (`sw.js`, cache-first `tile.openstreetmap.org` handler) has nothing stored and — offline, or on a flaky connection in the car — the tile request fails, leaving Leaflet's default grey placeholder with no messaging.
+
+**Fix:** `initMap()` (`public/index.html`) now listens for `tileerror`/`tileload` on the OSM tile layer and `zoomstart`/`movestart` on the map itself. A `tileerror` increments a counter and shows a new `#map-zoom-warning` overlay (centered pill, gold border, matches the Deco Dusk badge style) reading "Zoom out for map tiles" via `aL()` (en/es/pt/fr). A `tileload` decrements the counter and hides the notice once it's back to zero; any zoom/pan resets the counter and hides the notice immediately so it doesn't linger over a since-resolved view. `updateMapZoomWarningText()` is also called from `setLang()` so the notice re-translates on a language switch mid-session.
+
+**Test:** `tests/passenger.spec.js` — fires a synthetic `tileerror` on the tile layer and asserts `#map-zoom-warning` gains the `visible` class, then fires `tileload` and asserts it's removed.
+
 ### [X] BUG: advisories overlay stayed open after the idle reset-to-home cycle  *(DONE 2026-07-15, SW v1.86.0)*
 
 Abdullah caught this live: open the Local Advisories overlay, then leave the app idle. The idle timer fires `showAttractor()` → after `ATTRACTOR_DURATION_MS` it hands off to `showInactivityModal()` ("Still browsing?") → countdown expires → `endSession()` → `showThanks()` → the reset-to-home cycle (`setLang`, `switchTab`, `setFilter`, `resetInactivity`). Every step in that chain assumes the screen underneath is clean, but `showInactivityModal()` (`public/index.html:7597-7604`) only closed games, the QR modal, and the venue detail sheet — it never closed `#advisories-overlay`. So the overlay (visually covered by the attractor, then the inactivity modal, then the thanks screen) never had its `visible` class removed, and reappeared on top of the freshly-reset home screen once the thanks screen faded out.

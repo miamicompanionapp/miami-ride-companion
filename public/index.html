@@ -330,6 +330,21 @@
       transition: opacity 0.25s, transform 0.25s; pointer-events: none;
     }
     .map-recenter-btn.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .map-zoom-warning {
+      position: absolute; top: 50%; left: 50%; z-index: 500;
+      transform: translate(-50%,-50%) scale(0.96);
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(12,26,46,0.9); backdrop-filter: blur(8px);
+      border: 1px solid rgba(229,192,107,0.35); border-radius: 14px;
+      padding: 12px 20px; font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 600; color: var(--gold);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+      white-space: nowrap;
+    }
+    .map-zoom-warning.visible { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+    .map-zoom-warning i { font-size: 18px; }
     .map-speed-badge {
       position: absolute; bottom: 22px; left: 14px; z-index: 500;
       background: rgba(12,26,46,0.82); backdrop-filter: blur(8px);
@@ -2558,6 +2573,11 @@
             <div class="map-compass-deg" id="map-compass-deg">—</div>
           </div>
         </div>
+        <!-- Zoom-too-far notice — covers grey/missing tile area -->
+        <div class="map-zoom-warning" id="map-zoom-warning">
+          <i class="ti ti-zoom-out"></i>
+          <span id="map-zoom-warning-text">Zoom out for map tiles</span>
+        </div>
       </div>
 
       <!-- DRIVER PAGE -->
@@ -4354,6 +4374,7 @@ function setLang(l) {
   renderAdvisories();
   refreshOpenGame();
   setSubtitleVariant(subtitleVariantIdx);
+  updateMapZoomWarningText();
   logTap('lang_' + l);
 }
 
@@ -4638,7 +4659,19 @@ function renderInlineQR(selector, text) {
 // ════════════════════════════════════════════════════════════
 let mapInstance = null, mapGpsMarker = null, mapAutoCenter = true;
 let mapCurrentHeading = null, mapCurrentSpeedMph = null;
+let mapTileErrorCount = 0;
 const MAP_MIAMI = [25.7617, -80.1918];
+const MAP_ZOOM_WARNING = { en: 'Zoom out for map tiles', es: 'Aleja el zoom para ver el mapa', pt: 'Diminua o zoom para ver o mapa', fr: 'Dézoomez pour voir la carte' };
+
+function updateMapZoomWarningText() {
+  const el = document.getElementById('map-zoom-warning-text');
+  if (el) el.textContent = aL(MAP_ZOOM_WARNING);
+}
+
+function setMapZoomWarning(visible) {
+  const el = document.getElementById('map-zoom-warning');
+  if (el) el.classList.toggle('visible', visible);
+}
 
 function initMap() {
   if (mapInstance) { mapInstance.invalidateSize(); return; }
@@ -4649,10 +4682,24 @@ function initMap() {
     zoomControl: false, attributionControl: true
   });
 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  const mapTileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 19
   }).addTo(mapInstance);
+
+  updateMapZoomWarningText();
+  mapTileLayer.on('tileerror', () => {
+    mapTileErrorCount++;
+    setMapZoomWarning(true);
+  });
+  mapTileLayer.on('tileload', () => {
+    mapTileErrorCount = Math.max(0, mapTileErrorCount - 1);
+    if (mapTileErrorCount === 0) setMapZoomWarning(false);
+  });
+  mapInstance.on('zoomstart movestart', () => {
+    mapTileErrorCount = 0;
+    setMapZoomWarning(false);
+  });
 
   const gpsIconHtml = `
     <div class="map-gps-wrapper">

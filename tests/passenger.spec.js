@@ -106,6 +106,20 @@ test.describe('Passenger app', { tag: ['@index'] }, () => {
     expect(maxZoom).toBe(19);
   });
 
+  test('map shows "zoom out" notice on tile load failure, hides on load/zoom', async ({ page }) => {
+    await page.locator('#nav-map').click();
+    await expect(page.locator('#page-map')).toHaveClass(/active/);
+    await page.evaluate(() => {
+      // Simulate a tile failing to load at deep zoom (grey-tile scenario).
+      mapInstance.eachLayer(layer => { if (layer.on && layer._url) layer.fire('tileerror'); });
+    });
+    await expect(page.locator('#map-zoom-warning')).toHaveClass(/visible/);
+    await page.evaluate(() => {
+      mapInstance.eachLayer(layer => { if (layer.on && layer._url) layer.fire('tileload'); });
+    });
+    await expect(page.locator('#map-zoom-warning')).not.toHaveClass(/visible/);
+  });
+
   test('driver bubble hides (and tab is guarded) when bubbleVisible is false', async ({ page }) => {
     // Default ships hidden now, so force it on first to prove the visible state.
     await page.evaluate(() => { localStorage.removeItem('mrc_bubble'); CONTENT.driver.bubbleVisible = true; renderDriver(); });
