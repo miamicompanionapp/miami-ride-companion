@@ -25,7 +25,13 @@ export async function onRequestGet({ request, env }) {
   const dayCounts = await Promise.all(days.map(d => env.BIZCARD_STATS.get('day:' + d)));
   const byDay = days.map((date, i) => ({ date, count: parseInt(dayCounts[i] || '0') }));
 
-  return new Response(JSON.stringify({ total: parseInt(total || '0'), bySource, byDay }), {
+  // Hourly breakdown for a single day (defaults to today), e.g. ?date=2026-07-18
+  const hourDate = url.searchParams.get('date') || new Date().toISOString().slice(0, 10);
+  const hours = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, '0'));
+  const hourCounts = await Promise.all(hours.map(h => env.BIZCARD_STATS.get('hour:' + hourDate + ':' + h)));
+  const byHour = hours.map((hour, i) => ({ hour, count: parseInt(hourCounts[i] || '0') }));
+
+  return new Response(JSON.stringify({ total: parseInt(total || '0'), bySource, byDay, byHour: { date: hourDate, hours: byHour } }), {
     headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
   });
 }

@@ -508,6 +508,61 @@ test.describe('Backend: /qr redirect — resolveQrDestination', { tag: ['@backen
   });
 });
 
+// In-memory KV stub for trackClick/trackQrScan — real increment() is get-then-put,
+// no need for a live namespace to verify which keys get bumped.
+function makeMockKv() {
+  const store = new Map();
+  return {
+    store,
+    async get(key) { return store.has(key) ? store.get(key) : null; },
+    async put(key, val) { store.set(key, val); },
+  };
+}
+
+test.describe('Backend: trackClick / trackQrScan — day + hour buckets', { tag: ['@backend'] }, () => {
+  test('trackClick increments total, source, day, and hour:day:HH', async () => {
+    const kv = makeMockKv();
+    await worker.trackClick(kv, 'card');
+    const now = new Date().toISOString();
+    const day = now.slice(0, 10);
+    const hour = now.slice(11, 13);
+    expect(kv.store.get('total')).toBe('1');
+    expect(kv.store.get('src:card')).toBe('1');
+    expect(kv.store.get('day:' + day)).toBe('1');
+    expect(kv.store.get('hour:' + day + ':' + hour)).toBe('1');
+  });
+
+  test('trackQrScan increments qr:total, qr:type, qr:day, qr:hour:day:HH, and qr:id when id given', async () => {
+    const kv = makeMockKv();
+    await worker.trackQrScan(kv, 'venue', 'v009');
+    const now = new Date().toISOString();
+    const day = now.slice(0, 10);
+    const hour = now.slice(11, 13);
+    expect(kv.store.get('qr:total')).toBe('1');
+    expect(kv.store.get('qr:type:venue')).toBe('1');
+    expect(kv.store.get('qr:day:' + day)).toBe('1');
+    expect(kv.store.get('qr:hour:' + day + ':' + hour)).toBe('1');
+    expect(kv.store.get('qr:id:venue:v009')).toBe('1');
+  });
+
+  test('@negative trackQrScan skips qr:id when id is null', async () => {
+    const kv = makeMockKv();
+    await worker.trackQrScan(kv, 'app', null);
+    expect(kv.store.get('qr:total')).toBe('1');
+    expect([...kv.store.keys()].some((k) => k.startsWith('qr:id:'))).toBe(false);
+  });
+
+  test('repeated calls accumulate the same hour bucket', async () => {
+    const kv = makeMockKv();
+    await worker.trackClick(kv, 'card');
+    await worker.trackClick(kv, 'card');
+    const day = new Date().toISOString().slice(0, 10);
+    const hour = new Date().toISOString().slice(11, 13);
+    expect(kv.store.get('hour:' + day + ':' + hour)).toBe('2');
+    expect(kv.store.get('total')).toBe('2');
+  });
+});
+
 test.describe('Backend: claude-proxy — prompt size guard', { tag: ['@backend'] }, () => {
   test('counts string and structured message content', () => {
     expect(proxy.promptChars([{ role: 'user', content: 'hello' }])).toBe(5);

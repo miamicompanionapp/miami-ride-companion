@@ -122,12 +122,15 @@ function methodName(method) {
   return m.charAt(0).toUpperCase() + m.slice(1); // get -> Get, post -> Post, options -> Options
 }
 
-async function trackClick(kv, source) {
-  const day = new Date().toISOString().slice(0, 10);
+export async function trackClick(kv, source) {
+  const now = new Date().toISOString();
+  const day = now.slice(0, 10);
+  const hour = now.slice(11, 13);
   await Promise.all([
     increment(kv, 'total'),
     increment(kv, 'src:' + source),
     increment(kv, 'day:' + day),
+    increment(kv, 'hour:' + day + ':' + hour),
   ]);
 }
 
@@ -140,12 +143,15 @@ async function increment(kv, key) {
 // provisioning a second namespace — day/type/id counters are never deleted,
 // so full history is preserved even though the dashboard only charts a
 // recent window (see functions/api/qr-stats.js).
-async function trackQrScan(kv, type, id) {
-  const day = new Date().toISOString().slice(0, 10);
+export async function trackQrScan(kv, type, id) {
+  const now = new Date().toISOString();
+  const day = now.slice(0, 10);
+  const hour = now.slice(11, 13);
   const jobs = [
     increment(kv, 'qr:total'),
     increment(kv, 'qr:type:' + type),
     increment(kv, 'qr:day:' + day),
+    increment(kv, 'qr:hour:' + day + ':' + hour),
   ];
   if (id) jobs.push(increment(kv, 'qr:id:' + type + ':' + id));
   await Promise.all(jobs);

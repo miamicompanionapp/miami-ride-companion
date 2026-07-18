@@ -7,6 +7,16 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] QR (#72) and business-card scan trackers now bucket by hour, not just day  *(DONE 2026-07-18)*
+
+Abdullah asked whether the real-scan trackers (#72's `/qr/:type/:id` router and the pre-existing `/go`/`/go/:source` business-card redirect) could break counts down by hour, not just by calendar day. Both `trackClick()` and `trackQrScan()` (`src/index.js`) already called a shared `increment(kv, key)` helper per bucket — adding an hour bucket was a one-line addition to each, no architecture change.
+
+**Fix:** `trackClick()` now also increments `hour:<YYYY-MM-DD>:<HH>` (UTC hour, zero-padded) alongside its existing `total` / `src:<source>` / `day:<date>` counters. `trackQrScan()` mirrors this with `qr:hour:<YYYY-MM-DD>:<HH>` alongside `qr:total` / `qr:type:<type>` / `qr:day:<date>` / `qr:id:<type>:<id>`. Both functions are now exported from `src/index.js` (previously private) so they're directly unit-testable. `functions/api/bizcard-stats.js` and `functions/api/qr-stats.js` each gained a `byHour: { date, hours: [{hour, count}×24] }` field in their JSON response, reading a given day's 24 hour-buckets (defaults to today, overridable via `?date=YYYY-MM-DD`).
+
+KV storage note: both trackers share the single `BIZCARD_STATS` KV namespace (id `f63a455973a0455e8625944523917b50`); counters have no TTL and are never deleted. Neither tracker stores a true per-event timestamp — only the day+hour bucket the event fell into, so exact minute/second of a scan is still not recoverable.
+
+**Test:** `tests/backend.spec.js` (`Backend: trackClick / trackQrScan — day + hour buckets`) — an in-memory KV stub (`makeMockKv()`, get/put over a `Map`) verifies `trackClick` writes `total`, `src:<source>`, `day:<date>`, and `hour:<date>:<HH>`; `trackQrScan` writes the `qr:` equivalents plus `qr:id:<type>:<id>` when an id is given and omits it when not; and repeated calls accumulate the same hour bucket correctly.
+
 ### [X] BUG: "zoom out" tile notice fired for out-of-download-range pans, not just deep zoom  *(DONE 2026-07-16, SW v1.88.0)*
 
 Abdullah tested the #77 fix and found a second case triggering the same misleading message: panning the map to a location outside the offline-downloaded coverage circle (`editor.html`'s "Download tiles" — `getTiles(centerLat, centerLon, radiusMi, minZ, maxZ)`, radius-gated, pre-caches only z10–14) also fires Leaflet `tileerror`, and the handler showed "Zoom out for map tiles" regardless — nonsensical advice when the zoom level was already within the cached range and the real problem is the pan target itself was never downloaded.

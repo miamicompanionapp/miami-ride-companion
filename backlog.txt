@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-16 (BUG #78: "zoom out" tile notice now distinguishes deep-zoom from out-of-download-range)
+Last updated: 2026-07-18 (#79: QR/business-card scan tracking now buckets by hour, not just day)
 Owner: Abdullah
 
 
@@ -24,6 +24,15 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #79  QR (#72) and business-card (/go) scan trackers only bucketed hits by
+       calendar day — added an hour bucket alongside it: trackClick() now also
+       increments `hour:<day>:<HH>` and trackQrScan() increments
+       `qr:hour:<day>:<HH>` (src/index.js). Both /api/bizcard-stats and
+       /api/qr-stats now return a `byHour: { date, hours: [{hour,count}×24] }`
+       field for a given day (defaults to today, override with ?date=YYYY-MM-DD).
+       No live network needed to inspect — read straight from KV with
+       `wrangler kv key get "hour:<day>:<HH>" --namespace-id
+       f63a455973a0455e8625944523917b50 --remote` — DONE 2026-07-18
   1. [X] #78  BUG: The #77 "Zoom out for map tiles" notice also fired when panning
        outside the offline-downloaded coverage radius (still within the z10-14
        pre-cached zoom range) — misleading, since zooming out doesn't fix a
