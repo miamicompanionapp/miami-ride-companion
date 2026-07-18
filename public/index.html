@@ -4660,17 +4660,30 @@ function renderInlineQR(selector, text) {
 let mapInstance = null, mapGpsMarker = null, mapAutoCenter = true;
 let mapCurrentHeading = null, mapCurrentSpeedMph = null;
 let mapTileErrorCount = 0;
+let mapWarningKind = 'zoom'; // 'zoom' | 'range' — which copy/icon is currently shown
 const MAP_MIAMI = [25.7617, -80.1918];
+// Offline pre-cache (editor.html "Download tiles") only stores z10–14 — see getTiles().
+// Deep-zoom failures (z > this) are genuinely fixed by zooming out; failures at or below
+// it mean the pan location itself was never downloaded, and zooming out won't help.
+const MAP_TILE_PRECACHE_MAX_ZOOM = 14;
 const MAP_ZOOM_WARNING = { en: 'Zoom out for map tiles', es: 'Aleja el zoom para ver el mapa', pt: 'Diminua o zoom para ver o mapa', fr: 'Dézoomez pour voir la carte' };
+const MAP_RANGE_WARNING = { en: 'Outside downloaded map area', es: 'Fuera del área de mapa descargada', pt: 'Fora da área de mapa baixada', fr: 'Hors de la zone de carte téléchargée' };
 
 function updateMapZoomWarningText() {
   const el = document.getElementById('map-zoom-warning-text');
-  if (el) el.textContent = aL(MAP_ZOOM_WARNING);
+  if (el) el.textContent = aL(mapWarningKind === 'range' ? MAP_RANGE_WARNING : MAP_ZOOM_WARNING);
 }
 
-function setMapZoomWarning(visible) {
+function setMapZoomWarning(visible, kind) {
   const el = document.getElementById('map-zoom-warning');
-  if (el) el.classList.toggle('visible', visible);
+  if (!el) return;
+  if (visible && kind) {
+    mapWarningKind = kind;
+    const icon = el.querySelector('i');
+    if (icon) icon.className = kind === 'range' ? 'ti ti-map-off' : 'ti ti-zoom-out';
+    updateMapZoomWarningText();
+  }
+  el.classList.toggle('visible', visible);
 }
 
 function initMap() {
@@ -4690,7 +4703,8 @@ function initMap() {
   updateMapZoomWarningText();
   mapTileLayer.on('tileerror', () => {
     mapTileErrorCount++;
-    setMapZoomWarning(true);
+    const kind = mapInstance.getZoom() > MAP_TILE_PRECACHE_MAX_ZOOM ? 'zoom' : 'range';
+    setMapZoomWarning(true, kind);
   });
   mapTileLayer.on('tileload', () => {
     mapTileErrorCount = Math.max(0, mapTileErrorCount - 1);

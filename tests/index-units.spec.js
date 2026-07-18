@@ -97,6 +97,50 @@ test.describe('Index units: helpers', { tag: ['@index', '@unit'] }, () => {
   });
 });
 
+test.describe('Index units: map tile-failure warning copy', { tag: ['@index', '@unit'] }, () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));
+    await page.goto('/index.html');
+    await page.waitForFunction(() => typeof setMapZoomWarning === 'function');
+  });
+
+  // setMapZoomWarning() decides which copy to show for a failed tile: 'zoom' (deep
+  // zoom beyond the offline pre-cache max — zooming out is the real fix) vs 'range'
+  // (panned outside the downloaded area — zooming out wouldn't help). Exercised
+  // directly on the DOM node so this doesn't depend on a live Leaflet map or real
+  // tile network traffic.
+  test('setMapZoomWarning: "zoom" kind shows the zoom-out message', async ({ page }) => {
+    const out = await page.evaluate(() => {
+      setMapZoomWarning(true, 'zoom');
+      return {
+        visible: document.getElementById('map-zoom-warning').classList.contains('visible'),
+        text: document.getElementById('map-zoom-warning-text').textContent,
+      };
+    });
+    expect(out).toEqual({ visible: true, text: 'Zoom out for map tiles' });
+  });
+
+  test('setMapZoomWarning: "range" kind shows the outside-download-area message, not zoom-out', async ({ page }) => {
+    const out = await page.evaluate(() => {
+      setMapZoomWarning(true, 'range');
+      return {
+        visible: document.getElementById('map-zoom-warning').classList.contains('visible'),
+        text: document.getElementById('map-zoom-warning-text').textContent,
+      };
+    });
+    expect(out).toEqual({ visible: true, text: 'Outside downloaded map area' });
+  });
+
+  test('@negative setMapZoomWarning: hides without touching the last-shown copy', async ({ page }) => {
+    const out = await page.evaluate(() => {
+      setMapZoomWarning(true, 'range');
+      setMapZoomWarning(false);
+      return document.getElementById('map-zoom-warning').classList.contains('visible');
+    });
+    expect(out).toBe(false);
+  });
+});
+
 test.describe('Index units: localization helpers', { tag: ['@index', '@unit', '@i18n'] }, () => {
   test.beforeEach(async ({ page }) => {
     await page.addInitScript(() => localStorage.setItem('pwa-bypass', '1'));

@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-15 (BUG #77: grey map tiles at deep zoom now show a "zoom out" notice)
+Last updated: 2026-07-16 (BUG #78: "zoom out" tile notice now distinguishes deep-zoom from out-of-download-range)
 Owner: Abdullah
 
 
@@ -24,6 +24,14 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #78  BUG: The #77 "Zoom out for map tiles" notice also fired when panning
+       outside the offline-downloaded coverage radius (still within the z10-14
+       pre-cached zoom range) — misleading, since zooming out doesn't fix a
+       location that was never downloaded. tileerror handler now checks the
+       current zoom against the pre-cache max (z14, matches editor.html's
+       getTiles() range): above it shows "Zoom out for map tiles", at/below it
+       shows a new "Outside downloaded map area" message (i18n'd, own icon) —
+       DONE 2026-07-16 (SW v1.88.0)
   1. [X] #77  BUG: Zooming the map in past what's cached/available (deep zoom, e.g. z19 in
        areas without cached tiles) showed plain grey squares with no explanation — added a
        centered "Zoom out for map tiles" notice (i18n'd) that appears on Leaflet tileerror

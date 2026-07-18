@@ -7,6 +7,14 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] BUG: "zoom out" tile notice fired for out-of-download-range pans, not just deep zoom  *(DONE 2026-07-16, SW v1.88.0)*
+
+Abdullah tested the #77 fix and found a second case triggering the same misleading message: panning the map to a location outside the offline-downloaded coverage circle (`editor.html`'s "Download tiles" — `getTiles(centerLat, centerLon, radiusMi, minZ, maxZ)`, radius-gated, pre-caches only z10–14) also fires Leaflet `tileerror`, and the handler showed "Zoom out for map tiles" regardless — nonsensical advice when the zoom level was already within the cached range and the real problem is the pan target itself was never downloaded.
+
+**Fix:** `initMap()`'s `tileerror` listener (`public/index.html`) now checks `mapInstance.getZoom()` against a new `MAP_TILE_PRECACHE_MAX_ZOOM = 14` constant (mirrors the `maxZ` editor.html actually downloads). Above that zoom → `setMapZoomWarning(true, 'zoom')` keeps the existing "Zoom out for map tiles" copy/icon (`ti-zoom-out`). At or below it → `setMapZoomWarning(true, 'range')` shows a new "Outside downloaded map area" message (`MAP_RANGE_WARNING`, en/es/pt/fr) with a `ti-map-off` icon instead. `setMapZoomWarning()` now takes a `kind` param, tracks it in `mapWarningKind`, and `updateMapZoomWarningText()` (also called from `setLang()`) re-renders whichever copy is currently active on a language switch.
+
+**Test:** `tests/index-units.spec.js` (`Index units: map tile-failure warning copy`) calls `setMapZoomWarning()` directly with each `kind` and asserts the DOM text/visibility — kept as a pure-function-style unit test (not an E2E flow) because driving it through a real Leaflet `tileerror` requires either a live map (real OSM network calls, flaky/blocked in CI and racy against the deliberately-simulated failure) or a service-worker-bypassing route stub that didn't work here since the SW's own `fetch()` isn't interceptable via `page.route`.
+
 ### [X] BUG: grey map tiles at deep zoom with no explanation  *(DONE 2026-07-15, SW v1.87.0)*
 
 Abdullah reported that zooming the map in too far shows a plain grey view. Root cause: the recent maxZoom bump to 19 (see below) means the passenger map can now reach zoom levels where Leaflet's runtime tile cache (`sw.js`, cache-first `tile.openstreetmap.org` handler) has nothing stored and — offline, or on a flaky connection in the car — the tile request fails, leaving Leaflet's default grey placeholder with no messaging.
