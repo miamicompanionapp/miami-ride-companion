@@ -404,6 +404,7 @@ async function main() {
     ['/api/rss-fetch',          'rss_',  'RSS'],
     ['/api/ticketmaster-fetch', 'tm_',   'Ticketmaster'],
     ['/api/mbcc-fetch',         'mbcc_', 'MBCC'],
+    ['/api/civicplus-fetch',    'cp_',   'CivicPlus'],
   ]) {
     try {
       const res = await fetch(WORKER_URL + endpoint);

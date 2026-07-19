@@ -1,0 +1,28 @@
+name: CivicPlus Feed Health Check
+
+# Watches the South Florida city-government calendar feeds that
+# functions/api/civicplus-fetch.js depends on (see that file's header for
+# background). These are external .gov sites we don't control — they can
+# rename a calendar category, migrate off the old CivicPlus platform, or
+# just go down, silently starving the events feature. This runs independently
+# of daily-refresh.yml (which tolerates individual source failures by design)
+# so a broken feed shows up as a fast, visible red X + GitHub failure email
+# instead of a quiet warning buried in the daily-refresh logs.
+
+on:
+  schedule:
+    # Once a day, offset from daily-refresh.yml's 12:00 UTC run so this is an
+    # independent signal, not just an echo of the same run.
+    - cron: '0 15 * * *'
+  workflow_dispatch: # allow manual trigger from the Actions tab
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check CivicPlus feeds
+        run: node scripts/check-civicplus-feeds.mjs

@@ -13,6 +13,7 @@ const { test, expect } = require('@playwright/test');
 const rss = require('../functions/api/rss-fetch.js');
 const tm = require('../functions/api/ticketmaster-fetch.js');
 const mbcc = require('../functions/api/mbcc-fetch.js');
+const civicplus = require('../functions/api/civicplus-fetch.js');
 const proxy = require('../functions/api/claude-proxy.js');
 const beachAdvisories = require('../functions/api/beach-advisories-fetch.js');
 const worker = require('../src/index.js');
@@ -339,6 +340,177 @@ test.describe('Backend: mbcc-fetch — dropPastEvents / miamiToday', { tag: ['@b
 
   test('miamiToday returns an ISO YYYY-MM-DD string', () => {
     expect(mbcc.miamiToday()).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+});
+
+test.describe('Backend: civicplus-fetch — unfoldICS / unescapeICSText / parseICSDate', { tag: ['@backend'] }, () => {
+  test('unfoldICS joins a folded continuation line, stripping only the fold-marker whitespace', () => {
+    // Per RFC 5545, the single leading space/tab on a continuation line is the
+    // fold marker itself (not real content) and must be removed entirely — a
+    // real space in the original text has to appear before the fold point.
+    const ics = 'BEGIN:VEVENT\nSUMMARY:Concert at the \n Park\nEND:VEVENT';
+    expect(civicplus.unfoldICS(ics)).toEqual(['BEGIN:VEVENT', 'SUMMARY:Concert at the Park', 'END:VEVENT']);
+  });
+
+  test('unescapeICSText decodes \\n \\, \\; \\\\ escapes', () => {
+    expect(civicplus.unescapeICSText('Line one\\nLine two\\, with a comma\\; and semicolon\\\\slash'))
+      .toBe('Line one Line two, with a comma; and semicolon\\slash');
+  });
+
+  test('parseICSDate reads the date portion from a timed value with TZID', () => {
+    expect(civicplus.parseICSDate('20260731T190000')).toBe('2026-07-31');
+  });
+
+  test('parseICSDate reads an all-day VALUE=DATE value the same way', () => {
+    expect(civicplus.parseICSDate('20260807')).toBe('2026-08-07');
+  });
+
+  test('@negative parseICSDate returns empty string for missing/malformed input', () => {
+    expect(civicplus.parseICSDate('')).toBe('');
+    expect(civicplus.parseICSDate(undefined)).toBe('');
+    expect(civicplus.parseICSDate('not-a-date')).toBe('');
+  });
+});
+
+test.describe('Backend: civicplus-fetch — splitLocation', { tag: ['@backend'] }, () => {
+  test('splits "Venue - Street, City FL Zip" on the first " - "', () => {
+    expect(civicplus.splitLocation('Mizner Park Amphitheater - 590 Plaza Real BOCA RATON FL 33432'))
+      .toEqual({ venue: 'Mizner Park Amphitheater', address: '590 Plaza Real BOCA RATON FL 33432' });
+  });
+
+  test('@negative treats a location with no " - " as venue-only', () => {
+    expect(civicplus.splitLocation('ArtsPark at Young Circle')).toEqual({ venue: 'ArtsPark at Young Circle', address: '' });
+  });
+
+  test('@negative returns blank venue/address for empty/missing input', () => {
+    expect(civicplus.splitLocation('')).toEqual({ venue: '', address: '' });
+    expect(civicplus.splitLocation(undefined)).toEqual({ venue: '', address: '' });
+  });
+});
+
+test.describe('Backend: civicplus-fetch — parseICS', { tag: ['@backend'] }, () => {
+  const CITY = { name: 'Hollywood', domain: 'hollywoodfl.org', catId: 27 };
+
+  // Realistic trimmed shape of what myboca.us/hollywoodfl.org's iCalendar
+  // export actually returns: TZID param on DTSTART, a folded LOCATION line,
+  // an escaped comma in DESCRIPTION, and no URL property (common — most of
+  // these calendars don't emit one, so we fall back to the calendar page).
+  const fixture = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'BEGIN:VEVENT',
+    'UID:event123@hollywoodfl.org',
+    'SUMMARY:Downtown Hollywood ArtWalk',
+    'DTSTART;TZID=America/New_York:20260815T180000',
+    'DTEND;TZID=America/New_York:20260815T220000',
+    'LOCATION:ArtsPark at Young Circle - 1 Young Circle\\, Hollywood FL 33020',
+    'DESCRIPTION:Live music\\, gallery exhibits\\, and an artisan market.',
+    'END:VEVENT',
+    'BEGIN:VEVENT',
+    'SUMMARY:City Commission Meeting',
+    'DTSTART;VALUE=DATE:20260816',
+    'LOCATION:City Hall',
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\r\n');
+
+  test('parses a real event, unfolding/unescaping/splitting its fields', () => {
+    const events = civicplus.parseICS(fixture, CITY);
+    const artwalk = events.find(e => e.title === 'Downtown Hollywood ArtWalk');
+    expect(artwalk).toMatchObject({
+      title:   'Downtown Hollywood ArtWalk',
+      date:    '2026-08-15',
+      venue:   'ArtsPark at Young Circle',
+      address: '1 Young Circle, Hollywood FL 33020',
+      source:  'Hollywood',
+      free:    false,
+    });
+    expect(artwalk.description).toBe('Live music, gallery exhibits, and an artisan market.');
+  });
+
+  test('falls back to the city calendar page URL when the VEVENT has no URL property', () => {
+    const artwalk = civicplus.parseICS(fixture, CITY).find(e => e.title === 'Downtown Hollywood ArtWalk');
+    expect(artwalk.url).toBe('https://hollywoodfl.org/calendar.aspx?CID=27');
+  });
+
+  test('@negative filters out administrative/meeting noise titles', () => {
+    const events = civicplus.parseICS(fixture, CITY);
+    expect(events.some(e => e.title === 'City Commission Meeting')).toBe(false);
+  });
+
+  test('@negative drops a VEVENT with no SUMMARY', () => {
+    const noSummary = fixture.replace('SUMMARY:Downtown Hollywood ArtWalk\r\n', '');
+    const events = civicplus.parseICS(noSummary, CITY);
+    expect(events.every(e => e.title)).toBe(true);
+  });
+
+  test('@negative returns an empty array for text with no VEVENT blocks', () => {
+    expect(civicplus.parseICS('BEGIN:VCALENDAR\r\nEND:VCALENDAR', CITY)).toEqual([]);
+    expect(civicplus.parseICS('', CITY)).toEqual([]);
+  });
+});
+
+test.describe('Backend: civicplus-fetch — dropPastEvents / withinLookahead / sortAndCap', { tag: ['@backend'] }, () => {
+  test('dropPastEvents removes past dates, keeps today/future/undated', () => {
+    const events = [
+      { title: 'past',   date: '2026-05-01' },
+      { title: 'today',  date: '2026-06-01' },
+      { title: 'future', date: '2026-12-25' },
+      { title: 'undated' },
+    ];
+    const kept = civicplus.dropPastEvents(events, '2026-06-01').map(e => e.title);
+    expect(kept).toEqual(['today', 'future', 'undated']);
+  });
+
+  test('withinLookahead drops events beyond the lookahead window, keeps undated', () => {
+    const events = [
+      { title: 'near', date: '2026-06-15' },
+      { title: 'far',  date: '2027-06-01' },
+      { title: 'undated' },
+    ];
+    const kept = civicplus.withinLookahead(events, '2026-06-01', 30).map(e => e.title);
+    expect(kept).toEqual(['near', 'undated']);
+  });
+
+  test('sortAndCap orders soonest-first and caps at the given max', () => {
+    const events = [
+      { title: 'later',   date: '2026-08-01' },
+      { title: 'soonest',  date: '2026-06-01' },
+      { title: 'middle',  date: '2026-07-01' },
+    ];
+    const capped = civicplus.sortAndCap(events, 2);
+    expect(capped.map(e => e.title)).toEqual(['soonest', 'middle']);
+  });
+
+  test('@negative sortAndCap tolerates undated events by sorting them last', () => {
+    const events = [{ title: 'undated' }, { title: 'dated', date: '2026-06-01' }];
+    expect(civicplus.sortAndCap(events).map(e => e.title)).toEqual(['dated', 'undated']);
+  });
+
+  test('miamiToday returns an ISO YYYY-MM-DD string', () => {
+    expect(civicplus.miamiToday()).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+});
+
+test.describe('Backend: civicplus-fetch — CITIES config / icsUrl', { tag: ['@backend'] }, () => {
+  test('every configured city has a name, domain, and numeric catId', () => {
+    for (const city of civicplus.CITIES) {
+      expect(typeof city.name).toBe('string');
+      expect(city.name.length).toBeGreaterThan(0);
+      expect(typeof city.domain).toBe('string');
+      expect(city.domain).toMatch(/^[a-z0-9.-]+\.[a-z]{2,}$/i);
+      expect(typeof city.catId).toBe('number');
+    }
+  });
+
+  test('@negative no duplicate city names in the config', () => {
+    const names = civicplus.CITIES.map(c => c.name);
+    expect(new Set(names).size).toBe(names.length);
+  });
+
+  test('icsUrl builds the CivicPlus iCalendar export URL', () => {
+    expect(civicplus.icsUrl({ domain: 'myboca.us', catId: 27 }))
+      .toBe('https://myboca.us/common/modules/iCalendar/iCalendar.aspx?catID=27&feed=calendar');
   });
 });
 

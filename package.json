@@ -22,7 +22,8 @@
     "test:negative": "playwright test --grep @negative",
     "test:i18n": "playwright test --grep @i18n",
     "test:units": "playwright test --grep @unit",
-    "test:feedback": "playwright test --grep @feedback"
+    "test:feedback": "playwright test --grep @feedback",
+    "check:civicplus": "node scripts/check-civicplus-feeds.mjs"
   },
   "repository": {
     "type": "git",

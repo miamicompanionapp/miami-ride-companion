@@ -11,6 +11,7 @@ import * as claudeProxy from '../functions/api/claude-proxy.js';
 import * as rssFetch from '../functions/api/rss-fetch.js';
 import * as ticketmasterFetch from '../functions/api/ticketmaster-fetch.js';
 import * as mbccFetch from '../functions/api/mbcc-fetch.js';
+import * as civicplusFetch from '../functions/api/civicplus-fetch.js';
 import * as bizcardStats from '../functions/api/bizcard-stats.js';
 import * as beachAdvisoriesFetch from '../functions/api/beach-advisories-fetch.js';
 
@@ -21,6 +22,7 @@ const API_ROUTES = {
   '/api/rss-fetch': rssFetch,
   '/api/ticketmaster-fetch': ticketmasterFetch,
   '/api/mbcc-fetch': mbccFetch,
+  '/api/civicplus-fetch': civicplusFetch,
   '/api/bizcard-stats': bizcardStats,
   '/api/beach-advisories-fetch': beachAdvisoriesFetch,
   '/api/qr-stats': qrStats,
