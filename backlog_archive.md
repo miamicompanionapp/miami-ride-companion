@@ -7,6 +7,61 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #83 Fixed reshuffling "random" test failures — root cause was SW + CORS, not env flakiness  *(DONE 2026-07-19)*
+
+Abdullah asked why the test suite consistently had failures, but never the same ones twice. Two
+back-to-back `npm test` runs failed 20 tests, then 27 tests, with almost no overlap in which tests
+failed — every failure had the identical signature `console.error: Failed to load resource:
+net::ERR_FAILED`, tripping the strict console-error gate in `tests/fixtures.js`.
+
+**Investigation path (worth keeping — the obvious-looking fix was wrong twice before landing on the
+real cause):**
+1. First hypothesis: sandboxed test environment can't reach `soulofmiami.org` (the event-image host
+   `prewarmEventImages()` in `public/index.html` fetches in an unawaited background loop on every
+   page load). Ruled out — `curl https://www.soulofmiami.org/` returns `200` in under half a second
+   from this same machine. Not a real outage.
+2. First fix attempt: `page.route(/soulofmiami\.org/, route => route.abort())` in `tests/fixtures.js`.
+   Made failures *worse* (deterministic ~28/run instead of random) — `route.abort()` itself makes
+   Chromium log the exact same `net::ERR_FAILED` line as a genuine failure.
+3. Second attempt: `route.fulfill()` with a stub 1x1 PNG instead of aborting. Still failed —
+   discovered (via a throwaway probe test logging every `requestfailed` event) that the route
+   handler fired **zero times**, even though the same soulofmiami.org URLs kept failing.
+4. Root cause: `registerSW()` (`public/index.html`) installs the Service Worker (`public/sw.js`) on
+   every page load, and its blanket "Everything else: Cache first, fall back to network" `fetch`
+   handler intercepts ALL page fetches — including these — before Playwright's page-level
+   `page.route()` ever sees them. A Service Worker's execution context is a separate thread,
+   invisible to `page.route()`, which only intercepts requests the page/frame itself makes.
+5. With `playwright.config.js`'s new `serviceWorkers: 'block'` context option (stops the SW from
+   installing at all, at the browser-context level, before interception is even relevant) the *real*
+   underlying browser error was finally visible:
+   `console.error: Access to fetch at 'https://www.soulofmiami.org/…' from origin
+   'http://127.0.0.1:8123' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header
+   is present on the requested resource.` soulofmiami.org sends no CORS header, so a page-context
+   `fetch()` (default `mode: 'cors'`) to it is *always* blocked by the browser — this is not
+   environment-specific and would happen in any browser, including a passenger's real device. The
+   Service Worker had been silently masking this real CORS failure behind a generic `net::ERR_FAILED`
+   for who knows how long, which is why it looked like "random environment flakiness" rather than a
+   deterministic bug.
+
+**Fix:**
+- `playwright.config.js` (`use` block): `serviceWorkers: 'block'` — documented in-line with the full
+  investigation trail, since the reasoning here is easy to reverse by someone who doesn't know why
+  it's there. Safe suite-wide: no test in this suite exercises live SW/offline behavior (the one
+  SW-related test, `editor-units.spec.js`'s "SW offline fallback page" spec, only reads `sw.js` as a
+  text file, never registers a real one).
+- `tests/fixtures.js`: `page.route(/soulofmiami\.org/, …)` now stubs a 200 response (1x1 PNG) with
+  `Access-Control-Allow-Origin: '*'` for every test's page, replacing the one-off `page.route()` call
+  that used to live inside the trivia test in `games.spec.js` (removed — redundant now that this is
+  global).
+- Verified with two full `npm test` runs after the fix: 287 passed, 0 failed, both times.
+
+**Separate real bug surfaced by this investigation, not fixed here:** `prewarmEventImages()`'s
+offline image pre-caching silently never works for any passenger — same CORS block, gracefully
+swallowed by the existing try/catch, so passengers still see images fine online (`<img src>` doesn't
+need CORS), they just never get cached for offline/no-signal use. Tracked as backlog item #83's note
+in `backlog.txt`; likely fix is switching to `fetch(url, { mode: 'no-cors' })` and caching the
+resulting opaque response, since `<img>` tags don't require CORS but `fetch()` does by default.
+
 ### [X] #82 Install-gate adds Desktop (Chrome/Edge/Safari/Firefox) instructions  *(DONE 2026-07-19, SW v1.91.0)*
 
 Abdullah asked whether the install-gate (shown when the passenger app is opened in a plain browser

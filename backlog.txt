@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-19 (#82: install-gate now shows Desktop/Chrome/Safari/Edge instructions alongside iOS/Android)
+Last updated: 2026-07-19 (#83: fixed the reshuffling "random" test failures — root cause was Service Worker + CORS, not environment flakiness)
 Owner: Abdullah
 
 
@@ -24,6 +24,33 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #83  Test suite had "random" failures — a different set of tests failed on
+       every `npm test` run (20 failed, then 27, almost no overlap), always with
+       `console.error: Failed to load resource: net::ERR_FAILED`. Root cause:
+       prewarmEventImages() (public/index.html) fetches every event image
+       (soulofmiami.org) in an unawaited background loop, and soulofmiami.org sends
+       no CORS header, so the fetch is always blocked by the browser — not
+       environment-specific, this would happen in any browser. It looked
+       environment-specific and random because the Service Worker (public/sw.js)
+       was intercepting those fetches in its own execution context (invisible to
+       Playwright's page.route()) and masking the real CORS error behind a generic
+       net::ERR_FAILED, landing on whichever test happened to be running when the
+       async fetch failed. Fix: playwright.config.js now sets
+       `serviceWorkers: 'block'` (stops the SW from masking real page-level
+       network behavior in tests) and tests/fixtures.js stubs soulofmiami.org
+       responses via `page.route(...).fulfill()` with a permissive CORS header
+       (a `route.abort()` was tried first — it logs the identical net::ERR_FAILED
+       line itself, so it didn't help). Two full `npm test` runs after the fix:
+       287 passed, 0 failed both times. DONE 2026-07-19 — NOT a public/ asset
+       change, no SW bump.
+       NOTE — separate real product bug surfaced by this investigation: offline
+       image pre-caching in prewarmEventImages() silently never works for ANY
+       passenger (not just in tests) because of the same CORS block; the
+       try/catch swallows it gracefully so passengers still see images fine
+       online, they just never get cached for the offline/no-signal case. Not
+       fixed here — needs its own item (likely: fetch with `mode: 'no-cors'` and
+       cache the resulting opaque response, since `<img>` tags don't need CORS
+       but `fetch()` does by default).
   1. [X] #82  The install-gate (shown when the app is opened in a regular browser
        instead of the installed PWA) only had iOS and Android instructions —
        someone visiting the passenger app link from a laptop had no guidance.

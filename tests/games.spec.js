@@ -58,10 +58,7 @@ test.describe('Game translations', { tag: ['@games', '@i18n'] }, () => {
   });
 
   test('trivia offers 10 Miami questions first, then opt-in to 20 more', async ({ page }) => {
-    // This test runs long enough for the app's background event-image fetches
-    // (soulofmiami.org) to fail in this offline test environment — block them so
-    // the run isn't flaky over something unrelated to trivia.
-    await page.route(/soulofmiami\.org/, (route) => route.abort());
+    // soulofmiami.org is now blocked globally in fixtures.js — no per-test route needed.
     await page.locator('#nav-games').click();
     await page.evaluate(() => openGame('trivia'));
     await expect(page.locator('#trivia-total')).toHaveText('10');
