@@ -57,6 +57,43 @@ test.describe('Game translations', { tag: ['@games', '@i18n'] }, () => {
     expect(nextTxt).toBe(expectNext);
   });
 
+  test('trivia offers 10 Miami questions first, then opt-in to 20 more', async ({ page }) => {
+    // This test runs long enough for the app's background event-image fetches
+    // (soulofmiami.org) to fail in this offline test environment — block them so
+    // the run isn't flaky over something unrelated to trivia.
+    await page.route(/soulofmiami\.org/, (route) => route.abort());
+    await page.locator('#nav-games').click();
+    await page.evaluate(() => openGame('trivia'));
+    await expect(page.locator('#trivia-total')).toHaveText('10');
+
+    // Answer all 10 Miami questions.
+    await page.evaluate(() => {
+      triviaNext();
+      for (let i = 0; i < 10; i++) { answerTrivia(0, triviaCurrent.a); triviaNext(); }
+    });
+
+    // Interstitial should appear instead of jumping straight into non-Miami content.
+    await expect(page.locator('#trivia-interstitial')).toBeVisible();
+    await expect(page.locator('#trivia-game-area')).toBeHidden();
+
+    // Declining and reopening trivia resets to a fresh, honest 10-question round.
+    await page.evaluate(() => closeGame());
+    await page.evaluate(() => openGame('trivia'));
+    await expect(page.locator('#trivia-total')).toHaveText('10');
+    await expect(page.locator('#trivia-interstitial')).toBeHidden();
+
+    // Opting in extends the pool to all 30 and keeps playing without getting stuck.
+    await page.evaluate(() => {
+      triviaNext();
+      for (let i = 0; i < 10; i++) { answerTrivia(0, triviaCurrent.a); triviaNext(); }
+      triviaContinueRound2();
+    });
+    await expect(page.locator('#trivia-total')).toHaveText('30');
+    await expect(page.locator('#trivia-interstitial')).toBeHidden();
+    const q11 = await page.evaluate(() => triviaQ);
+    expect(q11).toBe(10);
+  });
+
   test('spinner fact re-renders in Portuguese on language switch', async ({ page }) => {
     await page.locator('#nav-games').click();
     await page.evaluate(() => { openGame('spin'); doSpin(); });

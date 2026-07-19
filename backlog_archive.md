@@ -7,6 +7,41 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #81 Miami Wordle pool trimmed of proper-noun/local-trivia words  *(DONE 2026-07-19, SW v1.90.0)*
+
+Abdullah reported riders finding Miami Wordle too hard. Reviewing `WL_POOL` (`public/index.html`),
+the hardest entries were proper nouns or local-trivia words whose clues don't give a rider any real
+path to the answer unless they already know the specific Miami fact — unlike common-word entries
+(BEACH, OCEAN, MANGO, etc.) where the clue phrasing gives real purchase. Abdullah picked 5 to remove:
+BONGO, VILLA, GLITZ, CALLE, DORAL.
+
+**Fix (`public/index.html`):** deleted the 5 corresponding `WL_POOL` entries. The pool now has 15
+words, still well above the 5 (`WL_ROUNDS`) drawn per session.
+
+**Test (`tests/games-logic.spec.js`):** added an assertion in the existing "Miami Wordle hints"
+describe block that `WL_POOL` no longer contains the 5 removed words and still has at least
+`WL_ROUNDS` entries.
+
+**SW bump:** `miami-ride-v1.89.0` → `v1.90.0` (public asset change).
+
+### [X] #80 BUG: "Miami Trivia" served non-Miami questions unannounced  *(DONE 2026-07-18, SW v1.89.0)*
+
+A passenger complained after being served a US/pop-culture question inside a game titled "Miami Trivia." Root cause: the question pool was expanded 10→30 on 2026-06-23 ([[analytics_history]] and `backlog_archive.md` "Trivia pool expanded" entry below) — 20 of the 30 questions (`TRIVIA_QUESTIONS`, `public/index.html:6650-6714`, comment-delimited USA/Pop Culture/General Knowledge sections) are not about Miami at all, but the card title, screen header, and description still implied an all-Miami quiz, and the pool was shuffled across all 30 with no warning before a non-Miami question could appear.
+
+**Decision (discussed with Abdullah):** keep the "Miami Trivia" name rather than rebrand — instead, never show a non-Miami question unless the passenger explicitly asks for more. An upfront category-picker (checkboxes for Miami/US/Pop Culture) was considered and rejected — added friction/taps for a short rideshare session that analytics show people don't linger on ([[analytics_history]]).
+
+**Fix (`public/index.html`):**
+- `TRIVIA_MIAMI_COUNT = 10` marks where the Miami-only slice ends in `TRIVIA_QUESTIONS` (Miami questions are already first in the array).
+- `initTrivia()` now shuffles and plays only `TRIVIA_QUESTIONS.slice(0, TRIVIA_MIAMI_COUNT)` for the opening round.
+- `triviaNext()` branches at the end of the pool: if the pool is still the 10-question Miami slice, it calls a new `showTriviaInterstitial()` instead of silently reshuffling into the full 30; if the pool is already the extended 30 (passenger opted in), the existing "Play Again" reshuffle behavior applies — but now always resets back to the honest 10-question Miami slice, not the full 30, so a replay never re-introduces the surprise.
+- New `showTriviaInterstitial()` / `triviaContinueRound2()` functions and a `#trivia-interstitial` DOM panel (game-body sibling to the existing question/options/next-button block, now wrapped in `#trivia-game-area` so the two can toggle visibility). The panel reuses the `.img-end-screen`/`.img-end-btn` classes already shared by Guess-the-Image and Word Puzzle's completion screens — no new CSS. Declining (`closeGame()`, reusing the existing `backToGames` string) ends the session cleanly at "10/10", not as an error.
+- `logTap('game_trivia_continue')` added for the opt-in button, following the existing `game_<name>_<action>` analytics convention.
+- New `GAME_UI` i18n keys (`triviaMiamiDoneTitle`, `triviaContinuePrompt`, `triviaContinueBtn`) added in all 4 languages; `triviaCardDesc` (card + static HTML fallback at `public/index.html:2418`) rewritten from "30 questions on Miami history…" (inaccurate) to describe the 10-then-20 structure honestly.
+
+**Test:** new test in `tests/games.spec.js` ("trivia offers 10 Miami questions first, then opt-in to 20 more") drives all 10 Miami questions via `answerTrivia()`/`triviaNext()`, asserts the interstitial appears and the game area hides, asserts declining + reopening resets to a fresh 10-question round, and asserts accepting extends `#trivia-total` to 30 and correctly renders question 11. The existing i18n-completeness test (`tests/games.spec.js`, iterates `Object.entries(GAME_UI)`) automatically covers the new keys' ES/PT/FR completeness.
+
+**Aside (test-infra, not fixed here):** while testing, found that `tests/` has pre-existing flakiness unrelated to this change — background fetches of live event images from `soulofmiami.org` intermittently fail with `net::ERR_FAILED` in this offline/sandboxed environment, tripping the strict console-error gate (`tests/fixtures.js`) on whichever test happens to be running when the timer fires (confirmed via a throwaway probe test; reproduces on unmodified `main` too, hitting different unrelated tests each run). The new trivia test blocks `soulofmiami.org` via `page.route()` so it isn't flaky, but the underlying flakiness affects other specs and isn't tracked as a backlog item yet.
+
 ### [X] QR (#72) and business-card scan trackers now bucket by hour, not just day  *(DONE 2026-07-18)*
 
 Abdullah asked whether the real-scan trackers (#72's `/qr/:type/:id` router and the pre-existing `/go`/`/go/:source` business-card redirect) could break counts down by hour, not just by calendar day. Both `trackClick()` and `trackQrScan()` (`src/index.js`) already called a shared `increment(kv, key)` helper per bucket — adding an hour bucket was a one-line addition to each, no architecture change.

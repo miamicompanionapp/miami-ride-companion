@@ -780,4 +780,10 @@ test.describe('Miami Wordle hints', { tag: ['@games', '@unit'] }, () => {
     );
     expect(missing).toEqual([]);
   });
+
+  test('proper-noun/local-trivia words flagged as too hard have been removed from WL_POOL', async ({ page }) => {
+    const { words, rounds } = await page.evaluate(() => ({ words: WL_POOL.map(w => w.word), rounds: WL_ROUNDS }));
+    expect(words).not.toEqual(expect.arrayContaining(['BONGO', 'VILLA', 'GLITZ', 'CALLE', 'DORAL']));
+    expect(words.length).toBeGreaterThanOrEqual(rounds);
+  });
 });

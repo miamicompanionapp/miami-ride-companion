@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-18 (#79: QR/business-card scan tracking now buckets by hour, not just day)
+Last updated: 2026-07-19 (#81: Miami Wordle pool trimmed of proper-noun/local-trivia words that were too hard to guess)
 Owner: Abdullah
 
 
@@ -24,6 +24,22 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #81  Riders found Miami Wordle too hard — the 20-word WL_POOL leaned heavily on
+       proper nouns / local-trivia words (BONGO, VILLA, GLITZ, CALLE, DORAL) that can't be
+       reasoned to from the clue text alone, unlike common-word entries. Removed all 5 from
+       WL_POOL (public/index.html), leaving 15 words (still well above WL_ROUNDS = 5) —
+       DONE 2026-07-19 (SW v1.90.0)
+  1. [X] #80  BUG: "Miami Trivia" served non-Miami questions unannounced — the pool was
+       expanded 10→30 on 2026-06-23 (20 US/pop-culture/general-knowledge questions added
+       alongside the original 10 Miami ones) but the card title/description still implied
+       an all-Miami quiz. A passenger complained after hitting a non-Miami question. Kept
+       the "Miami Trivia" name but restructured the flow: the round now always starts with
+       just the 10 shuffled Miami questions; after those, a completion screen shows the
+       score and an opt-in "Answer 20 more? (Pop Culture & General Knowledge)" button
+       (public/index.html: TRIVIA_MIAMI_COUNT, initTrivia()/triviaNext(), new
+       showTriviaInterstitial()/triviaContinueRound2(), new #trivia-interstitial panel
+       reusing the existing .img-end-screen/.img-end-btn styles) — declining is a complete,
+       honest 10-question round, not an error state — DONE 2026-07-18 (SW v1.89.0)
   1. [X] #79  QR (#72) and business-card (/go) scan trackers only bucketed hits by
        calendar day — added an hour bucket alongside it: trackClick() now also
        increments `hour:<day>:<HH>` and trackQrScan() increments

@@ -2415,7 +2415,7 @@
               <div class="game-card trivia" onclick="openGame('trivia')">
                 <div class="game-card-icon">🧠</div>
                 <div class="game-card-title" data-gkey="triviaCardTitle">Miami Trivia</div>
-                <div class="game-card-desc" data-gkey="triviaCardDesc">10 questions on Miami history, culture and landmarks.</div>
+                <div class="game-card-desc" data-gkey="triviaCardDesc">10 Miami questions — plus 20 more on the US, pop culture &amp; general knowledge if you want to keep going.</div>
                 <div class="game-card-footer">
                   <span class="pcount solo"><i class="ti ti-user"></i>1</span>
                   <div class="play-arrow"><i class="ti ti-arrow-right"></i></div>
@@ -2798,10 +2798,22 @@
     <div class="game-score-badge"><span data-gkey="scoreLabel">Score:</span> <span id="trivia-score">0</span> / <span id="trivia-total">10</span></div>
   </div>
   <div class="game-body">
-    <div class="trivia-question" id="trivia-question">Press Start to begin!</div>
-    <div class="trivia-opts" id="trivia-opts"></div>
-    <div class="trivia-feedback" id="trivia-feedback"></div>
-    <button class="trivia-next show" id="trivia-next" onclick="triviaNext()">Start Trivia ▶</button>
+    <div class="trivia-game-area" id="trivia-game-area">
+      <div class="trivia-question" id="trivia-question">Press Start to begin!</div>
+      <div class="trivia-opts" id="trivia-opts"></div>
+      <div class="trivia-feedback" id="trivia-feedback"></div>
+      <button class="trivia-next show" id="trivia-next" onclick="triviaNext()">Start Trivia ▶</button>
+    </div>
+    <div class="img-end-screen" id="trivia-interstitial" style="display:none">
+      <div class="img-end-trophy">🎉</div>
+      <div class="img-end-title" data-gkey="triviaMiamiDoneTitle">Miami round complete!</div>
+      <div class="img-end-score-line">You scored <span class="img-end-score-num" id="trivia-int-score-val">0</span> out of <span class="img-end-score-denom">10</span></div>
+      <div class="img-end-message" data-gkey="triviaContinuePrompt">Want 20 more? Pop culture &amp; general knowledge.</div>
+      <div class="img-end-actions">
+        <button class="img-end-btn primary" onclick="triviaContinueRound2()"><i class="ti ti-arrow-right"></i> <span data-gkey="triviaContinueBtn">Yes, 20 more!</span></button>
+        <button class="img-end-btn secondary" onclick="closeGame()"><i class="ti ti-check"></i> <span data-gkey="backToGames">Back to Games</span></button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -5728,10 +5740,13 @@ const GAME_UI = {
   triviaCardTitle:   { en:'Miami Trivia', es:'Trivia de Miami', pt:'Trivia de Miami', fr:'Quiz de Miami' },
   triviaScreenTitle: { en:'🧠 Miami Trivia', es:'🧠 Trivia de Miami', pt:'🧠 Trivia de Miami', fr:'🧠 Quiz de Miami' },
   triviaCardDesc: {
-    en:"30 questions on Miami history, culture and landmarks.",
-    es:"30 preguntas sobre la historia, la cultura y los lugares emblemáticos de Miami.",
-    pt:"30 perguntas sobre a história, a cultura e os pontos turísticos de Miami.",
-    fr:"30 questions sur l'histoire, la culture et les monuments de Miami." },
+    en:"10 Miami questions — plus 20 more on the US, pop culture & general knowledge if you want to keep going.",
+    es:"10 preguntas sobre Miami — y 20 más de EE.UU., cultura pop y conocimiento general si quieres seguir jugando.",
+    pt:"10 perguntas sobre Miami — e mais 20 sobre os EUA, cultura pop e conhecimentos gerais se quiser continuar.",
+    fr:"10 questions sur Miami — puis 20 de plus sur les États-Unis, la pop culture et la culture générale si vous voulez continuer." },
+  triviaMiamiDoneTitle: { en:'Miami round complete! 🎉', es:'¡Ronda de Miami completa! 🎉', pt:'Rodada de Miami completa! 🎉', fr:'Manche de Miami terminée ! 🎉' },
+  triviaContinuePrompt: { en:'Want to keep playing? Try 20 more on pop culture & general knowledge.', es:'¿Quieres seguir jugando? Prueba 20 preguntas más de cultura pop y conocimiento general.', pt:'Quer continuar jogando? Tente mais 20 perguntas de cultura pop e conhecimentos gerais.', fr:'Envie de continuer ? Essayez 20 questions de plus sur la pop culture et la culture générale.' },
+  triviaContinueBtn:   { en:'Yes, 20 more!', es:'¡Sí, 20 más!', pt:'Sim, mais 20!', fr:'Oui, 20 de plus !' },
   // Games-page categories + teasers (#30)
   catSolo:        { en:'Solo', es:'Individual', pt:'Individual', fr:'Solo' },
   catSoloHint:    { en:'· play on your own', es:'· juega tú solo', pt:'· jogue sozinho', fr:'· jouez seul' },
@@ -6712,10 +6727,14 @@ const TRIVIA_QUESTIONS = [
   { q:{ en:"What is the most spoken language in the world?", es:"¿Cuál es el idioma más hablado del mundo?", pt:"Qual é o idioma mais falado no mundo?", fr:"Quelle est la langue la plus parlée dans le monde ?" },
     opts:[ { en:"English", es:"Inglés", pt:"Inglês", fr:"Anglais" }, { en:"Spanish", es:"Español", pt:"Espanhol", fr:"Espagnol" }, { en:"Mandarin Chinese", es:"Chino mandarín", pt:"Mandarim", fr:"Mandarin" }, { en:"Hindi", es:"Hindi", pt:"Hindi", fr:"Hindi" } ], a:2 },
 ];
+// Miami's 10 questions come first in the array above — everything after that is
+// US/pop-culture/general-knowledge, only offered if the passenger opts in (see
+// showTriviaInterstitial/triviaContinueRound2 below).
+const TRIVIA_MIAMI_COUNT = 10;
 
 function initTrivia() {
   triviaScore = 0; triviaQ = 0; triviaAnswered = false; triviaCurrent = null;
-  triviaPool = [...TRIVIA_QUESTIONS].sort(() => Math.random() - 0.5);
+  triviaPool = [...TRIVIA_QUESTIONS.slice(0, TRIVIA_MIAMI_COUNT)].sort(() => Math.random() - 0.5);
   document.getElementById('trivia-score').textContent = '0';
   document.getElementById('trivia-total').textContent = triviaPool.length;
   document.getElementById('trivia-question').textContent = gt('pressStart');
@@ -6723,10 +6742,16 @@ function initTrivia() {
   document.getElementById('trivia-feedback').className = 'trivia-feedback';
   document.getElementById('trivia-next').textContent = gt('startTrivia');
   document.getElementById('trivia-next').className = 'trivia-next show';
+  document.getElementById('trivia-interstitial').style.display = 'none';
+  document.getElementById('trivia-game-area').style.display = '';
 }
 
 function triviaNext() {
   if (triviaQ >= triviaPool.length) {
+    if (triviaPool.length === TRIVIA_MIAMI_COUNT) {
+      showTriviaInterstitial();
+      return;
+    }
     triviaCurrent = null;
     document.getElementById('trivia-question').textContent =
       gt('gameOver').replace('{s}', triviaScore).replace('{t}', triviaPool.length);
@@ -6734,8 +6759,9 @@ function triviaNext() {
     document.getElementById('trivia-next').textContent = gt('playAgain');
     document.getElementById('trivia-feedback').className = 'trivia-feedback';
     triviaQ = 0; triviaScore = 0;
-    triviaPool = [...TRIVIA_QUESTIONS].sort(() => Math.random() - 0.5);
+    triviaPool = [...TRIVIA_QUESTIONS.slice(0, TRIVIA_MIAMI_COUNT)].sort(() => Math.random() - 0.5);
     document.getElementById('trivia-score').textContent = '0';
+    document.getElementById('trivia-total').textContent = triviaPool.length;
     return;
   }
   triviaAnswered = false;
@@ -6743,6 +6769,25 @@ function triviaNext() {
   document.getElementById('trivia-feedback').className = 'trivia-feedback';
   document.getElementById('trivia-next').className = 'trivia-next';
   renderTriviaQuestion();
+}
+
+// Shown after the 10 honest Miami questions — passenger must opt in before any
+// US/pop-culture/general-knowledge question appears (fix for passenger complaint
+// about "Miami Trivia" serving non-Miami content unannounced).
+function showTriviaInterstitial() {
+  document.getElementById('trivia-game-area').style.display = 'none';
+  document.getElementById('trivia-interstitial').style.display = 'flex';
+  document.getElementById('trivia-int-score-val').textContent = triviaScore;
+}
+
+function triviaContinueRound2() {
+  logTap('game_trivia_continue');
+  const extra = TRIVIA_QUESTIONS.slice(TRIVIA_MIAMI_COUNT).sort(() => Math.random() - 0.5);
+  triviaPool = triviaPool.concat(extra);
+  document.getElementById('trivia-total').textContent = triviaPool.length;
+  document.getElementById('trivia-interstitial').style.display = 'none';
+  document.getElementById('trivia-game-area').style.display = '';
+  triviaNext();
 }
 
 // Render the current question + options in the active language (also used to
@@ -8142,19 +8187,14 @@ const WL_POOL = [
   { word:'CORAL', clue:{ en:'A city nicknamed "The City Beautiful" — known for Mediterranean architecture, the Venetian Pool, and Miracle Mile.', es:'Una ciudad apodada "La Ciudad Hermosa", conocida por su arquitectura mediterránea y la Venetian Pool.', pt:'Uma cidade apelidada de "A Cidade Bela", famosa pela arquitetura mediterrânea e a Venetian Pool.', fr:'Une ville surnommée "La belle cité", connue pour son architecture méditerranéenne et la Venetian Pool.' }, hint2:{ en:'A reef-building marine organism — also the first word of a famous Miami city\'s name.', es:'Un organismo marino que forma arrecifes — también la primera palabra del nombre de una famosa ciudad de Miami.', pt:'Um organismo marinho que forma recifes — também a primeira palavra do nome de uma famosa cidade de Miami.', fr:'Un organisme marin qui forme des récifs — aussi le premier mot du nom d\'une célèbre ville de Miami.' }},
   { word:'CUBAN', clue:{ en:'Miami\'s most celebrated cultural heritage — the food, music, and community spirit centered on Calle Ocho.', es:'La herencia cultural más celebrada de Miami: comida, música y espíritu comunitario en Calle Ocho.', pt:'A herança cultural mais celebrada de Miami — comida, música e espírito comunitário na Calle Ocho.', fr:'Le patrimoine culturel le plus célèbre de Miami — centré autour de Calle Ocho.' }, hint2:{ en:'Relating to the island nation 90 miles south of Miami — adjective.', es:'Relativo a la nación isleña a 90 millas al sur de Miami — adjetivo.', pt:'Relativo à nação insular a 90 milhas ao sul de Miami — adjetivo.', fr:'Relatif à la nation insulaire à 90 miles au sud de Miami — adjectif.' }},
   { word:'SALSA', clue:{ en:'You\'ll hear this Latin rhythm everywhere in Miami — from Little Havana clubs to Wynwood rooftops.', es:'Escucharás este ritmo latino por toda Miami, desde clubs de La Pequeña Habana hasta Wynwood.', pt:'Você ouvirá esse ritmo latino por toda Miami — de Little Havana às coberturas de Wynwood.', fr:'Ce rythme latin résonne partout à Miami, de Little Havana aux toits de Wynwood.' }, hint2:{ en:'A spicy Latin dance rhythm — and also a popular condiment!', es:'¡Un ritmo de baile latino y también un condimento picante!', pt:'Um ritmo de dança latina — e também um condimento picante!', fr:'Un rythme de danse latin — et aussi un condiment piquant !' }},
-  { word:'CALLE', clue:{ en:'The Spanish word for "street" — most famous here as the name of Miami\'s vibrant Little Havana main drag.', es:'La palabra española para "calle" — famosa aquí como la avenida principal de La Pequeña Habana.', pt:'A palavra espanhola para "rua" — famosa aqui como a avenida principal de Little Havana.', fr:'Le mot espagnol pour "rue" — connu ici comme l\'artère principale de Little Havana.' }, hint2:{ en:'Starts with C, ends with E — the Spanish word you\'d see on a street sign.', es:'Empieza con C, termina en E — la palabra en español que verías en una señal de calle.', pt:'Começa com C, termina em E — a palavra em espanhol que você veria em uma placa de rua.', fr:'Commence par C, finit par E — le mot espagnol qu\'on verrait sur un panneau de rue.' }},
-  { word:'DORAL', clue:{ en:'A city on the western edge of Miami-Dade — known for golf courses, a Venezuelan community, and international flair.', es:'Una ciudad al oeste de Miami-Dade, conocida por sus campos de golf y comunidad venezolana.', pt:'Uma cidade a oeste de Miami-Dade, famosa por seus campos de golfe e comunidade venezuelana.', fr:'Une ville à l\'ouest de Miami-Dade, connue pour ses terrains de golf et sa communauté vénézuélienne.' }, hint2:{ en:'A city west of Miami popular with the Venezuelan community — ends in -AL.', es:'Ciudad al oeste de Miami, popular con la comunidad venezolana — termina en -AL.', pt:'Cidade a oeste de Miami, popular com a comunidade venezuelana — termina em -AL.', fr:'Ville à l\'ouest de Miami populaire avec la communauté vénézuélienne — finit par -AL.' }},
   { word:'PALMS', clue:{ en:'Miami\'s most iconic trees — lining Brickell Avenue, South Beach, and nearly every boulevard in the city.', es:'Los árboles más icónicos de Miami, que adornan Brickell Avenue, South Beach y casi todos sus bulevares.', pt:'As árvores mais icônicas de Miami — na Brickell Avenue, South Beach e quase todos os bulevares.', fr:'Les arbres les plus emblématiques de Miami, qui bordent Brickell Avenue et South Beach.' }, hint2:{ en:'The tree that defines Miami\'s skyline — tall, tropical, with a feathery top.', es:'El árbol que define el horizonte de Miami — alto, tropical, con copa plumosa.', pt:'A árvore que define o horizonte de Miami — alta, tropical, com copa plumosa.', fr:'L\'arbre qui définit le ciel de Miami — grand, tropical, avec une couronne en plumes.' }},
   { word:'ALTON', clue:{ en:'A road that runs north-south through the heart of South Beach, one block from the ocean, lined with local shops.', es:'Una avenida que recorre de norte a sur el corazón de South Beach, a una cuadra del océano.', pt:'Uma avenida que percorre de norte a sul o coração de South Beach, a um quarteirão do oceano.', fr:'Une route qui traverse le cœur de South Beach du nord au sud, à un pâté de maisons de l\'océan.' }, hint2:{ en:'A proper name — one of South Beach\'s main north-south roads, just one block from the water.', es:'Un nombre propio — una de las principales vías norte-sur de South Beach, a una cuadra del agua.', pt:'Um nome próprio — uma das principais vias norte-sul de South Beach, a um quarteirão da água.', fr:'Un nom propre — l\'une des principales routes nord-sud de South Beach, à un pâté de maisons de l\'eau.' }},
   { word:'MANGO', clue:{ en:'This sweet tropical fruit grows everywhere in Miami — and gives its name to countless restaurants, bars, and shops.', es:'Esta fruta tropical crece en todo Miami y da nombre a innumerables restaurantes, bares y tiendas.', pt:'Esta fruta tropical cresce por toda Miami e dá nome a inúmeros restaurantes, bares e lojas.', fr:'Ce fruit tropical pousse partout à Miami et donne son nom à d\'innombrables restaurants et bars.' }, hint2:{ en:'A sweet tropical fruit that grows all over Miami — starts with M.', es:'Una fruta tropical dulce que crece en todo Miami — empieza con M.', pt:'Uma fruta tropical doce que cresce em toda Miami — começa com M.', fr:'Un fruit tropical sucré qui pousse partout à Miami — commence par M.' }},
   { word:'NEONS', clue:{ en:'The glowing signs that light up South Beach at night — a hallmark of the Art Deco Historic District.', es:'Los brillantes letreros que iluminan South Beach por la noche, emblema del Distrito Histórico Art Déco.', pt:'Os letreiros luminosos que iluminam South Beach à noite — marca do Distrito Histórico Art Déco.', fr:'Les enseignes lumineuses qui illuminent South Beach la nuit — emblème du quartier historique Art Déco.' }, hint2:{ en:'Glowing Art Deco signs lighting South Beach at night — plural.', es:'Letreros Art Déco luminosos que iluminan South Beach de noche — plural.', pt:'Letreiros Art Déco luminosos que iluminam South Beach à noite — plural.', fr:'Enseignes Art Déco lumineuses illuminant South Beach la nuit — pluriel.' }},
   { word:'PLAZA', clue:{ en:'Flagler Street downtown features several of these grand public spaces — a term borrowed straight from Spanish.', es:'La Calle Flagler en el centro tiene varias de estas grandes plazas públicas, un término tomado del español.', pt:'A Rua Flagler no centro tem várias dessas grandes praças públicas — um termo retirado do espanhol.', fr:'Flagler Street en centre-ville comporte plusieurs de ces grandes places publiques — un mot espagnol.' }, hint2:{ en:'A grand public square — a Spanish loanword ending in -A, found on Flagler Street.', es:'Una gran plaza pública — palabra del español que termina en -A, en Flagler Street.', pt:'Uma grande praça pública — palavra em espanhol terminando em -A, na Flagler Street.', fr:'Une grande place publique — un mot espagnol finissant par -A, sur Flagler Street.' }},
   { word:'HUMID', clue:{ en:'Miami\'s climate in one word — the thick warm air that greets you the moment you step off the plane.', es:'El clima de Miami en una palabra: el aire cálido y espeso que te recibe al bajar del avión.', pt:'O clima de Miami em uma palavra — o ar quente e úmido que te recebe ao sair do avião.', fr:'Le climat de Miami en un mot — l\'air chaud et épais qui vous accueille dès l\'atterrissage.' }, hint2:{ en:'One adjective for Miami\'s sticky, warm climate year-round — not "sunny," not "hot."', es:'Un adjetivo para el clima cálido y pegajoso de Miami durante todo el año.', pt:'Um adjetivo para o clima quente e pegajoso de Miami o ano todo.', fr:'Un adjectif pour le climat chaud et collant de Miami toute l\'année.' }},
-  { word:'BONGO', clue:{ en:'Hand drums at the heart of Little Havana — and the name of Gloria Estefan\'s famous waterfront restaurant.', es:'Tambores de mano en el corazón de La Pequeña Habana y nombre del famoso restaurante de Gloria Estefan.', pt:'Tambores manuais no coração de Little Havana — e nome do famoso restaurante de Gloria Estefan à beira-mar.', fr:'Tambours à main au cœur de Little Havana — et nom du célèbre restaurant de Gloria Estefan.' }, hint2:{ en:'A pair of small hand drums played in Cuban music — one word.', es:'Un par de pequeños tambores de mano propios de la música cubana — una palabra.', pt:'Um par de pequenos tambores de mão tocados na música cubana — uma palavra.', fr:'Une paire de petits tambours à main joués dans la musique cubaine — un mot.' }},
   { word:'CONGA', clue:{ en:'This tall Latin percussion drum drives the rhythms of Miami\'s Cuban and Caribbean music scene.', es:'Este alto tambor de percusión latina impulsa los ritmos de la escena musical cubana y caribeña de Miami.', pt:'Este alto tambor de percussão latina impulsiona os ritmos da cena musical cubana e caribenha de Miami.', fr:'Ce grand tambour de percussion latine propulse les rythmes de la scène musicale cubaine de Miami.' }, hint2:{ en:'A tall single-headed drum central to Afro-Cuban music — starts with C.', es:'Un tambor alto de una sola cabeza, central en la música afrocubana — empieza con C.', pt:'Um tambor alto de uma cabeça, central na música afro-cubana — começa com C.', fr:'Un grand tambour à une seule tête, central dans la musique afro-cubaine — commence par C.' }},
-  { word:'VILLA', clue:{ en:'Many Coral Gables and Coconut Grove homes are styled as these Mediterranean residences with tiled roofs and courtyards.', es:'Muchas casas de Coral Gables y Coconut Grove están diseñadas como estas residencias mediterráneas con patios y tejas.', pt:'Muitas casas em Coral Gables e Coconut Grove são estilizadas como essas residências mediterrâneas com pátios.', fr:'De nombreuses maisons de Coral Gables sont conçues comme ces résidences méditerranéennes avec cours intérieures.' }, hint2:{ en:'A Mediterranean-style residence with courtyards — common in Coral Gables.', es:'Una residencia de estilo mediterráneo con patios — común en Coral Gables.', pt:'Uma residência de estilo mediterrâneo com pátios — comum em Coral Gables.', fr:'Une résidence de style méditerranéen avec cours intérieures — commune à Coral Gables.' }},
   { word:'TAPAS', clue:{ en:'These Spanish small plates are a staple at Miami\'s many Latin-inspired restaurants — perfect for sharing.', es:'Estos pequeños platos españoles son un pilar en los muchos restaurantes de inspiración latina de Miami.', pt:'Essas pequenas porções espanholas são uma constante nos restaurantes de inspiração latina de Miami.', fr:'Ces petites assiettes espagnoles sont incontournables dans les nombreux restaurants latins de Miami.' }, hint2:{ en:'Spanish small sharing plates — starts with T, ends with S.', es:'Pequeños platos españoles para compartir — empieza con T, termina con S.', pt:'Pequenas porções espanholas para compartilhar — começa com T, termina com S.', fr:'Petites assiettes espagnoles à partager — commence par T, finit par S.' }},
-  { word:'GLITZ', clue:{ en:'South Beach is famous for this — flashy fashion, luxury cars on Collins, and celebrity sightings at rooftop pools.', es:'South Beach es conocida por esto: moda ostentosa, autos de lujo en Collins y avistamientos de celebridades.', pt:'South Beach é famosa por isso — moda extravagante, carros de luxo na Collins e encontros com celebridades.', fr:'South Beach est célèbre pour ça — mode tape-à-l\'œil, voitures de luxe sur Collins et célébrités.' }, hint2:{ en:'The flashy glamour South Beach is famous for — rhymes with "blitz."', es:'El glamour ostentoso por el que South Beach es famosa — rima con "blitz."', pt:'O glamour extravagante pelo qual South Beach é famosa — rima com "blitz."', fr:'Le glamour tape-à-l\'œil qui fait la renommée de South Beach — rime avec "blitz."' }},
   { word:'BEACH', clue:{ en:'The most famous two-word phrase in Miami starts with "South" and ends with this — one of earth\'s most iconic destinations.', es:'La frase más famosa de Miami empieza con "South" y termina con esto: uno de los destinos más icónicos del mundo.', pt:'A frase mais famosa de Miami começa com "South" e termina com isso — um dos destinos mais icônicos do mundo.', fr:'L\'expression la plus célèbre de Miami commence par "South" — l\'une des destinations les plus connues du monde.' }, hint2:{ en:'Sand, waves, and sunshine — where Miamians spend their weekends. Very common word.', es:'Arena, olas y sol — donde los miamenses pasan sus fines de semana. Palabra muy común.', pt:'Areia, ondas e sol — onde os miamenses passam seus fins de semana. Palavra muito comum.', fr:'Sable, vagues et soleil — où les Miamiens passent leurs week-ends. Mot très courant.' }},
   { word:'VIBES', clue:{ en:'What Miami is known for worldwide — the energy, color, and warmth that make every visitor feel the pulse of the city.', es:'Lo que hace a Miami famosa en el mundo: la energía, el color y el calor que hacen sentir el pulso de la ciudad.', pt:'O que Miami é conhecida mundialmente — energia, cor e calor que fazem todo visitante sentir o pulso da cidade.', fr:'Ce pour quoi Miami est connue dans le monde entier — l\'énergie, la couleur et la chaleur de la ville.' }, hint2:{ en:'The feeling you get from a place or person — Miami has good ones. Ends in S.', es:'La sensación que transmite un lugar o persona — Miami tiene buenas. Termina en S.', pt:'A sensação que um lugar ou pessoa transmite — Miami tem boas. Termina em S.', fr:'Le ressenti qu\'inspire un lieu ou une personne — Miami en a de bonnes. Finit par S.' }},
 ];
