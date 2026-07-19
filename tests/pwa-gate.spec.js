@@ -17,13 +17,30 @@ test.describe('PWA install gate', { tag: ['@index', '@smoke'] }, () => {
     expect(appHidden).toBe(true);
   });
 
-  test('shows other-platform panel by default (non-iOS, non-Android UA in Chromium)', async ({ page }) => {
-    const otherVisible   = await page.locator('#ig-steps-other').isVisible();
-    const iosHidden      = await page.evaluate(() => document.getElementById('ig-steps-ios').style.display === 'none');
-    const androidHidden  = await page.evaluate(() => document.getElementById('ig-steps-android').style.display === 'none');
-    expect(otherVisible).toBe(true);
-    expect(iosHidden).toBe(true);
-    expect(androidHidden).toBe(true);
+  test('shows desktop panel by default (non-iOS, non-Android UA in Chromium)', async ({ page }) => {
+    await expect(page.locator('#ig-tab-desktop')).toHaveClass(/active/);
+    await expect(page.locator('#ig-tab-ios')).not.toHaveClass(/active/);
+    await expect(page.locator('#ig-tab-android')).not.toHaveClass(/active/);
+    const steps = await page.locator('#ig-steps-list .ig-step').count();
+    expect(steps).toBeGreaterThan(0);
+    // Browser picker should be visible on desktop, with Chrome preselected
+    await expect(page.locator('#ig-browser-pick')).toBeVisible();
+    await expect(page.locator('#ig-browser-select')).toHaveValue('chrome');
+  });
+
+  test('switching platform tabs updates steps and browser picker', async ({ page }) => {
+    await page.locator('#ig-tab-ios').click();
+    await expect(page.locator('#ig-tab-ios')).toHaveClass(/active/);
+    await expect(page.locator('#ig-browser-pick')).toBeHidden();
+
+    await page.locator('#ig-tab-android').click();
+    await expect(page.locator('#ig-tab-android')).toHaveClass(/active/);
+    await expect(page.locator('#ig-browser-pick')).toBeVisible();
+    await expect(page.locator('#ig-browser-select')).toHaveValue('chrome');
+
+    await page.locator('#ig-browser-select').selectOption('samsung');
+    const firstStep = await page.locator('#ig-steps-list .ig-step').first().innerText();
+    expect(firstStep).toMatch(/Samsung Internet/);
   });
 
   test('5 taps on the icon bypass the gate and boot the app', async ({ page }) => {

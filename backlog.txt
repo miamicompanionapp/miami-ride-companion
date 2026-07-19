@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-19 (#81: Miami Wordle pool trimmed of proper-noun/local-trivia words that were too hard to guess)
+Last updated: 2026-07-19 (#82: install-gate now shows Desktop/Chrome/Safari/Edge instructions alongside iOS/Android)
 Owner: Abdullah
 
 
@@ -24,6 +24,13 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #82  The install-gate (shown when the app is opened in a regular browser
+       instead of the installed PWA) only had iOS and Android instructions —
+       someone visiting the passenger app link from a laptop had no guidance.
+       Added a "Desktop" platform tab with Chrome/Edge/Safari/Firefox install
+       steps (public/index.html), auto-detects desktop UAs (was iOS-or-Android
+       only before), and made the browser picker dynamic per platform instead of
+       Android-only. DONE 2026-07-19 (SW v1.91.0)
   1. [X] #81  Riders found Miami Wordle too hard — the 20-word WL_POOL leaned heavily on
        proper nouns / local-trivia words (BONGO, VILLA, GLITZ, CALLE, DORAL) that can't be
        reasoned to from the clue text alone, unlike common-word entries. Removed all 5 from

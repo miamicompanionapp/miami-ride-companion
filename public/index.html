@@ -87,10 +87,10 @@
     }
     /* platform tabs */
     #install-gate .ig-tabs {
-      display: flex; gap: 8px; margin-bottom: 16px; max-width: 340px; width: 100%;
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; max-width: 400px; width: 100%;
     }
     #install-gate .ig-tab {
-      flex: 1; padding: 10px 8px; border-radius: 10px;
+      flex: 1; min-width: 100px; padding: 10px 8px; border-radius: 10px;
       border: 1px solid rgba(229,192,107,0.25);
       background: rgba(20,40,66,0.5); color: var(--muted);
       font-family: var(--font-body); font-size: 14px; cursor: pointer;
@@ -102,7 +102,7 @@
     }
     /* browser picker */
     #install-gate .ig-browser-pick {
-      max-width: 340px; width: 100%; margin-bottom: 16px; text-align: left;
+      max-width: 400px; width: 100%; margin-bottom: 16px; text-align: left;
     }
     #install-gate .ig-browser-pick label {
       display: block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -119,7 +119,7 @@
       background: rgba(20,40,66,0.72);
       border: 1px solid rgba(229,192,107,0.25);
       border-radius: var(--radius-lg);
-      padding: 20px 24px; max-width: 340px; width: 100%;
+      padding: 20px 24px; max-width: 400px; width: 100%;
       text-align: left;
     }
     #install-gate .ig-steps ol { list-style: none; margin: 0; padding: 0; }
@@ -2229,20 +2229,16 @@
   <div class="ig-tabs">
     <button class="ig-tab" id="ig-tab-ios" data-platform="ios">🍏 iPhone / iPad</button>
     <button class="ig-tab" id="ig-tab-android" data-platform="android">🤖 Android</button>
+    <button class="ig-tab" id="ig-tab-desktop" data-platform="desktop">💻 Desktop</button>
   </div>
-  <!-- Android browser picker (hidden on iOS) -->
+  <!-- Browser picker (hidden on iOS) -->
   <div class="ig-browser-pick" id="ig-browser-pick" style="display:none">
     <label for="ig-browser-select">Which browser are you using?</label>
-    <select id="ig-browser-select">
-      <option value="chrome">Chrome</option>
-      <option value="samsung">Samsung Internet</option>
-      <option value="firefox">Firefox</option>
-      <option value="edge">Edge</option>
-    </select>
+    <select id="ig-browser-select"></select>
   </div>
   <!-- Dynamic steps -->
   <div class="ig-steps"><ol id="ig-steps-list"></ol></div>
-  <div class="ig-hint">Works on iPhone, iPad, and Android phones</div>
+  <div class="ig-hint">Works on iPhone, iPad, Android phones, and desktop browsers</div>
 </div>
 
 <div id="app">
@@ -4169,14 +4165,56 @@ document.addEventListener('DOMContentLoaded', () => {
           'Open the app from the new icon on your home screen.',
         ],
       },
+      desktop: {
+        chrome: [
+          'Click the <span class="ig-key">⊕ install</span> icon at the right edge of the address bar (or the <span class="ig-key">⋮</span> menu).',
+          'Click <span class="ig-key">Install Miami Ride Companion</span>.',
+          'Click <span class="ig-key">Install</span> to confirm.',
+          'The app opens in its own window — pin it to your taskbar/dock for quick access.',
+        ],
+        edge: [
+          'Click the <span class="ig-key">⋯</span> menu, then <span class="ig-key">Apps</span>.',
+          'Click <span class="ig-key">Install this site as an app</span>.',
+          'Click <span class="ig-key">Install</span> to confirm.',
+          'The app opens in its own window — pin it to your taskbar for quick access.',
+        ],
+        safari: [
+          'Click the <span class="ig-key">Share</span> button in Safari\'s toolbar (or the <span class="ig-key">File</span> menu).',
+          'Choose <span class="ig-key">Add to Dock</span>.',
+          'Click <span class="ig-key">Add</span> to confirm.',
+          'Open the app from your Dock.',
+        ],
+        firefox: [
+          'Firefox on desktop doesn\'t support installing apps directly.',
+          'Open this page in <span class="ig-key">Chrome</span> or <span class="ig-key">Edge</span> instead to install it.',
+          'Or just keep using it here in the browser tab.',
+        ],
+      },
+    };
+
+    const IG_BROWSERS = {
+      android: [
+        { value: 'chrome', label: 'Chrome' },
+        { value: 'samsung', label: 'Samsung Internet' },
+        { value: 'firefox', label: 'Firefox' },
+        { value: 'edge', label: 'Edge' },
+      ],
+      desktop: [
+        { value: 'chrome', label: 'Chrome' },
+        { value: 'edge', label: 'Edge' },
+        { value: 'safari', label: 'Safari' },
+        { value: 'firefox', label: 'Firefox' },
+      ],
     };
 
     const ua = navigator.userAgent || '';
-    const detectedPlatform = /iphone|ipad|ipod/i.test(ua) || (/Macintosh/.test(ua) && 'ontouchend' in document)
-      ? 'ios' : 'android';
+    const isIOS = /iphone|ipad|ipod/i.test(ua) || (/Macintosh/.test(ua) && 'ontouchend' in document);
+    const isAndroid = /Android/i.test(ua);
+    const detectedPlatform = isIOS ? 'ios' : isAndroid ? 'android' : 'desktop';
     const detectedBrowser = /SamsungBrowser/i.test(ua) ? 'samsung'
       : /EdgA|Edge|Edg\//i.test(ua) ? 'edge'
       : /Firefox|FxiOS/i.test(ua) ? 'firefox'
+      : /Safari/i.test(ua) && !/Chrome|CriOS|Chromium/i.test(ua) ? 'safari'
       : 'chrome';
 
     let igPlatform = detectedPlatform;
@@ -4185,11 +4223,20 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderIgSteps() {
       const steps = igPlatform === 'ios'
         ? IG_INSTRUCTIONS.ios
-        : (IG_INSTRUCTIONS.android[igBrowser] || IG_INSTRUCTIONS.android.chrome);
+        : (IG_INSTRUCTIONS[igPlatform][igBrowser] || IG_INSTRUCTIONS[igPlatform].chrome);
       document.getElementById('ig-steps-list').innerHTML = steps
         .map((s, i) => `<li class="ig-step"><div class="ig-step-num">${i+1}</div><span>${s}</span></li>`)
         .join('');
-      document.getElementById('ig-browser-pick').style.display = igPlatform === 'android' ? '' : 'none';
+      const showPicker = igPlatform !== 'ios';
+      const pickerEl = document.getElementById('ig-browser-pick');
+      pickerEl.style.display = showPicker ? '' : 'none';
+      if (showPicker) {
+        const opts = IG_BROWSERS[igPlatform];
+        if (!opts.some(o => o.value === igBrowser)) igBrowser = opts[0].value;
+        const sel = document.getElementById('ig-browser-select');
+        sel.innerHTML = opts.map(o => `<option value="${o.value}">${o.label}</option>`).join('');
+        sel.value = igBrowser;
+      }
       document.querySelectorAll('.ig-tab').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.platform === igPlatform);
       });
@@ -4201,7 +4248,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderIgSteps();
       });
     });
-    document.getElementById('ig-browser-select').value = igBrowser;
     document.getElementById('ig-browser-select').addEventListener('change', e => {
       igBrowser = e.target.value;
       renderIgSteps();

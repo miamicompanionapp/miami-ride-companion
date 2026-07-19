@@ -7,6 +7,37 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #82 Install-gate adds Desktop (Chrome/Edge/Safari/Firefox) instructions  *(DONE 2026-07-19, SW v1.91.0)*
+
+Abdullah asked whether the install-gate (shown when the passenger app is opened in a plain browser
+instead of the installed PWA) covers laptop visitors. It only had iOS and Android tabs — the platform
+detection (`public/index.html`) fell back to `'android'` for anything that wasn't iOS, so a desktop
+Chrome/Safari/Edge visitor saw wrong (Android) install steps with no way to pick their real platform.
+
+**Fix (`public/index.html`):**
+- Added a third `#ig-tab-desktop` tab (💻 Desktop) next to iOS/Android.
+- `IG_INSTRUCTIONS.desktop` holds steps for Chrome (address-bar install icon), Edge (Apps → Install
+  this site as an app), Safari (Share/File → Add to Dock), and Firefox (no desktop install support —
+  points user to Chrome/Edge or just using the browser tab).
+- Platform detection now branches `ios` / `android` / `desktop` (was `ios`-or-`android` only), and
+  browser detection adds a `safari` case (Safari UA without Chrome/CriOS/Chromium markers).
+- The browser `<select>` is now populated dynamically per platform via `IG_BROWSERS` (previously a
+  static Android-only Chrome/Samsung/Firefox/Edge list reused — visually — even when Android wasn't
+  selected).
+- `.ig-tabs` / `.ig-steps` / `.ig-browser-pick` widened from 340px → 400px max-width with `flex-wrap`
+  and `min-width: 100px` per tab, since 3 tabs no longer fit comfortably at the old width.
+
+**Test (`tests/pwa-gate.spec.js`):** the existing "shows other-platform panel by default" test
+referenced ids (`#ig-steps-other`, `#ig-steps-ios`, `#ig-steps-android`) that don't exist in the
+current markup — it was already failing before this change (confirmed by running it against
+un-modified `main`). Rewrote it to assert the desktop tab is active by default in a Chromium UA and
+the browser picker defaults to Chrome; added a new test covering tab-switching (iOS hides the
+browser picker, Android/Desktop show it) and browser-select changes updating the rendered steps.
+
+**SW bump:** `miami-ride-v1.90.0` → `v1.91.0` (public asset change).
+
+---
+
 ### [X] #81 Miami Wordle pool trimmed of proper-noun/local-trivia words  *(DONE 2026-07-19, SW v1.90.0)*
 
 Abdullah reported riders finding Miami Wordle too hard. Reviewing `WL_POOL` (`public/index.html`),
