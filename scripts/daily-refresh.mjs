@@ -436,6 +436,11 @@ async function main() {
           price:       e.price || '',
           image:       e.image || '',
           description: { en: e.description || '', es: '', pt: '', fr: '' },
+          // The specific feed/site this came from (e.g. "Soul of Miami",
+          // "Hollywood", "Ticketmaster") — the UI doesn't render this, it's
+          // here so review-cache verdicts can be tagged by source (see step 5
+          // below) for later evaluation of which feeds are worth keeping.
+          source:      e.source || label,
         };
         // Ticketmaster ships a real segment/genre-derived category — keep it
         // instead of guessing later. RSS events have none, so step 7 below
@@ -466,7 +471,7 @@ async function main() {
   // Build a map so we can look up title+venue for skipped events when writing to cache.
   const newEventMeta = new Map(allNewEvents.map(e => [
     e.id,
-    { tvKey: `${(e.title?.en || '').trim()}|${(e.venue || '').trim()}`.toLowerCase() },
+    { tvKey: `${(e.title?.en || '').trim()}|${(e.venue || '').trim()}`.toLowerCase(), source: e.source },
   ]));
   const needsReview = allNewEvents.filter(e => !reviewCache[newEventMeta.get(e.id).tvKey]);
   const cacheHits   = allNewEvents.length - needsReview.length;
@@ -507,10 +512,13 @@ ${JSON.stringify(payload)}`);
 
       const ratings = JSON.parse(extractJson(result));
 
-      // Persist all verdicts to the review cache.
+      // Persist all verdicts to the review cache, tagged with the source that
+      // produced the event — lets a later pass tally keep/skip rates per
+      // source (e.g. "Miami on the Cheap" vs. "Hollywood") to see which feeds
+      // are worth keeping.
       for (const [id, r] of Object.entries(ratings)) {
         const meta = newEventMeta.get(id);
-        if (meta) reviewCache[meta.tvKey] = { verdict: r.verdict, reason: r.reason, cached: today };
+        if (meta) reviewCache[meta.tvKey] = { verdict: r.verdict, reason: r.reason, cached: today, source: meta.source };
       }
 
       const skipIds = new Set(
