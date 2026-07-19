@@ -22,7 +22,7 @@ const CITIES = [
   { name: 'Boca Raton',       domain: 'myboca.us',              catId: 27 },
   { name: 'Hollywood',        domain: 'hollywoodfl.org',         catId: 27 },
   { name: 'North Miami',      domain: 'northmiamifl.gov',        catId: 14 },
-  { name: 'North Miami Beach',domain: 'citynmb.com',             catId: 14 },
+  { name: 'North Miami Beach',domain: 'www.citynmb.com',         catId: 14 },
   { name: 'Miami Gardens',    domain: 'miamigardens-fl.gov',     catId: 27 },
   { name: 'Hallandale Beach', domain: 'hallandalebeachfl.gov',   catId: 14 },
   { name: 'Homestead',        domain: 'homesteadfl.gov',         catId: 14 },
