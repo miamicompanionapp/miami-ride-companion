@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-19 (#83: fixed the reshuffling "random" test failures — root cause was Service Worker + CORS, not environment flakiness)
+Last updated: 2026-07-19 (#84: offline event-image pre-caching actually works now — was silently CORS-blocked for every passenger)
 Owner: Abdullah
 
 
@@ -24,6 +24,21 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
 
+  1. [X] #84  Offline event-image pre-caching was silently broken for every passenger
+       (surfaced by #83's investigation, fixed separately): prewarmEventImages()
+       (public/index.html) used a default cors-mode fetch() against soulofmiami.org,
+       which sends no Access-Control-Allow-Origin header, so the fetch was always
+       blocked by the browser and silently swallowed by the existing try/catch —
+       passengers still saw images fine online (<img src> doesn't need CORS), they
+       just never got cached for offline/no-signal use in the car. Fix: switched to
+       `fetch(url, { mode: 'no-cors' })`, which returns a valid "opaque" response
+       Cache API can store (can't inspect status/body, but that's fine — the whole
+       point is just to have it available offline later). Verified manually: 69
+       event images now land in the 'miami-event-images' cache with 0 console
+       errors (previously 0 images ever cached). Added a regression test
+       (tests/content.spec.js, "Offline event-image pre-caching") that stubs the
+       image host WITHOUT a CORS header (mirroring the real soulofmiami.org
+       behavior) and asserts caching still succeeds. DONE 2026-07-19 (SW v1.92.0).
   1. [X] #83  Test suite had "random" failures — a different set of tests failed on
        every `npm test` run (20 failed, then 27, almost no overlap), always with
        `console.error: Failed to load resource: net::ERR_FAILED`. Root cause:

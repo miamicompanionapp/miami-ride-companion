@@ -4397,9 +4397,17 @@ async function prewarmEventImages() {
     for (const url of urls) {
       try {
         if (await cache.match(url)) continue;
-        const resp = await fetch(url);
-        if (resp.ok) await cache.put(url, resp);
-      } catch { /* CORS blocked or offline — skip */ }
+        // soulofmiami.org (the event-image host) sends no CORS header, so a
+        // default cors-mode fetch() is always blocked by the browser before
+        // the response body is ever visible to this code — that silently
+        // defeated pre-caching for every passenger, not just in tests (see
+        // backlog_archive.md #83). no-cors mode sidesteps that: it can't
+        // report status/ok (the response is "opaque", status 0), but <img>
+        // tags don't need CORS either, so an opaque response is exactly what
+        // a normal image request produces — safe to cache and serve as-is.
+        const resp = await fetch(url, { mode: 'no-cors' });
+        if (resp.type === 'opaque' || resp.ok) await cache.put(url, resp);
+      } catch { /* offline or otherwise unreachable — skip */ }
     }
   } catch { /* caches API unavailable */ }
 }

@@ -7,6 +7,42 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #84 Offline event-image pre-caching fixed — was silently CORS-blocked for every passenger  *(DONE 2026-07-19, SW v1.92.0)*
+
+Follow-up to [[#83]]'s investigation, which surfaced this as a real product bug distinct from the
+test flakiness itself: `prewarmEventImages()` (`public/index.html`) fetches every event image (all
+hosted on `soulofmiami.org`, per `content.json`) in a background loop on every page load, meant to
+cache them for offline use in the car. It used a plain `fetch(url)` — default `mode: 'cors'` — and
+`soulofmiami.org` sends no `Access-Control-Allow-Origin` header, so the browser blocks the fetch
+every time, for every passenger, not just in the sandboxed test environment. The existing
+`try { … } catch { /* CORS blocked or offline — skip */ }` swallowed the failure gracefully, so
+nothing ever crashed or looked broken — images still displayed fine while online (`<img src>` doesn't
+require CORS at all, only `fetch()` does by default), passengers just never got the offline cache
+populated. Likely been silently failing since this feature was written.
+
+**Fix (`public/index.html`):** switched to `fetch(url, { mode: 'no-cors' })`. This produces an
+"opaque" response — status 0, body/headers not readable by JS — which is exactly what a normal
+cross-origin `<img>` load already produces under the hood, and it's fully cacheable via
+`cache.put()`. The success check changed from `if (resp.ok)` (always `false` for an opaque response)
+to `if (resp.type === 'opaque' || resp.ok)`.
+
+No other file needed to change: `sw.js`'s catch-all fetch handler serves cached responses via the
+global `caches.match(event.request)`, which searches every named cache (including
+`miami-event-images`), so a cached opaque response is already servable to a later `<img>` request
+when offline.
+
+**Verification:** a throwaway Playwright script (not committed) called `prewarmEventImages()`
+directly against the real `soulofmiami.org` with a live Service Worker active — 69 event images
+landed in the `miami-event-images` cache, 0 console errors (previously: 0 images ever cached, silent
+failure). Added a permanent regression test, `tests/content.spec.js` ("Offline event-image
+pre-caching › prewarmEventImages caches event images even with no CORS header on the response") —
+uses `@playwright/test` directly (not `./fixtures`, whose global stub adds a CORS header that would
+mask a regression back to plain `cors`-mode `fetch()`) and stubs the image host deliberately
+*without* a CORS header, mirroring real `soulofmiami.org` behavior, to prove the `no-cors` path
+still succeeds.
+
+SW bumped to `v1.92.0` (this is a real `public/` behavior change, unlike #83's test-only fix).
+
 ### [X] #83 Fixed reshuffling "random" test failures — root cause was SW + CORS, not env flakiness  *(DONE 2026-07-19)*
 
 Abdullah asked why the test suite consistently had failures, but never the same ones twice. Two
