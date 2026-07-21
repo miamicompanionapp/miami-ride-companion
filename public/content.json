@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-20T13:57:01.188Z",
+    "lastUpdated": "2026-07-21T13:29:24.455Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-07-20T13:56:56.582Z",
+    "fetchedAt": "2026-07-21T13:29:23.757Z",
     "current": {
       "temp_f": 87,
-      "feels_f": 94,
+      "feels_f": 92,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
-      "wind_mph": 15,
-      "rain_chance": 12,
-      "weathercode": 3
+      "humidity": 66,
+      "wind_mph": 13,
+      "rain_chance": 5,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-07-20",
-        "high_f": 90,
-        "low_f": 81,
-        "weathercode": 3,
-        "rain_chance": 12,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-07-21",
-        "high_f": 90,
-        "low_f": 81,
+        "high_f": 91,
+        "low_f": 82,
         "weathercode": 3,
-        "rain_chance": 4,
+        "rain_chance": 5,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -50,9 +37,9 @@
       {
         "date": "2026-07-22",
         "high_f": 89,
-        "low_f": 83,
-        "weathercode": 80,
-        "rain_chance": 8,
+        "low_f": 77,
+        "weathercode": 82,
+        "rain_chance": 17,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -63,22 +50,35 @@
       {
         "date": "2026-07-23",
         "high_f": 88,
-        "low_f": 84,
-        "weathercode": 51,
-        "rain_chance": 7,
+        "low_f": 79,
+        "weathercode": 65,
+        "rain_chance": 6,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Heavy rain",
+          "es": "Lluvia intensa",
+          "pt": "Chuva forte",
+          "fr": "Pluie forte"
         }
       },
       {
         "date": "2026-07-24",
-        "high_f": 88,
+        "high_f": 89,
         "low_f": 84,
-        "weathercode": 53,
-        "rain_chance": 17,
+        "weathercode": 95,
+        "rain_chance": 18,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-07-25",
+        "high_f": 89,
+        "low_f": 83,
+        "weathercode": 96,
+        "rain_chance": 32,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -90,147 +90,147 @@
     "hourly": [
       {
         "hour": "09:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 7
+        "temp_f": 87,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "10:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "11:00",
-        "temp_f": 87,
-        "weathercode": 2,
-        "rain_chance": 10
+        "temp_f": 89,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "12:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 89,
+        "weathercode": 1,
+        "rain_chance": 0
       },
       {
         "hour": "13:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 90,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "14:00",
-        "temp_f": 90,
+        "temp_f": 91,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 1
       },
       {
         "hour": "15:00",
-        "temp_f": 90,
+        "temp_f": 91,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 1
       },
       {
         "hour": "16:00",
-        "temp_f": 89,
+        "temp_f": 90,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 1
       },
       {
         "hour": "17:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 86,
+        "temp_f": 89,
         "weathercode": 2,
         "rain_chance": 1
       },
       {
+        "hour": "18:00",
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
         "hour": "20:00",
-        "temp_f": 84,
+        "temp_f": 85,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "21:00",
         "temp_f": 84,
-        "weathercode": 1,
+        "weathercode": 2,
         "rain_chance": 1
       },
       {
         "hour": "22:00",
         "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "23:00",
         "temp_f": 82,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "00:00",
         "temp_f": 82,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "01:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "02:00",
         "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 0
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "03:00",
         "temp_f": 82,
-        "weathercode": 2,
-        "rain_chance": 0
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 0
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 82,
-        "weathercode": 3,
+        "weathercode": 0,
         "rain_chance": 3
       },
       {
+        "hour": "04:00",
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 6
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 7
+      },
+      {
         "hour": "06:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 4
+        "temp_f": 77,
+        "weathercode": 82,
+        "rain_chance": 17
       },
       {
         "hour": "07:00",
-        "temp_f": 81,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 13
       },
       {
         "hour": "08:00",
-        "temp_f": 84,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 7
       }
     ]
   },
@@ -2974,32 +2974,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1784555797412_tr9m",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-07-20",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1784555797412_adlt",
         "title": {
           "en": "Louis Tomlinson - How Did We Get Here? World Tour",
@@ -3104,30 +3078,6 @@
         "lng": -80.13314
       },
       {
-        "id": "cp_1784555797964_slmu",
-        "title": {
-          "en": "Dusk to Dawn Night Camp",
-          "es": "Campamento Nocturno de Atardecer a Amanecer",
-          "pt": "Acampamento Noturno do Anoitecer ao Amanhecer",
-          "fr": "Camp Nocturne du Crépuscule à l'Aube"
-        },
-        "date": "2026-07-20",
-        "venue": "Betty T. Ferguson Recreational Complex",
-        "address": "3000 NW 199th Street  Miami Gardens FL 33056",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=27",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "https://miamigardens-fl.gov/calendar.aspx?EID=3384",
-          "es": "https://miamigardens-fl.gov/calendar.aspx?EID=3384",
-          "pt": "https://miamigardens-fl.gov/calendar.aspx?EID=3384",
-          "fr": "https://miamigardens-fl.gov/calendar.aspx?EID=3384"
-        },
-        "source": "Miami Gardens",
-        "category": "community"
-      },
-      {
         "id": "cp_1784555797964_i02z",
         "title": {
           "en": "Centennial Edition Neighborhood Family Block Party: Skylake",
@@ -3150,6 +3100,132 @@
         },
         "source": "North Miami Beach",
         "category": "community"
+      },
+      {
+        "id": "rss_1784640550705_agqv",
+        "title": {
+          "en": "Thinking About Weight-Loss Injections? Get the Facts First. 8/1/26",
+          "es": "¿Pensando en inyecciones para perder peso? Obtén los hechos primero. 8/1/26",
+          "pt": "Pensando em injeções para perda de peso? Conheça os fatos primeiro. 8/1/26",
+          "fr": "Envisagez-vous des injections pour perdre du poids? Découvrez les faits d'abord. 8/1/26"
+        },
+        "date": "2026-08-01",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/07/20/thinking-about-weight-loss-injections-get-the-facts-first-8-1-26/",
+        "free": false,
+        "price": "$5",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/maga012-350x250.jpg",
+        "description": {
+          "en": "Weight-loss injections can be helpful for the right patient—but they are",
+          "es": "Las inyecciones para perder peso pueden ser útiles para el paciente correcto—pero son",
+          "pt": "As injeções para perda de peso podem ser úteis para o paciente certo—mas são",
+          "fr": "Les injections pour perdre du poids peuvent être utiles pour le bon patient—mais elles sont"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1784640550705_nrg5",
+        "title": {
+          "en": "A Workshop To Get From Stuck to Unstuck 7/30/26",
+          "es": "Un Taller Para Pasar de Atrapado a Desatrapado 7/30/26",
+          "pt": "Um Workshop Para Sair do Impasse 7/30/26",
+          "fr": "Un Atelier Pour Passer de Bloqué à Débloqué 7/30/26"
+        },
+        "date": "2026-07-30",
+        "venue": "CoSpace",
+        "address": "17161 NW 27th Avenue, Miami Gardens, Florida, 33056",
+        "url": "https://www.soulofmiami.org/2026/07/20/a-workshop-to-get-from-stuck-to-unstuck-7-30-26/",
+        "free": false,
+        "price": "$10",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Light-Brown-Typographic-Confidence-Affirmation-Poster-2-350x467.png",
+        "description": {
+          "en": "Have you ever known what you needed to do but still felt stuck? “UnStuck” is",
+          "es": "¿Alguna vez has sabido lo que necesitabas hacer pero aún te sentías atrapado? \"DesAtrapado\" es",
+          "pt": "Você já soube o que precisava fazer mas ainda se sentiu preso? \"Desbloqueado\" é",
+          "fr": "Avez-vous déjà su ce que vous deviez faire mais vous vous sentiez toujours bloqué? \"Débloqué\" est"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9303466,
+        "lng": -80.2433217,
+        "category": "community"
+      },
+      {
+        "id": "tm_1784640551163_te26",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-07-21",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1784640551163_k8c6",
+        "title": {
+          "en": "Inter Miami CF vs Chicago Fire FC",
+          "es": "Inter Miami CF vs Chicago Fire FC",
+          "pt": "Inter Miami CF vs Chicago Fire FC",
+          "fr": "Inter Miami CF vs Chicago Fire FC"
+        },
+        "date": "2026-07-22",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-chicago-fire-miami-florida-07-22-2026%2Fevent%2F0D0063739DBC680D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
+          "es": "Para información sobre Suites llame al 305-428-0611. · Comienza 19:30 · Nu Stadium",
+          "pt": "Para informações sobre Suites ligue para 305-428-0611. · Começa 19:30 · Nu Stadium",
+          "fr": "Pour plus d'informations sur les Suites, appelez le 305-428-0611. · Commence 19:30 · Nu Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
+      },
+      {
+        "id": "cp_1784640551809_ep0t",
+        "title": {
+          "en": "Summer in the City: Peace of Woodstock Band",
+          "es": "Verano en la Ciudad: Banda Peace of Woodstock",
+          "pt": "Verão na Cidade: Banda Peace of Woodstock",
+          "fr": "Été en Ville: Groupe Peace of Woodstock"
+        },
+        "date": "2026-07-31",
+        "venue": "Mizner Park Amphitheater",
+        "address": "590 Plaza Real  BOCA RATON FL 33432",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=27",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://myboca.us/calendar.aspx?EID=15155",
+          "es": "https://myboca.us/calendar.aspx?EID=15155",
+          "pt": "https://myboca.us/calendar.aspx?EID=15155",
+          "fr": "https://myboca.us/calendar.aspx?EID=15155"
+        },
+        "source": "Boca Raton",
+        "category": "music"
       }
     ]
   },
@@ -4053,29 +4129,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-07-20T13:56:56.582Z",
-    "items": [
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.3963ad744989a99172e08a0eec9eb1661d304728.001.1",
-        "type": "weather",
-        "severity": "moderate",
-        "title": {
-          "en": "Heat Advisory",
-          "es": "Aviso de Calor",
-          "pt": "Aviso de Calor",
-          "fr": "Avis de Chaleur"
-        },
-        "detail": {
-          "en": "* WHAT...Heat index values up to 108 expected.\n\n* WHERE...Coastal Broward County, Coastal Miami Dade County, Far\nSouth Miami-Dade County, Inland Broward County, Inland Miami-Dade\nCounty, Metro Broward County, and Metropolitan Miami Dade Counties.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan valores de índice de calor hasta 108.\n\n* DÓNDE...Condado costero de Broward, Condado costero de Miami Dade, sur extremo del Condado de Miami-Dade, Condado interior de Broward, Condado interior de Miami-Dade, Condado metropolitano de Broward y Condados metropolitanos de Miami Dade.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta noche.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
-          "pt": "* O QUÊ...Valores de índice de calor até 108 esperados.\n\n* ONDE...Condado litorâneo de Broward, Condado litorâneo de Miami Dade, extremo sul do Condado de Miami-Dade, interior do Condado de Broward, interior do Condado de Miami-Dade, Condado metropolitano de Broward e Condados metropolitanos de Miami Dade.\n\n* QUANDO...Das 11 AM desta manhã até as 7 PM EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Indices de chaleur jusqu'à 108 attendus.\n\n* OÙ...Comté côtier de Broward, comté côtier de Miami Dade, extrême sud du comté de Miami-Dade, intérieur du comté de Broward, intérieur du comté de Miami-Dade, comté métropolitain de Broward et comtés métropolitains de Miami Dade.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3963ad744989a99172e08a0eec9eb1661d304728.001.1",
-        "effectiveAt": "2026-07-20T02:14:00-04:00",
-        "expiresAt": "2026-07-20T23:00:00.000Z"
-      }
-    ]
+    "fetchedAt": "2026-07-21T13:29:23.757Z",
+    "items": []
   }
 }
