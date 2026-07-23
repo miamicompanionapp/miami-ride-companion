@@ -1,14 +1,14 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-22T13:41:44.528Z",
+    "lastUpdated": "2026-07-23T13:47:56.813Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-07-22T13:41:43.948Z",
+    "fetchedAt": "2026-07-23T13:47:56.296Z",
     "current": {
-      "temp_f": 86,
-      "feels_f": 92,
+      "temp_f": 87,
+      "feels_f": 94,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
@@ -16,30 +16,17 @@
         "fr": "Conditions actuelles"
       },
       "humidity": 67,
-      "wind_mph": 11,
-      "rain_chance": 11,
+      "wind_mph": 8,
+      "rain_chance": 20,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-07-22",
-        "high_f": 90,
-        "low_f": 80,
-        "weathercode": 3,
-        "rain_chance": 11,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-07-23",
-        "high_f": 88,
-        "low_f": 78,
+        "high_f": 91,
+        "low_f": 79,
         "weathercode": 3,
-        "rain_chance": 33,
+        "rain_chance": 20,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,36 +36,49 @@
       },
       {
         "date": "2026-07-24",
-        "high_f": 88,
-        "low_f": 82,
-        "weathercode": 95,
-        "rain_chance": 34,
+        "high_f": 84,
+        "low_f": 76,
+        "weathercode": 82,
+        "rain_chance": 29,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-07-25",
         "high_f": 89,
-        "low_f": 84,
-        "weathercode": 95,
-        "rain_chance": 40,
+        "low_f": 79,
+        "weathercode": 80,
+        "rain_chance": 49,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-07-26",
         "high_f": 90,
-        "low_f": 76,
+        "low_f": 84,
+        "weathercode": 96,
+        "rain_chance": 83,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-07-27",
+        "high_f": 87,
+        "low_f": 83,
         "weathercode": 95,
-        "rain_chance": 73,
+        "rain_chance": 60,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -90,147 +90,147 @@
     "hourly": [
       {
         "hour": "09:00",
-        "temp_f": 85,
+        "temp_f": 86,
         "weathercode": 0,
-        "rain_chance": 5
+        "rain_chance": 2
       },
       {
         "hour": "10:00",
         "temp_f": 87,
         "weathercode": 0,
-        "rain_chance": 7
+        "rain_chance": 5
       },
       {
         "hour": "11:00",
-        "temp_f": 87,
+        "temp_f": 89,
         "weathercode": 1,
-        "rain_chance": 3
+        "rain_chance": 20
       },
       {
         "hour": "12:00",
         "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 1,
+        "rain_chance": 14
       },
       {
         "hour": "13:00",
-        "temp_f": 90,
+        "temp_f": 88,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 13
       },
       {
         "hour": "14:00",
-        "temp_f": 90,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 89,
+        "weathercode": 0,
+        "rain_chance": 6
       },
       {
         "hour": "15:00",
-        "temp_f": 90,
-        "weathercode": 1,
-        "rain_chance": 4
+        "temp_f": 91,
+        "weathercode": 0,
+        "rain_chance": 10
       },
       {
         "hour": "16:00",
-        "temp_f": 90,
-        "weathercode": 3,
-        "rain_chance": 2
+        "temp_f": 91,
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "17:00",
-        "temp_f": 89,
+        "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 7
       },
       {
         "hour": "18:00",
         "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 1,
+        "rain_chance": 10
       },
       {
         "hour": "19:00",
         "temp_f": 87,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 6
       },
       {
         "hour": "20:00",
         "temp_f": 85,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 5
       },
       {
         "hour": "21:00",
-        "temp_f": 83,
+        "temp_f": 85,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 5
       },
       {
         "hour": "22:00",
-        "temp_f": 82,
+        "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 8
       },
       {
         "hour": "23:00",
-        "temp_f": 82,
+        "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 16
       },
       {
         "hour": "00:00",
-        "temp_f": 81,
+        "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 16
       },
       {
         "hour": "01:00",
         "temp_f": 81,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 13
       },
       {
         "hour": "02:00",
-        "temp_f": 80,
+        "temp_f": 81,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 11
       },
       {
         "hour": "03:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 80,
+        "weathercode": 1,
+        "rain_chance": 11
       },
       {
         "hour": "04:00",
         "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 3
+        "weathercode": 3,
+        "rain_chance": 17
       },
       {
         "hour": "05:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 3
+        "temp_f": 76,
+        "weathercode": 82,
+        "rain_chance": 26
       },
       {
         "hour": "06:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 29
       },
       {
         "hour": "07:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 21
       },
       {
         "hour": "08:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 21
       }
     ]
   },
@@ -2661,31 +2661,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1784379876407_1x0g",
-        "title": {
-          "en": "Storytime with Miss Penny at the Palm Beach Zoo 7/22/26",
-          "es": "Cuentacuentos con la Señorita Penny en el Zoológico de Palm Beach 7/22/26",
-          "pt": "Hora do Conto com Miss Penny no Zoológico de Palm Beach 7/22/26",
-          "fr": "Heure du Conte avec Miss Penny au Zoo de Palm Beach 7/22/26"
-        },
-        "date": "2026-07-22",
-        "venue": "The Palm Beach Zoo",
-        "address": "301 Summit Blvd, West Palm Beach, Florida, 33405",
-        "url": "https://www.soulofmiami.org/2026/07/17/storytime-with-miss-penny-at-the-palm-beach-zoo-7-22-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/StoryTimeWithMissPenny_Eventbrite_1-350x175.png",
-        "description": {
-          "en": "Get ready for a morning of stories, smiles, and sloths at",
-          "es": "Prepárate para una mañana de historias, sonrisas y perezosos en",
-          "pt": "Prepare-se para uma manhã de histórias, sorrisos e preguiças em",
-          "fr": "Préparez-vous pour une matinée d'histoires, de sourires et de paresseux à"
-        },
-        "lat": 26.6658513,
-        "lng": -80.0676482,
-        "category": "community"
-      },
-      {
         "id": "rss_1784379876407_1l4i",
         "title": {
           "en": "Latin Jazz with Tony & The Kings 7/25/26",
@@ -2730,29 +2705,6 @@
           "es": "¡La Muñeca de la Salsa! Power Access y la Fuente de Normandía",
           "pt": "A Boneca da Salsa! Power Access e a Fonte da Normandia",
           "fr": "La Poupée de la Salsa! Power Access et la Fontaine de Normandie"
-        },
-        "category": "community"
-      },
-      {
-        "id": "rss_1784379876407_y8qy",
-        "title": {
-          "en": "“Noche Cubana” at Sazōn Cubano in Miami 7/22/26, 7/29/26, 8/5/26",
-          "es": "\"Noche Cubana\" en Sazōn Cubano en Miami 7/22/26, 7/29/26, 8/5/26",
-          "pt": "\"Noche Cubana\" no Sazōn Cubano em Miami 7/22/26, 7/29/26, 8/5/26",
-          "fr": "\"Noche Cubana\" au Sazōn Cubano à Miami 7/22/26, 7/29/26, 8/5/26"
-        },
-        "date": "2026-07-22",
-        "venue": "Sazōn Cubano 7305 Collins Ave, Miami Beach,, Florida, 33141",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/07/17/noche-cubana-at-sazon-cubano-in-miami-7-22-26-7-29-26-8-5-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/WhatsApp-Image-2026-06-24-at-5.54.08-PM-281x500.jpeg",
-        "description": {
-          "en": "Cubana at Sazōn Cubano is a night to dine, relax and dance! There will be special menu",
-          "es": "Cubana en Sazōn Cubano es una noche para cenar, relajarse y bailar. Habrá un menú especial",
-          "pt": "Cubana no Sazōn Cubano é uma noite para jantar, relaxar e dançar! Haverá um menu especial",
-          "fr": "Cubana au Sazōn Cubano est une soirée pour dîner, se détendre et danser ! Il y aura un menu spécial"
         },
         "category": "community"
       },
@@ -3152,32 +3104,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1784640551163_k8c6",
-        "title": {
-          "en": "Inter Miami CF vs Chicago Fire FC",
-          "es": "Inter Miami CF vs Chicago Fire FC",
-          "pt": "Inter Miami CF vs Chicago Fire FC",
-          "fr": "Inter Miami CF vs Chicago Fire FC"
-        },
-        "date": "2026-07-22",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-chicago-fire-miami-florida-07-22-2026%2Fevent%2F0D0063739DBC680D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
-          "es": "Para información sobre Suites llame al 305-428-0611. · Comienza 19:30 · Nu Stadium",
-          "pt": "Para informações sobre Suites ligue para 305-428-0611. · Começa 19:30 · Nu Stadium",
-          "fr": "Pour plus d'informations sur les Suites, appelez le 305-428-0611. · Commence 19:30 · Nu Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
         "id": "cp_1784640551809_ep0t",
         "title": {
           "en": "Summer in the City: Peace of Woodstock Band",
@@ -3252,30 +3178,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1784727687253_cnl3",
-        "title": {
-          "en": "Manoli Grand Opening — Coconut Grove 7/20/26",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "date": "2026-07-22",
-        "venue": "Manoli",
-        "address": "3540 Main Highway, Coconut Grove, Florida, 33133",
-        "url": "https://www.soulofmiami.org/2026/07/21/manoli-grand-opening-coconut-grove-7-20-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/DSC00368-350x233.jpg",
-        "description": {
-          "en": "Coconut Grove’s newest Greek dining destination, opens July 22. Led by Chef Emmanouil “Manoli” Aslanoglou, the 140-seat restaurant",
-          "es": "",
-          "pt": "",
-          "fr": ""
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1784727687253_v3tc",
         "title": {
           "en": "Monday Beach Club 7/25/26",
@@ -3302,14 +3204,118 @@
         "category": "community"
       },
       {
-        "id": "tm_1784727687859_d731",
+        "id": "rss_1784814434518_8sm0",
+        "title": {
+          "en": "Plum Market Aventura Back-to-School Celebration 8/7/26 -8/9/26",
+          "es": "Celebración de Regreso a Clases en Plum Market Aventura 7/8/26 - 9/8/26",
+          "pt": "Celebração Volta às Aulas na Plum Market Aventura 7/8/26 - 9/8/26",
+          "fr": "Célébration de la Rentrée Scolaire chez Plum Market Aventura 7/8/26 - 9/8/26"
+        },
+        "date": "2026-08-07",
+        "venue": "Plum Market",
+        "address": "21105 Biscayne Blvd, Aventura, Florida, 33160",
+        "url": "https://www.soulofmiami.org/2026/07/22/plum-market-aventura-back-to-school-celebration-8-7-26-8-9-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Plum-Market-Aventura_Stone-Fruit-Basket-350x435.jpg",
+        "description": {
+          "en": "Get everything ready for the school year at Plum Market Aventura’s Back-to-School Celebration Friday, Aug. 7, through Sunday, Aug.",
+          "es": "Prepárate para el año escolar en la Celebración de Regreso a Clases de Plum Market Aventura de viernes 7 de agosto a domingo 9 de agosto.",
+          "pt": "Prepare-se para o ano letivo na Celebração Volta às Aulas da Plum Market Aventura de sexta-feira 7 de agosto a domingo 9 de agosto.",
+          "fr": "Préparez-vous pour l'année scolaire à la Célébration de la Rentrée Scolaire chez Plum Market Aventura du vendredi 7 août au dimanche 9 août."
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9711555,
+        "lng": -80.1410709,
+        "category": "community"
+      },
+      {
+        "id": "rss_1784814434518_3xdd",
+        "title": {
+          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 7/23/26",
+          "es": "Ladies Who Lunch: Drag Show de Jueves por la Tarde 23/7/26",
+          "pt": "Ladies Who Lunch: Show de Drag de Quinta à Tarde 23/7/26",
+          "fr": "Ladies Who Lunch: Spectacle de Drag du Jeudi Après-midi 23/7/26"
+        },
+        "date": "2026-07-23",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/22/ladies-who-lunch-thursday-afternoon-drag-show-7-23-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los jueves son para los chicos que desayunan bellamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quintas-feiras são para os rapazes que fazem um brunch lindo na Palace South Beach. Junte-se a nós",
+          "fr": "Les jeudis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1784814434518_nuwr",
+        "title": {
+          "en": "Cafe Con Leche: Thursday Night Latin Drag Revue 7/23/26",
+          "es": "Café Con Leche: Revista de Drag Latino del Jueves por la Noche 23/7/26",
+          "pt": "Café Com Leite: Revista de Drag Latino de Quinta à Noite 23/7/26",
+          "fr": "Café Con Leche: Revue de Drag Latin du Jeudi Soir 23/7/26"
+        },
+        "date": "2026-07-23",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/22/cafe-con-leche-thursday-night-latin-drag-revue-7-23-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Turn up the flavor and the fantasy at Palace South Beach for Café",
+          "es": "Sube el sabor y la fantasía en Palace South Beach para Café",
+          "pt": "Aumente o sabor e a fantasia na Palace South Beach para Café",
+          "fr": "Augmentez la saveur et la fantaisie au Palace South Beach pour Café"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "community"
+      },
+      {
+        "id": "rss_1784814434518_rewm",
+        "title": {
+          "en": "Drag Madness: Friday Night Drag Cabaret 7/24/26",
+          "es": "Drag Madness: Cabaret de Drag del Viernes por la Noche 24/7/26",
+          "pt": "Drag Madness: Cabaré de Drag de Sexta à Noite 24/7/26",
+          "fr": "Drag Madness: Cabaret de Drag du Vendredi Soir 24/7/26"
+        },
+        "date": "2026-07-24",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/22/drag-madness-friday-night-drag-cabaret-7-24-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Fridays at Palace South Beach are pure chaos in the best way. Join us for",
+          "es": "Los viernes en Palace South Beach son puro caos de la mejor manera. Únete a nosotros para",
+          "pt": "Sextas-feiras na Palace South Beach são puro caos da melhor maneira. Junte-se a nós para",
+          "fr": "Les vendredis au Palace South Beach sont du pur chaos de la meilleure façon. Rejoignez-nous pour"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "community"
+      },
+      {
+        "id": "tm_1784814435029_lxzj",
         "title": {
           "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
           "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
           "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
           "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
         },
-        "date": "2026-07-22",
+        "date": "2026-07-23",
         "venue": "Mana Wynwood Convention Center",
         "address": "318 NW 23rd St, Miami, FL",
         "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
@@ -3318,14 +3324,170 @@
         "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
         "description": {
           "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneos · Familiar · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Familiar · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Familial · Commence 11:00 · Mana Wynwood Convention Center"
+          "es": "Miscelánea · Familia · Comienza a las 11:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa às 11:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence à 11h00 · Centre de Congrès Mana Wynwood"
         },
         "source": "Ticketmaster",
         "lat": 25.797998,
         "lng": -80.202062,
         "category": "arts"
+      },
+      {
+        "id": "tm_1784814435029_j1bk",
+        "title": {
+          "en": "Boogie on Wheels Family Skating",
+          "es": "Boogie on Wheels - Patinaje Familiar",
+          "pt": "Boogie on Wheels - Patinação em Família",
+          "fr": "Boogie on Wheels - Patinage en Famille"
+        },
+        "date": "2026-07-24",
+        "venue": "Charles F. Dodge City Center Pembroke Pines",
+        "address": "601 City Center Blvd, Pembroke Pines, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fboogie-on-wheels-family-skating-pembroke-pines-florida-07-24-2026%2Fevent%2F0D006482C1521272&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/9e5/167fa378-6d4c-452b-9c5d-3922ec9429e5_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Roll into the 2nd Annual Boogie on Wheels July 24! Family skate 5?7PM, Adult 21 and over Skate 8?10:30PM with DJ Sama. Tickets include skates, arcade games, contests and more. Don?t miss it. Tickets start at just $10. Grab yours now! Don't miss this family fun night at the Charles F. Dodge City Center in Pembroke Pines, FL. Visit CharlesFDodgeCityCenter.com for more information. The box office is ",
+          "es": "¡Rueda hacia el 2do Anual Boogie on Wheels el 24 de julio! Patinaje familiar 5-7PM, Patinaje para mayores de 21 años 8-10:30PM con DJ Sama. Los boletos incluyen patines, juegos arcade, concursos y más. No te lo pierdas. Los boletos comienzan en solo $10. ¡Consigue los tuyos ahora! No pierdas esta noche de diversión familiar en el Charles F. Dodge City Center en Pembroke Pines, FL. Visita CharlesFDodgeCityCenter.com para más información.",
+          "pt": "Role para o 2º Anual Boogie on Wheels em 24 de julho! Patinação em família 17h-19h, Patinação para maiores de 21 anos 20h-22h30 com DJ Sama. Os ingressos incluem patins, jogos de arcade, concursos e muito mais. Não perca. Os ingressos começam em apenas $10. Pegue os seus agora! Não perca esta noite de diversão em família no Charles F. Dodge City Center em Pembroke Pines, FL. Visite CharlesFDodgeCityCenter.com para mais informações.",
+          "fr": "Patinez pour le 2e Boogie on Wheels annuel le 24 juillet! Patinage en famille 17h-19h, Patinage pour 21 ans et plus 20h-22h30 avec DJ Sama. Les billets incluent les patins, les jeux d'arcade, les concours et bien plus. Ne le manquez pas. Les billets commencent à seulement 10 $. Obtenez les vôtres maintenant! Ne manquez pas cette soirée de plaisir en famille au Charles F. Dodge City Center à Pembroke Pines, FL. Visitez CharlesFDodgeCityCenter.com pour plus d'informations."
+        },
+        "source": "Ticketmaster",
+        "lat": 26.006998,
+        "lng": -80.281135,
+        "category": "music"
+      },
+      {
+        "id": "tm_1784814435029_6wax",
+        "title": {
+          "en": "Miami Marlins vs. San Diego Padres",
+          "es": "Miami Marlins vs. San Diego Padres",
+          "pt": "Miami Marlins vs. San Diego Padres",
+          "fr": "Miami Marlins vs. San Diego Padres"
+        },
+        "date": "2026-07-24",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qaxo&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 19:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 19:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 19h10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 19h10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1784814435029_wc8j",
+        "title": {
+          "en": "The Place To Be prior to Pour Minds Podcast",
+          "es": "The Place To Be antes del Podcast Pour Minds",
+          "pt": "The Place To Be antes do Podcast Pour Minds",
+          "fr": "The Place To Be avant le Podcast Pour Minds"
+        },
+        "date": "2026-07-24",
+        "venue": "The Place To Be at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-07-24-2026%2Fevent%2F0D00647E978F51B8&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
+          "es": "¡Este es The Place To Be! El salón exclusivo de donantes en The Parker ofrece un número limitado de boletos para la venta al público según disponibilidad. $75.00 POR PERSONA. Este club privado proporciona una experiencia ultra premium - servicio complimentario de comida y bebida en un refugio privado en la planta baja de The Parker. Disfruta de un bar abierto que sirve espíritus de primera calidad, una selección de aperitivos fríos y calientes.",
+          "pt": "Este é o The Place To Be! O exclusivo lounge para doadores no The Parker está oferecendo um número limitado de ingressos para venda ao público conforme disponibilidade. $75,00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço complimentar de comida e bebida em um refúgio privado no andar de baixo do The Parker. Aproveite um bar aberto servindo bebidas de primeira qualidade, uma seleção de aperitivos frios e quentes.",
+          "fr": "Ceci est The Place To Be! Le lounge exclusif des donateurs au The Parker offre un nombre limité de billets à la vente au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra-premium - service complimentaire de nourriture et boissons dans un refuge privé au sous-sol du The Parker. Profitez d'un bar ouvert servant les meilleurs alcools, une sélection d'amuse-bouches chauds et froids."
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1784814435029_2rhs",
+        "title": {
+          "en": "The Haller Club prior to Pour Minds Podcast",
+          "es": "The Haller Club antes del Podcast Pour Minds",
+          "pt": "The Haller Club antes do Podcast Pour Minds",
+          "fr": "The Haller Club avant le Podcast Pour Minds"
+        },
+        "date": "2026-07-24",
+        "venue": "The Haller Club at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-pour-fort-lauderdale-florida-07-24-2026%2Fevent%2F0D00647E971B5107&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
+          "es": "Mejora tu experiencia en The Parker con The Haller Club. Este salón premium completamente nuevo, con su elegante diseño retro, presenta un amplio bar y abundantes asientos. Por un precio todo incluido, tu entrada a The Haller Club ofrece uso exclusivo una hora antes de la función y durante el intermedio (si está programado), refrescos sin cargo, cerveza premium y vino, café y té.",
+          "pt": "Aprimore sua experiência no The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um bar espaçoso e amplos assentos. Por um preço tudo incluído, sua admissão ao The Haller Club oferece uso exclusivo uma hora antes do show e durante o intervalo (quando programado), bebidas não alcoólicas cortesia, cerveja premium e vinho, café e chá.",
+          "fr": "Améliorez votre expérience au The Parker avec The Haller Club. Ce nouveau lounge premium, avec son design rétro élégant, dispose d'un bar spacieux et de nombreux sièges. Pour un prix tout compris, votre admission au The Haller Club offre l'usage exclusif une heure avant le spectacle et pendant l'intermission (si prévue), boissons gazeuses complimentaires, bière premium et vin, café et thé."
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1784814435029_iqdt",
+        "title": {
+          "en": "Pour Minds Podcast: Still Sippin' Tour",
+          "es": "Podcast Pour Minds: Still Sippin' Tour",
+          "pt": "Podcast Pour Minds: Still Sippin' Tour",
+          "fr": "Podcast Pour Minds: Still Sippin' Tour"
+        },
+        "date": "2026-07-24",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpour-minds-podcast-still-sippin-tour-ft-lauderdale-florida-07-24-2026%2Fevent%2F0D00647E953B4ED7&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/3b9/9dc97290-3f11-44c7-8009-758a9e0b63b9_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Houstonians turned ATL residents, Drea Nicole and Lex P are best friends and cohosts of the Pour Minds podcast, where they share unfiltered conversations on relationships, music, and navigating life in your 30s. Since launching in 2018, the show has grown to nearly 200K subscribers and a fan base of over 500K, fueled by their authenticity and real talk. They've appeared on major platforms includin",
+          "es": "Houstonians convertidos en residentes de ATL, Drea Nicole y Lex P son mejores amigas y coanfitrionas del podcast Pour Minds, donde comparten conversaciones sin filtro sobre relaciones, música y navegación por la vida en tus 30 años. Desde su lanzamiento en 2018, el programa ha crecido a casi 200K suscriptores y una base de fans de más de 500K, impulsada por su autenticidad y sinceridad. Han aparecido en plataformas principales.",
+          "pt": "Houstonians transformados em residentes de ATL, Drea Nicole e Lex P são melhores amigas e coanfitriãs do podcast Pour Minds, onde compartilham conversas sem filtro sobre relacionamentos, música e navegação pela vida aos 30 anos. Desde seu lançamento em 2018, o programa cresceu para quase 200K inscritos e uma base de fãs de mais de 500K, alimentada por sua autenticidade e fala honesta. Eles apareceram em plataformas principais.",
+          "fr": "Des Houstonians devenues résidentes d'ATL, Drea Nicole et Lex P sont les meilleures amies et coanimes du podcast Pour Minds, où elles partagent des conversations sans filtre sur les relations, la musique et la navigation dans la vie dans la trentaine. Depuis son lancement en 2018, l'émission a connu une croissance de près de 200K abonnés et d'une base de fans de plus de 500K, alimentée par leur authenticité et leur franchise. Elles sont apparues sur les principales plateformes."
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1784814435029_mddx",
+        "title": {
+          "en": "Friday Night Live - Improv Comedy Miami Show",
+          "es": "Viernes Noche en Vivo - Show de Comedia de Improvisación en Miami",
+          "pt": "Sexta à Noite ao Vivo - Show de Comédia de Improvisação em Miami",
+          "fr": "Vendredi Soir en Direct - Spectacle de Comédie d'Improvisation à Miami"
+        },
+        "date": "2026-07-24",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897613&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
+          "es": "¡Viernes Noche en Vivo! - Comedia de Improvisación en Miami Show. Es la combinación especial de JTF de improvisación de corta y larga duración. Disfruta mientras nuestro elenco ganador de premios te trae una improvisación fantástica perfecta para tu noche de viernes... ¡EN VIVO! Nuestros shows a menudo se describen como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway combinado con SNL con mucha interacción divertida con la audiencia en el camino. Ven y sé parte de",
+          "pt": "Sexta à Noite ao Vivo! - Comédia de Improvisação em Miami Show. É a combinação especial da JTF de improvisação em forma curta e longa. Aproveite enquanto nosso elenco premiado traz para você uma improvisação fantástica perfeita para sua noite de sexta... AO VIVO! Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense nisso como Whose Line is It Anyway encontra SNL com muita interação divertida com o público. Venha fazer parte d",
+          "fr": "Vendredi Soir en Direct ! - Comédie d'Improvisation à Miami Show. C'est la combinaison spéciale de JTF d'improvisation de courte et longue durée. Profitez pendant que notre troupe primée vous apporte une improvisation fantastique parfaite pour votre vendredi soir... EN DIRECT ! Nos spectacles sont souvent décrits comme une comédie improvisée rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction amusante avec le public en chemin. Venez en faire partie d"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
       }
     ]
   },
@@ -4229,7 +4391,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-07-22T13:41:43.949Z",
+    "fetchedAt": "2026-07-23T13:47:56.297Z",
     "items": []
   }
 }
