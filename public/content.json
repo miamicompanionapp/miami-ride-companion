@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-25T13:15:50.774Z",
+    "lastUpdated": "2026-07-26T13:11:12.762Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-07-25T13:15:50.139Z",
+    "fetchedAt": "2026-07-26T13:11:12.081Z",
     "current": {
       "temp_f": 85,
-      "feels_f": 96,
+      "feels_f": 98,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
-      "wind_mph": 6,
-      "rain_chance": 17,
-      "weathercode": 1
+      "humidity": 83,
+      "wind_mph": 2,
+      "rain_chance": 44,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-07-25",
-        "high_f": 89,
-        "low_f": 80,
-        "weathercode": 51,
-        "rain_chance": 17,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
         "date": "2026-07-26",
-        "high_f": 90,
-        "low_f": 77,
-        "weathercode": 65,
-        "rain_chance": 79,
+        "high_f": 89,
+        "low_f": 76,
+        "weathercode": 82,
+        "rain_chance": 44,
         "description": {
-          "en": "Heavy rain",
-          "es": "Lluvia intensa",
-          "pt": "Chuva forte",
-          "fr": "Pluie forte"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-07-27",
-        "high_f": 90,
-        "low_f": 79,
-        "weathercode": 95,
-        "rain_chance": 74,
+        "high_f": 88,
+        "low_f": 76,
+        "weathercode": 3,
+        "rain_chance": 61,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-07-28",
-        "high_f": 90,
-        "low_f": 83,
+        "high_f": 92,
+        "low_f": 78,
         "weathercode": 95,
-        "rain_chance": 70,
+        "rain_chance": 51,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -77,160 +64,173 @@
         "date": "2026-07-29",
         "high_f": 95,
         "low_f": 83,
-        "weathercode": 51,
-        "rain_chance": 32,
+        "weathercode": 3,
+        "rain_chance": 18,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
+      },
+      {
+        "date": "2026-07-30",
+        "high_f": 96,
+        "low_f": 84,
+        "weathercode": 3,
+        "rain_chance": 19,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       }
     ],
     "hourly": [
       {
         "hour": "09:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 5
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "10:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "11:00",
-        "temp_f": 81,
-        "weathercode": 51,
-        "rain_chance": 10
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 3
       },
       {
         "hour": "12:00",
-        "temp_f": 85,
+        "temp_f": 88,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 6
       },
       {
         "hour": "13:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 12
+        "temp_f": 89,
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "14:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 14
+        "temp_f": 82,
+        "weathercode": 82,
+        "rain_chance": 27
       },
       {
         "hour": "15:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 15
+        "temp_f": 76,
+        "weathercode": 65,
+        "rain_chance": 41
       },
       {
         "hour": "16:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 16
+        "temp_f": 77,
+        "weathercode": 55,
+        "rain_chance": 44
       },
       {
         "hour": "17:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 17
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 29
       },
       {
         "hour": "18:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 17
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 25
       },
       {
         "hour": "19:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 13
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 20
       },
       {
         "hour": "20:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 11
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 14
       },
       {
         "hour": "21:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 13
+        "temp_f": 81,
+        "weathercode": 2,
+        "rain_chance": 18
       },
       {
         "hour": "22:00",
         "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 10
+        "weathercode": 2,
+        "rain_chance": 16
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 6
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 9
       },
       {
         "hour": "00:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 8
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "01:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 7
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "02:00",
         "temp_f": 78,
         "weathercode": 0,
-        "rain_chance": 6
+        "rain_chance": 10
       },
       {
         "hour": "03:00",
         "temp_f": 78,
-        "weathercode": 1,
-        "rain_chance": 4
+        "weathercode": 2,
+        "rain_chance": 8
       },
       {
         "hour": "04:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 4
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 10
       },
       {
         "hour": "05:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 7
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "06:00",
         "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 5
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "08:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 3
+        "temp_f": 79,
+        "weathercode": 2,
+        "rain_chance": 9
       }
     ]
   },
@@ -1392,156 +1392,6 @@
     ],
     "events": [
       {
-        "id": "tm_1782352258062_lm8k",
-        "title": {
-          "en": "The Chili Poppers with American Idiots",
-          "es": "The Chili Poppers con American Idiots",
-          "pt": "The Chili Poppers com American Idiots",
-          "fr": "The Chili Poppers avec American Idiots"
-        },
-        "date": "2026-07-25",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-chili-poppers-with-american-idiots-ft-lauderdale-florida-07-25-2026%2Fevent%2F0D0064BAD2781A23&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/76b/e56eb30d-b711-4ef2-833b-fc56f4b7276b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Chili Poppers - A Tribute to Red Hot Chili Peppers will be coming to Revolution Live on Saturday, July 25th with special guests American Idiots - A Tribute to Green Day. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "The Chili Poppers - A Tribute to Red Hot Chili Peppers llegará a Revolution Live el sábado 25 de julio con invitados especiales American Idiots - A Tribute to Green Day. Este evento es para Todas las Edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
-          "pt": "The Chili Poppers - A Tribute to Red Hot Chili Peppers estará em Revolution Live no sábado, 25 de julho com convidados especiais American Idiots - A Tribute to Green Day. Este evento é para Todas as Idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "The Chili Poppers - A Tribute to Red Hot Chili Peppers viendra à Revolution Live le samedi 25 juillet avec invités spéciaux American Idiots - A Tribute to Green Day. Cet événement est pour Tous les Âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 19:00 · Revolution Live"
-        },
-        "lat": 26.121094,
-        "lng": -80.146162,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782352258062_hpah",
-        "title": {
-          "en": "Reparton Fest",
-          "es": "Reparton Fest",
-          "pt": "Reparton Fest",
-          "fr": "Reparton Fest"
-        },
-        "date": "2026-07-25",
-        "venue": "Doral Amphitheater at Doral Central Park",
-        "address": "3005 NW 92nd Avenue, Doral, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Freparton-fest-doral-florida-07-25-2026%2Fevent%2F0D0064C8D385BA59&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/838/507dd585-3629-433b-be63-cff6bd7b1838_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 19:00 · Doral Amphitheater at Doral Central Park",
-          "es": "Música · Latino · Comienza 19:00 · Anfiteatro Doral en Doral Central Park",
-          "pt": "Música · Latino · Começa 19:00 · Anfiteatro Doral no Doral Central Park",
-          "fr": "Musique · Latin · Commence 19:00 · Amphithéâtre Doral au Doral Central Park"
-        },
-        "lat": 25.8023,
-        "lng": -80.34397,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782352258062_3y8p",
-        "title": {
-          "en": "Disturbed",
-          "es": "Disturbed",
-          "pt": "Disturbed",
-          "fr": "Disturbed"
-        },
-        "date": "2026-07-25",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdisturbed-hollywood-florida-07-25-2026%2Fevent%2F0D0064718DB65A41&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3a4/ad94c45b-ab0d-47c3-9bef-a93aa6d983a4_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Metal · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Metal · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · Metal · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · Metal · Commence 20:00 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782352258062_l1xt",
-        "title": {
-          "en": "Trap Orchestra Live!",
-          "es": "¡Trap Orchestra Live!",
-          "pt": "Trap Orchestra Live!",
-          "fr": "Trap Orchestra Live!"
-        },
-        "date": "2026-07-25",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftrap-orchestra-live-ft-lauderdale-florida-07-25-2026%2Fevent%2F0D00648DA38973EB&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/242/4f9ceb2a-a078-48fc-a47d-3efd3858a242_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Prepare to experience trap music like never before! Trap Orchestra Live! is an electrifying fusion of classical instrumentation and the hard-hitting beats of your favorite trap songs. Join us for a unique trap concert as one of the best bands takes the city on an unforgettable musical journey! Come out for a night where elegance meets energy, as some of the South's most talented instrumentalists r",
-          "es": "¡Prepárate para experimentar la música trap como nunca antes! Trap Orchestra Live! es una fusión electrizante de instrumentación clásica y los ritmos contundentes de tus canciones de trap favoritas. ¡Únete a nosotros para un concierto de trap único mientras una de las mejores bandas lleva la ciudad en un viaje musical inolvidable! ¡Ven a una noche donde la elegancia se encuentra con la energía, con algunos de los instrumentalistas más talentosos del Sur!",
-          "pt": "Prepare-se para experimentar a música trap como nunca antes! Trap Orchestra Live! é uma fusão eletrizante de instrumentação clássica e os ritmos marcantes de suas músicas de trap favoritas. Junte-se a nós para um concerto de trap único enquanto uma das melhores bandas leva a cidade em uma jornada musical inesquecível! Venha para uma noite onde a elegância encontra a energia, com alguns dos instrumentalistas mais talentosos do Sul!",
-          "fr": "Préparez-vous à découvrir la musique trap comme jamais auparavant! Trap Orchestra Live! est une fusion électrisante d'instrumentation classique et des rythmes percutants de vos chansons trap préférées. Rejoignez-nous pour un concert de trap unique alors que l'un des meilleurs orchestres vous emmène dans un voyage musical inoubliable! Venez pour une soirée où l'élégance rencontre l'énergie, avec certains des instrumentalistes les plus talentueux du Sud!"
-        },
-        "lat": 26.1193,
-        "lng": -80.149426,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782352258062_6dbh",
-        "title": {
-          "en": "Emo Night Brooklyn in Miami",
-          "es": "Emo Night Brooklyn en Miami",
-          "pt": "Emo Night Brooklyn em Miami",
-          "fr": "Emo Night Brooklyn à Miami"
-        },
-        "date": "2026-07-25",
-        "venue": "Lincoln's Beard",
-        "address": "7360 SW 41st St. , Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Femo-night-brooklyn-in-miami-lincolns-beard-tickets%2F14961863&utm_medium=affiliate",
-        "free": true,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/bda/204a558e-2376-42c5-a169-37195950ebda_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 20:00 · Lincoln's Beard",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de boleto que no pueda presentar identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 20:00 · Lincoln's Beard",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 20:00 · Lincoln's Beard",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence 20:00 · Lincoln's Beard"
-        },
-        "lat": 25.7321134,
-        "lng": -80.3143626,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782352258062_q6ez",
-        "title": {
-          "en": "IAN ASHER",
-          "es": "IAN ASHER",
-          "pt": "IAN ASHER",
-          "fr": "IAN ASHER"
-        },
-        "date": "2026-07-25",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fian-asher-liv-nightclub-miami-tickets%2F14856733&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/20a/f7da40f2-f6bb-40bb-828f-0c6ab0a6620a_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de boleto que no pueda presentar identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "lat": 25.817805,
-        "lng": -80.122143,
-        "category": "music"
-      },
-      {
         "id": "tm_1782352258062_hk35",
         "title": {
           "en": "Vishal-Sheykhar",
@@ -1765,31 +1615,6 @@
         "lat": 26.133662,
         "lng": -80.134063,
         "category": "music"
-      },
-      {
-        "id": "rss_1782653266783_qsyq",
-        "title": {
-          "en": "Stiltsville & Key Biscayne Sunset Cruise 7/25/26",
-          "es": "Crucero al Atardecer por Stiltsville y Key Biscayne 7/25/26",
-          "pt": "Cruzeiro do Pôr do Sol por Stiltsville e Key Biscayne 7/25/26",
-          "fr": "Croisière au Coucher de Soleil à Stiltsville et Key Biscayne 7/25/26"
-        },
-        "date": "2026-07-25",
-        "venue": "Island Queen Docks at Bayside Marketplace",
-        "address": "401 Biscayne Blvd, Miami, Florida, 33132",
-        "url": "https://www.soulofmiami.org/2026/06/27/stiltsville-key-biscayne-sunset-cruise-7-25-26/",
-        "free": false,
-        "price": "$95",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/06/Stiltsville-Key-Biscayne-Sunset-Cruise-350x175.jpeg",
-        "description": {
-          "en": "Join Museum of Miami’s Resident Historian, Dr. Paul George, as he recounts the history",
-          "es": "Únete al Historiador Residente del Museo de Miami, Dr. Paul George, mientras relata la historia",
-          "pt": "Junte-se ao Historiador Residente do Museu de Miami, Dr. Paul George, enquanto ele relata a história",
-          "fr": "Rejoignez l'Historienne Résident du Musée de Miami, le Dr Paul George, alors qu'il raconte l'histoire"
-        },
-        "lat": 25.7782365,
-        "lng": -80.1871026,
-        "category": "community"
       },
       {
         "id": "tm_1782653267512_m1p0",
@@ -2340,31 +2165,6 @@
         "lng": -80.2109577
       },
       {
-        "id": "rss_1784122040544_3a3j",
-        "title": {
-          "en": "Christmas in July 7/25/26, 7/26/26",
-          "es": "Navidad en Julio 7/25/26, 7/26/26",
-          "pt": "Natal em Julho 7/25/26, 7/26/26",
-          "fr": "Noël en Juillet 7/25/26, 7/26/26"
-        },
-        "date": "2026-07-25",
-        "venue": "Miami Children’s Museum",
-        "address": "980 MacArthur Cswy, Miami, Florida, 33132",
-        "url": "https://www.soulofmiami.org/2026/07/14/christmas-in-july-7-25-26-7-26-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/IMG_2609-350x227.jpeg",
-        "description": {
-          "en": "Admission- $26 Florida Admission- $20 Get merry in Miami and celebrate Christmas with a tropical twist! Make summertime snow, take",
-          "es": "Admisión- $26 Admisión Florida- $20 ¡Ponte alegre en Miami y celebra la Navidad con un toque tropical! Haz nieve veraniega, toma",
-          "pt": "Admissão- $26 Admissão Flórida- $20 Fique alegre em Miami e celebre o Natal com um toque tropical! Faça neve de verão, pegue",
-          "fr": "Admission- $26 Admission Floride- $20 Soyez joyeux à Miami et célébrez Noël avec une touche tropicale! Faites de la neige d'été, prenez"
-        },
-        "lat": 25.7847781,
-        "lng": -80.1764864,
-        "category": "community"
-      },
-      {
         "id": "rss_1784122040544_ybra",
         "title": {
           "en": "Back to School Bash 8/8/26, 8/9/26",
@@ -2413,31 +2213,6 @@
         "category": "music",
         "lat": 25.86556,
         "lng": -80.193883
-      },
-      {
-        "id": "rss_1784209274228_6ybo",
-        "title": {
-          "en": "Step into Paradox After Dark 7/25/26",
-          "es": "Entra en Paradox After Dark 7/25/26",
-          "pt": "Entre no Paradox After Dark 7/25/26",
-          "fr": "Entrez dans Paradox After Dark 7/25/26"
-        },
-        "date": "2026-07-25",
-        "venue": "Paradox Museum Miami",
-        "address": "2301 N Miami Ave, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/07/15/step-into-paradox-after-dark-7-25-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Screenshot-2026-07-14-at-1.36.22-PM-350x234.png",
-        "description": {
-          "en": "into the Paradox Museum Miami on Saturday, July 25th, for a night where reality blends! Prepare to",
-          "es": "¡Entra al Museo Paradox Miami el sábado 25 de julio para una noche donde la realidad se mezcla! Prepárate para",
-          "pt": "Entre no Museu Paradox Miami no sábado, 25 de julho, para uma noite onde a realidade se mistura! Prepare-se para",
-          "fr": "Entrez au Musée Paradox Miami samedi 25 juillet pour une nuit où la réalité se mélange ! Préparez-vous à"
-        },
-        "lat": 25.7991027,
-        "lng": -80.1946258,
-        "category": "community"
       },
       {
         "id": "rss_1784209274228_u4c6",
@@ -2511,31 +2286,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1784209274228_w3se",
-        "title": {
-          "en": "Pinocho, A Real Boy 7/25/26",
-          "es": "Pinocho, Un Niño Real 7/25/26",
-          "pt": "Pinóquio, Um Menino de Verdade 7/25/26",
-          "fr": "Pinocchio, Un Vrai Garçon 7/25/26"
-        },
-        "date": "2026-07-25",
-        "venue": "Sandrell Rivers Theater",
-        "address": "6103 NW 7th Ave, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/07/15/pinocho-a-real-boy-7-25-26/",
-        "free": false,
-        "price": "$30",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Pinocchio-Social-Media-350x438.png",
-        "description": {
-          "en": "Este espectáculo para toda la familia, cuenta la historia de una marioneta que sueña con tener un corazón",
-          "es": "Este espectáculo para toda la familia cuenta la historia de una marioneta que sueña con tener un corazón",
-          "pt": "Este espetáculo para toda a família conta a história de um boneco que sonha em ter um coração",
-          "fr": "Ce spectacle pour toute la famille raconte l'histoire d'une marionnette qui rêve d'avoir un cœur"
-        },
-        "lat": 25.8315843,
-        "lng": -80.2082623,
-        "category": "community"
-      },
-      {
         "id": "rss_1784379876407_9kko",
         "title": {
           "en": "UNO Social Club 7/30/26",
@@ -2559,31 +2309,6 @@
         "lat": 25.8004231,
         "lng": -80.1939008,
         "category": "community"
-      },
-      {
-        "id": "rss_1784379876407_1l4i",
-        "title": {
-          "en": "Latin Jazz with Tony & The Kings 7/25/26",
-          "es": "Jazz Latino con Tony & The Kings 7/25/26",
-          "pt": "Jazz Latino com Tony & The Kings 7/25/26",
-          "fr": "Jazz Latino avec Tony & The Kings 7/25/26"
-        },
-        "date": "2026-07-25",
-        "venue": "Euclid Oval",
-        "address": "660 Lincoln Road, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/07/17/latin-jazz-with-tony-the-kings-7-25-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Salsa-Sunday-Summer-Series.SoBe_.2026_Cover_1920x1080px.V2-350x197.png",
-        "description": {
-          "en": "Free evening of live music, culture, and summer energy Power Access and the Lincoln Road BID",
-          "es": "Noche gratuita de música en vivo, cultura y energía veraniega Power Access y BID de Lincoln Road",
-          "pt": "Noite gratuita de música ao vivo, cultura e energia de verão Power Access e BID de Lincoln Road",
-          "fr": "Soirée gratuite de musique en direct, culture et énergie estivale Power Access et BID de Lincoln Road"
-        },
-        "lat": 25.7904399,
-        "lng": -80.1351911,
-        "category": "music"
       },
       {
         "id": "rss_1784379876407_6939",
@@ -2680,29 +2405,6 @@
         "lat": 25.9598538,
         "lng": -80.1370111,
         "category": "community"
-      },
-      {
-        "id": "rss_1784466463547_ijxx",
-        "title": {
-          "en": "The 18th Annual Miami Takeover Kickoff Standup Comedy Show – Art of Laughter 7/24/26",
-          "es": "18ª Edición de Miami Takeover Kickoff Show de Stand-up Comedy – Art of Laughter 7/24/26",
-          "pt": "18ª Edição do Miami Takeover Kickoff Show de Stand-up Comedy – Art of Laughter 7/24/26",
-          "fr": "18e Édition du Miami Takeover Kickoff Show de Stand-up Comedy – Art of Laughter 7/24/26"
-        },
-        "date": "2026-07-25",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/07/18/the-18th-annual-miami-takeover-kickoff-standup-comedy-show-art-of-laughter-7-24-26/",
-        "free": false,
-        "price": "$29",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/standup-comedians_Miami-Takeover_2026-spr-350x438.jpg",
-        "description": {
-          "en": "The Miami Takeover will kick off its four-day urban",
-          "es": "Miami Takeover iniciará su evento urbano de cuatro días",
-          "pt": "Miami Takeover iniciará seu evento urbano de quatro dias",
-          "fr": "Miami Takeover lancera son événement urbain de quatre jours"
-        },
-        "category": "comedy"
       },
       {
         "id": "tm_1784466464004_izlw",
@@ -3029,32 +2731,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1784727687253_v3tc",
-        "title": {
-          "en": "Monday Beach Club 7/25/26",
-          "es": "Monday Beach Club 7/25/26",
-          "pt": "Monday Beach Club 7/25/26",
-          "fr": "Monday Beach Club 7/25/26"
-        },
-        "date": "2026-07-25",
-        "venue": "Grand Beach Hotel",
-        "address": "4835 Collins Avenue, Miami Beach, Florida, 33140",
-        "url": "https://www.soulofmiami.org/2026/07/21/monday-beach-club-7-25-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/mondayhaircare_1784086500_3941525157325481033_1114380137474-350x438.jpg",
-        "description": {
-          "en": "MONDAY Haircare is taking over the Grand Beach Hotel Miami Beach for an exclusive one-day pop-up on Saturday the",
-          "es": "MONDAY Haircare está tomando el Grand Beach Hotel Miami Beach para un exclusivo pop-up de un día el sábado",
-          "pt": "MONDAY Haircare está tomando o Grand Beach Hotel Miami Beach para um pop-up exclusivo de um dia no sábado",
-          "fr": "MONDAY Haircare s'empare du Grand Beach Hotel Miami Beach pour un pop-up exclusif d'une journée samedi"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.8245568,
-        "lng": -80.121419,
-        "category": "community"
-      },
-      {
         "id": "rss_1784814434518_8sm0",
         "title": {
           "en": "Plum Market Aventura Back-to-School Celebration 8/7/26 -8/9/26",
@@ -3133,30 +2809,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1784899622368_u5lh",
-        "title": {
-          "en": "Sip Into the Holidays: Christmas in July at Magie this July 25th 6/25/26",
-          "es": "Navidad en Julio en Magie: Sorbos hacia las Fiestas 25/7/26",
-          "pt": "Natal em Julho na Magie: Saborear as Festas 25/7/26",
-          "fr": "Noël en Juillet chez Magie: Siroter les Fêtes 25/7/26"
-        },
-        "date": "2026-07-25",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/07/23/sip-into-the-holidays-christmas-in-july-at-magie-this-july-25th-6-25-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Screenshot-2026-07-22-at-12.15.21-PM-350x233.png",
-        "description": {
-          "en": "Sip Into the Holidays: Christmas in July at Magie this July 25th Saturday, 07/25/2026-, 06:00 pm-12:00 am Magie Wine Bar Coconut Grove and Little River Coconut Grove 3540 Main Hwy, Coconut Grove, FL 33133 and Little River 8281 NE 2ndRead More Sip Into the Holidays: Christmas in July at Magie this July 25th 6/25/26",
-          "es": "Sorbos hacia las Fiestas: Navidad en Julio en Magie el 25 de julio, sábado 07/25/2026, 6:00 pm-12:00 am, Magie Wine Bar, Coconut Grove y Little River, Coconut Grove 3540 Main Hwy, Coconut Grove, FL 33133 y Little River 8281 NE 2nd",
-          "pt": "Saborear as Festas: Natal em Julho na Magie em 25 de julho, sábado 07/25/2026, 6:00 pm-12:00 am, Magie Wine Bar, Coconut Grove e Little River, Coconut Grove 3540 Main Hwy, Coconut Grove, FL 33133 e Little River 8281 NE 2nd",
-          "fr": "Siroter les Fêtes: Noël en Juillet chez Magie le 25 juillet, samedi 07/25/2026, 6:00 pm-12:00 am, Magie Wine Bar, Coconut Grove et Little River, Coconut Grove 3540 Main Hwy, Coconut Grove, FL 33133 et Little River 8281 NE 2nd"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1784899622368_a5a0",
         "title": {
           "en": "Halfway to Mardi Gras 8/5/26",
@@ -3181,110 +2833,6 @@
         "lat": 26.1380999,
         "lng": -80.1135489,
         "category": "music"
-      },
-      {
-        "id": "tm_1784899622937_teg3",
-        "title": {
-          "en": "2slimey - (Under 14 with parent or legal guardian)",
-          "es": "2slimey - (Menores de 14 años con padre o tutor legal)",
-          "pt": "2slimey - (Menores de 14 anos com pai ou responsável legal)",
-          "fr": "2slimey - (Moins de 14 ans avec parent ou tuteur légal)"
-        },
-        "date": "2026-07-25",
-        "venue": "Midline Miami",
-        "address": "2221 NW Miami Ct, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70o4x&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 18:30 · Midline Miami",
-          "es": "Comienza a las 18:30 · Midline Miami",
-          "pt": "Começa às 18:30 · Midline Miami",
-          "fr": "Commence à 18h30 · Midline Miami"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.812599,
-        "lng": -80.205597,
-        "category": "music"
-      },
-      {
-        "id": "tm_1784899622937_p886",
-        "title": {
-          "en": "The Place To Be prior to Adam Ray",
-          "es": "The Place To Be previo a Adam Ray",
-          "pt": "The Place To Be antes de Adam Ray",
-          "fr": "The Place To Be avant Adam Ray"
-        },
-        "date": "2026-07-25",
-        "venue": "The Place To Be at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-07-25-2026%2Fevent%2F0D006330E64D5D55&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
-          "es": "¡Este es The Place To Be! El exclusivo salón de donantes en The Parker ofrece un número limitado de entradas disponibles al público según disponibilidad. $75.00 POR PERSONA. Este club privado ofrece una experiencia ultra premium - servicio complimentario de comida y bebidas en un refugio privado en el piso inferior de The Parker. Disfruta de un bar abierto con licores premium, una selección de aperitivos fríos y calientes",
-          "pt": "Este é The Place To Be! O exclusivo salão de doadores do The Parker oferece um número limitado de ingressos disponíveis ao público conforme disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço de alimentos e bebidas complimentar em um refúgio privado no andar inferior do The Parker. Desfrute de um bar aberto com destilados premium, uma seleção de aperitivos quentes e frios",
-          "fr": "Ceci est The Place To Be ! Le salon des donateurs exclusif du The Parker propose un nombre limité de billets disponibles au public selon les disponibilités. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra-premium - service complémentaire de nourriture et de boissons dans un refuge privé au rez-de-chaussée du The Parker. Profitez d'un bar ouvert servant des spiritueux premium, une sélection d'amuse-bouches chauds et froids"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
-        "id": "tm_1784899622937_urjz",
-        "title": {
-          "en": "The Haller Club prior to Adam Ray",
-          "es": "The Haller Club previo a Adam Ray",
-          "pt": "The Haller Club antes de Adam Ray",
-          "fr": "The Haller Club avant Adam Ray"
-        },
-        "date": "2026-07-25",
-        "venue": "The Haller Club at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-adam-fort-lauderdale-florida-07-25-2026%2Fevent%2F0D006330E6D15D5B&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
-          "es": "Mejora tu experiencia en The Parker con The Haller Club. Este nuevo salón premium con diseño retro elegante cuenta con un bar espacioso y amplio espacio para sentarse. Por un precio todo incluido, tu admisión a The Haller Club ofrece acceso exclusivo comenzando una hora antes de la función y durante el intermedio (cuando esté programado), refrescos complimentarios, cerveza premium y vino, café y té",
-          "pt": "Melhore sua experiência no The Parker com The Haller Club. Este novo lounge premium com design retrô elegante apresenta um bar espaçoso e amplo espaço para assentos. Por um preço tudo incluído, sua admissão ao The Haller Club oferece uso exclusivo começando uma hora antes do show e durante o intervalo (quando agendado), refrigerantes cortesia, cerveja e vinho premium, café e chá",
-          "fr": "Améliorez votre expérience au The Parker avec The Haller Club. Ce nouveau lounge premium au design rétro élégant dispose d'un bar spacieux et d'un large espace d'assise. Pour un prix tout compris, votre admission au The Haller Club offre un accès exclusif commençant une heure avant le spectacle et pendant l'entracte (le cas échéant), boissons non alcoolisées gratuites, bière et vin premium, café et thé"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
-        "id": "tm_1784899622937_axem",
-        "title": {
-          "en": "Adam Ray: WHO IS ME Tour",
-          "es": "Adam Ray: WHO IS ME Tour",
-          "pt": "Adam Ray: WHO IS ME Tour",
-          "fr": "Adam Ray: WHO IS ME Tour"
-        },
-        "date": "2026-07-25",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fadam-ray-who-is-me-tour-ft-lauderdale-florida-07-25-2026%2Fevent%2F0D006330B60D28FE&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/8d6/a01d8edf-195c-4361-b3ce-7836d62f08d6_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "With over 10 million views online, Dr. Phil LIVE has become one of the most fun things to see in comedy. From comedian/actor Adam Ray (Curb, The Barbie Movie, MadTV, Hacks, Pam & Tommy, The Heat,) the live show provides a wild late night feel with crowd interactions, standup, huge celebrity guests, surprise characters, and hilarious moments you can't see anywhere else. This show has adult language",
-          "es": "Con más de 10 millones de vistas en línea, Dr. Phil LIVE se ha convertido en una de las cosas más divertidas para ver en comedia. Del comediante/actor Adam Ray (Curb, The Barbie Movie, MadTV, Hacks, Pam & Tommy, The Heat), el show en vivo proporciona una atmósfera salvaje de fin de noche con interacciones con la audiencia, stand-up, celebridades invitadas enormes, personajes sorpresa y momentos hilarantes que no puedes ver en ningún otro lugar. Este show contiene lenguaje para adultos",
-          "pt": "Com mais de 10 milhões de visualizações online, Dr. Phil LIVE se tornou uma das coisas mais divertidas para se ver em comédia. Do comediante/ator Adam Ray (Curb, The Barbie Movie, MadTV, Hacks, Pam & Tommy, The Heat), o show ao vivo oferece uma atmosfera selvagem de final de noite com interações com o público, stand-up, celebridades convidadas enormes, personagens surpresa e momentos hilariantes que você não pode ver em nenhum outro lugar. Este show contém linguagem adulta",
-          "fr": "Avec plus de 10 millions de vues en ligne, Dr. Phil LIVE est devenu l'une des choses les plus amusantes à voir en comédie. Du comédien/acteur Adam Ray (Curb, The Barbie Movie, MadTV, Hacks, Pam & Tommy, The Heat), le spectacle en direct offre une atmosphère sauvage de fin de soirée avec des interactions avec le public, du stand-up, d'énormes célébrités invitées, des personnages surprises et des moments hilarants que vous ne pouvez voir nulle part ailleurs. Ce spectacle contient un langage adulte"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.134246,
-        "lng": -80.136172
       },
       {
         "id": "rss_1784985325001_cpsx",
@@ -3339,84 +2887,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1784985325503_h4t3",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-07-25",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Varios · Familia · Comienza 10:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1784985325503_8meh",
-        "title": {
-          "en": "Miami Marlins vs. San Diego Padres",
-          "es": "Miami Marlins vs. San Diego Padres",
-          "pt": "Miami Marlins vs. San Diego Padres",
-          "fr": "Miami Marlins vs. San Diego Padres"
-        },
-        "date": "2026-07-25",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qax3&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 16:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 16:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 16:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 16:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1784985325503_1vv2",
-        "title": {
-          "en": "Cheap Trills Musical Improv",
-          "es": "Improvisación Musical Cheap Trills",
-          "pt": "Improvisação Musical Cheap Trills",
-          "fr": "Improvisation Musicale Cheap Trills"
-        },
-        "date": "2026-07-25",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheap-trills-musical-improv-just-the-funny-tickets%2F14897593&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Cheap Trills Musical ImprovNothing beats a Cheap Trills show! Its a musical. Its a variety show. Its improv comedy. Its all of that and much more! Join the talented cast of Just The Funny and be prepared for a wild, hilarious ride.Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as close as possible, but may have to split large",
-          "es": "¡Nada supera un show de Cheap Trills! Es un musical. Es un show de variedades. Es comedia improvisada. ¡Es todo eso y mucho más! Únete al talentoso elenco de Just The Funny y prepárate para un viaje salvaje e hilarante. Los boletos son POR PERSONA. Sentaremos a los grupos juntos en mesas. Haremos todo lo posible para sentar a grupos grandes lo más cerca posible, pero podríamos tener que dividir grupos grandes",
-          "pt": "Nada supera um show de Cheap Trills! É um musical. É um show de variedades. É comédia de improvisação. É tudo isso e muito mais! Junte-se ao elenco talentoso de Just The Funny e prepare-se para um passeio selvagem e hilariante. Os ingressos são POR PESSOA. Sentaremos os grupos juntos em mesas. Faremos o possível para sentar grupos grandes o mais perto possível, mas podemos ter que dividir grupos grandes",
-          "fr": "Rien ne vaut un spectacle Cheap Trills ! C'est une comédie musicale. C'est un spectacle de variétés. C'est de la comédie d'improvisation. C'est tout cela et bien plus encore ! Rejoignez le cast talentueux de Just The Funny et préparez-vous pour un voyage sauvage et hilarant. Les billets sont PAR PERSONNE. Nous placerons les groupes ensemble à des tables. Nous ferons de notre mieux pour asseoir les grands groupes aussi près que possible, mais nous devrons peut-être diviser les grands groupes"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
         "id": "tm_1784985325503_1eg1",
         "title": {
           "en": "Miami Marlins vs San Diego Padres: Javier Sanoja Gold Glove Bobblehead presented by LEON Medical Centers",
@@ -3441,6 +2911,368 @@
         "category": "sports",
         "lat": 25.778057,
         "lng": -80.219406
+      },
+      {
+        "id": "rss_1785071436251_bm2q",
+        "title": {
+          "en": "Join the 10th Annual WBHI Pink Walk—5K Run and Walk at Its New Home at Kendall Campus—Miami Dade College 9/20/26",
+          "es": "Únete a la 10ª Caminata Rosa Anual WBHI—Carrera de 5K y Caminata en su Nueva Sede en el Campus Kendall—Miami Dade College 9/20/26",
+          "pt": "Participe da 10ª Caminhada Rosa Anual WBHI—Corrida de 5K e Caminhada em sua Nova Sede no Campus Kendall—Miami Dade College 9/20/26",
+          "fr": "Rejoignez la 10e Marche Rose Annuelle WBHI—Course de 5K et Marche à son Nouveau Siège au Campus Kendall—Miami Dade College 9/20/26"
+        },
+        "date": "2026-09-20",
+        "venue": "Kendall Campus-Miami Dade College",
+        "address": "11011 SW 104th Street, Miami, Florida, 33176",
+        "url": "https://www.soulofmiami.org/2026/07/25/join-the-10th-annual-wbhi-pink-walk-5k-run-and-walk-at-its-new-home-at-kendall-campus-miami-dade-college-9-20-26/",
+        "free": false,
+        "price": "$35",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/PW2026-full_logoanddate_master-350x270.jpg",
+        "description": {
+          "en": "Join the 10th Annual WBHI Pink Walk—5K Run and Walk at Its New Home at Kendall Campus—Miami Dade College Sunday, 09/20/2026-, 06:00 am-10:00 am Kendall Campus-Miami Dade College 11011 SW 104th Street, Miami, Florida, 33176 Website Cost: $35 Run, walkRead More Join the 10th Annual WBHI Pink Walk—5K Run and Walk at Its New Home at Kendall Campus—Miami Dade College 9/20/26",
+          "es": "Únete a la 10ª Caminata Rosa Anual WBHI—Carrera de 5K y Caminata en su Nueva Sede en el Campus Kendall—Miami Dade College domingo, 20/09/2026, 06:00 am-10:00 am Campus Kendall-Miami Dade College 11011 SW 104th Street, Miami, Florida, 33176 Sitio Web Costo: $35 Carrera, caminata",
+          "pt": "Participe da 10ª Caminhada Rosa Anual WBHI—Corrida de 5K e Caminhada em sua Nova Sede no Campus Kendall—Miami Dade College domingo, 20/09/2026, 06:00 am-10:00 am Campus Kendall-Miami Dade College 11011 SW 104th Street, Miami, Florida, 33176 Site Custo: $35 Corrida, caminhada",
+          "fr": "Rejoignez la 10e Marche Rose Annuelle WBHI—Course de 5K et Marche à son Nouveau Siège au Campus Kendall—Miami Dade College dimanche, 20/09/2026, 06:00 am-10:00 am Campus Kendall-Miami Dade College 11011 SW 104th Street, Miami, Florida, 33176 Site Web Coût: $35 Course, marche"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.674423,
+        "lng": -80.3740442,
+        "category": "sports"
+      },
+      {
+        "id": "rss_1785071436251_qfc8",
+        "title": {
+          "en": "The Moth StorySLAM: Schooled 8/13/26",
+          "es": "The Moth StorySLAM: Schooled 8/13/26",
+          "pt": "The Moth StorySLAM: Schooled 8/13/26",
+          "fr": "The Moth StorySLAM: Schooled 8/13/26"
+        },
+        "date": "2026-08-13",
+        "venue": "Sandrell Rivers Theater",
+        "address": "6103 NW 7th Ave, Miami, Florida, 33127",
+        "url": "https://www.soulofmiami.org/2026/07/25/the-moth-storyslam-schooled-8-13-26/",
+        "free": false,
+        "price": "$21",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/The-Moth-Soul-of-Miami-350x350.png",
+        "description": {
+          "en": "Prepare a five-minute story about the lessons that shaped you. Wisdom passed down by elders, gurus, and sages.",
+          "es": "Prepara una historia de cinco minutos sobre las lecciones que te formaron. Sabiduría transmitida por ancianos, gurús y sabios.",
+          "pt": "Prepare uma história de cinco minutos sobre as lições que o moldaram. Sabedoria transmitida por anciãos, gurus e sábios.",
+          "fr": "Préparez une histoire de cinq minutes sur les leçons qui vous ont formé. La sagesse transmise par les aînés, les gourous et les sages."
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8315843,
+        "lng": -80.2082623,
+        "category": "community"
+      },
+      {
+        "id": "rss_1785071436251_cbrb",
+        "title": {
+          "en": "La Oveja Blanca 8/22/26",
+          "es": "La Oveja Blanca 8/22/26",
+          "pt": "A Ovelha Branca 8/22/26",
+          "fr": "La Brebis Blanche 8/22/26"
+        },
+        "date": "2026-08-22",
+        "venue": "Sandrell Rivers Theater",
+        "address": "6103 NW 7th Ave, Miami, Florida, 33127",
+        "url": "https://www.soulofmiami.org/2026/07/25/la-oveja-blanca-8-22-26/",
+        "free": false,
+        "price": "$30",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Soul-Miami-1200-x-1200-px-350x350.png",
+        "description": {
+          "en": "La Sala Black Box del Teatro Sandrell Rivers es un espacio hermoso e íntimo, donde cada asiento ofrece una",
+          "es": "La Sala Black Box del Teatro Sandrell Rivers es un espacio hermoso e íntimo, donde cada asiento ofrece una",
+          "pt": "A Black Box Room do Teatro Sandrell Rivers é um espaço lindo e íntimo, onde cada assento oferece uma",
+          "fr": "La Salle Black Box du Teatro Sandrell Rivers est un espace magnifique et intime, où chaque siège offre une"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8315843,
+        "lng": -80.2082623,
+        "category": "community"
+      },
+      {
+        "id": "rss_1785071436251_isuh",
+        "title": {
+          "en": "Alzheimers Mall Crawl 8/15/26",
+          "es": "Carrera por los Centros Comerciales Alzheimer 8/15/26",
+          "pt": "Corrida pelos Shoppings Alzheimer 8/15/26",
+          "fr": "Marche dans les Centres Commerciaux Alzheimer 8/15/26"
+        },
+        "date": "2026-08-15",
+        "venue": "Miami International Mall",
+        "address": "1455 NW 107 Avenue, Doral, Florida, 33172",
+        "url": "https://www.soulofmiami.org/2026/07/25/alzheimers-mall-crawl-8-15-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Join Us for the Miami International Mall Alzheimer’s Mall Crawl Saturday, August 15 | 9:00 AM – 12:00 PM",
+          "es": "Únete a nosotros en la Carrera por los Centros Comerciales de Miami International Mall para el Alzheimer sábado, 15 de agosto | 9:00 AM – 12:00 PM",
+          "pt": "Junte-se a nós na Corrida pelos Shoppings de Miami International Mall para Alzheimer sábado, 15 de agosto | 9:00 AM – 12:00 PM",
+          "fr": "Rejoignez-nous pour la Marche dans les Centres Commerciaux de Miami International Mall pour l'Alzheimer samedi, 15 août | 9:00 AM – 12:00 PM"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1785071436814_bxqu",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte Es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte É Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
+        },
+        "date": "2026-07-26",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Diverso · Familia · Comienza 10:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1785071436814_dsn6",
+        "title": {
+          "en": "Miami Marlins vs. Philadelphia Phillies",
+          "es": "Miami Marlins vs. Philadelphia Phillies",
+          "pt": "Miami Marlins vs. Philadelphia Phillies",
+          "fr": "Miami Marlins vs. Philadelphia Phillies"
+        },
+        "date": "2026-07-27",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qaxf&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1785071436814_b4db",
+        "title": {
+          "en": "Still Alive - Pearl Jam Tribute",
+          "es": "Still Alive - Tributo a Pearl Jam",
+          "pt": "Still Alive - Tributo a Pearl Jam",
+          "fr": "Still Alive - Hommage à Pearl Jam"
+        },
+        "date": "2026-08-22",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fstill-alive-pearl-jam-tribute-ft-lauderdale-florida-08-22-2026%2Fevent%2F0D00647B1242BAFA&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/4ee/d052f730-a52b-4dc5-90a6-dfef73a354ee_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Still Alive - Pearl Jam Tribute will be coming to Revolution Live on Saturday, August 22nd with special guests Foo Fight - Foo Fighters Tribute. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
+          "es": "Still Alive - Tributo a Pearl Jam llegará a Revolution Live el sábado 22 de agosto con invitados especiales Foo Fight - Tributo a Foo Fighters. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
+          "pt": "Still Alive - Tributo a Pearl Jam virá para o Revolution Live no sábado, 22 de agosto com convidados especiais Foo Fight - Tributo dos Foo Fighters. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
+          "fr": "Still Alive - Hommage à Pearl Jam viendra à Revolution Live samedi 22 août avec des invités spéciaux Foo Fight - Hommage aux Foo Fighters. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 19:00 · Revolution Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1785071436814_5s85",
+        "title": {
+          "en": "Nascar Aloe & Jasiah - Capital Punishment Tour",
+          "es": "Nascar Aloe & Jasiah - Capital Punishment Tour",
+          "pt": "Nascar Aloe & Jasiah - Capital Punishment Tour",
+          "fr": "Nascar Aloe & Jasiah - Capital Punishment Tour"
+        },
+        "date": "2026-08-22",
+        "venue": "Lincoln's Beard",
+        "address": "7360 SW 41st St. , Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fnascar-aloe-jasiah-lincolns-beard-tickets%2F14956103&utm_medium=affiliate",
+        "free": false,
+        "price": "$28",
+        "image": "https://s1.ticketm.net/dam/c/80b/f3cd8d24-c3ae-4fa0-b4bc-1ba99f9b380b_106091_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "NASCAR ALOE + JASIAH: Capital Punishment Toursupport: Next April, Dirtybutt18+ with VALID ID · Starts 19:00 · Lincoln's Beard",
+          "es": "NASCAR ALOE + JASIAH: Capital Punishment Tour con apoyo: Próximo abril, Dirtybutt 18+ con IDENTIFICACIÓN VÁLIDA · Comienza 19:00 · Lincoln's Beard",
+          "pt": "NASCAR ALOE + JASIAH: Capital Punishment Tour com suporte: Próximo abril, Dirtybutt 18+ com ID VÁLIDO · Começa 19:00 · Lincoln's Beard",
+          "fr": "NASCAR ALOE + JASIAH: Capital Punishment Tour avec soutien: Avril prochain, Dirtybutt 18+ avec PIÈCE D'IDENTITÉ VALIDE · Commence 19:00 · Lincoln's Beard"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7321134,
+        "lng": -80.3143626
+      },
+      {
+        "id": "tm_1785071436814_dbjs",
+        "title": {
+          "en": "DON TOLIVER: NITROUS - OCTANE WORLD TOUR LEG 2",
+          "es": "DON TOLIVER: NITROUS - OCTANE WORLD TOUR LEG 2",
+          "pt": "DON TOLIVER: NITROUS - OCTANE WORLD TOUR LEG 2",
+          "fr": "DON TOLIVER: NITROUS - OCTANE WORLD TOUR LEG 2"
+        },
+        "date": "2026-08-22",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdon-toliver-nitrous-octane-world-tour-miami-florida-08-22-2026%2Fevent%2F0D0064CB10A2D9AC&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/4d1/d0bc76d6-02e3-4e46-96fc-658377e464d1_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Hip-Hop/Rap · Starts 19:30 · Kaseya Center",
+          "es": "Música · Hip-Hop/Rap · Comienza 19:30 · Kaseya Center",
+          "pt": "Música · Hip-Hop/Rap · Começa 19:30 · Kaseya Center",
+          "fr": "Musique · Hip-Hop/Rap · Commence 19:30 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1785071436814_7emc",
+        "title": {
+          "en": "Buckcherry",
+          "es": "Buckcherry",
+          "pt": "Buckcherry",
+          "fr": "Buckcherry"
+        },
+        "date": "2026-08-22",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbuckcherry-ft-lauderdale-florida-08-22-2026%2Fevent%2F0D006497DD182E88&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f0c/7e821c55-ec92-4ed2-a269-e44b6a9b2f0c_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Buckcherry 'Roar Like Thunder Tour' with special guests Tyler Bryant & The Shakedown Doors open 7:30pm · Starts 19:30 · Culture Room",
+          "es": "Buckcherry 'Roar Like Thunder Tour' con invitados especiales Tyler Bryant & The Shakedown Las puertas abren a las 19:30 · Comienza 19:30 · Culture Room",
+          "pt": "Buckcherry 'Roar Like Thunder Tour' com convidados especiais Tyler Bryant & The Shakedown As portas abrem às 19:30 · Começa 19:30 · Culture Room",
+          "fr": "Buckcherry 'Roar Like Thunder Tour' avec des invités spéciaux Tyler Bryant & The Shakedown Les portes ouvrent à 19h30 · Commence 19:30 · Culture Room"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1785071436814_sgjk",
+        "title": {
+          "en": "Goo Goo Dolls - Summer 2026",
+          "es": "Goo Goo Dolls - Verano 2026",
+          "pt": "Goo Goo Dolls - Verão 2026",
+          "fr": "Goo Goo Dolls - Été 2026"
+        },
+        "date": "2026-08-25",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgoo-goo-dolls-summer-2026-hollywood-florida-08-25-2026%2Fevent%2F0D006384C303B3E2&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/37b/aa20723c-d054-4521-914f-ccad35fa437b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 20:00 · Hard Rock Live",
+          "es": "Música · Rock · Comienza 20:00 · Hard Rock Live",
+          "pt": "Música · Rock · Começa 20:00 · Hard Rock Live",
+          "fr": "Musique · Rock · Commence 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1785071436814_2hwr",
+        "title": {
+          "en": "Ordinary Boys: Tribute to The Smiths & Morrissey w/ New Dawn Fades",
+          "es": "Ordinary Boys: Tributo a The Smiths & Morrissey con New Dawn Fades",
+          "pt": "Ordinary Boys: Tributo a The Smiths & Morrissey com New Dawn Fades",
+          "fr": "Ordinary Boys: Tribut aux Smiths & Morrissey avec New Dawn Fades"
+        },
+        "date": "2026-08-28",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fordinary-boys-tribute-to-the-smiths-ft-lauderdale-florida-08-28-2026%2Fevent%2F0D0064CE08A6E0BC&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/49e/5602545d-4f74-4c12-9545-fd1888fba49e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Ordinary Boys: Tribute to The Smiths & Morrissey will be coming to Revolution Live on Friday, August 28th with special guests New Dawn Fades: Tribute to Joy Division. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
+          "es": "Ordinary Boys: Tributo a The Smiths & Morrissey llegará a Revolution Live el viernes 28 de agosto con artistas especiales New Dawn Fades: Tributo a Joy Division. Este evento es para todas las edades. Las puertas abren a las 7 p.m. El show comienza a las 8 p.m. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
+          "pt": "Ordinary Boys: Tributo a The Smiths & Morrissey virá ao Revolution Live na sexta-feira, 28 de agosto, com convidados especiais New Dawn Fades: Tributo a Joy Division. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. · Começa 19:00 · Revolution Live",
+          "fr": "Ordinary Boys: Tribut aux Smiths & Morrissey viendra au Revolution Live vendredi 28 août avec les invités spéciaux New Dawn Fades: Tribut à Joy Division. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien sont sujets à modification sans préavis. · Commence 19:00 · Revolution Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1785071436814_76yu",
+        "title": {
+          "en": "Cheerleader Roadkill in Miami",
+          "es": "Cheerleader Roadkill en Miami",
+          "pt": "Cheerleader Roadkill em Miami",
+          "fr": "Cheerleader Roadkill à Miami"
+        },
+        "date": "2026-08-28",
+        "venue": "Lincoln's Beard",
+        "address": "7360 SW 41st St. , Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheerleader-roadkill-in-miami-lincolns-beard-tickets%2F14209664&utm_medium=affiliate",
+        "free": false,
+        "price": "$23",
+        "image": "https://s1.ticketm.net/dam/c/797/5e693c26-2881-4776-8f0c-3aa94bfa3797_106511_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Alternative · Starts 19:00 · Lincoln's Beard",
+          "es": "Música · Alternativo · Comienza 19:00 · Lincoln's Beard",
+          "pt": "Música · Alternativo · Começa 19:00 · Lincoln's Beard",
+          "fr": "Musique · Alternatif · Commence 19:00 · Lincoln's Beard"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7321134,
+        "lng": -80.3143626
+      },
+      {
+        "id": "tm_1785071436814_1bwn",
+        "title": {
+          "en": "The Ultimate Dance and Freestyle Experience",
+          "es": "La Experiencia Definitiva de Danza y Freestyle",
+          "pt": "A Experiência Definitiva de Dança e Freestyle",
+          "fr": "L'Expérience Ultime de Danse et Freestyle"
+        },
+        "date": "2026-08-28",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-ultimate-dance-and-freestyle-experience-hollywood-florida-08-28-2026%2Fevent%2F0D006488C413CF9F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/565/8d037919-4bf7-4531-a1ec-e26e6fcab565_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Live Performances by: Expose, Jody Watley, Samanta Fox, Safire, Timmy T, Trinere, Turbo B of Snap, Noel, 69 Boyz, No Mercy, Janice Robinson, Voice in Fashion and Terry Moran. Lineup Subject to Change · Starts 20:00 · Hard Rock Live",
+          "es": "Actuaciones en vivo de: Expose, Jody Watley, Samanta Fox, Safire, Timmy T, Trinere, Turbo B de Snap, Noel, 69 Boyz, No Mercy, Janice Robinson, Voice in Fashion y Terry Moran. Alineación sujeta a cambios · Comienza 20:00 · Hard Rock Live",
+          "pt": "Apresentações ao vivo de: Expose, Jody Watley, Samanta Fox, Safire, Timmy T, Trinere, Turbo B do Snap, Noel, 69 Boyz, No Mercy, Janice Robinson, Voice in Fashion e Terry Moran. Programação sujeita a alterações · Começa 20:00 · Hard Rock Live",
+          "fr": "Performances en direct par: Expose, Jody Watley, Samanta Fox, Safire, Timmy T, Trinere, Turbo B de Snap, Noel, 69 Boyz, No Mercy, Janice Robinson, Voice in Fashion et Terry Moran. Programmation sujette à modification · Commence 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
       }
     ]
   },
@@ -4344,7 +4176,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-07-25T13:15:50.140Z",
+    "fetchedAt": "2026-07-26T13:11:12.082Z",
     "items": []
   }
 }
