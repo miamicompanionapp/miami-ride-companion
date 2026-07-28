@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-27T14:23:13.724Z",
+    "lastUpdated": "2026-07-28T13:55:19.222Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-07-27T14:23:11.494Z",
+    "fetchedAt": "2026-07-28T13:55:18.654Z",
     "current": {
-      "temp_f": 82,
-      "feels_f": 92,
+      "temp_f": 84,
+      "feels_f": 94,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 82,
-      "wind_mph": 4,
-      "rain_chance": 28,
-      "weathercode": 3
+      "humidity": 79,
+      "wind_mph": 5,
+      "rain_chance": 32,
+      "weathercode": 2
     },
     "forecast": [
       {
-        "date": "2026-07-27",
-        "high_f": 89,
-        "low_f": 75,
-        "weathercode": 81,
-        "rain_chance": 28,
-        "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
-        }
-      },
-      {
         "date": "2026-07-28",
-        "high_f": 86,
-        "low_f": 77,
-        "weathercode": 51,
-        "rain_chance": 26,
+        "high_f": 88,
+        "low_f": 76,
+        "weathercode": 53,
+        "rain_chance": 32,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-07-29",
-        "high_f": 94,
-        "low_f": 75,
-        "weathercode": 95,
-        "rain_chance": 17,
+        "high_f": 93,
+        "low_f": 77,
+        "weathercode": 3,
+        "rain_chance": 10,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-07-30",
-        "high_f": 95,
-        "low_f": 83,
+        "high_f": 94,
+        "low_f": 81,
         "weathercode": 3,
-        "rain_chance": 15,
+        "rain_chance": 21,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-07-31",
-        "high_f": 92,
-        "low_f": 84,
+        "high_f": 93,
+        "low_f": 85,
         "weathercode": 51,
-        "rain_chance": 28,
+        "rain_chance": 20,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-08-01",
+        "high_f": 90,
+        "low_f": 84,
+        "weathercode": 95,
+        "rain_chance": 40,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
       }
     ],
     "hourly": [
       {
-        "hour": "10:00",
+        "hour": "09:00",
         "temp_f": 83,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 85,
+        "weathercode": 2,
+        "rain_chance": 2
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 86,
+        "weathercode": 2,
+        "rain_chance": 3
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 86,
+        "weathercode": 2,
+        "rain_chance": 4
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 87,
+        "weathercode": 2,
+        "rain_chance": 11
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 32
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 87,
         "weathercode": 3,
         "rain_chance": 16
       },
       {
-        "hour": "11:00",
-        "temp_f": 85,
-        "weathercode": 2,
-        "rain_chance": 12
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 17
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 28
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 84,
-        "weathercode": 51,
-        "rain_chance": 28
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 86,
-        "weathercode": 2,
-        "rain_chance": 20
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 88,
-        "weathercode": 2,
-        "rain_chance": 22
-      },
-      {
         "hour": "17:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 21
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "18:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 18
+        "temp_f": 84,
+        "weathercode": 53,
+        "rain_chance": 8
       },
       {
         "hour": "19:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 18
+        "temp_f": 86,
+        "weathercode": 1,
+        "rain_chance": 5
       },
       {
         "hour": "20:00",
-        "temp_f": 84,
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 4
       },
       {
         "hour": "21:00",
-        "temp_f": 81,
-        "weathercode": 51,
-        "rain_chance": 9
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "22:00",
         "temp_f": 80,
-        "weathercode": 81,
-        "rain_chance": 6
+        "weathercode": 3,
+        "rain_chance": 2
       },
       {
         "hour": "23:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 2
       },
       {
         "hour": "00:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 6
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 2
       },
       {
         "hour": "01:00",
-        "temp_f": 79,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 1
       },
       {
         "hour": "02:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 6
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "03:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 7
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "04:00",
-        "temp_f": 78,
-        "weathercode": 1,
-        "rain_chance": 8
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "05:00",
         "temp_f": 78,
         "weathercode": 1,
-        "rain_chance": 9
+        "rain_chance": 0
       },
       {
         "hour": "06:00",
-        "temp_f": 77,
+        "temp_f": 78,
         "weathercode": 0,
-        "rain_chance": 7
+        "rain_chance": 1
       },
       {
         "hour": "07:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 1
       },
       {
         "hour": "08:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 11
-      },
-      {
-        "hour": "09:00",
         "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 2
       }
     ]
   },
@@ -2842,32 +2842,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1785071436814_dsn6",
-        "title": {
-          "en": "Miami Marlins vs. Philadelphia Phillies",
-          "es": "Miami Marlins vs. Philadelphia Phillies",
-          "pt": "Miami Marlins vs. Philadelphia Phillies",
-          "fr": "Miami Marlins vs. Philadelphia Phillies"
-        },
-        "date": "2026-07-27",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qaxf&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
         "id": "tm_1785071436814_b4db",
         "title": {
           "en": "Still Alive - Pearl Jam Tribute",
@@ -3076,32 +3050,6 @@
         "lng": -80.2109577
       },
       {
-        "id": "tm_1785162175986_9xwd",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Balloon Museum | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Balloon Museum | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Balloon Museum | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-07-27",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Varios · Familia · Comienza a las 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa às 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence à 11h00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1785162175986_bugp",
         "title": {
           "en": "Nemo Kids: : A Summer Theater Camp Production",
@@ -3152,6 +3100,238 @@
         "category": "music",
         "lat": 25.792917,
         "lng": -80.13314
+      },
+      {
+        "id": "rss_1785246885147_r3xn",
+        "title": {
+          "en": "Ladies Who Lunch: Tuesday Afternoon Drag Show 7/28/26",
+          "es": "Ladies Who Lunch: Espectáculo de Drag del Martes por la Tarde 7/28/26",
+          "pt": "Ladies Who Lunch: Show de Drag de Terça à Tarde 7/28/26",
+          "fr": "Ladies Who Lunch: Spectacle de Drag Mardi Après-midi 7/28/26"
+        },
+        "date": "2026-07-28",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/27/ladies-who-lunch-tuesday-afternoon-drag-show-7-28-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Tuesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los martes son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Terças são para os meninos que almoçam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les mardis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1785246885147_6b8o",
+        "title": {
+          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 7/29/26",
+          "es": "Ladies Who Lunch: Espectáculo de Drag del Miércoles por la Tarde 7/29/26",
+          "pt": "Ladies Who Lunch: Show de Drag de Quarta à Tarde 7/29/26",
+          "fr": "Ladies Who Lunch: Spectacle de Drag Mercredi Après-midi 7/29/26"
+        },
+        "date": "2026-07-29",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/27/ladies-who-lunch-wednesday-afternoon-drag-show-7-29-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los miércoles son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quartas são para os meninos que almoçam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les mercredis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1785246885147_itk1",
+        "title": {
+          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 7/30/26",
+          "es": "Ladies Who Lunch: Espectáculo de Drag del Jueves por la Tarde 7/30/26",
+          "pt": "Ladies Who Lunch: Show de Drag de Quinta à Tarde 7/30/26",
+          "fr": "Ladies Who Lunch: Spectacle de Drag Jeudi Après-midi 7/30/26"
+        },
+        "date": "2026-07-30",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/27/ladies-who-lunch-thursday-afternoon-drag-show-7-30-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los jueves son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quintas são para os meninos que almoçam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les jeudis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1785246885147_asgn",
+        "title": {
+          "en": "Cafe Con Leche: Thursday Night Latin Drag Revue 7/30/26",
+          "es": "Café Con Leche: Revista de Drag Latino del Jueves por la Noche 7/30/26",
+          "pt": "Café Con Leche: Revista de Drag Latino de Quinta à Noite 7/30/26",
+          "fr": "Café Con Leche: Revue de Drag Latin Jeudi Soir 7/30/26"
+        },
+        "date": "2026-07-30",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/27/cafe-con-leche-thursday-night-latin-drag-revue-7-30-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Turn up the flavor and the fantasy at Palace South Beach for Café",
+          "es": "Aumenta el sabor y la fantasía en Palace South Beach para Café",
+          "pt": "Aumente o sabor e a fantasia no Palace South Beach para Café",
+          "fr": "Augmentez la saveur et la fantaisie au Palace South Beach pour Café"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "community"
+      },
+      {
+        "id": "rss_1785246885147_p2xm",
+        "title": {
+          "en": "Drag Madness: Friday Night Drag Cabaret 7/31/26",
+          "es": "Drag Madness: Cabaret de Drag del Viernes por la Noche 7/31/26",
+          "pt": "Drag Madness: Cabaré de Drag de Sexta à Noite 7/31/26",
+          "fr": "Drag Madness: Cabaret de Drag Vendredi Soir 7/31/26"
+        },
+        "date": "2026-07-31",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/07/27/drag-madness-friday-night-drag-cabaret-7-31-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Fridays at Palace South Beach are pure chaos in the best way. Join us for",
+          "es": "Los viernes en Palace South Beach son puro caos de la mejor manera. Únete a nosotros",
+          "pt": "Sextas no Palace South Beach são puro caos da melhor forma. Junte-se a nós",
+          "fr": "Les vendredis au Palace South Beach sont pur chaos de la meilleure façon. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "community"
+      },
+      {
+        "id": "tm_1785246885736_mhr8",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-07-28",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Diversos · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1785246885736_pz7i",
+        "title": {
+          "en": "Miami Marlins vs. Philadelphia Phillies",
+          "es": "Miami Marlins vs. Philadelphia Phillies",
+          "pt": "Miami Marlins vs. Philadelphia Phillies",
+          "fr": "Miami Marlins vs. Philadelphia Phillies"
+        },
+        "date": "2026-07-28",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qax4&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1785246885736_xq7m",
+        "title": {
+          "en": "Beetlejuice Jr.: A Summer Theater Camp Production",
+          "es": "Beetlejuice Jr.: Una Producción del Campamento de Teatro de Verano",
+          "pt": "Beetlejuice Jr.: Uma Produção do Acampamento de Teatro de Verão",
+          "fr": "Beetlejuice Jr. : Une Production du Camp de Théâtre d'Été"
+        },
+        "date": "2026-07-29",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbeetlejuice-jr-a-summer-theater-camp-ft-lauderdale-florida-07-29-2026%2Fevent%2F0D0064C4D2FB2FB8&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/4c7/01072b60-7eb4-4574-8dbd-93da62bc74c7_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "It's showtime in this Broadway Junior version of the Broadway hit! The ghost-with-the-most comes to the stage in Beetlejuice JR., the frightfully funny musical based on the beloved motion picture turned Broadway phenomenon. Lydia Deetz is a strange and unusual teenager, still grieving the loss of her mother and obsessed with the whole \"being dead thing.\" Lucky for Lydia, she and her father move to",
+          "es": "¡Es hora del espectáculo en esta versión Broadway Junior del éxito de Broadway! El fantasma más famoso sube al escenario en Beetlejuice JR., el musical hilarante basado en la película querida convertida en fenómeno de Broadway. Lydia Deetz es una adolescente extraña e inusual, aún en duelo por la pérdida de su madre y obsesionada con el \"estar muerto\".",
+          "pt": "É hora do show nesta versão Broadway Junior do sucesso da Broadway! O fantasma mais famoso sobe ao palco em Beetlejuice JR., o musical hilariante baseado no filme amado transformado em fenômeno da Broadway. Lydia Deetz é uma adolescente estranha e incomum, ainda de luto pela perda de sua mãe e obcecada com a \"coisa de estar morta\".",
+          "fr": "C'est le moment du spectacle dans cette version Broadway Junior du succès de Broadway ! Le fantôme le plus célèbre monte sur scène dans Beetlejuice JR., la comédie musicale terrifiquement amusante basée sur le film bien-aimé devenu phénomène de Broadway. Lydia Deetz est une adolescente étrange et inhabituelle, toujours en deuil de la perte de sa mère et obsédée par l'\"être mort\"."
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "cp_1785246886503_kizc",
+        "title": {
+          "en": "Mini Libraries Ribbon-Cutting Ceremony",
+          "es": "Ceremonia de Corte de Cinta de Mini Bibliotecas",
+          "pt": "Cerimônia de Corte da Fita das Mini Bibliotecas",
+          "fr": "Cérémonie de Coupure du Ruban des Mini-Bibliothèques"
+        },
+        "date": "2026-07-28",
+        "venue": "Segal Park",
+        "address": "2331 NW 143  Opa-locka FL 33054",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Join the City of Opa-locka Mayor & Commission for the Mini Libraries Ribbon-Cutting Ceremony, hosted by Commissioner Dr. Sherelean Bass, as we celebrate a new chapter in promoting literacy, learning, and community connection. Come help us mark this exciting milestone and discover how these mini libraries will inspire neighbors of all ages to share the joy of reading.    📚 Take a book. Share a boo",
+          "es": "Únase a la Alcaldesa y Comisión de la Ciudad de Opa-locka para la Ceremonia de Corte de Cinta de Mini Bibliotecas, organizada por la Comisionada Dra. Sherelean Bass, mientras celebramos un nuevo capítulo en la promoción de la alfabetización, el aprendizaje y la conexión comunitaria. Venga a ayudarnos a marcar este emocionante hito y descubra cómo estas mini bibliotecas inspirarán a vecinos de todas las edades a compartir la alegría de la lectura.",
+          "pt": "Junte-se à Prefeita e Comissão da Cidade de Opa-locka para a Cerimônia de Corte da Fita das Mini Bibliotecas, organizada pela Comissária Dra. Sherelean Bass, enquanto celebramos um novo capítulo na promoção da alfabetização, aprendizagem e conexão comunitária. Venha nos ajudar a marcar este marco emocionante e descubra como estas mini bibliotecas inspirarão vizinhos de todas as idades a compartilhar a alegria da leitura.",
+          "fr": "Rejoignez la Mairesse et la Commission de la Ville d'Opa-locka pour la Cérémonie de Coupure du Ruban des Mini-Bibliothèques, organisée par la Commissaire Dr. Sherelean Bass, alors que nous célébrons un nouveau chapitre dans la promotion de l'alphabétisation, de l'apprentissage et de la connexion communautaire. Venez nous aider à marquer cette étape passionnante et découvrez comment ces mini-bibliothèques inspireront les voisins de tous les âges à partager la joie de la lecture."
+        },
+        "source": "Opa-locka",
+        "category": "community"
       }
     ]
   },
@@ -4055,7 +4235,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-07-27T14:23:11.494Z",
+    "fetchedAt": "2026-07-28T13:55:18.654Z",
     "items": []
   }
 }
