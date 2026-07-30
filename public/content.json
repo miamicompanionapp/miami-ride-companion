@@ -1,14 +1,14 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-29T14:00:23.313Z",
+    "lastUpdated": "2026-07-30T13:49:25.949Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-07-29T14:00:17.886Z",
+    "fetchedAt": "2026-07-30T13:49:20.355Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 94,
+      "temp_f": 86,
+      "feels_f": 95,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
@@ -16,30 +16,17 @@
         "fr": "Conditions actuelles"
       },
       "humidity": 75,
-      "wind_mph": 8,
-      "rain_chance": 19,
-      "weathercode": 2
+      "wind_mph": 6,
+      "rain_chance": 10,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-07-29",
-        "high_f": 95,
-        "low_f": 78,
-        "weathercode": 3,
-        "rain_chance": 19,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-07-30",
-        "high_f": 95,
+        "high_f": 92,
         "low_f": 78,
         "weathercode": 3,
-        "rain_chance": 15,
+        "rain_chance": 10,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,23 +36,36 @@
       },
       {
         "date": "2026-07-31",
-        "high_f": 92,
-        "low_f": 82,
-        "weathercode": 53,
-        "rain_chance": 14,
+        "high_f": 89,
+        "low_f": 78,
+        "weathercode": 82,
+        "rain_chance": 30,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-08-01",
         "high_f": 90,
-        "low_f": 77,
+        "low_f": 80,
+        "weathercode": 80,
+        "rain_chance": 50,
+        "description": {
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
+        }
+      },
+      {
+        "date": "2026-08-02",
+        "high_f": 87,
+        "low_f": 83,
         "weathercode": 95,
-        "rain_chance": 53,
+        "rain_chance": 35,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -74,11 +74,11 @@
         }
       },
       {
-        "date": "2026-08-02",
-        "high_f": 87,
+        "date": "2026-08-03",
+        "high_f": 90,
         "low_f": 83,
         "weathercode": 95,
-        "rain_chance": 22,
+        "rain_chance": 44,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,122 +89,128 @@
     ],
     "hourly": [
       {
-        "hour": "10:00",
+        "hour": "09:00",
         "temp_f": 85,
         "weathercode": 2,
-        "rain_chance": 1
+        "rain_chance": 0
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "11:00",
         "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 1
+        "weathercode": 2,
+        "rain_chance": 0
       },
       {
         "hour": "12:00",
         "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 7
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "13:00",
-        "temp_f": 91,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 94,
-        "weathercode": 3,
-        "rain_chance": 14
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 95,
-        "weathercode": 3,
-        "rain_chance": 19
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 94,
-        "weathercode": 3,
-        "rain_chance": 16
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 94,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 93,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 90,
+        "temp_f": 89,
         "weathercode": 3,
         "rain_chance": 3
       },
       {
-        "hour": "20:00",
-        "temp_f": 85,
+        "hour": "14:00",
+        "temp_f": 90,
         "weathercode": 2,
-        "rain_chance": 2
+        "rain_chance": 5
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 90,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 90,
+        "weathercode": 3,
+        "rain_chance": 9
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 90,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 92,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 92,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 5
       },
       {
         "hour": "21:00",
         "temp_f": 82,
-        "weathercode": 1,
-        "rain_chance": 2
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "22:00",
-        "temp_f": 81,
-        "weathercode": 0,
+        "temp_f": 82,
+        "weathercode": 3,
         "rain_chance": 2
       },
       {
         "hour": "23:00",
-        "temp_f": 80,
-        "weathercode": 0,
+        "temp_f": 82,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "00:00",
-        "temp_f": 80,
-        "weathercode": 1,
+        "temp_f": 81,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "01:00",
-        "temp_f": 79,
-        "weathercode": 0,
+        "temp_f": 81,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "02:00",
         "temp_f": 79,
-        "weathercode": 0,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "03:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "04:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 1
       },
@@ -218,19 +224,13 @@
         "hour": "07:00",
         "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "08:00",
         "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 1
-      },
-      {
-        "hour": "09:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 2
       }
     ]
   },
@@ -3003,32 +3003,6 @@
         "lng": -80.13314
       },
       {
-        "id": "rss_1785246885147_6b8o",
-        "title": {
-          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 7/29/26",
-          "es": "Ladies Who Lunch: Espectáculo de Drag del Miércoles por la Tarde 7/29/26",
-          "pt": "Ladies Who Lunch: Show de Drag de Quarta à Tarde 7/29/26",
-          "fr": "Ladies Who Lunch: Spectacle de Drag Mercredi Après-midi 7/29/26"
-        },
-        "date": "2026-07-29",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/07/27/ladies-who-lunch-wednesday-afternoon-drag-show-7-29-26/",
-        "free": true,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los miércoles son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
-          "pt": "Quartas são para os meninos que almoçam lindamente no Palace South Beach. Junte-se a nós",
-          "fr": "Les mercredis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
-      },
-      {
         "id": "rss_1785246885147_itk1",
         "title": {
           "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 7/30/26",
@@ -3105,84 +3079,6 @@
         "lat": 25.7812488,
         "lng": -80.130772,
         "category": "community"
-      },
-      {
-        "id": "tm_1785246885736_xq7m",
-        "title": {
-          "en": "Beetlejuice Jr.: A Summer Theater Camp Production",
-          "es": "Beetlejuice Jr.: Una Producción del Campamento de Teatro de Verano",
-          "pt": "Beetlejuice Jr.: Uma Produção do Acampamento de Teatro de Verão",
-          "fr": "Beetlejuice Jr. : Une Production du Camp de Théâtre d'Été"
-        },
-        "date": "2026-07-29",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbeetlejuice-jr-a-summer-theater-camp-ft-lauderdale-florida-07-29-2026%2Fevent%2F0D0064C4D2FB2FB8&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/4c7/01072b60-7eb4-4574-8dbd-93da62bc74c7_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "It's showtime in this Broadway Junior version of the Broadway hit! The ghost-with-the-most comes to the stage in Beetlejuice JR., the frightfully funny musical based on the beloved motion picture turned Broadway phenomenon. Lydia Deetz is a strange and unusual teenager, still grieving the loss of her mother and obsessed with the whole \"being dead thing.\" Lucky for Lydia, she and her father move to",
-          "es": "¡Es hora del espectáculo en esta versión Broadway Junior del éxito de Broadway! El fantasma más famoso sube al escenario en Beetlejuice JR., el musical hilarante basado en la película querida convertida en fenómeno de Broadway. Lydia Deetz es una adolescente extraña e inusual, aún en duelo por la pérdida de su madre y obsesionada con el \"estar muerto\".",
-          "pt": "É hora do show nesta versão Broadway Junior do sucesso da Broadway! O fantasma mais famoso sobe ao palco em Beetlejuice JR., o musical hilariante baseado no filme amado transformado em fenômeno da Broadway. Lydia Deetz é uma adolescente estranha e incomum, ainda de luto pela perda de sua mãe e obcecada com a \"coisa de estar morta\".",
-          "fr": "C'est le moment du spectacle dans cette version Broadway Junior du succès de Broadway ! Le fantôme le plus célèbre monte sur scène dans Beetlejuice JR., la comédie musicale terrifiquement amusante basée sur le film bien-aimé devenu phénomène de Broadway. Lydia Deetz est une adolescente étrange et inhabituelle, toujours en deuil de la perte de sa mère et obsédée par l'\"être mort\"."
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1785333592666_m2r4",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
-        },
-        "date": "2026-07-29",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza a las 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa às 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence à 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1785333592666_9rq6",
-        "title": {
-          "en": "Miami Marlins vs. Philadelphia Phillies",
-          "es": "Miami Marlins vs. Filadelfia Phillies",
-          "pt": "Miami Marlins vs. Filadélfia Phillies",
-          "fr": "Miami Marlins vs. Philadelphie Phillies"
-        },
-        "date": "2026-07-29",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qaxp&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 12:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza a las 12:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa às 12:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence à 12:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
       },
       {
         "id": "tm_1785333592666_su9d",
@@ -3309,6 +3205,214 @@
         },
         "source": "Deerfield Beach",
         "category": "community"
+      },
+      {
+        "id": "rss_1785419329806_gvfx",
+        "title": {
+          "en": "Hollywood Run Club Pace & Par Run at Atlantic Village 8/6/26",
+          "es": "Hollywood Run Club Pace & Par Run en Atlantic Village 8/6/26",
+          "pt": "Hollywood Run Club Pace & Par Run no Atlantic Village 8/6/26",
+          "fr": "Hollywood Run Club Pace & Par Run à Atlantic Village 8/6/26"
+        },
+        "date": "2026-08-06",
+        "venue": "Atlantic Village",
+        "address": "601 N Federal Hwy, Hallandale Beach, Florida, 33009",
+        "url": "https://www.soulofmiami.org/2026/07/29/hollywood-run-club-pace-par-run-at-atlantic-village-8-6-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Pace-Par-350x438.png",
+        "description": {
+          "en": "Celebrate Hollywood Run Club’s 13th birthday with an evening of running, indoor",
+          "es": "Celebra el 13º aniversario del Hollywood Run Club con una noche de carreras, interior",
+          "pt": "Celebre o 13º aniversário do Hollywood Run Club com uma noite de corridas, interior",
+          "fr": "Célébrez le 13e anniversaire du Hollywood Run Club avec une soirée de course, intérieur"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9938734,
+        "lng": -80.1425686,
+        "category": "sports"
+      },
+      {
+        "id": "rss_1785419329806_jfex",
+        "title": {
+          "en": "Martini & Mahjong Mondays at Shooters Waterfront 8/3/26",
+          "es": "Lunes de Martini y Mahjong en Shooters Waterfront 8/3/26",
+          "pt": "Segundas de Martini e Mahjong no Shooters Waterfront 8/3/26",
+          "fr": "Lundis Martini et Mahjong chez Shooters Waterfront 8/3/26"
+        },
+        "date": "2026-08-03",
+        "venue": "Shooters Waterfront",
+        "address": "3033 NE 32nd Ave, Fort Lauderdale, Florida, 33308",
+        "url": "https://www.soulofmiami.org/2026/07/29/martini-mahjong-mondays-at-shooters-waterfront-8-3-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Martini-Mahjong_UPDATED_8.3.26-1-1-350x438.png",
+        "description": {
+          "en": "off the week with Mahjong, martinis and happy hour at Shooters Waterfront on Monday, August",
+          "es": "Comienza la semana con Mahjong, martinis y happy hour en Shooters Waterfront el lunes, agosto",
+          "pt": "Comece a semana com Mahjong, martinis e happy hour no Shooters Waterfront na segunda-feira, agosto",
+          "fr": "Commencez la semaine avec Mahjong, martinis et happy hour chez Shooters Waterfront lundi, août"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1661329,
+        "lng": -80.1038025,
+        "category": "community"
+      },
+      {
+        "id": "rss_1785419329806_8uc7",
+        "title": {
+          "en": "Coconut Grove Reunion at Virrick Park 8/1/26",
+          "es": "Reunión de Coconut Grove en Virrick Park 8/1/26",
+          "pt": "Reunião de Coconut Grove no Virrick Park 8/1/26",
+          "fr": "Réunion de Coconut Grove au Virrick Park 8/1/26"
+        },
+        "date": "2026-08-01",
+        "venue": "Virrick Park",
+        "address": "3255 Plaza St, Miami, Florida, 33133",
+        "url": "https://www.soulofmiami.org/2026/07/29/coconut-grove-reunion-at-virrick-park-8-1-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/IMG_20260726_101130-350x437.png",
+        "description": {
+          "en": "FOR IMMEDIATE RELEASE COCONUT GROVE REUNION AT VIRRICK PARK BRINGS COMMUNITY TOGETHER FOR A DAY OF CELEBRATION, HISTORY,",
+          "es": "PARA DIFUSIÓN INMEDIATA REUNIÓN DE COCONUT GROVE EN VIRRICK PARK REÚNE A LA COMUNIDAD PARA UN DÍA DE CELEBRACIÓN, HISTORIA,",
+          "pt": "PARA DIVULGAÇÃO IMEDIATA REUNIÃO DE COCONUT GROVE NO VIRRICK PARK REÚNE A COMUNIDADE PARA UM DIA DE CELEBRAÇÃO, HISTÓRIA,",
+          "fr": "POUR DIFFUSION IMMÉDIATE RÉUNION DE COCONUT GROVE AU VIRRICK PARK RASSEMBLE LA COMMUNAUTÉ POUR UNE JOURNÉE DE CÉLÉBRATION, D'HISTOIRE,"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7307387,
+        "lng": -80.2504668,
+        "category": "community"
+      },
+      {
+        "id": "tm_1785419330404_qm0h",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-07-30",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familiar · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1785419330404_i617",
+        "title": {
+          "en": "BIG3 Basketball: 9th Wonder in the Summer",
+          "es": "Baloncesto BIG3: 9th Wonder en el Verano",
+          "pt": "Basquete BIG3: 9th Wonder no Verão",
+          "fr": "Basketball BIG3 : 9th Wonder en Été"
+        },
+        "date": "2026-07-31",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70o-p&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b10/3e479756-9dfa-4f4a-8a44-1a0619cbfb10_365361_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Miscellaneous · Starts 20:00 · Amerant Bank Arena",
+          "es": "Deportes · Miscelánea · Comienza 20:00 · Amerant Bank Arena",
+          "pt": "Esportes · Diversos · Começa 20:00 · Amerant Bank Arena",
+          "fr": "Sports · Divers · Commence 20:00 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1785419330404_ydud",
+        "title": {
+          "en": "Friday Night Live - Improv Comedy Miami Show",
+          "es": "Viernes en Vivo - Show de Comedia Improvisada en Miami",
+          "pt": "Sexta-feira ao Vivo - Show de Comédia Improvisada em Miami",
+          "fr": "Vendredi en Direct - Spectacle de Comédie Improvisée à Miami"
+        },
+        "date": "2026-07-31",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897633&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
+          "es": "¡Viernes en Vivo! - Comedia improvisada en Miami. ¡La combinación especial de JTF de improvisación corta y larga! Disfruta mientras nuestro elenco ganador de premios te trae una improvisación fantástica perfecta para tu noche de viernes...¡EN VIVO! Nuestros shows a menudo se describen como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway mezclado con SNL con mucha interacción divertida con la audiencia. Ven y sé parte de",
+          "pt": "Sexta-feira ao Vivo! - Comédia improvisada em Miami. A combinação especial de JTF de improvisação de curta e longa duração! Aproveite enquanto nosso elenco premiado traz para você comédia improvisada fantástica perfeita para sua noite de sexta-feira...AO VIVO! Nossos shows são frequentemente descritos como comédia improvisada de ritmo rápido. Pense em Whose Line is It Anyway combinado com SNL com muita interação divertida com o público. Venha fazer parte de",
+          "fr": "Vendredi en Direct ! - Comédie improvisée à Miami. La combinaison spéciale de JTF d'improvisation courte et longue ! Profitez alors que notre distribution primée vous apporte une improvisation fantastique parfaite pour votre vendredi soir...EN DIRECT ! Nos spectacles sont souvent décrits comme de la comédie improvisée au rythme rapide. Pensez à Whose Line is It Anyway mélangé à SNL avec beaucoup d'interaction amusante avec le public. Venez en faire partie"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1785419330404_z3d8",
+        "title": {
+          "en": "¡Dale! Impro - Impro en español",
+          "es": "¡Dale! Impro - Impro en español",
+          "pt": "¡Dale! Impro - Impro em Espanhol",
+          "fr": "¡Dale! Impro - Impro en Espagnol"
+        },
+        "date": "2026-07-31",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdale-impro-impro-just-the-funny-tickets%2F14224084&utm_medium=affiliate",
+        "free": false,
+        "price": "$18",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Preprate para una noche donde t puedes ser parte del show!Dale! Impro es comedia improvisada en espaol y Spanglish, con toda la energa, sabor y diversidad de Miami.Sin guion y sin filtros, un elenco internacional transforma las sugerencias del pblico en escenas interactivas, inesperadas y llenas de humor. Cada show es nico y cualquier cosa puede pasar.Aqu el pblico tiene la palabra. Ven con ganas ",
+          "es": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único y cualquier cosa puede pasar. Aquí el público tiene la palabra. Ven con ganas",
+          "pt": "Prepare-se para uma noite onde você pode ser parte do show! ¡Dale! Impro é comédia improvisada em espanhol e Spanglish, com toda a energia, sabor e diversidade de Miami. Sem roteiro e sem filtros, um elenco internacional transforma as sugestões do público em cenas interativas, inesperadas e cheias de humor. Cada show é único e qualquer coisa pode acontecer. Aqui o público tem a palavra. Venha com vontade",
+          "fr": "Préparez-vous pour une soirée où vous pouvez faire partie du spectacle ! ¡Dale! Impro est de la comédie improvisée en espagnol et Spanglish, avec toute l'énergie, la saveur et la diversité de Miami. Sans scénario et sans filtres, une distribution internationale transforme les suggestions du public en scènes interactives, inattendues et remplies d'humour. Chaque spectacle est unique et n'importe quoi peut arriver. Ici, le public a la parole. Venez avec envie"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.750417,
+        "lng": -80.244412,
+        "category": "comedy"
+      },
+      {
+        "id": "tm_1785419330404_dd02",
+        "title": {
+          "en": "Palomino Blond, Dust Supply, I Love You This Much, and Ember in Miami",
+          "es": "Palomino Blond, Dust Supply, I Love You This Much y Ember en Miami",
+          "pt": "Palomino Blond, Dust Supply, I Love You This Much e Ember em Miami",
+          "fr": "Palomino Blond, Dust Supply, I Love You This Much et Ember à Miami"
+        },
+        "date": "2026-08-07",
+        "venue": "Churchill's Pub",
+        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fpalomino-blond-dust-supply-i-churchills-pub-tickets%2F14999693&utm_medium=affiliate",
+        "free": false,
+        "price": "$20",
+        "image": "https://s1.ticketm.net/dam/c/797/5e693c26-2881-4776-8f0c-3aa94bfa3797_106511_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 18 and over. Any ticket holder unable to present valid identification indicating that they are at least 18 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 19:00 · Churchill's Pub",
+          "es": "Este evento es solo para mayores de 18 años. Cualquier poseedor de entrada que no pueda presentar identificación válida indicando que tiene al menos 18 años de edad no será admitido en este evento y no será elegible para reembolso. · Comienza 19:00 · Churchill's Pub",
+          "pt": "Este evento é apenas para maiores de 18 anos. Qualquer portador de ingresso incapaz de apresentar identificação válida indicando que tem pelo menos 18 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 19:00 · Churchill's Pub",
+          "fr": "Cet événement est réservé aux 18 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 18 ans ne sera pas admis à cet événement et ne sera pas admissible au remboursement. · Commence 19:00 · Churchill's Pub"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.82647681611792,
+        "lng": -80.19169187791115
       }
     ]
   },
@@ -4212,10 +4316,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-07-29T14:00:17.886Z",
+    "fetchedAt": "2026-07-30T13:49:20.355Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.31f26884784cba9380b4dc64bda0a5b18b7165f0.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.ddc5e48252f96754e8dd9fb5199b924d70209f51.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4226,14 +4330,14 @@
         },
         "detail": {
           "en": "* WHAT...Heat index values of 106-110 expected.\n\n* WHERE...Coastal Broward County, Coastal Miami Dade County, Coastal\nPalm Beach County, Metro Broward County, Metro Palm Beach County,\nMetropolitan Miami Dade, Coastal Collier County, and Inland\nCollier County Counties.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesse",
-          "es": "* QUÉ...Se esperan índices de calor de 106-110 grados.\n\n* DÓNDE...Condado de Broward Costero, Condado de Miami Dade Costero, Condado de Palm Beach Costero, Área Metropolitana de Broward, Área Metropolitana de Palm Beach, Área Metropolitana de Miami Dade, Condado de Collier Costero e Inland Collier County.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y la humedad elevada pueden causar enfermedades por calor",
-          "pt": "* O QUÊ...Índices de calor de 106-110 graus esperados.\n\n* ONDE...Condado de Broward Costeiro, Condado de Miami Dade Costeiro, Condado de Palm Beach Costeiro, Região Metropolitana de Broward, Região Metropolitana de Palm Beach, Região Metropolitana de Miami Dade, Condado de Collier Costeiro e Inland Collier County.\n\n* QUANDO...Das 11 AM desta manhã até 19h EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor",
-          "fr": "* QUOI...Des indices de chaleur de 106-110 degrés prévus.\n\n* OÙ...Comté de Broward côtier, Comté de Miami Dade côtier, Comté de Palm Beach côtier, Région métropolitaine de Broward, Région métropolitaine de Palm Beach, Région métropolitaine de Miami Dade, Comté de Collier côtier et Inland Collier County.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité peuvent causer des maladies liées à la chaleur"
+          "es": "* QUÉ...Se esperan índices de calor de 106-110 grados.\n\n* DÓNDE...Condado costero de Broward, Condado costero de Miami Dade, Condado costero de Palm Beach, Área metropolitana de Broward, Área metropolitana de Palm Beach, Área metropolitana de Miami Dade, Condado costero de Collier e Inland Collier County.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades relacionadas con el calor.",
+          "pt": "* O QUÊ...Índices de calor de 106-110 graus esperados.\n\n* ONDE...Condado costeiro de Broward, Condado costeiro de Miami Dade, Condado costeiro de Palm Beach, Área metropolitana de Broward, Área metropolitana de Palm Beach, Área metropolitana de Miami Dade, Condado costeiro de Collier e Condado interior de Collier.\n\n* QUANDO...Das 11h desta manhã até as 19h EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Des indices de chaleur de 106-110 degrés attendus.\n\n* OÙ...Comté côtier de Broward, Comté côtier de Miami Dade, Comté côtier de Palm Beach, Zone métropolitaine de Broward, Zone métropolitaine de Palm Beach, Zone métropolitaine de Miami Dade, Comté côtier de Collier et Comté intérieur de Collier.\n\n* QUAND...À partir de 11h ce matin jusqu'à 19h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31f26884784cba9380b4dc64bda0a5b18b7165f0.001.1",
-        "effectiveAt": "2026-07-29T00:52:00-04:00",
-        "expiresAt": "2026-07-29T23:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ddc5e48252f96754e8dd9fb5199b924d70209f51.001.1",
+        "effectiveAt": "2026-07-30T03:52:00-04:00",
+        "expiresAt": "2026-07-30T23:00:00.000Z"
       }
     ]
   }
