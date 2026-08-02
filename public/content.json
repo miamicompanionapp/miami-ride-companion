@@ -1,58 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-01T13:09:45.511Z",
+    "lastUpdated": "2026-08-02T13:11:31.999Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-01T13:09:40.930Z",
+    "fetchedAt": "2026-08-02T13:11:30.880Z",
     "current": {
-      "temp_f": 83,
-      "feels_f": 94,
+      "temp_f": 81,
+      "feels_f": 91,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
-      "wind_mph": 3,
-      "rain_chance": 40,
+      "humidity": 84,
+      "wind_mph": 4,
+      "rain_chance": 27,
       "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-08-01",
-        "high_f": 90,
-        "low_f": 75,
-        "weathercode": 65,
-        "rain_chance": 40,
-        "description": {
-          "en": "Heavy rain",
-          "es": "Lluvia intensa",
-          "pt": "Chuva forte",
-          "fr": "Pluie forte"
-        }
-      },
-      {
         "date": "2026-08-02",
         "high_f": 85,
-        "low_f": 77,
-        "weathercode": 3,
-        "rain_chance": 30,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-08-03",
-        "high_f": 89,
-        "low_f": 77,
-        "weathercode": 96,
-        "rain_chance": 64,
+        "low_f": 76,
+        "weathercode": 53,
+        "rain_chance": 27,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -61,11 +35,24 @@
         }
       },
       {
+        "date": "2026-08-03",
+        "high_f": 85,
+        "low_f": 75,
+        "weathercode": 81,
+        "rain_chance": 75,
+        "description": {
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
+        }
+      },
+      {
         "date": "2026-08-04",
         "high_f": 90,
-        "low_f": 82,
+        "low_f": 77,
         "weathercode": 95,
-        "rain_chance": 56,
+        "rain_chance": 67,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -76,9 +63,22 @@
       {
         "date": "2026-08-05",
         "high_f": 89,
-        "low_f": 84,
+        "low_f": 85,
         "weathercode": 95,
-        "rain_chance": 48,
+        "rain_chance": 35,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "high_f": 89,
+        "low_f": 83,
+        "weathercode": 95,
+        "rain_chance": 43,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -90,147 +90,147 @@
     "hourly": [
       {
         "hour": "09:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 81,
+        "weathercode": 51,
+        "rain_chance": 16
       },
       {
         "hour": "10:00",
-        "temp_f": 86,
+        "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 2
+        "rain_chance": 27
       },
       {
         "hour": "11:00",
-        "temp_f": 88,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 24
       },
       {
         "hour": "12:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 76,
+        "weathercode": 53,
+        "rain_chance": 22
       },
       {
         "hour": "13:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 79,
+        "weathercode": 53,
+        "rain_chance": 16
       },
       {
         "hour": "14:00",
-        "temp_f": 89,
-        "weathercode": 2,
-        "rain_chance": 6
+        "temp_f": 82,
+        "weathercode": 51,
+        "rain_chance": 19
       },
       {
         "hour": "15:00",
-        "temp_f": 90,
-        "weathercode": 2,
-        "rain_chance": 12
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "16:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 20
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 16
       },
       {
         "hour": "17:00",
-        "temp_f": 75,
-        "weathercode": 65,
-        "rain_chance": 33
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 77,
-        "weathercode": 65,
-        "rain_chance": 40
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 79,
+        "temp_f": 83,
         "weathercode": 3,
         "rain_chance": 21
       },
       {
+        "hour": "18:00",
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 20
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
         "hour": "20:00",
-        "temp_f": 80,
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 14
       },
       {
-        "hour": "21:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
         "hour": "22:00",
-        "temp_f": 80,
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 11
       },
       {
         "hour": "23:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 8
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 7
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 8
-      },
-      {
-        "hour": "07:00",
         "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 9
       },
       {
-        "hour": "08:00",
+        "hour": "00:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 9
+      },
+      {
+        "hour": "01:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 20
+        "rain_chance": 4
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 3
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 3
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 3
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 7
       }
     ]
   },
@@ -1417,56 +1417,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1782566649268_k8we",
-        "title": {
-          "en": "Zendatta - Tribute to The Police w/ Touch & Go - A Tribute to The Cars",
-          "es": "Zendatta - Tributo a The Police con Touch & Go - Tributo a The Cars",
-          "pt": "Zendatta - Tributo a The Police com Touch & Go - Tributo a The Cars",
-          "fr": "Zendatta - Hommage à The Police avec Touch & Go - Hommage à The Cars"
-        },
-        "date": "2026-08-01",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fzendatta-tribute-to-the-police-w-ft-lauderdale-florida-08-01-2026%2Fevent%2F0D0064C608BCC8E8&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/d9d/223012b0-3931-43e6-b249-543a113e5d9d_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Zendatta - A Tribute to The Police will be performing at Revolution Live on Saturday, August 1st with special guests Touch & Go - A Tribute to The Cars. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "Zendatta - Un Tributo a The Police se presentará en Revolution Live el sábado 1 de agosto con los invitados especiales Touch & Go - Tributo a The Cars. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza a las 19:00 · Revolution Live",
-          "pt": "Zendatta - Um Tributo a The Police se apresentará na Revolution Live no sábado, 1º de agosto com os convidados especiais Touch & Go - Tributo a The Cars. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa às 19:00 · Revolution Live",
-          "fr": "Zendatta - Un Hommage à The Police se produira à Revolution Live samedi 1er août avec les invités spéciaux Touch & Go - Hommage à The Cars. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien sont sujets à modification sans préavis. · Commence à 19:00 · Revolution Live"
-        },
-        "lat": 26.121094,
-        "lng": -80.146162,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782566649268_knju",
-        "title": {
-          "en": "Yeat: The LOVE/LYFE Tour",
-          "es": "Yeat: The LOVE/LYFE Tour",
-          "pt": "Yeat: The LOVE/LYFE Tour",
-          "fr": "Yeat: The LOVE/LYFE Tour"
-        },
-        "date": "2026-08-01",
-        "venue": "FTL War Memorial Auditorium",
-        "address": "800 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fyeat-tickets%2Ffort-lauderdale-florida-ftl-war-memorial-auditorium-2026-08-01-7-pm%2Fconcert%2F18147460&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/866/0e415bdd-ed9d-45e6-99b2-c72d8e4f3866_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Hip-Hop/Rap · Starts 20:00 · FTL War Memorial Auditorium",
-          "es": "Música · Hip-Hop/Rap · Comienza a las 20:00 · FTL War Memorial Auditorium",
-          "pt": "Música · Hip-Hop/Rap · Começa às 20:00 · FTL War Memorial Auditorium",
-          "fr": "Musique · Hip-Hop/Rap · Commence à 20:00 · FTL War Memorial Auditorium"
-        },
-        "lat": 26.133662,
-        "lng": -80.134063,
-        "category": "music"
-      },
-      {
         "id": "tm_1782653267512_m1p0",
         "title": {
           "en": "Trhä, Saidan, and Barbelith in Miami",
@@ -1565,31 +1515,6 @@
         "lat": 26.0503384,
         "lng": -80.2109577,
         "category": "music"
-      },
-      {
-        "id": "rss_1783086819771_5yyl",
-        "title": {
-          "en": "Kiddos Magazine Back to School & Anniversary Event 8/1/26",
-          "es": "Kiddos Magazine Regreso a Clases y Evento Aniversario 8/1/26",
-          "pt": "Kiddos Magazine Volta às Aulas e Evento de Aniversário 8/1/26",
-          "fr": "Kiddos Magazine Retour à l'école et événement anniversaire 8/1/26"
-        },
-        "date": "2026-08-01",
-        "venue": "University of Miami – Lakeside Patio & Stage",
-        "address": "1300 Miller Rd., Coral Gables, Florida, 33146",
-        "url": "https://www.soulofmiami.org/2026/07/02/kiddos-magazine-back-to-school-anniversary-event-8-1-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/BTS-IG-350x350.jpg",
-        "description": {
-          "en": "Let’s Get Everyone Ready for Back to School! Come",
-          "es": "¡Preparemos a todos para el regreso a clases! Ven",
-          "pt": "Vamos preparar todos para a volta às aulas! Venha",
-          "fr": "Préparons tout le monde pour la rentrée scolaire! Venez"
-        },
-        "lat": 25.7195079,
-        "lng": -80.2790326,
-        "category": "community"
       },
       {
         "id": "tm_1783086820321_spmv",
@@ -2289,30 +2214,6 @@
         "lng": -80.13314
       },
       {
-        "id": "rss_1784640550705_agqv",
-        "title": {
-          "en": "Thinking About Weight-Loss Injections? Get the Facts First. 8/1/26",
-          "es": "¿Pensando en inyecciones para perder peso? Obtén los hechos primero. 8/1/26",
-          "pt": "Pensando em injeções para perda de peso? Conheça os fatos primeiro. 8/1/26",
-          "fr": "Envisagez-vous des injections pour perdre du poids? Découvrez les faits d'abord. 8/1/26"
-        },
-        "date": "2026-08-01",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/07/20/thinking-about-weight-loss-injections-get-the-facts-first-8-1-26/",
-        "free": false,
-        "price": "$5",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/maga012-350x250.jpg",
-        "description": {
-          "en": "Weight-loss injections can be helpful for the right patient—but they are",
-          "es": "Las inyecciones para perder peso pueden ser útiles para el paciente correcto—pero son",
-          "pt": "As injeções para perda de peso podem ser úteis para o paciente certo—mas são",
-          "fr": "Les injections pour perdre du poids peuvent être utiles pour le bon patient—mais elles sont"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1784727687253_7t6j",
         "title": {
           "en": "Toro Toro Miami Spice Rum Dinner 8/14/26",
@@ -2957,32 +2858,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1785419329806_8uc7",
-        "title": {
-          "en": "Coconut Grove Reunion at Virrick Park 8/1/26",
-          "es": "Reunión de Coconut Grove en Virrick Park 8/1/26",
-          "pt": "Reunião de Coconut Grove no Virrick Park 8/1/26",
-          "fr": "Réunion de Coconut Grove au Virrick Park 8/1/26"
-        },
-        "date": "2026-08-01",
-        "venue": "Virrick Park",
-        "address": "3255 Plaza St, Miami, Florida, 33133",
-        "url": "https://www.soulofmiami.org/2026/07/29/coconut-grove-reunion-at-virrick-park-8-1-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/IMG_20260726_101130-350x437.png",
-        "description": {
-          "en": "FOR IMMEDIATE RELEASE COCONUT GROVE REUNION AT VIRRICK PARK BRINGS COMMUNITY TOGETHER FOR A DAY OF CELEBRATION, HISTORY,",
-          "es": "PARA DIFUSIÓN INMEDIATA REUNIÓN DE COCONUT GROVE EN VIRRICK PARK REÚNE A LA COMUNIDAD PARA UN DÍA DE CELEBRACIÓN, HISTORIA,",
-          "pt": "PARA DIVULGAÇÃO IMEDIATA REUNIÃO DE COCONUT GROVE NO VIRRICK PARK REÚNE A COMUNIDADE PARA UM DIA DE CELEBRAÇÃO, HISTÓRIA,",
-          "fr": "POUR DIFFUSION IMMÉDIATE RÉUNION DE COCONUT GROVE AU VIRRICK PARK RASSEMBLE LA COMMUNAUTÉ POUR UNE JOURNÉE DE CÉLÉBRATION, D'HISTOIRE,"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7307387,
-        "lng": -80.2504668,
-        "category": "community"
-      },
-      {
         "id": "tm_1785419330404_dd02",
         "title": {
           "en": "Palomino Blond, Dust Supply, I Love You This Much, and Ember in Miami",
@@ -3055,58 +2930,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1785506023320_ex4j",
-        "title": {
-          "en": "Inter Miami CF vs Columbus Crew",
-          "es": "Inter Miami CF vs Columbus Crew",
-          "pt": "Inter Miami CF vs Columbus Crew",
-          "fr": "Inter Miami CF vs Columbus Crew"
-        },
-        "date": "2026-08-01",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-columbus-crew-miami-florida-08-01-2026%2Fevent%2F0D0063739DC86812&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
-          "es": "Para información sobre Suites llame al 305-428-0611. · Comienza 19:30 · Nu Stadium",
-          "pt": "Para informações sobre Suites ligue para 305-428-0611. · Começa 19:30 · Nu Stadium",
-          "fr": "Pour des informations sur les Suites appelez le 305-428-0611. · Commence 19:30 · Nu Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
-        "id": "tm_1785506023320_qtr0",
-        "title": {
-          "en": "The BIG Show Improv Comedy Miami",
-          "es": "The BIG Show Comedia de Improvisación Miami",
-          "pt": "The BIG Show Comédia de Improvisação Miami",
-          "fr": "The BIG Show Comédie d'Improvisation Miami"
-        },
-        "date": "2026-08-01",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14897663&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Big Show - Improv Comedy in MiamiIts our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun!Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as cl",
-          "es": "The Big Show - Comedia de Improvisación en Miami. Es nuestro espectáculo insignia: comedia improvisada en vivo, rápida y de primera categoría. ¡Piénsalo como Whose Line is It Anyway meets SNL! The Big Show es comedia improvisada interactiva, protagonizada por nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos en mesas juntos. Haremos nuestro mejor esfuerzo para sentar a grupos más grandes lo más cómodo posible.",
-          "pt": "The Big Show - Comédia de Improvisação em Miami. É nosso show assinatura: comédia improvisada ao vivo, rápida e de primeira qualidade. Pense nisso como Whose Line is It Anyway meets SNL! The Big Show é comédia improvisada interativa, apresentada por nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas. Faremos o nosso melhor para acomodar grupos maiores o mais confortável possível.",
-          "fr": "The Big Show - Comédie d'Improvisation à Miami. C'est notre spectacle phare : comédie improvisée en direct, rapide et de premier ordre. Pensez-y comme Whose Line is It Anyway meets SNL ! The Big Show est une comédie improvisée interactive, mettant en vedette notre troupe talentueuse et primée. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous placerons les groupes ensemble à des tables. Nous ferons de notre mieux pour installer les plus grands groupes aussi confortablement que possible."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
       },
       {
         "id": "tm_1785506023320_zb6n",
@@ -3213,32 +3036,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1785589753330_bpd8",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-01",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familiar · Comienza 10:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Familiar · Começa 10:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Familial · Commence 10:00 · Centre de Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1785589753331_nzmj",
         "title": {
           "en": "The Place To Be prior to Whindersson Nunes",
@@ -3289,6 +3086,134 @@
         "category": "music",
         "lat": 26.121094,
         "lng": -80.146162
+      },
+      {
+        "id": "rss_1785676271764_d4vl",
+        "title": {
+          "en": "Rose’s Monthly Wellness Club: Sound Healing & Meditation 8/7/26",
+          "es": "Club de Bienestar Mensual de Rose: Sanación por Sonido y Meditación 8/7/26",
+          "pt": "Clube de Bem-Estar Mensal de Rose: Cura pelo Som e Meditação 8/7/26",
+          "fr": "Club de Bien-Être Mensuel de Rose: Guérison par le Son et Méditation 8/7/26"
+        },
+        "date": "2026-08-07",
+        "venue": "Rose Cafe & Restaurant",
+        "address": "16690 Collins Ave Ste 102, Sunny Isles Beach, Florida, 33160",
+        "url": "https://www.soulofmiami.org/2026/08/01/roses-monthly-wellness-club-sound-healing-meditation-8-7-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/ROSE-002-281x500.jpg",
+        "description": {
+          "en": "Rose Cafe & Restaurant for a special edition of its monthly",
+          "es": "Rose Cafe & Restaurant para una edición especial de su evento mensual",
+          "pt": "Rose Cafe & Restaurant para uma edição especial de seu evento mensal",
+          "fr": "Rose Cafe & Restaurant pour une édition spéciale de son événement mensuel"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1785676272401_6eop",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-02",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneo · Familia · Comienza 10:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 10:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 10:00 · Centre des Congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1785676272401_ylyn",
+        "title": {
+          "en": "Ishay Ribo with the Israeli Philharmonic Orchestra",
+          "es": "Ishay Ribo con la Orquesta Filarmónica de Israel",
+          "pt": "Ishay Ribo com a Orquestra Filarmônica de Israel",
+          "fr": "Ishay Ribo avec l'Orchestre Philharmonique d'Israël"
+        },
+        "date": "2026-08-30",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fishay-ribo-with-the-israeli-philharmonic-hollywood-florida-08-30-2026%2Fevent%2F0D0064E3B3835EF1&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/fe1/ab49a52d-c448-42ab-ac77-b2eaad4f6fe1_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · World · Starts 19:30 · Hard Rock Live",
+          "es": "Música · Mundial · Comienza 19:30 · Hard Rock Live",
+          "pt": "Música · Mundial · Começa 19:30 · Hard Rock Live",
+          "fr": "Musique · Mondial · Commence 19:30 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1785676272401_jeqb",
+        "title": {
+          "en": "Jorge Drexler",
+          "es": "Jorge Drexler",
+          "pt": "Jorge Drexler",
+          "fr": "Jorge Drexler"
+        },
+        "date": "2026-09-02",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjorge-drexler-miami-beach-florida-09-02-2026%2Fevent%2F0D0064DDA9D95A10&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8f7/48f298b8-e3fb-4276-ab29-3a2df57998f7_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Música · Rock · Comienza 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
+          "pt": "Música · Rock · Começa 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
+          "fr": "Musique · Rock · Commence 20:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1785676272401_efld",
+        "title": {
+          "en": "ASAKE: IN GOD WE TRUST WORLD TOUR",
+          "es": "ASAKE: GIRA MUNDIAL IN GOD WE TRUST",
+          "pt": "ASAKE: TURNÊ MUNDIAL IN GOD WE TRUST",
+          "fr": "ASAKE: TOURNÉE MONDIALE IN GOD WE TRUST"
+        },
+        "date": "2026-09-02",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fasake-in-god-we-trust-world-miami-florida-09-02-2026%2Fevent%2F0D0064ABD582C072&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/3de/d501fea6-3d0c-4aed-8e32-36a20bb223de_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "2x Grammy-nominated artist Asake is an Afrobeats singer and songwriter hailing from Nigeria. With a musical journey grounded in spirituality and connection, his sound blends fuji, Afropop and amapiano styles to create infectious melodies with Yoruba-inspired storytelling. Asake's debut album, Mr. Money With the Vibe (2022), was the highest charting Nigerian debut album in history at the time of it",
+          "es": "El artista nominado 2 veces a los Grammy, Asake, es un cantante y compositor de Afrobeats de Nigeria. Con un viaje musical fundamentado en la espiritualidad y la conexión, su sonido mezcla estilos fuji, Afropop y amapiano para crear melodías pegadizas con narrativa inspirada en Yoruba. El álbum debut de Asake, Mr. Money With the Vibe (2022), fue el álbum debut nigeriano con mayor posicionamiento en la historia en ese momento",
+          "pt": "O artista indicado 2 vezes ao Grammy, Asake, é um cantor e compositor de Afrobeats da Nigéria. Com uma jornada musical enraizada na espiritualidade e conexão, seu som mistura estilos fuji, Afropop e amapiano para criar melodias contagiantes com narrativa inspirada em Yoruba. O álbum de estreia de Asake, Mr. Money With the Vibe (2022), foi o álbum de estreia nigeriano com maior posicionamento na história naquele momento",
+          "fr": "L'artiste nominé 2 fois aux Grammy, Asake, est un chanteur et compositeur d'Afrobeats du Nigéria. Avec un parcours musical ancré dans la spiritualité et la connexion, son son mélange les styles fuji, Afropop et amapiano pour créer des mélodies contagieuses avec une narration inspirée de Yoruba. L'album de débuts d'Asake, Mr. Money With the Vibe (2022), était l'album de débuts nigérian le mieux classé de l'histoire à l'époque"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7707756,
+        "lng": -80.1901174
       }
     ]
   },
@@ -4192,29 +4117,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-01T13:09:40.930Z",
-    "items": [
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.b55f806eb7d2b19e5be3892abb80fb75761564b3.001.1",
-        "type": "weather",
-        "severity": "moderate",
-        "title": {
-          "en": "Heat Advisory",
-          "es": "Aviso de Calor",
-          "pt": "Aviso de Calor",
-          "fr": "Avis de Chaleur"
-        },
-        "detail": {
-          "en": "* WHAT...Heat index values ranging between 105-110 expected.\n\n* WHERE...Coastal Broward County, Coastal Miami Dade County, Far\nSouth Miami-Dade County, Inland Broward County, Inland Miami-Dade\nCounty, Metro Broward County, and Metropolitan Miami Dade Counties.\n\n* WHEN...From 11 AM this morning to 6 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan índices de calor entre 105-110.\n\n* DÓNDE...Condado costero de Broward, Condado costero de Miami Dade, Sur lejano del Condado de Miami-Dade, Condado interior de Broward, Condado interior de Miami-Dade, Metro Condado de Broward y Condados Metropolitanos de Miami Dade.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 6 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y la humedad elevada pueden causar enfermedades relacionadas con el calor.",
-          "pt": "* O QUÊ...Índices de calor entre 105-110 esperados.\n\n* ONDE...Condado costeiro de Broward, Condado costeiro de Miami Dade, Sul distante do Condado de Miami-Dade, Condado interior de Broward, Condado interior de Miami-Dade, Metro Condado de Broward e Condados Metropolitanos de Miami Dade.\n\n* QUANDO...Das 11 AM desta manhã até as 18h EDT desta tarde.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Indices de chaleur entre 105-110 prévus.\n\n* OÙ...Comté de Broward côtier, Comté de Miami Dade côtier, Extrême sud du Comté de Miami-Dade, Comté de Broward intérieur, Comté de Miami-Dade intérieur, Métro Comté de Broward et Comtés Métropolitains de Miami Dade.\n\n* QUAND...De 11 h du matin ce matin à 18 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité élevée peuvent causer des maladies liées à la chaleur."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b55f806eb7d2b19e5be3892abb80fb75761564b3.001.1",
-        "effectiveAt": "2026-08-01T02:08:00-04:00",
-        "expiresAt": "2026-08-01T22:00:00.000Z"
-      }
-    ]
+    "fetchedAt": "2026-08-02T13:11:30.880Z",
+    "items": []
   }
 }
