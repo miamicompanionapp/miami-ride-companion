@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-02T13:11:31.999Z",
+    "lastUpdated": "2026-08-03T14:29:24.960Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-02T13:11:30.880Z",
+    "fetchedAt": "2026-08-03T14:29:24.060Z",
     "current": {
-      "temp_f": 81,
-      "feels_f": 91,
+      "temp_f": 86,
+      "feels_f": 97,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 84,
-      "wind_mph": 4,
-      "rain_chance": 27,
+      "humidity": 78,
+      "wind_mph": 7,
+      "rain_chance": 29,
       "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-08-02",
-        "high_f": 85,
-        "low_f": 76,
-        "weathercode": 53,
-        "rain_chance": 27,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-08-03",
-        "high_f": 85,
-        "low_f": 75,
-        "weathercode": 81,
-        "rain_chance": 75,
+        "high_f": 87,
+        "low_f": 76,
+        "weathercode": 82,
+        "rain_chance": 29,
         "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-08-04",
-        "high_f": 90,
-        "low_f": 77,
-        "weathercode": 95,
-        "rain_chance": 67,
+        "high_f": 86,
+        "low_f": 74,
+        "weathercode": 82,
+        "rain_chance": 25,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-08-05",
         "high_f": 89,
-        "low_f": 85,
+        "low_f": 74,
         "weathercode": 95,
-        "rain_chance": 35,
+        "rain_chance": 44,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-08-06",
-        "high_f": 89,
-        "low_f": 83,
-        "weathercode": 95,
-        "rain_chance": 43,
+        "high_f": 88,
+        "low_f": 84,
+        "weathercode": 96,
+        "rain_chance": 45,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-08-07",
+        "high_f": 88,
+        "low_f": 83,
+        "weathercode": 96,
+        "rain_chance": 55,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "09:00",
-        "temp_f": 81,
-        "weathercode": 51,
-        "rain_chance": 16
-      },
-      {
         "hour": "10:00",
-        "temp_f": 84,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 27
+        "rain_chance": 2
       },
       {
         "hour": "11:00",
-        "temp_f": 85,
+        "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 24
+        "rain_chance": 5
       },
       {
         "hour": "12:00",
-        "temp_f": 76,
-        "weathercode": 53,
-        "rain_chance": 22
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 7
       },
       {
         "hour": "13:00",
-        "temp_f": 79,
-        "weathercode": 53,
-        "rain_chance": 16
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 10
       },
       {
         "hour": "14:00",
-        "temp_f": 82,
-        "weathercode": 51,
+        "temp_f": 77,
+        "weathercode": 81,
         "rain_chance": 19
       },
       {
         "hour": "15:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 15
+        "temp_f": 77,
+        "weathercode": 82,
+        "rain_chance": 29
       },
       {
         "hour": "16:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 16
+        "temp_f": 76,
+        "weathercode": 53,
+        "rain_chance": 24
       },
       {
         "hour": "17:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 21
+        "temp_f": 79,
+        "weathercode": 51,
+        "rain_chance": 28
       },
       {
         "hour": "18:00",
-        "temp_f": 84,
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 25
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 81,
         "weathercode": 3,
         "rain_chance": 20
       },
       {
-        "hour": "19:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 18
-      },
-      {
         "hour": "20:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 22
       },
       {
         "hour": "21:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 14
+        "rain_chance": 18
       },
       {
         "hour": "22:00",
-        "temp_f": 77,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 18
       },
       {
         "hour": "23:00",
-        "temp_f": 77,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 9
       },
       {
         "hour": "00:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 4
       },
       {
         "hour": "01:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 6
       },
       {
         "hour": "02:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 80,
-        "weathercode": 3,
         "rain_chance": 4
       },
       {
-        "hour": "06:00",
-        "temp_f": 80,
+        "hour": "03:00",
+        "temp_f": 76,
+        "weathercode": 51,
+        "rain_chance": 5
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 5
       },
       {
+        "hour": "05:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 9
+      },
+      {
         "hour": "07:00",
-        "temp_f": 80,
+        "temp_f": 78,
         "weathercode": 3,
         "rain_chance": 5
       },
       {
         "hour": "08:00",
-        "temp_f": 82,
+        "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 6
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 8
       }
     ]
   },
@@ -2015,29 +2015,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1784209274228_ft93",
-        "title": {
-          "en": "Herpreneur Artisan Market at The Goodtime Hotel 8/2/26",
-          "es": "Mercado Artesanal Herpreneur en The Goodtime Hotel 8/2/26",
-          "pt": "Mercado Artesanal Herpreneur no The Goodtime Hotel 8/2/26",
-          "fr": "Marché Artisanal Herpreneur au The Goodtime Hotel 8/2/26"
-        },
-        "date": "2026-08-02",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/07/15/herpreneur-artisan-market-at-the-goodtime-hotel-8-2-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/The-Goodtime-Hotel_Courtyard1-333x500.jpg",
-        "description": {
-          "en": "The Goodtime Hotel, Miami Beach will host an artisan market on Sunday, August",
-          "es": "The Goodtime Hotel en Miami Beach albergará un mercado artesanal el domingo de agosto",
-          "pt": "The Goodtime Hotel em Miami Beach sediará um mercado artesanal no domingo de agosto",
-          "fr": "The Goodtime Hotel à Miami Beach accueillera un marché artisanal le dimanche d'août"
-        },
-        "category": "community"
-      },
-      {
         "id": "tm_1784466464004_izlw",
         "title": {
           "en": "Clarent",
@@ -3036,32 +3013,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1785589753331_nzmj",
-        "title": {
-          "en": "The Place To Be prior to Whindersson Nunes",
-          "es": "El Lugar Para Estar antes de Whindersson Nunes",
-          "pt": "O Lugar Para Estar antes de Whindersson Nunes",
-          "fr": "Le Lieu Pour Être avant Whindersson Nunes"
-        },
-        "date": "2026-08-02",
-        "venue": "The Place To Be at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-08-02-2026%2Fevent%2F0D0064C2C701E7A6&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
-          "es": "¡Este es El Lugar Para Estar! El salón exclusivo para donantes en The Parker ofrece un número limitado de entradas a la venta al público sobre una base de disponibilidad. $75.00 POR PERSONA. Este club privado proporciona una experiencia ultra premium - servicio de comida y bebida gratuito en un refugio privado en el piso inferior de The Parker. Disfruta de un bar abierto que sirve licores de primera calidad, una selección de aperitivos fríos y calientes",
-          "pt": "Este é o Lugar Para Estar! O exclusivo lounge de doadores em The Parker oferece um número limitado de ingressos à venda ao público em base de disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço complimentar de alimentos e bebidas em um refúgio privado no andar inferior de The Parker. Desfrute de um bar aberto servindo bebidas de primeira qualidade, uma seleção de aperitivos quentes e frios",
-          "fr": "C'est le Lieu Pour Être! Le salon exclusif des donateurs au Parker offre un nombre limité de billets à la vente au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra-premium - service gratuit de nourriture et de boissons dans un refuge privé au rez-de-chaussée du Parker. Profitez d'un bar ouvert servant des spiritueux premium, une sélection d'amuse-bouches chauds et froids"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
         "id": "tm_1785589753331_h0qe",
         "title": {
           "en": "HOUSE OF HEAVY - Nu Metal + Metalcore Night",
@@ -3110,32 +3061,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1785676272401_6eop",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-02",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza 10:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 10:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 10:00 · Centre des Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
       },
       {
         "id": "tm_1785676272401_ylyn",
@@ -3214,6 +3139,106 @@
         "category": "music",
         "lat": 25.7707756,
         "lng": -80.1901174
+      },
+      {
+        "id": "rss_1785767345723_qhl4",
+        "title": {
+          "en": "Marcello Hernández to play encore Spanish show this December",
+          "es": "Marcello Hernández tocará un encore de show en español este diciembre",
+          "pt": "Marcello Hernández fará um show extra em espanhol este dezembro",
+          "fr": "Marcello Hernández jouera un spectacle en espagnol en bis ce décembre"
+        },
+        "date": "2026-08-03",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/arts-culture/marcello-hernandez-to-play-encore-spanish-show-in-miami-in-december-40573412/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/08/Marcello-Approved-Headshot-Dec-2025.jpeg",
+        "description": {
+          "en": "The Miami-made 'SNL' breakout star was already scheduled to play three shows — two in English and one in Spanish — at Hard Rock Live in November.",
+          "es": "La estrella revelación de 'SNL' hecha en Miami ya estaba programada para tocar tres shows — dos en inglés y uno en español — en Hard Rock Live en noviembre.",
+          "pt": "A estrela revelação do 'SNL' feita em Miami já estava programada para fazer três shows — dois em inglês e um em espanhol — no Hard Rock Live em novembro.",
+          "fr": "La vedette révélation de 'SNL' originaire de Miami était déjà programmée pour jouer trois spectacles — deux en anglais et un en espagnol — au Hard Rock Live en novembre."
+        },
+        "source": "Miami New Times",
+        "category": "music"
+      },
+      {
+        "id": "tm_1785767346197_1ssx",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-03",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1785767346197_i2py",
+        "title": {
+          "en": "Nemo Kids: : A Summer Theater Camp Production",
+          "es": "Nemo Kids: Una Producción del Campamento de Teatro de Verano",
+          "pt": "Nemo Kids: Uma Produção do Acampamento de Teatro de Verão",
+          "fr": "Nemo Kids : Une Production du Camp de Théâtre d'Été"
+        },
+        "date": "2026-08-04",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnemo-kids-a-summer-theater-camp-ft-lauderdale-florida-08-04-2026%2Fevent%2F0D0064C3AD90A6AD&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/22f/ebd07237-a072-4450-bac4-7476fc61e22f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Explore the big blue world in this lively 30-minute musical based on the beloved Pixar film! Marlin, an anxious and overprotective clownfish, lives in the Great Barrier Reef with his adventurous son, Nemo. When Nemo is captured and taken to Sydney, Marlin must face his fears and journey across the ocean to find him. Along the way, he meets unforgettable characters including optimistic Dory, laid-b",
+          "es": "¡Explora el gran mundo azul en este musical animado de 30 minutos basado en la película de Pixar! Marlin, un pez payaso ansioso y sobreprotector, vive en la Gran Barrera de Coral con su aventurero hijo Nemo. Cuando Nemo es capturado y llevado a Sídney, Marlin debe enfrentar sus miedos y viajar a través del océano para encontrarlo. En el camino, conoce personajes inolvidables incluyendo la optimista Dory, la relajada",
+          "pt": "Explore o grande mundo azul neste musical animado de 30 minutos baseado no filme da Pixar! Marlin, um peixe-palhaço ansioso e superprotetor, vive na Grande Barreira de Coral com seu filho aventureiro Nemo. Quando Nemo é capturado e levado para Sydney, Marlin deve enfrentar seus medos e viajar pelo oceano para encontrá-lo. Pelo caminho, ele conhece personagens inesquecíveis, incluindo a otimista Dory, a descontra",
+          "fr": "Explorez le grand monde bleu dans cette comédie musicale animée de 30 minutes basée sur le film Pixar ! Marin, un poisson-clown anxieux et surprotecteur, vit sur la Grande Barrière de Corail avec son fils aventureux Nemo. Quand Nemo est capturé et emmené à Sydney, Marin doit affronter ses peurs et traverser l'océan pour le retrouver. En chemin, il rencontre des personnages inoubliables, notamment l'optimiste Dory, la décontra"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "cp_1785767346891_zqc2",
+        "title": {
+          "en": "Battle of the Bands",
+          "es": "Batalla de las Bandas",
+          "pt": "Batalha das Bandas",
+          "fr": "Bataille des Groupes"
+        },
+        "date": "2026-08-07",
+        "venue": "Mizner Park Amphitheater",
+        "address": "590 Plaza Real  BOCA RATON FL 33432",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=27",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://myboca.us/calendar.aspx?EID=15156",
+          "es": "https://myboca.us/calendar.aspx?EID=15156",
+          "pt": "https://myboca.us/calendar.aspx?EID=15156",
+          "fr": "https://myboca.us/calendar.aspx?EID=15156"
+        },
+        "source": "Boca Raton",
+        "category": "community"
       }
     ]
   },
@@ -4117,7 +4142,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-02T13:11:30.880Z",
+    "fetchedAt": "2026-08-03T14:29:24.060Z",
     "items": []
   }
 }
