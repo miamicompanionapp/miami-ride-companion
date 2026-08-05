@@ -1,30 +1,30 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-04T14:00:44.547Z",
+    "lastUpdated": "2026-08-05T13:58:29.076Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-04T14:00:43.873Z",
+    "fetchedAt": "2026-08-05T13:58:28.388Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 97,
+      "temp_f": 83,
+      "feels_f": 92,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 82,
-      "wind_mph": 3,
+      "humidity": 78,
+      "wind_mph": 5,
       "rain_chance": 23,
-      "weathercode": 0
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-08-04",
-        "high_f": 86,
-        "low_f": 77,
+        "date": "2026-08-05",
+        "high_f": 84,
+        "low_f": 76,
         "weathercode": 3,
         "rain_chance": 23,
         "description": {
@@ -35,11 +35,11 @@
         }
       },
       {
-        "date": "2026-08-05",
-        "high_f": 82,
+        "date": "2026-08-06",
+        "high_f": 86,
         "low_f": 76,
-        "weathercode": 55,
-        "rain_chance": 30,
+        "weathercode": 53,
+        "rain_chance": 36,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -48,24 +48,11 @@
         }
       },
       {
-        "date": "2026-08-06",
-        "high_f": 88,
-        "low_f": 77,
-        "weathercode": 95,
-        "rain_chance": 57,
-        "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
-        }
-      },
-      {
         "date": "2026-08-07",
         "high_f": 87,
-        "low_f": 83,
+        "low_f": 80,
         "weathercode": 96,
-        "rain_chance": 59,
+        "rain_chance": 52,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -78,159 +65,172 @@
         "high_f": 88,
         "low_f": 84,
         "weathercode": 95,
-        "rain_chance": 42,
+        "rain_chance": 22,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
           "pt": "Trovoada",
           "fr": "Orage"
         }
+      },
+      {
+        "date": "2026-08-09",
+        "high_f": 88,
+        "low_f": 84,
+        "weathercode": 51,
+        "rain_chance": 14,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
       }
     ],
     "hourly": [
       {
+        "hour": "09:00",
+        "temp_f": 82,
+        "weathercode": 2,
+        "rain_chance": 5
+      },
+      {
         "hour": "10:00",
         "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 86,
-        "weathercode": 0,
+        "weathercode": 3,
         "rain_chance": 7
       },
       {
-        "hour": "13:00",
-        "temp_f": 86,
-        "weathercode": 0,
+        "hour": "11:00",
+        "temp_f": 83,
+        "weathercode": 3,
         "rain_chance": 8
       },
       {
+        "hour": "12:00",
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 17
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 23
+      },
+      {
         "hour": "14:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 10
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 19
       },
       {
         "hour": "15:00",
-        "temp_f": 80,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 21
       },
       {
         "hour": "16:00",
         "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 15
+        "weathercode": 2,
+        "rain_chance": 18
       },
       {
         "hour": "17:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 20
+        "temp_f": 82,
+        "weathercode": 2,
+        "rain_chance": 9
       },
       {
         "hour": "18:00",
-        "temp_f": 84,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 23
+        "rain_chance": 5
       },
       {
         "hour": "19:00",
         "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 17
+        "rain_chance": 4
       },
       {
         "hour": "20:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "21:00",
-        "temp_f": 81,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 12
+        "rain_chance": 8
       },
       {
         "hour": "22:00",
-        "temp_f": 79,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 10
       },
       {
         "hour": "23:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 7
+        "weathercode": 0,
+        "rain_chance": 11
       },
       {
         "hour": "00:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 7
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 7
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "08:00",
         "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 11
       },
       {
-        "hour": "09:00",
+        "hour": "01:00",
+        "temp_f": 76,
+        "weathercode": 53,
+        "rain_chance": 15
+      },
+      {
+        "hour": "02:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 19
+        "rain_chance": 22
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 16
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 9
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 18
       }
     ]
   },
@@ -2735,30 +2735,6 @@
         "lng": -80.187805
       },
       {
-        "id": "cp_1785333593248_62zm",
-        "title": {
-          "en": "National Night Out and School Supplies Give Away and Health Fair",
-          "es": "Noche Nacional de Vigilancia, Donación de Útiles Escolares y Feria de Salud",
-          "pt": "Noite Nacional de Segurança, Doação de Material Escolar e Feira de Saúde",
-          "fr": "Nuit Nationale de Surveillance, Distribution de Fournitures Scolaires et Foire de Santé"
-        },
-        "date": "2026-08-04",
-        "venue": "Marjorie & William McDonald Center",
-        "address": "17051 NE 19 Avenue  North Miami Beach FL 33162",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "https://www.citynmb.com/calendar.aspx?EID=8923",
-          "es": "https://www.citynmb.com/calendar.aspx?EID=8923",
-          "pt": "https://www.citynmb.com/calendar.aspx?EID=8923",
-          "fr": "https://www.citynmb.com/calendar.aspx?EID=8923"
-        },
-        "source": "North Miami Beach",
-        "category": "community"
-      },
-      {
         "id": "cp_1785333593248_x9y8",
         "title": {
           "en": "Wardell Chance Memorial Field Grand Re-Opening",
@@ -3115,32 +3091,6 @@
         "lng": -80.1901174
       },
       {
-        "id": "tm_1785767346197_i2py",
-        "title": {
-          "en": "Nemo Kids: : A Summer Theater Camp Production",
-          "es": "Nemo Kids: Una Producción del Campamento de Teatro de Verano",
-          "pt": "Nemo Kids: Uma Produção do Acampamento de Teatro de Verão",
-          "fr": "Nemo Kids : Une Production du Camp de Théâtre d'Été"
-        },
-        "date": "2026-08-04",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnemo-kids-a-summer-theater-camp-ft-lauderdale-florida-08-04-2026%2Fevent%2F0D0064C3AD90A6AD&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/22f/ebd07237-a072-4450-bac4-7476fc61e22f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Explore the big blue world in this lively 30-minute musical based on the beloved Pixar film! Marlin, an anxious and overprotective clownfish, lives in the Great Barrier Reef with his adventurous son, Nemo. When Nemo is captured and taken to Sydney, Marlin must face his fears and journey across the ocean to find him. Along the way, he meets unforgettable characters including optimistic Dory, laid-b",
-          "es": "¡Explora el gran mundo azul en este musical animado de 30 minutos basado en la película de Pixar! Marlin, un pez payaso ansioso y sobreprotector, vive en la Gran Barrera de Coral con su aventurero hijo Nemo. Cuando Nemo es capturado y llevado a Sídney, Marlin debe enfrentar sus miedos y viajar a través del océano para encontrarlo. En el camino, conoce personajes inolvidables incluyendo la optimista Dory, la relajada",
-          "pt": "Explore o grande mundo azul neste musical animado de 30 minutos baseado no filme da Pixar! Marlin, um peixe-palhaço ansioso e superprotetor, vive na Grande Barreira de Coral com seu filho aventureiro Nemo. Quando Nemo é capturado e levado para Sydney, Marlin deve enfrentar seus medos e viajar pelo oceano para encontrá-lo. Pelo caminho, ele conhece personagens inesquecíveis, incluindo a otimista Dory, a descontra",
-          "fr": "Explorez le grand monde bleu dans cette comédie musicale animée de 30 minutes basée sur le film Pixar ! Marin, un poisson-clown anxieux et surprotecteur, vit sur la Grande Barrière de Corail avec son fils aventureux Nemo. Quand Nemo est capturé et emmené à Sydney, Marin doit affronter ses peurs et traverser l'océan pour le retrouver. En chemin, il rencontre des personnages inoubliables, notamment l'optimiste Dory, la décontra"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
         "id": "cp_1785767346891_zqc2",
         "title": {
           "en": "Battle of the Bands",
@@ -3187,32 +3137,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "rss_1785852008678_14rm",
-        "title": {
-          "en": "Ladies Who Lunch: Tuesday Afternoon Drag Show 8/4/26",
-          "es": "Ladies Who Lunch: Espectáculo de Drag del Martes por la Tarde 8/4/26",
-          "pt": "Ladies Who Lunch: Show de Drag Terça à Tarde 8/4/26",
-          "fr": "Ladies Who Lunch: Spectacle de Drag Mardi Après-midi 8/4/26"
-        },
-        "date": "2026-08-04",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/03/ladies-who-lunch-tuesday-afternoon-drag-show-8-4-26/",
-        "free": true,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Tuesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los martes son para los chicos que desayunan bellamente en Palace South Beach. Únete a nosotros",
-          "pt": "Terças são para os garotos que bruncham lindamente no Palace South Beach. Junte-se a nós",
-          "fr": "Les mardis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
       },
       {
         "id": "rss_1785852008678_fi3r",
@@ -3317,32 +3241,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1785852009200_teg3",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-04",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 11:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 11:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 11:00 · Centre de Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1785852009200_ha2w",
         "title": {
           "en": "Beetlejuice Jr.: A Summer Theater Camp Production",
@@ -3419,6 +3317,134 @@
         "category": "arts",
         "lat": 26.0503384,
         "lng": -80.2109577
+      },
+      {
+        "id": "rss_1785938278700_788g",
+        "title": {
+          "en": "R House Brings Westeros to Wynwood With An All-Day “DRAGARYS: RHouse of Dragon” Takeover 8/9/26",
+          "es": "R House Trae Poniente a Wynwood Con Una Takeover Todo el Día \"DRAGARYS: RHouse of Dragon\" 8/9/26",
+          "pt": "R House Traz Westeros para Wynwood Com Uma Takeover o Dia Todo \"DRAGARYS: RHouse of Dragon\" 8/9/26",
+          "fr": "R House Apporte Westeros à Wynwood Avec Une Prise de Contrôle Toute la Journée \"DRAGARYS: RHouse of Dragon\" 8/9/26"
+        },
+        "date": "2026-08-09",
+        "venue": "R House",
+        "address": "2727 NW 2nd Ave, Miami, Florida, 33127",
+        "url": "https://www.soulofmiami.org/2026/08/04/r-house-brings-westeros-to-wynwood-with-an-all-day-dragarys-rhouse-of-dragon-takeover-8-9-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/CHACHITA-AI-350x233.png",
+        "description": {
+          "en": "into the realm of dragons, rival royal houses and",
+          "es": "al reino de dragones, casas reales rivales y",
+          "pt": "para o reino de dragões, casas reais rivais e",
+          "fr": "dans le royaume des dragons, des maisons royales rivales et"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8026905,
+        "lng": -80.1989724,
+        "category": "community"
+      },
+      {
+        "id": "rss_1785938278700_48dm",
+        "title": {
+          "en": "MOAD Talks – A Conversation with Khadijah Cypress 8/15/26",
+          "es": "MOAD Talks – Una Conversación con Khadijah Cypress 8/15/26",
+          "pt": "MOAD Talks – Uma Conversa com Khadijah Cypress 8/15/26",
+          "fr": "MOAD Talks – Une Conversation avec Khadijah Cypress 8/15/26"
+        },
+        "date": "2026-08-15",
+        "venue": "Jennifer Weinberg",
+        "address": "600 Biscayne Boulevard, Miami, Florida, 33132",
+        "url": "https://www.soulofmiami.org/2026/08/04/moad-talks-a-conversation-with-khadijah-cypress-8-15-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/image1-350x466.jpeg",
+        "description": {
+          "en": "Join the Museum of Art and Design’s Consulting Curator, Isabela Villaneuva in conversation with Khadijah Cypress",
+          "es": "Únete al Curador Consultor del Museo de Arte y Diseño, Isabela Villaneuva en conversación con Khadijah Cypress",
+          "pt": "Junte-se ao Curador Consultor do Museu de Arte e Design, Isabela Villaneuva em conversa com Khadijah Cypress",
+          "fr": "Rejoignez le Conservateur Consultant du Musée d'Art et Design, Isabela Villaneuva dans une conversation avec Khadijah Cypress"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.780295,
+        "lng": -80.18971,
+        "category": "community"
+      },
+      {
+        "id": "tm_1785938279294_5d4h",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte Es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-05",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneos · Familiar · Comienza 11:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Familiar · Começa 11:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Familial · Commence 11:00 · Centre de Conventions Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1785938279294_rydo",
+        "title": {
+          "en": "Hadestown: Teen Edition: A Summer Theater Camp Production",
+          "es": "Hadestown: Edición para Adolescentes: Una Producción del Campamento de Teatro de Verano",
+          "pt": "Hadestown: Edição para Adolescentes: Uma Produção do Acampamento de Teatro de Verão",
+          "fr": "Hadestown: Édition Ados: Une Production du Camp de Théâtre d'Été"
+        },
+        "date": "2026-08-06",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhadestown-teen-edition-a-summer-theater-ft-lauderdale-florida-08-06-2026%2Fevent%2F0D0064C5BABEEBDC&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d81/daf87c08-d8c3-45d4-80ff-4eee537e0d81_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Hadestown: Teen Edition is a full-length adaptation of Anaïs Mitchell's Hadestown, modified for performance by teen actors for family audiences. This intriguing and beautiful folk opera delivers a deeply resonant and defiantly hopeful theatrical experience. Following two intertwining love stories - that of young dreamers Orpheus and Eurydice, and that of immortal King Hades and lady Persephone - H",
+          "es": "Hadestown: Edición para Adolescentes es una adaptación de longitud completa de Hadestown de Anaïs Mitchell, modificada para ser interpretada por actores adolescentes para audiencias familiares. Esta ópera folclórica intrigante y hermosa ofrece una experiencia teatral profundamente resonante y desafiante esperanzadora. Siguiendo dos historias de amor entrelazadas - la de los jóvenes soñadores Orfeo y Eurídice, y la del inmortal Rey Hades y la dama Perséfone",
+          "pt": "Hadestown: Edição para Adolescentes é uma adaptação completa de Hadestown de Anaïs Mitchell, modificada para ser interpretada por atores adolescentes para públicos familiares. Esta ópera folclórica intrigante e bela oferece uma experiência teatral profundamente ressonante e defientemente esperançosa. Seguindo duas histórias de amor entrelaçadas - a dos jovens sonhadores Orfeu e Eurídice, e a do rei imortal Hades e da dama Perséfone",
+          "fr": "Hadestown: Édition Ados est une adaptation complète de Hadestown d'Anaïs Mitchell, modifiée pour être jouée par des acteurs adolescents pour un public familial. Cet opéra folk intrigant et beau offre une expérience théâtrale profondément résonnante et résolument pleine d'espoir. Suivant deux histoires d'amour entrelacées - celle des jeunes rêveurs Orphée et Eurydice, et celle du roi immortel Hadès et de la dame Perséphone"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "cp_1785938282927_1qzx",
+        "title": {
+          "en": "Safety First Townhall: Washington Park",
+          "es": "Sesión Informativa de Seguridad Primero: Parque Washington",
+          "pt": "Sessão Informativa de Segurança em Primeiro: Parque Washington",
+          "fr": "Réunion Publique Sécurité d'Abord: Parc Washington"
+        },
+        "date": "2026-08-06",
+        "venue": "- New St. Mary's Missionary Baptist Church 1550 NE 152nd Terrace North Miami Beach FL 33162",
+        "address": "",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://www.citynmb.com/calendar.aspx?EID=8913",
+          "es": "https://www.citynmb.com/calendar.aspx?EID=8913",
+          "pt": "https://www.citynmb.com/calendar.aspx?EID=8913",
+          "fr": "https://www.citynmb.com/calendar.aspx?EID=8913"
+        },
+        "source": "North Miami Beach",
+        "category": "community"
       }
     ]
   },
@@ -4322,7 +4348,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-04T14:00:43.873Z",
+    "fetchedAt": "2026-08-05T13:58:28.388Z",
     "items": []
   }
 }
