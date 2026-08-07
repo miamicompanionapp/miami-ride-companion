@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-06T13:55:43.036Z",
+    "lastUpdated": "2026-08-07T12:53:46.448Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-06T13:55:38.131Z",
+    "fetchedAt": "2026-08-07T12:53:42.770Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 92,
+      "temp_f": 81,
+      "feels_f": 94,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 79,
-      "wind_mph": 11,
-      "rain_chance": 29,
-      "weathercode": 2
+      "humidity": 91,
+      "wind_mph": 2,
+      "rain_chance": 12,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-06",
-        "high_f": 86,
-        "low_f": 79,
-        "weathercode": 51,
-        "rain_chance": 29,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
         "date": "2026-08-07",
-        "high_f": 86,
-        "low_f": 78,
-        "weathercode": 82,
-        "rain_chance": 28,
+        "high_f": 88,
+        "low_f": 76,
+        "weathercode": 3,
+        "rain_chance": 12,
         "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-08",
         "high_f": 88,
-        "low_f": 81,
-        "weathercode": 95,
-        "rain_chance": 32,
+        "low_f": 79,
+        "weathercode": 3,
+        "rain_chance": 13,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-09",
-        "high_f": 88,
-        "low_f": 84,
+        "high_f": 89,
+        "low_f": 81,
         "weathercode": 95,
-        "rain_chance": 16,
+        "rain_chance": 17,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -77,8 +64,21 @@
         "date": "2026-08-10",
         "high_f": 88,
         "low_f": 84,
+        "weathercode": 53,
+        "rain_chance": 9,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-08-11",
+        "high_f": 88,
+        "low_f": 84,
         "weathercode": 51,
-        "rain_chance": 12,
+        "rain_chance": 10,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -89,58 +89,64 @@
     ],
     "hourly": [
       {
+        "hour": "08:00",
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 6
+      },
+      {
         "hour": "09:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 23
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "10:00",
         "temp_f": 85,
-        "weathercode": 1,
-        "rain_chance": 28
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "11:00",
-        "temp_f": 85,
-        "weathercode": 2,
-        "rain_chance": 29
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "12:00",
-        "temp_f": 85,
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 26
+        "rain_chance": 7
       },
       {
         "hour": "13:00",
         "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 27
+        "rain_chance": 9
       },
       {
         "hour": "14:00",
-        "temp_f": 85,
-        "weathercode": 51,
-        "rain_chance": 21
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 9
       },
       {
         "hour": "15:00",
-        "temp_f": 84,
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 17
+        "rain_chance": 9
       },
       {
         "hour": "16:00",
-        "temp_f": 86,
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 9
       },
       {
         "hour": "17:00",
-        "temp_f": 86,
-        "weathercode": 2,
-        "rain_chance": 8
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "18:00",
@@ -151,86 +157,80 @@
       {
         "hour": "19:00",
         "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 4
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "20:00",
         "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 5
+        "weathercode": 3,
+        "rain_chance": 7
       },
       {
         "hour": "21:00",
         "temp_f": 81,
-        "weathercode": 0,
+        "weathercode": 3,
         "rain_chance": 6
       },
       {
         "hour": "22:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 7
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "23:00",
         "temp_f": 80,
         "weathercode": 1,
-        "rain_chance": 13
+        "rain_chance": 10
       },
       {
         "hour": "00:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 19
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 13
       },
       {
         "hour": "01:00",
         "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 14
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 15
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 15
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 78,
-        "weathercode": 1,
+        "weathercode": 2,
         "rain_chance": 10
       },
       {
-        "hour": "05:00",
-        "temp_f": 78,
-        "weathercode": 1,
+        "hour": "02:00",
+        "temp_f": 79,
+        "weathercode": 3,
         "rain_chance": 11
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 9
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 7
       },
       {
         "hour": "06:00",
-        "temp_f": 78,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 5
       },
       {
         "hour": "07:00",
-        "temp_f": 78,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 12
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 18
+        "rain_chance": 5
       }
     ]
   },
@@ -1417,56 +1417,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1782653267512_m1p0",
-        "title": {
-          "en": "Trhä, Saidan, and Barbelith in Miami",
-          "es": "Trhä, Saidan y Barbelith en Miami",
-          "pt": "Trhä, Saidan e Barbelith em Miami",
-          "fr": "Trhä, Saidan et Barbelith à Miami"
-        },
-        "date": "2026-08-06",
-        "venue": "Churchill's Pub",
-        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ftrh-saidan-and-barbelith-in-churchills-pub-tickets%2F14923223&utm_medium=affiliate",
-        "free": false,
-        "price": "$28",
-        "image": "https://s1.ticketm.net/dam/c/e7c/86478562-7218-4e8f-b9d4-8080fe168e7c_105581_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 18 and over. Any ticket holder unable to present valid identification indicating that they are at least 18 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 19:00 · Churchill's Pub",
-          "es": "Este evento es solo para mayores de 18 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 18 años no será admitido en este evento y no será elegible para un reembolso. · Comienza a las 19:00 · Churchill's Pub",
-          "pt": "Este evento é apenas para maiores de 18 anos. Qualquer portador de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 18 anos não será admitido neste evento e não será elegível para reembolso. · Começa às 19:00 · Churchill's Pub",
-          "fr": "Cet événement est réservé aux 18 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 18 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence à 19:00 · Churchill's Pub"
-        },
-        "lat": 25.82647681611792,
-        "lng": -80.19169187791115,
-        "category": "music"
-      },
-      {
-        "id": "tm_1782653267512_9i33",
-        "title": {
-          "en": "Mumford & Sons - Prizefighter Tour",
-          "es": "Mumford & Sons - Gira Prizefighter",
-          "pt": "Mumford & Sons - Turnê Prizefighter",
-          "fr": "Mumford & Sons - Tournée Prizefighter"
-        },
-        "date": "2026-08-06",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmumford-sons-prizefighter-tour-hollywood-florida-08-06-2026%2Fevent%2F0D00645290898063&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/cf5/e0cd2894-db52-49cf-afff-e0f5b2dd9cf5_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Mumford & Sons has partnered with PLUS1 to support Children in Conflict, part of the War Child Alliance. $1 from every ticket sold will help Children in Conflict to protect, educate, and stand up for the rights of children affected by war. No portion of the purchase price is tax deductible. https://www.childreninconflict.org/ · Starts 19:30 · Hard Rock Live",
-          "es": "Mumford & Sons se ha asociado con PLUS1 para apoyar a Niños en Conflicto, parte de la Alianza War Child. $1 de cada entrada vendida ayudará a Niños en Conflicto a proteger, educar y defender los derechos de los niños afectados por la guerra. Ninguna parte del precio de compra es deducible de impuestos. https://www.childreninconflict.org/ · Comienza a las 19:30 · Hard Rock Live",
-          "pt": "Mumford & Sons se associou com PLUS1 para apoiar Crianças em Conflito, parte da Aliança War Child. $1 de cada ingresso vendido ajudará a Crianças em Conflito a proteger, educar e defender os direitos das crianças afetadas pela guerra. Nenhuma parte do preço de compra é dedutível de impostos. https://www.childreninconflict.org/ · Começa às 19:30 · Hard Rock Live",
-          "fr": "Mumford & Sons s'est associé à PLUS1 pour soutenir Enfants en Conflit, qui fait partie de l'Alliance War Child. 1 $ de chaque billet vendu aidera Enfants en Conflit à protéger, éduquer et défendre les droits des enfants affectés par la guerre. Aucune partie du prix d'achat n'est déductible des impôts. https://www.childreninconflict.org/ · Commence à 19:30 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577,
-        "category": "music"
-      },
-      {
         "id": "tm_1782653267512_0k0o",
         "title": {
           "en": "Mon Laferte - Femme Fatale Tour",
@@ -2295,32 +2245,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1784985325001_cpsx",
-        "title": {
-          "en": "International Ballet Festival of Miami: Contemporary Performance Open Stage 8/6/26",
-          "es": "Festival Internacional de Ballet de Miami: Función Abierta de Performance Contemporáneo 8/6/26",
-          "pt": "Festival Internacional de Ballet de Miami: Apresentação Aberta de Performance Contemporânea 8/6/26",
-          "fr": "Festival International de Ballet de Miami : Représentation Ouverte de Performance Contemporaine 8/6/26"
-        },
-        "date": "2026-08-06",
-        "venue": "Euclid Oval",
-        "address": "690 Lincoln Road, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/07/24/international-ballet-festival-of-miami-contemporary-performance-open-stage-8-6-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Ballet-350x173.png",
-        "description": {
-          "en": "Experience a FREE eclectic dance program at Euclid Oval on Lincoln Road, showcasing national",
-          "es": "Experimenta un programa de danza ecléctico GRATUITO en el Euclid Oval en Lincoln Road, mostrando lo mejor nacional",
-          "pt": "Experimente um programa de dança eclético GRATUITO no Euclid Oval em Lincoln Road, apresentando o melhor nacional",
-          "fr": "Découvrez un programme de danse éclectique GRATUIT à Euclid Oval sur Lincoln Road, mettant en avant le meilleur national"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7902007,
-        "lng": -80.1352861,
-        "category": "arts"
-      },
-      {
         "id": "rss_1785071436251_bm2q",
         "title": {
           "en": "Join the 10th Annual WBHI Pink Walk—5K Run and Walk at Its New Home at Kendall Campus—Miami Dade College 9/20/26",
@@ -2733,32 +2657,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1785419329806_gvfx",
-        "title": {
-          "en": "Hollywood Run Club Pace & Par Run at Atlantic Village 8/6/26",
-          "es": "Hollywood Run Club Pace & Par Run en Atlantic Village 8/6/26",
-          "pt": "Hollywood Run Club Pace & Par Run no Atlantic Village 8/6/26",
-          "fr": "Hollywood Run Club Pace & Par Run à Atlantic Village 8/6/26"
-        },
-        "date": "2026-08-06",
-        "venue": "Atlantic Village",
-        "address": "601 N Federal Hwy, Hallandale Beach, Florida, 33009",
-        "url": "https://www.soulofmiami.org/2026/07/29/hollywood-run-club-pace-par-run-at-atlantic-village-8-6-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Pace-Par-350x438.png",
-        "description": {
-          "en": "Celebrate Hollywood Run Club’s 13th birthday with an evening of running, indoor",
-          "es": "Celebra el 13º aniversario del Hollywood Run Club con una noche de carreras, interior",
-          "pt": "Celebre o 13º aniversário do Hollywood Run Club com uma noite de corridas, interior",
-          "fr": "Célébrez le 13e anniversaire du Hollywood Run Club avec une soirée de course, intérieur"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.9938734,
-        "lng": -80.1425686,
-        "category": "sports"
-      },
-      {
         "id": "tm_1785419330404_dd02",
         "title": {
           "en": "Palomino Blond, Dust Supply, I Love You This Much, and Ember in Miami",
@@ -3113,58 +3011,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1785852008678_ymxf",
-        "title": {
-          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 8/6/26",
-          "es": "Ladies Who Lunch: Espectáculo de Drag del Jueves por la Tarde 8/6/26",
-          "pt": "Ladies Who Lunch: Show de Drag Quinta à Tarde 8/6/26",
-          "fr": "Ladies Who Lunch: Spectacle de Drag Jeudi Après-midi 8/6/26"
-        },
-        "date": "2026-08-06",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/03/ladies-who-lunch-thursday-afternoon-drag-show-8-6-26/",
-        "free": true,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los jueves son para los chicos que desayunan bellamente en Palace South Beach. Únete a nosotros",
-          "pt": "Quintas são para os garotos que bruncham lindamente no Palace South Beach. Junte-se a nós",
-          "fr": "Les jeudis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
-      },
-      {
-        "id": "rss_1785852008678_nnzr",
-        "title": {
-          "en": "Cafe Con Leche: Thursday Night Latin Drag Revue 8/6/26",
-          "es": "Café Con Leche: Revista de Drag Latino del Jueves por la Noche 8/6/26",
-          "pt": "Café Com Leite: Revista de Drag Latino Quinta à Noite 8/6/26",
-          "fr": "Café Con Leche: Revue de Drag Latin Jeudi Soir 8/6/26"
-        },
-        "date": "2026-08-06",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/03/cafe-con-leche-thursday-night-latin-drag-revue-8-6-26/",
-        "free": true,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Turn up the flavor and the fantasy at Palace South Beach for Café",
-          "es": "Aumenta el sabor y la fantasía en Palace South Beach para Café",
-          "pt": "Aumente o sabor e a fantasia no Palace South Beach para Café",
-          "fr": "Augmentez la saveur et la fantaisie au Palace South Beach pour Café"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "community"
-      },
-      {
         "id": "rss_1785852008678_zd7o",
         "title": {
           "en": "World premier of the musical SOUP 8/14/26, 8/15/26, 8/16/26, 8/21/26, 8/22/26, 8/23/26",
@@ -3239,82 +3085,6 @@
         "lat": 25.780295,
         "lng": -80.18971,
         "category": "community"
-      },
-      {
-        "id": "tm_1785938279294_rydo",
-        "title": {
-          "en": "Hadestown: Teen Edition: A Summer Theater Camp Production",
-          "es": "Hadestown: Edición para Adolescentes: Una Producción del Campamento de Teatro de Verano",
-          "pt": "Hadestown: Edição para Adolescentes: Uma Produção do Acampamento de Teatro de Verão",
-          "fr": "Hadestown: Édition Ados: Une Production du Camp de Théâtre d'Été"
-        },
-        "date": "2026-08-06",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhadestown-teen-edition-a-summer-theater-ft-lauderdale-florida-08-06-2026%2Fevent%2F0D0064C5BABEEBDC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d81/daf87c08-d8c3-45d4-80ff-4eee537e0d81_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Hadestown: Teen Edition is a full-length adaptation of Anaïs Mitchell's Hadestown, modified for performance by teen actors for family audiences. This intriguing and beautiful folk opera delivers a deeply resonant and defiantly hopeful theatrical experience. Following two intertwining love stories - that of young dreamers Orpheus and Eurydice, and that of immortal King Hades and lady Persephone - H",
-          "es": "Hadestown: Edición para Adolescentes es una adaptación de longitud completa de Hadestown de Anaïs Mitchell, modificada para ser interpretada por actores adolescentes para audiencias familiares. Esta ópera folclórica intrigante y hermosa ofrece una experiencia teatral profundamente resonante y desafiante esperanzadora. Siguiendo dos historias de amor entrelazadas - la de los jóvenes soñadores Orfeo y Eurídice, y la del inmortal Rey Hades y la dama Perséfone",
-          "pt": "Hadestown: Edição para Adolescentes é uma adaptação completa de Hadestown de Anaïs Mitchell, modificada para ser interpretada por atores adolescentes para públicos familiares. Esta ópera folclórica intrigante e bela oferece uma experiência teatral profundamente ressonante e defientemente esperançosa. Seguindo duas histórias de amor entrelaçadas - a dos jovens sonhadores Orfeu e Eurídice, e a do rei imortal Hades e da dama Perséfone",
-          "fr": "Hadestown: Édition Ados est une adaptation complète de Hadestown d'Anaïs Mitchell, modifiée pour être jouée par des acteurs adolescents pour un public familial. Cet opéra folk intrigant et beau offre une expérience théâtrale profondément résonnante et résolument pleine d'espoir. Suivant deux histoires d'amour entrelacées - celle des jeunes rêveurs Orphée et Eurydice, et celle du roi immortel Hadès et de la dame Perséphone"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "cp_1785938282927_1qzx",
-        "title": {
-          "en": "Safety First Townhall: Washington Park",
-          "es": "Sesión Informativa de Seguridad Primero: Parque Washington",
-          "pt": "Sessão Informativa de Segurança em Primeiro: Parque Washington",
-          "fr": "Réunion Publique Sécurité d'Abord: Parc Washington"
-        },
-        "date": "2026-08-06",
-        "venue": "- New St. Mary's Missionary Baptist Church 1550 NE 152nd Terrace North Miami Beach FL 33162",
-        "address": "",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "https://www.citynmb.com/calendar.aspx?EID=8913",
-          "es": "https://www.citynmb.com/calendar.aspx?EID=8913",
-          "pt": "https://www.citynmb.com/calendar.aspx?EID=8913",
-          "fr": "https://www.citynmb.com/calendar.aspx?EID=8913"
-        },
-        "source": "North Miami Beach",
-        "category": "community"
-      },
-      {
-        "id": "tm_1786024518907_w16m",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-06",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneos · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
       },
       {
         "id": "tm_1786024518907_lqqw",
@@ -3393,6 +3163,236 @@
         "lat": 25.750417,
         "lng": -80.244412,
         "category": "comedy"
+      },
+      {
+        "id": "rss_1786107183516_zson",
+        "title": {
+          "en": "Miami Zombie Crawl – Halloween Bar Crawl – Party Pass to 8+ Bars 10/30/26",
+          "es": "Miami Zombie Crawl – Recorrido de Bares de Halloween – Pase de Fiesta a 8+ Bares 30/10/26",
+          "pt": "Miami Zombie Crawl – Passeio de Bares de Halloween – Passe de Festa para 8+ Bares 30/10/26",
+          "fr": "Miami Zombie Crawl – Tournée des Bars Halloween – Forfait Fête pour 8+ Bars 30/10/26"
+        },
+        "date": "2026-10-30",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/08/07/miami-zombie-crawl-halloween-bar-crawl-party-pass-to-8-bars-fri-oct-30th-10-30-26/",
+        "free": false,
+        "price": "$19",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/3769594-350x175.jpg",
+        "description": {
+          "en": "MIAMI ZOMBIE CRAWL – Halloween Bar Crawl Friday, October 30th Join the biggest",
+          "es": "MIAMI ZOMBIE CRAWL – Recorrido de Bares de Halloween Viernes, 30 de octubre Únete al mayor",
+          "pt": "MIAMI ZOMBIE CRAWL – Passeio de Bares de Halloween Sexta-feira, 30 de outubro Junte-se ao maior",
+          "fr": "MIAMI ZOMBIE CRAWL – Tournée des Bars Halloween Vendredi, 30 octobre Rejoignez le plus grand"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1786107183516_crzd",
+        "title": {
+          "en": "Broward Center Fall Classes Open House 8/22/26",
+          "es": "Jornada de Puertas Abiertas de Clases de Otoño del Centro Broward 22/08/26",
+          "pt": "Jornada de Portas Abertas - Aulas de Outono do Centro Broward 22/08/26",
+          "fr": "Journée Portes Ouvertes des Cours d'Automne du Centre Broward 22/08/26"
+        },
+        "date": "2026-08-22",
+        "venue": "Rose Miniaci Arts Education Center",
+        "address": "581 W. Las Olas Blvd, Fort Lauderdale, Florida, 33312",
+        "url": "https://www.soulofmiami.org/2026/08/07/broward-center-fall-classes-open-house-8-22-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Screenshot-2026-08-06-100858-350x232.png",
+        "description": {
+          "en": "From first-time performers to seasoned theater enthusiasts, the Broward Center for the Performing",
+          "es": "Desde artistas principiantes hasta entusiastas del teatro experimentados, el Centro Broward para las Artes",
+          "pt": "De artistas iniciantes a entusiastas de teatro experientes, o Centro Broward para as Artes",
+          "fr": "Des artistes débutants aux amateurs de théâtre chevronnés, le Centre Broward pour les Arts"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1189897,
+        "lng": -80.1496356,
+        "category": "community"
+      },
+      {
+        "id": "rss_1786107183516_7a8e",
+        "title": {
+          "en": "Trivia Night at Shooters Waterfront 8/11/26",
+          "es": "Noche de Trivia en Shooters Waterfront 11/08/26",
+          "pt": "Noite de Trivia no Shooters Waterfront 11/08/26",
+          "fr": "Soirée Trivia aux Shooters Waterfront 11/08/26"
+        },
+        "date": "2026-08-11",
+        "venue": "Shooter Waterfront",
+        "address": "3033 NE 32nd Ave, Fort Lauderdale, Florida, 33308",
+        "url": "https://www.soulofmiami.org/2026/08/07/trivia-night-at-shooters-waterfront-8-11-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Trivia-Night-350x349.png",
+        "description": {
+          "en": "Grab your crew and head to Shooter’s Waterfront for their FREE Trivia Night, presented by Trivia Nation. Shooters",
+          "es": "Reúne a tu equipo y dirígete a Shooter's Waterfront para su Noche de Trivia GRATUITA, presentada por Trivia Nation. Shooters",
+          "pt": "Reúna sua equipe e dirija-se ao Shooters Waterfront para a sua Noite de Trivia GRATUITA, apresentada pela Trivia Nation. Shooters",
+          "fr": "Rassemblez votre équipe et rendez-vous aux Shooters Waterfront pour leur Soirée Trivia GRATUITE, présentée par Trivia Nation. Shooters"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1661329,
+        "lng": -80.1038025,
+        "category": "community"
+      },
+      {
+        "id": "tm_1786107184018_ealv",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-07",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 10:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1786107184018_44xg",
+        "title": {
+          "en": "Hadestown: Teen Edition: A Summer Theater Camp Production",
+          "es": "Hadestown: Edición para Adolescentes: Una Producción del Campamento de Teatro de Verano",
+          "pt": "Hadestown: Edição para Adolescentes: Uma Produção do Acampamento de Teatro de Verão",
+          "fr": "Hadestown: Édition Ados: Une Production du Camp de Théâtre d'Été"
+        },
+        "date": "2026-08-07",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhadestown-teen-edition-a-summer-theater-ft-lauderdale-florida-08-07-2026%2Fevent%2F0D0064C5BAC3EBE8&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d81/daf87c08-d8c3-45d4-80ff-4eee537e0d81_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Hadestown: Teen Edition is a full-length adaptation of Anaïs Mitchell's Hadestown, modified for performance by teen actors for family audiences. This intriguing and beautiful folk opera delivers a deeply resonant and defiantly hopeful theatrical experience. Following two intertwining love stories - that of young dreamers Orpheus and Eurydice, and that of immortal King Hades and lady Persephone - H",
+          "es": "Hadestown: Edición para Adolescentes es una adaptación de larga duración de Hadestown de Anaïs Mitchell, modificada para ser representada por actores adolescentes para audiencias familiares. Esta intrigante y hermosa ópera folclórica ofrece una experiencia teatral profundamente resonante y desafiante en su esperanza. Siguiendo dos historias de amor entrelazadas - la de los jóvenes soñadores Orfeo y Eurídice, y la del inmortal Rey Hades y la dama Perséfone",
+          "pt": "Hadestown: Edição para Adolescentes é uma adaptação completa de Hadestown de Anaïs Mitchell, modificada para ser representada por atores adolescentes para públicos familiares. Esta intrigante e bela ópera folclórica oferece uma experiência teatral profundamente ressonante e defiantly esperançosa. Seguindo duas histórias de amor entrelaçadas - a dos jovens sonhadores Orfeu e Eurídice, e a do imortal Rei Hades e da dama Perséfone",
+          "fr": "Hadestown: Édition Ados est une adaptation en version complète de Hadestown d'Anaïs Mitchell, modifiée pour être interprétée par des acteurs adolescents pour les publics familiaux. Cet opéra folk intrigant et magnifique offre une expérience théâtrale profondément résonnante et résolument pleine d'espoir. Suivant deux histoires d'amour entrecroisées - celle des jeunes rêveurs Orphée et Eurydice, et celle du roi immortel Hadès et de la dame Perséphone"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1786107184018_00sm",
+        "title": {
+          "en": "Professional Bull Riders - Saturday",
+          "es": "Jinetes Profesionales de Toros - Sábado",
+          "pt": "Montadores Profissionais de Touros - Sábado",
+          "fr": "Rodéo Professionnel - Samedi"
+        },
+        "date": "2026-08-08",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7r_4P&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2c1/d8040b96-af04-4444-b277-ddc2972492c1_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Miscellaneous · Starts 18:45 · Amerant Bank Arena",
+          "es": "Deportes · Misceláneos · Comienza 18:45 · Amerant Bank Arena",
+          "pt": "Esportes · Diversos · Começa 18:45 · Amerant Bank Arena",
+          "fr": "Sports · Divers · Commence 18:45 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1786107184018_p9ne",
+        "title": {
+          "en": "2026 Leagues Cup: Inter Miami CF vs CF Monterrey",
+          "es": "Copa de Ligas 2026: Inter Miami CF vs CF Monterrey",
+          "pt": "Leagues Cup 2026: Inter Miami CF vs CF Monterrey",
+          "fr": "Coupe des Ligues 2026 : Inter Miami CF vs CF Monterrey"
+        },
+        "date": "2026-08-08",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F2026-leagues-cup-inter-miami-cf-miami-florida-08-08-2026%2Fevent%2F0D0064B5A2A58C53&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/79f/b2518996-554a-4589-8dbb-d7527d63a79f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Soccer · Starts 20:00 · Nu Stadium",
+          "es": "Deportes · Fútbol · Comienza 20:00 · Nu Stadium",
+          "pt": "Esportes · Futebol · Começa 20:00 · Nu Stadium",
+          "fr": "Sports · Football · Commence 20:00 · Nu Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
+      },
+      {
+        "id": "tm_1786107184018_j1xu",
+        "title": {
+          "en": "The BIG Show Improv Comedy Miami",
+          "es": "The BIG Show - Comedia Improvisada Miami",
+          "pt": "The BIG Show - Comédia Improvisada Miami",
+          "fr": "The BIG Show - Comédie Improvisée Miami"
+        },
+        "date": "2026-08-08",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14897693&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Big Show - Improv Comedy in MiamiIts our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun!Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as cl",
+          "es": "The Big Show - Comedia improvisada en MiamiNuestro espectáculo de firma: Comedia improvisada en vivo, rápida y de primera calidad. ¡Como Whose Line is It Anyway se encuentra con SNL! The Big Show es comedia improvisada interactiva, presentada por nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos en mesas. Haremos nuestro mejor esfuerzo para sentar a grupos más grandes tan",
+          "pt": "The Big Show - Comédia Improvisada em MiamiNosso show de assinatura: Comédia improvisada ao vivo, rápida e de primeira qualidade. Como Whose Line is It Anyway encontra SNL! The Big Show é comédia improvisada interativa, apresentada por nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas. Faremos o possível para sentar grupos maiores tão",
+          "fr": "The Big Show - Comédie Improvisée à MiamiNotre spectacle signature : Comédie improvisée en direct, rapide et de première qualité. Comme si Whose Line is It Anyway rencontrait SNL ! The Big Show est une comédie improvisée interactive, présentée par notre casting talentueux et primé. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous assiérons les groupes ensemble à des tables. Nous ferons de notre mieux pour asseoir les grands groupes aussi"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "cp_1786107184877_pk02",
+        "title": {
+          "en": "NoMi Night Market",
+          "es": "Mercado Nocturno NoMi",
+          "pt": "Mercado Noturno NoMi",
+          "fr": "Marché Nocturne NoMi"
+        },
+        "date": "2026-08-07",
+        "venue": "<p>MOCA Plaza</p>",
+        "address": "770 NE 125 Street  North Miami FL 33161",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://northmiamifl.gov/calendar.aspx?EID=5943",
+          "es": "https://northmiamifl.gov/calendar.aspx?EID=5943",
+          "pt": "https://northmiamifl.gov/calendar.aspx?EID=5943",
+          "fr": "https://northmiamifl.gov/calendar.aspx?EID=5943"
+        },
+        "source": "North Miami",
+        "category": "community"
       }
     ]
   },
@@ -4296,10 +4296,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-06T13:55:38.131Z",
+    "fetchedAt": "2026-08-07T12:53:42.770Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.fc1c5339b5e542229c3269f4707e4cc27fcb683c.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.0789d623e08ae594ac78c6314baa4c6536f2ebee.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4309,15 +4309,15 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...Dangerous rip currents expected.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...From 8 AM EDT this morning through Saturday morning.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
-          "es": "* QUÉ...Se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Zona costera del Condado de Palm Beach, Zona costera del Condado de Broward y Zona costera del Condado de Miami Dade.\n\n* CUÁNDO...Desde las 8 AM EDT esta mañana hasta la mañana del sábado.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la costa hacia aguas más profundas.",
-          "pt": "* O QUÊ...Correntes de retorno perigosas esperadas.\n\n* ONDE...Zona costeira do Condado de Palm Beach, Zona costeira do Condado de Broward e Zona costeira do Condado de Miami Dade.\n\n* QUANDO...Das 8 AM EDT desta manhã até a manhã de sábado.\n\n* IMPACTOS...Correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da costa em direção à água mais profunda.",
-          "fr": "* QUOI...Des courants de retour dangereux attendus.\n\n* OÙ...Zone côtière du comté de Palm Beach, Zone côtière du comté de Broward et Zone côtière du comté de Miami Dade.\n\n* QUAND...De 8 h HAE ce matin jusqu'à samedi matin.\n\n* IMPACTS...Les courants de retour peuvent emporter même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
+          "en": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...Through Saturday morning.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+          "es": "* QUÉ...Corrientes de resaca peligrosas.\n\n* DÓNDE...Costas del Condado de Palm Beach, Condado de Broward y Condado de Miami Dade.\n\n* CUÁNDO...Hasta el sábado por la mañana.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la costa hacia aguas más profundas.",
+          "pt": "* O QUÊ...Correntes de retorno perigosas.\n\n* ONDE...Litoral do Condado de Palm Beach, Condado de Broward e Condado de Miami Dade.\n\n* QUANDO...Até sábado de manhã.\n\n* IMPACTOS...Correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da costa em águas mais profundas.",
+          "fr": "* QUOI...Courants de retour dangereux.\n\n* OÙ...Littoral du comté de Palm Beach, comté de Broward et comté de Miami Dade.\n\n* QUAND...Jusqu'à samedi matin.\n\n* IMPACTS...Les courants de retour peuvent emporter même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fc1c5339b5e542229c3269f4707e4cc27fcb683c.001.1",
-        "effectiveAt": "2026-08-06T03:01:00-04:00",
-        "expiresAt": "2026-08-07T10:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0789d623e08ae594ac78c6314baa4c6536f2ebee.001.1",
+        "effectiveAt": "2026-08-07T03:57:00-04:00",
+        "expiresAt": "2026-08-08T12:00:00.000Z"
       }
     ]
   }
