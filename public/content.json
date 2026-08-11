@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-10T12:58:24.449Z",
+    "lastUpdated": "2026-08-11T12:53:52.076Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-10T12:58:19.940Z",
+    "fetchedAt": "2026-08-11T12:53:48.307Z",
     "current": {
       "temp_f": 86,
-      "feels_f": 95,
+      "feels_f": 97,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 77,
-      "wind_mph": 8,
-      "rain_chance": 5,
+      "humidity": 75,
+      "wind_mph": 4,
+      "rain_chance": 1,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-10",
-        "high_f": 90,
-        "low_f": 81,
-        "weathercode": 3,
-        "rain_chance": 5,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-11",
         "high_f": 90,
-        "low_f": 79,
-        "weathercode": 3,
-        "rain_chance": 4,
+        "low_f": 80,
+        "weathercode": 0,
+        "rain_chance": 1,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Clear skies",
+          "es": "Cielo despejado",
+          "pt": "Céu limpo",
+          "fr": "Ciel dégagé"
         }
       },
       {
         "date": "2026-08-12",
         "high_f": 90,
-        "low_f": 82,
-        "weathercode": 51,
-        "rain_chance": 15,
+        "low_f": 76,
+        "weathercode": 3,
+        "rain_chance": 41,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-13",
-        "high_f": 90,
-        "low_f": 85,
+        "high_f": 89,
+        "low_f": 81,
         "weathercode": 53,
-        "rain_chance": 20,
+        "rain_chance": 32,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -78,27 +65,40 @@
         "high_f": 89,
         "low_f": 85,
         "weathercode": 3,
-        "rain_chance": 15,
+        "rain_chance": 16,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
           "pt": "Encoberto",
           "fr": "Couvert"
         }
+      },
+      {
+        "date": "2026-08-15",
+        "high_f": 89,
+        "low_f": 85,
+        "weathercode": 95,
+        "rain_chance": 17,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 84,
+        "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 5
+        "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 86,
+        "temp_f": 87,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "10:00",
@@ -110,17 +110,17 @@
         "hour": "11:00",
         "temp_f": 88,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "12:00",
-        "temp_f": 88,
+        "temp_f": 89,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "13:00",
-        "temp_f": 89,
+        "temp_f": 90,
         "weathercode": 0,
         "rain_chance": 1
       },
@@ -132,13 +132,13 @@
       },
       {
         "hour": "15:00",
-        "temp_f": 89,
+        "temp_f": 90,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "16:00",
-        "temp_f": 88,
+        "temp_f": 90,
         "weathercode": 0,
         "rain_chance": 1
       },
@@ -150,21 +150,21 @@
       },
       {
         "hour": "18:00",
-        "temp_f": 87,
+        "temp_f": 88,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "19:00",
-        "temp_f": 86,
+        "temp_f": 87,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "20:00",
-        "temp_f": 83,
+        "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "21:00",
@@ -174,7 +174,7 @@
       },
       {
         "hour": "22:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 0,
         "rain_chance": 0
       },
@@ -188,7 +188,7 @@
         "hour": "00:00",
         "temp_f": 81,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 2
       },
       {
         "hour": "01:00",
@@ -198,37 +198,37 @@
       },
       {
         "hour": "02:00",
-        "temp_f": 80,
-        "weathercode": 0,
+        "temp_f": 79,
+        "weathercode": 1,
         "rain_chance": 0
       },
       {
         "hour": "03:00",
-        "temp_f": 80,
-        "weathercode": 0,
+        "temp_f": 79,
+        "weathercode": 1,
         "rain_chance": 0
       },
       {
         "hour": "04:00",
-        "temp_f": 80,
-        "weathercode": 2,
-        "rain_chance": 0
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 80,
+        "temp_f": 79,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
+        "hour": "05:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
         "hour": "06:00",
-        "temp_f": 80,
+        "temp_f": 77,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "07:00",
-        "temp_f": 79,
+        "temp_f": 76,
         "weathercode": 0,
         "rain_chance": 0
       }
@@ -2886,32 +2886,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786279202166_wivh",
-        "title": {
-          "en": "Nemo Kids: : A Summer Theater Camp Production",
-          "es": "Nemo Kids: Una Producción del Campamento de Teatro de Verano",
-          "pt": "Nemo Kids: Uma Produção do Acampamento de Teatro de Verão",
-          "fr": "Nemo Kids: Une Production du Camp de Théâtre d'Été"
-        },
-        "date": "2026-08-10",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnemo-kids-a-summer-theater-camp-ft-lauderdale-florida-08-10-2026%2Fevent%2F0D0064C3AD87A68E&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/22f/ebd07237-a072-4450-bac4-7476fc61e22f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Explore the big blue world in this lively 30-minute musical based on the beloved Pixar film! Marlin, an anxious and overprotective clownfish, lives in the Great Barrier Reef with his adventurous son, Nemo. When Nemo is captured and taken to Sydney, Marlin must face his fears and journey across the ocean to find him. Along the way, he meets unforgettable characters including optimistic Dory, laid-b",
-          "es": "¡Explora el gran mundo azul en este musical animado de 30 minutos basado en la querida película de Pixar! Marlin, un pez payaso ansioso y sobreprotector, vive en la Gran Barrera de Coral con su hijo aventurero, Nemo. Cuando Nemo es capturado y llevado a Sídney, Marlin debe enfrentar sus miedos y viajar a través del océano para encontrarlo. En el camino, conoce personajes inolvidables incluyendo la optimista Dory, laid-b",
-          "pt": "Explore o grande mundo azul neste animado musical de 30 minutos baseado no amado filme Pixar! Marlin, um peixe-palhaço ansioso e superprotetor, vive na Grande Barreira de Coral com seu filho aventureiro, Nemo. Quando Nemo é capturado e levado para Sydney, Marlin deve enfrentar seus medos e viajar pelo oceano para encontrá-lo. Pelo caminho, ele conhece personagens inesquecíveis, incluindo a otimista Dory, laid-b",
-          "fr": "Explorez le grand monde bleu dans cette comédie musicale animée de 30 minutes basée sur le bien-aimé film Pixar! Marin, un poisson-clown anxieux et surprotecteur, vit dans la Grande Barrière de Corail avec son fils aventureux, Nemo. Quand Nemo est capturé et emmené à Sydney, Marin doit affronter ses peurs et voyager à travers l'océan pour le retrouver. En chemin, il rencontre des personnages inoubliables dont l'optimiste Dory, laid-b"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
         "id": "tm_1786279202166_ig3p",
         "title": {
           "en": "Blues Traveler/Gin Blossoms with Spin Doctors",
@@ -3144,32 +3118,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786366661462_417c",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-10",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Variado · Familiar · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Familiar · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Familial · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1786366661462_qhuj",
         "title": {
           "en": "Beetlejuice Jr.: A Summer Theater Camp Production",
@@ -3296,6 +3244,58 @@
         },
         "source": "Boynton Beach",
         "category": "music"
+      },
+      {
+        "id": "tm_1786452816535_qa4u",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-11",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1786452816535_ptyy",
+        "title": {
+          "en": "2026 Leagues Cup: Inter Miami CF vs Club León",
+          "es": "Copa de Ligas 2026: Inter Miami CF vs Club León",
+          "pt": "Copa das Ligas 2026: Inter Miami CF vs Club León",
+          "fr": "Coupe des Ligues 2026: Inter Miami CF vs Club León"
+        },
+        "date": "2026-08-12",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F2026-leagues-cup-inter-miami-cf-miami-florida-08-12-2026%2Fevent%2F0D0064B5A24E8BDE&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/af6/c2cbbc30-320a-4de4-bd4d-1dc973a27af6_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Soccer · Starts 19:30 · Nu Stadium",
+          "es": "Deportes · Fútbol · Comienza 19:30 · Nu Stadium",
+          "pt": "Esportes · Futebol · Começa 19:30 · Nu Stadium",
+          "fr": "Sports · Football · Commence 19:30 · Nu Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
       }
     ]
   },
@@ -4199,10 +4199,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-10T12:58:19.941Z",
+    "fetchedAt": "2026-08-11T12:53:48.308Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.886397270f54e216a0770aec3166a37fb42d1b1f.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.e56a389c57008489831ef6d27846b90abae69ae4.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4212,15 +4212,15 @@
           "fr": "Avis de Chaleur"
         },
         "detail": {
-          "en": "* WHAT...Heat index values up to 109 expected across South Florida.\n\n* WHERE...Coastal Broward County, Coastal Miami Dade County, Coastal\nPalm Beach County, Far South Miami-Dade County, Inland Broward\nCounty, Inland Miami-Dade County, Inland Palm Beach County, Metro\nBroward County, Metro Palm Beach County, and Metropolitan Miami\nDade Counties.\n\n* WHEN...From 11 AM this morning to 6 PM EDT this eve",
-          "es": "* QUÉ...Se esperan índices de calor hasta 109 grados en el sur de Florida.\n\n* DÓNDE...Condado costero de Broward, Condado costero de Miami-Dade, Condado costero de Palm Beach, Sur lejano del Condado de Miami-Dade, Condado interior de Broward, Condado interior de Miami-Dade, Condado interior de Palm Beach, Área metropolitana de Broward, Área metropolitana de Palm Beach y Condados metropolitanos de Miami-Dade.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 6 PM EDT esta tarde",
-          "pt": "* O QUÊ...Índices de calor de até 109 graus esperados no sul da Flórida.\n\n* ONDE...Condado costeiro de Broward, Condado costeiro de Miami-Dade, Condado costeiro de Palm Beach, Extremo sul do Condado de Miami-Dade, Interior do Condado de Broward, Interior do Condado de Miami-Dade, Interior do Condado de Palm Beach, Área metropolitana de Broward, Área metropolitana de Palm Beach e Condados metropolitanos de Miami-Dade.\n\n* QUANDO...Das 11 AM desta manhã até as 6 PM EDT desta noite",
-          "fr": "* QUOI...Indices de chaleur jusqu'à 109 degrés attendus dans le sud de la Floride.\n\n* OÙ...Comté côtier de Broward, Comté côtier de Miami-Dade, Comté côtier de Palm Beach, Extrême sud du Comté de Miami-Dade, Intérieur du Comté de Broward, Intérieur du Comté de Miami-Dade, Intérieur du Comté de Palm Beach, Zone métropolitaine de Broward, Zone métropolitaine de Palm Beach et Comtés métropolitains de Miami-Dade.\n\n* QUAND...De 11 h du matin à 18 h EDT ce soir"
+          "en": "* WHAT...Heat index values 105-110 expected.\n\n* WHERE...All of south Florida.\n\n* WHEN...From noon today to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
+          "es": "* QUÉ...Se esperan índices de calor de 105-110.\n\n* DÓNDE...Toda el sur de Florida.\n\n* CUÁNDO...Desde el mediodía de hoy hasta las 7 PM EDT esta noche.\n\n* IMPACTOS...Las temperaturas elevadas y la humedad alta pueden causar enfermedades relacionadas con el calor.",
+          "pt": "* O QUÊ...Índices de calor de 105-110 esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Do meio-dia de hoje até as 7 PM EDT esta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Indices de chaleur de 105-110 prévus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...À partir de midi aujourd'hui jusqu'à 19 h HAE ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité élevée peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.886397270f54e216a0770aec3166a37fb42d1b1f.001.1",
-        "effectiveAt": "2026-08-10T02:38:00-04:00",
-        "expiresAt": "2026-08-10T22:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e56a389c57008489831ef6d27846b90abae69ae4.001.1",
+        "effectiveAt": "2026-08-11T02:05:00-04:00",
+        "expiresAt": "2026-08-11T23:00:00.000Z"
       }
     ]
   }
