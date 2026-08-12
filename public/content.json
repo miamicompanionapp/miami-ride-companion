@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-11T12:53:52.076Z",
+    "lastUpdated": "2026-08-12T12:58:32.438Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-11T12:53:48.307Z",
+    "fetchedAt": "2026-08-12T12:58:29.296Z",
     "current": {
-      "temp_f": 86,
-      "feels_f": 97,
+      "temp_f": 85,
+      "feels_f": 98,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 75,
-      "wind_mph": 4,
-      "rain_chance": 1,
+      "humidity": 83,
+      "wind_mph": 1,
+      "rain_chance": 17,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-11",
-        "high_f": 90,
-        "low_f": 80,
-        "weathercode": 0,
-        "rain_chance": 1,
-        "description": {
-          "en": "Clear skies",
-          "es": "Cielo despejado",
-          "pt": "Céu limpo",
-          "fr": "Ciel dégagé"
-        }
-      },
-      {
         "date": "2026-08-12",
         "high_f": 90,
-        "low_f": 76,
+        "low_f": 80,
         "weathercode": 3,
-        "rain_chance": 41,
+        "rain_chance": 17,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,21 +36,21 @@
       },
       {
         "date": "2026-08-13",
-        "high_f": 89,
-        "low_f": 81,
-        "weathercode": 53,
-        "rain_chance": 32,
+        "high_f": 90,
+        "low_f": 77,
+        "weathercode": 3,
+        "rain_chance": 22,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-14",
-        "high_f": 89,
-        "low_f": 85,
+        "high_f": 90,
+        "low_f": 82,
         "weathercode": 3,
         "rain_chance": 16,
         "description": {
@@ -75,41 +62,54 @@
       },
       {
         "date": "2026-08-15",
+        "high_f": 90,
+        "low_f": 85,
+        "weathercode": 96,
+        "rain_chance": 34,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-08-16",
         "high_f": 89,
         "low_f": 85,
-        "weathercode": 95,
-        "rain_chance": 17,
+        "weathercode": 3,
+        "rain_chance": 4,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 83,
+        "temp_f": 82,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 87,
+        "temp_f": 86,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "10:00",
         "temp_f": 87,
-        "weathercode": 0,
+        "weathercode": 1,
         "rain_chance": 1
       },
       {
         "hour": "11:00",
         "temp_f": 88,
-        "weathercode": 0,
+        "weathercode": 1,
         "rain_chance": 1
       },
       {
@@ -122,115 +122,115 @@
         "hour": "13:00",
         "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "14:00",
         "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 3
       },
       {
         "hour": "15:00",
         "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 4
       },
       {
         "hour": "16:00",
         "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 8
       },
       {
         "hour": "17:00",
         "temp_f": 89,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 11
       },
       {
         "hour": "18:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "19:00",
-        "temp_f": 87,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 86,
+        "weathercode": 1,
+        "rain_chance": 17
       },
       {
         "hour": "20:00",
         "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "21:00",
         "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "22:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "00:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "01:00",
         "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 2
       },
       {
         "hour": "02:00",
         "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 0
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "03:00",
-        "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 0
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "04:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
         "temp_f": 78,
-        "weathercode": 0,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 77,
-        "weathercode": 0,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "07:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 1
       }
     ]
   },
@@ -1415,31 +1415,6 @@
         "lat": 26.0077588,
         "lng": -80.1422511,
         "category": "community"
-      },
-      {
-        "id": "tm_1783086820321_spmv",
-        "title": {
-          "en": "Ella Mai: Do You Still Love Me? Tour",
-          "es": "Ella Mai: ¿Todavía Me Amas? Tour",
-          "pt": "Ella Mai: Você Ainda Me Ama? Tour",
-          "fr": "Ella Mai: M'Aimes-tu Encore? Tour"
-        },
-        "date": "2026-08-11",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fella-mai-do-you-still-love-hollywood-florida-08-11-2026%2Fevent%2F0D00646DB574C935&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/377/a376714c-1651-4abf-bf23-2c77863f9377_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · R&B · Starts 20:00 · Hard Rock Live",
-          "es": "Música · R&B · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · R&B · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · R&B · Commence 20:00 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577,
-        "category": "music"
       },
       {
         "id": "tm_1783086820321_9700",
@@ -2812,32 +2787,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1786107183516_7a8e",
-        "title": {
-          "en": "Trivia Night at Shooters Waterfront 8/11/26",
-          "es": "Noche de Trivia en Shooters Waterfront 11/08/26",
-          "pt": "Noite de Trivia no Shooters Waterfront 11/08/26",
-          "fr": "Soirée Trivia aux Shooters Waterfront 11/08/26"
-        },
-        "date": "2026-08-11",
-        "venue": "Shooter Waterfront",
-        "address": "3033 NE 32nd Ave, Fort Lauderdale, Florida, 33308",
-        "url": "https://www.soulofmiami.org/2026/08/07/trivia-night-at-shooters-waterfront-8-11-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Trivia-Night-350x349.png",
-        "description": {
-          "en": "Grab your crew and head to Shooter’s Waterfront for their FREE Trivia Night, presented by Trivia Nation. Shooters",
-          "es": "Reúne a tu equipo y dirígete a Shooter's Waterfront para su Noche de Trivia GRATUITA, presentada por Trivia Nation. Shooters",
-          "pt": "Reúna sua equipe e dirija-se ao Shooters Waterfront para a sua Noite de Trivia GRATUITA, apresentada pela Trivia Nation. Shooters",
-          "fr": "Rassemblez votre équipe et rendez-vous aux Shooters Waterfront pour leur Soirée Trivia GRATUITE, présentée par Trivia Nation. Shooters"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1661329,
-        "lng": -80.1038025,
-        "category": "community"
-      },
-      {
         "id": "cp_1786192673946_yn9n",
         "title": {
           "en": "Passport to Pours",
@@ -3118,58 +3067,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786366661462_qhuj",
-        "title": {
-          "en": "Beetlejuice Jr.: A Summer Theater Camp Production",
-          "es": "Beetlejuice Jr.: Una Producción de Campamento de Teatro de Verano",
-          "pt": "Beetlejuice Jr.: Uma Produção do Acampamento de Teatro de Verão",
-          "fr": "Beetlejuice Jr. : Une Production du Camp de Théâtre d'Été"
-        },
-        "date": "2026-08-11",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbeetlejuice-jr-a-summer-theater-camp-ft-lauderdale-florida-08-11-2026%2Fevent%2F0D0064C4D2EE2F83&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/4c7/01072b60-7eb4-4574-8dbd-93da62bc74c7_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "It's showtime in this Broadway Junior version of the Broadway hit! The ghost-with-the-most comes to the stage in Beetlejuice JR., the frightfully funny musical based on the beloved motion picture turned Broadway phenomenon. Lydia Deetz is a strange and unusual teenager, still grieving the loss of her mother and obsessed with the whole \"being dead thing.\" Lucky for Lydia, she and her father move to",
-          "es": "¡Es hora del espectáculo en esta versión de Broadway Junior del éxito de Broadway! El fantasma más famoso sube al escenario en Beetlejuice JR., el musical terroríficamente divertido basado en la película querida convertida en fenómeno de Broadway. Lydia Deetz es una adolescente extraña y poco común, aún llorando la pérdida de su madre y obsesionada con lo de \"estar muerta\".",
-          "pt": "É hora do show nesta versão Broadway Junior do sucesso da Broadway! O fantasma mais famoso sobe ao palco em Beetlejuice JR., o musical assustadoramente engraçado baseado no filme amado que se tornou um fenômeno da Broadway. Lydia Deetz é uma adolescente estranha e incomum, ainda lamentando a perda de sua mãe e obcecada com a coisa de \"estar morta\".",
-          "fr": "C'est le moment du spectacle dans cette version Broadway Junior du succès de Broadway ! Le fantôme le plus célèbre monte sur scène dans Beetlejuice JR., la comédie musicale terriblement amusante basée sur le film bien-aimé devenu phénomène de Broadway. Lydia Deetz est une adolescente étrange et insolite, toujours en deuil de la perte de sa mère et obsédée par la chose \"d'être morte\"."
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1786366661462_duo6",
-        "title": {
-          "en": "Miami Marlins vs. Pittsburgh Pirates",
-          "es": "Miami Marlins vs. Pittsburgh Pirates",
-          "pt": "Miami Marlins vs. Pittsburgh Pirates",
-          "fr": "Miami Marlins vs. Pittsburgh Pirates"
-        },
-        "date": "2026-08-11",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0Z&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
         "id": "tm_1786366661462_7uhl",
         "title": {
           "en": "Citizen - Halcyon Blues",
@@ -3246,32 +3143,6 @@
         "category": "music"
       },
       {
-        "id": "tm_1786452816535_qa4u",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-11",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1786452816535_ptyy",
         "title": {
           "en": "2026 Leagues Cup: Inter Miami CF vs Club León",
@@ -3296,6 +3167,162 @@
         "category": "sports",
         "lat": 25.792676,
         "lng": -80.259406
+      },
+      {
+        "id": "tm_1786539487073_n1cj",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-12",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneo · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1786539487073_9acn",
+        "title": {
+          "en": "Miami Marlins vs. Pittsburgh Pirates",
+          "es": "Miami Marlins vs. Pittsburgh Pirates",
+          "pt": "Miami Marlins vs. Pittsburgh Pirates",
+          "fr": "Miami Marlins vs. Pittsburgh Pirates"
+        },
+        "date": "2026-08-12",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0v&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1786539487073_awq5",
+        "title": {
+          "en": "UNIDOS POR LOS NUESTROS- Live Benefit Concert & National Telethon",
+          "es": "UNIDOS POR LOS NUESTROS - Concierto Benéfico en Vivo y Telemaratón Nacional",
+          "pt": "UNIDOS POR LOS NUESTROS - Concerto Beneficente Ao Vivo e Telemaratona Nacional",
+          "fr": "UNIDOS POR LOS NUESTROS - Concert Caritatif en Direct et Téléthon National"
+        },
+        "date": "2026-08-16",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Funidos-por-los-nuestros-live-benefit-miami-florida-08-16-2026%2Fevent%2F0D0064EA9A88501D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/234/b8e9e380-016f-4e0c-99fc-aaf593dc5234_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "***Artist line-up subject to change without notice*** CMN and Ticketmaster will donate to the Univision Foundation 100% of their net proceeds from ticket sales, including ticket fees, subject to a minimum total donation of $300,000. For more information, visit www.univision.org. No portion of the ticket purchase is tax-deductible. ***Event starts promptly at 6:00pm*** · Starts 18:00 · Kaseya Cente",
+          "es": "***La alineación de artistas está sujeta a cambios sin previo aviso*** CMN y Ticketmaster donarán a la Fundación Univision el 100% de sus ganancias netas de la venta de entradas, incluidas las tarifas de entradas, sujeto a una donación mínima total de $300,000. Para más información, visite www.univision.org. Ninguna parte de la compra de entradas es deducible de impuestos. ***El evento comienza puntualmente a las 6:00pm*** · Comienza 18:00 · Kaseya Center",
+          "pt": "***O elenco de artistas está sujeito a alterações sem aviso prévio*** CMN e Ticketmaster doarão à Fundação Univision 100% de seus lucros líquidos da venda de ingressos, incluindo taxas de ingressos, sujeito a uma doação mínima total de $300.000. Para mais informações, visite www.univision.org. Nenhuma parte da compra do ingresso é dedutível de impostos. ***O evento começa pontualmente às 18h*** · Começa 18:00 · Kaseya Center",
+          "fr": "***L'alignement des artistes est sujet à modification sans préavis*** CMN et Ticketmaster feront don à la Fondation Univision de 100% de leurs bénéfices nets de la vente de billets, y compris les frais de billets, sous réserve d'un don minimum total de 300 000 $. Pour plus d'informations, visitez www.univision.org. Aucune partie de l'achat de billet n'est déductible d'impôt. ***L'événement commence à 18h00 précises*** · Commence 18:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1786539487073_5poa",
+        "title": {
+          "en": "Steve Higgins: Moonlight, Memories & Music",
+          "es": "Steve Higgins: Luz de Luna, Recuerdos y Música",
+          "pt": "Steve Higgins: Luar, Memórias e Música",
+          "fr": "Steve Higgins: Clair de Lune, Souvenirs et Musique"
+        },
+        "date": "2026-09-05",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsteve-higgins-moonlight-memories-music-ft-lauderdale-florida-09-05-2026%2Fevent%2F0D0064B2BC4E864D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f6d/6f417e97-2981-4605-a837-a307d33e3f6d_105491_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Moonlight, Memories and Music is an exquisite evening of romance, nostalgia, and world-class artistry, brought to life by the captivating talents of Steve Higgins, Dahlia Wynter, and April Marr. Set against an atmosphere of elegance and charm, this enchanting concert promises to transport audiences through a rich tapestry of musical genres-from the smooth allure of jazz and the grandeur of Broadwa",
+          "es": "Luz de Luna, Recuerdos y Música es una velada exquisita de romance, nostalgia y artistry de clase mundial, realizada por los talentos cautivadores de Steve Higgins, Dahlia Wynter y April Marr. Ambientado en una atmósfera de elegancia y encanto, este concierto encantador promete transportar al público a través de un rico tapiz de géneros musicales, desde el atractivo suave del jazz hasta la grandiosidad de Broadway.",
+          "pt": "Luar, Memórias e Música é uma noite requintada de romance, nostalgia e artistry de classe mundial, trazida à vida pelos talentos cativantes de Steve Higgins, Dahlia Wynter e April Marr. Ambientado em uma atmosfera de elegância e encanto, este concerto encantador promete transportar o público através de uma rica tapeçaria de gêneros musicais, desde o atrativo suave do jazz até a grandiosidade da Broadway.",
+          "fr": "Clair de Lune, Souvenirs et Musique est une soirée exquise de romance, de nostalgie et d'artistry de classe mondiale, apportée à la vie par les talents captivants de Steve Higgins, Dahlia Wynter et April Marr. Situé dans une atmosphère d'élégance et de charme, ce concert enchanteur promet de transporter le public à travers une riche tapisserie de genres musicaux, du charme doux du jazz à la grandeur de Broadway."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0884017,
+        "lng": -80.2461624
+      },
+      {
+        "id": "tm_1786539487073_zy7f",
+        "title": {
+          "en": "Myriam Hernandez - Tauro World Tour 2025",
+          "es": "Myriam Hernández - Tauro World Tour 2025",
+          "pt": "Myriam Hernández - Tauro World Tour 2025",
+          "fr": "Myriam Hernández - Tauro World Tour 2025"
+        },
+        "date": "2026-09-05",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmyriam-hernandez-tauro-world-tour-2025-miami-florida-09-05-2026%2Fevent%2F0D0062B5A9CC1B82&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/597/2c4c954b-fe9a-4fbd-83e8-ba38ca012597_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "¡La Voz del Amor Regresa! Myriam Hernández, la icónica intérprete de baladas románticas, llega con un espectáculo inolvidable lleno de emoción, pasión y grandes éxitos como \"El Hombre Que Yo Amo\" y \"Huele a Peligro\". Vive una noche mágica con una de las voces más queridas de la música latina. ¡No te lo puedes perder! · Starts 20:00 · James L Knight Center",
+          "es": "¡La Voz del Amor Regresa! Myriam Hernández, la icónica intérprete de baladas románticas, llega con un espectáculo inolvidable lleno de emoción, pasión y grandes éxitos como \"El Hombre Que Yo Amo\" y \"Huele a Peligro\". Vive una noche mágica con una de las voces más queridas de la música latina. ¡No te lo puedes perder! · Comienza 20:00 · James L Knight Center",
+          "pt": "¡A Voz do Amor Volta! Myriam Hernández, a icônica intérprete de baladas românticas, chega com um espetáculo inesquecível cheio de emoção, paixão e grandes sucessos como \"O Homem Que Eu Amo\" e \"Cheira a Perigo\". Viva uma noite mágica com uma das vozes mais queridas da música latina. Você não pode perder! · Começa 20:00 · James L Knight Center",
+          "fr": "La Voix de l'Amour Revient ! Myriam Hernández, l'interprète emblématique de ballades romantiques, arrive avec un spectacle inoubliable plein d'émotion, de passion et de grands succès comme \"L'Homme Que J'Aime\" et \"Ça Sent le Danger\". Vivez une nuit magique avec l'une des voix les plus chères de la musique latine. Vous ne pouvez pas manquer ! · Commence 20:00 · James L Knight Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7707756,
+        "lng": -80.1901174
+      },
+      {
+        "id": "tm_1786539487074_6r3q",
+        "title": {
+          "en": "Fall Fest: Starring Lil Baby",
+          "es": "Fall Fest: Con Lil Baby",
+          "pt": "Fall Fest: Com Lil Baby",
+          "fr": "Fall Fest: Avec Lil Baby"
+        },
+        "date": "2026-09-05",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J37N&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/413/19c30ff1-3683-434d-ae08-37cd167c5413_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 20:00 · Amerant Bank Arena",
+          "es": "Música · Otro · Comienza 20:00 · Amerant Bank Arena",
+          "pt": "Música · Outro · Começa 20:00 · Amerant Bank Arena",
+          "fr": "Musique · Autre · Débute 20:00 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.238701,
+        "lng": -80.370499
       }
     ]
   },
@@ -4199,10 +4226,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-11T12:53:48.308Z",
+    "fetchedAt": "2026-08-12T12:58:29.296Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.e56a389c57008489831ef6d27846b90abae69ae4.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.4505838d37b5afeabe82196b15be036affb8ca33.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4212,15 +4239,15 @@
           "fr": "Avis de Chaleur"
         },
         "detail": {
-          "en": "* WHAT...Heat index values 105-110 expected.\n\n* WHERE...All of south Florida.\n\n* WHEN...From noon today to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan índices de calor de 105-110.\n\n* DÓNDE...Toda el sur de Florida.\n\n* CUÁNDO...Desde el mediodía de hoy hasta las 7 PM EDT esta noche.\n\n* IMPACTOS...Las temperaturas elevadas y la humedad alta pueden causar enfermedades relacionadas con el calor.",
-          "pt": "* O QUÊ...Índices de calor de 105-110 esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Do meio-dia de hoje até as 7 PM EDT esta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Indices de chaleur de 105-110 prévus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...À partir de midi aujourd'hui jusqu'à 19 h HAE ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité élevée peuvent causer des maladies liées à la chaleur."
+          "en": "* WHAT...Heat index values 105 to 110 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From noon today to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
+          "es": "* QUÉ...Se esperan índices de calor de 105 a 110 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde el mediodía de hoy hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
+          "pt": "* O QUÊ...Índices de calor esperados de 105 a 110 graus.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Do meio-dia de hoje até as 19h EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Indices de chaleur attendus de 105 à 110 degrés.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De midi aujourd'hui à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e56a389c57008489831ef6d27846b90abae69ae4.001.1",
-        "effectiveAt": "2026-08-11T02:05:00-04:00",
-        "expiresAt": "2026-08-11T23:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4505838d37b5afeabe82196b15be036affb8ca33.001.1",
+        "effectiveAt": "2026-08-12T00:57:00-04:00",
+        "expiresAt": "2026-08-12T23:00:00.000Z"
       }
     ]
   }
