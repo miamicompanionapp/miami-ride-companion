@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-12T12:58:32.438Z",
+    "lastUpdated": "2026-08-13T12:59:47.083Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-12T12:58:29.296Z",
+    "fetchedAt": "2026-08-13T12:59:44.276Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 98,
+      "temp_f": 84,
+      "feels_f": 94,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 83,
-      "wind_mph": 1,
-      "rain_chance": 17,
+      "humidity": 79,
+      "wind_mph": 2,
+      "rain_chance": 24,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-12",
-        "high_f": 90,
-        "low_f": 80,
-        "weathercode": 3,
-        "rain_chance": 17,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-13",
-        "high_f": 90,
-        "low_f": 77,
+        "high_f": 91,
+        "low_f": 76,
         "weathercode": 3,
-        "rain_chance": 22,
+        "rain_chance": 24,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,10 +36,10 @@
       },
       {
         "date": "2026-08-14",
-        "high_f": 90,
-        "low_f": 82,
+        "high_f": 91,
+        "low_f": 79,
         "weathercode": 3,
-        "rain_chance": 16,
+        "rain_chance": 13,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -62,10 +49,10 @@
       },
       {
         "date": "2026-08-15",
-        "high_f": 90,
-        "low_f": 85,
+        "high_f": 89,
+        "low_f": 82,
         "weathercode": 96,
-        "rain_chance": 34,
+        "rain_chance": 26,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -75,10 +62,23 @@
       },
       {
         "date": "2026-08-16",
-        "high_f": 89,
+        "high_f": 90,
         "low_f": 85,
         "weathercode": 3,
-        "rain_chance": 4,
+        "rain_chance": 1,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
+      },
+      {
+        "date": "2026-08-17",
+        "high_f": 90,
+        "low_f": 85,
+        "weathercode": 3,
+        "rain_chance": 13,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -90,31 +90,31 @@
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 82,
+        "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "09:00",
-        "temp_f": 86,
+        "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "10:00",
-        "temp_f": 87,
+        "temp_f": 86,
         "weathercode": 1,
         "rain_chance": 1
       },
       {
         "hour": "11:00",
-        "temp_f": 88,
+        "temp_f": 87,
         "weathercode": 1,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "12:00",
-        "temp_f": 89,
+        "temp_f": 88,
         "weathercode": 0,
         "rain_chance": 1
       },
@@ -126,19 +126,19 @@
       },
       {
         "hour": "14:00",
-        "temp_f": 90,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 90,
+        "temp_f": 91,
         "weathercode": 0,
         "rain_chance": 4
       },
       {
+        "hour": "15:00",
+        "temp_f": 91,
+        "weathercode": 0,
+        "rain_chance": 7
+      },
+      {
         "hour": "16:00",
-        "temp_f": 90,
+        "temp_f": 91,
         "weathercode": 0,
         "rain_chance": 8
       },
@@ -146,91 +146,91 @@
         "hour": "17:00",
         "temp_f": 89,
         "weathercode": 0,
-        "rain_chance": 11
+        "rain_chance": 9
       },
       {
         "hour": "18:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 88,
+        "weathercode": 1,
+        "rain_chance": 7
       },
       {
         "hour": "19:00",
-        "temp_f": 86,
+        "temp_f": 87,
         "weathercode": 1,
-        "rain_chance": 17
+        "rain_chance": 5
       },
       {
         "hour": "20:00",
         "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 11
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "21:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 83,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "22:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "23:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "00:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "01:00",
-        "temp_f": 80,
+        "temp_f": 81,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 3
       },
       {
         "hour": "02:00",
-        "temp_f": 79,
+        "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 3
       },
       {
         "hour": "03:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 77,
+        "temp_f": 80,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
+        "hour": "04:00",
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 1
+      },
+      {
         "hour": "05:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 79,
+        "weathercode": 1,
+        "rain_chance": 3
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 3
       }
     ]
   },
@@ -1415,31 +1415,6 @@
         "lat": 26.0077588,
         "lng": -80.1422511,
         "category": "community"
-      },
-      {
-        "id": "tm_1783086820321_9700",
-        "title": {
-          "en": "5 Seconds of Summer: EVERYONE'S A STAR! World Tour",
-          "es": "5 Seconds of Summer: ¡TODOS SON ESTRELLAS! Gira Mundial",
-          "pt": "5 Seconds of Summer: TODOS SÃO ESTRELAS! Turnê Mundial",
-          "fr": "5 Seconds of Summer: TOUT LE MONDE EST UNE STAR! Tournée Mondiale"
-        },
-        "date": "2026-08-12",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F5-seconds-of-summer-everyones-a-hollywood-florida-08-12-2026%2Fevent%2F0D006356F2505A4D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ce2/922873d9-c41f-461b-9486-5c5adab78ce2_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Pop · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · Pop · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · Pop · Commence 20:00 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577,
-        "category": "music"
       },
       {
         "id": "tm_1783086820321_u449",
@@ -3143,84 +3118,6 @@
         "category": "music"
       },
       {
-        "id": "tm_1786452816535_ptyy",
-        "title": {
-          "en": "2026 Leagues Cup: Inter Miami CF vs Club León",
-          "es": "Copa de Ligas 2026: Inter Miami CF vs Club León",
-          "pt": "Copa das Ligas 2026: Inter Miami CF vs Club León",
-          "fr": "Coupe des Ligues 2026: Inter Miami CF vs Club León"
-        },
-        "date": "2026-08-12",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F2026-leagues-cup-inter-miami-cf-miami-florida-08-12-2026%2Fevent%2F0D0064B5A24E8BDE&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/af6/c2cbbc30-320a-4de4-bd4d-1dc973a27af6_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Soccer · Starts 19:30 · Nu Stadium",
-          "es": "Deportes · Fútbol · Comienza 19:30 · Nu Stadium",
-          "pt": "Esportes · Futebol · Começa 19:30 · Nu Stadium",
-          "fr": "Sports · Football · Commence 19:30 · Nu Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
-        "id": "tm_1786539487073_n1cj",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-12",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1786539487073_9acn",
-        "title": {
-          "en": "Miami Marlins vs. Pittsburgh Pirates",
-          "es": "Miami Marlins vs. Pittsburgh Pirates",
-          "pt": "Miami Marlins vs. Pittsburgh Pirates",
-          "fr": "Miami Marlins vs. Pittsburgh Pirates"
-        },
-        "date": "2026-08-12",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0v&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
         "id": "tm_1786539487073_awq5",
         "title": {
           "en": "UNIDOS POR LOS NUESTROS- Live Benefit Concert & National Telethon",
@@ -3323,6 +3220,260 @@
         "category": "music",
         "lat": 26.238701,
         "lng": -80.370499
+      },
+      {
+        "id": "rss_1786625954858_kqkk",
+        "title": {
+          "en": "Exiled Cuban dissident artist to appear at the Freedom Tower",
+          "es": "Artista disidente cubano exiliado se presentará en la Torre de la Libertad",
+          "pt": "Artista cubano dissidente exilado se apresentará na Torre da Liberdade",
+          "fr": "L'artiste dissident cubain exilé se produira à la Tour de la Liberté"
+        },
+        "date": "2026-08-13",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/arts-culture/exiled-cuban-artist-luis-manuel-otero-alcantara-exhibit-miami-40575603/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/08/Luis-Manuel-Otero-Alcantara-Provided-by-the-Museum-of-Art-and-Design-at-Miami-Dade-College.jpeg",
+        "description": {
+          "en": "Luis Manuel Otero Alcántara was released from a maximum security Cuban prison less than one month ago.",
+          "es": "Luis Manuel Otero Alcántara fue liberado de una prisión de máxima seguridad cubana hace menos de un mes.",
+          "pt": "Luis Manuel Otero Alcántara foi liberado de uma prisão cubana de segurança máxima há menos de um mês.",
+          "fr": "Luis Manuel Otero Alcántara a été libéré d'une prison de sécurité maximale cubaine il y a moins d'un mois."
+        },
+        "source": "Miami New Times",
+        "category": "community"
+      },
+      {
+        "id": "rss_1786625954858_jrao",
+        "title": {
+          "en": "Herpreneur Artisan Market at The Goodtime Hotel 9/27/26",
+          "es": "Mercado Artesanal Herpreneur en The Goodtime Hotel 27/9/26",
+          "pt": "Mercado Artesanal Herpreneur no The Goodtime Hotel 27/9/26",
+          "fr": "Marché Artisanal Herpreneur au The Goodtime Hotel 27/9/26"
+        },
+        "date": "2026-09-27",
+        "venue": "The Goodtime Hotel",
+        "address": "601 Washington Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/08/12/herpreneur-artisan-market-at-the-goodtime-hotel-9-27-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/The-Goodtime-Hotel_Courtyard1-333x500.jpg",
+        "description": {
+          "en": "The Goodtime Hotel, Miami Beach will host a Sunday artisan market on Sunday, September 27",
+          "es": "The Goodtime Hotel, Miami Beach albergará un mercado artesanal dominical el domingo 27 de septiembre",
+          "pt": "O The Goodtime Hotel, Miami Beach sediará um mercado artesanal dominical no domingo, 27 de setembro",
+          "fr": "The Goodtime Hotel, Miami Beach accueillera un marché artisanal dominical le dimanche 27 septembre"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7763327,
+        "lng": -80.1334166,
+        "category": "community"
+      },
+      {
+        "id": "rss_1786625954858_tr9u",
+        "title": {
+          "en": "Herpreneur Artisan Market at The Goodtime Hotel 9/13/26",
+          "es": "Mercado Artesanal Herpreneur en The Goodtime Hotel 13/9/26",
+          "pt": "Mercado Artesanal Herpreneur no The Goodtime Hotel 13/9/26",
+          "fr": "Marché Artisanal Herpreneur au The Goodtime Hotel 13/9/26"
+        },
+        "date": "2026-09-13",
+        "venue": "The Goodtime Hotel",
+        "address": "601 Washington Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/08/12/herpreneur-artisan-market-at-the-goodtime-hotel-9-13-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/The-Goodtime-Hotel_Courtyard-333x500.jpg",
+        "description": {
+          "en": "Goodtime Hotel, Miami Beach will host a Sunday artisan market on Sunday,",
+          "es": "Goodtime Hotel, Miami Beach albergará un mercado artesanal dominical el domingo",
+          "pt": "Goodtime Hotel, Miami Beach sediará um mercado artesanal dominical no domingo",
+          "fr": "Goodtime Hotel, Miami Beach accueillera un marché artisanal dominical le dimanche"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7763327,
+        "lng": -80.1334166,
+        "category": "community"
+      },
+      {
+        "id": "rss_1786625954858_nn09",
+        "title": {
+          "en": "Feeding South Florida to Host Annual Outrun Hunger 5K 9/19/26",
+          "es": "Feeding South Florida presenta la 5K anual Outrun Hunger 19/9/26",
+          "pt": "Feeding South Florida apresenta a 5K anual Outrun Hunger 19/9/26",
+          "fr": "Feeding South Florida présente la 5K annuelle Outrun Hunger 19/9/26"
+        },
+        "date": "2026-09-19",
+        "venue": "Okeeheelee Park",
+        "address": "7715 Forest Hill Blvd., West Palm Beach, Florida, 33413",
+        "url": "https://www.soulofmiami.org/2026/08/12/feeding-south-florida-to-host-annual-outrun-hunger-5k-9-19-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Outrun-Hunger-5K-PBC-350x453.jpg",
+        "description": {
+          "en": "$30 Registration and T-shirt: $45 Hunger Hero: $250 Feeding South Florida® –",
+          "es": "Inscripción $30 y Camiseta: $45 Hunger Hero: $250 Feeding South Florida®",
+          "pt": "Inscrição $30 e Camiseta: $45 Hunger Hero: $250 Feeding South Florida®",
+          "fr": "Inscription $30 et T-shirt: $45 Hunger Hero: $250 Feeding South Florida®"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.6591922,
+        "lng": -80.1561524,
+        "category": "sports"
+      },
+      {
+        "id": "rss_1786625954858_li00",
+        "title": {
+          "en": "Miami-Dade County Homeless Trust Sprint for Seniors Bed Race 11/6/26",
+          "es": "Carrera de Camas Sprint for Seniors del Fondo de Personas sin Hogar del Condado Miami-Dade 6/11/26",
+          "pt": "Corrida de Camas Sprint for Seniors da Miami-Dade County Homeless Trust 6/11/26",
+          "fr": "Course de Lits Sprint for Seniors du Miami-Dade County Homeless Trust 6/11/26"
+        },
+        "date": "2026-11-06",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/08/12/miami-dade-county-homeless-trust-sprint-for-seniors-bed-race-11-6-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/HT-Sprint-for-Seniors_2-324x500.png",
+        "description": {
+          "en": "to Watch! Cost to race. On Friday, Nov. 6, at least",
+          "es": "¡Para Ver! Costo para competir. El viernes 6 de noviembre, al menos",
+          "pt": "Para Ver! Custo para correr. Na sexta-feira, 6 de novembro, pelo menos",
+          "fr": "À Regarder! Coût pour participer. Le vendredi 6 novembre, au moins"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1786625955312_fstx",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-13",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1786625955312_up6z",
+        "title": {
+          "en": "Miami Marlins vs. Pittsburgh Pirates",
+          "es": "Miami Marlins vs. Pittsburgh Pirates",
+          "pt": "Miami Marlins vs. Pittsburgh Pirates",
+          "fr": "Miami Marlins vs. Pittsburgh Pirates"
+        },
+        "date": "2026-08-13",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0e&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 13:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 13:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 13:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 13:10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1786625955312_4c4f",
+        "title": {
+          "en": "Friday Night Live - Improv Comedy Miami Show",
+          "es": "Friday Night Live - Espectáculo de Comedia Improvisada en Miami",
+          "pt": "Friday Night Live - Show de Comédia Improvisada em Miami",
+          "fr": "Friday Night Live - Spectacle de Comédie Improvisée à Miami"
+        },
+        "date": "2026-08-14",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897483&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
+          "es": "¡Friday Night Live! - Comedia improvisada en Miami. La combinación especial de JTF de improvisación de forma corta y larga. Disfruta mientras nuestro elenco ganador de premios te trae comedia improvisada fantástica perfecta para tu viernes por la noche. Nuestros espectáculos son frecuentemente descritos como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway meets SNL con mucha interacción divertida con la audiencia.",
+          "pt": "Friday Night Live! - Comédia Improvisada em Miami. A combinação especial de JTF de improviso de forma curta e longa. Aproveite enquanto nosso elenco premiado traz para você comédia improvisada fantástica perfeita para sua sexta-feira à noite. Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense nisso como Whose Line is It Anyway encontra SNL com muito envolvimento divertido do público.",
+          "fr": "Friday Night Live ! - Comédie Improvisée à Miami. La combinaison spéciale de JTF d'improvisation de forme courte et longue. Profitez pendant que notre troupe primée vous apporte une comédie improvisée fantastique parfaite pour votre vendredi soir. Nos spectacles sont souvent décrits comme une comédie improvisée rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction amusante du public."
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1786625955312_t797",
+        "title": {
+          "en": "ISOxo",
+          "es": "ISOxo",
+          "pt": "ISOxo",
+          "fr": "ISOxo"
+        },
+        "date": "2026-09-05",
+        "venue": "Factory Town",
+        "address": "4800 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70djs&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/706/d76e5f87-2b42-4021-b973-a90e86e07706_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 22:00 · Factory Town",
+          "es": "Música · Otro · Comienza 22:00 · Factory Town",
+          "pt": "Música · Outro · Começa 22:00 · Factory Town",
+          "fr": "Musique · Autre · Commence 22:00 · Factory Town"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.811899,
+        "lng": -80.238998
+      },
+      {
+        "id": "cp_1786625955931_2q1g",
+        "title": {
+          "en": "NMB 100: Symphony & Legacy – A Centennial Classical Music Concert",
+          "es": "NMB 100: Sinfonía y Legado – Un Concierto de Música Clásica Centenario",
+          "pt": "NMB 100: Sinfonia e Legado – Um Concerto de Música Clássica Centenário",
+          "fr": "NMB 100 : Symphonie et Héritage – Un Concert de Musique Classique Centenaire"
+        },
+        "date": "2026-08-22",
+        "venue": "Julius Littman Performing Arts Theater",
+        "address": "17011 NE 19 Avenue  North Miami Beach FL 33162",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://www.citynmb.com/calendar.aspx?EID=8926",
+          "es": "https://www.citynmb.com/calendar.aspx?EID=8926",
+          "pt": "https://www.citynmb.com/calendar.aspx?EID=8926",
+          "fr": "https://www.citynmb.com/calendar.aspx?EID=8926"
+        },
+        "source": "North Miami Beach",
+        "category": "arts"
       }
     ]
   },
@@ -4226,10 +4377,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-12T12:58:29.296Z",
+    "fetchedAt": "2026-08-13T12:59:44.277Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.4505838d37b5afeabe82196b15be036affb8ca33.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.a0601632be69614beafd2dca1d4a2e84073d8e9a.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4239,15 +4390,15 @@
           "fr": "Avis de Chaleur"
         },
         "detail": {
-          "en": "* WHAT...Heat index values 105 to 110 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From noon today to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan índices de calor de 105 a 110 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde el mediodía de hoy hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
-          "pt": "* O QUÊ...Índices de calor esperados de 105 a 110 graus.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Do meio-dia de hoje até as 19h EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Indices de chaleur attendus de 105 à 110 degrés.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De midi aujourd'hui à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité peuvent causer des maladies liées à la chaleur."
+          "en": "* WHAT...Heat index values 105-110 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From noon today to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
+          "es": "* QUÉ...Se esperan índices de calor de 105-110 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde el mediodía de hoy hasta las 7 PM EDT esta noche.\n\n* IMPACTOS...Las altas temperaturas y la humedad elevada pueden causar enfermedades por calor.",
+          "pt": "* O QUÊ...Esperados índices de calor de 105-110 graus.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...A partir do meio-dia de hoje até às 19h EDT esta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Les indices de chaleur attendus sont de 105-110 degrés.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...À partir de midi aujourd'hui jusqu'à 19h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4505838d37b5afeabe82196b15be036affb8ca33.001.1",
-        "effectiveAt": "2026-08-12T00:57:00-04:00",
-        "expiresAt": "2026-08-12T23:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a0601632be69614beafd2dca1d4a2e84073d8e9a.001.1",
+        "effectiveAt": "2026-08-13T01:42:00-04:00",
+        "expiresAt": "2026-08-13T23:00:00.000Z"
       }
     ]
   }
