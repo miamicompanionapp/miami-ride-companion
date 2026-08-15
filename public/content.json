@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-14T12:56:13.156Z",
+    "lastUpdated": "2026-08-15T12:29:10.837Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-14T12:56:09.854Z",
+    "fetchedAt": "2026-08-15T12:29:07.575Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 94,
+      "temp_f": 83,
+      "feels_f": 92,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 77,
+      "humidity": 81,
       "wind_mph": 7,
-      "rain_chance": 6,
-      "weathercode": 1
+      "rain_chance": 11,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-14",
-        "high_f": 91,
-        "low_f": 81,
-        "weathercode": 51,
-        "rain_chance": 6,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
         "date": "2026-08-15",
-        "high_f": 87,
+        "high_f": 91,
         "low_f": 80,
         "weathercode": 3,
-        "rain_chance": 13,
+        "rain_chance": 11,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,23 +36,23 @@
       },
       {
         "date": "2026-08-16",
-        "high_f": 89,
-        "low_f": 81,
-        "weathercode": 3,
-        "rain_chance": 6,
+        "high_f": 91,
+        "low_f": 80,
+        "weathercode": 1,
+        "rain_chance": 4,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Mainly clear",
+          "es": "Mayormente despejado",
+          "pt": "Principalmente limpo",
+          "fr": "Principalement dégagé"
         }
       },
       {
         "date": "2026-08-17",
-        "high_f": 90,
-        "low_f": 84,
+        "high_f": 91,
+        "low_f": 82,
         "weathercode": 3,
-        "rain_chance": 8,
+        "rain_chance": 5,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -77,34 +64,47 @@
         "date": "2026-08-18",
         "high_f": 92,
         "low_f": 85,
-        "weathercode": 95,
-        "rain_chance": 15,
+        "weathercode": 51,
+        "rain_chance": 11,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-08-19",
+        "high_f": 92,
+        "low_f": 85,
+        "weathercode": 1,
+        "rain_chance": 25,
+        "description": {
+          "en": "Mainly clear",
+          "es": "Mayormente despejado",
+          "pt": "Principalmente limpo",
+          "fr": "Principalement dégagé"
         }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 82,
-        "weathercode": 51,
+        "temp_f": 83,
+        "weathercode": 1,
         "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 86,
-        "weathercode": 1,
+        "temp_f": 85,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "10:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 2
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "11:00",
@@ -114,27 +114,27 @@
       },
       {
         "hour": "12:00",
-        "temp_f": 90,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 89,
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "13:00",
         "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "14:00",
         "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 2
       },
       {
         "hour": "15:00",
         "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 4
+        "rain_chance": 2
       },
       {
         "hour": "16:00",
@@ -152,85 +152,85 @@
         "hour": "18:00",
         "temp_f": 88,
         "weathercode": 0,
-        "rain_chance": 6
+        "rain_chance": 3
       },
       {
         "hour": "19:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "20:00",
         "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 5
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "21:00",
         "temp_f": 83,
-        "weathercode": 1,
-        "rain_chance": 4
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "22:00",
         "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 4
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "23:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "00:00",
         "temp_f": 81,
-        "weathercode": 2,
-        "rain_chance": 7
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "01:00",
         "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "02:00",
         "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 10
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "03:00",
-        "temp_f": 80,
-        "weathercode": 1,
-        "rain_chance": 7
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "04:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 6
+        "rain_chance": 0
       },
       {
         "hour": "05:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 10
+        "rain_chance": 0
       },
       {
         "hour": "06:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 4
+        "rain_chance": 0
       },
       {
         "hour": "07:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 7
+        "temp_f": 80,
+        "weathercode": 1,
+        "rain_chance": 1
       }
     ]
   },
@@ -1417,31 +1417,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1783086820321_4qbv",
-        "title": {
-          "en": "Remake Yourself: Tribute to Incubus & Jane's Affliction",
-          "es": "Remake Yourself: Tributo a Incubus y Jane's Addiction",
-          "pt": "Remake Yourself: Tributo a Incubus e Jane's Addiction",
-          "fr": "Remake Yourself: Tribut à Incubus et Jane's Addiction"
-        },
-        "date": "2026-08-14",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fremake-yourself-tribute-to-incubus-janes-ft-lauderdale-florida-08-14-2026%2Fevent%2F0D0064CE205527BC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/10b/024ecc6e-7ffe-4d09-a590-ade6a27e510b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Remake Yourself: Tribute to Incubus and Jane's Affliction: Tribute to Jane's Addiction will be performing at Revolution Live on Friday, August 14th. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "Remake Yourself: Tributo a Incubus y Jane's Addiction se presentará en Revolution Live el viernes 14 de agosto. Este evento es Para Todas las Edades. Las puertas abren a las 7pm. El espectáculo comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
-          "pt": "Remake Yourself: Tributo a Incubus e Jane's Addiction se apresentará na Revolution Live na sexta-feira, 14 de agosto. Este evento é Para Todas as Idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "Remake Yourself: Tribut à Incubus et Jane's Addiction se produira à Revolution Live vendredi 14 août. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 19:00 · Revolution Live"
-        },
-        "lat": 26.121094,
-        "lng": -80.146162,
-        "category": "music"
-      },
-      {
         "id": "rss_1783170931589_c5hv",
         "title": {
           "en": "Island City Stage presents the Tony Award-winning Play Eureka Day 8/20/26 – 9/13/26",
@@ -1465,81 +1440,6 @@
         "lat": 26.1566616,
         "lng": -80.1319329,
         "category": "arts"
-      },
-      {
-        "id": "tm_1783170932093_0jz0",
-        "title": {
-          "en": "Jordan Davis",
-          "es": "Jordan Davis",
-          "pt": "Jordan Davis",
-          "fr": "Jordan Davis"
-        },
-        "date": "2026-08-14",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjordan-davis-hollywood-florida-08-14-2026%2Fevent%2F0D006479BA3BA724&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/915/45464d84-86d8-477b-b390-5f0aff133915_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Country · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Country · Comienza a las 20:00 · Hard Rock Live",
-          "pt": "Música · Country · Começa às 20:00 · Hard Rock Live",
-          "fr": "Musique · Country · Commence à 20:00 · Hard Rock Live"
-        },
-        "lat": 26.0503384,
-        "lng": -80.2109577,
-        "category": "music"
-      },
-      {
-        "id": "tm_1783170932093_m65c",
-        "title": {
-          "en": "3BallMTY",
-          "es": "3BallMTY",
-          "pt": "3BallMTY",
-          "fr": "3BallMTY"
-        },
-        "date": "2026-08-14",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F3ballmty-miami-beach-florida-08-14-2026%2Fevent%2F0D006483E345534C&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/f06/48603ef9-a21d-4e79-9a55-5653d741cf06_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 21:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Los boletos de GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas son de pie y sentadas y se asignan por orden de llegada. Tenga en cuenta que una vez que se alcance la capacidad de un área, se limitará a otras áreas abiertas. · Comienza a las 21:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Ingressos GA significam Admissão Geral. Isso significa que não há assentos designados. Essas áreas são em pé e sentadas e são atribuídas por ordem de chegada. Esteja ciente de que uma vez atingida a capacidade de uma área, você será limitado a outras áreas abertas. · Começa às 21:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de sièges attribués. Ces zones sont debout et assises et sont attribuées selon le principe du premier arrivé, premier servi. Veuillez noter qu'une fois la capacité d'une zone atteinte, vous serez limité à d'autres zones ouvertes. · Commence à 21:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "lat": 25.792917,
-        "lng": -80.13314,
-        "category": "music"
-      },
-      {
-        "id": "tm_1783170932093_3pie",
-        "title": {
-          "en": "DJ Pauly D",
-          "es": "DJ Pauly D",
-          "pt": "DJ Pauly D",
-          "fr": "DJ Pauly D"
-        },
-        "date": "2026-08-14",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdj-pauly-d-liv-nightclub-miami-tickets%2F14235344&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/f93/b147254f-5a19-4340-b2c4-c2f523d9ff93_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tienen al menos 21 años no será admitido en este evento y no será elegible para un reembolso. · Comienza a las 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não possa apresentar uma identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa às 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible pour un remboursement. · Commence à 23:00 · LIV Nightclub Miami"
-        },
-        "lat": 25.817805,
-        "lng": -80.122143,
-        "category": "music"
       },
       {
         "id": "rss_1783775325198_l6j1",
@@ -1866,32 +1766,6 @@
         "category": "music",
         "lat": 25.792917,
         "lng": -80.13314
-      },
-      {
-        "id": "rss_1784727687253_7t6j",
-        "title": {
-          "en": "Toro Toro Miami Spice Rum Dinner 8/14/26",
-          "es": "Cena de Ron Miami Spice en Toro Toro 8/14/26",
-          "pt": "Jantar de Rum Miami Spice no Toro Toro 8/14/26",
-          "fr": "Dîner Rhum Miami Spice chez Toro Toro 8/14/26"
-        },
-        "date": "2026-08-14",
-        "venue": "Toro Toro",
-        "address": "100 Chopin Plaza, Miami, Florida, 33131",
-        "url": "https://www.soulofmiami.org/2026/07/21/toro-toro-miami-spice-rum-dinner-8-14-26/",
-        "free": false,
-        "price": "$99",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/toro-cal-350x406.jpeg",
-        "description": {
-          "en": "It’s time to get spicy at Toro Toro with a special Miami Spice Rum Dinner in celebration of National",
-          "es": "Es hora de ponerse picante en Toro Toro con una cena especial de Ron Miami Spice en celebración del Día Nacional",
-          "pt": "É hora de ficar picante no Toro Toro com um jantar especial de Rum Miami Spice em comemoração ao Dia Nacional",
-          "fr": "C'est le moment de devenir épicé chez Toro Toro avec un dîner spécial Rhum Miami Spice en célébration de la Journée Nationale"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.772449,
-        "lng": -80.1854687,
-        "category": "community"
       },
       {
         "id": "rss_1784899622368_x3gx",
@@ -2586,30 +2460,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1785852008678_zd7o",
-        "title": {
-          "en": "World premier of the musical SOUP 8/14/26, 8/15/26, 8/16/26, 8/21/26, 8/22/26, 8/23/26",
-          "es": "Estreno mundial del musical SOUP 8/14/26, 8/15/26, 8/16/26, 8/21/26, 8/22/26, 8/23/26",
-          "pt": "Estreia mundial do musical SOUP 8/14/26, 8/15/26, 8/16/26, 8/21/26, 8/22/26, 8/23/26",
-          "fr": "Première mondiale de la comédie musicale SOUP 8/14/26, 8/15/26, 8/16/26, 8/21/26, 8/22/26, 8/23/26"
-        },
-        "date": "2026-08-14",
-        "venue": "The Mandelstam Theater",
-        "address": "8530 SW 57 Avenue, South Miami, Florida, 33143",
-        "url": "https://www.soulofmiami.org/2026/08/03/world-premier-of-the-musical-soup-8-14-26-8-15-26-8-16-26-8-21-26-8-22-26-8-23-26/",
-        "free": false,
-        "price": "$50",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Picture1-350x243.jpg",
-        "description": {
-          "en": "& $65 World Premier of the musical “Soup” brings the inspiring story behind Miami’s beloved",
-          "es": "& $65 El estreno mundial del musical \"Soup\" presenta la inspiradora historia detrás del querido Miami",
-          "pt": "& $65 A estreia mundial do musical \"Soup\" traz a história inspiradora por trás do querido Miami",
-          "fr": "& $65 La première mondiale de la comédie musicale \"Soup\" raconte l'histoire inspirante derrière le bien-aimé Miami"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1785938278700_48dm",
         "title": {
           "en": "MOAD Talks – A Conversation with Khadijah Cypress 8/15/26",
@@ -2887,32 +2737,6 @@
         "source": "Soul of Miami",
         "lat": 25.7959725,
         "lng": -80.1924601,
-        "category": "community"
-      },
-      {
-        "id": "rss_1786366660903_e5u6",
-        "title": {
-          "en": "Luis Manuel Otero Alcántara: nos encontramos 8/14/26",
-          "es": "Luis Manuel Otero Alcántara: nos encontramos 8/14/26",
-          "pt": "Luis Manuel Otero Alcántara: nos encontramos 8/14/26",
-          "fr": "Luis Manuel Otero Alcántara: nos encontramos 8/14/26"
-        },
-        "date": "2026-08-14",
-        "venue": "Freedom Tower",
-        "address": "600 Biscayne Boulevard, Miami, Florida, 33132",
-        "url": "https://www.soulofmiami.org/2026/08/08/luis-manuel-otero-alcantara-nos-encontramos-8-14-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/IMG_1780-350x233.jpeg",
-        "description": {
-          "en": "Join the Museum of Art and Design for a special evening at the Freedom Tower with artist Luis",
-          "es": "Únase al Museo de Arte y Diseño para una noche especial en la Torre de la Libertad con el artista Luis",
-          "pt": "Junte-se ao Museu de Arte e Design para uma noite especial na Torre da Liberdade com o artista Luis",
-          "fr": "Rejoignez le Musée d'Art et de Design pour une soirée spéciale à la Tour de la Liberté avec l'artiste Luis"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.780295,
-        "lng": -80.18971,
         "category": "community"
       },
       {
@@ -3248,32 +3072,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786625955312_4c4f",
-        "title": {
-          "en": "Friday Night Live - Improv Comedy Miami Show",
-          "es": "Friday Night Live - Espectáculo de Comedia Improvisada en Miami",
-          "pt": "Friday Night Live - Show de Comédia Improvisada em Miami",
-          "fr": "Friday Night Live - Spectacle de Comédie Improvisée à Miami"
-        },
-        "date": "2026-08-14",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897483&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
-          "es": "¡Friday Night Live! - Comedia improvisada en Miami. La combinación especial de JTF de improvisación de forma corta y larga. Disfruta mientras nuestro elenco ganador de premios te trae comedia improvisada fantástica perfecta para tu viernes por la noche. Nuestros espectáculos son frecuentemente descritos como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway meets SNL con mucha interacción divertida con la audiencia.",
-          "pt": "Friday Night Live! - Comédia Improvisada em Miami. A combinação especial de JTF de improviso de forma curta e longa. Aproveite enquanto nosso elenco premiado traz para você comédia improvisada fantástica perfeita para sua sexta-feira à noite. Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense nisso como Whose Line is It Anyway encontra SNL com muito envolvimento divertido do público.",
-          "fr": "Friday Night Live ! - Comédie Improvisée à Miami. La combinaison spéciale de JTF d'improvisation de forme courte et longue. Profitez pendant que notre troupe primée vous apporte une comédie improvisée fantastique parfaite pour votre vendredi soir. Nos spectacles sont souvent décrits comme une comédie improvisée rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction amusante du public."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
         "id": "tm_1786625955312_t797",
         "title": {
           "en": "ISOxo",
@@ -3399,32 +3197,6 @@
         "source": "Soul of Miami",
         "lat": 26.155611,
         "lng": -80.132681,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1786712138538_d9er",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-14",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza 10:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 10:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Début 10:00 · Centre de Conférences Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
         "category": "arts"
       },
       {
@@ -3556,6 +3328,262 @@
         "category": "music",
         "lat": 26.0503384,
         "lng": -80.2109577
+      },
+      {
+        "id": "rss_1786796918199_w2gt",
+        "title": {
+          "en": "NMB 100: Centennial Concert 8/22/26",
+          "es": "NMB 100: Concierto del Centenario 8/22/26",
+          "pt": "NMB 100: Concerto do Centenário 8/22/26",
+          "fr": "NMB 100: Concert du Centenaire 8/22/26"
+        },
+        "date": "2026-08-22",
+        "venue": "Julius Littman Performing Arts Theater, North Miami Beach, FL",
+        "address": "17011 NE 19th Avenue, North Miami Beach, Florida, 33162",
+        "url": "https://www.soulofmiami.org/2026/08/14/nmb-100-centennial-concert-8-22-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/1000691110-324x500.jpg",
+        "description": {
+          "en": "Partner Ticket: $100.00 per person, Admission is FREE for North",
+          "es": "Entrada de Socio: $100.00 por persona, La entrada es GRATUITA para North",
+          "pt": "Ingresso de Parceiro: $100.00 por pessoa, A entrada é GRATUITA para North",
+          "fr": "Billet Partenaire: $100.00 par personne, L'admission est GRATUITE pour North"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9326004,
+        "lng": -80.1615821,
+        "category": "music"
+      },
+      {
+        "id": "rss_1786796918199_fat4",
+        "title": {
+          "en": "Magic City Comedy at Ray’s Hometown Bar Miami 8/20/26",
+          "es": "Magic City Comedy en Ray's Hometown Bar Miami 8/20/26",
+          "pt": "Magic City Comedy no Ray's Hometown Bar Miami 8/20/26",
+          "fr": "Magic City Comedy au Ray's Hometown Bar Miami 8/20/26"
+        },
+        "date": "2026-08-20",
+        "venue": "Ray's Hometown Bar Miami",
+        "address": "2727 Indian Creek Dr #11, Miami Beach, Florida, 33140",
+        "url": "https://www.soulofmiami.org/2026/08/14/magic-city-comedy-at-rays-hometown-bar-miami-8-20-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Magic-City-Comedy-8.20.2026-1-350x437.jpg",
+        "description": {
+          "en": "Join us Thursday, August 20th at Ray’s Miami 2nd floor for",
+          "es": "Únete a nosotros el jueves, 20 de agosto en Ray's Miami 2do piso para",
+          "pt": "Junte-se a nós quinta-feira, 20 de agosto no Ray's Miami 2º andar para",
+          "fr": "Rejoignez-nous jeudi 20 août au Ray's Miami 2e étage pour"
+        },
+        "source": "Soul of Miami",
+        "category": "comedy"
+      },
+      {
+        "id": "rss_1786796918199_zjml",
+        "title": {
+          "en": "Free Health Fair in Fort Lauderdale 8/29/26",
+          "es": "Feria de Salud Gratuita en Fort Lauderdale 8/29/26",
+          "pt": "Feira de Saúde Gratuita em Fort Lauderdale 8/29/26",
+          "fr": "Foire de la Santé Gratuite à Fort Lauderdale 8/29/26"
+        },
+        "date": "2026-08-29",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/08/14/free-health-fair-in-fort-lauderdale-8-29-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Free-Health-Fair-Aug.-29-E-Flyer-sml-350x462.jpg",
+        "description": {
+          "en": "The YMCA of South Florida, in partnership with the University of",
+          "es": "La YMCA del Sur de Florida, en asociación con la Universidad de",
+          "pt": "A YMCA do Sul da Flórida, em parceria com a Universidade de",
+          "fr": "La YMCA du sud de la Floride, en partenariat avec l'Université de"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1786796918199_kce6",
+        "title": {
+          "en": "Light Up the Night 11/14/26",
+          "es": "Ilumina la Noche 11/14/26",
+          "pt": "Ilumine a Noite 11/14/26",
+          "fr": "Illuminez la Nuit 11/14/26"
+        },
+        "date": "2026-11-14",
+        "venue": "Dania Beach City Hall",
+        "address": "100 W Dania Beach Blvd, Dania Beach, Florida, 33004",
+        "url": "https://www.soulofmiami.org/2026/08/14/light-up-the-night-11-14-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/LIGHT-UP-3-350x233.jpg",
+        "description": {
+          "en": "admission Experience the enchantment of the “Dania After Dark – Light Up Dania Beach” at",
+          "es": "admisión Experimenta el encanto de \"Dania After Dark – Light Up Dania Beach\" en",
+          "pt": "admissão Experimente o encanto de \"Dania After Dark – Light Up Dania Beach\" em",
+          "fr": "admission Découvrez la magie de \"Dania After Dark – Light Up Dania Beach\" à"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.0518687,
+        "lng": -80.145211,
+        "category": "community"
+      },
+      {
+        "id": "rss_1786796918199_j6q0",
+        "title": {
+          "en": "Dania Beach Wine & Seafood Festival 3/6/27",
+          "es": "Festival de Vino y Mariscos de Dania Beach 3/6/27",
+          "pt": "Festival de Vinho e Frutos do Mar de Dania Beach 3/6/27",
+          "fr": "Festival du Vin et des Fruits de Mer de Dania Beach 3/6/27"
+        },
+        "date": "2027-03-06",
+        "venue": "Dania Beach City Hall",
+        "address": "100 W Dania Beach Blvd, Dania Beach, Florida, 33004",
+        "url": "https://www.soulofmiami.org/2026/08/14/dania-beach-wine-seafood-festival-3-6-27/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/WSF-1-350x233.jpg",
+        "description": {
+          "en": "admission is free. Tickets for VIP and unlimited sampling are available for purchase.",
+          "es": "la admisión es gratuita. Los boletos para muestreo VIP e ilimitado están disponibles para comprar.",
+          "pt": "a admissão é gratuita. Ingressos para amostragem VIP e ilimitada estão disponíveis para compra.",
+          "fr": "l'admission est gratuite. Les billets pour dégustation VIP et illimitée sont disponibles à l'achat."
+        },
+        "source": "Soul of Miami",
+        "lat": 26.0518687,
+        "lng": -80.145211,
+        "category": "community"
+      },
+      {
+        "id": "tm_1786796918784_9hka",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-15",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Varios · Familiar · Comienza 10:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1786796918784_bwnh",
+        "title": {
+          "en": "Fists of Fury Series",
+          "es": "Serie Puños de Furia",
+          "pt": "Série Punhos de Fúria",
+          "fr": "Série Poings de Fury"
+        },
+        "date": "2026-08-16",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ffists-of-fury-series-hollywood-florida-08-16-2026%2Fevent%2F0D0064F48CDB2D1C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d40/776b866d-24f0-42cd-93c3-0e5eadc7ed40_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Boxing · Starts 16:00 · Hard Rock Live",
+          "es": "Deportes · Boxeo · Comienza 16:00 · Hard Rock Live",
+          "pt": "Esportes · Boxe · Começa 16:00 · Hard Rock Live",
+          "fr": "Sports · Boxe · Commence 16:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1786796918784_7ewu",
+        "title": {
+          "en": "31st International Ballet Festival of Miami: Closing Gala of the Stars",
+          "es": "31º Festival Internacional de Ballet de Miami: Gala de Clausura de las Estrellas",
+          "pt": "31º Festival Internacional de Ballet de Miami: Gala de Encerramento das Estrelas",
+          "fr": "31e Festival International de Ballet de Miami: Gala de Clôture des Étoiles"
+        },
+        "date": "2026-08-16",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F31st-international-ballet-festival-of-miami-miami-beach-florida-08-16-2026%2Fevent%2F0D0064A4898258B0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/3f1/34c97e6c-23ac-40c2-9d53-909f800a63f1_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "No age restrictions. Doors open at 7pm. Parking is located across from the theater on 17th street. Military, teacher, and student discounts available. · Starts 17:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Sin restricciones de edad. Las puertas abren a las 7pm. El estacionamiento se encuentra frente al teatro en la calle 17. Descuentos disponibles para militares, maestros y estudiantes. · Comienza 17:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
+          "pt": "Sem restrições de idade. As portas abrem às 19h. Estacionamento localizado em frente ao teatro na rua 17. Descontos disponíveis para militares, professores e estudantes. · Começa 17:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
+          "fr": "Pas de restrictions d'âge. Les portes ouvrent à 19h. Le stationnement est situé en face du théâtre sur la rue 17. Des réductions sont disponibles pour les militaires, les enseignants et les étudiants. · Commence 17:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1786796918784_on4v",
+        "title": {
+          "en": "BRCW Summer Smash",
+          "es": "BRCW Golpe de Verano",
+          "pt": "BRCW Pancada do Verão",
+          "fr": "BRCW Coup d'Été"
+        },
+        "date": "2026-08-16",
+        "venue": "The Studio at Mizner Park",
+        "address": "201 W Plaza Real, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbrcw-summer-smash-boca-raton-florida-08-16-2026%2Fevent%2F0D00645AA11FB096&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/03a/663e520c-a3f7-4269-99a9-1bd30131f03a_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Wrestling · Starts 17:00 · The Studio at Mizner Park",
+          "es": "Deportes · Lucha Libre · Comienza 17:00 · The Studio at Mizner Park",
+          "pt": "Esportes · Wrestling · Começa 17:00 · The Studio at Mizner Park",
+          "fr": "Sports · Catch · Commence 17:00 · The Studio at Mizner Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.35289,
+        "lng": -80.08569
+      },
+      {
+        "id": "tm_1786796918784_w2vr",
+        "title": {
+          "en": "Bee Gees Now!",
+          "es": "¡Bee Gees Ahora!",
+          "pt": "Bee Gees Agora!",
+          "fr": "Bee Gees Maintenant!"
+        },
+        "date": "2026-08-29",
+        "venue": "Coral Springs Center",
+        "address": "2855 Coral Springs Dr., Coral Springs, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70KOg&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 19:30 · Coral Springs Center",
+          "es": "Música · Otro · Comienza 19:30 · Coral Springs Center",
+          "pt": "Música · Outro · Começa 19:30 · Coral Springs Center",
+          "fr": "Musique · Autre · Commence 19:30 · Coral Springs Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.2738,
+        "lng": -80.256897
       }
     ]
   },
@@ -4459,10 +4487,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-14T12:56:09.854Z",
+    "fetchedAt": "2026-08-15T12:29:07.576Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.2d784632dc7c393fbd30d01e7deebebc3b044377.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.801ef6bcc74e2606a8b38b197bb67bbd0a7d5aa8.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4472,15 +4500,15 @@
           "fr": "Avis de Chaleur"
         },
         "detail": {
-          "en": "* WHAT...Heat index values 105-110 expected.\n\n* WHERE...All of south Florida.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan valores de índice de calor de 105-110 °F.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y la humedad alta pueden causar enfermedades por calor.",
-          "pt": "* O QUÊ...Valores de índice de calor de 105-110 °F esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 AM desta manhã até 19h EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e alta umidade podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Des valeurs d'indice de chaleur de 105-110 °F attendues.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité élevée peuvent causer des maladies liées à la chaleur."
+          "en": "* WHAT...Heat index values of 105 to 110 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
+          "es": "* QUÉ...Se esperan índices de calor de 105 a 110 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...De 11 AM esta mañana a 7 PM EDT esta tarde.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
+          "pt": "* O QUÊ...Índices de calor entre 105 e 110 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 AM desta manhã até às 7 PM EDT desta noite.\n\n* IMPACTOS...As temperaturas altas e a umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Indices de chaleur de 105 à 110 degrés prévus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2d784632dc7c393fbd30d01e7deebebc3b044377.001.1",
-        "effectiveAt": "2026-08-14T01:04:00-04:00",
-        "expiresAt": "2026-08-14T23:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.801ef6bcc74e2606a8b38b197bb67bbd0a7d5aa8.001.1",
+        "effectiveAt": "2026-08-15T00:16:00-04:00",
+        "expiresAt": "2026-08-15T23:00:00.000Z"
       }
     ]
   }
