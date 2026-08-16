@@ -1,32 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-15T12:29:10.837Z",
+    "lastUpdated": "2026-08-16T12:30:02.340Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-15T12:29:07.575Z",
+    "fetchedAt": "2026-08-16T12:29:59.058Z",
     "current": {
-      "temp_f": 83,
-      "feels_f": 92,
+      "temp_f": 84,
+      "feels_f": 96,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 81,
-      "wind_mph": 7,
-      "rain_chance": 11,
-      "weathercode": 0
+      "humidity": 82,
+      "wind_mph": 3,
+      "rain_chance": 2,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-08-15",
+        "date": "2026-08-16",
         "high_f": 91,
         "low_f": 80,
         "weathercode": 3,
-        "rain_chance": 11,
+        "rain_chance": 2,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -35,24 +35,11 @@
         }
       },
       {
-        "date": "2026-08-16",
-        "high_f": 91,
-        "low_f": 80,
-        "weathercode": 1,
-        "rain_chance": 4,
-        "description": {
-          "en": "Mainly clear",
-          "es": "Mayormente despejado",
-          "pt": "Principalmente limpo",
-          "fr": "Principalement dégagé"
-        }
-      },
-      {
         "date": "2026-08-17",
         "high_f": 91,
-        "low_f": 82,
+        "low_f": 76,
         "weathercode": 3,
-        "rain_chance": 5,
+        "rain_chance": 6,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -62,10 +49,10 @@
       },
       {
         "date": "2026-08-18",
-        "high_f": 92,
-        "low_f": 85,
+        "high_f": 93,
+        "low_f": 83,
         "weathercode": 51,
-        "rain_chance": 11,
+        "rain_chance": 13,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -75,15 +62,28 @@
       },
       {
         "date": "2026-08-19",
-        "high_f": 92,
+        "high_f": 93,
         "low_f": 85,
-        "weathercode": 1,
-        "rain_chance": 25,
+        "weathercode": 95,
+        "rain_chance": 39,
         "description": {
-          "en": "Mainly clear",
-          "es": "Mayormente despejado",
-          "pt": "Principalmente limpo",
-          "fr": "Principalement dégagé"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-08-20",
+        "high_f": 91,
+        "low_f": 85,
+        "weathercode": 3,
+        "rain_chance": 43,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       }
     ],
@@ -91,31 +91,31 @@
       {
         "hour": "08:00",
         "temp_f": 83,
-        "weathercode": 1,
+        "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "10:00",
         "temp_f": 86,
-        "weathercode": 0,
+        "weathercode": 2,
         "rain_chance": 1
       },
       {
         "hour": "11:00",
         "temp_f": 88,
-        "weathercode": 1,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "12:00",
-        "temp_f": 89,
-        "weathercode": 1,
+        "temp_f": 90,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
@@ -128,7 +128,7 @@
         "hour": "14:00",
         "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "15:00",
@@ -138,21 +138,21 @@
       },
       {
         "hour": "16:00",
-        "temp_f": 90,
+        "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 4
+        "rain_chance": 2
       },
       {
         "hour": "17:00",
         "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 4
+        "rain_chance": 2
       },
       {
         "hour": "18:00",
         "temp_f": 88,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 1
       },
       {
         "hour": "19:00",
@@ -175,61 +175,61 @@
       {
         "hour": "22:00",
         "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 0
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "23:00",
         "temp_f": 81,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "00:00",
         "temp_f": 81,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "01:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "02:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "03:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 1
       },
       {
         "hour": "04:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 76,
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "07:00",
-        "temp_f": 80,
-        "weathercode": 1,
+        "temp_f": 76,
+        "weathercode": 0,
         "rain_chance": 1
       }
     ]
@@ -1467,56 +1467,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1783952675214_0qdp",
-        "title": {
-          "en": "Gipsy Kings featuring Tonino Baliardo",
-          "es": "Gipsy Kings presentando a Tonino Baliardo",
-          "pt": "Gipsy Kings apresentando Tonino Baliardo",
-          "fr": "Gipsy Kings présentant Tonino Baliardo"
-        },
-        "date": "2026-08-15",
-        "venue": "James L Knight Center",
-        "address": "400 SE 2nd Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgipsy-kings-featuring-tonino-baliardo-miami-florida-08-15-2026%2Fevent%2F0D0064AF9D548868&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/cb4/4d1ef663-bcd2-4044-8318-e9dca5b58cb4_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Tonino Baliardo is the founder and leader of Gipsy Kings, but above all he is a guitar virtuoso and a composer recognized worldwide. He composed and produced the greatest hits of the group such as ?Bamboleo? or ?Djobi Djoba?. Undisputed masters of gypsy music, the group has sold over 20 million albums worldwide and has been awarded numerous gold, platinum and diamond discs, a music victory in 1990",
-          "es": "Tonino Baliardo es el fundador y líder de Gipsy Kings, pero sobre todo es un virtuoso de la guitarra y un compositor reconocido mundialmente. Compuso y produjo los mayores éxitos del grupo como \"Bamboleo\" o \"Djobi Djoba\". Los indiscutibles maestros de la música gitana, el grupo ha vendido más de 20 millones de álbumes en todo el mundo y ha recibido numerosos discos de oro, platino y diamante, una victoria musical en 1990.",
-          "pt": "Tonino Baliardo é o fundador e líder do Gipsy Kings, mas acima de tudo é um virtuoso da guitarra e um compositor reconhecido mundialmente. Ele compôs e produziu os maiores sucessos do grupo como \"Bamboleo\" ou \"Djobi Djoba\". Mestres indiscutíveis da música cigana, o grupo vendeu mais de 20 milhões de álbuns em todo o mundo e recebeu numerosos discos de ouro, platina e diamante, uma vitória musical em 1990.",
-          "fr": "Tonino Baliardo est le fondateur et leader des Gipsy Kings, mais avant tout c'est un virtuose de la guitare et un compositeur reconnu mondialement. Il a composé et produit les plus grands succès du groupe comme \"Bamboleo\" ou \"Djobi Djoba\". Les maîtres incontestés de la musique tsigane, le groupe a vendu plus de 20 millions d'albums dans le monde et a reçu de nombreux disques d'or, de platine et de diamant, une victoire musicale en 1990."
-        },
-        "category": "music",
-        "lat": 25.7707756,
-        "lng": -80.1901174
-      },
-      {
-        "id": "tm_1783952675214_051t",
-        "title": {
-          "en": "Nicky Romero",
-          "es": "Nicky Romero",
-          "pt": "Nicky Romero",
-          "fr": "Nicky Romero"
-        },
-        "date": "2026-08-15",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fnicky-romero-liv-nightclub-miami-tickets%2F14235354&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/584/8c7e3c70-348f-4c99-a220-181275a6d584_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier persona que no pueda presentar una identificación válida indicando que tiene al menos 21 años no será admitida y no será elegible para reembolso. · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux personnes de 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
         "id": "tm_1783952675214_rfix",
         "title": {
           "en": "Anthony Green - This Tour Won't Save You",
@@ -1768,32 +1718,6 @@
         "lng": -80.13314
       },
       {
-        "id": "rss_1784899622368_x3gx",
-        "title": {
-          "en": "Doris Italian Market & Bakery’s Wine Night 8/15/26",
-          "es": "Noche de Vinos en Doris Italian Market & Bakery 8/15/26",
-          "pt": "Noite de Vinhos na Doris Italian Market & Bakery 8/15/26",
-          "fr": "Soirée Vin chez Doris Italian Market & Bakery 8/15/26"
-        },
-        "date": "2026-08-15",
-        "venue": "Doris Italian Market & Bakery",
-        "address": "2077 N. University Dr., Coral Springs, Florida, 33071",
-        "url": "https://www.soulofmiami.org/2026/07/23/doris-italian-market-bakerys-wine-night-8-15-26/",
-        "free": false,
-        "price": "$50",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Wine-Night-Flyer-8-15-26-Coral-Springs-350x453.jpg",
-        "description": {
-          "en": "The wait is over for Coral Springs area wine lovers! Doris Italian",
-          "es": "¡La espera ha terminado para los amantes del vino del área de Coral Springs! Doris Italian",
-          "pt": "A espera acabou para os amantes de vinho da área de Coral Springs! Doris Italian",
-          "fr": "L'attente est terminée pour les amateurs de vin de la région de Coral Springs! Doris Italian"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.2562939,
-        "lng": -80.2513469,
-        "category": "community"
-      },
-      {
         "id": "rss_1784899622368_z1rx",
         "title": {
           "en": "Imagined Landscapes Honoring Humberto Calzada 8/20/26",
@@ -1869,30 +1793,6 @@
         "source": "Soul of Miami",
         "lat": 25.8315843,
         "lng": -80.2082623,
-        "category": "community"
-      },
-      {
-        "id": "rss_1785071436251_isuh",
-        "title": {
-          "en": "Alzheimers Mall Crawl 8/15/26",
-          "es": "Carrera por los Centros Comerciales Alzheimer 8/15/26",
-          "pt": "Corrida pelos Shoppings Alzheimer 8/15/26",
-          "fr": "Marche dans les Centres Commerciaux Alzheimer 8/15/26"
-        },
-        "date": "2026-08-15",
-        "venue": "Miami International Mall",
-        "address": "1455 NW 107 Avenue, Doral, Florida, 33172",
-        "url": "https://www.soulofmiami.org/2026/07/25/alzheimers-mall-crawl-8-15-26/",
-        "free": true,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Join Us for the Miami International Mall Alzheimer’s Mall Crawl Saturday, August 15 | 9:00 AM – 12:00 PM",
-          "es": "Únete a nosotros en la Carrera por los Centros Comerciales de Miami International Mall para el Alzheimer sábado, 15 de agosto | 9:00 AM – 12:00 PM",
-          "pt": "Junte-se a nós na Corrida pelos Shoppings de Miami International Mall para Alzheimer sábado, 15 de agosto | 9:00 AM – 12:00 PM",
-          "fr": "Rejoignez-nous pour la Marche dans les Centres Commerciaux de Miami International Mall pour l'Alzheimer samedi, 15 août | 9:00 AM – 12:00 PM"
-        },
-        "source": "Soul of Miami",
         "category": "community"
       },
       {
@@ -2460,32 +2360,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1785938278700_48dm",
-        "title": {
-          "en": "MOAD Talks – A Conversation with Khadijah Cypress 8/15/26",
-          "es": "MOAD Talks – Una Conversación con Khadijah Cypress 8/15/26",
-          "pt": "MOAD Talks – Uma Conversa com Khadijah Cypress 8/15/26",
-          "fr": "MOAD Talks – Une Conversation avec Khadijah Cypress 8/15/26"
-        },
-        "date": "2026-08-15",
-        "venue": "Jennifer Weinberg",
-        "address": "600 Biscayne Boulevard, Miami, Florida, 33132",
-        "url": "https://www.soulofmiami.org/2026/08/04/moad-talks-a-conversation-with-khadijah-cypress-8-15-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/image1-350x466.jpeg",
-        "description": {
-          "en": "Join the Museum of Art and Design’s Consulting Curator, Isabela Villaneuva in conversation with Khadijah Cypress",
-          "es": "Únete al Curador Consultor del Museo de Arte y Diseño, Isabela Villaneuva en conversación con Khadijah Cypress",
-          "pt": "Junte-se ao Curador Consultor do Museu de Arte e Design, Isabela Villaneuva em conversa com Khadijah Cypress",
-          "fr": "Rejoignez le Conservateur Consultant du Musée d'Art et Design, Isabela Villaneuva dans une conversation avec Khadijah Cypress"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.780295,
-        "lng": -80.18971,
-        "category": "community"
-      },
-      {
         "id": "rss_1786107183516_zson",
         "title": {
           "en": "Miami Zombie Crawl – Halloween Bar Crawl – Party Pass to 8+ Bars 10/30/26",
@@ -2711,32 +2585,6 @@
         "source": "Soul of Miami",
         "lat": 26.3101699,
         "lng": -80.2960901,
-        "category": "community"
-      },
-      {
-        "id": "rss_1786366660903_bqty",
-        "title": {
-          "en": "Brian CID, Santelises, Danielle Simeone, JC, More 8/15/26",
-          "es": "Brian CID, Santelises, Danielle Simeone, JC, Más 8/15/26",
-          "pt": "Brian CID, Santelises, Danielle Simeone, JC, Mais 8/15/26",
-          "fr": "Brian CID, Santelises, Danielle Simeone, JC, Plus 8/15/26"
-        },
-        "date": "2026-08-15",
-        "venue": "Edge Miami",
-        "address": "114 NE 20th Terrace, Miami, FL 33137",
-        "url": "https://www.soulofmiami.org/2026/08/09/brian-cid-santelises-danielle-simeone-jc-more-8-15-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/SQUARE-350x350.png",
-        "description": {
-          "en": "cid BRIAN CID PRESENTS: LADOBÉ LADOBÉ is Brian Cid reconnecting with where it",
-          "es": "cid BRIAN CID PRESENTA: LADOBÉ LADOBÉ es Brian Cid reconectando con donde",
-          "pt": "cid BRIAN CID APRESENTA: LADOBÉ LADOBÉ é Brian Cid reconectando com onde",
-          "fr": "cid BRIAN CID PRÉSENTE: LADOBÉ LADOBÉ est Brian Cid se reconnectant avec où"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7959725,
-        "lng": -80.1924601,
         "category": "community"
       },
       {
@@ -3200,110 +3048,6 @@
         "category": "arts"
       },
       {
-        "id": "tm_1786712138538_6v1y",
-        "title": {
-          "en": "After Work Players Present Joseph & The Amazing Technicolor Dreamcoat",
-          "es": "After Work Players Presenta José y su Abrigo de Muchos Colores",
-          "pt": "After Work Players Apresenta José e Sua Incrível Túnica de Cores",
-          "fr": "After Work Players Présente Joseph et Son Manteau aux Mille Couleurs"
-        },
-        "date": "2026-08-15",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fafter-work-players-present-joseph-the-ft-lauderdale-florida-08-15-2026%2Fevent%2F0D0064FDAFDF5F67&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/d16/89970576-831a-47da-9db2-34d706fa1d16_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Horvitz Lobby or Amaturo Theater. Find all the information ",
-          "es": "Para convertirse en miembro del Broward Center y recibir acceso a excelentes asientos y preventas, visite BrowardCenter.org/Entourage hoy. Planifica tu visita antes de ir al espectáculo para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluida la Sala Intermezzo del Sistema de Salud Infantil Nicklaus y nuestras opciones de comida y bebida en el Lobby Horvitz o Teatro Amaturo.",
-          "pt": "Para se tornar membro do Broward Center e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Planeje sua visita antes de ir ao show para obter informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Intermezzo Lounge do Nicklaus Children's Health System e nossas opções de comida e bebida no Lobby Horvitz ou Teatro Amaturo.",
-          "fr": "Pour devenir membre du Broward Center et accéder à d'excellents sièges et préventes, visitez BrowardCenter.org/Entourage aujourd'hui. Planifiez votre visite avant d'aller au spectacle pour obtenir des informations sur le stationnement via l'application ParkMobile, les expériences culinaires incluant le Salon Intermezzo du Système de Santé Enfants Nicklaus et nos options de nourriture et de boissons au Lobby Horvitz ou au Théâtre Amaturo."
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1786712138538_ixew",
-        "title": {
-          "en": "USA RUGBY vs. ARGENTINA (UAR)",
-          "es": "USA RUGBY vs. ARGENTINA (UAR)",
-          "pt": "USA RUGBY vs. ARGENTINA (UAR)",
-          "fr": "USA RUGBY vs. ARGENTINA (UAR)"
-        },
-        "date": "2026-08-15",
-        "venue": "Inter Miami CF Stadium",
-        "address": "5201 NW 12th Avenue, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fusa-rugby-vs-argentina-uar-fort-lauderdale-florida-08-15-2026%2Fevent%2F0D0064B3C6A2ACB2&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/20b/4b8160d6-2495-4a01-adcd-1f03316ac20b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Rugby · Starts 19:30 · Inter Miami CF Stadium",
-          "es": "Deportes · Rugby · Comienza 19:30 · Estadio Inter Miami CF",
-          "pt": "Esportes · Rúgbi · Começa 19:30 · Estádio Inter Miami CF",
-          "fr": "Sports · Rugby · Commence 19:30 · Stade Inter Miami CF"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.1911447,
-        "lng": -80.159484
-      },
-      {
-        "id": "tm_1786712138538_2t5m",
-        "title": {
-          "en": "31st International Ballet Festival of Miami: Grand Classical Gala",
-          "es": "31º Festival Internacional de Ballet de Miami: Gran Gala Clásica",
-          "pt": "31º Festival Internacional de Ballet de Miami: Grande Gala Clássica",
-          "fr": "31e Festival International de Ballet de Miami : Grand Gala Classique"
-        },
-        "date": "2026-08-15",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F31st-international-ballet-festival-of-miami-miami-beach-florida-08-15-2026%2Fevent%2F0D0064A4897F58AE&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/903/58e647ae-7852-4ac7-b0b5-84bc423ec903_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "No age restrictions. Doors open at 7 pm. Parking is located across from the theater on 17th street. Military, teacher, and student discounts available. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Sin restricciones de edad. Las puertas abren a las 7 pm. El estacionamiento se encuentra frente al teatro en la calle 17. Descuentos disponibles para militares, maestros y estudiantes. · Comienza 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Sem restrições de idade. Portas abrem às 19h. O estacionamento fica em frente ao teatro na rua 17. Descontos disponíveis para militares, professores e estudantes. · Começa 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Pas de restrictions d'âge. Les portes ouvrent à 19h. Le stationnement est situé en face du théâtre sur la 17e rue. Des réductions sont disponibles pour les militaires, les enseignants et les étudiants. · Commence 20:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.792917,
-        "lng": -80.13314
-      },
-      {
-        "id": "tm_1786712138538_1fs4",
-        "title": {
-          "en": "The BIG Show Improv Comedy Miami",
-          "es": "The BIG Show Comedia de Improvisación Miami",
-          "pt": "The BIG Show Comédia de Improvisação Miami",
-          "fr": "The BIG Show Comédie d'Improvisation Miami"
-        },
-        "date": "2026-08-15",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14897713&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Big Show - Improv Comedy in MiamiIts our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun!Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as cl",
-          "es": "The Big Show - Comedia de improvisación en Miami. Es nuestro espectáculo característico: Comedia improvisada en vivo, rápida y de la mejor calidad. ¡Piénsalo como Whose Line is It Anyway se encuentra con SNL! The Big Show es comedia de improvisación interactiva, presentada por nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos en mesas.",
-          "pt": "The Big Show - Comédia de improvisação em Miami. É o nosso espetáculo assinatura: Comédia improvisada ao vivo, rápida e no seu melhor. Pense nisso como Whose Line is It Anyway encontra SNL! The Big Show é comédia de improvisação interativa, apresentada por nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas.",
-          "fr": "The Big Show - Comédie d'improvisation à Miami. C'est notre spectacle signature : comédie improvisée en direct, rapide et à son meilleur. Pensez-y comme Whose Line is It Anyway rencontre SNL ! The Big Show est de la comédie d'improvisation interactive, présentée par notre casting talentueux et primé. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous assiérons les groupes ensemble à des tables."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
         "id": "tm_1786712138538_ulps",
         "title": {
           "en": "Chance The Rapper - Coloring Book 10 Year Anniversary Tour",
@@ -3456,32 +3200,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786796918784_9hka",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-15",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Varios · Familiar · Comienza 10:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1786796918784_bwnh",
         "title": {
           "en": "Fists of Fury Series",
@@ -3584,6 +3302,136 @@
         "category": "music",
         "lat": 26.2738,
         "lng": -80.256897
+      },
+      {
+        "id": "tm_1786883383652_mmdw",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-16",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Diversos · Familia · Comienza 10:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1786883383652_w4z5",
+        "title": {
+          "en": "The Suicide Machines \"Celebrating 30 Years of ‘Destruction By Definition'\" w/ Mugger in Miami",
+          "es": "The Suicide Machines \"Celebrando 30 Años de 'Destruction By Definition'\" con Mugger en Miami",
+          "pt": "The Suicide Machines \"Celebrando 30 Anos de 'Destruction By Definition'\" com Mugger em Miami",
+          "fr": "The Suicide Machines \"Célébrant 30 Ans de 'Destruction By Definition'\" avec Mugger à Miami"
+        },
+        "date": "2026-09-09",
+        "venue": "Churchill's Pub",
+        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-suicide-machines-celebrating-30-churchills-pub-tickets%2F14894893&utm_medium=affiliate",
+        "free": false,
+        "price": "$40",
+        "image": "https://s1.ticketm.net/dam/a/74b/300558dc-0bbb-4350-9d31-8f3e0e30d74b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 18 and over. Any ticket holder unable to present valid identification indicating that they are at least 18 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 19:30 · Churchill's Pub",
+          "es": "Este evento es solo para mayores de 18 años. Cualquier portador de entrada que no pueda presentar identificación válida que indique que tiene al menos 18 años no será admitido en este evento y no será elegible para reembolso. · Comienza 19:30 · Churchill's Pub",
+          "pt": "Este evento é apenas para maiores de 18 anos. Qualquer portador de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 18 anos não será admitido neste evento e não será elegível para reembolso. · Começa 19:30 · Churchill's Pub",
+          "fr": "Cet événement est réservé aux 18 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide attestant qu'il a au moins 18 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 19:30 · Churchill's Pub"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.82647681611792,
+        "lng": -80.19169187791115
+      },
+      {
+        "id": "tm_1786883383652_2o9k",
+        "title": {
+          "en": "Malcolm Todd: Do That Again Tour",
+          "es": "Malcolm Todd: Gira Do That Again",
+          "pt": "Malcolm Todd: Turnê Do That Again",
+          "fr": "Malcolm Todd: Tournée Do That Again"
+        },
+        "date": "2026-09-09",
+        "venue": "FTL War Memorial Auditorium",
+        "address": "800 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fmalcolm-todd-tickets%2Ffort-lauderdale-florida-ftl-war-memorial-auditorium-2026-09-09-8-pm%2Fconcert%2F18282057&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/237/2144a2e6-e59d-4ed1-8ae7-ea630b1f4237_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 20:00 · FTL War Memorial Auditorium",
+          "es": "Música · Pop · Comienza 20:00 · FTL War Memorial Auditorium",
+          "pt": "Música · Pop · Começa 20:00 · FTL War Memorial Auditorium",
+          "fr": "Musique · Pop · Commence 20:00 · FTL War Memorial Auditorium"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.133662,
+        "lng": -80.134063
+      },
+      {
+        "id": "tm_1786883383652_pniy",
+        "title": {
+          "en": "Charley Crockett - Age of the Ram Tour",
+          "es": "Charley Crockett - Gira Age of the Ram",
+          "pt": "Charley Crockett - Turnê Age of the Ram",
+          "fr": "Charley Crockett - Tournée Age of the Ram"
+        },
+        "date": "2026-09-10",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcharley-crockett-age-of-the-ram-hollywood-florida-09-10-2026%2Fevent%2F0D006458A434EBDE&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c1f/652cec8a-c901-4711-bc6c-fcbdc0362c1f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Charley Crockett, in partnership with PLUS1, will contribute $1.00 from every ticket sold to Last Prisoner Project, a 501(c)(3) organization, to support efforts to free individuals incarcerated for cannabis-related offenses and repair the harms of the war on cannabis. Founded in 2019, Last Prisoner Project works nationwide to advance cannabis justice and advocate for policies that repair the harms",
+          "es": "Charley Crockett, en asociación con PLUS1, contribuirá $1.00 de cada entrada vendida a Last Prisoner Project, una organización 501(c)(3), para apoyar esfuerzos de liberar a individuos encarcelados por delitos relacionados con cannabis y reparar los daños de la guerra contra las drogas. Fundada en 2019, Last Prisoner Project trabaja a nivel nacional para avanzar la justicia del cannabis y abogar por políticas que reparen los daños",
+          "pt": "Charley Crockett, em parceria com PLUS1, contribuirá $1.00 de cada ingresso vendido para Last Prisoner Project, uma organização 501(c)(3), para apoiar esforços de libertar indivíduos encarcerados por delitos relacionados a cannabis e reparar os danos da guerra às drogas. Fundada em 2019, Last Prisoner Project trabalha em nível nacional para avançar a justiça do cannabis e defender políticas que reparem os danos",
+          "fr": "Charley Crockett, en partenariat avec PLUS1, contribuera 1,00 $ de chaque billet vendu à Last Prisoner Project, une organisation 501(c)(3), pour soutenir les efforts de libération des personnes incarcérées pour des infractions liées au cannabis et réparer les dommages de la guerre contre la drogue. Fondée en 2019, Last Prisoner Project travaille à l'échelle nationale pour promouvoir la justice du cannabis et préconiser des politiques qui réparent les dommages"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1786883383652_0jx5",
+        "title": {
+          "en": "Ken Carson - xperimenting tour",
+          "es": "Ken Carson - Gira xperimenting",
+          "pt": "Ken Carson - Turnê xperimenting",
+          "fr": "Ken Carson - Tournée xperimenting"
+        },
+        "date": "2026-09-11",
+        "venue": "FPL Solar Amphitheater at Bayfront Park",
+        "address": "301 N Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fken-carson-xperimenting-tour-miami-florida-09-11-2026%2Fevent%2F0D0064E1E095CBEB&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/106/7e83917d-a824-4df6-978b-4e4541d6a106_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Hip-Hop/Rap · Starts 19:30 · FPL Solar Amphitheater at Bayfront Park",
+          "es": "Música · Hip-Hop/Rap · Comienza 19:30 · FPL Solar Amphitheater at Bayfront Park",
+          "pt": "Música · Hip-Hop/Rap · Começa 19:30 · FPL Solar Amphitheater at Bayfront Park",
+          "fr": "Musique · Hip-Hop/Rap · Commence 19:30 · FPL Solar Amphitheater at Bayfront Park"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.776218,
+        "lng": -80.186024
       }
     ]
   },
@@ -4487,10 +4335,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-15T12:29:07.576Z",
+    "fetchedAt": "2026-08-16T12:29:59.058Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.801ef6bcc74e2606a8b38b197bb67bbd0a7d5aa8.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.36ee7fd58a62eeb715be2b90dbc499db35b2da12.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4501,14 +4349,14 @@
         },
         "detail": {
           "en": "* WHAT...Heat index values of 105 to 110 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan índices de calor de 105 a 110 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...De 11 AM esta mañana a 7 PM EDT esta tarde.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
-          "pt": "* O QUÊ...Índices de calor entre 105 e 110 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 AM desta manhã até às 7 PM EDT desta noite.\n\n* IMPACTOS...As temperaturas altas e a umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Indices de chaleur de 105 à 110 degrés prévus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
+          "es": "* QUÉ...Se esperan índices de calor de 105 a 110 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y humedad elevada pueden causar enfermedades por calor.",
+          "pt": "* O QUÊ...Índices de calor de 105 a 110 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 AM desta manhã até as 7 PM EDT desta tarde.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Indices de chaleur de 105 à 110 degrés prévus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité élevée peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.801ef6bcc74e2606a8b38b197bb67bbd0a7d5aa8.001.1",
-        "effectiveAt": "2026-08-15T00:16:00-04:00",
-        "expiresAt": "2026-08-15T23:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36ee7fd58a62eeb715be2b90dbc499db35b2da12.001.1",
+        "effectiveAt": "2026-08-16T00:11:00-04:00",
+        "expiresAt": "2026-08-16T23:00:00.000Z"
       }
     ]
   }
