@@ -1,43 +1,30 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-16T12:30:02.340Z",
+    "lastUpdated": "2026-08-17T12:35:14.890Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-16T12:29:59.058Z",
+    "fetchedAt": "2026-08-17T12:35:11.175Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 96,
+      "temp_f": 83,
+      "feels_f": 93,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 82,
-      "wind_mph": 3,
-      "rain_chance": 2,
-      "weathercode": 1
+      "humidity": 77,
+      "wind_mph": 2,
+      "rain_chance": 6,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-16",
-        "high_f": 91,
-        "low_f": 80,
-        "weathercode": 3,
-        "rain_chance": 2,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-17",
-        "high_f": 91,
-        "low_f": 76,
+        "high_f": 92,
+        "low_f": 78,
         "weathercode": 3,
         "rain_chance": 6,
         "description": {
@@ -49,23 +36,23 @@
       },
       {
         "date": "2026-08-18",
-        "high_f": 93,
-        "low_f": 83,
-        "weathercode": 51,
-        "rain_chance": 13,
+        "high_f": 96,
+        "low_f": 77,
+        "weathercode": 3,
+        "rain_chance": 8,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-19",
         "high_f": 93,
-        "low_f": 85,
+        "low_f": 82,
         "weathercode": 95,
-        "rain_chance": 39,
+        "rain_chance": 57,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,35 +62,48 @@
       },
       {
         "date": "2026-08-20",
-        "high_f": 91,
-        "low_f": 85,
-        "weathercode": 3,
-        "rain_chance": 43,
+        "high_f": 90,
+        "low_f": 86,
+        "weathercode": 96,
+        "rain_chance": 53,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-08-21",
+        "high_f": 88,
+        "low_f": 84,
+        "weathercode": 51,
+        "rain_chance": 26,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 83,
+        "temp_f": 81,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 86,
-        "weathercode": 3,
+        "temp_f": 84,
+        "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "10:00",
         "temp_f": 86,
-        "weathercode": 2,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
@@ -128,11 +128,11 @@
         "hour": "14:00",
         "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "15:00",
-        "temp_f": 91,
+        "temp_f": 92,
         "weathercode": 0,
         "rain_chance": 2
       },
@@ -146,60 +146,60 @@
         "hour": "17:00",
         "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 3
       },
       {
         "hour": "18:00",
         "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "19:00",
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 3
+      },
+      {
+        "hour": "20:00",
         "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 85,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
-        "hour": "20:00",
+        "hour": "23:00",
         "temp_f": 84,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
-        "hour": "21:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 82,
-        "weathercode": 2,
-        "rain_chance": 1
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
         "hour": "00:00",
-        "temp_f": 81,
-        "weathercode": 0,
+        "temp_f": 83,
+        "weathercode": 1,
         "rain_chance": 1
       },
       {
         "hour": "01:00",
-        "temp_f": 80,
-        "weathercode": 0,
+        "temp_f": 81,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "02:00",
         "temp_f": 80,
-        "weathercode": 0,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
@@ -210,27 +210,27 @@
       },
       {
         "hour": "04:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "05:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 1
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "06:00",
-        "temp_f": 76,
-        "weathercode": 1,
-        "rain_chance": 1
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "07:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 0
       }
     ]
   },
@@ -1517,29 +1517,6 @@
         "lng": -80.2109577
       },
       {
-        "id": "rss_1784209274228_u4c6",
-        "title": {
-          "en": "Herpreneur Artisan Market at The Goodtime Hotel 8/16/26",
-          "es": "Mercado Artesanal Herpreneur en The Goodtime Hotel 8/16/26",
-          "pt": "Mercado Artesanal Herpreneur no The Goodtime Hotel 8/16/26",
-          "fr": "Marché Artisanal Herpreneur au The Goodtime Hotel 8/16/26"
-        },
-        "date": "2026-08-16",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/07/15/herpreneur-artisan-market-at-the-goodtime-hotel-8-16-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/The-Goodtime-Hotel_Courtyard2-333x500.jpg",
-        "description": {
-          "en": "The Goodtime Hotel, Miami Beach will host an artisan market on Sunday, August",
-          "es": "The Goodtime Hotel en Miami Beach albergará un mercado artesanal el domingo de agosto",
-          "pt": "The Goodtime Hotel em Miami Beach sediará um mercado artesanal no domingo de agosto",
-          "fr": "The Goodtime Hotel à Miami Beach accueillera un marché artisanal le dimanche d'août"
-        },
-        "category": "community"
-      },
-      {
         "id": "rss_1784209274228_9y30",
         "title": {
           "en": "Herpreneur Artisan Market at The Goodtime Hotel 8/30/26",
@@ -2154,32 +2131,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1785506023320_zb6n",
-        "title": {
-          "en": "UNIDOS POR VENEZUELA  - Live Benefit Concert & National Telethon",
-          "es": "UNIDOS POR VENEZUELA - Concierto Benéfico en Vivo y Maratón Nacional",
-          "pt": "UNIDOS POR VENEZUELA - Concerto Beneficente ao Vivo e Telemaratona Nacional",
-          "fr": "UNIDOS POR VENEZUELA - Concert Caritatif en Direct et Téléthon National"
-        },
-        "date": "2026-08-16",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Funidos-por-venezuela-live-benefit-concert-miami-florida-08-16-2026%2Fevent%2F0D0064EA9A88501D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/314/f50abfad-fa58-4d9b-aa2b-cf173f976314_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "***Artist line-up subject to change without notice*** CMN and Ticketmaster will donate to the Univision Foundation 100% of their net proceeds from ticket sales, including ticket fees, subject to a minimum total donation of $300,000. For more information, visit www.univision.org. No portion of the ticket purchase is tax-deductible. · Starts 18:00 · Kaseya Center",
-          "es": "***La alineación de artistas está sujeta a cambios sin previo aviso*** CMN y Ticketmaster donarán a la Fundación Univision el 100% de sus ganancias netas de la venta de boletos, incluidas las tarifas de boletos, sujeto a una donación total mínima de $300,000. Para más información, visite www.univision.org. Ninguna parte de la compra del boleto es deducible de impuestos. · Comienza 18:00 · Kaseya Center",
-          "pt": "***O elenco de artistas está sujeito a mudanças sem aviso prévio*** CMN e Ticketmaster doarão à Fundação Univision 100% de seus lucros líquidos das vendas de ingressos, incluindo taxas de ingressos, sujeito a uma doação total mínima de $300,000. Para mais informações, visite www.univision.org. Nenhuma parte da compra do ingresso é dedutível de impostos. · Começa 18:00 · Kaseya Center",
-          "fr": "***L'alignement des artistes est sujet à changement sans préavis*** CMN et Ticketmaster donneront à la Fondation Univision 100% de leurs bénéfices nets de la vente de billets, y compris les frais de billet, sous réserve d'un don total minimum de 300 000 $. Pour plus d'informations, visitez www.univision.org. Aucune partie de l'achat du billet n'est déductible des impôts. · Commence 18:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "rss_1785589752800_u5m6",
         "title": {
           "en": "Toyota of Hollywood and CBS Miami Team Up to Host Open Casting Call for The Price Is Right 8/28/26",
@@ -2714,32 +2665,6 @@
         "category": "music"
       },
       {
-        "id": "tm_1786539487073_awq5",
-        "title": {
-          "en": "UNIDOS POR LOS NUESTROS- Live Benefit Concert & National Telethon",
-          "es": "UNIDOS POR LOS NUESTROS - Concierto Benéfico en Vivo y Telemaratón Nacional",
-          "pt": "UNIDOS POR LOS NUESTROS - Concerto Beneficente Ao Vivo e Telemaratona Nacional",
-          "fr": "UNIDOS POR LOS NUESTROS - Concert Caritatif en Direct et Téléthon National"
-        },
-        "date": "2026-08-16",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Funidos-por-los-nuestros-live-benefit-miami-florida-08-16-2026%2Fevent%2F0D0064EA9A88501D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/234/b8e9e380-016f-4e0c-99fc-aaf593dc5234_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "***Artist line-up subject to change without notice*** CMN and Ticketmaster will donate to the Univision Foundation 100% of their net proceeds from ticket sales, including ticket fees, subject to a minimum total donation of $300,000. For more information, visit www.univision.org. No portion of the ticket purchase is tax-deductible. ***Event starts promptly at 6:00pm*** · Starts 18:00 · Kaseya Cente",
-          "es": "***La alineación de artistas está sujeta a cambios sin previo aviso*** CMN y Ticketmaster donarán a la Fundación Univision el 100% de sus ganancias netas de la venta de entradas, incluidas las tarifas de entradas, sujeto a una donación mínima total de $300,000. Para más información, visite www.univision.org. Ninguna parte de la compra de entradas es deducible de impuestos. ***El evento comienza puntualmente a las 6:00pm*** · Comienza 18:00 · Kaseya Center",
-          "pt": "***O elenco de artistas está sujeito a alterações sem aviso prévio*** CMN e Ticketmaster doarão à Fundação Univision 100% de seus lucros líquidos da venda de ingressos, incluindo taxas de ingressos, sujeito a uma doação mínima total de $300.000. Para mais informações, visite www.univision.org. Nenhuma parte da compra do ingresso é dedutível de impostos. ***O evento começa pontualmente às 18h*** · Começa 18:00 · Kaseya Center",
-          "fr": "***L'alignement des artistes est sujet à modification sans préavis*** CMN et Ticketmaster feront don à la Fondation Univision de 100% de leurs bénéfices nets de la vente de billets, y compris les frais de billets, sous réserve d'un don minimum total de 300 000 $. Pour plus d'informations, visitez www.univision.org. Aucune partie de l'achat de billet n'est déductible d'impôt. ***L'événement commence à 18h00 précises*** · Commence 18:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "tm_1786539487073_5poa",
         "title": {
           "en": "Steve Higgins: Moonlight, Memories & Music",
@@ -3200,84 +3125,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786796918784_bwnh",
-        "title": {
-          "en": "Fists of Fury Series",
-          "es": "Serie Puños de Furia",
-          "pt": "Série Punhos de Fúria",
-          "fr": "Série Poings de Fury"
-        },
-        "date": "2026-08-16",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ffists-of-fury-series-hollywood-florida-08-16-2026%2Fevent%2F0D0064F48CDB2D1C&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d40/776b866d-24f0-42cd-93c3-0e5eadc7ed40_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Boxing · Starts 16:00 · Hard Rock Live",
-          "es": "Deportes · Boxeo · Comienza 16:00 · Hard Rock Live",
-          "pt": "Esportes · Boxe · Começa 16:00 · Hard Rock Live",
-          "fr": "Sports · Boxe · Commence 16:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1786796918784_7ewu",
-        "title": {
-          "en": "31st International Ballet Festival of Miami: Closing Gala of the Stars",
-          "es": "31º Festival Internacional de Ballet de Miami: Gala de Clausura de las Estrellas",
-          "pt": "31º Festival Internacional de Ballet de Miami: Gala de Encerramento das Estrelas",
-          "fr": "31e Festival International de Ballet de Miami: Gala de Clôture des Étoiles"
-        },
-        "date": "2026-08-16",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F31st-international-ballet-festival-of-miami-miami-beach-florida-08-16-2026%2Fevent%2F0D0064A4898258B0&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/3f1/34c97e6c-23ac-40c2-9d53-909f800a63f1_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "No age restrictions. Doors open at 7pm. Parking is located across from the theater on 17th street. Military, teacher, and student discounts available. · Starts 17:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Sin restricciones de edad. Las puertas abren a las 7pm. El estacionamiento se encuentra frente al teatro en la calle 17. Descuentos disponibles para militares, maestros y estudiantes. · Comienza 17:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Sem restrições de idade. As portas abrem às 19h. Estacionamento localizado em frente ao teatro na rua 17. Descontos disponíveis para militares, professores e estudantes. · Começa 17:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Pas de restrictions d'âge. Les portes ouvrent à 19h. Le stationnement est situé en face du théâtre sur la rue 17. Des réductions sont disponibles pour les militaires, les enseignants et les étudiants. · Commence 17:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.792917,
-        "lng": -80.13314
-      },
-      {
-        "id": "tm_1786796918784_on4v",
-        "title": {
-          "en": "BRCW Summer Smash",
-          "es": "BRCW Golpe de Verano",
-          "pt": "BRCW Pancada do Verão",
-          "fr": "BRCW Coup d'Été"
-        },
-        "date": "2026-08-16",
-        "venue": "The Studio at Mizner Park",
-        "address": "201 W Plaza Real, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbrcw-summer-smash-boca-raton-florida-08-16-2026%2Fevent%2F0D00645AA11FB096&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/03a/663e520c-a3f7-4269-99a9-1bd30131f03a_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Wrestling · Starts 17:00 · The Studio at Mizner Park",
-          "es": "Deportes · Lucha Libre · Comienza 17:00 · The Studio at Mizner Park",
-          "pt": "Esportes · Wrestling · Começa 17:00 · The Studio at Mizner Park",
-          "fr": "Sports · Catch · Commence 17:00 · The Studio at Mizner Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.35289,
-        "lng": -80.08569
-      },
-      {
         "id": "tm_1786796918784_w2vr",
         "title": {
           "en": "Bee Gees Now!",
@@ -3302,32 +3149,6 @@
         "category": "music",
         "lat": 26.2738,
         "lng": -80.256897
-      },
-      {
-        "id": "tm_1786883383652_mmdw",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-16",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Diversos · Familia · Comienza 10:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
       },
       {
         "id": "tm_1786883383652_w4z5",
@@ -3432,6 +3253,188 @@
         "category": "music",
         "lat": 25.776218,
         "lng": -80.186024
+      },
+      {
+        "id": "rss_1786970083365_gb0x",
+        "title": {
+          "en": "Celebrate National Dog Day with a Yappy Hour at Deli Lane 8/26/26",
+          "es": "Celebra el Día Nacional del Perro con una Yappy Hour en Deli Lane 8/26/26",
+          "pt": "Celebre o Dia Nacional do Cachorro com uma Yappy Hour na Deli Lane 8/26/26",
+          "fr": "Célébrez la Journée Nationale du Chien avec une Yappy Hour au Deli Lane 8/26/26"
+        },
+        "date": "2026-08-26",
+        "venue": "Deli Lane & Sunset Tavern",
+        "address": "7230 SW 59th Ave, South Miami, Florida, 33143",
+        "url": "https://www.soulofmiami.org/2026/08/15/celebrate-national-dog-day-with-a-yappy-hour-at-deli-lane-8-26-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/unnamed-21-350x175.png",
+        "description": {
+          "en": "Grab the leash and bring your best four-legged",
+          "es": "Agarra la correa y trae a tu mejor amigo de cuatro patas",
+          "pt": "Pegue na coleira e traga seu melhor amigo de quatro patas",
+          "fr": "Prenez la laisse et amenez votre meilleur ami à quatre pattes"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7037558,
+        "lng": -80.2895565,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1786970083365_fro7",
+        "title": {
+          "en": "Summer Cuban Cocktail Experience with Gio Gutierrez | Lennox Hotel Miami Beach 8/20/26",
+          "es": "Experiencia de Cócteles Cubanos de Verano con Gio Gutierrez | Lennox Hotel Miami Beach 8/20/26",
+          "pt": "Experiência de Coquéis Cubanos de Verão com Gio Gutierrez | Lennox Hotel Miami Beach 8/20/26",
+          "fr": "Expérience de Cocktails Cubains d'Été avec Gio Gutierrez | Lennox Hotel Miami Beach 8/20/26"
+        },
+        "date": "2026-08-20",
+        "venue": "Lennox Hotel Miami Beach",
+        "address": "1900 Collins Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/08/15/summer-cuban-cocktail-experience-with-gio-gutierrez-lennox-hotel-miami-beach-8-20-26/",
+        "free": false,
+        "price": "$30",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Eventbrite_Amalia-Mixology-with-Gio-Gutierrez-1-350x175.png",
+        "description": {
+          "en": "Shake, stir, and sip your way through the timeless",
+          "es": "Agita, remueve y saborea a través de la atemporales",
+          "pt": "Agite, mexa e saboreie a través da atemporais",
+          "fr": "Secouez, remuez et dégustez les incontournables"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7952193,
+        "lng": -80.1300377,
+        "category": "community"
+      },
+      {
+        "id": "tm_1786970084103_ycsn",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-17",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneo · Familiar · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1786970084103_he1u",
+        "title": {
+          "en": "The Mavericks & Friends",
+          "es": "The Mavericks & Friends",
+          "pt": "The Mavericks & Friends",
+          "fr": "The Mavericks & Friends"
+        },
+        "date": "2026-09-11",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-mavericks-friends-ft-lauderdale-florida-09-11-2026%2Fevent%2F0D00649EA9A6BA2C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/6dd/e7e4cb71-b18b-4ca4-a319-e3ea123966dd_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "For more than 30 years, The Mavericks built a Grammy-winning sound that blended country, rock & roll, Cuban rhythms, Tex-Mex twang, and Latin influences under the leadership of Raul Malo. Known for his powerful baritone and genre-defying style, Malo helped turn the band into modern legends with hits like \"All You Ever Do Is Bring Me Down.\" With the loss of Raul Malo his bandmates chose to honor hi",
+          "es": "Durante más de 30 años, The Mavericks construyeron un sonido ganador de Grammy que mezcló country, rock & roll, ritmos cubanos, twang Tex-Mex e influencias latinas bajo el liderazgo de Raul Malo. Conocido por su poderoso barítono y estilo sin género, Malo ayudó a convertir la banda en leyendas modernas con éxitos como \"All You Ever Do Is Bring Me Down.\" Con la pérdida de Raul Malo, sus compañeros decidieron honrar su",
+          "pt": "Durante mais de 30 anos, The Mavericks construíram um som vencedor do Grammy que misturou country, rock & roll, ritmos cubanos, sotaque Tex-Mex e influências latinas sob a liderança de Raul Malo. Conhecido por seu poderoso barítono e estilo sem gênero, Malo ajudou a transformar a banda em lendas modernas com sucessos como \"All You Ever Do Is Bring Me Down.\" Com a perda de Raul Malo, seus companheiros de banda escolheram honrar",
+          "fr": "Pendant plus de 30 ans, The Mavericks ont construit un son primé aux Grammy combinant country, rock & roll, rythmes cubains, accent Tex-Mex et influences latines sous la direction de Raul Malo. Connu pour son puissant baryton et son style sans genre, Malo a aidé à transformer le groupe en légendes modernes avec des succès comme \"All You Ever Do Is Bring Me Down.\" Avec la perte de Raul Malo, ses compagnons ont choisi d'honorer"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1786970084103_8tmj",
+        "title": {
+          "en": "OMAR COURTZ - POR SI MAÑANA NO ESTOY USA TOUR",
+          "es": "OMAR COURTZ - POR SI MAÑANA NO ESTOY USA TOUR",
+          "pt": "OMAR COURTZ - POR SI MAÑANA NO ESTOY USA TOUR",
+          "fr": "OMAR COURTZ - POR SI MAÑANA NO ESTOY USA TOUR"
+        },
+        "date": "2026-09-11",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fomar-courtz-por-si-manana-no-miami-florida-09-11-2026%2Fevent%2F0D006494AAAD946F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/bfe/96e1fabe-9721-4046-b33f-b5d38eebebfe_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Hip-Hop/Rap · Starts 20:00 · Kaseya Center",
+          "es": "Música · Hip-Hop/Rap · Comienza 20:00 · Kaseya Center",
+          "pt": "Música · Hip-Hop/Rap · Começa 20:00 · Kaseya Center",
+          "fr": "Musique · Hip-Hop/Rap · Commence 20:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1786970084103_wagv",
+        "title": {
+          "en": "Bop To The Top 18+",
+          "es": "Bop To The Top 18+",
+          "pt": "Bop To The Top 18+",
+          "fr": "Bop To The Top 18+"
+        },
+        "date": "2026-09-11",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbop-to-the-top-18-miami-beach-florida-09-11-2026%2Fevent%2F0D0064950300114F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f15/128043a6-6147-4c0d-8e05-9f182bedaf15_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 21:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Música · Pop · Comienza 21:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
+          "pt": "Música · Pop · Começa 21:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
+          "fr": "Musique · Pop · Commence 21:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1786970084103_vabu",
+        "title": {
+          "en": "Tito Puente Jr & His Orchestra: The Music Of Tito Puente",
+          "es": "Tito Puente Jr & Su Orquesta: La Música de Tito Puente",
+          "pt": "Tito Puente Jr & Sua Orquestra: A Música de Tito Puente",
+          "fr": "Tito Puente Jr & Son Orchestre : La Musique de Tito Puente"
+        },
+        "date": "2026-09-12",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftito-puente-jr-his-orchestra-the-ft-lauderdale-florida-09-12-2026%2Fevent%2F0D00642CE5297CED&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/548/5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The son of \"The King of the Timbales,\" Tito Puente Jr. continues to carry forward one of the most celebrated legacies in Latin music. Following in the footsteps of his legendary father, the iconic American salsa and Latin jazz pioneer Tito Puente, Tito Puente Jr. has emerged as one of today's most exciting and dynamic Latin musicians on tour. With recent performances wowing audiences across the co",
+          "es": "El hijo del \"Rey de los Timbales\", Tito Puente Jr. continúa llevando adelante uno de los legados más celebrados en la música latina. Siguiendo los pasos de su legendario padre, el icónico pionero de la salsa americana y el jazz latino Tito Puente, Tito Puente Jr. se ha convertido en uno de los músicos latinos más emocionantes y dinámicos en gira. Con recientes presentaciones que han maravillado a audiencias en todo el",
+          "pt": "O filho do \"Rei dos Timbales\", Tito Puente Jr. continua a levar adiante um dos legados mais celebrados da música latina. Seguindo os passos de seu lendário pai, o icônico pioneiro do samba americano e jazz latino Tito Puente, Tito Puente Jr. emergiu como um dos músicos latinos mais emocionantes e dinâmicos em turnê. Com apresentações recentes impressionando públicos em todo o",
+          "fr": "Le fils du \"Roi des Timbales\", Tito Puente Jr. poursuit l'une des plus célèbres traditions de la musique latine. Suivant les traces de son père légendaire, le pionnier emblématique de la salsa américaine et du jazz latino Tito Puente, Tito Puente Jr. est devenu l'un des musiciens latinos les plus passionnants et dynamiques en tournée. Avec des performances récentes impressionnant les publics dans le"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0884017,
+        "lng": -80.2461624
       }
     ]
   },
@@ -4335,10 +4338,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-16T12:29:59.058Z",
+    "fetchedAt": "2026-08-17T12:35:11.176Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.36ee7fd58a62eeb715be2b90dbc499db35b2da12.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.6176f8c293de9e5a511c3d08779f8f727bcc1dda.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4348,15 +4351,15 @@
           "fr": "Avis de Chaleur"
         },
         "detail": {
-          "en": "* WHAT...Heat index values of 105 to 110 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan índices de calor de 105 a 110 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y humedad elevada pueden causar enfermedades por calor.",
-          "pt": "* O QUÊ...Índices de calor de 105 a 110 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 AM desta manhã até as 7 PM EDT desta tarde.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Indices de chaleur de 105 à 110 degrés prévus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité élevée peuvent causer des maladies liées à la chaleur."
+          "en": "* WHAT...Heat index values of 105 to 112 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
+          "es": "* QUÉ...Se esperan valores de índice de calor de 105 a 112 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y la humedad elevada pueden causar enfermedades por calor.",
+          "pt": "* O QUÊ...Valores de índice de calor entre 105 e 112 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 AM desta manhã até às 7 PM EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Des valeurs d'indice de chaleur de 105 à 112 degrés attendues.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h du matin ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36ee7fd58a62eeb715be2b90dbc499db35b2da12.001.1",
-        "effectiveAt": "2026-08-16T00:11:00-04:00",
-        "expiresAt": "2026-08-16T23:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6176f8c293de9e5a511c3d08779f8f727bcc1dda.001.1",
+        "effectiveAt": "2026-08-17T01:12:00-04:00",
+        "expiresAt": "2026-08-17T23:00:00.000Z"
       }
     ]
   }
