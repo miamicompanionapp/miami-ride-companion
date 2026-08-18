@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-17T12:35:14.890Z",
+    "lastUpdated": "2026-08-18T12:36:23.928Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-17T12:35:11.175Z",
+    "fetchedAt": "2026-08-18T12:36:20.510Z",
     "current": {
-      "temp_f": 83,
-      "feels_f": 93,
+      "temp_f": 82,
+      "feels_f": 91,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 77,
-      "wind_mph": 2,
+      "humidity": 80,
+      "wind_mph": 4,
       "rain_chance": 6,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-17",
-        "high_f": 92,
-        "low_f": 78,
-        "weathercode": 3,
+        "date": "2026-08-18",
+        "high_f": 97,
+        "low_f": 77,
+        "weathercode": 1,
         "rain_chance": 6,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-08-18",
-        "high_f": 96,
-        "low_f": 77,
-        "weathercode": 3,
-        "rain_chance": 8,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Mainly clear",
+          "es": "Mayormente despejado",
+          "pt": "Principalmente limpo",
+          "fr": "Principalement dégagé"
         }
       },
       {
         "date": "2026-08-19",
-        "high_f": 93,
-        "low_f": 82,
-        "weathercode": 95,
-        "rain_chance": 57,
+        "high_f": 94,
+        "low_f": 78,
+        "weathercode": 3,
+        "rain_chance": 36,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-20",
-        "high_f": 90,
-        "low_f": 86,
+        "high_f": 92,
+        "low_f": 82,
         "weathercode": 96,
-        "rain_chance": 53,
+        "rain_chance": 54,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -75,28 +62,41 @@
       },
       {
         "date": "2026-08-21",
-        "high_f": 88,
-        "low_f": 84,
+        "high_f": 90,
+        "low_f": 85,
         "weathercode": 51,
-        "rain_chance": 26,
+        "rain_chance": 33,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-08-22",
+        "high_f": 89,
+        "low_f": 84,
+        "weathercode": 95,
+        "rain_chance": 31,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 84,
+        "temp_f": 83,
         "weathercode": 0,
         "rain_chance": 0
       },
@@ -108,31 +108,31 @@
       },
       {
         "hour": "11:00",
-        "temp_f": 88,
+        "temp_f": 89,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "12:00",
-        "temp_f": 90,
+        "temp_f": 92,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "13:00",
-        "temp_f": 91,
+        "temp_f": 96,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "14:00",
-        "temp_f": 91,
+        "temp_f": 97,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 1
       },
       {
         "hour": "15:00",
-        "temp_f": 92,
+        "temp_f": 95,
         "weathercode": 0,
         "rain_chance": 2
       },
@@ -146,25 +146,25 @@
         "hour": "17:00",
         "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 4
       },
       {
         "hour": "18:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 89,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "19:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "20:00",
         "temp_f": 86,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 6
       },
       {
         "hour": "21:00",
@@ -174,63 +174,63 @@
       },
       {
         "hour": "22:00",
-        "temp_f": 85,
+        "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 4
       },
       {
         "hour": "23:00",
         "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "00:00",
-        "temp_f": 83,
-        "weathercode": 1,
+        "temp_f": 82,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "01:00",
         "temp_f": 81,
-        "weathercode": 3,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "02:00",
-        "temp_f": 80,
-        "weathercode": 3,
+        "temp_f": 81,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "03:00",
-        "temp_f": 79,
-        "weathercode": 3,
+        "temp_f": 80,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "04:00",
         "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 0
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 0
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 0
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 0
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 1
       }
     ]
   },
@@ -2059,30 +2059,6 @@
         "lng": -80.187805
       },
       {
-        "id": "cp_1785333593248_x9y8",
-        "title": {
-          "en": "Wardell Chance Memorial Field Grand Re-Opening",
-          "es": "Reapertura de Campo Memorial Wardell Chance",
-          "pt": "Reabertura do Campo Memorável Wardell Chance",
-          "fr": "Grande Réouverture du Terrain Mémorial Wardell Chance"
-        },
-        "date": "2026-08-17",
-        "venue": "<p>Oveta McKeithen Recreation Complex&nbsp;</p><p>Wardell Chance Memorial Field</p>",
-        "address": "445 Sw 2nd St.  Deerfield Beach FL 33441",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "https://deerfield-beach.com/calendar.aspx?EID=5772",
-          "es": "https://deerfield-beach.com/calendar.aspx?EID=5772",
-          "pt": "https://deerfield-beach.com/calendar.aspx?EID=5772",
-          "fr": "https://deerfield-beach.com/calendar.aspx?EID=5772"
-        },
-        "source": "Deerfield Beach",
-        "category": "community"
-      },
-      {
         "id": "rss_1785506022508_gqkl",
         "title": {
           "en": "The One and Only Monster Jam in Sunrise 8/22/26 & 8/23/26",
@@ -3307,32 +3283,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786970084103_ycsn",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-17",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familiar · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1786970084103_he1u",
         "title": {
           "en": "The Mavericks & Friends",
@@ -3435,6 +3385,56 @@
         "category": "music",
         "lat": 26.0884017,
         "lng": -80.2461624
+      },
+      {
+        "id": "tm_1787056565771_0nxg",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-18",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneos · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "cp_1787056566254_px5u",
+        "title": {
+          "en": "Feeding South Florida",
+          "es": "Alimentando el Sur de la Florida",
+          "pt": "Alimentando o Sul da Flórida",
+          "fr": "Nourrir le Sud de la Floride"
+        },
+        "date": "2026-08-21",
+        "venue": "Segal Park",
+        "address": "2331 NW 143  Opa-locka FL 33054",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "The City of Opa-locka, Mayor & Commission, and Feeding South Florida invite you to a Community Food Resource Drive! Residents can receive food supplies while they last.    📅 Friday, August 21, 2026  🕘 9:30 AM – 1:30 PM  📍 Segal Park  2331 NW 143rd St., Opa-locka, FL 33054    🚨 Walk-thru distribution • First come, first served  🛍️ Please bring your own bag!    For more information: ☎️ 305-953-",
+          "es": "¡La Ciudad de Opa-locka, Alcalde y Comisión, e Iniciativa Alimentaria del Sur de la Florida te invitan a una Distribución Comunitaria de Recursos Alimentarios! Los residentes pueden recibir suministros alimentarios mientras haya disponibles. 📅 Viernes, 21 de agosto de 2026 🕘 9:30 AM – 1:30 PM 📍 Parque Segal 2331 NW 143rd St., Opa-locka, FL 33054 🚨 Distribución sin bajar del auto • Primero llegado, primero servido 🛍️ ¡Por favor trae tu propia bolsa!",
+          "pt": "A Cidade de Opa-locka, Prefeito e Comissão, e Alimentando o Sul da Flórida convida você para uma Distribuição Comunitária de Recursos Alimentares! Os residentes podem receber suprimentos alimentares enquanto durarem. 📅 Sexta-feira, 21 de agosto de 2026 🕘 9:30 AM – 1:30 PM 📍 Parque Segal 2331 NW 143rd St., Opa-locka, FL 33054 🚨 Distribuição sem sair do carro • Primeiro chegado, primeiro servido 🛍️ Por favor, traga sua própria bolsa!",
+          "fr": "La Ville d'Opa-locka, le Maire et la Commission, et Nourrir le Sud de la Floride vous invitent à une Distribution Communautaire de Ressources Alimentaires! Les résidents peuvent recevoir des fournitures alimentaires tant qu'elles sont disponibles. 📅 Vendredi, 21 août 2026 🕘 9:30 AM – 1:30 PM 📍 Parc Segal 2331 NW 143rd St., Opa-locka, FL 33054 🚨 Distribution sans quitter votre véhicule • Premier arrivé, premier servi 🛍️ Veuillez apporter votre propre sac!"
+        },
+        "source": "Opa-locka",
+        "category": "community"
       }
     ]
   },
@@ -4338,10 +4338,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-17T12:35:11.176Z",
+    "fetchedAt": "2026-08-18T12:36:20.511Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.6176f8c293de9e5a511c3d08779f8f727bcc1dda.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.98feaf9a504a20d439e2fc0644ee551bba428c86.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4352,14 +4352,14 @@
         },
         "detail": {
           "en": "* WHAT...Heat index values of 105 to 112 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan valores de índice de calor de 105 a 112 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y la humedad elevada pueden causar enfermedades por calor.",
-          "pt": "* O QUÊ...Valores de índice de calor entre 105 e 112 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 AM desta manhã até às 7 PM EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Des valeurs d'indice de chaleur de 105 à 112 degrés attendues.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h du matin ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
+          "es": "* QUÉ...Se esperan índices de calor de 105 a 112 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y la humedad elevada pueden causar enfermedades relacionadas con el calor.",
+          "pt": "* O QUÊ...Índices de calor de 105 a 112 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 da manhã desta manhã até as 19h EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Indices de chaleur de 105 à 112 degrés prévus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6176f8c293de9e5a511c3d08779f8f727bcc1dda.001.1",
-        "effectiveAt": "2026-08-17T01:12:00-04:00",
-        "expiresAt": "2026-08-17T23:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.98feaf9a504a20d439e2fc0644ee551bba428c86.001.1",
+        "effectiveAt": "2026-08-18T00:28:00-04:00",
+        "expiresAt": "2026-08-18T23:00:00.000Z"
       }
     ]
   }
