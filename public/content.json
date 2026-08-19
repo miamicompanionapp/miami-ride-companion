@@ -1,71 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-18T12:36:23.928Z",
+    "lastUpdated": "2026-08-19T12:37:30.598Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-18T12:36:20.510Z",
+    "fetchedAt": "2026-08-19T12:37:26.678Z",
     "current": {
-      "temp_f": 82,
-      "feels_f": 91,
+      "temp_f": 83,
+      "feels_f": 94,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
-      "wind_mph": 4,
-      "rain_chance": 6,
+      "humidity": 87,
+      "wind_mph": 5,
+      "rain_chance": 26,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-18",
-        "high_f": 97,
-        "low_f": 77,
-        "weathercode": 1,
-        "rain_chance": 6,
-        "description": {
-          "en": "Mainly clear",
-          "es": "Mayormente despejado",
-          "pt": "Principalmente limpo",
-          "fr": "Principalement dégagé"
-        }
-      },
-      {
         "date": "2026-08-19",
-        "high_f": 94,
-        "low_f": 78,
-        "weathercode": 3,
-        "rain_chance": 36,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-08-20",
-        "high_f": 92,
-        "low_f": 82,
-        "weathercode": 96,
-        "rain_chance": 54,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
-        "date": "2026-08-21",
-        "high_f": 90,
-        "low_f": 85,
+        "high_f": 95,
+        "low_f": 79,
         "weathercode": 51,
-        "rain_chance": 33,
+        "rain_chance": 26,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -74,11 +35,50 @@
         }
       },
       {
+        "date": "2026-08-20",
+        "high_f": 92,
+        "low_f": 77,
+        "weathercode": 81,
+        "rain_chance": 58,
+        "description": {
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
+        }
+      },
+      {
+        "date": "2026-08-21",
+        "high_f": 90,
+        "low_f": 78,
+        "weathercode": 95,
+        "rain_chance": 35,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
         "date": "2026-08-22",
         "high_f": 89,
-        "low_f": 84,
+        "low_f": 83,
         "weathercode": 95,
-        "rain_chance": 31,
+        "rain_chance": 36,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-08-23",
+        "high_f": 88,
+        "low_f": 83,
+        "weathercode": 95,
+        "rain_chance": 32,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -90,146 +90,146 @@
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 80,
+        "temp_f": 81,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 83,
+        "temp_f": 84,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "10:00",
-        "temp_f": 86,
+        "temp_f": 87,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "11:00",
-        "temp_f": 89,
+        "temp_f": 90,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "12:00",
-        "temp_f": 92,
-        "weathercode": 0,
+        "temp_f": 93,
+        "weathercode": 1,
         "rain_chance": 1
       },
       {
         "hour": "13:00",
-        "temp_f": 96,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 95,
+        "weathercode": 1,
+        "rain_chance": 2
       },
       {
         "hour": "14:00",
-        "temp_f": 97,
+        "temp_f": 93,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 3
       },
       {
         "hour": "15:00",
-        "temp_f": 95,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 93,
+        "weathercode": 1,
+        "rain_chance": 6
       },
       {
         "hour": "16:00",
-        "temp_f": 91,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 90,
+        "weathercode": 1,
+        "rain_chance": 11
       },
       {
         "hour": "17:00",
         "temp_f": 90,
-        "weathercode": 0,
-        "rain_chance": 4
+        "weathercode": 1,
+        "rain_chance": 18
       },
       {
         "hour": "18:00",
         "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 4
+        "weathercode": 1,
+        "rain_chance": 11
       },
       {
         "hour": "19:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 85,
+        "weathercode": 51,
+        "rain_chance": 22
       },
       {
         "hour": "20:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 6
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 26
       },
       {
         "hour": "21:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "22:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "23:00",
-        "temp_f": 84,
+        "temp_f": 79,
+        "weathercode": 1,
+        "rain_chance": 5
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 5
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 78,
         "weathercode": 0,
         "rain_chance": 2
       },
       {
-        "hour": "00:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
         "hour": "03:00",
-        "temp_f": 80,
-        "weathercode": 0,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "04:00",
-        "temp_f": 79,
-        "weathercode": 0,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 79,
-        "weathercode": 0,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "06:00",
         "temp_f": 78,
-        "weathercode": 0,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "07:00",
-        "temp_f": 78,
-        "weathercode": 0,
+        "temp_f": 77,
+        "weathercode": 3,
         "rain_chance": 1
       }
     ]
@@ -3387,32 +3387,6 @@
         "lng": -80.2461624
       },
       {
-        "id": "tm_1787056565771_0nxg",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-18",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneos · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "cp_1787056566254_px5u",
         "title": {
           "en": "Feeding South Florida",
@@ -3435,6 +3409,134 @@
         },
         "source": "Opa-locka",
         "category": "community"
+      },
+      {
+        "id": "rss_1787143022212_yfcd",
+        "title": {
+          "en": "The Moth StorySLAM: Nine to Five 9/17/26",
+          "es": "The Moth StorySLAM: Nueve a Cinco 9/17/26",
+          "pt": "The Moth StorySLAM: Nove a Cinco 9/17/26",
+          "fr": "The Moth StorySLAM: Neuf à Cinq 9/17/26"
+        },
+        "date": "2026-09-17",
+        "venue": "Sandrell Rivers Theater",
+        "address": "6103 NW 7th Ave, Miami, Florida, 33127",
+        "url": "https://www.soulofmiami.org/2026/08/18/the-moth-storyslam-nine-to-five-9-17-26/",
+        "free": false,
+        "price": "$21",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/The-Moth-Nine-to-Five-WLRN-350x175.png",
+        "description": {
+          "en": "Prepare a five-minute story about being on the clock. First jobs and corporate climbing. Dream gigs, survival",
+          "es": "Prepara una historia de cinco minutos sobre estar trabajando. Primeros empleos y ascensos corporativos. Trabajos soñados, supervivencia",
+          "pt": "Prepare uma história de cinco minutos sobre estar trabalhando. Primeiros empregos e ascensões corporativas. Empregos dos sonhos, sobrevivência",
+          "fr": "Préparez une histoire de cinq minutes sur le fait de travailler. Premiers emplois et ascensions professionnelles. Emplois de rêve, survie"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8315843,
+        "lng": -80.2082623,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787143022212_e6ce",
+        "title": {
+          "en": "Second Annual Superhero Bash 10/24/26",
+          "es": "Segunda Bash Anual de Superhéroes 10/24/26",
+          "pt": "Segundo Bash Anual de Super-Heróis 10/24/26",
+          "fr": "Deuxième Bash Annuel de Super-Héros 10/24/26"
+        },
+        "date": "2026-10-24",
+        "venue": "CityPlace Doral",
+        "address": "8300 NW 36th Street, Doral, Florida, 33166",
+        "url": "https://www.soulofmiami.org/2026/08/18/second-annual-superhero-bash-10-24-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/CD-super-hero-bash_2026_-Instagram-Post-45-350x438.png",
+        "description": {
+          "en": "Not all heroes wear capes; some wear uniforms! CityPlace Doral – South Florida’s go-to destination for entertainment, dining and",
+          "es": "¡No todos los héroes usan capas; algunos usan uniformes! CityPlace Doral – el destino de entretenimiento, comida y",
+          "pt": "Nem todos os heróis usam capas; alguns usam uniformes! CityPlace Doral – o destino de entretenimento, gastronomia e",
+          "fr": "Tous les héros ne portent pas de cape ; certains portent des uniformes ! CityPlace Doral – la destination incontournable pour le divertissement, la restauration et"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8097172,
+        "lng": -80.3309119,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787143022212_mvad",
+        "title": {
+          "en": "Hive House Presents: The Room at Claudie 9/23/26",
+          "es": "Hive House Presenta: The Room at Claudie 9/23/26",
+          "pt": "Hive House Apresenta: The Room at Claudie 9/23/26",
+          "fr": "Hive House Présente: The Room at Claudie 9/23/26"
+        },
+        "date": "2026-09-23",
+        "venue": "Claudie",
+        "address": "1101 Brickell Ave., Suite S-113, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/08/18/hive-house-presents-the-room-at-claudie-9-23-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/HHC-Claudie-Invite-350x467.png",
+        "description": {
+          "en": "House Members — Free (with member promo code) | Non-Members — $45 Hive House invites you",
+          "es": "Miembros de la Casa — Gratis (con código de promoción de miembro) | No Miembros — $45 Hive House te invita",
+          "pt": "Membros da Casa — Grátis (com código de promoção de membro) | Não Membros — $45 Hive House convida você",
+          "fr": "Membres de la Maison — Gratuit (avec code promo membre) | Non-Membres — $45 Hive House vous invite"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1787143023006_zjoz",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-19",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneo · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1787143023006_d5x1",
+        "title": {
+          "en": "Orishas",
+          "es": "Orishas",
+          "pt": "Orishas",
+          "fr": "Orishas"
+        },
+        "date": "2026-09-12",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Forishas-miami-florida-09-12-2026%2Fevent%2F0D006371B4E67363&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/3db/c4706502-70e3-4fac-bfb8-7a0ef0a1f3db_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "NO BAG POLICY. Exceptions will be made for bags smaller than 10\" x 7\" x 2\". All bags are subject to inspection by our security team upon entry. · Starts 20:00 · James L Knight Center",
+          "es": "SIN POLÍTICA DE BOLSAS. Se harán excepciones para bolsas más pequeñas que 10\" x 7\" x 2\". Todas las bolsas están sujetas a inspección por parte de nuestro equipo de seguridad al entrar. · Comienza 20:00 · James L Knight Center",
+          "pt": "SEM POLÍTICA DE BOLSAS. Exceções serão feitas para bolsas menores que 10\" x 7\" x 2\". Todas as bolsas estão sujeitas a inspeção pela nossa equipe de segurança na entrada. · Começa 20:00 · James L Knight Center",
+          "fr": "PAS DE POLITIQUE DE SAC. Des exceptions seront faites pour les sacs plus petits que 10\" x 7\" x 2\". Tous les sacs seront inspectés par notre équipe de sécurité à l'entrée. · Commence 20:00 · James L Knight Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7707756,
+        "lng": -80.1901174
       }
     ]
   },
@@ -4338,10 +4440,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-18T12:36:20.511Z",
+    "fetchedAt": "2026-08-19T12:37:26.678Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.98feaf9a504a20d439e2fc0644ee551bba428c86.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.84a42b242f3d2f009fa2e3c97aaf8f20c00d1a54.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4352,14 +4454,14 @@
         },
         "detail": {
           "en": "* WHAT...Heat index values of 105 to 112 expected.\n\n* WHERE...All of South Florida.\n\n* WHEN...From 11 AM this morning to 7 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan índices de calor de 105 a 112 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 7 PM EDT esta tarde.\n\n* IMPACTOS...Las altas temperaturas y la humedad elevada pueden causar enfermedades relacionadas con el calor.",
-          "pt": "* O QUÊ...Índices de calor de 105 a 112 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 da manhã desta manhã até as 19h EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Indices de chaleur de 105 à 112 degrés prévus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
+          "es": "* QUÉ...Se esperan índices de calor de 105 a 112 grados.\n\n* DÓNDE...Todo el sur de Florida.\n\n* CUÁNDO...De 11 AM esta mañana a 7 PM EDT esta tarde.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
+          "pt": "* O QUÊ...Índices de calor de 105 a 112 graus esperados.\n\n* ONDE...Todo o sul da Flórida.\n\n* QUANDO...Das 11 AM desta manhã até 7 PM EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Indices de chaleur de 105 à 112 degrés attendus.\n\n* OÙ...Tout le sud de la Floride.\n\n* QUAND...De 11 h ce matin à 19 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité forte peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.98feaf9a504a20d439e2fc0644ee551bba428c86.001.1",
-        "effectiveAt": "2026-08-18T00:28:00-04:00",
-        "expiresAt": "2026-08-18T23:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.84a42b242f3d2f009fa2e3c97aaf8f20c00d1a54.001.1",
+        "effectiveAt": "2026-08-19T00:14:00-04:00",
+        "expiresAt": "2026-08-19T23:00:00.000Z"
       }
     ]
   }
