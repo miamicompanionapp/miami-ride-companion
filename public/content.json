@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-20T12:38:45.304Z",
+    "lastUpdated": "2026-08-21T12:37:48.634Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-20T12:38:40.242Z",
+    "fetchedAt": "2026-08-21T12:37:42.861Z",
     "current": {
       "temp_f": 84,
-      "feels_f": 94,
+      "feels_f": 98,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 79,
+      "humidity": 91,
       "wind_mph": 3,
-      "rain_chance": 20,
-      "weathercode": 3
+      "rain_chance": 14,
+      "weathercode": 2
     },
     "forecast": [
       {
-        "date": "2026-08-20",
-        "high_f": 91,
-        "low_f": 76,
-        "weathercode": 80,
-        "rain_chance": 20,
-        "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
-        }
-      },
-      {
         "date": "2026-08-21",
-        "high_f": 88,
-        "low_f": 78,
-        "weathercode": 82,
-        "rain_chance": 26,
+        "high_f": 92,
+        "low_f": 80,
+        "weathercode": 3,
+        "rain_chance": 14,
         "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-22",
-        "high_f": 90,
-        "low_f": 81,
-        "weathercode": 51,
-        "rain_chance": 31,
+        "high_f": 91,
+        "low_f": 77,
+        "weathercode": 3,
+        "rain_chance": 22,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-23",
         "high_f": 89,
-        "low_f": 84,
+        "low_f": 82,
         "weathercode": 95,
-        "rain_chance": 31,
+        "rain_chance": 47,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,72 +62,85 @@
       },
       {
         "date": "2026-08-24",
-        "high_f": 87,
-        "low_f": 84,
-        "weathercode": 95,
-        "rain_chance": 14,
+        "high_f": 89,
+        "low_f": 85,
+        "weathercode": 53,
+        "rain_chance": 15,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-08-25",
+        "high_f": 89,
+        "low_f": 85,
+        "weathercode": 51,
+        "rain_chance": 19,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 0
+        "temp_f": 82,
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "09:00",
         "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 0
+        "rain_chance": 10
       },
       {
         "hour": "10:00",
-        "temp_f": 87,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "11:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 90,
+        "weathercode": 2,
+        "rain_chance": 4
       },
       {
         "hour": "12:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 92,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "13:00",
-        "temp_f": 91,
-        "weathercode": 3,
+        "temp_f": 89,
+        "weathercode": 0,
         "rain_chance": 3
       },
       {
         "hour": "14:00",
         "temp_f": 91,
-        "weathercode": 3,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "15:00",
         "temp_f": 91,
-        "weathercode": 3,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "16:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 90,
+        "weathercode": 0,
+        "rain_chance": 9
       },
       {
         "hour": "17:00",
@@ -150,87 +150,87 @@
       },
       {
         "hour": "18:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 16
+        "temp_f": 83,
+        "weathercode": 1,
+        "rain_chance": 14
       },
       {
         "hour": "19:00",
-        "temp_f": 76,
-        "weathercode": 53,
-        "rain_chance": 20
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 77,
-        "weathercode": 80,
-        "rain_chance": 16
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 78,
-        "weathercode": 53,
+        "temp_f": 84,
+        "weathercode": 0,
         "rain_chance": 10
       },
       {
-        "hour": "22:00",
-        "temp_f": 80,
+        "hour": "20:00",
+        "temp_f": 83,
+        "weathercode": 1,
+        "rain_chance": 8
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 6
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 83,
+        "weathercode": 2,
+        "rain_chance": 4
       },
       {
         "hour": "23:00",
-        "temp_f": 80,
+        "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 2
+        "rain_chance": 3
       },
       {
         "hour": "00:00",
         "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "01:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "02:00",
-        "temp_f": 82,
-        "weathercode": 1,
-        "rain_chance": 1
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "03:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "04:00",
-        "temp_f": 81,
-        "weathercode": 1,
-        "rain_chance": 0
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 0
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 80,
-        "weathercode": 3,
+        "temp_f": 78,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "07:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 2
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 1
       }
     ]
   },
@@ -1417,31 +1417,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1783170931589_c5hv",
-        "title": {
-          "en": "Island City Stage presents the Tony Award-winning Play Eureka Day 8/20/26 – 9/13/26",
-          "es": "Island City Stage presenta la obra ganadora del Premio Tony Eureka Day 8/20/26 – 9/13/26",
-          "pt": "Island City Stage apresenta a peça vencedora do Tony Award Eureka Day 8/20/26 – 9/13/26",
-          "fr": "Island City Stage présente la pièce gagnante du Tony Award Eureka Day 8/20/26 – 9/13/26"
-        },
-        "date": "2026-08-20",
-        "venue": "Island City Stage",
-        "address": "2304 N. Dixie Highway, Wilton Manors, Florida, 33305",
-        "url": "https://www.soulofmiami.org/2026/07/03/island-city-stage-presents-the-tony-award-winning-play-eureka-day-8-20-26-9-13-26/",
-        "free": false,
-        "price": "$45",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/EurekaDay_1080x1080-350x350.jpeg",
-        "description": {
-          "en": "– $62 Eureka Day, winner of the 2025 Tony Award for",
-          "es": "– $62 Eureka Day, ganadora del Premio Tony 2025 para",
-          "pt": "– $62 Eureka Day, vencedora do Prêmio Tony 2025 para",
-          "fr": "– $62 Eureka Day, gagnante du Prix Tony 2025 pour"
-        },
-        "lat": 26.1566616,
-        "lng": -80.1319329,
-        "category": "arts"
-      },
-      {
         "id": "rss_1783775325198_l6j1",
         "title": {
           "en": "HAMLET by William Shakespeare 11/7/26",
@@ -1467,31 +1442,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1783952675215_80o7",
-        "title": {
-          "en": "SQUEEZE - With Special Guest Adam Ant and Haircut 100",
-          "es": "SQUEEZE - Con invitado especial Adam Ant y Haircut 100",
-          "pt": "SQUEEZE - Com convidado especial Adam Ant e Haircut 100",
-          "fr": "SQUEEZE - Avec invité spécial Adam Ant et Haircut 100"
-        },
-        "date": "2026-08-20",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsqueeze-with-special-guest-adam-ant-hollywood-florida-08-20-2026%2Fevent%2F0D00649ED5391D4D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/8c2/6276284b-2bc8-4199-a6d6-87724e5548c2_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:00 · Hard Rock Live",
-          "es": "Música · Rock · Comienza 19:00 · Hard Rock Live",
-          "pt": "Música · Rock · Começa 19:00 · Hard Rock Live",
-          "fr": "Musique · Rock · Commence 19:00 · Hard Rock Live"
-        },
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
         "id": "rss_1784209274228_9y30",
         "title": {
           "en": "Herpreneur Artisan Market at The Goodtime Hotel 8/30/26",
@@ -1515,56 +1465,6 @@
         "lat": 25.7763327,
         "lng": -80.1334166,
         "category": "community"
-      },
-      {
-        "id": "tm_1784466464004_izlw",
-        "title": {
-          "en": "Clarent",
-          "es": "Clarent",
-          "pt": "Clarent",
-          "fr": "Clarent"
-        },
-        "date": "2026-08-20",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fclarent-miami-beach-florida-08-20-2026%2Fevent%2F0D0064874FEC9D0A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/df2/57b0b9a3-36ed-4218-a37f-41d9b752adf2_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Las entradas GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas son de pie y asiento y son de primera llegada, primera servida. Tenga en cuenta que una vez que se haya alcanzado la capacidad de un área, se limitará a otras áreas abiertas. · Comienza a las 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Os ingressos GA significam Admissão Geral. Isso significa que não há lugares designados. Essas áreas são de pé e assentos e funcionam por ordem de chegada. Esteja ciente de que uma vez que a capacidade de uma área foi atingida, você será limitado a outras áreas abertas. · Começa às 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de places assignées. Ces zones sont debout et assis et fonctionnent selon le principe du premier arrivé, premier servi. Veuillez noter qu'une fois la capacité d'une zone atteinte, vous serez limité à d'autres zones ouvertes. · Commence à 20:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "category": "music",
-        "lat": 25.792917,
-        "lng": -80.13314
-      },
-      {
-        "id": "tm_1784466464004_2xl7",
-        "title": {
-          "en": "Venezuela, Aqui Estoy",
-          "es": "Venezuela, Aquí Estoy",
-          "pt": "Venezuela, Aqui Estou",
-          "fr": "Venezuela, Me Voici"
-        },
-        "date": "2026-08-20",
-        "venue": "James L Knight Center",
-        "address": "400 SE 2nd Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fvenezuela-aqui-estoy-miami-florida-08-20-2026%2Fevent%2F0D0064EE875E438A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/0c3/8fe748bc-3534-45e5-8aee-44a56305d0c3_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Venezuela, Aqui Estoy - United in One Voice is a humanitarian event bringing together artists, community leaders, businesses, and organizations to support those affected by the recent earthquakes in Venezuela. Enjoy an inspiring evening of live music, special guests, and messages of hope, while helping make a real difference. All net proceeds will benefit Global Empowerment Mission (GEM) to provid",
-          "es": "Venezuela, Aquí Estoy - Unidos en Una Sola Voz es un evento humanitario que reúne artistas, líderes comunitarios, negocios y organizaciones para apoyar a los afectados por los terremotos recientes en Venezuela. Disfruta de una noche inspiradora de música en vivo, invitados especiales y mensajes de esperanza, mientras ayudas a marcar una diferencia real. Todos los ingresos netos beneficiarán a Global Empowerment Mission (GEM)",
-          "pt": "Venezuela, Aqui Estou - Unidos em Uma Só Voz é um evento humanitário reunindo artistas, líderes comunitários, negócios e organizações para apoiar os afetados pelos terremotos recentes na Venezuela. Aproveite uma noite inspiradora de música ao vivo, convidados especiais e mensagens de esperança, enquanto ajuda a fazer uma diferença real. Todos os lucros líquidos beneficiarão a Global Empowerment Mission (GEM)",
-          "fr": "Venezuela, Me Voici - Unis dans Une Seule Voix est un événement humanitaire réunissant des artistes, des leaders communautaires, des entreprises et des organisations pour soutenir ceux affectés par les tremblements de terre récents au Venezuela. Profitez d'une soirée inspirante de musique en direct, d'invités spéciaux et de messages d'espoir, tout en faisant une réelle différence. Tous les bénéfices nets bénéficieront à Global Empowerment Mission (GEM)"
-        },
-        "category": "music",
-        "lat": 25.7707756,
-        "lng": -80.1901174
       },
       {
         "id": "tm_1784466464004_s9rn",
@@ -1668,32 +1568,6 @@
         "category": "music",
         "lat": 25.792917,
         "lng": -80.13314
-      },
-      {
-        "id": "rss_1784899622368_z1rx",
-        "title": {
-          "en": "Imagined Landscapes Honoring Humberto Calzada 8/20/26",
-          "es": "Paisajes Imaginados Honrando a Humberto Calzada 8/20/26",
-          "pt": "Paisagens Imaginadas Homenageando Humberto Calzada 8/20/26",
-          "fr": "Paysages Imaginés Honorant Humberto Calzada 8/20/26"
-        },
-        "date": "2026-08-20",
-        "venue": "Roberto C. Goizueta Pavilion, Otto G. Richter Library",
-        "address": "1300 Memorial Dr, Coral Gables, FL, 33146",
-        "url": "https://www.soulofmiami.org/2026/07/23/imagined-landscapes-honoring-humberto-calzada-8-20-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Honoring-Humberto-Calzada-Localist-940px-350x207.jpg",
-        "description": {
-          "en": "Known for his evocative depictions of architecture, memory, and place, famed",
-          "es": "Conocido por sus evocadoras representaciones de arquitectura, memoria y lugar, el famoso",
-          "pt": "Conhecido por suas representações evocativas de arquitetura, memória e lugar, o famoso",
-          "fr": "Connu pour ses représentations évocatrices de l'architecture, de la mémoire et du lieu, le célèbre"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7211339,
-        "lng": -80.2787553,
-        "category": "community"
       },
       {
         "id": "rss_1785071436251_bm2q",
@@ -2950,30 +2824,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1786796918199_fat4",
-        "title": {
-          "en": "Magic City Comedy at Ray’s Hometown Bar Miami 8/20/26",
-          "es": "Magic City Comedy en Ray's Hometown Bar Miami 8/20/26",
-          "pt": "Magic City Comedy no Ray's Hometown Bar Miami 8/20/26",
-          "fr": "Magic City Comedy au Ray's Hometown Bar Miami 8/20/26"
-        },
-        "date": "2026-08-20",
-        "venue": "Ray's Hometown Bar Miami",
-        "address": "2727 Indian Creek Dr #11, Miami Beach, Florida, 33140",
-        "url": "https://www.soulofmiami.org/2026/08/14/magic-city-comedy-at-rays-hometown-bar-miami-8-20-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Magic-City-Comedy-8.20.2026-1-350x437.jpg",
-        "description": {
-          "en": "Join us Thursday, August 20th at Ray’s Miami 2nd floor for",
-          "es": "Únete a nosotros el jueves, 20 de agosto en Ray's Miami 2do piso para",
-          "pt": "Junte-se a nós quinta-feira, 20 de agosto no Ray's Miami 2º andar para",
-          "fr": "Rejoignez-nous jeudi 20 août au Ray's Miami 2e étage pour"
-        },
-        "source": "Soul of Miami",
-        "category": "comedy"
-      },
-      {
         "id": "rss_1786796918199_zjml",
         "title": {
           "en": "Free Health Fair in Fort Lauderdale 8/29/26",
@@ -3204,32 +3054,6 @@
         "lat": 25.7037558,
         "lng": -80.2895565,
         "category": "food-drink"
-      },
-      {
-        "id": "rss_1786970083365_fro7",
-        "title": {
-          "en": "Summer Cuban Cocktail Experience with Gio Gutierrez | Lennox Hotel Miami Beach 8/20/26",
-          "es": "Experiencia de Cócteles Cubanos de Verano con Gio Gutierrez | Lennox Hotel Miami Beach 8/20/26",
-          "pt": "Experiência de Coquéis Cubanos de Verão com Gio Gutierrez | Lennox Hotel Miami Beach 8/20/26",
-          "fr": "Expérience de Cocktails Cubains d'Été avec Gio Gutierrez | Lennox Hotel Miami Beach 8/20/26"
-        },
-        "date": "2026-08-20",
-        "venue": "Lennox Hotel Miami Beach",
-        "address": "1900 Collins Ave, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/15/summer-cuban-cocktail-experience-with-gio-gutierrez-lennox-hotel-miami-beach-8-20-26/",
-        "free": false,
-        "price": "$30",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Eventbrite_Amalia-Mixology-with-Gio-Gutierrez-1-350x175.png",
-        "description": {
-          "en": "Shake, stir, and sip your way through the timeless",
-          "es": "Agita, remueve y saborea a través de la atemporales",
-          "pt": "Agite, mexa e saboreie a través da atemporais",
-          "fr": "Secouez, remuez et dégustez les incontournables"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7952193,
-        "lng": -80.1300377,
-        "category": "community"
       },
       {
         "id": "tm_1786970084103_he1u",
@@ -3536,32 +3360,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787229490437_jj9l",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-20",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1787229490438_211a",
         "title": {
           "en": "Miami Marlins vs. Washington Nationals",
@@ -3664,6 +3462,134 @@
         "category": "sports",
         "lat": 26.238701,
         "lng": -80.370499
+      },
+      {
+        "id": "rss_1787315837975_6j6r",
+        "title": {
+          "en": "An Evening with Arturo Rodríguez: A Conversation on Art, Memory, and Exile 9/3/26",
+          "es": "Una Noche con Arturo Rodríguez: Una Conversación sobre Arte, Memoria y Exilio 9/3/26",
+          "pt": "Uma Noite com Arturo Rodríguez: Uma Conversa sobre Arte, Memória e Exílio 9/3/26",
+          "fr": "Une Soirée avec Arturo Rodríguez: Une Conversation sur l'Art, la Mémoire et l'Exil 9/3/26"
+        },
+        "date": "2026-09-03",
+        "venue": "Roberto C. Goizueta Pavilion",
+        "address": "1300 Memorial Dr, Coral Gables, Florida, 33146",
+        "url": "https://www.soulofmiami.org/2026/08/20/an-evening-with-arturo-rodriguez-a-conversation-on-art-memory-and-exile-9-3-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Events-Localist-940x557-2-350x207.jpg",
+        "description": {
+          "en": "Join us for an evening with acclaimed Cuban American",
+          "es": "Únase a nosotros para una noche con el aclamado cubanoamericano",
+          "pt": "Junte-se a nós para uma noite com o aclamado cubano-americano",
+          "fr": "Rejoignez-nous pour une soirée avec l'acclamé Cuban American"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7211339,
+        "lng": -80.2787553,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787315837975_3jyg",
+        "title": {
+          "en": "Join Uchi & Uchiba For A Limited Time Collab: Uchi’s Summer Dinner Series 9/24/26",
+          "es": "Únase a Uchi y Uchiba para una Colaboración por Tiempo Limitado: Serie de Cenas de Verano de Uchi 9/24/26",
+          "pt": "Junte-se à Uchi e Uchiba para uma Colaboração por Tempo Limitado: Série de Jantares de Verão de Uchi 9/24/26",
+          "fr": "Rejoignez Uchi et Uchiba pour une Collaboration Limitée: Série de Dîners d'Été d'Uchi 9/24/26"
+        },
+        "date": "2026-09-24",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/08/20/join-uchi-uchiba-for-a-limited-time-collab-uchis-summer-dinner-series-9-24-26/",
+        "free": false,
+        "price": "$150",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Sushi-350x233.jpg",
+        "description": {
+          "en": "Uchi Miami’s iconic Summer Dinner Series concludes with a",
+          "es": "La icónica Serie de Cenas de Verano de Uchi Miami concluye con",
+          "pt": "A icônica Série de Jantares de Verão de Uchi Miami conclui com",
+          "fr": "La célèbre Série de Dîners d'Été d'Uchi Miami se termine par"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1787315838575_qnwk",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-21",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 10:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1787315838575_f32o",
+        "title": {
+          "en": "Preseason Luxury & Suites: Miami Dolphins vs. New York Giants",
+          "es": "Pretemporada Lujo y Suites: Miami Dolphins vs. Nueva York Giants",
+          "pt": "Pré-temporada Luxo e Suites: Miami Dolphins vs. Nova York Giants",
+          "fr": "Présaison Luxe et Suites: Miami Dolphins vs. New York Giants"
+        },
+        "date": "2026-08-22",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpreseason-luxury-suites-miami-dolphins-vs-miami-florida-08-22-2026%2Fevent%2F0D00646CE66E15A9&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season · Starts 16:00 · Hard Rock Stadium",
+          "es": "Horario Flexible: Tenga en cuenta que hay ciertos juegos que están sujetos a cambios de horario flexible y la fecha y hora de esos juegos pueden cambiar respecto a lo que se refleja actualmente en el calendario. Para obtener información más detallada sobre los procedimientos de programación flexible de la NFL para la Temporada 2026 de la NFL · Comienza 16:00 · Hard Rock Stadium",
+          "pt": "Cronograma Flexível: Esteja ciente de que há certos jogos sujeitos a cronograma flexível e a data e hora desses jogos podem mudar em relação ao que está atualmente refletido no calendário. Para informações mais detalhadas sobre os procedimentos de agendamento flexível da NFL para a Temporada 2026 da NFL · Começa 16:00 · Hard Rock Stadium",
+          "fr": "Calendrier Flexible: Veuillez noter que certains matchs sont sujets à un calendrier flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement reflété dans le calendrier. Pour des informations plus détaillées sur les procédures de calendrier flexible de la NFL pour la Saison 2026 de la NFL · Commence 16:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1787315838575_oy3k",
+        "title": {
+          "en": "Inter Miami CF vs Toronto FC",
+          "es": "Inter Miami CF vs Toronto FC",
+          "pt": "Inter Miami CF vs Toronto FC",
+          "fr": "Inter Miami CF vs Toronto FC"
+        },
+        "date": "2026-08-22",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-toronto-fc-miami-florida-08-22-2026%2Fevent%2F0D0063739DD86821&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
+          "es": "Para obtener información sobre Suites, llame al 305-428-0611. · Comienza 19:30 · Nu Stadium",
+          "pt": "Para informações sobre Suites, ligue para 305-428-0611. · Começa 19:30 · Nu Stadium",
+          "fr": "Pour des informations sur les Suites, appelez le 305-428-0611. · Commence 19:30 · Nu Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
       }
     ]
   },
@@ -4567,31 +4493,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-20T12:38:40.242Z",
+    "fetchedAt": "2026-08-21T12:37:42.861Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.6040c6140c9389b1940fddfbb4cc19befeedb14e.001.1",
-        "type": "weather",
-        "severity": "unknown",
-        "title": {
-          "en": "Air Quality Alert",
-          "es": "Air Quality Alert",
-          "pt": "Air Quality Alert",
-          "fr": "Air Quality Alert"
-        },
-        "detail": {
-          "en": "The Miami-Dade County Department of Environmental Resources\nManagement has issued an Air Quality Alert for Fine Particulates\nuntil 3 PM EDT this afternoon.\n\nFine Particulates concentrations within the region may approach or\nexceed unhealthy standards. For additional information on the Air\nQuality Index, please visit http://airnow.gov.",
-          "es": "El Departamento de Recursos Ambientales del Condado de Miami-Dade ha emitido una Alerta de Calidad del Aire por Partículas Finas hasta las 3 PM EDT esta tarde.\n\nLas concentraciones de partículas finas en la región pueden aproximarse o exceder los estándares de insalubridad. Para información adicional sobre el Índice de Calidad del Aire, visite http://airnow.gov.",
-          "pt": "O Departamento de Recursos Ambientais do Condado de Miami-Dade emitiu um Alerta de Qualidade do Ar para Partículas Finas até as 15h EDT desta tarde.\n\nAs concentrações de partículas finas na região podem se aproximar ou exceder os padrões prejudiciais à saúde. Para informações adicionais sobre o Índice de Qualidade do Ar, visite http://airnow.gov.",
-          "fr": "Le Département des Ressources Environnementales du Comté de Miami-Dade a émis une Alerte à la Qualité de l'Air pour les Particules Fines jusqu'à 15h EDT cet après-midi.\n\nLes concentrations de particules fines dans la région peuvent approcher ou dépasser les normes insalubres. Pour des informations supplémentaires sur l'Indice de Qualité de l'Air, veuillez consulter http://airnow.gov."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6040c6140c9389b1940fddfbb4cc19befeedb14e.001.1",
-        "effectiveAt": "2026-08-20T07:41:00-04:00",
-        "expiresAt": "2026-08-20T19:00:00.000Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.2979f61125566d58a4ee01f9a9990764b1ffa836.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.94e090866f5bec33c0320bea284dab820358f871.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4601,15 +4506,15 @@
           "fr": "Avis de Chaleur"
         },
         "detail": {
-          "en": "* WHAT...Heat index values up to 110 expected.\n\n* WHERE...Portions of southeast, southern, and southwest Florida.\n\n* WHEN...From 11 AM this morning to 6 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan valores de índice de calor hasta 110.\n\n* DÓNDE...Porciones del sureste, sur y suroeste de Florida.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 6 PM EDT esta noche.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
-          "pt": "* O QUÊ...Esperados valores do índice de calor até 110.\n\n* ONDE...Porções do sudeste, sul e sudoeste da Flórida.\n\n* QUANDO...Das 11h desta manhã até as 18h EDT esta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Valeurs d'indice de chaleur jusqu'à 110 attendues.\n\n* OÙ...Portions du sud-est, sud et sud-ouest de la Floride.\n\n* QUAND...De 11h ce matin à 18h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité élevée peuvent causer des maladies liées à la chaleur."
+          "en": "* WHAT...Heat index values up to 107 expected.\n\n* WHERE...Coastal Broward County, Coastal Miami Dade County, Far\nSouth Miami-Dade County, Inland Broward County, Inland Miami-Dade\nCounty, Metro Broward County, and Metropolitan Miami Dade Counties.\n\n* WHEN...From 11 AM this morning to 6 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
+          "es": "* QUÉ...Se esperan índices de calor hasta 107°F.\n\n* DÓNDE...Condado de Broward costero, Condado de Miami-Dade costero, sur lejano del Condado de Miami-Dade, Condado de Broward interior, Condado de Miami-Dade interior, Condado de Broward metropolitano y Condados de Miami-Dade metropolitano.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 6 PM EDT esta tarde.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
+          "pt": "* O QUÊ...Índices de calor esperados até 107°F.\n\n* ONDE...Condado de Broward costeiro, Condado de Miami-Dade costeiro, extremo sul do Condado de Miami-Dade, Condado de Broward interior, Condado de Miami-Dade interior, Condado de Broward metropolitano e Condados de Miami-Dade metropolitano.\n\n* QUANDO...Das 11 AM desta manhã até as 6 PM EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
+          "fr": "* QUOI...Des indices de chaleur jusqu'à 107°F attendus.\n\n* OÙ...Comté de Broward côtier, Comté de Miami-Dade côtier, extrême sud du Comté de Miami-Dade, Comté de Broward intérieur, Comté de Miami-Dade intérieur, Comté de Broward métropolitain et Comtés de Miami-Dade métropolitain.\n\n* QUAND...De 11 h du matin à 18 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2979f61125566d58a4ee01f9a9990764b1ffa836.001.1",
-        "effectiveAt": "2026-08-20T01:08:00-04:00",
-        "expiresAt": "2026-08-20T22:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.94e090866f5bec33c0320bea284dab820358f871.001.1",
+        "effectiveAt": "2026-08-21T01:15:00-04:00",
+        "expiresAt": "2026-08-21T22:00:00.000Z"
       }
     ]
   }
