@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-21T12:37:48.634Z",
+    "lastUpdated": "2026-08-22T12:30:19.656Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-21T12:37:42.861Z",
+    "fetchedAt": "2026-08-22T12:30:17.645Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 98,
+      "temp_f": 82,
+      "feels_f": 93,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 91,
-      "wind_mph": 3,
-      "rain_chance": 14,
-      "weathercode": 2
+      "humidity": 84,
+      "wind_mph": 2,
+      "rain_chance": 10,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-21",
-        "high_f": 92,
-        "low_f": 80,
-        "weathercode": 3,
-        "rain_chance": 14,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-22",
         "high_f": 91,
-        "low_f": 77,
+        "low_f": 78,
         "weathercode": 3,
-        "rain_chance": 22,
+        "rain_chance": 10,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -50,9 +37,22 @@
       {
         "date": "2026-08-23",
         "high_f": 89,
-        "low_f": 82,
-        "weathercode": 95,
+        "low_f": 77,
+        "weathercode": 82,
         "rain_chance": 47,
+        "description": {
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
+        }
+      },
+      {
+        "date": "2026-08-24",
+        "high_f": 88,
+        "low_f": 80,
+        "weathercode": 95,
+        "rain_chance": 9,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -61,66 +61,66 @@
         }
       },
       {
-        "date": "2026-08-24",
-        "high_f": 89,
-        "low_f": 85,
-        "weathercode": 53,
-        "rain_chance": 15,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-08-25",
         "high_f": 89,
         "low_f": 85,
         "weathercode": 51,
-        "rain_chance": 19,
+        "rain_chance": 23,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-08-26",
+        "high_f": 89,
+        "low_f": 84,
+        "weathercode": 80,
+        "rain_chance": 24,
+        "description": {
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 82,
-        "weathercode": 1,
-        "rain_chance": 1
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 84,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "10:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 13
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "11:00",
-        "temp_f": 90,
-        "weathercode": 2,
-        "rain_chance": 4
+        "temp_f": 89,
+        "weathercode": 1,
+        "rain_chance": 2
       },
       {
         "hour": "12:00",
-        "temp_f": 92,
+        "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 5
+        "rain_chance": 1
       },
       {
         "hour": "13:00",
-        "temp_f": 89,
+        "temp_f": 91,
         "weathercode": 0,
         "rain_chance": 3
       },
@@ -134,103 +134,103 @@
         "hour": "15:00",
         "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 5
+        "rain_chance": 3
       },
       {
         "hour": "16:00",
-        "temp_f": 90,
+        "temp_f": 91,
         "weathercode": 0,
-        "rain_chance": 9
+        "rain_chance": 2
       },
       {
         "hour": "17:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 90,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "18:00",
-        "temp_f": 83,
-        "weathercode": 1,
-        "rain_chance": 14
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 5
       },
       {
         "hour": "19:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 10
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 9
       },
       {
         "hour": "20:00",
-        "temp_f": 83,
+        "temp_f": 84,
         "weathercode": 1,
-        "rain_chance": 8
+        "rain_chance": 10
       },
       {
         "hour": "21:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 84,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "22:00",
         "temp_f": 83,
-        "weathercode": 2,
-        "rain_chance": 4
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "00:00",
         "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 80,
         "weathercode": 0,
         "rain_chance": 3
       },
       {
-        "hour": "04:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "05:00",
+        "hour": "01:00",
         "temp_f": 79,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
-        "hour": "06:00",
+        "hour": "02:00",
         "temp_f": 78,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
-        "hour": "07:00",
+        "hour": "03:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
+        "hour": "04:00",
         "temp_f": 77,
         "weathercode": 0,
         "rain_chance": 1
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 5
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 9
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 77,
+        "weathercode": 2,
+        "rain_chance": 10
       }
     ]
   },
@@ -1465,83 +1465,6 @@
         "lat": 25.7763327,
         "lng": -80.1334166,
         "category": "community"
-      },
-      {
-        "id": "tm_1784466464004_s9rn",
-        "title": {
-          "en": "Ronkalunga",
-          "es": "Ronkalunga",
-          "pt": "Ronkalunga",
-          "fr": "Ronkalunga"
-        },
-        "date": "2026-08-21",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fronkalunga-miami-beach-florida-08-21-2026%2Fevent%2F0D0064C4DAF0491F&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/082/68bb00d8-fb9d-44f9-be02-ba33e49ae082_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Música · Latina · Comienza a las 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Música · Latina · Começa às 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Musique · Latine · Commence à 20:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "category": "music",
-        "lat": 25.792917,
-        "lng": -80.13314
-      },
-      {
-        "id": "tm_1784555797412_hb3r",
-        "title": {
-          "en": "Broadway Rave: A Musical Theater Dance Party in Miami",
-          "es": "Broadway Rave: Una Fiesta de Danza de Teatro Musical en Miami",
-          "pt": "Broadway Rave: Uma Festa de Dança de Teatro Musical em Miami",
-          "fr": "Broadway Rave: Une Fête de Danse de Théâtre Musical à Miami"
-        },
-        "date": "2026-08-21",
-        "venue": "Lincoln's Beard",
-        "address": "7360 SW 41st St. , Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fbroadway-rave-a-musical-theater-lincolns-beard-tickets%2F14237014&utm_medium=affiliate",
-        "free": true,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/df8/81eadad8-4449-412e-a2b1-3d8bbb78edf8_106181_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 20:00 · Lincoln's Beard",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier asistente que no pueda presentar identificación válida indicando que tiene al menos 21 años no será admitido y no será elegible para reembolso. · Comienza 20:00 · Lincoln's Beard",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso incapaz de apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido e não será elegível para reembolso. · Começa 20:00 · Lincoln's Beard",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis et ne sera pas éligible à un remboursement. · Commence 20:00 · Lincoln's Beard"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.7321134,
-        "lng": -80.3143626
-      },
-      {
-        "id": "tm_1784555797412_apie",
-        "title": {
-          "en": "Club 90's Presents MJ Night",
-          "es": "Club 90's Presenta MJ Night",
-          "pt": "Club 90's Apresenta MJ Night",
-          "fr": "Club 90's Présente MJ Night"
-        },
-        "date": "2026-08-21",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fclub-90s-presents-mj-night-ft-lauderdale-florida-08-21-2026%2Fevent%2F0D0064D7DD51DEC7&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/08f/dfb74e4a-95f6-46fd-bdb0-c699706e708f_1011401_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Club 90's Presents MJ Night will be coming to Revolution Live on Friday, August 21st. This event is 18+. Doors open at 9 PM. Show starts at 9 PM. All support acts are subject to change without notice. MJ NIGHT A celebration of the King of Pop featuring Michael Jackson's biggest hits, remixes, deep cuts, and dance floor classics all night long with immersive visuals and nonstop energy. · Starts 21:",
-          "es": "Club 90's Presenta MJ Night llegará a Revolution Live el viernes 21 de agosto. Este evento es 18+. Las puertas abren a las 9 PM. El show comienza a las 9 PM. Todos los actos de apoyo están sujetos a cambios sin previo aviso. MJ NIGHT Una celebración del Rey del Pop con los mayores éxitos de Michael Jackson, remixes, canciones profundas y clásicos de pista de baile toda la noche con visuales inmersivos y energía sin parar. · Comienza 21:",
-          "pt": "Club 90's Apresenta MJ Night virá ao Revolution Live na sexta-feira, 21 de agosto. Este evento é 18+. As portas abrem às 21h. O show começa às 21h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. MJ NIGHT Uma celebração do Rei do Pop com os maiores sucessos de Michael Jackson, remixes, músicas profundas e clássicos de pista de dança a noite toda com visuais imersivos e energia sem parar. · Começa 21:",
-          "fr": "Club 90's Présente MJ Night arrivera à Revolution Live le vendredi 21 août. Cet événement est 18+. Les portes ouvrent à 21h. Le spectacle commence à 21h. Tous les actes de soutien sont sujets à des modifications sans préavis. MJ NIGHT Une célébration du Roi de la Pop avec les plus grands succès de Michael Jackson, remixes, chansons profondes et classiques de piste de danse toute la nuit avec des visuels immersifs et une énergie sans fin. · Commence 21:"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
       },
       {
         "id": "tm_1784555797412_2uqe",
@@ -3160,30 +3083,6 @@
         "lng": -80.2461624
       },
       {
-        "id": "cp_1787056566254_px5u",
-        "title": {
-          "en": "Feeding South Florida",
-          "es": "Alimentando el Sur de la Florida",
-          "pt": "Alimentando o Sul da Flórida",
-          "fr": "Nourrir le Sud de la Floride"
-        },
-        "date": "2026-08-21",
-        "venue": "Segal Park",
-        "address": "2331 NW 143  Opa-locka FL 33054",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "The City of Opa-locka, Mayor & Commission, and Feeding South Florida invite you to a Community Food Resource Drive! Residents can receive food supplies while they last.    📅 Friday, August 21, 2026  🕘 9:30 AM – 1:30 PM  📍 Segal Park  2331 NW 143rd St., Opa-locka, FL 33054    🚨 Walk-thru distribution • First come, first served  🛍️ Please bring your own bag!    For more information: ☎️ 305-953-",
-          "es": "¡La Ciudad de Opa-locka, Alcalde y Comisión, e Iniciativa Alimentaria del Sur de la Florida te invitan a una Distribución Comunitaria de Recursos Alimentarios! Los residentes pueden recibir suministros alimentarios mientras haya disponibles. 📅 Viernes, 21 de agosto de 2026 🕘 9:30 AM – 1:30 PM 📍 Parque Segal 2331 NW 143rd St., Opa-locka, FL 33054 🚨 Distribución sin bajar del auto • Primero llegado, primero servido 🛍️ ¡Por favor trae tu propia bolsa!",
-          "pt": "A Cidade de Opa-locka, Prefeito e Comissão, e Alimentando o Sul da Flórida convida você para uma Distribuição Comunitária de Recursos Alimentares! Os residentes podem receber suprimentos alimentares enquanto durarem. 📅 Sexta-feira, 21 de agosto de 2026 🕘 9:30 AM – 1:30 PM 📍 Parque Segal 2331 NW 143rd St., Opa-locka, FL 33054 🚨 Distribuição sem sair do carro • Primeiro chegado, primeiro servido 🛍️ Por favor, traga sua própria bolsa!",
-          "fr": "La Ville d'Opa-locka, le Maire et la Commission, et Nourrir le Sud de la Floride vous invitent à une Distribution Communautaire de Ressources Alimentaires! Les résidents peuvent recevoir des fournitures alimentaires tant qu'elles sont disponibles. 📅 Vendredi, 21 août 2026 🕘 9:30 AM – 1:30 PM 📍 Parc Segal 2331 NW 143rd St., Opa-locka, FL 33054 🚨 Distribution sans quitter votre véhicule • Premier arrivé, premier servi 🛍️ Veuillez apporter votre propre sac!"
-        },
-        "source": "Opa-locka",
-        "category": "community"
-      },
-      {
         "id": "rss_1787143022212_yfcd",
         "title": {
           "en": "The Moth StorySLAM: Nine to Five 9/17/26",
@@ -3360,84 +3259,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787229490438_211a",
-        "title": {
-          "en": "Miami Marlins vs. Washington Nationals",
-          "es": "Miami Marlins vs. Washington Nationals",
-          "pt": "Miami Marlins vs. Washington Nationals",
-          "fr": "Miami Marlins vs. Washington Nationals"
-        },
-        "date": "2026-08-21",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0d&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 19:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 19:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 19:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 19:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1787229490438_foi4",
-        "title": {
-          "en": "Friday Night Live - Improv Comedy Miami Show",
-          "es": "Friday Night Live - Show de Comedia Improvisada Miami",
-          "pt": "Friday Night Live - Show de Comédia Improvisada Miami",
-          "fr": "Friday Night Live - Spectacle de Comédie Improvisée Miami"
-        },
-        "date": "2026-08-21",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897533&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
-          "es": "¡Friday Night Live! - Comedia improvisada en Miami. ¡La combinación especial de JTF de improvisación corta y larga! Disfruta mientras nuestro elenco galardonado te trae comedia improvisada fantástica perfecta para tu viernes noche...¡EN VIVO! Nuestros shows a menudo se describen como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway se reúne con SNL con mucha interacción divertida con la audiencia en el camino. Ven y sé parte de",
-          "pt": "Friday Night Live! - Comédia Improvisada em Miami. A combinação especial do JTF de improvisação curta e longa! Desfrute enquanto nosso elenco premiado traz comédia improvisada fantástica perfeita para sua noite de sexta-feira... AO VIVO! Nossos shows são frequentemente descritos como comédia improvisada em ritmo acelerado. Pense em Whose Line is It Anyway encontra SNL com muita interação divertida com o público. Venha e seja parte de",
-          "fr": "Friday Night Live! - Comédie Improvisée à Miami. La combinaison spéciale du JTF d'improvisation courte et longue! Profitez de notre troupe primée qui vous apporte une comédie improvisée fantastique parfaite pour votre vendredi soir... EN DIRECT! Nos spectacles sont souvent décrits comme une comédie improvisée au rythme rapide. Pensez à Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction amusante avec le public. Venez en faire partie de"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
-        "id": "tm_1787229490438_bokl",
-        "title": {
-          "en": "¡Dale! Impro - Impro en español",
-          "es": "¡Dale! Impro - Impro en español",
-          "pt": "¡Dale! Impro - Improviso em Espanhol",
-          "fr": "¡Dale! Impro - Improvisation en Espagnol"
-        },
-        "date": "2026-08-21",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdale-impro-impro-just-the-funny-tickets%2F15023823&utm_medium=affiliate",
-        "free": false,
-        "price": "$18",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Preprate para una noche donde t puedes ser parte del show!Dale! Impro es comedia improvisada en espaol y Spanglish, con toda la energa, sabor y diversidad de Miami.Sin guion y sin filtros, un elenco internacional transforma las sugerencias del pblico en escenas interactivas, inesperadas y llenas de humor. Cada show es nico y cualquier cosa puede pasar.Aqu el pblico tiene la palabra. Ven con ganas ",
-          "es": "¡Prepárate para una noche donde tú puedes ser parte del show! Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único y cualquier cosa puede pasar. Aquí el público tiene la palabra. Ven con ganas",
-          "pt": "Prepare-se para uma noite onde você pode ser parte do show! Dale! Impro é comédia improvisada em espanhol e Spanglish, com toda a energia, sabor e diversidade de Miami. Sem roteiro e sem filtros, um elenco internacional transforma as sugestões do público em cenas interativas, inesperadas e cheias de humor. Cada show é único e qualquer coisa pode acontecer. Aqui o público tem a palavra. Venha com vontade",
-          "fr": "Préparez-vous pour une soirée où vous pouvez être partie du spectacle! Dale! Impro est une comédie improvisée en espagnol et Spanglish, avec toute l'énergie, la saveur et la diversité de Miami. Sans scénario et sans filtres, une troupe internationale transforme les suggestions du public en scènes interactives, inattendues et pleines d'humour. Chaque spectacle est unique et n'importe quoi peut arriver. Ici, le public a la parole. Venez avec envie"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.750417,
-        "lng": -80.244412,
-        "category": "comedy"
-      },
-      {
         "id": "tm_1787229490438_u3rp",
         "title": {
           "en": "Monster Jam",
@@ -3514,32 +3335,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787315838575_qnwk",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-21",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 10:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 10:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 10:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1787315838575_f32o",
         "title": {
           "en": "Preseason Luxury & Suites: Miami Dolphins vs. New York Giants",
@@ -3590,6 +3385,266 @@
         "category": "sports",
         "lat": 25.792676,
         "lng": -80.259406
+      },
+      {
+        "id": "rss_1787401780275_twxc",
+        "title": {
+          "en": "Intriga At Do Not Sit Ft. Santelises : 3 Year Anniversary 8/25/26",
+          "es": "Intriga en Do Not Sit Ft. Santelises : Aniversario de 3 Años 8/25/26",
+          "pt": "Intriga no Do Not Sit Ft. Santelises : Aniversário de 3 Anos 8/25/26",
+          "fr": "Intriga Au Do Not Sit Ft. Santelises : 3e Anniversaire 8/25/26"
+        },
+        "date": "2026-08-26",
+        "venue": "Do not sit on the Furniture",
+        "address": "423 16th St, MIAMI BEACH, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/08/21/intriga-at-do-not-sit-ft-santelises-3-year-anniversary-8-25-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Intriga_3YR_DM_Invite_4x5-350x438.jpg",
+        "description": {
+          "en": "years of Intriga. 🧿 August 26, we return",
+          "es": "años de Intriga. 🧿 El 26 de agosto, regresamos",
+          "pt": "anos de Intriga. 🧿 26 de agosto, retornamos",
+          "fr": "ans d'Intriga. 🧿 Le 26 août, nous revoyons"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7892744,
+        "lng": -80.1322871,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787401780275_dawb",
+        "title": {
+          "en": "Sunday Pasta Nights at Gili’s Beach Club 8/23/26",
+          "es": "Noches de Pasta los Domingos en Gili's Beach Club 8/23/26",
+          "pt": "Noites de Pasta aos Domingos no Gili's Beach Club 8/23/26",
+          "fr": "Soirées Pâtes le Dimanche au Gili's Beach Club 8/23/26"
+        },
+        "date": "2026-08-23",
+        "venue": "Trump International Beach Resort",
+        "address": "18001 Collins Avenue, Sunny Isles Beach, Florida, 33160",
+        "url": "https://www.soulofmiami.org/2026/08/21/sunday-pasta-nights-at-gilis-beach-club-8-23-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Sunday-Pasta-Night-350x466.jpg",
+        "description": {
+          "en": "us for Sunday Pasta Night at Gili’s Beach Club, where oceanfront views meet authentic",
+          "es": "nos para la Noche de Pasta del Domingo en Gili's Beach Club, donde las vistas al océano se encuentran con",
+          "pt": "nos para a Noite de Pasta de Domingo no Gili's Beach Club, onde as vistas do oceano conhecem",
+          "fr": "nous pour la Soirée Pâtes du Dimanche au Gili's Beach Club, où les vues océaniques rencontrent"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9432161,
+        "lng": -80.1205584,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787401780275_6oau",
+        "title": {
+          "en": "Salsa Z Powered by McDonald’s 8/28/26",
+          "es": "Salsa Z Impulsada por McDonald's 8/28/26",
+          "pt": "Salsa Z Impulsada por McDonald's 8/28/26",
+          "fr": "Salsa Z Alimentée par McDonald's 8/28/26"
+        },
+        "date": "2026-08-28",
+        "venue": "Zey Zey",
+        "address": "353 NE 61st St, Miami, Florida, 33137",
+        "url": "https://www.soulofmiami.org/2026/08/21/salsa-z-powered-by-mcdonalds-8-28-26/",
+        "free": false,
+        "price": "$19",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Untitled-350x436.png",
+        "description": {
+          "en": "To celebrate the launch of its new Red Bull® Dragonberry Energizer, McDonald’s is teaming up with Salsa Z,",
+          "es": "Para celebrar el lanzamiento de su nuevo Red Bull® Dragonberry Energizer, McDonald's se asocia con Salsa Z,",
+          "pt": "Para celebrar o lançamento do seu novo Red Bull® Dragonberry Energizer, McDonald's faz parceria com Salsa Z,",
+          "fr": "Pour célébrer le lancement de son nouveau Red Bull® Dragonberry Energizer, McDonald's s'associe avec Salsa Z,"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8327312,
+        "lng": -80.1890522,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787401780275_oz9a",
+        "title": {
+          "en": "The South Florida Pride Concert Band: Waves And Wanderers 11/7/26",
+          "es": "The South Florida Pride Concert Band: Olas y Aventureros 11/7/26",
+          "pt": "The South Florida Pride Concert Band: Ondas e Aventureiros 11/7/26",
+          "fr": "The South Florida Pride Concert Band: Vagues et Errants 11/7/26"
+        },
+        "date": "2026-11-07",
+        "venue": "The Parker",
+        "address": "707 Northeast 8th Street, Ft. Lauderdale, Florida, 33304",
+        "url": "https://www.soulofmiami.org/2026/08/21/the-south-florida-pride-concert-band-waves-and-wanderers-11-7-26/",
+        "free": false,
+        "price": "$45",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/cf63eb86-fa12-49e0-98fd-50c48d0badd2-350x438.jpg",
+        "description": {
+          "en": "In Waves and Wanderers, water becomes both landscape and storyteller. This evocative program",
+          "es": "En Olas y Aventureros, el agua se convierte en paisaje y narrador. Este evocador programa",
+          "pt": "Em Ondas e Aventureiros, a água se torna paisagem e contadora de histórias. Este programa evocativo",
+          "fr": "Dans Vagues et Errants, l'eau devient à la fois paysage et conteur. Ce programme évocateur"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1336622,
+        "lng": -80.1367066,
+        "category": "comedy"
+      },
+      {
+        "id": "rss_1787401780275_p9pg",
+        "title": {
+          "en": "Celebrate National Dog Day at the First Monthly Chewy Pack Walk at The Underline 8/26/26",
+          "es": "Celebra el Día Nacional del Perro en el Primer Paseo Mensual de Chewy en The Underline 8/26/26",
+          "pt": "Celebre o Dia Nacional do Cachorro na Primeira Caminhada Mensal do Chewy em The Underline 8/26/26",
+          "fr": "Célébrez la Journée Nationale du Chien à la Première Promenade Mensuelle de Chewy à The Underline 8/26/26"
+        },
+        "date": "2026-08-26",
+        "venue": "Chewy Bark Park Coral Gables",
+        "address": "4500 Ponce de Leon Blvd, Coral Gables, Florida, 33146",
+        "url": "https://www.soulofmiami.org/2026/08/21/celebrate-national-dog-day-at-the-first-monthly-chewy-pack-walk-at-the-underline-8-26-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Chewy-Pack-Walk-Graphic-350x234.jpg",
+        "description": {
+          "en": "Celebrate National Dog Day",
+          "es": "Celebra el Día Nacional del Perro",
+          "pt": "Celebre o Dia Nacional do Cachorro",
+          "fr": "Célébrez la Journée Nationale du Chien"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7184933,
+        "lng": -80.2729091,
+        "category": "community"
+      },
+      {
+        "id": "tm_1787401780857_fgbq",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-22",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneos · Familia · Comienza a las 10:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa às 10:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence à 10h00 · Centre des Congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1787401780857_youx",
+        "title": {
+          "en": "Miami Marlins vs. Washington Nationals",
+          "es": "Miami Marlins vs. Washington Nationals",
+          "pt": "Miami Marlins vs. Washington Nationals",
+          "fr": "Miami Marlins vs. Washington Nationals"
+        },
+        "date": "2026-08-22",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa07&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 16:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza a las 16:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa às 16:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence à 16h10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1787401780857_uq21",
+        "title": {
+          "en": "The SET, Grief 22, Inscribed, Wrong Intentions, Drifting in Miami",
+          "es": "The SET, Grief 22, Inscribed, Wrong Intentions, Drifting in Miami",
+          "pt": "The SET, Grief 22, Inscribed, Wrong Intentions, Drifting in Miami",
+          "fr": "The SET, Grief 22, Inscribed, Wrong Intentions, Drifting in Miami"
+        },
+        "date": "2026-08-22",
+        "venue": "Churchill's Pub",
+        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-set-grief-22-inscribed-churchills-pub-tickets%2F14976933&utm_medium=affiliate",
+        "free": false,
+        "price": "$20",
+        "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 18 and over. Any ticket holder unable to present valid identification indicating that they are at least 18 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 19:00 · Churchill's Pub",
+          "es": "Este evento es solo para mayores de 18 años. Cualquier asistente que no pueda presentar identificación válida que indique que tiene al menos 18 años no será admitido y no será elegible para un reembolso. · Comienza a las 19:00 · Churchill's Pub",
+          "pt": "Este evento é apenas para maiores de 18 anos. Qualquer participante que não conseguir apresentar identificação válida indicando que tem pelo menos 18 anos não será admitido e não será elegível para reembolso. · Começa às 19:00 · Churchill's Pub",
+          "fr": "Cet événement est réservé aux 18 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 18 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence à 19h00 · Churchill's Pub"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.82647681611792,
+        "lng": -80.19169187791115
+      },
+      {
+        "id": "tm_1787401780857_3byu",
+        "title": {
+          "en": "The BIG Show Improv Comedy Miami",
+          "es": "The BIG Show Comedia Improvisada Miami",
+          "pt": "The BIG Show Comédia Improvisada Miami",
+          "fr": "The BIG Show Comédie Improvisée Miami"
+        },
+        "date": "2026-08-22",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14897723&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Big Show - Improv Comedy in MiamiIts our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun!Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as cl",
+          "es": "The Big Show - Comedia improvisada en MiamiNuestro espectáculo distintivo: Comedia improvisada en vivo y de ritmo rápido en su mejor forma. ¡Imagina Whose Line is It Anyway se encuentra con SNL! The Big Show es comedia improvisada interactiva, con nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos en mesas. Haremos nuestro mejor esfuerzo para sentar a los grupos más grandes lo más cerca",
+          "pt": "The Big Show - Comédia Improvisada em MiamiNosso show de assinatura: Comédia improvisada ao vivo e de ritmo acelerado em seu melhor. Pense nisso como Whose Line is It Anyway encontra SNL! The Big Show é comédia improvisada interativa, com nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show. Sentaremos grupos juntos em mesas. Faremos o nosso melhor para acomodar grupos maiores o",
+          "fr": "The Big Show - Comédie Improvisée à MiamiNotre spectacle signature : Comédie improvisée en direct rapide à son meilleur. Pensez à Whose Line is It Anyway rencontre SNL ! The Big Show est une comédie improvisée interactive, mettant en vedette notre troupe talentueuse et primée. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous allons asseoir les groupes ensemble aux tables. Nous ferons de notre mieux pour asseoir les plus grands groupes au plus"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1787401780857_mhyn",
+        "title": {
+          "en": "Miami Marlins vs Washington Nationals: Agustin Ramirez Gus Bus Bobblehead",
+          "es": "Miami Marlins vs Washington Nationals: Bobblehead de Agustin Ramirez Gus Bus",
+          "pt": "Miami Marlins vs Washington Nationals: Bobblehead de Agustin Ramirez Gus Bus",
+          "fr": "Miami Marlins vs Washington Nationals: Bobblehead d'Agustin Ramirez Gus Bus"
+        },
+        "date": "2026-08-23",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 13:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza a las 13:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa às 13:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence à 13h40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
       }
     ]
   },
@@ -4493,29 +4548,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-21T12:37:42.861Z",
-    "items": [
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.94e090866f5bec33c0320bea284dab820358f871.001.1",
-        "type": "weather",
-        "severity": "moderate",
-        "title": {
-          "en": "Heat Advisory",
-          "es": "Aviso de Calor",
-          "pt": "Aviso de Calor",
-          "fr": "Avis de Chaleur"
-        },
-        "detail": {
-          "en": "* WHAT...Heat index values up to 107 expected.\n\n* WHERE...Coastal Broward County, Coastal Miami Dade County, Far\nSouth Miami-Dade County, Inland Broward County, Inland Miami-Dade\nCounty, Metro Broward County, and Metropolitan Miami Dade Counties.\n\n* WHEN...From 11 AM this morning to 6 PM EDT this evening.\n\n* IMPACTS...Hot temperatures and high humidity may cause heat\nillnesses.",
-          "es": "* QUÉ...Se esperan índices de calor hasta 107°F.\n\n* DÓNDE...Condado de Broward costero, Condado de Miami-Dade costero, sur lejano del Condado de Miami-Dade, Condado de Broward interior, Condado de Miami-Dade interior, Condado de Broward metropolitano y Condados de Miami-Dade metropolitano.\n\n* CUÁNDO...Desde las 11 AM esta mañana hasta las 6 PM EDT esta tarde.\n\n* IMPACTOS...Las temperaturas altas y la humedad elevada pueden causar enfermedades por calor.",
-          "pt": "* O QUÊ...Índices de calor esperados até 107°F.\n\n* ONDE...Condado de Broward costeiro, Condado de Miami-Dade costeiro, extremo sul do Condado de Miami-Dade, Condado de Broward interior, Condado de Miami-Dade interior, Condado de Broward metropolitano e Condados de Miami-Dade metropolitano.\n\n* QUANDO...Das 11 AM desta manhã até as 6 PM EDT desta noite.\n\n* IMPACTOS...Temperaturas altas e umidade elevada podem causar doenças relacionadas ao calor.",
-          "fr": "* QUOI...Des indices de chaleur jusqu'à 107°F attendus.\n\n* OÙ...Comté de Broward côtier, Comté de Miami-Dade côtier, extrême sud du Comté de Miami-Dade, Comté de Broward intérieur, Comté de Miami-Dade intérieur, Comté de Broward métropolitain et Comtés de Miami-Dade métropolitain.\n\n* QUAND...De 11 h du matin à 18 h EDT ce soir.\n\n* IMPACTS...Les températures élevées et l'humidité importante peuvent causer des maladies liées à la chaleur."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.94e090866f5bec33c0320bea284dab820358f871.001.1",
-        "effectiveAt": "2026-08-21T01:15:00-04:00",
-        "expiresAt": "2026-08-21T22:00:00.000Z"
-      }
-    ]
+    "fetchedAt": "2026-08-22T12:30:17.645Z",
+    "items": []
   }
 }
