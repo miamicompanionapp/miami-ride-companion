@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-22T12:30:19.656Z",
+    "lastUpdated": "2026-08-23T12:31:04.595Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-22T12:30:17.645Z",
+    "fetchedAt": "2026-08-23T12:31:03.851Z",
     "current": {
-      "temp_f": 82,
-      "feels_f": 93,
+      "temp_f": 80,
+      "feels_f": 91,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 84,
-      "wind_mph": 2,
-      "rain_chance": 10,
-      "weathercode": 0
+      "humidity": 91,
+      "wind_mph": 4,
+      "rain_chance": 31,
+      "weathercode": 82
     },
     "forecast": [
       {
-        "date": "2026-08-22",
-        "high_f": 91,
-        "low_f": 78,
-        "weathercode": 3,
-        "rain_chance": 10,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-23",
-        "high_f": 89,
-        "low_f": 77,
+        "high_f": 87,
+        "low_f": 76,
         "weathercode": 82,
-        "rain_chance": 47,
+        "rain_chance": 31,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -50,22 +37,22 @@
       {
         "date": "2026-08-24",
         "high_f": 88,
-        "low_f": 80,
-        "weathercode": 95,
-        "rain_chance": 9,
+        "low_f": 75,
+        "weathercode": 3,
+        "rain_chance": 5,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-08-25",
-        "high_f": 89,
-        "low_f": 85,
+        "high_f": 88,
+        "low_f": 81,
         "weathercode": 51,
-        "rain_chance": 23,
+        "rain_chance": 15,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -76,161 +63,174 @@
       {
         "date": "2026-08-26",
         "high_f": 89,
-        "low_f": 84,
-        "weathercode": 80,
-        "rain_chance": 24,
+        "low_f": 85,
+        "weathercode": 96,
+        "rain_chance": 34,
         "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-08-27",
+        "high_f": 88,
+        "low_f": 85,
+        "weathercode": 3,
+        "rain_chance": 27,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 4
       },
       {
         "hour": "09:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 76,
+        "weathercode": 82,
+        "rain_chance": 1
       },
       {
         "hour": "10:00",
-        "temp_f": 86,
-        "weathercode": 0,
+        "temp_f": 78,
+        "weathercode": 81,
         "rain_chance": 1
       },
       {
         "hour": "11:00",
-        "temp_f": 89,
-        "weathercode": 1,
-        "rain_chance": 2
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 91,
-        "weathercode": 0,
+        "temp_f": 84,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
-        "hour": "13:00",
-        "temp_f": 91,
-        "weathercode": 0,
+        "hour": "12:00",
+        "temp_f": 87,
+        "weathercode": 3,
         "rain_chance": 3
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 4
       },
       {
         "hour": "14:00",
-        "temp_f": 91,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "15:00",
-        "temp_f": 91,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 91,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 90,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 88,
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 84,
-        "weathercode": 1,
         "rain_chance": 10
       },
       {
-        "hour": "21:00",
+        "hour": "16:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "18:00",
         "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 4
+        "weathercode": 3,
+        "rain_chance": 29
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 31
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 16
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 5
       },
       {
         "hour": "22:00",
-        "temp_f": 83,
-        "weathercode": 0,
+        "temp_f": 78,
+        "weathercode": 51,
         "rain_chance": 2
       },
       {
         "hour": "23:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 2
       },
       {
         "hour": "00:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 3
+        "temp_f": 77,
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "01:00",
-        "temp_f": 79,
-        "weathercode": 0,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "02:00",
-        "temp_f": 78,
-        "weathercode": 0,
+        "temp_f": 79,
+        "weathercode": 2,
         "rain_chance": 1
       },
       {
         "hour": "03:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "04:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "05:00",
         "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 5
+        "weathercode": 3,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 9
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 2,
-        "rain_chance": 10
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 3
       }
     ]
   },
@@ -1467,32 +1467,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1784555797412_2uqe",
-        "title": {
-          "en": "Folkuria - International Folk Festival",
-          "es": "Folkuria - Festival Internacional de Folclore",
-          "pt": "Folkuria - Festival Internacional de Folclore",
-          "fr": "Folkuria - Festival International de Folklore"
-        },
-        "date": "2026-08-22",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ffolkuria-international-folk-festival-miami-beach-florida-08-22-2026%2Fevent%2F0D0064E9AD9764CF&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/e3f/d04e033b-a195-435d-ae07-8c8539aa9e3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "FOLKURIA 2026 - INTERNATIONAL FOLK FESTIVAL Celebrate World Folklore Day at Folkuria 2026, Miami's premier international folk festival. Presented by Puerta de Oro de Colombia, a nonprofit cultural organization affiliated with CIOFF USA and the International Dance Council (CID), official partners of UNESCO, Folkuria brings together artists and traditions from around the world in a vibrant showcase ",
-          "es": "FOLKURIA 2026 - FESTIVAL INTERNACIONAL DE FOLCLORE Celebra el Día Mundial del Folclore en Folkuria 2026, el principal festival internacional de folclore de Miami. Presentado por Puerta de Oro de Colombia, una organización cultural sin fines de lucro afiliada a CIOFF USA y el Consejo Internacional de Danza (CID), socios oficiales de la UNESCO, Folkuria reúne artistas y tradiciones de todo el mundo en una vitrina vibrante",
-          "pt": "FOLKURIA 2026 - FESTIVAL INTERNACIONAL DE FOLCLORE Celebre o Dia Mundial do Folclore em Folkuria 2026, o principal festival internacional de folclore de Miami. Apresentado pela Puerta de Oro de Colombia, uma organização cultural sem fins lucrativos afiliada à CIOFF USA e ao Conselho Internacional de Dança (CID), parceiros oficiais da UNESCO, Folkuria reúne artistas e tradições de todo o mundo em uma vitrine vibrante",
-          "fr": "FOLKURIA 2026 - FESTIVAL INTERNATIONAL DE FOLKLORE Célébrez la Journée mondiale du folklore à Folkuria 2026, le principal festival international de folklore de Miami. Présenté par Puerta de Oro de Colombia, une organisation culturelle à but non lucratif affiliée à CIOFF USA et au Conseil International de la Danse (CID), partenaires officiels de l'UNESCO, Folkuria réunit des artistes et des traditions du monde entier dans une vitrine vibrante"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.792917,
-        "lng": -80.13314
-      },
-      {
         "id": "rss_1785071436251_bm2q",
         "title": {
           "en": "Join the 10th Annual WBHI Pink Walk—5K Run and Walk at Its New Home at Kendall Campus—Miami Dade College 9/20/26",
@@ -1517,136 +1491,6 @@
         "lat": 25.674423,
         "lng": -80.3740442,
         "category": "sports"
-      },
-      {
-        "id": "rss_1785071436251_cbrb",
-        "title": {
-          "en": "La Oveja Blanca 8/22/26",
-          "es": "La Oveja Blanca 8/22/26",
-          "pt": "A Ovelha Branca 8/22/26",
-          "fr": "La Brebis Blanche 8/22/26"
-        },
-        "date": "2026-08-22",
-        "venue": "Sandrell Rivers Theater",
-        "address": "6103 NW 7th Ave, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/07/25/la-oveja-blanca-8-22-26/",
-        "free": false,
-        "price": "$30",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/Soul-Miami-1200-x-1200-px-350x350.png",
-        "description": {
-          "en": "La Sala Black Box del Teatro Sandrell Rivers es un espacio hermoso e íntimo, donde cada asiento ofrece una",
-          "es": "La Sala Black Box del Teatro Sandrell Rivers es un espacio hermoso e íntimo, donde cada asiento ofrece una",
-          "pt": "A Black Box Room do Teatro Sandrell Rivers é um espaço lindo e íntimo, onde cada assento oferece uma",
-          "fr": "La Salle Black Box du Teatro Sandrell Rivers est un espace magnifique et intime, où chaque siège offre une"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.8315843,
-        "lng": -80.2082623,
-        "category": "community"
-      },
-      {
-        "id": "tm_1785071436814_b4db",
-        "title": {
-          "en": "Still Alive - Pearl Jam Tribute",
-          "es": "Still Alive - Tributo a Pearl Jam",
-          "pt": "Still Alive - Tributo a Pearl Jam",
-          "fr": "Still Alive - Hommage à Pearl Jam"
-        },
-        "date": "2026-08-22",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fstill-alive-pearl-jam-tribute-ft-lauderdale-florida-08-22-2026%2Fevent%2F0D00647B1242BAFA&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/4ee/d052f730-a52b-4dc5-90a6-dfef73a354ee_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Still Alive - Pearl Jam Tribute will be coming to Revolution Live on Saturday, August 22nd with special guests Foo Fight - Foo Fighters Tribute. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "Still Alive - Tributo a Pearl Jam llegará a Revolution Live el sábado 22 de agosto con invitados especiales Foo Fight - Tributo a Foo Fighters. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
-          "pt": "Still Alive - Tributo a Pearl Jam virá para o Revolution Live no sábado, 22 de agosto com convidados especiais Foo Fight - Tributo dos Foo Fighters. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "Still Alive - Hommage à Pearl Jam viendra à Revolution Live samedi 22 août avec des invités spéciaux Foo Fight - Hommage aux Foo Fighters. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 19:00 · Revolution Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1785071436814_5s85",
-        "title": {
-          "en": "Nascar Aloe & Jasiah - Capital Punishment Tour",
-          "es": "Nascar Aloe & Jasiah - Capital Punishment Tour",
-          "pt": "Nascar Aloe & Jasiah - Capital Punishment Tour",
-          "fr": "Nascar Aloe & Jasiah - Capital Punishment Tour"
-        },
-        "date": "2026-08-22",
-        "venue": "Lincoln's Beard",
-        "address": "7360 SW 41st St. , Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fnascar-aloe-jasiah-lincolns-beard-tickets%2F14956103&utm_medium=affiliate",
-        "free": false,
-        "price": "$28",
-        "image": "https://s1.ticketm.net/dam/c/80b/f3cd8d24-c3ae-4fa0-b4bc-1ba99f9b380b_106091_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "NASCAR ALOE + JASIAH: Capital Punishment Toursupport: Next April, Dirtybutt18+ with VALID ID · Starts 19:00 · Lincoln's Beard",
-          "es": "NASCAR ALOE + JASIAH: Capital Punishment Tour con apoyo: Próximo abril, Dirtybutt 18+ con IDENTIFICACIÓN VÁLIDA · Comienza 19:00 · Lincoln's Beard",
-          "pt": "NASCAR ALOE + JASIAH: Capital Punishment Tour com suporte: Próximo abril, Dirtybutt 18+ com ID VÁLIDO · Começa 19:00 · Lincoln's Beard",
-          "fr": "NASCAR ALOE + JASIAH: Capital Punishment Tour avec soutien: Avril prochain, Dirtybutt 18+ avec PIÈCE D'IDENTITÉ VALIDE · Commence 19:00 · Lincoln's Beard"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.7321134,
-        "lng": -80.3143626
-      },
-      {
-        "id": "tm_1785071436814_dbjs",
-        "title": {
-          "en": "DON TOLIVER: NITROUS - OCTANE WORLD TOUR LEG 2",
-          "es": "DON TOLIVER: NITROUS - OCTANE WORLD TOUR LEG 2",
-          "pt": "DON TOLIVER: NITROUS - OCTANE WORLD TOUR LEG 2",
-          "fr": "DON TOLIVER: NITROUS - OCTANE WORLD TOUR LEG 2"
-        },
-        "date": "2026-08-22",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdon-toliver-nitrous-octane-world-tour-miami-florida-08-22-2026%2Fevent%2F0D0064CB10A2D9AC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/4d1/d0bc76d6-02e3-4e46-96fc-658377e464d1_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Hip-Hop/Rap · Starts 19:30 · Kaseya Center",
-          "es": "Música · Hip-Hop/Rap · Comienza 19:30 · Kaseya Center",
-          "pt": "Música · Hip-Hop/Rap · Começa 19:30 · Kaseya Center",
-          "fr": "Musique · Hip-Hop/Rap · Commence 19:30 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1785071436814_7emc",
-        "title": {
-          "en": "Buckcherry",
-          "es": "Buckcherry",
-          "pt": "Buckcherry",
-          "fr": "Buckcherry"
-        },
-        "date": "2026-08-22",
-        "venue": "Culture Room",
-        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbuckcherry-ft-lauderdale-florida-08-22-2026%2Fevent%2F0D006497DD182E88&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/f0c/7e821c55-ec92-4ed2-a269-e44b6a9b2f0c_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Buckcherry 'Roar Like Thunder Tour' with special guests Tyler Bryant & The Shakedown Doors open 7:30pm · Starts 19:30 · Culture Room",
-          "es": "Buckcherry 'Roar Like Thunder Tour' con invitados especiales Tyler Bryant & The Shakedown Las puertas abren a las 19:30 · Comienza 19:30 · Culture Room",
-          "pt": "Buckcherry 'Roar Like Thunder Tour' com convidados especiais Tyler Bryant & The Shakedown As portas abrem às 19:30 · Começa 19:30 · Culture Room",
-          "fr": "Buckcherry 'Roar Like Thunder Tour' avec des invités spéciaux Tyler Bryant & The Shakedown Les portes ouvrent à 19h30 · Commence 19:30 · Culture Room"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.166888,
-        "lng": -80.117058
       },
       {
         "id": "tm_1785071436814_sgjk",
@@ -1829,30 +1673,6 @@
         "category": "music",
         "lat": 25.781232,
         "lng": -80.187805
-      },
-      {
-        "id": "rss_1785506022508_gqkl",
-        "title": {
-          "en": "The One and Only Monster Jam in Sunrise 8/22/26 & 8/23/26",
-          "es": "El único y exclusivo Monster Jam en Sunrise 8/22/26 y 8/23/26",
-          "pt": "O único e exclusivo Monster Jam em Sunrise 8/22/26 e 8/23/26",
-          "fr": "Le seul et unique Monster Jam à Sunrise 8/22/26 et 8/23/26"
-        },
-        "date": "2026-08-22",
-        "venue": "Amerant Bank Arena One Panther Parkway, Sunrise, Florida, 33323",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/07/30/the-one-and-only-monster-jam-in-sunrise-8-22-26-8-23-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/262407600-MJS2Arena-Sunrise_Hanson-Venue_Assets-1080x1920-Sparkle-281x500.jpg",
-        "description": {
-          "en": "at $38 Nothing compares to the one and only Monster Jam® to become a fan",
-          "es": "a $38 Nada se compara con el único y exclusivo Monster Jam® para convertirse en fanático",
-          "pt": "a $38 Nada se compara com o único e exclusivo Monster Jam® para se tornar um fã",
-          "fr": "à $38 Rien ne se compare au seul et unique Monster Jam® pour devenir fan"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
       },
       {
         "id": "rss_1785506022508_4ojo",
@@ -2080,32 +1900,6 @@
           "fr": "MIAMI ZOMBIE CRAWL – Tournée des Bars Halloween Vendredi, 30 octobre Rejoignez le plus grand"
         },
         "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "rss_1786107183516_crzd",
-        "title": {
-          "en": "Broward Center Fall Classes Open House 8/22/26",
-          "es": "Jornada de Puertas Abiertas de Clases de Otoño del Centro Broward 22/08/26",
-          "pt": "Jornada de Portas Abertas - Aulas de Outono do Centro Broward 22/08/26",
-          "fr": "Journée Portes Ouvertes des Cours d'Automne du Centre Broward 22/08/26"
-        },
-        "date": "2026-08-22",
-        "venue": "Rose Miniaci Arts Education Center",
-        "address": "581 W. Las Olas Blvd, Fort Lauderdale, Florida, 33312",
-        "url": "https://www.soulofmiami.org/2026/08/07/broward-center-fall-classes-open-house-8-22-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Screenshot-2026-08-06-100858-350x232.png",
-        "description": {
-          "en": "From first-time performers to seasoned theater enthusiasts, the Broward Center for the Performing",
-          "es": "Desde artistas principiantes hasta entusiastas del teatro experimentados, el Centro Broward para las Artes",
-          "pt": "De artistas iniciantes a entusiastas de teatro experientes, o Centro Broward para as Artes",
-          "fr": "Des artistes débutants aux amateurs de théâtre chevronnés, le Centre Broward pour les Arts"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1189897,
-        "lng": -80.1496356,
         "category": "community"
       },
       {
@@ -2593,30 +2387,6 @@
         "lng": -80.238998
       },
       {
-        "id": "cp_1786625955931_2q1g",
-        "title": {
-          "en": "NMB 100: Symphony & Legacy – A Centennial Classical Music Concert",
-          "es": "NMB 100: Sinfonía y Legado – Un Concierto de Música Clásica Centenario",
-          "pt": "NMB 100: Sinfonia e Legado – Um Concerto de Música Clássica Centenário",
-          "fr": "NMB 100 : Symphonie et Héritage – Un Concert de Musique Classique Centenaire"
-        },
-        "date": "2026-08-22",
-        "venue": "Julius Littman Performing Arts Theater",
-        "address": "17011 NE 19 Avenue  North Miami Beach FL 33162",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "https://www.citynmb.com/calendar.aspx?EID=8926",
-          "es": "https://www.citynmb.com/calendar.aspx?EID=8926",
-          "pt": "https://www.citynmb.com/calendar.aspx?EID=8926",
-          "fr": "https://www.citynmb.com/calendar.aspx?EID=8926"
-        },
-        "source": "North Miami Beach",
-        "category": "arts"
-      },
-      {
         "id": "rss_1786712137918_u7xs",
         "title": {
           "en": "RASTRILLO 305 11/14/26",
@@ -2719,32 +2489,6 @@
         "category": "music",
         "lat": 26.0503384,
         "lng": -80.2109577
-      },
-      {
-        "id": "rss_1786796918199_w2gt",
-        "title": {
-          "en": "NMB 100: Centennial Concert 8/22/26",
-          "es": "NMB 100: Concierto del Centenario 8/22/26",
-          "pt": "NMB 100: Concerto do Centenário 8/22/26",
-          "fr": "NMB 100: Concert du Centenaire 8/22/26"
-        },
-        "date": "2026-08-22",
-        "venue": "Julius Littman Performing Arts Theater, North Miami Beach, FL",
-        "address": "17011 NE 19th Avenue, North Miami Beach, Florida, 33162",
-        "url": "https://www.soulofmiami.org/2026/08/14/nmb-100-centennial-concert-8-22-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/1000691110-324x500.jpg",
-        "description": {
-          "en": "Partner Ticket: $100.00 per person, Admission is FREE for North",
-          "es": "Entrada de Socio: $100.00 por persona, La entrada es GRATUITA para North",
-          "pt": "Ingresso de Parceiro: $100.00 por pessoa, A entrada é GRATUITA para North",
-          "fr": "Billet Partenaire: $100.00 par personne, L'admission est GRATUITE pour North"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.9326004,
-        "lng": -80.1615821,
-        "category": "music"
       },
       {
         "id": "rss_1786796918199_zjml",
@@ -3259,32 +3003,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787229490438_u3rp",
-        "title": {
-          "en": "Monster Jam",
-          "es": "Monster Jam",
-          "pt": "Monster Jam",
-          "fr": "Monster Jam"
-        },
-        "date": "2026-08-22",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7xbOP&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/32f/7d37f364-1424-43d6-9546-1274421ac32f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Motorsports/Racing · Starts 12:00 · Amerant Bank Arena",
-          "es": "Deportes · Motorsports/Carreras · Comienza 12:00 · Amerant Bank Arena",
-          "pt": "Esportes · Motorsports/Corridas · Começa 12:00 · Amerant Bank Arena",
-          "fr": "Sports · Motorsports/Courses · Commence 12:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
         "id": "rss_1787315837975_6j6r",
         "title": {
           "en": "An Evening with Arturo Rodríguez: A Conversation on Art, Memory, and Exile 9/3/26",
@@ -3333,58 +3051,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1787315838575_f32o",
-        "title": {
-          "en": "Preseason Luxury & Suites: Miami Dolphins vs. New York Giants",
-          "es": "Pretemporada Lujo y Suites: Miami Dolphins vs. Nueva York Giants",
-          "pt": "Pré-temporada Luxo e Suites: Miami Dolphins vs. Nova York Giants",
-          "fr": "Présaison Luxe et Suites: Miami Dolphins vs. New York Giants"
-        },
-        "date": "2026-08-22",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpreseason-luxury-suites-miami-dolphins-vs-miami-florida-08-22-2026%2Fevent%2F0D00646CE66E15A9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season · Starts 16:00 · Hard Rock Stadium",
-          "es": "Horario Flexible: Tenga en cuenta que hay ciertos juegos que están sujetos a cambios de horario flexible y la fecha y hora de esos juegos pueden cambiar respecto a lo que se refleja actualmente en el calendario. Para obtener información más detallada sobre los procedimientos de programación flexible de la NFL para la Temporada 2026 de la NFL · Comienza 16:00 · Hard Rock Stadium",
-          "pt": "Cronograma Flexível: Esteja ciente de que há certos jogos sujeitos a cronograma flexível e a data e hora desses jogos podem mudar em relação ao que está atualmente refletido no calendário. Para informações mais detalhadas sobre os procedimentos de agendamento flexível da NFL para a Temporada 2026 da NFL · Começa 16:00 · Hard Rock Stadium",
-          "fr": "Calendrier Flexible: Veuillez noter que certains matchs sont sujets à un calendrier flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement reflété dans le calendrier. Pour des informations plus détaillées sur les procédures de calendrier flexible de la NFL pour la Saison 2026 de la NFL · Commence 16:00 · Hard Rock Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1787315838575_oy3k",
-        "title": {
-          "en": "Inter Miami CF vs Toronto FC",
-          "es": "Inter Miami CF vs Toronto FC",
-          "pt": "Inter Miami CF vs Toronto FC",
-          "fr": "Inter Miami CF vs Toronto FC"
-        },
-        "date": "2026-08-22",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-toronto-fc-miami-florida-08-22-2026%2Fevent%2F0D0063739DD86821&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
-          "es": "Para obtener información sobre Suites, llame al 305-428-0611. · Comienza 19:30 · Nu Stadium",
-          "pt": "Para informações sobre Suites, ligue para 305-428-0611. · Começa 19:30 · Nu Stadium",
-          "fr": "Pour des informations sur les Suites, appelez le 305-428-0611. · Commence 19:30 · Nu Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
       },
       {
         "id": "rss_1787401780275_twxc",
@@ -3517,110 +3183,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787401780857_fgbq",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-22",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneos · Familia · Comienza a las 10:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa às 10:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence à 10h00 · Centre des Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1787401780857_youx",
-        "title": {
-          "en": "Miami Marlins vs. Washington Nationals",
-          "es": "Miami Marlins vs. Washington Nationals",
-          "pt": "Miami Marlins vs. Washington Nationals",
-          "fr": "Miami Marlins vs. Washington Nationals"
-        },
-        "date": "2026-08-22",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa07&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 16:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza a las 16:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa às 16:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence à 16h10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1787401780857_uq21",
-        "title": {
-          "en": "The SET, Grief 22, Inscribed, Wrong Intentions, Drifting in Miami",
-          "es": "The SET, Grief 22, Inscribed, Wrong Intentions, Drifting in Miami",
-          "pt": "The SET, Grief 22, Inscribed, Wrong Intentions, Drifting in Miami",
-          "fr": "The SET, Grief 22, Inscribed, Wrong Intentions, Drifting in Miami"
-        },
-        "date": "2026-08-22",
-        "venue": "Churchill's Pub",
-        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-set-grief-22-inscribed-churchills-pub-tickets%2F14976933&utm_medium=affiliate",
-        "free": false,
-        "price": "$20",
-        "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 18 and over. Any ticket holder unable to present valid identification indicating that they are at least 18 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 19:00 · Churchill's Pub",
-          "es": "Este evento es solo para mayores de 18 años. Cualquier asistente que no pueda presentar identificación válida que indique que tiene al menos 18 años no será admitido y no será elegible para un reembolso. · Comienza a las 19:00 · Churchill's Pub",
-          "pt": "Este evento é apenas para maiores de 18 anos. Qualquer participante que não conseguir apresentar identificação válida indicando que tem pelo menos 18 anos não será admitido e não será elegível para reembolso. · Começa às 19:00 · Churchill's Pub",
-          "fr": "Cet événement est réservé aux 18 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 18 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence à 19h00 · Churchill's Pub"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.82647681611792,
-        "lng": -80.19169187791115
-      },
-      {
-        "id": "tm_1787401780857_3byu",
-        "title": {
-          "en": "The BIG Show Improv Comedy Miami",
-          "es": "The BIG Show Comedia Improvisada Miami",
-          "pt": "The BIG Show Comédia Improvisada Miami",
-          "fr": "The BIG Show Comédie Improvisée Miami"
-        },
-        "date": "2026-08-22",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14897723&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Big Show - Improv Comedy in MiamiIts our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun!Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as cl",
-          "es": "The Big Show - Comedia improvisada en MiamiNuestro espectáculo distintivo: Comedia improvisada en vivo y de ritmo rápido en su mejor forma. ¡Imagina Whose Line is It Anyway se encuentra con SNL! The Big Show es comedia improvisada interactiva, con nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos en mesas. Haremos nuestro mejor esfuerzo para sentar a los grupos más grandes lo más cerca",
-          "pt": "The Big Show - Comédia Improvisada em MiamiNosso show de assinatura: Comédia improvisada ao vivo e de ritmo acelerado em seu melhor. Pense nisso como Whose Line is It Anyway encontra SNL! The Big Show é comédia improvisada interativa, com nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show. Sentaremos grupos juntos em mesas. Faremos o nosso melhor para acomodar grupos maiores o",
-          "fr": "The Big Show - Comédie Improvisée à MiamiNotre spectacle signature : Comédie improvisée en direct rapide à son meilleur. Pensez à Whose Line is It Anyway rencontre SNL ! The Big Show est une comédie improvisée interactive, mettant en vedette notre troupe talentueuse et primée. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous allons asseoir les groupes ensemble aux tables. Nous ferons de notre mieux pour asseoir les plus grands groupes au plus"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
         "id": "tm_1787401780857_mhyn",
         "title": {
           "en": "Miami Marlins vs Washington Nationals: Agustin Ramirez Gus Bus Bobblehead",
@@ -3645,6 +3207,388 @@
         "category": "sports",
         "lat": 25.778057,
         "lng": -80.219406
+      },
+      {
+        "id": "rss_1787488220323_kogx",
+        "title": {
+          "en": "Free: Mango Music & Art Festival, Lake Worth, Sept. 5",
+          "es": "Gratis: Festival de Música y Arte Mango, Lake Worth, 5 de septiembre",
+          "pt": "Grátis: Festival de Música e Arte Mango, Lake Worth, 5 de setembro",
+          "fr": "Gratuit: Festival de Musique et d'Art Mango, Lake Worth, 5 septembre"
+        },
+        "date": "2026-08-23",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/j-street-block-party-lake-worth/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/02/mango-h2-728x662.jpg",
+        "description": {
+          "en": "South Florida on the Cheap You won't want to miss this free community event that will feature 27 acts on four stages, with art and clothing vendors, live artist painting, plus roaming performers. Mango Music... Copyright South Florida on the Cheap. The post Free: Mango Music & Art Festival, Lake Worth, Sept. 5 appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap No querrás perderte este evento comunitario gratuito que contará con 27 actos en cuatro escenarios, con vendedores de arte y ropa, pintura de artistas en vivo, además de artistas ambulantes. Mango Music... Copyright South Florida on the Cheap. El artículo Gratis: Festival de Música y Arte Mango, Lake Worth, 5 de septiembre apareció primero en South Florida on the Cheap.",
+          "pt": "South Florida on the Cheap Você não vai querer perder este evento comunitário gratuito que contará com 27 atos em quatro palcos, com vendedores de arte e roupas, pintura de artistas ao vivo, além de artistas ambulantes. Mango Music... Copyright South Florida on the Cheap. O post Grátis: Festival de Música e Arte Mango, Lake Worth, 5 de setembro apareceu primeiro em South Florida on the Cheap.",
+          "fr": "South Florida on the Cheap Vous ne voudrez pas manquer cet événement communautaire gratuit qui présentera 27 actes sur quatre scènes, avec des vendeurs d'art et de vêtements, de la peinture d'artistes en direct, plus des artistes itinérants. Mango Music... Copyright South Florida on the Cheap. Le post Gratuit: Festival de Musique et d'Art Mango, Lake Worth, 5 septembre est apparu en premier sur South Florida on the Cheap."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1787488220323_v8nw",
+        "title": {
+          "en": "Sounds of the Set: Free music, market, Delray Beach, Aug. 27",
+          "es": "Sonidos del Set: Música gratuita, mercado, Delray Beach, 27 de agosto",
+          "pt": "Sons do Set: Música grátis, mercado, Delray Beach, 27 de agosto",
+          "fr": "Sons de l'Ensemble: Musique gratuite, marché, Delray Beach, 27 août"
+        },
+        "date": "2026-08-23",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-music-market-community-open-house-delray-beach-oct-16/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2025/10/delray-music-728x689.jpg",
+        "description": {
+          "en": "South Florida on the Cheap \"Sounds of the Set\" is a community event in Downtown Delray Beach that features live music and local vendors at Blackmer's Market, for an evening of rhythm, community, and culture.... Copyright South Florida on the Cheap. The post Sounds of the Set: Free music, market, Delray Beach, Aug. 27 appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap \"Sounds of the Set\" es un evento comunitario en el Centro de Delray Beach que presenta música en vivo y vendedores locales en el Mercado de Blackmer, para una noche de ritmo, comunidad y cultura.... Copyright South Florida on the Cheap. El artículo Sonidos del Set: Música gratuita, mercado, Delray Beach, 27 de agosto apareció primero en South Florida on the Cheap.",
+          "pt": "South Florida on the Cheap \"Sons do Set\" é um evento comunitário no Centro de Delray Beach que apresenta música ao vivo e vendedores locais no Mercado de Blackmer, para uma noite de ritmo, comunidade e cultura.... Copyright South Florida on the Cheap. O post Sons do Set: Música grátis, mercado, Delray Beach, 27 de agosto apareceu primeiro em South Florida on the Cheap.",
+          "fr": "South Florida on the Cheap \"Sons de l'Ensemble\" est un événement communautaire au centre-ville de Delray Beach qui présente de la musique en direct et des vendeurs locaux au marché de Blackmer, pour une soirée de rythme, de communauté et de culture.... Copyright South Florida on the Cheap. Le post Sons de l'Ensemble: Musique gratuite, marché, Delray Beach, 27 août est apparu en premier sur South Florida on the Cheap."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1787488220323_5ukx",
+        "title": {
+          "en": "Free: Delray’s tribute to Jimmy Buffett, Old School Square, Aug. 28",
+          "es": "Gratis: Tributo a Jimmy Buffett de Delray, Old School Square, 28 de agosto",
+          "pt": "Grátis: Tributo a Jimmy Buffett de Delray, Old School Square, 28 de agosto",
+          "fr": "Gratuit: Hommage à Jimmy Buffett de Delray, Old School Square, 28 août"
+        },
+        "date": "2026-08-23",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/tribute-concert-old-school-square/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/jimmy-buffett-tribute-728x485.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Get ready to chillax because it's always 5 o'clock somewhere! The final summer Sunset Concert series in Delray Beach features a high-energy tribute band that will pay homage to the... Copyright South Florida on the Cheap. The post Free: Delray’s tribute to Jimmy Buffett, Old School Square, Aug. 28 appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap ¡Prepárate para relajarte porque ¡siempre es las 5 en algún lugar! La serie de conciertos de atardecer de verano final en Delray Beach presenta una banda tributo de alta energía que rendirá homenaje a... Copyright South Florida on the Cheap. El artículo Gratis: Tributo a Jimmy Buffett de Delray, Old School Square, 28 de agosto apareció primero en South Florida on the Cheap.",
+          "pt": "South Florida on the Cheap Prepare-se para relaxar porque sempre é 5 horas em algum lugar! A série final de concertos ao pôr do sol de verão em Delray Beach apresenta uma banda tributo de alta energia que homenageará... Copyright South Florida on the Cheap. O post Grátis: Tributo a Jimmy Buffett de Delray, Old School Square, 28 de agosto apareceu primeiro em South Florida on the Cheap.",
+          "fr": "South Florida on the Cheap Préparez-vous à vous détendre car c'est toujours 5 heures quelque part! La dernière série de concerts du coucher de soleil d'été à Delray Beach présente un groupe tribut haute énergie qui rendra hommage à... Copyright South Florida on the Cheap. Le post Gratuit: Hommage à Jimmy Buffett de Delray, Old School Square, 28 août est apparu en premier sur South Florida on the Cheap."
+        },
+        "source": "Miami on the Cheap",
+        "category": "music"
+      },
+      {
+        "id": "rss_1787488220323_ccb6",
+        "title": {
+          "en": "LAUDERHILL LIVE – Lyrics & Laughs 90s Edition w/ Marc Curry, Kwame, & More 9/26/26",
+          "es": "LAUDERHILL LIVE – Letras y Risas Edición de los 90 con Marc Curry, Kwame y más 9/26/26",
+          "pt": "LAUDERHILL LIVE – Letras e Risadas Edição dos Anos 90 com Marc Curry, Kwame e Mais 9/26/26",
+          "fr": "LAUDERHILL LIVE – Paroles et Rires Édition Années 90 avec Marc Curry, Kwame et Plus 9/26/26"
+        },
+        "date": "2026-09-26",
+        "venue": "Lauderhill Performing Arts Center,",
+        "address": "3800 NW 11th Place, Lauderhill, Florida, 33311",
+        "url": "https://www.soulofmiami.org/2026/08/22/lauderhill-live-lyrics-laughs-90s-edition-w-marc-curry-kwame-more-9-26-26/",
+        "free": false,
+        "price": "$50",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/CH-qW-QazUabu2K3hxV10A.large_-350x250.jpg",
+        "description": {
+          "en": "to $100 21 and over. No Children",
+          "es": "hasta $100 21 años en adelante. Sin niños",
+          "pt": "até $100 21 anos ou mais. Sem crianças",
+          "fr": "jusqu'à $100 21 ans et plus. Pas d'enfants"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1387234,
+        "lng": -80.2031758,
+        "category": "music"
+      },
+      {
+        "id": "rss_1787488220323_j985",
+        "title": {
+          "en": "Lavish Event Rentals Annual Lavish Soiree 9/9/26",
+          "es": "Lavish Event Rentals Soirée Anual Lavish 9/9/26",
+          "pt": "Lavish Event Rentals Soirée Anual Lavish 9/9/26",
+          "fr": "Lavish Event Rentals Soirée Annuelle Lavish 9/9/26"
+        },
+        "date": "2026-09-09",
+        "venue": "Paradise Plaza",
+        "address": "151 NE 41st St, Miami, Florida, 33137",
+        "url": "https://www.soulofmiami.org/2026/08/22/lavish-event-rentals-annual-lavish-soiree-9-9-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/LER-Soiree-350x360.png",
+        "description": {
+          "en": "Lavish Event Rentals brings together Miami’s leading event and wedding professionals, designers, hospitality leaders and creative partners",
+          "es": "Lavish Event Rentals reúne a los principales profesionales de eventos y bodas de Miami, diseñadores, líderes de hospitalidad y socios creativos",
+          "pt": "Lavish Event Rentals reúne os principais profissionais de eventos e casamentos de Miami, designers, líderes de hospitalidade e parceiros criativos",
+          "fr": "Lavish Event Rentals réunit les principaux professionnels des événements et mariages de Miami, des designers, des leaders de l'hôtellerie et des partenaires créatifs"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8147167,
+        "lng": -80.1922565,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787488220323_yddb",
+        "title": {
+          "en": "Miami Yoga Club: Sunrise Yoga at InterContinental Miami 9/4/26",
+          "es": "Miami Yoga Club: Yoga al Amanecer en InterContinental Miami 9/4/26",
+          "pt": "Miami Yoga Club: Yoga ao Amanhecer no InterContinental Miami 9/4/26",
+          "fr": "Miami Yoga Club: Yoga à l'Aube à l'InterContinental Miami 9/4/26"
+        },
+        "date": "2026-09-04",
+        "venue": "InterContinental Miami",
+        "address": "100 Chopin Plaza, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/08/22/miami-yoga-club-sunrise-yoga-at-intercontinental-miami-9-4-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/ICM-CAL-1-333x500.jpeg",
+        "description": {
+          "en": "Join Stay Fit 305 for Miami Yoga Club: Sunrise Yoga on Friday, September 4 at 7AM",
+          "es": "Únete a Stay Fit 305 para Miami Yoga Club: Yoga al Amanecer el viernes 4 de septiembre a las 7AM",
+          "pt": "Junte-se à Stay Fit 305 para Miami Yoga Club: Yoga ao Amanhecer na sexta-feira, 4 de setembro às 7AM",
+          "fr": "Rejoignez Stay Fit 305 pour Miami Yoga Club: Yoga à l'Aube le vendredi 4 septembre à 7h du matin"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.772449,
+        "lng": -80.1854687,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787488220323_3b5w",
+        "title": {
+          "en": "Full Moon Yoga at InterContinental Miami 9/26/26",
+          "es": "Yoga de Luna Llena en InterContinental Miami 9/26/26",
+          "pt": "Yoga de Lua Cheia no InterContinental Miami 9/26/26",
+          "fr": "Yoga de Pleine Lune à l'InterContinental Miami 9/26/26"
+        },
+        "date": "2026-09-26",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/08/22/full-moon-yoga-at-intercontinental-miami-9-26-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/YOGAAAAA-ICM-350x248.png",
+        "description": {
+          "en": "into National Yoga Month as InterContinental Miami hosts Full Moon Yoga & Sound Healing on Saturday, September 26",
+          "es": "Durante el Mes Nacional del Yoga, InterContinental Miami presenta Yoga de Luna Llena y Sanación de Sonido el sábado 26 de septiembre",
+          "pt": "Celebrando o Mês Nacional do Yoga, o InterContinental Miami apresenta Yoga de Lua Cheia e Cura do Som no sábado, 26 de setembro",
+          "fr": "Pour le Mois National du Yoga, l'InterContinental Miami accueille Yoga de Pleine Lune et Guérison par le Son le samedi 26 septembre"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1787488220886_43db",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-23",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 10:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 10:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 10h00 · Centre de Conventions Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1787488220886_r2q9",
+        "title": {
+          "en": "Monster Jam",
+          "es": "Monster Jam",
+          "pt": "Monster Jam",
+          "fr": "Monster Jam"
+        },
+        "date": "2026-08-23",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7xbOE&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/32f/7d37f364-1424-43d6-9546-1274421ac32f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Motorsports/Racing · Starts 13:00 · Amerant Bank Arena",
+          "es": "Deportes · Automovilismo/Carreras · Comienza 13:00 · Amerant Bank Arena",
+          "pt": "Esportes · Automobilismo/Corridas · Começa 13:00 · Amerant Bank Arena",
+          "fr": "Sports · Automobile/Course · Commence 13h00 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1787488220886_wr76",
+        "title": {
+          "en": "Miami Marlins vs. Boston Red Sox",
+          "es": "Miami Marlins vs. Boston Red Sox",
+          "pt": "Miami Marlins vs. Boston Red Sox",
+          "fr": "Miami Marlins vs. Boston Red Sox"
+        },
+        "date": "2026-08-24",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0k&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 18h40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1787488220886_u1j7",
+        "title": {
+          "en": "Noches De Neón con Los Hermanos Rosario",
+          "es": "Noches De Neón con Los Hermanos Rosario",
+          "pt": "Noites de Neon com Los Hermanos Rosario",
+          "fr": "Nuits de Néon avec Los Hermanos Rosario"
+        },
+        "date": "2026-09-12",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnoches-de-neon-con-los-hermanos-hollywood-florida-09-12-2026%2Fevent%2F0D0064F0A7CD611B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/515/704c3a33-92cd-42f9-9881-2f228d49f515_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Must be 21+ To Attend · Starts 20:30 · Hard Rock Live",
+          "es": "Debe tener 21+ años para asistir · Comienza 20:30 · Hard Rock Live",
+          "pt": "Deve ter 21 anos ou mais para participar · Começa 20:30 · Hard Rock Live",
+          "fr": "Vous devez avoir 21 ans ou plus pour y assister · Commence à 20h30 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1787488220886_oico",
+        "title": {
+          "en": "Seraphic Fire - Pure Imagination",
+          "es": "Seraphic Fire - Pura Imaginación",
+          "pt": "Seraphic Fire - Pura Imaginação",
+          "fr": "Seraphic Fire - Pure Imagination"
+        },
+        "date": "2026-09-13",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fseraphic-fire-pure-imagination-ft-lauderdale-florida-09-13-2026%2Fevent%2F0D0064BBC01294EB&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/b24/faca7be3-7176-4d2e-99db-4839f5ce5b24_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This program is generously supported by Wayne and Lucretia Weiner. Seraphic Fire, South Florida's GRAMMY-nominated vocal ensemble, presents a fun, interactive, joyful children's concert that will be a blast for the entire family! The music celebrates beloved films, characters, and timeless stories as the voices of Seraphic Fire blend in perfect harmony. The audience will embark on a musical journe",
+          "es": "Este programa es generosamente patrocinado por Wayne y Lucretia Weiner. Seraphic Fire, el conjunto vocal nominado al GRAMMY del sur de Florida, presenta un concierto infantil divertido, interactivo y alegre que será una explosión para toda la familia. La música celebra películas, personajes e historias atemporales queridas mientras las voces de Seraphic Fire se mezclan en armonía perfecta. La audiencia se embarcará en un viaje musical",
+          "pt": "Este programa é generosamente apoiado por Wayne e Lucretia Weiner. Seraphic Fire, ensemble vocal indicado ao GRAMMY do sul da Flórida, apresenta um concerto infantil divertido, interativo e alegre que será sensacional para toda a família. A música celebra filmes, personagens e histórias atemporais queridas enquanto as vozes do Seraphic Fire se misturam em perfeita harmonia. O público embarcará em uma jornada musical",
+          "fr": "Ce programme est généreusement soutenu par Wayne et Lucretia Weiner. Seraphic Fire, l'ensemble vocal nominé aux GRAMMY du sud de la Floride, présente un concert pour enfants amusant, interactif et joyeux qui sera formidable pour toute la famille. La musique célèbre des films, des personnages et des histoires intemporelles bien-aimés tandis que les voix de Seraphic Fire se mélangent en parfaite harmonie. Le public s'embarquera pour un voyage musical"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1787488220886_pz50",
+        "title": {
+          "en": "The Strokes - Reality Awaits North America",
+          "es": "The Strokes - Reality Awaits North America",
+          "pt": "The Strokes - Reality Awaits North America",
+          "fr": "The Strokes - Reality Awaits North America"
+        },
+        "date": "2026-09-13",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-strokes-reality-awaits-north-america-hollywood-florida-09-13-2026%2Fevent%2F0D006489C635CAEA&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/436/bf45b6be-dfa4-4b6f-b46b-9063416ef436_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:00 · Hard Rock Live",
+          "es": "Música · Rock · Comienza 19:00 · Hard Rock Live",
+          "pt": "Música · Rock · Começa 19:00 · Hard Rock Live",
+          "fr": "Musique · Rock · Commence à 19h00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1787488220886_99gp",
+        "title": {
+          "en": "ROSALÍA: LUX TOUR 2026",
+          "es": "ROSALÍA: LUX TOUR 2026",
+          "pt": "ROSALÍA: LUX TOUR 2026",
+          "fr": "ROSALÍA: LUX TOUR 2026"
+        },
+        "date": "2026-09-14",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frosalia-lux-tour-2026-miami-florida-09-14-2026%2Fevent%2F0D00636E0CE06340&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8dd/9c01b5c5-7e57-4143-a2ea-d7710f3e68dd_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Latin · Starts 20:30 · Kaseya Center",
+          "es": "Música · Latina · Comienza 20:30 · Kaseya Center",
+          "pt": "Música · Latina · Começa 20:30 · Kaseya Center",
+          "fr": "Musique · Latine · Commence à 20h30 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1787488220886_iww5",
+        "title": {
+          "en": "Robin Trower",
+          "es": "Robin Trower",
+          "pt": "Robin Trower",
+          "fr": "Robin Trower"
+        },
+        "date": "2026-09-15",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frobin-trower-ft-lauderdale-florida-09-15-2026%2Fevent%2F0D00649CB76FA019&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/a66/3dc47e4b-5b49-4cd6-8d8e-530eaf46aa66_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "BACK BY POPULAR DEMAND! Tagged by the press with the nickname of \"The White Hendrix\" back in the 1970s, Trower has been heralded as one of the most influential guitar players to come out of the British rock scene. As the guitarist who fronted for Procol Harum before launching his own celebrated four-decade career, Trower-a true axeman's axeman-took the ethereal sound that Hendrix first introduced ",
+          "es": "¡DE VUELTA POR DEMANDA POPULAR! Etiquetado por la prensa con el apodo de \"El Hendrix Blanco\" en los años 70, Trower ha sido aclamado como uno de los guitarristas más influyentes de la escena del rock británico. Como el guitarrista que encabezó a Procol Harum antes de lanzar su propia carrera celebrada de cuatro décadas, Trower, un verdadero maestro del instrumento, tomó el sonido etéreo que Hendrix introdujo por primera vez",
+          "pt": "DE VOLTA POR DEMANDA POPULAR! Marcado pela imprensa com o apelido de \"O Hendrix Branco\" nos anos 70, Trower foi aclamado como um dos guitarristas mais influentes da cena do rock britânico. Como o guitarrista que foi destaque do Procol Harum antes de lançar sua própria carreira celebrada de quatro décadas, Trower, um verdadeiro mestre da guitarra, utilizou o som etéreo que Hendrix introduziu pela primeira vez",
+          "fr": "DE RETOUR PAR DEMANDE POPULAIRE ! Étiqueté par la presse avec le surnom du « Hendrix Blanc » dans les années 70, Trower a été acclamé comme l'un des guitaristes les plus influents de la scène du rock britannique. En tant que guitariste qui a mené Procol Harum avant de lancer sa propre carrière célébrée de quatre décennies, Trower, un véritable maître de la guitare, a adopté le son éthéré que Hendrix a introduit pour la première fois"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
       }
     ]
   },
@@ -4548,7 +4492,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-22T12:30:17.645Z",
+    "fetchedAt": "2026-08-23T12:31:03.851Z",
     "items": []
   }
 }
