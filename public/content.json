@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-23T12:31:04.595Z",
+    "lastUpdated": "2026-08-24T12:39:51.886Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-23T12:31:03.851Z",
+    "fetchedAt": "2026-08-24T12:39:51.154Z",
     "current": {
-      "temp_f": 80,
-      "feels_f": 91,
+      "temp_f": 83,
+      "feels_f": 94,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 91,
+      "humidity": 82,
       "wind_mph": 4,
-      "rain_chance": 31,
-      "weathercode": 82
+      "rain_chance": 12,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-23",
-        "high_f": 87,
-        "low_f": 76,
-        "weathercode": 82,
-        "rain_chance": 31,
-        "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
-        }
-      },
-      {
         "date": "2026-08-24",
-        "high_f": 88,
-        "low_f": 75,
+        "high_f": 91,
+        "low_f": 77,
         "weathercode": 3,
-        "rain_chance": 5,
+        "rain_chance": 12,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,188 +36,201 @@
       },
       {
         "date": "2026-08-25",
-        "high_f": 88,
-        "low_f": 81,
-        "weathercode": 51,
-        "rain_chance": 15,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
-        "date": "2026-08-26",
-        "high_f": 89,
-        "low_f": 85,
-        "weathercode": 96,
-        "rain_chance": 34,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
-        "date": "2026-08-27",
-        "high_f": 88,
-        "low_f": 85,
+        "high_f": 86,
+        "low_f": 77,
         "weathercode": 3,
-        "rain_chance": 27,
+        "rain_chance": 17,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
           "pt": "Encoberto",
           "fr": "Couvert"
         }
+      },
+      {
+        "date": "2026-08-26",
+        "high_f": 88,
+        "low_f": 81,
+        "weathercode": 95,
+        "rain_chance": 47,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-08-27",
+        "high_f": 89,
+        "low_f": 85,
+        "weathercode": 3,
+        "rain_chance": 35,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
+      },
+      {
+        "date": "2026-08-28",
+        "high_f": 90,
+        "low_f": 85,
+        "weathercode": 51,
+        "rain_chance": 26,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 4
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 6
       },
       {
         "hour": "09:00",
-        "temp_f": 76,
-        "weathercode": 82,
-        "rain_chance": 1
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "10:00",
-        "temp_f": 78,
-        "weathercode": 81,
-        "rain_chance": 1
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "11:00",
-        "temp_f": 84,
+        "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 12
       },
       {
         "hour": "12:00",
         "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 9
       },
       {
         "hour": "13:00",
-        "temp_f": 87,
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 9
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 90,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 91,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 90,
         "weathercode": 3,
         "rain_chance": 4
       },
       {
-        "hour": "14:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 8
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
         "hour": "17:00",
-        "temp_f": 87,
+        "temp_f": 89,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 4
       },
       {
         "hour": "18:00",
-        "temp_f": 84,
+        "temp_f": 88,
         "weathercode": 3,
-        "rain_chance": 29
+        "rain_chance": 3
       },
       {
         "hour": "19:00",
-        "temp_f": 79,
+        "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 31
+        "rain_chance": 3
       },
       {
         "hour": "20:00",
-        "temp_f": 79,
+        "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 16
+        "rain_chance": 4
       },
       {
         "hour": "21:00",
-        "temp_f": 78,
-        "weathercode": 51,
-        "rain_chance": 5
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 1
       },
       {
         "hour": "22:00",
-        "temp_f": 78,
-        "weathercode": 51,
-        "rain_chance": 2
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 1
       },
       {
         "hour": "23:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 2
+        "temp_f": 81,
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "00:00",
-        "temp_f": 77,
+        "temp_f": 80,
         "weathercode": 2,
         "rain_chance": 1
       },
       {
         "hour": "01:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "02:00",
         "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 1
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "03:00",
         "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 0
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "04:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 0
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
         "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 1
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "06:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "07:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 7
       }
     ]
   },
@@ -1725,32 +1725,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1785589752800_ohlb",
-        "title": {
-          "en": "Sensory Sunday 8/23/26",
-          "es": "Domingo Sensorial 8/23/26",
-          "pt": "Domingo Sensorial 8/23/26",
-          "fr": "Dimanche Sensoriel 8/23/26"
-        },
-        "date": "2026-08-23",
-        "venue": "Museum of Miami",
-        "address": "101 West Flagler Street, Miami, Florida, 33130",
-        "url": "https://www.soulofmiami.org/2026/07/31/sensory-sunday-8-23-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/156612-Sensory-Sunday-350x175.jpg",
-        "description": {
-          "en": "Sensory Sundays are designed for families of children, teenagers, and young adults who are neurodiverse, on the autism spectrum, or",
-          "es": "Los domingos sensoriales están diseñados para familias de niños, adolescentes y adultos jóvenes neurodiversos, en el espectro del autismo, o",
-          "pt": "Os Domingos Sensoriais são projetados para famílias de crianças, adolescentes e adultos jovens neurodiversos, no espectro do autismo, ou",
-          "fr": "Les dimanches sensoriels sont conçus pour les familles d'enfants, d'adolescents et de jeunes adultes neurodivers, sur le spectre de l'autisme, ou"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7744628,
-        "lng": -80.1965857,
-        "category": "community"
-      },
-      {
         "id": "tm_1785589753331_h0qe",
         "title": {
           "en": "HOUSE OF HEAVY - Nu Metal + Metalcore Night",
@@ -3079,32 +3053,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1787401780275_dawb",
-        "title": {
-          "en": "Sunday Pasta Nights at Gili’s Beach Club 8/23/26",
-          "es": "Noches de Pasta los Domingos en Gili's Beach Club 8/23/26",
-          "pt": "Noites de Pasta aos Domingos no Gili's Beach Club 8/23/26",
-          "fr": "Soirées Pâtes le Dimanche au Gili's Beach Club 8/23/26"
-        },
-        "date": "2026-08-23",
-        "venue": "Trump International Beach Resort",
-        "address": "18001 Collins Avenue, Sunny Isles Beach, Florida, 33160",
-        "url": "https://www.soulofmiami.org/2026/08/21/sunday-pasta-nights-at-gilis-beach-club-8-23-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Sunday-Pasta-Night-350x466.jpg",
-        "description": {
-          "en": "us for Sunday Pasta Night at Gili’s Beach Club, where oceanfront views meet authentic",
-          "es": "nos para la Noche de Pasta del Domingo en Gili's Beach Club, donde las vistas al océano se encuentran con",
-          "pt": "nos para a Noite de Pasta de Domingo no Gili's Beach Club, onde as vistas do oceano conhecem",
-          "fr": "nous pour la Soirée Pâtes du Dimanche au Gili's Beach Club, où les vues océaniques rencontrent"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.9432161,
-        "lng": -80.1205584,
-        "category": "community"
-      },
-      {
         "id": "rss_1787401780275_6oau",
         "title": {
           "en": "Salsa Z Powered by McDonald’s 8/28/26",
@@ -3181,104 +3129,6 @@
         "lat": 25.7184933,
         "lng": -80.2729091,
         "category": "community"
-      },
-      {
-        "id": "tm_1787401780857_mhyn",
-        "title": {
-          "en": "Miami Marlins vs Washington Nationals: Agustin Ramirez Gus Bus Bobblehead",
-          "es": "Miami Marlins vs Washington Nationals: Bobblehead de Agustin Ramirez Gus Bus",
-          "pt": "Miami Marlins vs Washington Nationals: Bobblehead de Agustin Ramirez Gus Bus",
-          "fr": "Miami Marlins vs Washington Nationals: Bobblehead d'Agustin Ramirez Gus Bus"
-        },
-        "date": "2026-08-23",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 13:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza a las 13:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa às 13:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence à 13h40 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "rss_1787488220323_kogx",
-        "title": {
-          "en": "Free: Mango Music & Art Festival, Lake Worth, Sept. 5",
-          "es": "Gratis: Festival de Música y Arte Mango, Lake Worth, 5 de septiembre",
-          "pt": "Grátis: Festival de Música e Arte Mango, Lake Worth, 5 de setembro",
-          "fr": "Gratuit: Festival de Musique et d'Art Mango, Lake Worth, 5 septembre"
-        },
-        "date": "2026-08-23",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/j-street-block-party-lake-worth/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/02/mango-h2-728x662.jpg",
-        "description": {
-          "en": "South Florida on the Cheap You won't want to miss this free community event that will feature 27 acts on four stages, with art and clothing vendors, live artist painting, plus roaming performers. Mango Music... Copyright South Florida on the Cheap. The post Free: Mango Music & Art Festival, Lake Worth, Sept. 5 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap No querrás perderte este evento comunitario gratuito que contará con 27 actos en cuatro escenarios, con vendedores de arte y ropa, pintura de artistas en vivo, además de artistas ambulantes. Mango Music... Copyright South Florida on the Cheap. El artículo Gratis: Festival de Música y Arte Mango, Lake Worth, 5 de septiembre apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Você não vai querer perder este evento comunitário gratuito que contará com 27 atos em quatro palcos, com vendedores de arte e roupas, pintura de artistas ao vivo, além de artistas ambulantes. Mango Music... Copyright South Florida on the Cheap. O post Grátis: Festival de Música e Arte Mango, Lake Worth, 5 de setembro apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Vous ne voudrez pas manquer cet événement communautaire gratuit qui présentera 27 actes sur quatre scènes, avec des vendeurs d'art et de vêtements, de la peinture d'artistes en direct, plus des artistes itinérants. Mango Music... Copyright South Florida on the Cheap. Le post Gratuit: Festival de Musique et d'Art Mango, Lake Worth, 5 septembre est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "rss_1787488220323_v8nw",
-        "title": {
-          "en": "Sounds of the Set: Free music, market, Delray Beach, Aug. 27",
-          "es": "Sonidos del Set: Música gratuita, mercado, Delray Beach, 27 de agosto",
-          "pt": "Sons do Set: Música grátis, mercado, Delray Beach, 27 de agosto",
-          "fr": "Sons de l'Ensemble: Musique gratuite, marché, Delray Beach, 27 août"
-        },
-        "date": "2026-08-23",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-music-market-community-open-house-delray-beach-oct-16/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2025/10/delray-music-728x689.jpg",
-        "description": {
-          "en": "South Florida on the Cheap \"Sounds of the Set\" is a community event in Downtown Delray Beach that features live music and local vendors at Blackmer's Market, for an evening of rhythm, community, and culture.... Copyright South Florida on the Cheap. The post Sounds of the Set: Free music, market, Delray Beach, Aug. 27 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap \"Sounds of the Set\" es un evento comunitario en el Centro de Delray Beach que presenta música en vivo y vendedores locales en el Mercado de Blackmer, para una noche de ritmo, comunidad y cultura.... Copyright South Florida on the Cheap. El artículo Sonidos del Set: Música gratuita, mercado, Delray Beach, 27 de agosto apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap \"Sons do Set\" é um evento comunitário no Centro de Delray Beach que apresenta música ao vivo e vendedores locais no Mercado de Blackmer, para uma noite de ritmo, comunidade e cultura.... Copyright South Florida on the Cheap. O post Sons do Set: Música grátis, mercado, Delray Beach, 27 de agosto apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap \"Sons de l'Ensemble\" est un événement communautaire au centre-ville de Delray Beach qui présente de la musique en direct et des vendeurs locaux au marché de Blackmer, pour une soirée de rythme, de communauté et de culture.... Copyright South Florida on the Cheap. Le post Sons de l'Ensemble: Musique gratuite, marché, Delray Beach, 27 août est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "rss_1787488220323_5ukx",
-        "title": {
-          "en": "Free: Delray’s tribute to Jimmy Buffett, Old School Square, Aug. 28",
-          "es": "Gratis: Tributo a Jimmy Buffett de Delray, Old School Square, 28 de agosto",
-          "pt": "Grátis: Tributo a Jimmy Buffett de Delray, Old School Square, 28 de agosto",
-          "fr": "Gratuit: Hommage à Jimmy Buffett de Delray, Old School Square, 28 août"
-        },
-        "date": "2026-08-23",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/tribute-concert-old-school-square/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/06/jimmy-buffett-tribute-728x485.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Get ready to chillax because it's always 5 o'clock somewhere! The final summer Sunset Concert series in Delray Beach features a high-energy tribute band that will pay homage to the... Copyright South Florida on the Cheap. The post Free: Delray’s tribute to Jimmy Buffett, Old School Square, Aug. 28 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap ¡Prepárate para relajarte porque ¡siempre es las 5 en algún lugar! La serie de conciertos de atardecer de verano final en Delray Beach presenta una banda tributo de alta energía que rendirá homenaje a... Copyright South Florida on the Cheap. El artículo Gratis: Tributo a Jimmy Buffett de Delray, Old School Square, 28 de agosto apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Prepare-se para relaxar porque sempre é 5 horas em algum lugar! A série final de concertos ao pôr do sol de verão em Delray Beach apresenta uma banda tributo de alta energia que homenageará... Copyright South Florida on the Cheap. O post Grátis: Tributo a Jimmy Buffett de Delray, Old School Square, 28 de agosto apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Préparez-vous à vous détendre car c'est toujours 5 heures quelque part! La dernière série de concerts du coucher de soleil d'été à Delray Beach présente un groupe tribut haute énergie qui rendra hommage à... Copyright South Florida on the Cheap. Le post Gratuit: Hommage à Jimmy Buffett de Delray, Old School Square, 28 août est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "music"
       },
       {
         "id": "rss_1787488220323_ccb6",
@@ -3381,58 +3231,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1787488220886_43db",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-23",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 10:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 10:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 10h00 · Centre de Conventions Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1787488220886_r2q9",
-        "title": {
-          "en": "Monster Jam",
-          "es": "Monster Jam",
-          "pt": "Monster Jam",
-          "fr": "Monster Jam"
-        },
-        "date": "2026-08-23",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7xbOE&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/32f/7d37f364-1424-43d6-9546-1274421ac32f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Motorsports/Racing · Starts 13:00 · Amerant Bank Arena",
-          "es": "Deportes · Automovilismo/Carreras · Comienza 13:00 · Amerant Bank Arena",
-          "pt": "Esportes · Automobilismo/Corridas · Começa 13:00 · Amerant Bank Arena",
-          "fr": "Sports · Automobile/Course · Commence 13h00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.238701,
-        "lng": -80.370499
       },
       {
         "id": "tm_1787488220886_wr76",
@@ -3589,6 +3387,84 @@
         "category": "music",
         "lat": 26.134246,
         "lng": -80.136172
+      },
+      {
+        "id": "rss_1787575173885_1hz0",
+        "title": {
+          "en": "Un-Birthday Party: Neighbors 4 Neighbors Celebrates 34 Years at Bar Betty 10/5/26",
+          "es": "Fiesta de No-Cumpleaños: Neighbors 4 Neighbors Celebra 34 Años en Bar Betty 10/5/26",
+          "pt": "Festa de Não-Aniversário: Neighbors 4 Neighbors Celebra 34 Anos no Bar Betty 10/5/26",
+          "fr": "Fête de Non-Anniversaire: Neighbors 4 Neighbors Célèbre 34 Ans au Bar Betty 10/5/26"
+        },
+        "date": "2026-10-05",
+        "venue": "Bar Betty at Sunness Supper Club",
+        "address": "2465 East Sunrise Boulevard, Fort Lauderdale, Florida, 33304",
+        "url": "https://www.soulofmiami.org/2026/08/23/un-birthday-party-neighbors-4-neighbors-celebrates-34-years-at-bar-betty-10-5-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Un-Birthday-Flyer-Web-SM-350x453.jpg",
+        "description": {
+          "en": "the white rabbit to Bar Betty for",
+          "es": "el conejo blanco a Bar Betty para",
+          "pt": "o coelho branco para o Bar Betty para",
+          "fr": "le lapin blanc au Bar Betty pour"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1377642,
+        "lng": -80.1136025,
+        "category": "community"
+      },
+      {
+        "id": "tm_1787575174657_krj5",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-24",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familiar · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Familiar · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Familial · Débute 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1787575174657_fwje",
+        "title": {
+          "en": "Empire of the Sun - Ask That God: Afterlife North American Tour",
+          "es": "Empire of the Sun - Ask That God: Gira de América del Norte por la Vida Eterna",
+          "pt": "Empire of the Sun - Ask That God: Turnê de América do Norte na Vida Eterna",
+          "fr": "Empire of the Sun - Ask That God: Tournée Amérique du Nord Vie Éternelle"
+        },
+        "date": "2026-09-16",
+        "venue": "FPL Solar Amphitheater at Bayfront Park",
+        "address": "301 N Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fempire-of-the-sun-ask-that-miami-florida-09-16-2026%2Fevent%2F0D00646533C9B880&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/646/1b8fbcb9-46d0-45e4-ba5c-867795b8c646_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:30 · FPL Solar Amphitheater at Bayfront Park",
+          "es": "Música · Rock · Comienza 19:30 · FPL Solar Amphitheater at Bayfront Park",
+          "pt": "Música · Rock · Começa 19:30 · FPL Solar Amphitheater at Bayfront Park",
+          "fr": "Musique · Rock · Débute 19:30 · FPL Solar Amphitheater at Bayfront Park"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.776218,
+        "lng": -80.186024
       }
     ]
   },
@@ -4492,7 +4368,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-23T12:31:03.851Z",
+    "fetchedAt": "2026-08-24T12:39:51.155Z",
     "items": []
   }
 }
