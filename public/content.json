@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-24T12:39:51.886Z",
+    "lastUpdated": "2026-08-25T12:38:52.237Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-24T12:39:51.154Z",
+    "fetchedAt": "2026-08-25T12:38:51.459Z",
     "current": {
       "temp_f": 83,
-      "feels_f": 94,
+      "feels_f": 95,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 82,
-      "wind_mph": 4,
-      "rain_chance": 12,
+      "humidity": 83,
+      "wind_mph": 3,
+      "rain_chance": 8,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-24",
-        "high_f": 91,
-        "low_f": 77,
-        "weathercode": 3,
-        "rain_chance": 12,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-25",
-        "high_f": 86,
-        "low_f": 77,
+        "high_f": 90,
+        "low_f": 78,
         "weathercode": 3,
-        "rain_chance": 17,
+        "rain_chance": 8,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,10 +36,36 @@
       },
       {
         "date": "2026-08-26",
-        "high_f": 88,
-        "low_f": 81,
+        "high_f": 87,
+        "low_f": 75,
+        "weathercode": 63,
+        "rain_chance": 36,
+        "description": {
+          "en": "Moderate rain",
+          "es": "Lluvia moderada",
+          "pt": "Chuva moderada",
+          "fr": "Pluie modérée"
+        }
+      },
+      {
+        "date": "2026-08-27",
+        "high_f": 89,
+        "low_f": 80,
+        "weathercode": 51,
+        "rain_chance": 39,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-08-28",
+        "high_f": 89,
+        "low_f": 85,
         "weathercode": 95,
-        "rain_chance": 47,
+        "rain_chance": 25,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -61,38 +74,25 @@
         }
       },
       {
-        "date": "2026-08-27",
+        "date": "2026-08-29",
         "high_f": 89,
-        "low_f": 85,
-        "weathercode": 3,
-        "rain_chance": 35,
+        "low_f": 84,
+        "weathercode": 95,
+        "rain_chance": 41,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-08-28",
-        "high_f": 90,
-        "low_f": 85,
-        "weathercode": 51,
-        "rain_chance": 26,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
         }
       }
     ],
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 80,
+        "temp_f": 81,
         "weathercode": 0,
-        "rain_chance": 6
+        "rain_chance": 4
       },
       {
         "hour": "09:00",
@@ -102,43 +102,43 @@
       },
       {
         "hour": "10:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "11:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 87,
+        "weathercode": 0,
+        "rain_chance": 8
       },
       {
         "hour": "12:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 90,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "13:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 90,
+        "weathercode": 2,
+        "rain_chance": 3
       },
       {
         "hour": "14:00",
-        "temp_f": 90,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 89,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "15:00",
-        "temp_f": 91,
+        "temp_f": 90,
         "weathercode": 3,
         "rain_chance": 5
       },
       {
         "hour": "16:00",
-        "temp_f": 90,
+        "temp_f": 89,
         "weathercode": 3,
         "rain_chance": 4
       },
@@ -150,9 +150,9 @@
       },
       {
         "hour": "18:00",
-        "temp_f": 88,
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 4
       },
       {
         "hour": "19:00",
@@ -164,73 +164,73 @@
         "hour": "20:00",
         "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 3
       },
       {
         "hour": "21:00",
-        "temp_f": 82,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 4
       },
       {
         "hour": "22:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 6
       },
       {
         "hour": "23:00",
         "temp_f": 81,
-        "weathercode": 2,
-        "rain_chance": 1
+        "weathercode": 3,
+        "rain_chance": 7
       },
       {
         "hour": "00:00",
         "temp_f": 80,
-        "weathercode": 2,
-        "rain_chance": 1
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "01:00",
-        "temp_f": 79,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 2
+        "rain_chance": 9
       },
       {
         "hour": "02:00",
         "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 3
+        "weathercode": 2,
+        "rain_chance": 10
       },
       {
         "hour": "03:00",
-        "temp_f": 79,
+        "temp_f": 78,
         "weathercode": 1,
-        "rain_chance": 1
+        "rain_chance": 5
       },
       {
         "hour": "04:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 75,
+        "weathercode": 63,
+        "rain_chance": 18
       },
       {
         "hour": "05:00",
         "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 3
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "06:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "07:00",
         "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 7
+        "weathercode": 3,
+        "rain_chance": 9
       }
     ]
   },
@@ -3233,32 +3233,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787488220886_wr76",
-        "title": {
-          "en": "Miami Marlins vs. Boston Red Sox",
-          "es": "Miami Marlins vs. Boston Red Sox",
-          "pt": "Miami Marlins vs. Boston Red Sox",
-          "fr": "Miami Marlins vs. Boston Red Sox"
-        },
-        "date": "2026-08-24",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0k&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 18h40 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
         "id": "tm_1787488220886_u1j7",
         "title": {
           "en": "Noches De Neón con Los Hermanos Rosario",
@@ -3415,32 +3389,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787575174657_krj5",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-24",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familiar · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Familiar · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Familial · Débute 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1787575174657_fwje",
         "title": {
           "en": "Empire of the Sun - Ask That God: Afterlife North American Tour",
@@ -3465,6 +3413,212 @@
         "category": "music",
         "lat": 25.776218,
         "lng": -80.186024
+      },
+      {
+        "id": "rss_1787661507987_pial",
+        "title": {
+          "en": "Made in Miami Kicks Off South Beach Seafood Festival at Phuc Yea 10/21/26",
+          "es": "Made in Miami inaugura South Beach Seafood Festival en Phuc Yea 10/21/26",
+          "pt": "Made in Miami inaugura South Beach Seafood Festival no Phuc Yea 10/21/26",
+          "fr": "Made in Miami lance le South Beach Seafood Festival chez Phuc Yea 10/21/26"
+        },
+        "date": "2026-10-21",
+        "venue": "Phuc Yea",
+        "address": "7100 Biscayne Blvd,, Miami, Florida, 33138",
+        "url": "https://www.soulofmiami.org/2026/08/24/made-in-miami-kicks-off-south-beach-seafood-festival-at-phuc-yea-10-21-26/",
+        "free": false,
+        "price": "$249",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/SOBE-Made-in-Miami-Oct-21-350x197.jpg",
+        "description": {
+          "en": "incl. $14.32 Fee Made in Miami is an exclusive opening-night dinner celebrating",
+          "es": "incl. Tarifa de $14.32 Made in Miami es una cena exclusiva de apertura celebrando",
+          "pt": "incl. Taxa de $14.32 Made in Miami é um jantar exclusivo de abertura celebrando",
+          "fr": "incl. Frais de $14.32 Made in Miami est un dîner d'ouverture exclusif célébrant"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8405336,
+        "lng": -80.1845274,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787661507987_ux9z",
+        "title": {
+          "en": "Gimme Gimme Disco 10/2/26",
+          "es": "Gimme Gimme Disco 10/2/26",
+          "pt": "Gimme Gimme Disco 10/2/26",
+          "fr": "Gimme Gimme Disco 10/2/26"
+        },
+        "date": "2026-10-02",
+        "venue": "Lincoln's Beard Brewing Co.",
+        "address": "7360 SW 41st St, Miami, Florida, 33155",
+        "url": "https://www.soulofmiami.org/2026/08/24/gimme-gimme-disco-10-2-26/",
+        "free": false,
+        "price": "$23",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/159395-350x175.jpeg",
+        "description": {
+          "en": "If you can’t get enough of ABBA, boy do we have THE dance party for you! We are",
+          "es": "¡Si no puedes tener suficiente de ABBA, tenemos LA fiesta de baile para ti! Somos",
+          "pt": "Se você não consegue ter o suficiente de ABBA, temos A festa de dança para você! Somos",
+          "fr": "Si vous n'en avez jamais assez d'ABBA, nous avons LA soirée dansante pour vous! Nous sommes"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.732096,
+        "lng": -80.3143531,
+        "category": "community"
+      },
+      {
+        "id": "tm_1787661508498_whkt",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-25",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1787661508498_amf2",
+        "title": {
+          "en": "Miami Marlins vs. Boston Red Sox",
+          "es": "Miami Marlins vs. Boston Red Sox",
+          "pt": "Miami Marlins vs. Boston Red Sox",
+          "fr": "Miami Marlins vs. Boston Red Sox"
+        },
+        "date": "2026-08-25",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa06&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1787661508498_qwqw",
+        "title": {
+          "en": "Emmit Fenn",
+          "es": "Emmit Fenn",
+          "pt": "Emmit Fenn",
+          "fr": "Emmit Fenn"
+        },
+        "date": "2026-09-04",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7P44U&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d29/ebb73cef-d030-4fbc-b747-9d93fdd09d29_1588121_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 21:00 · ZeyZey Miami",
+          "es": "Música · Otro · Comienza 21:00 · ZeyZey Miami",
+          "pt": "Música · Outro · Começa 21:00 · ZeyZey Miami",
+          "fr": "Musique · Autre · Commence 21:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
+      },
+      {
+        "id": "tm_1787661508498_3cqp",
+        "title": {
+          "en": "Kasbo ???Labyrinth Tour??? (Dj Set)",
+          "es": "Kasbo «Labyrinth Tour» (DJ Set)",
+          "pt": "Kasbo «Labyrinth Tour» (DJ Set)",
+          "fr": "Kasbo «Labyrinth Tour» (DJ Set)"
+        },
+        "date": "2026-09-06",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70Kup&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ae8/099387ad-12c0-4834-b38c-5a1dbd0bdae8_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 19:00 · ZeyZey Miami",
+          "es": "Música · Otro · Comienza 19:00 · ZeyZey Miami",
+          "pt": "Música · Outro · Começa 19:00 · ZeyZey Miami",
+          "fr": "Musique · Autre · Commence 19:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
+      },
+      {
+        "id": "tm_1787661508498_1op8",
+        "title": {
+          "en": "Satin Jackets",
+          "es": "Satin Jackets",
+          "pt": "Satin Jackets",
+          "fr": "Satin Jackets"
+        },
+        "date": "2026-09-12",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PEAZ&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 22:00 · ZeyZey Miami",
+          "es": "Música · Otro · Comienza 22:00 · ZeyZey Miami",
+          "pt": "Música · Outro · Começa 22:00 · ZeyZey Miami",
+          "fr": "Musique · Autre · Commence 22:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
+      },
+      {
+        "id": "cp_1787661509257_r540",
+        "title": {
+          "en": "City of Opa-locka | R&B N THE PARK",
+          "es": "Ciudad de Opa-locka | R&B EN EL PARQUE",
+          "pt": "Cidade de Opa-locka | R&B NO PARQUE",
+          "fr": "Ville d'Opa-locka | R&B DANS LE PARC"
+        },
+        "date": "2026-09-05",
+        "venue": "Sherbondy Village Community Center",
+        "address": "215 N Perviz Ave  Opa-locka FL 33054",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Join us for an unforgettable evening of music, memories, and community at the Opa-locka Reunion: R&B in the Park – Reunion Edition! Hosted by Commissioner Natasha L. Ervin, this special event will feature live music by Two Fresh Ent and Friends as we celebrate our community, our history, and our pride.  📅 Saturday, September 5  🕔 5:00 PM – 11:00 PM  📍 Sherbondy Park, 380 Bahman Ave  Bring your ",
+          "es": "¡Únete a nosotros para una velada inolvidable de música, recuerdos y comunidad en la Reunión de Opa-locka: R&B en el Parque – Edición Reunión! Presentado por la Comisionada Natasha L. Ervin, este evento especial contará con música en vivo de Two Fresh Ent y Amigos mientras celebramos nuestra comunidad, nuestra historia y nuestro orgullo. 📅 Sábado, 5 de septiembre 🕔 17:00 – 23:00 📍 Parque Sherbondy, 380 Bahman Ave",
+          "pt": "Junte-se a nós para uma noite inesquecível de música, memórias e comunidade na Reunião de Opa-locka: R&B no Parque – Edição Reunião! Apresentado pela Comissária Natasha L. Ervin, este evento especial contará com música ao vivo de Two Fresh Ent e Amigos enquanto celebramos nossa comunidade, nossa história e nosso orgulho. 📅 Sábado, 5 de setembro 🕔 17:00 – 23:00 📍 Parque Sherbondy, 380 Bahman Ave",
+          "fr": "Rejoignez-nous pour une soirée inoubliable de musique, de souvenirs et de communauté à la Réunion d'Opa-locka : R&B au Parc – Édition Réunion ! Présenté par la Commissaire Natasha L. Ervin, cet événement spécial proposera de la musique en direct de Two Fresh Ent et Amis tandis que nous célébrons notre communauté, notre histoire et notre fierté. 📅 Samedi 5 septembre 🕔 17:00 – 23:00 📍 Parc Sherbondy, 380 Bahman Ave"
+        },
+        "source": "Opa-locka",
+        "category": "music"
       }
     ]
   },
@@ -4368,7 +4522,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-24T12:39:51.155Z",
+    "fetchedAt": "2026-08-25T12:38:51.460Z",
     "items": []
   }
 }
