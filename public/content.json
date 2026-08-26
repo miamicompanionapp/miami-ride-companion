@@ -1,58 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-25T12:38:52.237Z",
+    "lastUpdated": "2026-08-26T12:42:25.167Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-25T12:38:51.459Z",
+    "fetchedAt": "2026-08-26T12:42:24.750Z",
     "current": {
-      "temp_f": 83,
-      "feels_f": 95,
+      "temp_f": 80,
+      "feels_f": 82,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 83,
-      "wind_mph": 3,
-      "rain_chance": 8,
-      "weathercode": 0
+      "humidity": 78,
+      "wind_mph": 17,
+      "rain_chance": 33,
+      "weathercode": 2
     },
     "forecast": [
       {
-        "date": "2026-08-25",
-        "high_f": 90,
-        "low_f": 78,
-        "weathercode": 3,
-        "rain_chance": 8,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-26",
-        "high_f": 87,
-        "low_f": 75,
-        "weathercode": 63,
-        "rain_chance": 36,
+        "high_f": 89,
+        "low_f": 73,
+        "weathercode": 65,
+        "rain_chance": 33,
         "description": {
-          "en": "Moderate rain",
-          "es": "Lluvia moderada",
-          "pt": "Chuva moderada",
-          "fr": "Pluie modérée"
+          "en": "Heavy rain",
+          "es": "Lluvia intensa",
+          "pt": "Chuva forte",
+          "fr": "Pluie forte"
         }
       },
       {
         "date": "2026-08-27",
+        "high_f": 90,
+        "low_f": 76,
+        "weathercode": 81,
+        "rain_chance": 31,
+        "description": {
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
+        }
+      },
+      {
+        "date": "2026-08-28",
         "high_f": 89,
-        "low_f": 80,
+        "low_f": 81,
         "weathercode": 51,
-        "rain_chance": 39,
+        "rain_chance": 27,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -61,24 +61,24 @@
         }
       },
       {
-        "date": "2026-08-28",
+        "date": "2026-08-29",
         "high_f": 89,
         "low_f": 85,
-        "weathercode": 95,
-        "rain_chance": 25,
+        "weathercode": 81,
+        "rain_chance": 59,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
         }
       },
       {
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "high_f": 89,
-        "low_f": 84,
+        "low_f": 85,
         "weathercode": 95,
-        "rain_chance": 41,
+        "rain_chance": 40,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -90,147 +90,147 @@
     "hourly": [
       {
         "hour": "08:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "09:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "10:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 87,
-        "weathercode": 0,
+        "temp_f": 82,
+        "weathercode": 3,
         "rain_chance": 8
       },
       {
+        "hour": "09:00",
+        "temp_f": 82,
+        "weathercode": 2,
+        "rain_chance": 11
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 11
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 12
+      },
+      {
         "hour": "12:00",
-        "temp_f": 90,
-        "weathercode": 0,
-        "rain_chance": 5
+        "temp_f": 89,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "13:00",
-        "temp_f": 90,
-        "weathercode": 2,
-        "rain_chance": 3
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "14:00",
         "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 2
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "15:00",
-        "temp_f": 90,
+        "temp_f": 89,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 12
       },
       {
         "hour": "16:00",
         "temp_f": 89,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 12
       },
       {
         "hour": "17:00",
-        "temp_f": 89,
+        "temp_f": 88,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 13
       },
       {
         "hour": "18:00",
         "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 16
       },
       {
         "hour": "19:00",
         "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 33
       },
       {
         "hour": "20:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 85,
+        "weathercode": 51,
+        "rain_chance": 27
       },
       {
         "hour": "21:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 4
+        "temp_f": 81,
+        "weathercode": 51,
+        "rain_chance": 14
       },
       {
         "hour": "22:00",
-        "temp_f": 82,
+        "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 10
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 7
+        "temp_f": 73,
+        "weathercode": 65,
+        "rain_chance": 16
       },
       {
         "hour": "00:00",
-        "temp_f": 80,
-        "weathercode": 3,
+        "temp_f": 76,
+        "weathercode": 81,
         "rain_chance": 8
       },
       {
         "hour": "01:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 8
       },
       {
         "hour": "02:00",
-        "temp_f": 79,
-        "weathercode": 2,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 10
       },
       {
         "hour": "03:00",
-        "temp_f": 78,
-        "weathercode": 1,
-        "rain_chance": 5
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "04:00",
-        "temp_f": 75,
-        "weathercode": 63,
-        "rain_chance": 18
+        "temp_f": 79,
+        "weathercode": 2,
+        "rain_chance": 7
       },
       {
         "hour": "05:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 15
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 6
       },
       {
         "hour": "06:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 79,
+        "weathercode": 2,
+        "rain_chance": 9
       },
       {
         "hour": "07:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 80,
+        "weathercode": 1,
+        "rain_chance": 10
       }
     ]
   },
@@ -1491,32 +1491,6 @@
         "lat": 25.674423,
         "lng": -80.3740442,
         "category": "sports"
-      },
-      {
-        "id": "tm_1785071436814_sgjk",
-        "title": {
-          "en": "Goo Goo Dolls - Summer 2026",
-          "es": "Goo Goo Dolls - Verano 2026",
-          "pt": "Goo Goo Dolls - Verão 2026",
-          "fr": "Goo Goo Dolls - Été 2026"
-        },
-        "date": "2026-08-25",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgoo-goo-dolls-summer-2026-hollywood-florida-08-25-2026%2Fevent%2F0D006384C303B3E2&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/37b/aa20723c-d054-4521-914f-ccad35fa437b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Rock · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · Rock · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · Rock · Commence 20:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
       },
       {
         "id": "tm_1785071436814_2hwr",
@@ -3467,58 +3441,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787661508498_whkt",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-25",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 11:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1787661508498_amf2",
-        "title": {
-          "en": "Miami Marlins vs. Boston Red Sox",
-          "es": "Miami Marlins vs. Boston Red Sox",
-          "pt": "Miami Marlins vs. Boston Red Sox",
-          "fr": "Miami Marlins vs. Boston Red Sox"
-        },
-        "date": "2026-08-25",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa06&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
         "id": "tm_1787661508498_qwqw",
         "title": {
           "en": "Emmit Fenn",
@@ -3619,6 +3541,162 @@
         },
         "source": "Opa-locka",
         "category": "music"
+      },
+      {
+        "id": "rss_1787748121091_wszn",
+        "title": {
+          "en": "The Poppy Project Pop-Up Living Garden Ribbon Cutting at Galleria Fort Lauderdale 9/10/26",
+          "es": "Corte de Cinta del Jardín Vivo Pop-Up del Proyecto Poppy en Galleria Fort Lauderdale 9/10/26",
+          "pt": "Corte de Fita do Jardim Vivo Pop-Up do Projeto Poppy na Galleria Fort Lauderdale 9/10/26",
+          "fr": "Inauguration du Jardin Vivant Pop-Up du Projet Poppy à la Galleria Fort Lauderdale 9/10/26"
+        },
+        "date": "2026-09-10",
+        "venue": "Galleria Fort Lauderdale",
+        "address": "2414 East Sunrise Blvd., Fort Lauderdale, Florida, 33304",
+        "url": "https://www.soulofmiami.org/2026/08/25/the-poppy-project-pop-up-living-garden-ribbon-cutting-at-galleria-fort-lauderdale-9-10-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Ribbon-Cutting-Invite-FINAL68-350x437.jpg",
+        "description": {
+          "en": "Galleria Fort Lauderdale will host a special ribbon cutting",
+          "es": "Galleria Fort Lauderdale organizará un corte de cinta especial",
+          "pt": "Galleria Fort Lauderdale realizará um corte de fita especial",
+          "fr": "Galleria Fort Lauderdale accueillera une inauguration spéciale"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1369729,
+        "lng": -80.1135854,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787748121091_qkvw",
+        "title": {
+          "en": "Sweet Affair @ Serafina in the Miami Worldcenter 9/4/26",
+          "es": "Sweet Affair @ Serafina en Miami Worldcenter 9/4/26",
+          "pt": "Sweet Affair @ Serafina no Miami Worldcenter 9/4/26",
+          "fr": "Sweet Affair @ Serafina au Miami Worldcenter 9/4/26"
+        },
+        "date": "2026-09-04",
+        "venue": "Serafina",
+        "address": "652 NE 2nd Ave, Miami, Florida, 33132",
+        "url": "https://www.soulofmiami.org/2026/08/25/sweet-affair-serafina-in-the-miami-worldcenter-9-4-26/",
+        "free": false,
+        "price": "$23",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/9f974cf2-2d79-446f-8726-00241aa71ca6-1-333x500.jpg",
+        "description": {
+          "en": "Some nights are meant to be experienced. The Sweet Affair is an intimate evening designed around",
+          "es": "Algunas noches están hechas para ser vividas. El Sweet Affair es una velada íntima diseñada alrededor de",
+          "pt": "Algumas noites são feitas para ser vividas. O Sweet Affair é uma noite íntima projetada em torno de",
+          "fr": "Certaines nuits sont faites pour être vécues. Le Sweet Affair est une soirée intime conçue autour de"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7807606,
+        "lng": -80.1905859,
+        "category": "community"
+      },
+      {
+        "id": "rss_1787748121091_h0zu",
+        "title": {
+          "en": "Prince St. Pizza x HOKA Run Club 8/29/26",
+          "es": "Prince St. Pizza x HOKA Run Club 8/29/26",
+          "pt": "Prince St. Pizza x HOKA Run Club 8/29/26",
+          "fr": "Prince St. Pizza x HOKA Run Club 8/29/26"
+        },
+        "date": "2026-08-29",
+        "venue": "HOKA Store",
+        "address": "701 Lincoln Rd, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/08/25/prince-st-pizza-x-hoka-run-club-8-29-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Copy-of-Prince-St-Pizza-spread-11-350x233.jpg",
+        "description": {
+          "en": "over to the Prince St. Pizza x HOKA Run Club on Saturday, August 29th for a 5K",
+          "es": "Únete al Prince St. Pizza x HOKA Run Club el sábado, 29 de agosto para una carrera de 5K",
+          "pt": "Junte-se ao Prince St. Pizza x HOKA Run Club no sábado, 29 de agosto para uma corrida de 5K",
+          "fr": "Rejoignez le Prince St. Pizza x HOKA Run Club samedi 29 août pour une course de 5K"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7909617,
+        "lng": -80.1356672,
+        "category": "sports"
+      },
+      {
+        "id": "tm_1787748121555_1er9",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte Es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte É Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-26",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familiar · Comienza 11:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 11:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 11:00 · Centre de Congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1787748121555_fjsr",
+        "title": {
+          "en": "Miami Marlins vs. Boston Red Sox",
+          "es": "Miami Marlins vs. Boston Red Sox",
+          "pt": "Miami Marlins vs. Boston Red Sox",
+          "fr": "Miami Marlins vs. Boston Red Sox"
+        },
+        "date": "2026-08-26",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1787748121555_bhb9",
+        "title": {
+          "en": "WITCH + Jacuzzi Boys",
+          "es": "WITCH + Jacuzzi Boys",
+          "pt": "WITCH + Jacuzzi Boys",
+          "fr": "WITCH + Jacuzzi Boys"
+        },
+        "date": "2026-09-15",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PFAt&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/151/bb8f3f76-c171-4351-b8d1-be3e93d06151_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 19:00 · ZeyZey Miami",
+          "es": "Música · Otros · Comienza 19:00 · ZeyZey Miami",
+          "pt": "Música · Outros · Começa 19:00 · ZeyZey Miami",
+          "fr": "Musique · Autres · Commence 19:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
       }
     ]
   },
@@ -4522,7 +4600,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-25T12:38:51.460Z",
+    "fetchedAt": "2026-08-26T12:42:24.750Z",
     "items": []
   }
 }
