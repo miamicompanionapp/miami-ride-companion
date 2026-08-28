@@ -1,32 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-27T21:40:00.973Z",
+    "lastUpdated": "2026-08-28T21:41:15.718Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-27T21:40:00.207Z",
+    "fetchedAt": "2026-08-28T21:41:14.844Z",
     "current": {
-      "temp_f": 89,
-      "feels_f": 98,
+      "temp_f": 90,
+      "feels_f": 97,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 65,
-      "wind_mph": 3,
-      "rain_chance": 13,
-      "weathercode": 1
+      "humidity": 62,
+      "wind_mph": 8,
+      "rain_chance": 21,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-08-27",
+        "date": "2026-08-28",
         "high_f": 91,
-        "low_f": 78,
+        "low_f": 79,
         "weathercode": 3,
-        "rain_chance": 13,
+        "rain_chance": 21,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -35,24 +35,11 @@
         }
       },
       {
-        "date": "2026-08-28",
-        "high_f": 90,
-        "low_f": 76,
-        "weathercode": 2,
-        "rain_chance": 20,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-08-29",
-        "high_f": 89,
-        "low_f": 78,
+        "high_f": 88,
+        "low_f": 79,
         "weathercode": 51,
-        "rain_chance": 33,
+        "rain_chance": 20,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -63,9 +50,22 @@
       {
         "date": "2026-08-30",
         "high_f": 89,
-        "low_f": 85,
-        "weathercode": 95,
+        "low_f": 77,
+        "weathercode": 81,
         "rain_chance": 36,
+        "description": {
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
+        }
+      },
+      {
+        "date": "2026-08-31",
+        "high_f": 90,
+        "low_f": 86,
+        "weathercode": 95,
+        "rain_chance": 58,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -74,16 +74,16 @@
         }
       },
       {
-        "date": "2026-08-31",
-        "high_f": 90,
+        "date": "2026-09-01",
+        "high_f": 89,
         "low_f": 85,
-        "weathercode": 95,
-        "rain_chance": 44,
+        "weathercode": 51,
+        "rain_chance": 42,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       }
     ],
@@ -92,145 +92,145 @@
         "hour": "17:00",
         "temp_f": 90,
         "weathercode": 0,
-        "rain_chance": 13
+        "rain_chance": 3
       },
       {
         "hour": "18:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 80,
-        "weathercode": 2,
-        "rain_chance": 8
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 6
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 6
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 78,
+        "temp_f": 89,
         "weathercode": 0,
         "rain_chance": 4
       },
       {
-        "hour": "23:00",
-        "temp_f": 78,
+        "hour": "19:00",
+        "temp_f": 87,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 5
       },
       {
-        "hour": "00:00",
-        "temp_f": 77,
+        "hour": "20:00",
+        "temp_f": 85,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 5
       },
       {
-        "hour": "01:00",
-        "temp_f": 76,
+        "hour": "21:00",
+        "temp_f": 83,
+        "weathercode": 0,
+        "rain_chance": 4
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 82,
         "weathercode": 0,
         "rain_chance": 3
       },
       {
-        "hour": "02:00",
-        "temp_f": 76,
+        "hour": "23:00",
+        "temp_f": 82,
         "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 83,
+        "weathercode": 3,
         "rain_chance": 2
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 81,
+        "weathercode": 1,
+        "rain_chance": 5
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "03:00",
-        "temp_f": 76,
+        "temp_f": 80,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 4
       },
       {
         "hour": "04:00",
-        "temp_f": 76,
-        "weathercode": 2,
-        "rain_chance": 2
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "05:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 77,
+        "temp_f": 80,
         "weathercode": 1,
         "rain_chance": 7
       },
       {
-        "hour": "07:00",
-        "temp_f": 77,
+        "hour": "06:00",
+        "temp_f": 79,
         "weathercode": 0,
-        "rain_chance": 13
+        "rain_chance": 12
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "08:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 20
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "09:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 9
+        "temp_f": 85,
+        "weathercode": 2,
+        "rain_chance": 15
       },
       {
         "hour": "10:00",
         "temp_f": 87,
-        "weathercode": 0,
-        "rain_chance": 7
+        "weathercode": 1,
+        "rain_chance": 19
       },
       {
         "hour": "11:00",
-        "temp_f": 87,
-        "weathercode": 2,
-        "rain_chance": 6
+        "temp_f": 88,
+        "weathercode": 1,
+        "rain_chance": 20
       },
       {
         "hour": "12:00",
-        "temp_f": 89,
-        "weathercode": 1,
-        "rain_chance": 7
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 18
       },
       {
         "hour": "13:00",
-        "temp_f": 89,
-        "weathercode": 2,
-        "rain_chance": 6
+        "temp_f": 82,
+        "weathercode": 51,
+        "rain_chance": 16
       },
       {
         "hour": "14:00",
-        "temp_f": 89,
-        "weathercode": 1,
-        "rain_chance": 6
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "15:00",
-        "temp_f": 90,
-        "weathercode": 1,
-        "rain_chance": 10
+        "temp_f": 88,
+        "weathercode": 2,
+        "rain_chance": 16
       },
       {
         "hour": "16:00",
-        "temp_f": 90,
-        "weathercode": 0,
-        "rain_chance": 8
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 17
       }
     ]
   },
@@ -3544,58 +3544,6 @@
         "lng": -80.188797
       },
       {
-        "id": "rss_1787866758726_cum1",
-        "title": {
-          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 8/27/26",
-          "es": "Damas Que Almuerzan: Espectáculo de Drag el Jueves por la Tarde 8/27/26",
-          "pt": "Damas Que Almoçam: Show de Drag na Quinta-Feira à Tarde 8/27/26",
-          "fr": "Dames qui Déjeunent: Spectacle de Drag Jeudi Après-midi 8/27/26"
-        },
-        "date": "2026-08-27",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/27/ladies-who-lunch-thursday-afternoon-drag-show-8-27-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/tmpwiyspbfh-281x500.jpg",
-        "description": {
-          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los jueves son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
-          "pt": "Quintas-feiras são para os rapazes que brunch lindamente em Palace South Beach. Junte-se a nós",
-          "fr": "Les jeudis sont pour les garçons qui brunch magnifiquement à Palace South Beach. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
-      },
-      {
-        "id": "rss_1787866758726_szcq",
-        "title": {
-          "en": "Cafe Con Leche: Thursday Night Latin Drag Revue 8/27/26",
-          "es": "Café Con Leche: Revista de Drag Latino el Jueves por la Noche 8/27/26",
-          "pt": "Café Com Leite: Revista de Drag Latino na Quinta-Feira à Noite 8/27/26",
-          "fr": "Café Con Leche: Revue de Drag Latino Jeudi Soir 8/27/26"
-        },
-        "date": "2026-08-27",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/27/cafe-con-leche-thursday-night-latin-drag-revue-8-27-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/tmp6v3uqybk-281x500.jpg",
-        "description": {
-          "en": "Turn up the flavor and the fantasy at Palace South Beach for Café",
-          "es": "Sube el sabor y la fantasía en Palace South Beach para Café",
-          "pt": "Aumente o sabor e a fantasia em Palace South Beach para Café",
-          "fr": "Augmentez la saveur et la fantaisie au Palace South Beach pour Café"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "community"
-      },
-      {
         "id": "rss_1787866758726_n9s3",
         "title": {
           "en": "Drag Madness: Friday Night Drag Cabaret 8/28/26",
@@ -3620,32 +3568,6 @@
         "lat": 25.7812488,
         "lng": -80.130772,
         "category": "community"
-      },
-      {
-        "id": "tm_1787866759403_5mxp",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-27",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 17:45 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 17:45 · Centro de Convenciones Mana Wynwood",
-          "pt": "Miscelânea · Família · Começa 17:45 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 17:45 · Centre de Conférences Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
       },
       {
         "id": "tm_1787866759403_u4l2",
@@ -3800,6 +3722,84 @@
         },
         "source": "North Miami Beach",
         "category": "community"
+      },
+      {
+        "id": "tm_1787953252008_6zil",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-28",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 17:45 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 17:45 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 17:45 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 17:45 · Centre de Congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1787953252008_5hzm",
+        "title": {
+          "en": "French Montana",
+          "es": "French Montana",
+          "pt": "French Montana",
+          "fr": "French Montana"
+        },
+        "date": "2026-08-28",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffrench-montana-liv-nightclub-miami-tickets%2F15022563&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b26/a93dc257-c75d-4738-9894-e869c588bb26_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier asistente que no pueda presentar una identificación válida que indique que tiene al menos 21 años no será admitido y no será elegible para reembolso. · Comienza 23:30 · Discoteca LIV Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso que não puder apresentar uma identificação válida indicando que tem pelo menos 21 anos não será admitido e não será elegível para reembolso. · Começa 23:30 · Boate LIV Miami",
+          "fr": "Cet événement est réservé aux plus de 21 ans. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis et ne sera pas éligible à un remboursement. · Commence 23:30 · Discothèque LIV Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1787953252008_3u94",
+        "title": {
+          "en": "Cheap Trills Musical Improv",
+          "es": "Cheap Trills Improvisación Musical",
+          "pt": "Cheap Trills Improvisação Musical",
+          "fr": "Cheap Trills Improvisation Musicale"
+        },
+        "date": "2026-08-29",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheap-trills-musical-improv-just-the-funny-tickets%2F14897743&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Cheap Trills Musical ImprovNothing beats a Cheap Trills show! Its a musical. Its a variety show. Its improv comedy. Its all of that and much more! Join the talented cast of Just The Funny and be prepared for a wild, hilarious ride.Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as close as possible, but may have to split large",
+          "es": "¡Nada supera un show de Cheap Trills! Es un musical. Es un show de variedades. Es comedia improvisada. ¡Es todo eso y mucho más! Únete al talentoso elenco de Just The Funny y prepárate para un viaje salvaje e hilarante. Los boletos son POR PERSONA para este show. Sentaremos grupos juntos en mesas. Haremos todo lo posible para sentar grupos grandes lo más cerca posible.",
+          "pt": "Nada supera um show de Cheap Trills! É um musical. É um show de variedades. É comédia de improvisação. É tudo isso e muito mais! Junte-se ao elenco talentoso de Just The Funny e prepare-se para um passeio selvagem e hilariante. Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas. Faremos o possível para sentar grupos maiores o mais perto possível.",
+          "fr": "Rien ne vaut un spectacle de Cheap Trills! C'est une comédie musicale. C'est un spectacle de variétés. C'est de la comédie d'improvisation. C'est tout cela et bien plus encore! Rejoignez le casting talentueux de Just The Funny et préparez-vous pour un voyage sauvage et hilarant. Les billets sont PAR PERSONNE pour ce spectacle. Nous assiérons les groupes ensemble à des tables. Nous ferons de notre mieux pour asseoir les grands groupes aussi près que possible."
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
       }
     ]
   },
@@ -4703,7 +4703,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-27T21:40:00.208Z",
+    "fetchedAt": "2026-08-28T21:41:14.844Z",
     "items": []
   }
 }
