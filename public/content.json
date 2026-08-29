@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-28T21:41:15.718Z",
+    "lastUpdated": "2026-08-29T16:07:10.851Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-28T21:41:14.844Z",
+    "fetchedAt": "2026-08-29T16:07:10.417Z",
     "current": {
-      "temp_f": 90,
-      "feels_f": 97,
+      "temp_f": 83,
+      "feels_f": 92,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 62,
-      "wind_mph": 8,
-      "rain_chance": 21,
-      "weathercode": 0
+      "humidity": 84,
+      "wind_mph": 7,
+      "rain_chance": 58,
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-08-28",
-        "high_f": 91,
-        "low_f": 79,
-        "weathercode": 3,
-        "rain_chance": 21,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-29",
-        "high_f": 88,
+        "high_f": 89,
         "low_f": 79,
-        "weathercode": 51,
-        "rain_chance": 20,
+        "weathercode": 80,
+        "rain_chance": 58,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-08-30",
-        "high_f": 89,
-        "low_f": 77,
-        "weathercode": 81,
-        "rain_chance": 36,
+        "high_f": 86,
+        "low_f": 76,
+        "weathercode": 53,
+        "rain_chance": 27,
         "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-08-31",
         "high_f": 90,
-        "low_f": 86,
+        "low_f": 77,
         "weathercode": 95,
-        "rain_chance": 58,
+        "rain_chance": 49,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-09-01",
+        "high_f": 90,
+        "low_f": 85,
+        "weathercode": 95,
+        "rain_chance": 49,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-09-02",
         "high_f": 89,
         "low_f": 85,
-        "weathercode": 51,
-        "rain_chance": 42,
+        "weathercode": 95,
+        "rain_chance": 64,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "17:00",
-        "temp_f": 90,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 87,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 81,
-        "weathercode": 1,
-        "rain_chance": 5
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 7
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 80,
-        "weathercode": 1,
-        "rain_chance": 7
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 12
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 15
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 15
-      },
-      {
-        "hour": "09:00",
-        "temp_f": 85,
-        "weathercode": 2,
-        "rain_chance": 15
-      },
-      {
-        "hour": "10:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 19
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 88,
-        "weathercode": 1,
-        "rain_chance": 20
-      },
-      {
         "hour": "12:00",
-        "temp_f": 88,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 18
+        "rain_chance": 58
       },
       {
         "hour": "13:00",
-        "temp_f": 82,
-        "weathercode": 51,
-        "rain_chance": 16
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 36
       },
       {
         "hour": "14:00",
-        "temp_f": 82,
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 33
       },
       {
         "hour": "15:00",
-        "temp_f": 88,
-        "weathercode": 2,
-        "rain_chance": 16
+        "temp_f": 89,
+        "weathercode": 3,
+        "rain_chance": 24
       },
       {
         "hour": "16:00",
+        "temp_f": 89,
+        "weathercode": 3,
+        "rain_chance": 14
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 13
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 12
+      },
+      {
+        "hour": "19:00",
         "temp_f": 84,
         "weathercode": 3,
+        "rain_chance": 12
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 13
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 13
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 79,
+        "weathercode": 80,
+        "rain_chance": 15
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 79,
+        "weathercode": 53,
+        "rain_chance": 10
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 11
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 11
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 11
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 13
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 12
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 77,
+        "weathercode": 1,
         "rain_chance": 17
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 9
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 7
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 11
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 77,
+        "weathercode": 53,
+        "rain_chance": 23
       }
     ]
   },
@@ -1468,110 +1468,6 @@
         "category": "sports"
       },
       {
-        "id": "tm_1785071436814_2hwr",
-        "title": {
-          "en": "Ordinary Boys: Tribute to The Smiths & Morrissey w/ New Dawn Fades",
-          "es": "Ordinary Boys: Tributo a The Smiths & Morrissey con New Dawn Fades",
-          "pt": "Ordinary Boys: Tributo a The Smiths & Morrissey com New Dawn Fades",
-          "fr": "Ordinary Boys: Tribut aux Smiths & Morrissey avec New Dawn Fades"
-        },
-        "date": "2026-08-28",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fordinary-boys-tribute-to-the-smiths-ft-lauderdale-florida-08-28-2026%2Fevent%2F0D0064CE08A6E0BC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/49e/5602545d-4f74-4c12-9545-fd1888fba49e_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Ordinary Boys: Tribute to The Smiths & Morrissey will be coming to Revolution Live on Friday, August 28th with special guests New Dawn Fades: Tribute to Joy Division. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "Ordinary Boys: Tributo a The Smiths & Morrissey llegará a Revolution Live el viernes 28 de agosto con artistas especiales New Dawn Fades: Tributo a Joy Division. Este evento es para todas las edades. Las puertas abren a las 7 p.m. El show comienza a las 8 p.m. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
-          "pt": "Ordinary Boys: Tributo a The Smiths & Morrissey virá ao Revolution Live na sexta-feira, 28 de agosto, com convidados especiais New Dawn Fades: Tributo a Joy Division. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "Ordinary Boys: Tribut aux Smiths & Morrissey viendra au Revolution Live vendredi 28 août avec les invités spéciaux New Dawn Fades: Tribut à Joy Division. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien sont sujets à modification sans préavis. · Commence 19:00 · Revolution Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1785071436814_76yu",
-        "title": {
-          "en": "Cheerleader Roadkill in Miami",
-          "es": "Cheerleader Roadkill en Miami",
-          "pt": "Cheerleader Roadkill em Miami",
-          "fr": "Cheerleader Roadkill à Miami"
-        },
-        "date": "2026-08-28",
-        "venue": "Lincoln's Beard",
-        "address": "7360 SW 41st St. , Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheerleader-roadkill-in-miami-lincolns-beard-tickets%2F14209664&utm_medium=affiliate",
-        "free": false,
-        "price": "$23",
-        "image": "https://s1.ticketm.net/dam/c/797/5e693c26-2881-4776-8f0c-3aa94bfa3797_106511_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Alternative · Starts 19:00 · Lincoln's Beard",
-          "es": "Música · Alternativo · Comienza 19:00 · Lincoln's Beard",
-          "pt": "Música · Alternativo · Começa 19:00 · Lincoln's Beard",
-          "fr": "Musique · Alternatif · Commence 19:00 · Lincoln's Beard"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.7321134,
-        "lng": -80.3143626
-      },
-      {
-        "id": "tm_1785071436814_1bwn",
-        "title": {
-          "en": "The Ultimate Dance and Freestyle Experience",
-          "es": "La Experiencia Definitiva de Danza y Freestyle",
-          "pt": "A Experiência Definitiva de Dança e Freestyle",
-          "fr": "L'Expérience Ultime de Danse et Freestyle"
-        },
-        "date": "2026-08-28",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-ultimate-dance-and-freestyle-experience-hollywood-florida-08-28-2026%2Fevent%2F0D006488C413CF9F&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/565/8d037919-4bf7-4531-a1ec-e26e6fcab565_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Live Performances by: Expose, Jody Watley, Samanta Fox, Safire, Timmy T, Trinere, Turbo B of Snap, Noel, 69 Boyz, No Mercy, Janice Robinson, Voice in Fashion and Terry Moran. Lineup Subject to Change · Starts 20:00 · Hard Rock Live",
-          "es": "Actuaciones en vivo de: Expose, Jody Watley, Samanta Fox, Safire, Timmy T, Trinere, Turbo B de Snap, Noel, 69 Boyz, No Mercy, Janice Robinson, Voice in Fashion y Terry Moran. Alineación sujeta a cambios · Comienza 20:00 · Hard Rock Live",
-          "pt": "Apresentações ao vivo de: Expose, Jody Watley, Samanta Fox, Safire, Timmy T, Trinere, Turbo B do Snap, Noel, 69 Boyz, No Mercy, Janice Robinson, Voice in Fashion e Terry Moran. Programação sujeita a alterações · Começa 20:00 · Hard Rock Live",
-          "fr": "Performances en direct par: Expose, Jody Watley, Samanta Fox, Safire, Timmy T, Trinere, Turbo B de Snap, Noel, 69 Boyz, No Mercy, Janice Robinson, Voice in Fashion et Terry Moran. Programmation sujette à modification · Commence 20:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1785162175986_3xtw",
-        "title": {
-          "en": "Devo",
-          "es": "Devo",
-          "pt": "Devo",
-          "fr": "Devo"
-        },
-        "date": "2026-08-28",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdevo-miami-beach-florida-08-28-2026%2Fevent%2F0D006482EB0A833D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/985/3481fb3f-3126-43b5-acd3-61d3ef224985_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Las entradas GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas son de pie y sentadas y se asignan por orden de llegada. Tenga en cuenta que una vez que la capacidad de un área se haya alcanzado, se le limitará a otras áreas abiertas. · Comienza a las 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Os ingressos GA significam Admissão Geral. Isso significa que não há assentos atribuídos. Essas áreas são em pé e sentadas e são por ordem de chegada. Saiba que, uma vez que a capacidade de uma área for atingida, você será limitado a outras áreas abertas. · Começa às 20h00 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de sièges assignés. Ces zones sont debout et assises et se font selon le principe du premier arrivé, premier servi. Sachez qu'une fois que la capacité d'une zone est atteinte, vous serez limité à d'autres zones ouvertes. · Commence à 20h00 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.792917,
-        "lng": -80.13314
-      },
-      {
         "id": "tm_1785333592666_t7zy",
         "title": {
           "en": "Brooks & Dunn",
@@ -1645,32 +1541,6 @@
           "fr": "Commodore poursuit sa Série de Lecture d'Été Books & Books"
         },
         "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "rss_1785589752800_u5m6",
-        "title": {
-          "en": "Toyota of Hollywood and CBS Miami Team Up to Host Open Casting Call for The Price Is Right 8/28/26",
-          "es": "Toyota of Hollywood y CBS Miami se unen para realizar un casting abierto de The Price Is Right 8/28/26",
-          "pt": "Toyota of Hollywood e CBS Miami se unem para realizar uma seleção aberta de The Price Is Right 8/28/26",
-          "fr": "Toyota of Hollywood et CBS Miami s'associent pour organiser un casting ouvert de The Price Is Right 8/28/26"
-        },
-        "date": "2026-08-28",
-        "venue": "Toyota of Hollywood",
-        "address": "1841 N. State Rd. 7, Hollywood, Florida, 33021",
-        "url": "https://www.soulofmiami.org/2026/07/31/toyota-of-hollywood-and-cbs-miami-team-up-to-host-open-casting-call-for-the-price-is-right-8-28-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/The-Price-is-Right-TOH-350x197.png",
-        "description": {
-          "en": "Toyota of Hollywood and CBS Miami Team Up to Host Open Casting Call for The Price Is Right Friday, 08/28/2026-, 10:00 pm-01:00 pm Toyota of Hollywood 1841 N. State Rd. 7, Hollywood, Florida, 33021 Website Cost: FREE Come on downRead More Toyota of Hollywood and CBS Miami Team Up to Host Open Casting Call for The Price Is Right 8/28/26",
-          "es": "Toyota of Hollywood y CBS Miami se unen para realizar un casting abierto de The Price Is Right viernes, 28/08/2026, 10:00 pm-01:00 pm Toyota of Hollywood 1841 N. State Rd. 7, Hollywood, Florida, 33021 Sitio web Costo: GRATIS Ven y participa Leer más Toyota of Hollywood y CBS Miami se unen para realizar un casting abierto de The Price Is Right 8/28/26",
-          "pt": "Toyota of Hollywood e CBS Miami se unem para realizar uma seleção aberta de The Price Is Right sexta-feira, 28/08/2026, 10:00 pm-01:00 pm Toyota of Hollywood 1841 N. State Rd. 7, Hollywood, Florida, 33021 Site Custo: GRÁTIS Venha e participe Leia mais Toyota of Hollywood e CBS Miami se unem para realizar uma seleção aberta de The Price Is Right 8/28/26",
-          "fr": "Toyota of Hollywood et CBS Miami s'associent pour organiser un casting ouvert de The Price Is Right vendredi, 28/08/2026, 10:00 pm-01:00 pm Toyota of Hollywood 1841 N. State Rd. 7, Hollywood, Florida, 33021 Site Web Coût: GRATUIT Venez et participez Lire la suite Toyota of Hollywood et CBS Miami s'associent pour organiser un casting ouvert de The Price Is Right 8/28/26"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.0305668,
-        "lng": -80.2083914,
         "category": "community"
       },
       {
@@ -2876,30 +2746,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1787229489903_jwtz",
-        "title": {
-          "en": "Shichiken Sake Collaboration Dinner at YASU Omakase 8/28/26",
-          "es": "Cena de Colaboración Shichiken Sake en YASU Omakase 8/28/26",
-          "pt": "Jantar de Colaboração Shichiken Sake em YASU Omakase 8/28/26",
-          "fr": "Dîner de Collaboration Shichiken Sake chez YASU Omakase 8/28/26"
-        },
-        "date": "2026-08-28",
-        "venue": "YASU Omakase",
-        "address": "151 NE 41st St, Suite 137, Miami, Florida, 33137",
-        "url": "https://www.soulofmiami.org/2026/08/19/shichiken-sake-collaboration-dinner-at-yasu-omakase-8-28-26/",
-        "free": false,
-        "price": "$395",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/14-Yasu-Tanaka-350x233.jpg",
-        "description": {
-          "en": "per person On Friday, August 28th, YASU Omakase will welcome Shichiken Sake, a historic",
-          "es": "por persona El viernes 28 de agosto, YASU Omakase recibirá a Shichiken Sake, un histórico",
-          "pt": "por pessoa Na sexta-feira, 28 de agosto, YASU Omakase receberá Shichiken Sake, um histórico",
-          "fr": "par personne Le vendredi 28 août, YASU Omakase accueillera Shichiken Sake, un historique"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1787315837975_6j6r",
         "title": {
           "en": "An Evening with Arturo Rodríguez: A Conversation on Art, Memory, and Exile 9/3/26",
@@ -2947,32 +2793,6 @@
           "fr": "La célèbre Série de Dîners d'Été d'Uchi Miami se termine par"
         },
         "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "rss_1787401780275_6oau",
-        "title": {
-          "en": "Salsa Z Powered by McDonald’s 8/28/26",
-          "es": "Salsa Z Impulsada por McDonald's 8/28/26",
-          "pt": "Salsa Z Impulsada por McDonald's 8/28/26",
-          "fr": "Salsa Z Alimentée par McDonald's 8/28/26"
-        },
-        "date": "2026-08-28",
-        "venue": "Zey Zey",
-        "address": "353 NE 61st St, Miami, Florida, 33137",
-        "url": "https://www.soulofmiami.org/2026/08/21/salsa-z-powered-by-mcdonalds-8-28-26/",
-        "free": false,
-        "price": "$19",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Untitled-350x436.png",
-        "description": {
-          "en": "To celebrate the launch of its new Red Bull® Dragonberry Energizer, McDonald’s is teaming up with Salsa Z,",
-          "es": "Para celebrar el lanzamiento de su nuevo Red Bull® Dragonberry Energizer, McDonald's se asocia con Salsa Z,",
-          "pt": "Para celebrar o lançamento do seu novo Red Bull® Dragonberry Energizer, McDonald's faz parceria com Salsa Z,",
-          "fr": "Pour célébrer le lancement de son nouveau Red Bull® Dragonberry Energizer, McDonald's s'associe avec Salsa Z,"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.8327312,
-        "lng": -80.1890522,
         "category": "community"
       },
       {
@@ -3544,110 +3364,6 @@
         "lng": -80.188797
       },
       {
-        "id": "rss_1787866758726_n9s3",
-        "title": {
-          "en": "Drag Madness: Friday Night Drag Cabaret 8/28/26",
-          "es": "Drag Madness: Cabaret de Drag el Viernes por la Noche 8/28/26",
-          "pt": "Drag Madness: Cabaré de Drag na Sexta-Feira à Noite 8/28/26",
-          "fr": "Drag Madness: Cabaret de Drag Vendredi Soir 8/28/26"
-        },
-        "date": "2026-08-28",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/27/drag-madness-friday-night-drag-cabaret-8-28-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/tmp5vhvk5_v-281x500.jpg",
-        "description": {
-          "en": "Fridays at Palace South Beach are pure chaos in the best way. Join us for",
-          "es": "Los viernes en Palace South Beach son puro caos de la mejor manera. Únete a nosotros",
-          "pt": "Sextas-feiras em Palace South Beach são puro caos da melhor forma. Junte-se a nós",
-          "fr": "Les vendredis au Palace South Beach sont du pur chaos de la meilleure façon. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "community"
-      },
-      {
-        "id": "tm_1787866759403_u4l2",
-        "title": {
-          "en": "Preseason Luxury & Suites: Miami Dolphins vs. Atlanta Falcons",
-          "es": "Pretemporada Lujo y Suites: Miami Dolphins vs. Atlanta Falcons",
-          "pt": "Pré-temporada Luxo e Suítes: Miami Dolphins vs. Atlanta Falcons",
-          "fr": "Présaison Luxe et Suites: Miami Dolphins vs. Atlanta Falcons"
-        },
-        "date": "2026-08-28",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpreseason-luxury-suites-miami-dolphins-vs-miami-florida-08-28-2026%2Fevent%2F0D00646CE67215B8&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season · Starts 19:00 · Hard Rock Stadium",
-          "es": "Horario Flexible: Tenga en cuenta que ciertos juegos están sujetos a horarios flexibles y la fecha y hora de esos juegos pueden cambiar de lo que actualmente se refleja en el cronograma. Para obtener información más detallada sobre los procedimientos de horarios flexibles de la NFL para la temporada 2026 de la NFL · Comienza 19:00 · Hard Rock Stadium",
-          "pt": "Cronograma Flexível: Esteja ciente de que certos jogos estão sujeitos a agendamento flexível e a data e hora desses jogos podem mudar do que está atualmente refletido no cronograma. Para informações mais detalhadas sobre os procedimentos de agendamento flexível da NFL para a temporada 2026 da NFL · Começa 19:00 · Hard Rock Stadium",
-          "fr": "Calendrier Flexible: Veuillez noter que certains matchs sont sujets à une planification flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement reflété dans le calendrier. Pour plus d'informations détaillées sur les procédures de planification flexible de la NFL pour la saison 2026 de la NFL · Commence 19:00 · Hard Rock Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1787866759403_1efl",
-        "title": {
-          "en": "Preseason Miami Dolphins vs. Atlanta Falcons",
-          "es": "Pretemporada Miami Dolphins vs. Atlanta Falcons",
-          "pt": "Pré-temporada Miami Dolphins vs. Atlanta Falcons",
-          "fr": "Présaison Miami Dolphins vs. Atlanta Falcons"
-        },
-        "date": "2026-08-28",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpreseason-miami-dolphins-vs-atlanta-falcons-miami-florida-08-28-2026%2Fevent%2F0D00646CE5871375&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season please visit: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
-          "es": "Programación Flexible: Tenga en cuenta que ciertos juegos están sujetos a programación flexible y la fecha y hora de esos juegos pueden cambiar de lo que se refleja actualmente en el cronograma. Para obtener información más detallada sobre los procedimientos de programación flexible de la NFL para la Temporada 2026 de la NFL, visite: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
-          "pt": "Cronograma Flexível: Esteja ciente de que certos jogos estão sujeitos a agendamento flexível e a data e hora desses jogos podem ser alteradas em relação ao que é refletido atualmente no cronograma. Para obter informações mais detalhadas sobre os procedimentos de agendamento flexível da NFL para a Temporada 2026 da NFL, visite: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
-          "fr": "Calendrier Flexible: Veuillez noter que certains matchs sont sujets à un calendrier flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement indiqué sur le calendrier. Pour plus d'informations détaillées sur les procédures de calendrier flexible de la NFL pour la saison 2026 de la NFL, veuillez consulter: https://www.nfl.com/ways-to-watch/flexible-scheduling-p"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1787866759403_jh23",
-        "title": {
-          "en": "Friday Night Live - Improv Comedy Miami Show",
-          "es": "Viernes por la Noche en Vivo - Espectáculo de Comedia Improvisada en Miami",
-          "pt": "Sexta à Noite ao Vivo - Show de Comédia de Improvisação em Miami",
-          "fr": "Vendredi Soir en Direct - Spectacle de Comédie Improvisée à Miami"
-        },
-        "date": "2026-08-28",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897513&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
-          "es": "¡Viernes por la Noche en Vivo! - Comedia Improvisada en Miami. Es la combinación especial de JTF de improvisación de forma corta y larga. Disfruta mientras nuestro elenco galardonado te trae una improvisación fantástica perfecta para tu viernes por la noche en VIVO. Nuestros espectáculos a menudo se describen como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway reunido con SNL con mucha interacción divertida de la audiencia. Ven y sé parte de",
-          "pt": "Sexta à Noite ao Vivo! - Comédia de Improvisação em Miami. É a combinação especial do JTF de improvisação de curta e longa forma. Aproveite enquanto nosso elenco premiado traz para você uma improvisação fantástica perfeita para sua sexta à noite... AO VIVO! Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense nisso como Whose Line is It Anyway encontra SNL com muita interação divertida do público. Venha fazer parte de",
-          "fr": "Vendredi Soir en Direct! - Comédie Improvisée à Miami. C'est la combinaison spéciale de JTF d'improvisation de courte et longue durée! Profitez de notre troupe lauréate d'un prix qui vous apporte une improvisation fantastique parfaite pour votre soirée du vendredi... EN DIRECT! Nos spectacles sont souvent décrits comme une comédie improvisée au rythme rapide. Pensez à cela comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction amusante avec le public. Venez en faire partie"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
         "id": "tm_1787866759403_7efg",
         "title": {
           "en": "BKB 58: Miami",
@@ -3724,58 +3440,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787953252008_6zil",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-28",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 17:45 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 17:45 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 17:45 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 17:45 · Centre de Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1787953252008_5hzm",
-        "title": {
-          "en": "French Montana",
-          "es": "French Montana",
-          "pt": "French Montana",
-          "fr": "French Montana"
-        },
-        "date": "2026-08-28",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffrench-montana-liv-nightclub-miami-tickets%2F15022563&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b26/a93dc257-c75d-4738-9894-e869c588bb26_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier asistente que no pueda presentar una identificación válida que indique que tiene al menos 21 años no será admitido y no será elegible para reembolso. · Comienza 23:30 · Discoteca LIV Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso que não puder apresentar uma identificação válida indicando que tem pelo menos 21 anos não será admitido e não será elegível para reembolso. · Começa 23:30 · Boate LIV Miami",
-          "fr": "Cet événement est réservé aux plus de 21 ans. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis et ne sera pas éligible à un remboursement. · Commence 23:30 · Discothèque LIV Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
         "id": "tm_1787953252008_3u94",
         "title": {
           "en": "Cheap Trills Musical Improv",
@@ -3800,6 +3464,82 @@
         "category": "comedy",
         "lat": 25.750417,
         "lng": -80.244412
+      },
+      {
+        "id": "rss_1788019609231_oejh",
+        "title": {
+          "en": "Dembow Con Mangú Labor Day Party at The Pool at The Goodtime Hotel 9/6/26",
+          "es": "Fiesta de Dembow Con Mangú Fin de Semana del Día del Trabajo en The Pool at The Goodtime Hotel 9/6/26",
+          "pt": "Festa de Dembow Con Mangú Fim de Semana do Dia do Trabalho na The Pool at The Goodtime Hotel 9/6/26",
+          "fr": "Fête Dembow Con Mangú Fin de Semaine de la Fête du Travail au The Pool at The Goodtime Hotel 9/6/26"
+        },
+        "date": "2026-09-06",
+        "venue": "The Goodtime Hotel",
+        "address": "601 Washington Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/08/28/dembow-con-mangu-labor-day-party-at-the-pool-at-the-goodtime-hotel-9-6-26/",
+        "free": false,
+        "price": "$20",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/IMG_2070-1-1-350x420.png",
+        "description": {
+          "en": "Celebrate Labor Day Weekend with Dominican music, culture and",
+          "es": "Celebra el fin de semana del Día del Trabajo con música, cultura y tradiciones dominicanas",
+          "pt": "Celebre o fim de semana do Dia do Trabalho com música, cultura e tradições dominicanas",
+          "fr": "Célébrez le week-end de la Fête du Travail avec la musique, la culture et les traditions dominicaines"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7763327,
+        "lng": -80.1334166,
+        "category": "community"
+      },
+      {
+        "id": "rss_1788019609231_20c1",
+        "title": {
+          "en": "“Viva Fort Lauderdale: Celebrating Hispanic Art & Culture” at History Fort Lauderdale 9/17/26 -10/25/26",
+          "es": "Viva Fort Lauderdale: Celebrando Arte y Cultura Hispana en History Fort Lauderdale 9/17/26 -10/25/26",
+          "pt": "Viva Fort Lauderdale: Celebrando Arte e Cultura Hispânica na History Fort Lauderdale 9/17/26 -10/25/26",
+          "fr": "Viva Fort Lauderdale : Célébration de l'Art et de la Culture Hispanique à History Fort Lauderdale 9/17/26 -10/25/26"
+        },
+        "date": "2026-09-17",
+        "venue": "History Fort Lauderdale",
+        "address": "231 SW Second Avenue, Fort Lauderdale, Florida, 33301",
+        "url": "https://www.soulofmiami.org/2026/08/28/viva-fort-lauderdale-celebrating-hispanic-art-culture-at-history-fort-lauderdale-9-17-26-9-18-26-9-19-26-9-20-26-9-21-26-9-22-26-9-23-26-9-24-26-9-25-26-9-26-26-9-27-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Viva-Fort-Lauderdale-Exhibit-Run-Dates-1080-x-1080-2026-350x350.jpg",
+        "description": {
+          "en": "History Fort Lauderdale, committed to preserving our collective heritage,",
+          "es": "History Fort Lauderdale, comprometida con la preservación de nuestro patrimonio colectivo",
+          "pt": "History Fort Lauderdale, comprometida com a preservação de nosso patrimônio coletivo",
+          "fr": "History Fort Lauderdale, engagée à préserver notre patrimoine collectif"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1788019609696_yapq",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-29",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 12:15 · Mana Wynwood Convention Center",
+          "es": "Varios · Familia · Comienza 12:15 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 12:15 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 12:15 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
       }
     ]
   },
@@ -4703,7 +4443,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-28T21:41:14.844Z",
+    "fetchedAt": "2026-08-29T16:07:10.417Z",
     "items": []
   }
 }
