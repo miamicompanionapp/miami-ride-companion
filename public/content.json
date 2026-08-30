@@ -1,32 +1,45 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-29T16:07:10.851Z",
+    "lastUpdated": "2026-08-30T15:56:59.976Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-29T16:07:10.417Z",
+    "fetchedAt": "2026-08-30T15:56:59.278Z",
     "current": {
-      "temp_f": 83,
-      "feels_f": 92,
+      "temp_f": 88,
+      "feels_f": 100,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 84,
-      "wind_mph": 7,
-      "rain_chance": 58,
-      "weathercode": 3
+      "humidity": 72,
+      "wind_mph": 8,
+      "rain_chance": 43,
+      "weathercode": 2
     },
     "forecast": [
       {
-        "date": "2026-08-29",
-        "high_f": 89,
+        "date": "2026-08-30",
+        "high_f": 90,
         "low_f": 79,
-        "weathercode": 80,
-        "rain_chance": 58,
+        "weathercode": 3,
+        "rain_chance": 43,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
+      },
+      {
+        "date": "2026-08-31",
+        "high_f": 88,
+        "low_f": 76,
+        "weathercode": 82,
+        "rain_chance": 30,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -35,50 +48,37 @@
         }
       },
       {
-        "date": "2026-08-30",
-        "high_f": 86,
-        "low_f": 76,
-        "weathercode": 53,
-        "rain_chance": 27,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
-        "date": "2026-08-31",
-        "high_f": 90,
-        "low_f": 77,
-        "weathercode": 95,
-        "rain_chance": 49,
-        "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
-        }
-      },
-      {
         "date": "2026-09-01",
         "high_f": 90,
-        "low_f": 85,
-        "weathercode": 95,
-        "rain_chance": 49,
+        "low_f": 75,
+        "weathercode": 51,
+        "rain_chance": 44,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       },
       {
         "date": "2026-09-02",
-        "high_f": 89,
+        "high_f": 88,
         "low_f": 85,
         "weathercode": 95,
-        "rain_chance": 64,
+        "rain_chance": 61,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-09-03",
+        "high_f": 87,
+        "low_f": 81,
+        "weathercode": 95,
+        "rain_chance": 65,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,148 +89,148 @@
     ],
     "hourly": [
       {
+        "hour": "11:00",
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 17
+      },
+      {
         "hour": "12:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 58
+        "temp_f": 88,
+        "weathercode": 2,
+        "rain_chance": 24
       },
       {
         "hour": "13:00",
-        "temp_f": 86,
+        "temp_f": 88,
         "weathercode": 3,
-        "rain_chance": 36
+        "rain_chance": 16
       },
       {
         "hour": "14:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 33
+        "temp_f": 89,
+        "weathercode": 1,
+        "rain_chance": 17
       },
       {
         "hour": "15:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 24
+        "temp_f": 90,
+        "weathercode": 2,
+        "rain_chance": 17
       },
       {
         "hour": "16:00",
         "temp_f": 89,
         "weathercode": 3,
-        "rain_chance": 14
+        "rain_chance": 15
       },
       {
         "hour": "17:00",
-        "temp_f": 87,
+        "temp_f": 89,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 18
       },
       {
         "hour": "18:00",
-        "temp_f": 83,
+        "temp_f": 88,
         "weathercode": 3,
-        "rain_chance": 12
+        "rain_chance": 18
       },
       {
         "hour": "19:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 86,
+        "weathercode": 1,
+        "rain_chance": 21
       },
       {
         "hour": "20:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 13
+        "temp_f": 81,
+        "weathercode": 2,
+        "rain_chance": 38
       },
       {
         "hour": "21:00",
-        "temp_f": 81,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 43
       },
       {
         "hour": "22:00",
         "temp_f": 79,
-        "weathercode": 80,
-        "rain_chance": 15
+        "weathercode": 2,
+        "rain_chance": 38
       },
       {
         "hour": "23:00",
         "temp_f": 79,
-        "weathercode": 53,
-        "rain_chance": 10
+        "weathercode": 3,
+        "rain_chance": 19
       },
       {
         "hour": "00:00",
-        "temp_f": 78,
-        "weathercode": 51,
-        "rain_chance": 11
+        "temp_f": 77,
+        "weathercode": 82,
+        "rain_chance": 15
       },
       {
         "hour": "01:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 77,
+        "weathercode": 51,
+        "rain_chance": 15
       },
       {
         "hour": "02:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 11
+        "temp_f": 76,
+        "weathercode": 82,
+        "rain_chance": 14
       },
       {
         "hour": "03:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 11
+        "temp_f": 76,
+        "weathercode": 51,
+        "rain_chance": 16
       },
       {
         "hour": "04:00",
-        "temp_f": 78,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 15
       },
       {
         "hour": "05:00",
-        "temp_f": 77,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 12
+        "rain_chance": 16
       },
       {
         "hour": "06:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 17
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 18
       },
       {
         "hour": "07:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 18
       },
       {
         "hour": "08:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 20
       },
       {
         "hour": "09:00",
-        "temp_f": 84,
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 22
       },
       {
         "hour": "10:00",
-        "temp_f": 86,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 11
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 77,
-        "weathercode": 53,
-        "rain_chance": 23
+        "rain_chance": 21
       }
     ]
   },
@@ -1468,58 +1468,6 @@
         "category": "sports"
       },
       {
-        "id": "tm_1785333592666_t7zy",
-        "title": {
-          "en": "Brooks & Dunn",
-          "es": "Brooks & Dunn",
-          "pt": "Brooks & Dunn",
-          "fr": "Brooks & Dunn"
-        },
-        "date": "2026-08-29",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbrooks-dunn-hollywood-florida-08-29-2026%2Fevent%2F0D00648FA4D8A327&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/1cf/60b10f8a-1b12-44ac-ae40-9f52559351cf_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Country · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Country · Comienza a las 20:00 · Hard Rock Live",
-          "pt": "Música · Country · Começa às 20:00 · Hard Rock Live",
-          "fr": "Musique · Country · Commence à 20:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1785333592666_nymi",
-        "title": {
-          "en": "Ricardo Montaner - El Último Regreso Tour",
-          "es": "Ricardo Montaner - Gira El Último Regreso",
-          "pt": "Ricardo Montaner - Tour O Último Retorno",
-          "fr": "Ricardo Montaner - Tournée Le Dernier Retour"
-        },
-        "date": "2026-08-29",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fricardo-montaner-el-ultimo-regreso-tour-miami-florida-08-29-2026%2Fevent%2F0D00635EE3E884F1&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/254/c38c0813-6db8-4f30-91b2-fe9994eef254_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 20:00 · Kaseya Center",
-          "es": "Música · Latino · Comienza a las 20:00 · Kaseya Center",
-          "pt": "Música · Latino · Começa às 20:00 · Kaseya Center",
-          "fr": "Musique · Latin · Commence à 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "rss_1785506022508_4ojo",
         "title": {
           "en": "Books & Books Summer Reading Series: Meet the Author – Westofchester’s ABCs of Miami 9/28/26",
@@ -1542,32 +1490,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1785589753331_h0qe",
-        "title": {
-          "en": "HOUSE OF HEAVY - Nu Metal + Metalcore Night",
-          "es": "HOUSE OF HEAVY - Noche de Nu Metal + Metalcore",
-          "pt": "HOUSE OF HEAVY - Noite de Nu Metal + Metalcore",
-          "fr": "HOUSE OF HEAVY - Soirée Nu Metal + Metalcore"
-        },
-        "date": "2026-08-29",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhouse-of-heavy-nu-metal-metalcore-ft-lauderdale-florida-08-29-2026%2Fevent%2F0D0064C527E1CA47&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/051/4be944cd-f3e7-4c8b-afe1-2c6db8336051_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "HOUSE OF HEAVY - Nu Metal + Metalcore Night will be coming to Revolution Live on Saturday, August 29th. This event is 21+. Doors open at 10:30pm. Show starts at 10:45pm. All support acts are subject to change without notice. House of Heavy is a night built for the fans who crave the pit, the riffs, the breakdowns, and the chaos, but are tired of waiting for the next tour to hit their city. We're b",
-          "es": "HOUSE OF HEAVY - Noche de Nu Metal + Metalcore llegará a Revolution Live el sábado 29 de agosto. Este evento es solo para mayores de 21 años. Las puertas abren a las 10:30pm. El show comienza a las 10:45pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. House of Heavy es una noche construida para los fans que anhelan el pit, los riffs, los breakdowns y el caos, pero están cansados de esperar el próximo tour en su ciudad. Somos",
-          "pt": "HOUSE OF HEAVY - Noite de Nu Metal + Metalcore virá para Revolution Live no sábado, 29 de agosto. Este evento é 21+. As portas abrem às 22h30. O show começa às 22h45. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. House of Heavy é uma noite construída para os fãs que anseiam pelo pit, pelos riffs, pelos breakdowns e pelo caos, mas estão cansados de esperar o próximo tour chegar à sua cidade. Somos",
-          "fr": "HOUSE OF HEAVY - Soirée Nu Metal + Metalcore arrivera à Revolution Live samedi 29 août. Cet événement est réservé aux 21 ans et plus. Les portes ouvrent à 22h30. Le spectacle commence à 22h45. Tous les actes de soutien sont sujets à modification sans préavis. House of Heavy est une soirée conçue pour les fans qui rêvent de la fosse, des riffs, des breakdowns et du chaos, mais qui en ont assez d'attendre que la prochaine tournée arrive dans leur ville. Nous sommes"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
       },
       {
         "id": "tm_1785676272401_ylyn",
@@ -2284,30 +2206,6 @@
         "lng": -80.2109577
       },
       {
-        "id": "rss_1786796918199_zjml",
-        "title": {
-          "en": "Free Health Fair in Fort Lauderdale 8/29/26",
-          "es": "Feria de Salud Gratuita en Fort Lauderdale 8/29/26",
-          "pt": "Feira de Saúde Gratuita em Fort Lauderdale 8/29/26",
-          "fr": "Foire de la Santé Gratuite à Fort Lauderdale 8/29/26"
-        },
-        "date": "2026-08-29",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/08/14/free-health-fair-in-fort-lauderdale-8-29-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Free-Health-Fair-Aug.-29-E-Flyer-sml-350x462.jpg",
-        "description": {
-          "en": "The YMCA of South Florida, in partnership with the University of",
-          "es": "La YMCA del Sur de Florida, en asociación con la Universidad de",
-          "pt": "A YMCA do Sul da Flórida, em parceria com a Universidade de",
-          "fr": "La YMCA du sud de la Floride, en partenariat avec l'Université de"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1786796918199_kce6",
         "title": {
           "en": "Light Up the Night 11/14/26",
@@ -2358,32 +2256,6 @@
         "lat": 26.0518687,
         "lng": -80.145211,
         "category": "community"
-      },
-      {
-        "id": "tm_1786796918784_w2vr",
-        "title": {
-          "en": "Bee Gees Now!",
-          "es": "¡Bee Gees Ahora!",
-          "pt": "Bee Gees Agora!",
-          "fr": "Bee Gees Maintenant!"
-        },
-        "date": "2026-08-29",
-        "venue": "Coral Springs Center",
-        "address": "2855 Coral Springs Dr., Coral Springs, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70KOg&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 19:30 · Coral Springs Center",
-          "es": "Música · Otro · Comienza 19:30 · Coral Springs Center",
-          "pt": "Música · Outro · Começa 19:30 · Coral Springs Center",
-          "fr": "Musique · Autre · Commence 19:30 · Coral Springs Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.2738,
-        "lng": -80.256897
       },
       {
         "id": "tm_1786883383652_w4z5",
@@ -3312,32 +3184,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1787748121091_h0zu",
-        "title": {
-          "en": "Prince St. Pizza x HOKA Run Club 8/29/26",
-          "es": "Prince St. Pizza x HOKA Run Club 8/29/26",
-          "pt": "Prince St. Pizza x HOKA Run Club 8/29/26",
-          "fr": "Prince St. Pizza x HOKA Run Club 8/29/26"
-        },
-        "date": "2026-08-29",
-        "venue": "HOKA Store",
-        "address": "701 Lincoln Rd, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/25/prince-st-pizza-x-hoka-run-club-8-29-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Copy-of-Prince-St-Pizza-spread-11-350x233.jpg",
-        "description": {
-          "en": "over to the Prince St. Pizza x HOKA Run Club on Saturday, August 29th for a 5K",
-          "es": "Únete al Prince St. Pizza x HOKA Run Club el sábado, 29 de agosto para una carrera de 5K",
-          "pt": "Junte-se ao Prince St. Pizza x HOKA Run Club no sábado, 29 de agosto para uma corrida de 5K",
-          "fr": "Rejoignez le Prince St. Pizza x HOKA Run Club samedi 29 août pour une course de 5K"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7909617,
-        "lng": -80.1356672,
-        "category": "sports"
-      },
-      {
         "id": "tm_1787748121555_bhb9",
         "title": {
           "en": "WITCH + Jacuzzi Boys",
@@ -3362,108 +3208,6 @@
         "category": "music",
         "lat": 25.8172,
         "lng": -80.188797
-      },
-      {
-        "id": "tm_1787866759403_7efg",
-        "title": {
-          "en": "BKB 58: Miami",
-          "es": "BKB 58: Miami",
-          "pt": "BKB 58: Miami",
-          "fr": "BKB 58: Miami"
-        },
-        "date": "2026-08-29",
-        "venue": "James L Knight Center",
-        "address": "400 SE 2nd Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbkb-58-miami-miami-florida-08-29-2026%2Fevent%2F0D0064F78C1A3972&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/d43/220505b0-29d3-4acc-8ba2-d50327bccd43_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "BKB 58: Miami - Live professional bare knuckle boxing comes to downtown Miami at the James L Knight Center. A full championship fight card in an intimate triangle-ring setup - every seat close to the action. All ages; under 16 must be accompanied by an adult **VIP RINGSIDE EXPERIENCE + MEET AND GREET: Premium ringside seat, event poster, Pre-show fighter meet & greet + autograph session. **ADD-ON ",
-          "es": "BKB 58: Miami - Boxeo profesional de puños desnudos en vivo llega al centro de Miami en el Centro James L Knight. Una cartelera de campeonato completo con configuración de ring triangular íntimo - cada asiento cerca de la acción. Para todas las edades; menores de 16 deben estar acompañados por un adulto **EXPERIENCIA VIP EN EL RING + ENCUENTRO Y SALUDO: Asiento VIP en primera fila, póster del evento, encuentro previo con peleadores y sesión de autógrafos. **COMPLEMENTO",
-          "pt": "BKB 58: Miami - Boxe profissional de punho nu ao vivo chega ao centro de Miami no James L Knight Center. Um card de luta de campeonato completo com configuração de ring triangular íntimo - cada assento perto da ação. Todas as idades; menores de 16 devem estar acompanhados por um adulto **EXPERIÊNCIA VIP EM PRIMEIRA FILA + ENCONTRO E SAUDAÇÃO: Assento VIP em primeira fila, pôster do evento, encontro com lutadores de pré-show e sessão de autógrafos. **COMPLEMENTO",
-          "fr": "BKB 58: Miami - La boxe professionnelle à poings nus en direct arrive au centre-ville de Miami au James L Knight Center. Un card de combat de championnat complet avec une configuration de ring triangulaire intime - chaque siège près de l'action. Tous les âges; les moins de 16 ans doivent être accompagnés d'un adulte **EXPÉRIENCE VIP AU BORD DU RING + RENCONTRE ET SALUTATION: Siège VIP au bord du ring, affiche de l'événement, rencontre avec les combattants avant le spectacle et séance d'autographes. **COMPLÉMENT"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7707756,
-        "lng": -80.1901174
-      },
-      {
-        "id": "tm_1787866759403_spja",
-        "title": {
-          "en": "Inter Miami CF vs CF Montréal",
-          "es": "Inter Miami CF vs CF Montréal",
-          "pt": "Inter Miami CF vs CF Montréal",
-          "fr": "Inter Miami CF vs CF Montréal"
-        },
-        "date": "2026-08-29",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-cf-montreal-miami-florida-08-29-2026%2Fevent%2F0D0063739DE4682B&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
-          "es": "Para información sobre Suites llame al 305-428-0611. · Comienza 19:30 · Estadio Nu",
-          "pt": "Para informações sobre Suites, ligue para 305-428-0611. · Começa 19:30 · Estádio Nu",
-          "fr": "Pour plus d'informations sur les Suites, appelez le 305-428-0611. · Commence 19:30 · Stade Nu"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
-        "id": "cp_1787866760131_a9rt",
-        "title": {
-          "en": "Centennial Edition Neighborhood Family Block Party: Eastern Shores",
-          "es": "Fiesta Callejera Familiar de la Edición del Centenario: Eastern Shores",
-          "pt": "Festa de Rua Familiar da Edição do Centenário: Eastern Shores",
-          "fr": "Fête de Rue Familiale de l'Édition du Centenaire: Eastern Shores"
-        },
-        "date": "2026-08-29",
-        "venue": "-  16501 NE 35th Avenue  North Miami Beach FL 33162",
-        "address": "",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "https://www.citynmb.com/calendar.aspx?EID=8857",
-          "es": "https://www.citynmb.com/calendar.aspx?EID=8857",
-          "pt": "https://www.citynmb.com/calendar.aspx?EID=8857",
-          "fr": "https://www.citynmb.com/calendar.aspx?EID=8857"
-        },
-        "source": "North Miami Beach",
-        "category": "community"
-      },
-      {
-        "id": "tm_1787953252008_3u94",
-        "title": {
-          "en": "Cheap Trills Musical Improv",
-          "es": "Cheap Trills Improvisación Musical",
-          "pt": "Cheap Trills Improvisação Musical",
-          "fr": "Cheap Trills Improvisation Musicale"
-        },
-        "date": "2026-08-29",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheap-trills-musical-improv-just-the-funny-tickets%2F14897743&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Cheap Trills Musical ImprovNothing beats a Cheap Trills show! Its a musical. Its a variety show. Its improv comedy. Its all of that and much more! Join the talented cast of Just The Funny and be prepared for a wild, hilarious ride.Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as close as possible, but may have to split large",
-          "es": "¡Nada supera un show de Cheap Trills! Es un musical. Es un show de variedades. Es comedia improvisada. ¡Es todo eso y mucho más! Únete al talentoso elenco de Just The Funny y prepárate para un viaje salvaje e hilarante. Los boletos son POR PERSONA para este show. Sentaremos grupos juntos en mesas. Haremos todo lo posible para sentar grupos grandes lo más cerca posible.",
-          "pt": "Nada supera um show de Cheap Trills! É um musical. É um show de variedades. É comédia de improvisação. É tudo isso e muito mais! Junte-se ao elenco talentoso de Just The Funny e prepare-se para um passeio selvagem e hilariante. Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas. Faremos o possível para sentar grupos maiores o mais perto possível.",
-          "fr": "Rien ne vaut un spectacle de Cheap Trills! C'est une comédie musicale. C'est un spectacle de variétés. C'est de la comédie d'improvisation. C'est tout cela et bien plus encore! Rejoignez le casting talentueux de Just The Funny et préparez-vous pour un voyage sauvage et hilarant. Les billets sont PAR PERSONNE pour ce spectacle. Nous assiérons les groupes ensemble à des tables. Nous ferons de notre mieux pour asseoir les grands groupes aussi près que possible."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
       },
       {
         "id": "rss_1788019609231_oejh",
@@ -3516,14 +3260,14 @@
         "category": "community"
       },
       {
-        "id": "tm_1788019609696_yapq",
+        "id": "tm_1788105394141_taeu",
         "title": {
           "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
           "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
           "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
           "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
         },
-        "date": "2026-08-29",
+        "date": "2026-08-30",
         "venue": "Mana Wynwood Convention Center",
         "address": "318 NW 23rd St, Miami, FL",
         "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
@@ -3531,15 +3275,145 @@
         "price": "",
         "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
         "description": {
-          "en": "Miscellaneous · Family · Starts 12:15 · Mana Wynwood Convention Center",
-          "es": "Varios · Familia · Comienza 12:15 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 12:15 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 12:15 · Mana Wynwood Convention Center"
+          "en": "Miscellaneous · Family · Starts 12:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneo · Familia · Comienza 12:00 · Mana Wynwood Convention Center",
+          "pt": "Diverso · Família · Começa 12:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 12:00 · Mana Wynwood Convention Center"
         },
         "source": "Ticketmaster",
         "lat": 25.797998,
         "lng": -80.202062,
         "category": "arts"
+      },
+      {
+        "id": "tm_1788105394141_ckz2",
+        "title": {
+          "en": "Ricardo Montaner - El Último Regreso Tour",
+          "es": "Ricardo Montaner - Gira El Último Regreso",
+          "pt": "Ricardo Montaner - Turnê O Último Regresso",
+          "fr": "Ricardo Montaner - Tournée Le Dernier Retour"
+        },
+        "date": "2026-08-30",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fricardo-montaner-el-ultimo-regreso-tour-miami-florida-08-30-2026%2Fevent%2F0D00636ABC598360&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/254/c38c0813-6db8-4f30-91b2-fe9994eef254_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Unfortunately, the Event Organizer has had to cancel your event. You don't need to do a thing. We'll issue a refund to the [original method of payment](https://help.ticketmaster.com/hc/en-us/articles/9614074869009) used at time of purchase, as soon as funds are received from the Event Organizer. It should appear on your account within 14-21 days. Please Note: If the tickets were transferred to you",
+          "es": "Desafortunadamente, el organizador del evento ha tenido que cancelar tu evento. No necesitas hacer nada. Emitiremos un reembolso al método de pago original utilizado en el momento de la compra, tan pronto como recibamos los fondos del organizador del evento. Debería aparecer en tu cuenta dentro de 14-21 días. Por favor tenga en cuenta: Si los boletos fueron transferidos a usted",
+          "pt": "Infelizmente, o organizador do evento teve que cancelar seu evento. Você não precisa fazer nada. Emitiremos um reembolso para o método de pagamento original usado no momento da compra, assim que recebermos os fundos do organizador do evento. Deve aparecer em sua conta dentro de 14-21 dias. Observação: Se os ingressos foram transferidos para você",
+          "fr": "Malheureusement, l'organisateur de l'événement a dû annuler votre événement. Vous n'avez rien à faire. Nous émettrons un remboursement au mode de paiement original utilisé au moment de l'achat, dès que nous recevrons les fonds de l'organisateur de l'événement. Il devrait apparaître sur votre compte dans 14-21 jours. Veuillez noter: Si les billets vous ont été transférés"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1788105394141_z7f1",
+        "title": {
+          "en": "JUTES - Smile You're on Tour",
+          "es": "JUTES - Sonríe Estás en Gira",
+          "pt": "JUTES - Sorria Você Está em Turnê",
+          "fr": "JUTES - Souris Tu Es en Tournée"
+        },
+        "date": "2026-09-17",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjutes-smile-youre-on-tour-ft-lauderdale-florida-09-17-2026%2Fevent%2F0D006483343E3E90&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f17/3548afa1-c603-4440-a0f7-2f27dcfbef17_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "JUTES - Smile You're on Tour with special guests Mothica, wilt Doors open 6:00pm · Starts 18:00 · Culture Room",
+          "es": "JUTES - Sonríe Estás en Gira con invitados especiales Mothica, wilt Las puertas abren a las 6:00pm · Comienza 18:00 · Culture Room",
+          "pt": "JUTES - Sorria Você Está em Turnê com convidados especiais Mothica, wilt As portas abrem às 6:00pm · Começa 18:00 · Culture Room",
+          "fr": "JUTES - Souris Tu Es en Tournée avec les invités spéciaux Mothica, wilt Les portes ouvrent à 18h00 · Commence 18:00 · Culture Room"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1788105394141_ns83",
+        "title": {
+          "en": "YG: THE GENTLEMEN'S CLUB TOUR",
+          "es": "YG: GIRA THE GENTLEMEN'S CLUB",
+          "pt": "YG: TURNÊ THE GENTLEMEN'S CLUB",
+          "fr": "YG: TOURNÉE THE GENTLEMEN'S CLUB"
+        },
+        "date": "2026-09-18",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fyg-the-gentlemens-club-tour-ft-lauderdale-florida-09-18-2026%2Fevent%2F0D0064F0E301A335&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/fb0/ba247291-960c-4926-931d-8aaea9feffb0_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "YG: THE GENTLEMEN'S CLUB TOUR will be coming to Revolution Live on Friday, September 18th with special guests Mozzy and Chef Boy. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
+          "es": "YG: GIRA THE GENTLEMEN'S CLUB llegará a Revolution Live el viernes 18 de septiembre con invitados especiales Mozzy y Chef Boy. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
+          "pt": "YG: TURNÊ THE GENTLEMEN'S CLUB virá para Revolution Live na sexta-feira, 18 de setembro com convidados especiais Mozzy e Chef Boy. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
+          "fr": "YG: TOURNÉE THE GENTLEMEN'S CLUB se produira au Revolution Live le vendredi 18 septembre avec les invités spéciaux Mozzy et Chef Boy. Cet événement convient à tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 19:00 · Revolution Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1788105394141_tq6s",
+        "title": {
+          "en": "Gorillaz - The Mountain Tour",
+          "es": "Gorillaz - The Mountain Tour",
+          "pt": "Gorillaz - The Mountain Tour",
+          "fr": "Gorillaz - The Mountain Tour"
+        },
+        "date": "2026-09-18",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgorillaz-the-mountain-tour-miami-florida-09-18-2026%2Fevent%2F0D00645ACAB6102B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/88b/ce224ebd-7acf-4b04-8f04-0038dddc988b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:30 · Kaseya Center",
+          "es": "Música · Rock · Comienza 19:30 · Kaseya Center",
+          "pt": "Música · Rock · Começa 19:30 · Kaseya Center",
+          "fr": "Musique · Rock · Commence 19:30 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1788105394141_3dxg",
+        "title": {
+          "en": "BRAD PAISLEY LIVE",
+          "es": "BRAD PAISLEY EN VIVO",
+          "pt": "BRAD PAISLEY AO VIVO",
+          "fr": "BRAD PAISLEY EN DIRECT"
+        },
+        "date": "2026-09-18",
+        "venue": "FTL War Memorial Auditorium",
+        "address": "800 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fbrad-paisley-tickets%2Ffort-lauderdale-florida-ftl-war-memorial-auditorium-2026-09-18-7-30-pm%2Fconcert%2F18226925&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f11/91a9b3db-d609-49dd-93d2-55c43871af11_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Country · Starts 19:30 · FTL War Memorial Auditorium",
+          "es": "Música · Country · Comienza 19:30 · Auditorio Conmemorativo de Guerra de FTL",
+          "pt": "Música · Country · Começa 19:30 · Auditório Memorial de Guerra de FTL",
+          "fr": "Musique · Country · Commence 19:30 · Auditorium commémoratif de guerre de FTL"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.133662,
+        "lng": -80.134063
       }
     ]
   },
@@ -4443,7 +4317,29 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-29T16:07:10.417Z",
-    "items": []
+    "fetchedAt": "2026-08-30T15:56:59.278Z",
+    "items": [
+      {
+        "id": "beach_crandon-park-north-key-biscayne",
+        "type": "water_quality",
+        "severity": "advisory",
+        "title": {
+          "en": "CRANDON PARK NORTH - KEY BISCAYNE — Water Quality Advisory",
+          "es": "CRANDON PARK NORTH - KEY BISCAYNE — Aviso de Calidad del Agua",
+          "pt": "CRANDON PARK NORTH - KEY BISCAYNE — Aviso de Qualidade da Água",
+          "fr": "CRANDON PARK NORTH - KEY BISCAYNE — Avis de Qualité de l'Eau"
+        },
+        "detail": {
+          "en": "Elevated Enterococcus bacteria detected (104 CFU/100mL, sampled 2026-08-28). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (104 UFC/100mL, muestreado el 2026-08-28). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (104 UFC/100mL, amostrado em 2026-08-28). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (104 UFC/100mL, échantillonné le 2026-08-28). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
+        },
+        "source": "Florida Dept. of Health — Healthy Beaches",
+        "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-north-key-biscayne",
+        "effectiveAt": "2026-08-28",
+        "expiresAt": "2026-08-31T15:56:59.278Z"
+      }
+    ]
   }
 }
