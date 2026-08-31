@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-30T15:56:59.976Z",
+    "lastUpdated": "2026-08-31T18:40:56.674Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-08-30T15:56:59.278Z",
+    "fetchedAt": "2026-08-31T18:40:55.939Z",
     "current": {
-      "temp_f": 88,
-      "feels_f": 100,
+      "temp_f": 87,
+      "feels_f": 105,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 72,
-      "wind_mph": 8,
-      "rain_chance": 43,
-      "weathercode": 2
+      "humidity": 76,
+      "wind_mph": 1,
+      "rain_chance": 20,
+      "weathercode": 53
     },
     "forecast": [
       {
-        "date": "2026-08-30",
-        "high_f": 90,
-        "low_f": 79,
-        "weathercode": 3,
-        "rain_chance": 43,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-08-31",
         "high_f": 88,
-        "low_f": 76,
-        "weathercode": 82,
-        "rain_chance": 30,
+        "low_f": 77,
+        "weathercode": 80,
+        "rain_chance": 20,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -49,23 +36,23 @@
       },
       {
         "date": "2026-09-01",
-        "high_f": 90,
-        "low_f": 75,
-        "weathercode": 51,
-        "rain_chance": 44,
+        "high_f": 87,
+        "low_f": 76,
+        "weathercode": 80,
+        "rain_chance": 19,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-09-02",
-        "high_f": 88,
-        "low_f": 85,
+        "high_f": 89,
+        "low_f": 76,
         "weathercode": 95,
-        "rain_chance": 61,
+        "rain_chance": 54,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-09-03",
-        "high_f": 87,
-        "low_f": 81,
-        "weathercode": 95,
-        "rain_chance": 65,
+        "high_f": 88,
+        "low_f": 85,
+        "weathercode": 96,
+        "rain_chance": 59,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-09-04",
+        "high_f": 88,
+        "low_f": 84,
+        "weathercode": 53,
+        "rain_chance": 35,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "11:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 17
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 88,
-        "weathercode": 2,
-        "rain_chance": 24
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 16
-      },
-      {
         "hour": "14:00",
-        "temp_f": 89,
-        "weathercode": 1,
-        "rain_chance": 17
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 90,
-        "weathercode": 2,
-        "rain_chance": 17
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 15
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 89,
-        "weathercode": 3,
-        "rain_chance": 18
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 18
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 21
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 81,
-        "weathercode": 2,
-        "rain_chance": 38
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 43
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 38
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 79,
+        "temp_f": 87,
         "weathercode": 3,
         "rain_chance": 19
       },
       {
+        "hour": "15:00",
+        "temp_f": 86,
+        "weathercode": 80,
+        "rain_chance": 20
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 87,
+        "weathercode": 2,
+        "rain_chance": 18
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 19
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 19
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 84,
+        "weathercode": 2,
+        "rain_chance": 19
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 82,
+        "weathercode": 1,
+        "rain_chance": 20
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 79,
+        "weathercode": 2,
+        "rain_chance": 11
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 14
+      },
+      {
         "hour": "00:00",
         "temp_f": 77,
-        "weathercode": 82,
-        "rain_chance": 15
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "01:00",
         "temp_f": 77,
-        "weathercode": 51,
-        "rain_chance": 15
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "02:00",
-        "temp_f": 76,
-        "weathercode": 82,
-        "rain_chance": 14
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "03:00",
         "temp_f": 76,
-        "weathercode": 51,
-        "rain_chance": 16
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "04:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 12
       },
       {
         "hour": "05:00",
-        "temp_f": 78,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 16
+        "rain_chance": 12
       },
       {
         "hour": "06:00",
-        "temp_f": 78,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 18
+        "rain_chance": 12
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 11
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 17
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 80,
+        "weathercode": 80,
+        "rain_chance": 19
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 82,
         "weathercode": 3,
         "rain_chance": 18
       },
       {
-        "hour": "08:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 20
-      },
-      {
-        "hour": "09:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 22
-      },
-      {
-        "hour": "10:00",
+        "hour": "11:00",
         "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 21
+        "rain_chance": 13
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 11
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 15
       }
     ]
   },
@@ -1417,31 +1417,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1784209274228_9y30",
-        "title": {
-          "en": "Herpreneur Artisan Market at The Goodtime Hotel 8/30/26",
-          "es": "Mercado Artesanal Herpreneur en The Goodtime Hotel 8/30/26",
-          "pt": "Mercado Artesanal Herpreneur no The Goodtime Hotel 8/30/26",
-          "fr": "Marché Artisanal Herpreneur au The Goodtime Hotel 8/30/26"
-        },
-        "date": "2026-08-30",
-        "venue": "The Goodtime Hotel",
-        "address": "601 Washington Ave, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/07/15/herpreneur-artisan-market-at-the-goodtime-hotel-8-30-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/07/The-Goodtime-Hotel_Courtyard3-333x500.jpg",
-        "description": {
-          "en": "The Goodtime Hotel, Miami Beach will host an artisan market on Sunday, August 16, from",
-          "es": "The Goodtime Hotel en Miami Beach albergará un mercado artesanal el domingo 16 de agosto a partir de",
-          "pt": "The Goodtime Hotel em Miami Beach sediará um mercado artesanal no domingo 16 de agosto a partir de",
-          "fr": "The Goodtime Hotel à Miami Beach accueillera un marché artisanal le dimanche 16 août à partir de"
-        },
-        "lat": 25.7763327,
-        "lng": -80.1334166,
-        "category": "community"
-      },
-      {
         "id": "rss_1785071436251_bm2q",
         "title": {
           "en": "Join the 10th Annual WBHI Pink Walk—5K Run and Walk at Its New Home at Kendall Campus—Miami Dade College 9/20/26",
@@ -1490,32 +1465,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1785676272401_ylyn",
-        "title": {
-          "en": "Ishay Ribo with the Israeli Philharmonic Orchestra",
-          "es": "Ishay Ribo con la Orquesta Filarmónica de Israel",
-          "pt": "Ishay Ribo com a Orquestra Filarmônica de Israel",
-          "fr": "Ishay Ribo avec l'Orchestre Philharmonique d'Israël"
-        },
-        "date": "2026-08-30",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fishay-ribo-with-the-israeli-philharmonic-hollywood-florida-08-30-2026%2Fevent%2F0D0064E3B3835EF1&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/fe1/ab49a52d-c448-42ab-ac77-b2eaad4f6fe1_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · World · Starts 19:30 · Hard Rock Live",
-          "es": "Música · Mundial · Comienza 19:30 · Hard Rock Live",
-          "pt": "Música · Mundial · Começa 19:30 · Hard Rock Live",
-          "fr": "Musique · Mondial · Commence 19:30 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
       },
       {
         "id": "tm_1785676272401_jeqb",
@@ -3260,58 +3209,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1788105394141_taeu",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-08-30",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 12:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza 12:00 · Mana Wynwood Convention Center",
-          "pt": "Diverso · Família · Começa 12:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 12:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1788105394141_ckz2",
-        "title": {
-          "en": "Ricardo Montaner - El Último Regreso Tour",
-          "es": "Ricardo Montaner - Gira El Último Regreso",
-          "pt": "Ricardo Montaner - Turnê O Último Regresso",
-          "fr": "Ricardo Montaner - Tournée Le Dernier Retour"
-        },
-        "date": "2026-08-30",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fricardo-montaner-el-ultimo-regreso-tour-miami-florida-08-30-2026%2Fevent%2F0D00636ABC598360&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/254/c38c0813-6db8-4f30-91b2-fe9994eef254_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Unfortunately, the Event Organizer has had to cancel your event. You don't need to do a thing. We'll issue a refund to the [original method of payment](https://help.ticketmaster.com/hc/en-us/articles/9614074869009) used at time of purchase, as soon as funds are received from the Event Organizer. It should appear on your account within 14-21 days. Please Note: If the tickets were transferred to you",
-          "es": "Desafortunadamente, el organizador del evento ha tenido que cancelar tu evento. No necesitas hacer nada. Emitiremos un reembolso al método de pago original utilizado en el momento de la compra, tan pronto como recibamos los fondos del organizador del evento. Debería aparecer en tu cuenta dentro de 14-21 días. Por favor tenga en cuenta: Si los boletos fueron transferidos a usted",
-          "pt": "Infelizmente, o organizador do evento teve que cancelar seu evento. Você não precisa fazer nada. Emitiremos um reembolso para o método de pagamento original usado no momento da compra, assim que recebermos os fundos do organizador do evento. Deve aparecer em sua conta dentro de 14-21 dias. Observação: Se os ingressos foram transferidos para você",
-          "fr": "Malheureusement, l'organisateur de l'événement a dû annuler votre événement. Vous n'avez rien à faire. Nous émettrons un remboursement au mode de paiement original utilisé au moment de l'achat, dès que nous recevrons les fonds de l'organisateur de l'événement. Il devrait apparaître sur votre compte dans 14-21 jours. Veuillez noter: Si les billets vous ont été transférés"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "tm_1788105394141_z7f1",
         "title": {
           "en": "JUTES - Smile You're on Tour",
@@ -3414,6 +3311,158 @@
         "category": "music",
         "lat": 26.133662,
         "lng": -80.134063
+      },
+      {
+        "id": "rss_1788201622932_n4tr",
+        "title": {
+          "en": "Free Hispanic Heritage month concerts, Royal Palm Beach, Sept. 4 & 18",
+          "es": "Conciertos gratuitos del Mes de la Herencia Hispana, Royal Palm Beach, 4 y 18 de sept.",
+          "pt": "Concertos gratuitos do Mês da Herança Hispânica, Royal Palm Beach, 4 e 18 de set.",
+          "fr": "Concerts gratuits du Mois du patrimoine hispanique, Royal Palm Beach, 4 et 18 sept."
+        },
+        "date": "2026-08-31",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-concerts-royal-palm-beach/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/08/hh-rpb42-728x606.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Here's a list of some free concerts with food trucks in the Village of Royal Palm Beach that are free to attend. Hispanic Heritage month Concert series Friday, Sept. 4,... Copyright South Florida on the Cheap. The post Free Hispanic Heritage month concerts, Royal Palm Beach, Sept. 4 & 18 appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap Aquí hay una lista de algunos conciertos gratuitos con food trucks en el Village of Royal Palm Beach que son gratuitos para asistir. Serie de Conciertos del Mes de la Herencia Hispana Viernes, 4 de sept.,... Copyright South Florida on the Cheap. El artículo Conciertos gratuitos del Mes de la Herencia Hispana, Royal Palm Beach, 4 y 18 de sept. apareció primero en South Florida on the Cheap.",
+          "pt": "South Florida on the Cheap Aqui está uma lista de alguns concertos gratuitos com food trucks na Aldeia de Royal Palm Beach que são gratuitos para assistir. Série de Concertos do Mês da Herança Hispânica Sexta-feira, 4 de set.,... Copyright South Florida on the Cheap. O artigo Concertos gratuitos do Mês da Herança Hispânica, Royal Palm Beach, 4 e 18 de set. apareceu primeiro em South Florida on the Cheap.",
+          "fr": "South Florida on the Cheap Voici une liste de quelques concerts gratuits avec des food trucks au Village de Royal Palm Beach qui sont gratuits à assister. Série de concerts du Mois du patrimoine hispanique Vendredi 4 sept.,... Copyright South Florida on the Cheap. L'article Concerts gratuits du Mois du patrimoine hispanique, Royal Palm Beach, 4 et 18 sept. est apparu en premier sur South Florida on the Cheap."
+        },
+        "source": "Miami on the Cheap",
+        "category": "music"
+      },
+      {
+        "id": "rss_1788201622932_sogo",
+        "title": {
+          "en": "Grunge Lives Here: Truly featuring Hiro Yamamoto 10/24/26",
+          "es": "Grunge Vive Aquí: Truly con Hiro Yamamoto 10/24/26",
+          "pt": "Grunge Vive Aqui: Truly com Hiro Yamamoto 10/24/26",
+          "fr": "Grunge Vit Ici : Truly avec Hiro Yamamoto 10/24/26"
+        },
+        "date": "2026-10-24",
+        "venue": "La Scala de Miami",
+        "address": "905 Brickell Bay Drive, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/08/31/grunge-lives-here-truly-featuring-hiro-yamamoto-10-24-26/",
+        "free": false,
+        "price": "$33",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/cartel-soulofmiami-1100-350x438.jpg",
+        "description": {
+          "en": "Hiro Yamamoto, the bassist who co-founded Soundgarden and was inducted into the Rock and",
+          "es": "Hiro Yamamoto, el bajista que cofundó Soundgarden e fue incluido en el Rock and",
+          "pt": "Hiro Yamamoto, o baixista que co-fundou Soundgarden e foi incluído no Rock and",
+          "fr": "Hiro Yamamoto, le bassiste qui a co-fondé Soundgarden et a été intronisé au Rock and"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7643451,
+        "lng": -80.1894982,
+        "category": "community"
+      },
+      {
+        "id": "rss_1788201622932_4kzj",
+        "title": {
+          "en": "Annual Global Summit on Waste management, Biofuels and Circular Economy 9/15/27",
+          "es": "Cumbre Global Anual sobre Gestión de Residuos, Biocombustibles y Economía Circular 9/15/27",
+          "pt": "Cúpula Global Anual sobre Gestão de Resíduos, Biocombustíveis e Economia Circular 9/15/27",
+          "fr": "Sommet mondial annuel sur la gestion des déchets, les biocarburants et l'économie circulaire 9/15/27"
+        },
+        "date": "2027-09-15",
+        "venue": "Rome, Italy Rome, Italy, Rome, Italy, Florida, 00100",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/08/30/annual-global-summit-on-waste-management-biofuels-and-circular-economy-9-15-27/",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "2nd Annual Global Summit on Waste Management, Bioenergy and Circular Economy (AGSWBC2027) will be",
+          "es": "2ª Cumbre Global Anual sobre Gestión de Residuos, Bioenergía y Economía Circular (AGSWBC2027) será",
+          "pt": "2ª Cúpula Global Anual sobre Gestão de Resíduos, Bioenergia e Economia Circular (AGSWBC2027) será",
+          "fr": "2e Sommet mondial annuel sur la gestion des déchets, la bioénergie et l'économie circulaire (AGSWBC2027) sera"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1788201623498_9xce",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte Es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte É Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
+        },
+        "date": "2026-08-31",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 14:45 · Mana Wynwood Convention Center",
+          "es": "Misceláneo · Familia · Comienza 14:45 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diverso · Família · Começa 14:45 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 14:45 · Centre des congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1788201623498_6d6l",
+        "title": {
+          "en": "DOMi & JD Beck - WHO ASKED? Tour",
+          "es": "DOMi & JD Beck - Gira WHO ASKED?",
+          "pt": "DOMi & JD Beck - Turnê WHO ASKED?",
+          "fr": "DOMi & JD Beck - Tournée WHO ASKED?"
+        },
+        "date": "2026-09-18",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdomi-jd-beck-who-asked-tour-ft-lauderdale-florida-09-18-2026%2Fevent%2F0D0064EE05A98D27&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d72/716be6ed-b61f-4bf4-bc30-d91c212c6d72_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "DOMi & JD Beck - WHO ASKED? Tour An Evening With · Starts 19:30 · Culture Room",
+          "es": "DOMi & JD Beck - Gira WHO ASKED? Una Noche Con · Comienza 19:30 · Culture Room",
+          "pt": "DOMi & JD Beck - Turnê WHO ASKED? Uma Noite Com · Começa 19:30 · Culture Room",
+          "fr": "DOMi & JD Beck - Tournée WHO ASKED? Une Soirée Avec · Commence 19:30 · Culture Room"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1788201623498_znwx",
+        "title": {
+          "en": "Vilma Palma e Vampiros",
+          "es": "Vilma Palma e Vampiros",
+          "pt": "Vilma Palma e Vampiros",
+          "fr": "Vilma Palma e Vampiros"
+        },
+        "date": "2026-09-18",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fvilma-palma-e-vampiros-miami-florida-09-18-2026%2Fevent%2F0D00648AD237CC40&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/13e/3ceb0988-a641-4eb6-b7e7-4f21277d013e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Vilma Palma e Vampiros llega a Miami con su gira Grandes Éxitos, celebrando más de 36 años de música que han marcado generaciones. Una noche única llena de nostalgia, energía y todos los himnos que hicieron historia en el rock en español, incluyendo clásicos como La Pachanga, Auto Rojo y muchos más . Vive un concierto inolvidable con una de las bandas más icónicas de Latinoamérica, en un show dise",
+          "es": "Vilma Palma e Vampiros llega a Miami con su gira Grandes Éxitos, celebrando más de 36 años de música que han marcado generaciones. Una noche única llena de nostalgia, energía y todos los himnos que hicieron historia en el rock en español, incluyendo clásicos como La Pachanga, Auto Rojo y muchos más. Vive un concierto inolvidable con una de las bandas más icónicas de Latinoamérica.",
+          "pt": "Vilma Palma e Vampiros chega a Miami com sua turnê Grandes Êxitos, celebrando mais de 36 anos de música que marcaram gerações. Uma noite única repleta de nostalgia, energia e todos os hinos que fizeram história no rock em espanhol, incluindo clássicos como La Pachanga, Auto Rojo e muito mais. Viva um show inesquecível com uma das bandas mais icônicas da América Latina.",
+          "fr": "Vilma Palma e Vampiros arrive à Miami avec sa tournée Grandes Éxitos, célébrant plus de 36 ans de musique qui ont marqué les générations. Une nuit unique remplie de nostalgie, d'énergie et de tous les hymnes qui ont fait l'histoire du rock en espagnol, incluant des classiques comme La Pachanga, Auto Rojo et bien d'autres. Vivez un concert inoubliable avec l'un des groupes les plus emblématiques d'Amérique latine."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7707756,
+        "lng": -80.1901174
       }
     ]
   },
@@ -4317,7 +4366,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-08-30T15:56:59.278Z",
+    "fetchedAt": "2026-08-31T18:40:55.940Z",
     "items": [
       {
         "id": "beach_crandon-park-north-key-biscayne",
@@ -4338,7 +4387,7 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-north-key-biscayne",
         "effectiveAt": "2026-08-28",
-        "expiresAt": "2026-08-31T15:56:59.278Z"
+        "expiresAt": "2026-09-01T18:40:55.940Z"
       }
     ]
   }
