@@ -1,45 +1,45 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-01T16:00:07.461Z",
+    "lastUpdated": "2026-09-02T15:53:06.014Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-01T16:00:06.117Z",
+    "fetchedAt": "2026-09-02T15:53:05.183Z",
     "current": {
-      "temp_f": 86,
-      "feels_f": 99,
+      "temp_f": 87,
+      "feels_f": 103,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 81,
-      "wind_mph": 5,
-      "rain_chance": 41,
+      "humidity": 76,
+      "wind_mph": 3,
+      "rain_chance": 21,
       "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-09-01",
-        "high_f": 86,
+        "date": "2026-09-02",
+        "high_f": 87,
         "low_f": 76,
-        "weathercode": 81,
-        "rain_chance": 41,
+        "weathercode": 80,
+        "rain_chance": 21,
         "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
-        "date": "2026-09-02",
-        "high_f": 87,
-        "low_f": 75,
+        "date": "2026-09-03",
+        "high_f": 86,
+        "low_f": 79,
         "weathercode": 3,
-        "rain_chance": 24,
+        "rain_chance": 22,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -48,24 +48,11 @@
         }
       },
       {
-        "date": "2026-09-03",
-        "high_f": 88,
-        "low_f": 79,
-        "weathercode": 95,
-        "rain_chance": 51,
-        "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
-        }
-      },
-      {
         "date": "2026-09-04",
-        "high_f": 86,
-        "low_f": 84,
+        "high_f": 89,
+        "low_f": 78,
         "weathercode": 95,
-        "rain_chance": 47,
+        "rain_chance": 46,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-09-05",
-        "high_f": 88,
-        "low_f": 84,
-        "weathercode": 51,
-        "rain_chance": 58,
+        "high_f": 89,
+        "low_f": 83,
+        "weathercode": 95,
+        "rain_chance": 70,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-09-06",
+        "high_f": 90,
+        "low_f": 85,
+        "weathercode": 96,
+        "rain_chance": 75,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "12:00",
-        "temp_f": 86,
+        "hour": "11:00",
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 3
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "13:00",
         "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 11
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 86,
-        "weathercode": 3,
         "rain_chance": 10
       },
       {
-        "hour": "15:00",
-        "temp_f": 85,
-        "weathercode": 1,
-        "rain_chance": 13
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 85,
-        "weathercode": 1,
-        "rain_chance": 18
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 85,
+        "hour": "14:00",
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 23
+        "rain_chance": 14
       },
       {
-        "hour": "18:00",
-        "temp_f": 80,
-        "weathercode": 81,
-        "rain_chance": 28
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 78,
-        "weathercode": 65,
-        "rain_chance": 32
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 77,
-        "weathercode": 51,
-        "rain_chance": 21
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 76,
+        "hour": "15:00",
+        "temp_f": 86,
         "weathercode": 3,
         "rain_chance": 20
       },
       {
-        "hour": "22:00",
-        "temp_f": 76,
-        "weathercode": 3,
+        "hour": "16:00",
+        "temp_f": 86,
+        "weathercode": 2,
+        "rain_chance": 21
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 86,
+        "weathercode": 0,
         "rain_chance": 16
       },
       {
-        "hour": "23:00",
-        "temp_f": 76,
+        "hour": "18:00",
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 21
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 82,
         "weathercode": 2,
-        "rain_chance": 5
+        "rain_chance": 18
       },
       {
-        "hour": "00:00",
-        "temp_f": 76,
-        "weathercode": 2,
-        "rain_chance": 4
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 7
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 76,
-        "weathercode": 0,
+        "hour": "21:00",
+        "temp_f": 82,
+        "weathercode": 3,
         "rain_chance": 12
       },
       {
-        "hour": "03:00",
-        "temp_f": 76,
-        "weathercode": 0,
+        "hour": "22:00",
+        "temp_f": 81,
+        "weathercode": 53,
         "rain_chance": 9
       },
       {
+        "hour": "23:00",
+        "temp_f": 80,
+        "weathercode": 80,
+        "rain_chance": 8
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 7
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 4
+      },
+      {
         "hour": "04:00",
-        "temp_f": 75,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 5
       },
       {
         "hour": "05:00",
-        "temp_f": 76,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 5
       },
       {
         "hour": "06:00",
-        "temp_f": 76,
-        "weathercode": 2,
-        "rain_chance": 5
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 76,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 6
       },
       {
-        "hour": "08:00",
-        "temp_f": 78,
+        "hour": "07:00",
+        "temp_f": 79,
         "weathercode": 2,
-        "rain_chance": 8
+        "rain_chance": 7
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 7
       },
       {
         "hour": "09:00",
-        "temp_f": 81,
+        "temp_f": 83,
         "weathercode": 3,
         "rain_chance": 6
       },
       {
         "hour": "10:00",
         "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 6
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 10
+        "weathercode": 2,
+        "rain_chance": 8
       }
     ]
   },
@@ -3415,102 +3415,6 @@
         "lng": -80.1901174
       },
       {
-        "id": "rss_1788278356293_4h2f",
-        "title": {
-          "en": "Free Hispanic Heritage month concerts, Royal Palm Beach, Sept. 4 & 18",
-          "es": "Conciertos gratuitos del Mes de la Herencia Hispana, Royal Palm Beach, 4 y 18 de sept.",
-          "pt": "Concertos gratuitos do Mês da Herança Hispânica, Royal Palm Beach, 4 e 18 de set.",
-          "fr": "Concerts gratuits du Mois du patrimoine hispanique, Royal Palm Beach, 4 et 18 sept."
-        },
-        "date": "2026-09-01",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-concerts-royal-palm-beach/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/08/hh-rpb42-728x606.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Here's a list of some free concerts with food trucks in the Village of Royal Palm Beach that are free to attend. Hispanic Heritage month Concert series Friday, Sept. 4,... Copyright South Florida on the Cheap. The post Free Hispanic Heritage month concerts, Royal Palm Beach, Sept. 4 & 18 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Aquí hay una lista de algunos conciertos gratuitos con food trucks en el Village of Royal Palm Beach que son gratis para asistir. Serie de conciertos del Mes de la Herencia Hispana Viernes, 4 de sept.,... Copyright South Florida on the Cheap. El artículo Conciertos gratuitos del Mes de la Herencia Hispana, Royal Palm Beach, 4 y 18 de sept. apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Aqui está uma lista de alguns concertos gratuitos com food trucks no Village of Royal Palm Beach que são grátis para participar. Série de Concertos do Mês da Herança Hispânica Sexta-feira, 4 de set.,... Copyright South Florida on the Cheap. O artigo Concertos gratuitos do Mês da Herança Hispânica, Royal Palm Beach, 4 e 18 de set. apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Voici une liste de quelques concerts gratuits avec des food trucks au Village of Royal Palm Beach qui sont gratuits à participer. Série de concerts du Mois du patrimoine hispanique Vendredi, 4 sept.,... Copyright South Florida on the Cheap. L'article Concerts gratuits du Mois du patrimoine hispanique, Royal Palm Beach, 4 et 18 sept. est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "music"
-      },
-      {
-        "id": "rss_1788278356293_camb",
-        "title": {
-          "en": "Free screening of 'The Uprising,' in Miami, Sept. 9",
-          "es": "Proyección gratuita de 'The Uprising', en Miami, 9 de sept.",
-          "pt": "Exibição gratuita de 'The Uprising', em Miami, 9 de set.",
-          "fr": "Projection gratuite de 'The Uprising', à Miami, 9 sept."
-        },
-        "date": "2026-09-01",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-advance-screening-passes/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/08/the-rising2-728x610.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Here's a chance to preview a free screening of the new Focus Features film. The Uprising (rated-R) South Miami When: Wednesday, Sept. 9, 2026, at 7:30 p.m. Where: AMC Sunset... Copyright South Florida on the Cheap. The post Free screening of 'The Uprising,' in Miami, Sept. 9 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Aquí hay una oportunidad para ver una proyección gratuita de la nueva película de Focus Features. The Uprising (calificación R) South Miami Cuándo: Miércoles, 9 de sept. de 2026, a las 7:30 p.m. Dónde: AMC Sunset... Copyright South Florida on the Cheap. El artículo Proyección gratuita de 'The Uprising', en Miami, 9 de sept. apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Aqui está uma chance de assistir a uma exibição gratuita do novo filme da Focus Features. The Uprising (classificação R) South Miami Quando: Quarta-feira, 9 de set. de 2026, às 7:30 da noite Onde: AMC Sunset... Copyright South Florida on the Cheap. O artigo Exibição gratuita de 'The Uprising', em Miami, 9 de set. apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Voici une chance de voir une projection gratuite du nouveau film de Focus Features. The Uprising (classification R) South Miami Quand: Mercredi, 9 sept. 2026, à 19h30 Où: AMC Sunset... Copyright South Florida on the Cheap. L'article Projection gratuite de 'The Uprising', à Miami, 9 sept. est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "arts"
-      },
-      {
-        "id": "rss_1788278356293_7280",
-        "title": {
-          "en": "Free: Mango Music & Art Festival, Lake Worth, Sept. 5",
-          "es": "Gratis: Festival de Música y Arte Mango, Lake Worth, 5 de sept.",
-          "pt": "Grátis: Festival de Música e Arte Mango, Lake Worth, 5 de set.",
-          "fr": "Gratuit: Festival de musique et d'art Mango, Lake Worth, 5 sept."
-        },
-        "date": "2026-09-01",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/j-street-block-party-lake-worth/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/02/mango-h2-728x662.jpg",
-        "description": {
-          "en": "South Florida on the Cheap You won't want to miss this free community event that will feature 27 acts on four stages, with art and clothing vendors, live artist painting, plus roaming performers. Mango Music... Copyright South Florida on the Cheap. The post Free: Mango Music & Art Festival, Lake Worth, Sept. 5 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap No querrás perderte este evento comunitario gratuito que contará con 27 actos en cuatro escenarios, con vendedores de arte y ropa, pintura en vivo del artista, más artistas itinerantes. Música Mango... Copyright South Florida on the Cheap. El artículo Gratis: Festival de Música y Arte Mango, Lake Worth, 5 de sept. apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Você não vai querer perder este evento comunitário gratuito que contará com 27 atos em quatro palcos, com vendedores de arte e roupas, pintura artística ao vivo, mais artistas itinerantes. Música Mango... Copyright South Florida on the Cheap. O artigo Grátis: Festival de Música e Arte Mango, Lake Worth, 5 de set. apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Vous ne voudrez pas manquer cet événement communautaire gratuit qui comprendra 27 actes sur quatre scènes, avec des vendeurs d'art et de vêtements, de la peinture artistique en direct, plus des artistes itinérants. Musique Mango... Copyright South Florida on the Cheap. L'article Gratuit: Festival de musique et d'art Mango, Lake Worth, 5 sept. est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "rss_1788278356293_1ua7",
-        "title": {
-          "en": "Free entry to 'BBQ: Brews & Blues' Sept. 5, Heart & Soul Park",
-          "es": "Entrada gratuita a 'BBQ: Brews & Blues' 5 de sept., Heart & Soul Park",
-          "pt": "Entrada gratuita para 'BBQ: Brews & Blues' 5 de set., Heart & Soul Park",
-          "fr": "Entrée gratuite à 'BBQ: Brews & Blues' 5 sept., Heart & Soul Park"
-        },
-        "date": "2026-09-01",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-live-music-at-northwest-bbq-brews-blues-wpb/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2025/06/bbq2-728x517.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Get ready to enjoy the annual family friendly event. Admission is free; vendor prices vary. BBQ, Brews & Blues When: Saturday, Sept. 5, 2026, from 5 to 9 p.m. Where:... Copyright South Florida on the Cheap. The post Free entry to 'BBQ: Brews & Blues' Sept. 5, Heart & Soul Park appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Prepárate para disfrutar del evento anual apto para familias. La entrada es gratuita; los precios de los vendedores varían. BBQ, Brews & Blues Cuándo: Sábado, 5 de sept. de 2026, de 5 a 9 p.m. Dónde:... Copyright South Florida on the Cheap. El artículo Entrada gratuita a 'BBQ: Brews & Blues' 5 de sept., Heart & Soul Park apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Prepare-se para desfrutar do evento anual apropriado para famílias. A entrada é gratuita; os preços dos vendedores variam. BBQ, Brews & Blues Quando: Sábado, 5 de set. de 2026, das 17h às 21h Onde:... Copyright South Florida on the Cheap. O artigo Entrada gratuita para 'BBQ: Brews & Blues' 5 de set., Heart & Soul Park apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Préparez-vous à profiter de l'événement annuel familial. L'admission est gratuite; les prix des vendeurs varient. BBQ, Brews & Blues Quand: Samedi, 5 sept. 2026, de 17h à 21h Où:... Copyright South Florida on the Cheap. L'article Entrée gratuite à 'BBQ: Brews & Blues' 5 sept., Heart & Soul Park est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
         "id": "rss_1788278356293_1l1j",
         "title": {
           "en": "Lighthouse of Broward’s 12th Annual Dining in the Dark 11/14/26",
@@ -3535,32 +3439,6 @@
         "lat": 26.0188099,
         "lng": -80.1162312,
         "category": "community"
-      },
-      {
-        "id": "tm_1788278356863_wt7u",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-01",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 13:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 13:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 13:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
       },
       {
         "id": "tm_1788278356863_rmxp",
@@ -3665,6 +3543,266 @@
         "category": "music",
         "lat": 25.817805,
         "lng": -80.122143
+      },
+      {
+        "id": "rss_1788364346940_ozp6",
+        "title": {
+          "en": "Florida Grand Opera: Lucia Di Lammermoor by Gaetano Donizetti 11/14/26",
+          "es": "Ópera Gran de Florida: Lucia Di Lammermoor de Gaetano Donizetti 11/14/26",
+          "pt": "Ópera Grand Florida: Lucia Di Lammermoor de Gaetano Donizetti 11/14/26",
+          "fr": "Opéra Grand de Floride: Lucia Di Lammermoor de Gaetano Donizetti 11/14/26"
+        },
+        "date": "2026-11-14",
+        "venue": "Adrienne Arsht Center for the Performing Arts/ Ziff Ballet Opera House",
+        "address": "1300 Biscayne Blvd, Miami, Florida, 33132",
+        "url": "https://www.soulofmiami.org/2026/09/02/florida-grand-opera-lucia-di-lammermoor-by-gaetano-donizetti-11-14-26/",
+        "free": false,
+        "price": "$22",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Lucia_800-350x130.jpg",
+        "description": {
+          "en": "Trapped between a brother’s political ambitions",
+          "es": "Atrapada entre las ambiciones políticas de un hermano",
+          "pt": "Presa entre as ambições políticas de um irmão",
+          "fr": "Piégée entre les ambitions politiques d'un frère"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7876286,
+        "lng": -80.1900593,
+        "category": "arts"
+      },
+      {
+        "id": "rss_1788364346941_6qna",
+        "title": {
+          "en": "Florida Grand Opera: Don Giovanni by W.A. Mozart 1/30/27",
+          "es": "Ópera Gran de Florida: Don Giovanni de W.A. Mozart 1/30/27",
+          "pt": "Ópera Grand Florida: Don Giovanni de W.A. Mozart 1/30/27",
+          "fr": "Opéra Grand de Floride: Don Giovanni de W.A. Mozart 1/30/27"
+        },
+        "date": "2027-01-30",
+        "venue": "Adrienne Arsht Center for the Performing Arts/ Ziff Ballet Opera House",
+        "address": "1300 Biscayne Blvd, Miami, Florida, 33132",
+        "url": "https://www.soulofmiami.org/2026/09/02/florida-grand-opera-don-giovanni-by-w-a-mozart-1-30-27/",
+        "free": false,
+        "price": "$22",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Don_Giovanni_800-350x130.jpg",
+        "description": {
+          "en": "Don Giovanni is a serial seducer who",
+          "es": "Don Giovanni es un seductor en serie que",
+          "pt": "Don Giovanni é um sedutor em série que",
+          "fr": "Don Giovanni est un séducteur en série qui"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7876286,
+        "lng": -80.1900593,
+        "category": "arts"
+      },
+      {
+        "id": "rss_1788364346941_n9fl",
+        "title": {
+          "en": "Florida Grand Opera: Nabucco by Giuseppe Verdi 4/17/27, 4/18/27/ 4/20/27",
+          "es": "Ópera Gran de Florida: Nabucco de Giuseppe Verdi 4/17/27, 4/18/27, 4/20/27",
+          "pt": "Ópera Grand Florida: Nabucco de Giuseppe Verdi 4/17/27, 4/18/27, 4/20/27",
+          "fr": "Opéra Grand de Floride: Nabucco de Giuseppe Verdi 4/17/27, 4/18/27, 4/20/27"
+        },
+        "date": "2027-04-17",
+        "venue": "Adrienne Arsht Center for the Performing Arts/ Ziff Ballet Opera House",
+        "address": "1300 Biscayne Blvd, Miami, Florida, 33132",
+        "url": "https://www.soulofmiami.org/2026/09/02/florida-grand-opera-nabucco-by-giuseppe-verdi-4-17-27-4-18-27-4-20-27/",
+        "free": false,
+        "price": "$22",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Nabucco_800-350x130.jpg",
+        "description": {
+          "en": "Nabucco, King of Babylon, conquers Jerusalem and enslaves",
+          "es": "Nabucco, Rey de Babilonia, conquista Jerusalén y esclaviza",
+          "pt": "Nabucco, Rei da Babilônia, conquista Jerusalém e escraviza",
+          "fr": "Nabucco, Roi de Babylone, conquiert Jérusalem et asservit"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7876286,
+        "lng": -80.1900593,
+        "category": "arts"
+      },
+      {
+        "id": "rss_1788364346941_z207",
+        "title": {
+          "en": "SongFest – First Sing 10/16/26",
+          "es": "SongFest – Primer Canto 10/16/26",
+          "pt": "SongFest – Primeiro Canto 10/16/26",
+          "fr": "SongFest – Premier Chant 10/16/26"
+        },
+        "date": "2026-10-16",
+        "venue": "First Miami Presbyterian Church",
+        "address": "609 Brickell Ave, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/09/02/songfest-first-sing-10-16-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Songfest-Image-350x193.jpg",
+        "description": {
+          "en": "Join Florida Grand Opera for the first Studio Artist Concert of the season as we introduce the talented",
+          "es": "Únete a la Ópera Gran de Florida para el primer Concierto de Artista de Estudio de la temporada mientras presentamos el talentoso",
+          "pt": "Junte-se à Ópera Grand Florida para o primeiro Concerto de Artista de Estúdio da temporada enquanto apresentamos o talentoso",
+          "fr": "Rejoignez l'Opéra Grand de Floride pour le premier Concert d'Artiste en Studio de la saison alors que nous présentons le talentueux"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7676732,
+        "lng": -80.1896902,
+        "category": "music"
+      },
+      {
+        "id": "rss_1788364346941_crwf",
+        "title": {
+          "en": "SongFest – Rhythms & Reflections: A Celebration of Latin American Art Songs 11/22/27",
+          "es": "SongFest – Ritmos y Reflexiones: Una Celebración de Canciones de Arte Latinoamericano 11/22/27",
+          "pt": "SongFest – Ritmos e Reflexões: Uma Celebração de Canções de Arte Latino-Americana 11/22/27",
+          "fr": "SongFest – Rythmes et Réflexions: Une Célébration des Chansons d'Art Latino-Américain 11/22/27"
+        },
+        "date": "2026-11-22",
+        "venue": "First Miami Presbyterian Church",
+        "address": "609 Brickell Ave, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/09/02/songfest-rhythms-reflections-a-celebration-of-latin-american-art-songs-11-22-27/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Songfest-Image1-350x193.jpg",
+        "description": {
+          "en": "Journey through the rich and vibrant musical landscapes of Latin",
+          "es": "Viaja a través de los ricos y vibrantes paisajes musicales de América Latina",
+          "pt": "Viaje através das ricas e vibrantes paisagens musicais da América Latina",
+          "fr": "Voyagez à travers les paysages musicaux riches et vibrants d'Amérique latine"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7676732,
+        "lng": -80.1896902,
+        "category": "community"
+      },
+      {
+        "id": "rss_1788364346941_102t",
+        "title": {
+          "en": "SongFest – The Sound of Applause: Broadway’s Greatest Hits 1/15/27",
+          "es": "SongFest – El Sonido de los Aplausos: Los Grandes Éxitos de Broadway 1/15/27",
+          "pt": "SongFest – O Som dos Aplausos: Os Maiores Sucessos da Broadway 1/15/27",
+          "fr": "SongFest – Le Son des Applaudissements: Les Plus Grands Succès de Broadway 1/15/27"
+        },
+        "date": "2027-01-15",
+        "venue": "First Miami Presbyterian Church",
+        "address": "609 Brickell Ave, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/09/02/songfest-the-sound-of-applause-broadways-greatest-hits-1-15-27/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Songfest-Image2-350x193.jpg",
+        "description": {
+          "en": "From unforgettable ballads and soaring anthems to show-stopping ensemble numbers, this exciting evening",
+          "es": "Desde baladas inolvidables y antemas soaring hasta números de conjunto impresionantes, esta emocionante velada",
+          "pt": "Desde baladas inesquecíveis e antemas soaring até números de conjunto impressionantes, esta noite emocionante",
+          "fr": "Des ballades inoubliables et des hymnes soaring aux numéros d'ensemble spectaculaires, cette soirée passionnante"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7676732,
+        "lng": -80.1896902,
+        "category": "community"
+      },
+      {
+        "id": "tm_1788364347586_m96j",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-02",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 13:00 · Mana Wynwood Convention Center",
+          "pt": "Diverso · Família · Começa 13:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 13:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1788364347586_hsac",
+        "title": {
+          "en": "Miami Marlins vs. Chicago Cubs",
+          "es": "Miami Marlins vs. Chicago Cubs",
+          "pt": "Miami Marlins vs. Chicago Cubs",
+          "fr": "Miami Marlins vs. Chicago Cubs"
+        },
+        "date": "2026-09-04",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0a&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 19:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 19:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 19:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 19:10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1788364347586_ojnw",
+        "title": {
+          "en": "Jo Koy Live",
+          "es": "Jo Koy En Vivo",
+          "pt": "Jo Koy Ao Vivo",
+          "fr": "Jo Koy En Direct"
+        },
+        "date": "2026-09-04",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjo-koy-live-hollywood-florida-09-04-2026%2Fevent%2F0D0064BC80436DE4&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/fb8/e45d0f19-ccb4-4ee3-93d3-7c3b1ff8efb8_1486581_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Comedy · Starts 20:00 · Hard Rock Live",
+          "es": "Artes y Teatro · Comedia · Comienza 20:00 · Hard Rock Live",
+          "pt": "Artes e Teatro · Comédia · Começa 20:00 · Hard Rock Live",
+          "fr": "Arts et Théâtre · Comédie · Commence 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1788364347586_fkmp",
+        "title": {
+          "en": "DeathMatch - Competitive Improv Show",
+          "es": "DeathMatch - Espectáculo de Improvisación Competitiva",
+          "pt": "DeathMatch - Show de Improvisação Competitiva",
+          "fr": "DeathMatch - Spectacle d'Improvisation Compétitif"
+        },
+        "date": "2026-09-04",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdeathmatch-competitive-improv-just-the-funny-tickets%2F14897653&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "DeathMatch - Short-Form Improv Comedy in MiamiTwo teams enter - one team wins! Two teams of improvisors complete in an all out comedy brawl performing fast-paced improv games completing for your laughs. Who wins? You decide!This show features members of our award-winning JTF cast and invited alums and improv celebrity performers.Tickets are PER PERSON for this show. We will seat parties together i",
+          "es": "DeathMatch - Comedia de Improvisación de Forma Corta en Miami. ¡Dos equipos entran, un equipo gana! Dos equipos de improvisadores compiten en una batalla de comedia total, realizando juegos de improvisación de ritmo rápido compitiendo por tus risas. ¿Quién gana? ¡Tú decides! Este show presenta miembros de nuestro elenco ganador de premios JTF y antiguos alumnos invitados y actores de celebridades de improvisación.",
+          "pt": "DeathMatch - Comédia de Improvisação de Forma Curta em Miami. Dois times entram - um time vence! Dois times de improvisadores competem em uma batalha de comédia total, realizando jogos de improvisação de ritmo rápido competindo pelas suas risadas. Quem vence? Você decide! Este show apresenta membros do nosso elenco premiado JTF e antigos alunos convidados e artistas de celebridades de improvisação.",
+          "fr": "DeathMatch - Comédie d'Improvisation de Forme Courte à Miami. Deux équipes entrent - une équipe gagne! Deux équipes d'improvisateurs concourent dans une bataille de comédie totale, réalisant des jeux d'improvisation au rythme rapide en compétition pour vos rires. Qui gagne? Vous décidez! Ce spectacle présente des membres de notre distribution gagnante des prix JTF et des anciens invités et des artistes de célébrités d'improvisation."
+        },
+        "source": "Ticketmaster",
+        "lat": 25.750417,
+        "lng": -80.244412,
+        "category": "comedy"
       }
     ]
   },
@@ -4568,7 +4706,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-01T16:00:06.117Z",
+    "fetchedAt": "2026-09-02T15:53:05.183Z",
     "items": [
       {
         "id": "beach_crandon-park-north-key-biscayne",
@@ -4589,7 +4727,7 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-north-key-biscayne",
         "effectiveAt": "2026-08-28",
-        "expiresAt": "2026-09-02T16:00:06.117Z"
+        "expiresAt": "2026-09-03T15:53:05.183Z"
       }
     ]
   }
