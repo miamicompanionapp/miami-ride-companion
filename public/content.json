@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-04T15:40:30.358Z",
+    "lastUpdated": "2026-09-05T14:28:25.490Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-04T15:40:29.777Z",
+    "fetchedAt": "2026-09-05T14:28:24.930Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 95,
+      "temp_f": 82,
+      "feels_f": 93,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
-      "wind_mph": 7,
-      "rain_chance": 47,
+      "humidity": 84,
+      "wind_mph": 3,
+      "rain_chance": 42,
       "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-09-04",
-        "high_f": 87,
-        "low_f": 80,
-        "weathercode": 81,
-        "rain_chance": 47,
-        "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
-        }
-      },
-      {
         "date": "2026-09-05",
         "high_f": 87,
         "low_f": 76,
-        "weathercode": 3,
-        "rain_chance": 22,
+        "weathercode": 55,
+        "rain_chance": 42,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-09-06",
-        "high_f": 90,
+        "high_f": 88,
         "low_f": 75,
-        "weathercode": 80,
-        "rain_chance": 74,
+        "weathercode": 51,
+        "rain_chance": 37,
         "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       },
       {
         "date": "2026-09-07",
-        "high_f": 91,
-        "low_f": 81,
+        "high_f": 90,
+        "low_f": 76,
         "weathercode": 95,
-        "rain_chance": 82,
+        "rain_chance": 76,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,42 +62,61 @@
       },
       {
         "date": "2026-09-08",
-        "high_f": 89,
-        "low_f": 82,
-        "weathercode": 96,
-        "rain_chance": 62,
+        "high_f": 90,
+        "low_f": 85,
+        "weathercode": 95,
+        "rain_chance": 60,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-09-09",
+        "high_f": 89,
+        "low_f": 85,
+        "weathercode": 51,
+        "rain_chance": 22,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       }
     ],
     "hourly": [
       {
+        "hour": "10:00",
+        "temp_f": 81,
+        "weathercode": 51,
+        "rain_chance": 29
+      },
+      {
         "hour": "11:00",
         "temp_f": 84,
-        "weathercode": 51,
-        "rain_chance": 47
+        "weathercode": 3,
+        "rain_chance": 23
       },
       {
         "hour": "12:00",
         "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 37
+        "rain_chance": 17
       },
       {
         "hour": "13:00",
         "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 31
+        "rain_chance": 14
       },
       {
         "hour": "14:00",
         "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 25
+        "rain_chance": 15
       },
       {
         "hour": "15:00",
@@ -120,117 +126,111 @@
       },
       {
         "hour": "16:00",
-        "temp_f": 86,
+        "temp_f": 87,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 19
       },
       {
         "hour": "17:00",
-        "temp_f": 86,
+        "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 23
       },
       {
         "hour": "18:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 30
       },
       {
         "hour": "19:00",
-        "temp_f": 83,
+        "temp_f": 78,
+        "weathercode": 55,
+        "rain_chance": 42
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 38
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 19
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 14
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 14
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 9
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 76,
         "weathercode": 3,
         "rain_chance": 7
       },
       {
-        "hour": "20:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
         "hour": "02:00",
-        "temp_f": 79,
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 5
       },
       {
         "hour": "03:00",
-        "temp_f": 78,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 6
       },
       {
         "hour": "04:00",
-        "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 11
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "05:00",
-        "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 13
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 4
       },
       {
         "hour": "06:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 7
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 13
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 13
-      },
-      {
-        "hour": "09:00",
-        "temp_f": 84,
+        "temp_f": 75,
         "weathercode": 3,
         "rain_chance": 9
       },
       {
-        "hour": "10:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 12
+        "hour": "07:00",
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 13
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 14
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 10
       }
     ]
   },
@@ -1563,84 +1563,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786279202166_ef3g",
-        "title": {
-          "en": "6th Annual Denim Party",
-          "es": "6ª Fiesta Anual de Denim",
-          "pt": "6ª Festa Anual de Denim",
-          "fr": "6ème Fête Annuelle du Denim"
-        },
-        "date": "2026-09-04",
-        "venue": "Miramar Regional Park Amphitheater",
-        "address": "16805 Miramar Parkway, Miramar, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F6th-annual-denim-party-miramar-florida-09-04-2026%2Fevent%2F0D0064E9BFA47C7B&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/eb7/bef2eb78-bfd3-45fd-a969-6902aef62eb7_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Kick off Labor Day Weekend the right way at the Official Orange Blossom Classic Kickoff & 6th Annual Denim Party - Friday, September 4th at 8pm at the stunning Miramar Amphitheater. Music by DJ Bo Weezy - DJ Nasty 305 - DJ Germ - DJ Tight Indulge in a variety of food and drink options available across the venue, including BBQ, shrimp and rice, hibachi, conch salad, oxtails, seafood tacos, full liq",
-          "es": "Comienza el fin de semana del Día del Trabajo de la manera correcta en el Lanzamiento Oficial del Orange Blossom Classic y la 6ª Fiesta Anual de Denim - Viernes, 4 de septiembre a las 8pm en el impresionante Anfiteatro de Miramar. Música por DJ Bo Weezy - DJ Nasty 305 - DJ Germ - DJ Tight Disfruta de una variedad de opciones de comida y bebida disponibles en todo el lugar, incluyendo BBQ, camarones con arroz, hibachi, ensalada de caracol, rabo oxtail, tacos de mariscos, licor completo",
-          "pt": "Comece o fim de semana do Dia do Trabalho da maneira certa na Cerimônia Oficial de Abertura do Orange Blossom Classic e na 6ª Festa Anual de Denim - Sexta-feira, 4 de setembro às 20h no impressionante Anfiteatro de Miramar. Música por DJ Bo Weezy - DJ Nasty 305 - DJ Germ - DJ Tight Aproveite uma variedade de opções de comida e bebida disponíveis em todo o local, incluindo BBQ, camarão com arroz, hibachi, salada de concha, rabo, tacos de frutos do mar, bebida completa",
-          "fr": "Lancez le week-end de la Fête du Travail de la bonne manière lors du Coup d'envoi officiel du Orange Blossom Classic et de la 6ème Fête Annuelle du Denim - Vendredi, 4 septembre à 20h à l'impressionnant Amphithéâtre de Miramar. Musique par DJ Bo Weezy - DJ Nasty 305 - DJ Germ - DJ Tight Profitez d'une variété d'options de nourriture et de boisson disponibles dans tout le lieu, y compris BBQ, crevettes et riz, hibachi, salade de conque, queue, tacos de fruits de mer, boisson complète"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.98589,
-        "lng": -80.37224
-      },
-      {
-        "id": "tm_1786279202166_vpsf",
-        "title": {
-          "en": "Juanes North America Tour 2026",
-          "es": "Gira Juanes por América del Norte 2026",
-          "pt": "Turnê Juanes América do Norte 2026",
-          "fr": "Tournée Juanes Amérique du Nord 2026"
-        },
-        "date": "2026-09-04",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjuanes-north-america-tour-2026-miami-florida-09-04-2026%2Fevent%2F0D00644C82656F1A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/78f/9163f016-ba8d-4a72-a6bc-eedc452dd78f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 20:00 · Kaseya Center",
-          "es": "Música · Latino · Comienza 20:00 · Kaseya Center",
-          "pt": "Música · Latino · Começa 20:00 · Kaseya Center",
-          "fr": "Musique · Latino · Commence 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1786279202166_6r84",
-        "title": {
-          "en": "Crimewave: A Goth, Post-Punk, and Darkwave Party in Miami",
-          "es": "Crimewave: Una Fiesta de Goth, Post-Punk y Darkwave en Miami",
-          "pt": "Crimewave: Uma Festa de Goth, Post-Punk e Darkwave em Miami",
-          "fr": "Crimewave: Une Fête Goth, Post-Punk et Darkwave à Miami"
-        },
-        "date": "2026-09-04",
-        "venue": "Churchill's Pub",
-        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcrimewave-a-goth-post-punk-churchills-pub-tickets%2F14257124&utm_medium=affiliate",
-        "free": false,
-        "price": "$20",
-        "image": "https://s1.ticketm.net/dam/c/797/5e693c26-2881-4776-8f0c-3aa94bfa3797_106511_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miami! Dive into the shadows and lose yourself to CRIMEWAVE - a night of your favorite goth, darkwave, new wave, post-punk, and industrial music Dress to impress and dance into the darkness at: Churchills Pub Friday, September 4 10pm 21+ DJ @misspurple.mp3 will be spinning music from the likes of Depeche Mode, The Cure, Nine Inch Nails, Mareux, Molchat Doma, Boy Harsher, and so much more! Your nig",
-          "es": "¡Miami! Sumérgete en las sombras y piérdete en CRIMEWAVE - una noche de tu música goth, darkwave, new wave, post-punk e industrial favorita. Vístete para impresionar y baila hacia la oscuridad en: Churchills Pub Viernes, 4 de septiembre 22:00 21+ DJ @misspurple.mp3 tocará música de Depeche Mode, The Cure, Nine Inch Nails, Mareux, Molchat Doma, Boy Harsher y mucho más.",
-          "pt": "Miami! Mergulhe nas sombras e perca-se no CRIMEWAVE - uma noite da sua música goth, darkwave, new wave, post-punk e industrial favorita. Vista-se para impressionar e dance na escuridão em: Churchills Pub Sexta-feira, 4 de setembro 22:00 21+ DJ @misspurple.mp3 tocará músicas de Depeche Mode, The Cure, Nine Inch Nails, Mareux, Molchat Doma, Boy Harsher e muito mais.",
-          "fr": "Miami! Plongez dans l'ombre et perdez-vous dans CRIMEWAVE - une nuit de votre musique goth, darkwave, new wave, post-punk et industrielle préférée. Habillez-vous pour impressionner et dansez dans l'obscurité à: Churchills Pub Vendredi, 4 septembre 22:00 21+ DJ @misspurple.mp3 jouera de la musique de Depeche Mode, The Cure, Nine Inch Nails, Mareux, Molchat Doma, Boy Harsher et bien plus encore."
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.82647681611792,
-        "lng": -80.19169187791115
-      },
-      {
         "id": "rss_1786366660903_tl6v",
         "title": {
           "en": "Unforgettable Author Series 9/5/26",
@@ -1741,30 +1663,6 @@
         "category": "music",
         "lat": 26.166888,
         "lng": -80.117058
-      },
-      {
-        "id": "cp_1786366662203_d4lh",
-        "title": {
-          "en": "First Friday @ 5",
-          "es": "Primer Viernes @ 5",
-          "pt": "Primeiro Sexta @ 5",
-          "fr": "Premier Vendredi @ 5"
-        },
-        "date": "2026-09-04",
-        "venue": "Centennial Park &  Amphitheater",
-        "address": "120 East Ocean Ave.  Boynton Beach FL 33435",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=30",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Kick off your weekend with family-friendly fun at First Friday @ 5! Enjoy an evening filled with delicious food trucks, live music, and a vibrant community atmosphere in Downtown Boynton Beach. Bring the whole family and celebrate the first Friday of each month with great eats, good vibes, and local entertainment! https://boynton-beach.org/calendar.aspx?EID=2298",
-          "es": "¡Comienza tu fin de semana con diversión para toda la familia en Primer Viernes @ 5! Disfruta una noche llena de deliciosos food trucks, música en vivo y un ambiente comunitario vibrante en el Centro de Boynton Beach. ¡Trae a toda la familia y celebra el primer viernes de cada mes con excelente comida, buenas vibras y entretenimiento local! https://boynton-beach.org/calendar.aspx?EID=2298",
-          "pt": "Comece seu fim de semana com diversão para toda a família no Primeiro Sexta @ 5! Aproveite uma noite repleta de deliciosos food trucks, música ao vivo e uma atmosfera comunitária vibrante no Centro de Boynton Beach. Traga toda a família e celebre o primeiro sexta de cada mês com ótima comida, boas vibrações e entretenimento local! https://boynton-beach.org/calendar.aspx?EID=2298",
-          "fr": "Lancez votre fin de semaine avec du plaisir en famille au Premier Vendredi @ 5! Profitez d'une soirée remplie de délicieux food trucks, de musique live et d'une atmosphère communautaire vibrante au centre-ville de Boynton Beach. Amenez toute la famille et célébrez le premier vendredi de chaque mois avec une excellente nourriture, une bonne ambiance et du divertissement local! https://boynton-beach.org/calendar.aspx?EID=2298"
-        },
-        "source": "Boynton Beach",
-        "category": "music"
       },
       {
         "id": "tm_1786539487073_5poa",
@@ -2591,32 +2489,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1787488220323_yddb",
-        "title": {
-          "en": "Miami Yoga Club: Sunrise Yoga at InterContinental Miami 9/4/26",
-          "es": "Miami Yoga Club: Yoga al Amanecer en InterContinental Miami 9/4/26",
-          "pt": "Miami Yoga Club: Yoga ao Amanhecer no InterContinental Miami 9/4/26",
-          "fr": "Miami Yoga Club: Yoga à l'Aube à l'InterContinental Miami 9/4/26"
-        },
-        "date": "2026-09-04",
-        "venue": "InterContinental Miami",
-        "address": "100 Chopin Plaza, Miami, Florida, 33131",
-        "url": "https://www.soulofmiami.org/2026/08/22/miami-yoga-club-sunrise-yoga-at-intercontinental-miami-9-4-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/ICM-CAL-1-333x500.jpeg",
-        "description": {
-          "en": "Join Stay Fit 305 for Miami Yoga Club: Sunrise Yoga on Friday, September 4 at 7AM",
-          "es": "Únete a Stay Fit 305 para Miami Yoga Club: Yoga al Amanecer el viernes 4 de septiembre a las 7AM",
-          "pt": "Junte-se à Stay Fit 305 para Miami Yoga Club: Yoga ao Amanhecer na sexta-feira, 4 de setembro às 7AM",
-          "fr": "Rejoignez Stay Fit 305 pour Miami Yoga Club: Yoga à l'Aube le vendredi 4 septembre à 7h du matin"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.772449,
-        "lng": -80.1854687,
-        "category": "community"
-      },
-      {
         "id": "rss_1787488220323_3b5w",
         "title": {
           "en": "Full Moon Yoga at InterContinental Miami 9/26/26",
@@ -2875,32 +2747,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787661508498_qwqw",
-        "title": {
-          "en": "Emmit Fenn",
-          "es": "Emmit Fenn",
-          "pt": "Emmit Fenn",
-          "fr": "Emmit Fenn"
-        },
-        "date": "2026-09-04",
-        "venue": "ZeyZey Miami",
-        "address": "353 NE 61st St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7P44U&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d29/ebb73cef-d030-4fbc-b747-9d93fdd09d29_1588121_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 21:00 · ZeyZey Miami",
-          "es": "Música · Otro · Comienza 21:00 · ZeyZey Miami",
-          "pt": "Música · Outro · Começa 21:00 · ZeyZey Miami",
-          "fr": "Musique · Autre · Commence 21:00 · ZeyZey Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.8172,
-        "lng": -80.188797
-      },
-      {
         "id": "tm_1787661508498_3cqp",
         "title": {
           "en": "Kasbo ???Labyrinth Tour??? (Dj Set)",
@@ -3000,32 +2846,6 @@
         "source": "Soul of Miami",
         "lat": 26.1369729,
         "lng": -80.1135854,
-        "category": "community"
-      },
-      {
-        "id": "rss_1787748121091_qkvw",
-        "title": {
-          "en": "Sweet Affair @ Serafina in the Miami Worldcenter 9/4/26",
-          "es": "Sweet Affair @ Serafina en Miami Worldcenter 9/4/26",
-          "pt": "Sweet Affair @ Serafina no Miami Worldcenter 9/4/26",
-          "fr": "Sweet Affair @ Serafina au Miami Worldcenter 9/4/26"
-        },
-        "date": "2026-09-04",
-        "venue": "Serafina",
-        "address": "652 NE 2nd Ave, Miami, Florida, 33132",
-        "url": "https://www.soulofmiami.org/2026/08/25/sweet-affair-serafina-in-the-miami-worldcenter-9-4-26/",
-        "free": false,
-        "price": "$23",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/9f974cf2-2d79-446f-8726-00241aa71ca6-1-333x500.jpg",
-        "description": {
-          "en": "Some nights are meant to be experienced. The Sweet Affair is an intimate evening designed around",
-          "es": "Algunas noches están hechas para ser vividas. El Sweet Affair es una velada íntima diseñada alrededor de",
-          "pt": "Algumas noites são feitas para ser vividas. O Sweet Affair é uma noite íntima projetada em torno de",
-          "fr": "Certaines nuits sont faites pour être vécues. Le Sweet Affair est une soirée intime conçue autour de"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7807606,
-        "lng": -80.1905859,
         "category": "community"
       },
       {
@@ -3337,32 +3157,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1788278356863_rmxp",
-        "title": {
-          "en": "Fetty Wap",
-          "es": "Fetty Wap",
-          "pt": "Fetty Wap",
-          "fr": "Fetty Wap"
-        },
-        "date": "2026-09-04",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffetty-wap-liv-nightclub-miami-tickets%2F14295684&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/26d/064fcb36-4986-40ee-97cd-0931e9ecc26d_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier portador de entrada que no pueda presentar identificación válida que indique que tiene al menos 21 años no será admitido en este evento y no será elegible para reembolso. · Comienza 23:30 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingressso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
         "id": "tm_1788278356863_nchb",
         "title": {
           "en": "Disco lines",
@@ -3597,84 +3391,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1788364347586_hsac",
-        "title": {
-          "en": "Miami Marlins vs. Chicago Cubs",
-          "es": "Miami Marlins vs. Chicago Cubs",
-          "pt": "Miami Marlins vs. Chicago Cubs",
-          "fr": "Miami Marlins vs. Chicago Cubs"
-        },
-        "date": "2026-09-04",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0a&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 19:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 19:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 19:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 19:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1788364347586_ojnw",
-        "title": {
-          "en": "Jo Koy Live",
-          "es": "Jo Koy En Vivo",
-          "pt": "Jo Koy Ao Vivo",
-          "fr": "Jo Koy En Direct"
-        },
-        "date": "2026-09-04",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjo-koy-live-hollywood-florida-09-04-2026%2Fevent%2F0D0064BC80436DE4&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/fb8/e45d0f19-ccb4-4ee3-93d3-7c3b1ff8efb8_1486581_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Comedy · Starts 20:00 · Hard Rock Live",
-          "es": "Artes y Teatro · Comedia · Comienza 20:00 · Hard Rock Live",
-          "pt": "Artes e Teatro · Comédia · Começa 20:00 · Hard Rock Live",
-          "fr": "Arts et Théâtre · Comédie · Commence 20:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1788364347586_fkmp",
-        "title": {
-          "en": "DeathMatch - Competitive Improv Show",
-          "es": "DeathMatch - Espectáculo de Improvisación Competitiva",
-          "pt": "DeathMatch - Show de Improvisação Competitiva",
-          "fr": "DeathMatch - Spectacle d'Improvisation Compétitif"
-        },
-        "date": "2026-09-04",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdeathmatch-competitive-improv-just-the-funny-tickets%2F14897653&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "DeathMatch - Short-Form Improv Comedy in MiamiTwo teams enter - one team wins! Two teams of improvisors complete in an all out comedy brawl performing fast-paced improv games completing for your laughs. Who wins? You decide!This show features members of our award-winning JTF cast and invited alums and improv celebrity performers.Tickets are PER PERSON for this show. We will seat parties together i",
-          "es": "DeathMatch - Comedia de Improvisación de Forma Corta en Miami. ¡Dos equipos entran, un equipo gana! Dos equipos de improvisadores compiten en una batalla de comedia total, realizando juegos de improvisación de ritmo rápido compitiendo por tus risas. ¿Quién gana? ¡Tú decides! Este show presenta miembros de nuestro elenco ganador de premios JTF y antiguos alumnos invitados y actores de celebridades de improvisación.",
-          "pt": "DeathMatch - Comédia de Improvisação de Forma Curta em Miami. Dois times entram - um time vence! Dois times de improvisadores competem em uma batalha de comédia total, realizando jogos de improvisação de ritmo rápido competindo pelas suas risadas. Quem vence? Você decide! Este show apresenta membros do nosso elenco premiado JTF e antigos alunos convidados e artistas de celebridades de improvisação.",
-          "fr": "DeathMatch - Comédie d'Improvisation de Forme Courte à Miami. Deux équipes entrent - une équipe gagne! Deux équipes d'improvisateurs concourent dans une bataille de comédie totale, réalisant des jeux d'improvisation au rythme rapide en compétition pour vos rires. Qui gagne? Vous décidez! Ce spectacle présente des membres de notre distribution gagnante des prix JTF et des anciens invités et des artistes de célébrités d'improvisation."
-        },
-        "source": "Ticketmaster",
-        "lat": 25.750417,
-        "lng": -80.244412,
-        "category": "comedy"
-      },
-      {
         "id": "cp_1788450086967_g30e",
         "title": {
           "en": "Centennial Highland Village Community Center Block Party",
@@ -3697,30 +3413,6 @@
         },
         "source": "North Miami Beach",
         "category": "community"
-      },
-      {
-        "id": "rss_1788536396335_o5v4",
-        "title": {
-          "en": "Remi Wolf gets Miami dancing at Spotify’s Rio-inspired showcase",
-          "es": "Remi Wolf pone a bailar Miami en la vitrina inspirada en Río de Spotify",
-          "pt": "Remi Wolf faz Miami dançar no showcase inspirado no Rio da Spotify",
-          "fr": "Remi Wolf fait danser Miami au showcase inspiré de Rio de Spotify"
-        },
-        "date": "2026-09-04",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/music/remi-wolf-miami-spotify-showcase-40582047/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/09/Remi-Wolf-_-Anna-Magluta.jpg",
-        "description": {
-          "en": "The pop singer performed “Twiggy,” covered Dolly Parton’s “Jolene” and celebrated Rio de Janeiro during an intimate set at Astra Wynwood.",
-          "es": "La cantante pop interpretó \"Twiggy\", hizo una versión de \"Jolene\" de Dolly Parton y celebró Río de Janeiro durante un set íntimo en Astra Wynwood.",
-          "pt": "A cantora pop apresentou \"Twiggy\", fez uma versão de \"Jolene\" de Dolly Parton e celebrou o Rio de Janeiro durante um set intimista na Astra Wynwood.",
-          "fr": "La chanteuse pop a interprété \"Twiggy\", repris \"Jolene\" de Dolly Parton et célébré Rio de Janeiro lors d'un spectacle intime à Astra Wynwood."
-        },
-        "source": "Miami New Times",
-        "category": "music"
       },
       {
         "id": "rss_1788536396335_bbzk",
@@ -3825,32 +3517,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1788536397088_8s31",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-04",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:45 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 11:45 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 11:45 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 11:45 · Centre de Conférences Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1788536397088_j89r",
         "title": {
           "en": "Golden Era Rave",
@@ -3953,6 +3619,188 @@
         "category": "comedy",
         "lat": 25.750417,
         "lng": -80.244412
+      },
+      {
+        "id": "rss_1788618474335_0qri",
+        "title": {
+          "en": "South Miami DeMolay Youth Leadership Open House 9/17/26",
+          "es": "Casa Abierta de Liderazgo Juvenil South Miami DeMolay 9/17/26",
+          "pt": "Casa Aberta de Liderança Juvenil South Miami DeMolay 9/17/26",
+          "fr": "Portes Ouvertes de Leadership Jeunesse South Miami DeMolay 9/17/26"
+        },
+        "date": "2026-09-17",
+        "venue": "Scottish Rite Temple",
+        "address": "471 NW 3rd Street, Miami, Florida, 33128",
+        "url": "https://www.soulofmiami.org/2026/09/04/south-miami-demolay-youth-leadership-open-house-9-17-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/South-Miami-DeMolay-Open-House-580x750-1-350x453.png",
+        "description": {
+          "en": "Young men ages 12-21 and their parents are invited to South Miami DeMolay’s free Youth",
+          "es": "Se invita a jóvenes de 12-21 años y sus padres a la Casa Abierta gratuita de South Miami DeMolay",
+          "pt": "Jovens de 12-21 anos e seus pais são convidados para a Casa Aberta gratuita do South Miami DeMolay",
+          "fr": "Les jeunes hommes de 12-21 ans et leurs parents sont invités à la Maison Ouverte gratuite de South Miami DeMolay"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7769873,
+        "lng": -80.2026713,
+        "category": "community"
+      },
+      {
+        "id": "rss_1788618474335_dv4x",
+        "title": {
+          "en": "Disrupting a Brilliant Colony 9/24/26",
+          "es": "Interrumpiendo una Colonia Brillante 9/24/26",
+          "pt": "Interrompendo uma Colônia Brilhante 9/24/26",
+          "fr": "Perturber une Colonie Brillante 9/24/26"
+        },
+        "date": "2026-09-24",
+        "venue": "Kislak Center at the University of Miami Otto G. Richter Library,",
+        "address": "1300 Memorial Dr, Coral Gables, FL, 33146",
+        "url": "https://www.soulofmiami.org/2026/09/04/disrupting-a-brilliant-colony-9-24-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Events-Localist-940x557-6-350x207.jpg",
+        "description": {
+          "en": "Join us for an evening with Cristina Soriano as",
+          "es": "Únase a nosotros para una velada con Cristina Soriano",
+          "pt": "Junte-se a nós para uma noite com Cristina Soriano",
+          "fr": "Rejoignez-nous pour une soirée avec Cristina Soriano"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7211339,
+        "lng": -80.2787553,
+        "category": "community"
+      },
+      {
+        "id": "tm_1788618474957_e4nu",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-05",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 10:30 · Mana Wynwood Convention Center",
+          "es": "Diversos · Familia · Comienza 10:30 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 10:30 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Début 10:30 · Centre de Congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1788618474957_pzu3",
+        "title": {
+          "en": "Miami Marlins vs. Chicago Cubs",
+          "es": "Miami Marlins vs. Chicago Cubs",
+          "pt": "Miami Marlins vs. Chicago Cubs",
+          "fr": "Miami Marlins vs. Chicago Cubs"
+        },
+        "date": "2026-09-05",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa08&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 16:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 16:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 16:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Début 16:10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1788618474957_vf3o",
+        "title": {
+          "en": "Miami Marlins vs Chicago Cubs: Hall of Fame Bobblehead #1 presented by Miccosukee",
+          "es": "Miami Marlins vs Chicago Cubs: Bobblehead Salón de la Fama #1 presentado por Miccosukee",
+          "pt": "Miami Marlins vs Chicago Cubs: Bobblehead Hall da Fama #1 apresentado por Miccosukee",
+          "fr": "Miami Marlins vs Chicago Cubs: Bobblehead Hall of Fame #1 présenté par Miccosukee"
+        },
+        "date": "2026-09-06",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa03&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 13:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 13:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 13:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Début 13:40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1788618474957_whht",
+        "title": {
+          "en": "Orange Blossom Classic",
+          "es": "Clásico de la Flor de Naranja",
+          "pt": "Clássico da Flor de Laranja",
+          "fr": "Classique de la Fleur d'Oranger"
+        },
+        "date": "2026-09-06",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Forange-blossom-classic-miami-florida-09-06-2026%2Fevent%2F0D006471D7A3F603&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/440/c3bf5679-a73c-4340-a567-def827d82440_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 15:00 · Hard Rock Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 15:00 · Hard Rock Stadium",
+          "pt": "Esportes · Futebol Americano · Começa 15:00 · Hard Rock Stadium",
+          "fr": "Sports · Football Américain · Commence 15:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1788618474957_jch6",
+        "title": {
+          "en": "Where Dere???s a Will, Dere???s a Criminal",
+          "es": "Donde Hay Voluntad, Hay un Criminal",
+          "pt": "Onde Há Vontade, Há um Criminoso",
+          "fr": "Où Il Y a une Volonté, Il Y a un Criminel"
+        },
+        "date": "2026-09-06",
+        "venue": "Coral Springs Center",
+        "address": "2855 Coral Springs Dr., Coral Springs, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZPQZ&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 18:00 · Coral Springs Center",
+          "es": "Comienza 18:00 · Centro Coral Springs",
+          "pt": "Começa 18:00 · Centro Coral Springs",
+          "fr": "Commence 18:00 · Centre Coral Springs"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.2738,
+        "lng": -80.256897,
+        "category": "music"
       }
     ]
   },
@@ -4856,7 +4704,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-04T15:40:29.777Z",
+    "fetchedAt": "2026-09-05T14:28:24.931Z",
     "items": []
   }
 }
