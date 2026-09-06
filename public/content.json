@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-05T14:28:25.490Z",
+    "lastUpdated": "2026-09-06T14:50:42.415Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-05T14:28:24.930Z",
+    "fetchedAt": "2026-09-06T14:50:41.702Z",
     "current": {
-      "temp_f": 82,
-      "feels_f": 93,
+      "temp_f": 85,
+      "feels_f": 99,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 84,
+      "humidity": 82,
       "wind_mph": 3,
-      "rain_chance": 42,
-      "weathercode": 3
+      "rain_chance": 50,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-09-05",
+        "date": "2026-09-06",
         "high_f": 87,
         "low_f": 76,
-        "weathercode": 55,
-        "rain_chance": 42,
+        "weathercode": 63,
+        "rain_chance": 50,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
-        "date": "2026-09-06",
-        "high_f": 88,
-        "low_f": 75,
-        "weathercode": 51,
-        "rain_chance": 37,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Moderate rain",
+          "es": "Lluvia moderada",
+          "pt": "Chuva moderada",
+          "fr": "Pluie modérée"
         }
       },
       {
         "date": "2026-09-07",
-        "high_f": 90,
-        "low_f": 76,
-        "weathercode": 95,
-        "rain_chance": 76,
+        "high_f": 87,
+        "low_f": 75,
+        "weathercode": 3,
+        "rain_chance": 43,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-09-08",
         "high_f": 90,
-        "low_f": 85,
+        "low_f": 77,
         "weathercode": 95,
-        "rain_chance": 60,
+        "rain_chance": 61,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -78,117 +65,130 @@
         "high_f": 89,
         "low_f": 85,
         "weathercode": 51,
-        "rain_chance": 22,
+        "rain_chance": 29,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-09-10",
+        "high_f": 90,
+        "low_f": 85,
+        "weathercode": 95,
+        "rain_chance": 37,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "10:00",
-        "temp_f": 81,
-        "weathercode": 51,
-        "rain_chance": 29
+        "temp_f": 84,
+        "weathercode": 1,
+        "rain_chance": 4
       },
       {
         "hour": "11:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 23
+        "temp_f": 85,
+        "weathercode": 1,
+        "rain_chance": 3
       },
       {
         "hour": "12:00",
         "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 17
+        "weathercode": 1,
+        "rain_chance": 10
       },
       {
         "hour": "13:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 14
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 13
       },
       {
         "hour": "14:00",
         "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 15
+        "weathercode": 1,
+        "rain_chance": 26
       },
       {
         "hour": "15:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 17
+        "temp_f": 80,
+        "weathercode": 53,
+        "rain_chance": 33
       },
       {
         "hour": "16:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 19
+        "temp_f": 76,
+        "weathercode": 63,
+        "rain_chance": 29
       },
       {
         "hour": "17:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 23
+        "temp_f": 80,
+        "weathercode": 51,
+        "rain_chance": 17
       },
       {
         "hour": "18:00",
-        "temp_f": 78,
-        "weathercode": 51,
-        "rain_chance": 30
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "19:00",
-        "temp_f": 78,
-        "weathercode": 55,
-        "rain_chance": 42
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "20:00",
-        "temp_f": 77,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 38
+        "rain_chance": 9
       },
       {
         "hour": "21:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 19
+        "rain_chance": 8
       },
       {
         "hour": "22:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 14
+        "rain_chance": 6
       },
       {
         "hour": "23:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 14
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 76,
-        "weathercode": 3,
         "rain_chance": 7
       },
       {
-        "hour": "02:00",
+        "hour": "00:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 11
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 6
       },
       {
         "hour": "03:00",
@@ -198,19 +198,19 @@
       },
       {
         "hour": "04:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 7
       },
       {
         "hour": "05:00",
-        "temp_f": 75,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 8
       },
       {
         "hour": "06:00",
-        "temp_f": 75,
+        "temp_f": 76,
         "weathercode": 3,
         "rain_chance": 9
       },
@@ -218,19 +218,19 @@
         "hour": "07:00",
         "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 8
       },
       {
         "hour": "08:00",
-        "temp_f": 77,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 14
+        "rain_chance": 10
       },
       {
         "hour": "09:00",
         "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 8
       }
     ]
   },
@@ -1563,32 +1563,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1786366660903_tl6v",
-        "title": {
-          "en": "Unforgettable Author Series 9/5/26",
-          "es": "Serie de Autores Inolvidables 9/5/26",
-          "pt": "Série de Autores Inesquecíveis 9/5/26",
-          "fr": "Série d'Auteurs Inoubliables 9/5/26"
-        },
-        "date": "2026-09-05",
-        "venue": "Sandrell Rivers Theater",
-        "address": "6103 NW 7th Avenue, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/08/08/unforgettable-author-series-9-5-26/",
-        "free": false,
-        "price": "$57",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Unforgettable-Author-Series-Soul-of-Miami-350x350.png",
-        "description": {
-          "en": "UNFORGETTABLE AUTHOR SERIES: William Shakespeare Hosted by El Ingenio Teatro Celebrate William Shakespeare through a weekend of theatre, visual",
-          "es": "SERIE DE AUTORES INOLVIDABLES: William Shakespeare Presentado por El Ingenio Teatro Celebre a William Shakespeare a través de un fin de semana de teatro, visual",
-          "pt": "SÉRIE DE AUTORES INESQUECÍVEIS: William Shakespeare Apresentado por El Ingenio Teatro Celebre William Shakespeare através de um fim de semana de teatro, visual",
-          "fr": "SÉRIE D'AUTEURS INOUBLIABLES: William Shakespeare Présenté par El Ingenio Teatro Célébrez William Shakespeare lors d'un week-end de théâtre, visuel"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.8315843,
-        "lng": -80.2082623,
-        "category": "community"
-      },
-      {
         "id": "rss_1786366660903_roik",
         "title": {
           "en": "MOAD Talks with Sports Journalist Michelle Kaufman 9/23/26",
@@ -1611,136 +1585,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1786366661462_7uhl",
-        "title": {
-          "en": "Citizen - Halcyon Blues",
-          "es": "Citizen - Halcyon Blues",
-          "pt": "Citizen - Halcyon Blues",
-          "fr": "Citizen - Halcyon Blues"
-        },
-        "date": "2026-09-05",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcitizen-halcyon-blues-ft-lauderdale-florida-09-05-2026%2Fevent%2F0D0064971DCDB68E&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/1e0/9327bf17-0583-4f2e-800b-ad8f030361e0_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Citizen - HALCYON BLUES will be performing at Revolution Live on September 5th with special guests Anxious, Hotline TNT, and Rocket. This event is All Ages. Doors open at 6pm. Show starts at 7pm. All support acts are subject to change without notice. · Starts 18:00 · Revolution Live",
-          "es": "Citizen - HALCYON BLUES se presentará en Revolution Live el 5 de septiembre con invitados especiales Anxious, Hotline TNT y Rocket. Este evento es para todas las edades. Las puertas abren a las 6pm. El espectáculo comienza a las 7pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 18:00 · Revolution Live",
-          "pt": "Citizen - HALCYON BLUES se apresentará na Revolution Live em 5 de setembro com convidados especiais Anxious, Hotline TNT e Rocket. Este evento é para todas as idades. As portas abrem às 18h. O show começa às 19h. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. · Começa 18:00 · Revolution Live",
-          "fr": "Citizen - HALCYON BLUES se produira à Revolution Live le 5 septembre avec les invités spéciaux Anxious, Hotline TNT et Rocket. Cet événement est pour tous les âges. Les portes ouvrent à 18h. Le spectacle commence à 19h. Tous les actes de soutien sont sujets à modification sans préavis. · Commence 18:00 · Revolution Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1786366661462_w096",
-        "title": {
-          "en": "Nicko McBrain's Titanium Tart - Doing the music of Iron Maiden",
-          "es": "Nicko McBrain's Titanium Tart - Tocando la música de Iron Maiden",
-          "pt": "Nicko McBrain's Titanium Tart - Tocando a Música de Iron Maiden",
-          "fr": "Nicko McBrain's Titanium Tart - Jouant la Musique d'Iron Maiden"
-        },
-        "date": "2026-09-05",
-        "venue": "Culture Room",
-        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnicko-mcbrains-titanium-tart-doing-the-ft-lauderdale-florida-09-05-2026%2Fevent%2F0D00647E00D33B68&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/29f/df131b1d-f1c0-4d8b-bac9-4e05ef44329f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Nicko McBrain's Titanium Tart - An iconic tribute to the music of Iron Maiden w/special guests Vern Daysel & The Burning Breeze, Living Fast Doors open 7:30pm · Starts 19:30 · Culture Room",
-          "es": "Nicko McBrain's Titanium Tart - Un tributo icónico a la música de Iron Maiden con invitados especiales Vern Daysel & The Burning Breeze, Living Fast. Las puertas abren 7:30pm · Comienza 19:30 · Culture Room",
-          "pt": "Nicko McBrain's Titanium Tart - Um tributo icônico à música de Iron Maiden com convidados especiais Vern Daysel & The Burning Breeze, Living Fast. As portas abrem 19:30 · Começa 19:30 · Culture Room",
-          "fr": "Nicko McBrain's Titanium Tart - Un hommage emblématique à la musique d'Iron Maiden avec les invités spéciaux Vern Daysel & The Burning Breeze, Living Fast. Les portes ouvrent 19:30 · Commence 19:30 · Culture Room"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.166888,
-        "lng": -80.117058
-      },
-      {
-        "id": "tm_1786539487073_5poa",
-        "title": {
-          "en": "Steve Higgins: Moonlight, Memories & Music",
-          "es": "Steve Higgins: Luz de Luna, Recuerdos y Música",
-          "pt": "Steve Higgins: Luar, Memórias e Música",
-          "fr": "Steve Higgins: Clair de Lune, Souvenirs et Musique"
-        },
-        "date": "2026-09-05",
-        "venue": "Rose & Alfred Miniaci Performing Arts Center",
-        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsteve-higgins-moonlight-memories-music-ft-lauderdale-florida-09-05-2026%2Fevent%2F0D0064B2BC4E864D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/f6d/6f417e97-2981-4605-a837-a307d33e3f6d_105491_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Moonlight, Memories and Music is an exquisite evening of romance, nostalgia, and world-class artistry, brought to life by the captivating talents of Steve Higgins, Dahlia Wynter, and April Marr. Set against an atmosphere of elegance and charm, this enchanting concert promises to transport audiences through a rich tapestry of musical genres-from the smooth allure of jazz and the grandeur of Broadwa",
-          "es": "Luz de Luna, Recuerdos y Música es una velada exquisita de romance, nostalgia y artistry de clase mundial, realizada por los talentos cautivadores de Steve Higgins, Dahlia Wynter y April Marr. Ambientado en una atmósfera de elegancia y encanto, este concierto encantador promete transportar al público a través de un rico tapiz de géneros musicales, desde el atractivo suave del jazz hasta la grandiosidad de Broadway.",
-          "pt": "Luar, Memórias e Música é uma noite requintada de romance, nostalgia e artistry de classe mundial, trazida à vida pelos talentos cativantes de Steve Higgins, Dahlia Wynter e April Marr. Ambientado em uma atmosfera de elegância e encanto, este concerto encantador promete transportar o público através de uma rica tapeçaria de gêneros musicais, desde o atrativo suave do jazz até a grandiosidade da Broadway.",
-          "fr": "Clair de Lune, Souvenirs et Musique est une soirée exquise de romance, de nostalgie et d'artistry de classe mondiale, apportée à la vie par les talents captivants de Steve Higgins, Dahlia Wynter et April Marr. Situé dans une atmosphère d'élégance et de charme, ce concert enchanteur promet de transporter le public à travers une riche tapisserie de genres musicaux, du charme doux du jazz à la grandeur de Broadway."
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0884017,
-        "lng": -80.2461624
-      },
-      {
-        "id": "tm_1786539487073_zy7f",
-        "title": {
-          "en": "Myriam Hernandez - Tauro World Tour 2025",
-          "es": "Myriam Hernández - Tauro World Tour 2025",
-          "pt": "Myriam Hernández - Tauro World Tour 2025",
-          "fr": "Myriam Hernández - Tauro World Tour 2025"
-        },
-        "date": "2026-09-05",
-        "venue": "James L Knight Center",
-        "address": "400 SE 2nd Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmyriam-hernandez-tauro-world-tour-2025-miami-florida-09-05-2026%2Fevent%2F0D0062B5A9CC1B82&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/597/2c4c954b-fe9a-4fbd-83e8-ba38ca012597_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "¡La Voz del Amor Regresa! Myriam Hernández, la icónica intérprete de baladas románticas, llega con un espectáculo inolvidable lleno de emoción, pasión y grandes éxitos como \"El Hombre Que Yo Amo\" y \"Huele a Peligro\". Vive una noche mágica con una de las voces más queridas de la música latina. ¡No te lo puedes perder! · Starts 20:00 · James L Knight Center",
-          "es": "¡La Voz del Amor Regresa! Myriam Hernández, la icónica intérprete de baladas románticas, llega con un espectáculo inolvidable lleno de emoción, pasión y grandes éxitos como \"El Hombre Que Yo Amo\" y \"Huele a Peligro\". Vive una noche mágica con una de las voces más queridas de la música latina. ¡No te lo puedes perder! · Comienza 20:00 · James L Knight Center",
-          "pt": "¡A Voz do Amor Volta! Myriam Hernández, a icônica intérprete de baladas românticas, chega com um espetáculo inesquecível cheio de emoção, paixão e grandes sucessos como \"O Homem Que Eu Amo\" e \"Cheira a Perigo\". Viva uma noite mágica com uma das vozes mais queridas da música latina. Você não pode perder! · Começa 20:00 · James L Knight Center",
-          "fr": "La Voix de l'Amour Revient ! Myriam Hernández, l'interprète emblématique de ballades romantiques, arrive avec un spectacle inoubliable plein d'émotion, de passion et de grands succès comme \"L'Homme Que J'Aime\" et \"Ça Sent le Danger\". Vivez une nuit magique avec l'une des voix les plus chères de la musique latine. Vous ne pouvez pas manquer ! · Commence 20:00 · James L Knight Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.7707756,
-        "lng": -80.1901174
-      },
-      {
-        "id": "tm_1786539487074_6r3q",
-        "title": {
-          "en": "Fall Fest: Starring Lil Baby",
-          "es": "Fall Fest: Con Lil Baby",
-          "pt": "Fall Fest: Com Lil Baby",
-          "fr": "Fall Fest: Avec Lil Baby"
-        },
-        "date": "2026-09-05",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J37N&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/413/19c30ff1-3683-434d-ae08-37cd167c5413_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 20:00 · Amerant Bank Arena",
-          "es": "Música · Otro · Comienza 20:00 · Amerant Bank Arena",
-          "pt": "Música · Outro · Começa 20:00 · Amerant Bank Arena",
-          "fr": "Musique · Autre · Débute 20:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.238701,
-        "lng": -80.370499
       },
       {
         "id": "rss_1786625954858_jrao",
@@ -1843,32 +1687,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1786625955312_t797",
-        "title": {
-          "en": "ISOxo",
-          "es": "ISOxo",
-          "pt": "ISOxo",
-          "fr": "ISOxo"
-        },
-        "date": "2026-09-05",
-        "venue": "Factory Town",
-        "address": "4800 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70djs&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/706/d76e5f87-2b42-4021-b973-a90e86e07706_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 22:00 · Factory Town",
-          "es": "Música · Otro · Comienza 22:00 · Factory Town",
-          "pt": "Música · Outro · Começa 22:00 · Factory Town",
-          "fr": "Musique · Autre · Commence 22:00 · Factory Town"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.811899,
-        "lng": -80.238998
       },
       {
         "id": "rss_1786712137918_u7xs",
@@ -2799,30 +2617,6 @@
         "lng": -80.188797
       },
       {
-        "id": "cp_1787661509257_r540",
-        "title": {
-          "en": "City of Opa-locka | R&B N THE PARK",
-          "es": "Ciudad de Opa-locka | R&B EN EL PARQUE",
-          "pt": "Cidade de Opa-locka | R&B NO PARQUE",
-          "fr": "Ville d'Opa-locka | R&B DANS LE PARC"
-        },
-        "date": "2026-09-05",
-        "venue": "Sherbondy Village Community Center",
-        "address": "215 N Perviz Ave  Opa-locka FL 33054",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Join us for an unforgettable evening of music, memories, and community at the Opa-locka Reunion: R&B in the Park – Reunion Edition! Hosted by Commissioner Natasha L. Ervin, this special event will feature live music by Two Fresh Ent and Friends as we celebrate our community, our history, and our pride.  📅 Saturday, September 5  🕔 5:00 PM – 11:00 PM  📍 Sherbondy Park, 380 Bahman Ave  Bring your ",
-          "es": "¡Únete a nosotros para una velada inolvidable de música, recuerdos y comunidad en la Reunión de Opa-locka: R&B en el Parque – Edición Reunión! Presentado por la Comisionada Natasha L. Ervin, este evento especial contará con música en vivo de Two Fresh Ent y Amigos mientras celebramos nuestra comunidad, nuestra historia y nuestro orgullo. 📅 Sábado, 5 de septiembre 🕔 17:00 – 23:00 📍 Parque Sherbondy, 380 Bahman Ave",
-          "pt": "Junte-se a nós para uma noite inesquecível de música, memórias e comunidade na Reunião de Opa-locka: R&B no Parque – Edição Reunião! Apresentado pela Comissária Natasha L. Ervin, este evento especial contará com música ao vivo de Two Fresh Ent e Amigos enquanto celebramos nossa comunidade, nossa história e nosso orgulho. 📅 Sábado, 5 de setembro 🕔 17:00 – 23:00 📍 Parque Sherbondy, 380 Bahman Ave",
-          "fr": "Rejoignez-nous pour une soirée inoubliable de musique, de souvenirs et de communauté à la Réunion d'Opa-locka : R&B au Parc – Édition Réunion ! Présenté par la Commissaire Natasha L. Ervin, cet événement spécial proposera de la musique en direct de Two Fresh Ent et Amis tandis que nous célébrons notre communauté, notre histoire et notre fierté. 📅 Samedi 5 septembre 🕔 17:00 – 23:00 📍 Parc Sherbondy, 380 Bahman Ave"
-        },
-        "source": "Opa-locka",
-        "category": "music"
-      },
-      {
         "id": "rss_1787748121091_wszn",
         "title": {
           "en": "The Poppy Project Pop-Up Living Garden Ribbon Cutting at Galleria Fort Lauderdale 9/10/26",
@@ -3155,32 +2949,6 @@
         "lat": 26.0188099,
         "lng": -80.1162312,
         "category": "community"
-      },
-      {
-        "id": "tm_1788278356863_nchb",
-        "title": {
-          "en": "Disco lines",
-          "es": "Líneas de Disco",
-          "pt": "Linhas de Disco",
-          "fr": "Lignes de Disco"
-        },
-        "date": "2026-09-05",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdisco-lines-liv-nightclub-miami-tickets%2F14262124&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b6c/62aef670-2f8b-483d-9ae6-8742e2548b6c_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier portador de entrada que no pueda presentar identificación válida que indique que tiene al menos 21 años no será admitido en este evento y no será elegible para reembolso. · Comienza 23:30 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingressso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
       },
       {
         "id": "tm_1788278356863_loxi",
@@ -3517,110 +3285,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1788536397088_j89r",
-        "title": {
-          "en": "Golden Era Rave",
-          "es": "Golden Era Rave",
-          "pt": "Golden Era Rave",
-          "fr": "Golden Era Rave"
-        },
-        "date": "2026-09-05",
-        "venue": "ZeyZey Miami",
-        "address": "353 NE 61st St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvdeo&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 17:30 · ZeyZey Miami",
-          "es": "Comienza 17:30 · ZeyZey Miami",
-          "pt": "Começa 17:30 · ZeyZey Miami",
-          "fr": "Commence 17:30 · ZeyZey Miami"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.8172,
-        "lng": -80.188797,
-        "category": "music"
-      },
-      {
-        "id": "tm_1788536397088_ubew",
-        "title": {
-          "en": "Inter Miami CF vs Atlanta United FC",
-          "es": "Inter Miami CF vs Atlanta United FC",
-          "pt": "Inter Miami CF vs Atlanta United FC",
-          "fr": "Inter Miami CF vs Atlanta United FC"
-        },
-        "date": "2026-09-05",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-atlanta-united-miami-florida-09-05-2026%2Fevent%2F0D0063739DF36832&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
-          "es": "Para información sobre Suites llame al 305-428-0611. · Comienza 19:30 · Estadio Nu",
-          "pt": "Para informações sobre Suites ligue 305-428-0611. · Começa 19:30 · Estádio Nu",
-          "fr": "Pour plus d'informations sur les Suites appelez le 305-428-0611. · Commence 19:30 · Stade Nu"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
-        "id": "tm_1788536397088_c0zk",
-        "title": {
-          "en": "Atletico Nacional vs America de Cali",
-          "es": "Atlético Nacional vs América de Cali",
-          "pt": "Atlético Nacional vs América de Cali",
-          "fr": "Atlético Nacional vs América de Cali"
-        },
-        "date": "2026-09-05",
-        "venue": "Inter Miami CF Stadium",
-        "address": "5201 NW 12th Avenue, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fatletico-nacional-vs-america-de-cali-fort-lauderdale-florida-09-05-2026%2Fevent%2F0D00650D9A4E57E9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/946/6a392135-720d-4e4b-b255-81db05191946_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Soccer · Starts 19:30 · Inter Miami CF Stadium",
-          "es": "Deportes · Fútbol · Comienza 19:30 · Estadio Inter Miami CF",
-          "pt": "Esportes · Futebol · Começa 19:30 · Estádio Inter Miami CF",
-          "fr": "Sports · Football · Commence 19:30 · Stade Inter Miami CF"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.1911447,
-        "lng": -80.159484
-      },
-      {
-        "id": "tm_1788536397088_ty5w",
-        "title": {
-          "en": "The BIG Show Improv Comedy Miami",
-          "es": "The BIG Show Comedia Improvisada Miami",
-          "pt": "The BIG Show Comédia Improvisada Miami",
-          "fr": "The BIG Show Comédie Improvisée Miami"
-        },
-        "date": "2026-09-05",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14897703&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Big Show - Improv Comedy in MiamiIts our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun!Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as cl",
-          "es": "The Big Show - Comedia improvisada en vivo en Miami. Es nuestro espectáculo característico: comedia improvisada en vivo de la mejor calidad. ¡Piénsalo como Whose Line is It Anyway pero en vivo! The Big Show es comedia improvisada interactiva, con nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos en mesas.",
-          "pt": "The Big Show - Comédia improvisada ao vivo em Miami. É nosso show assinatura: comédia improvisada ao vivo de primeira qualidade. Pense nisso como Whose Line is It Anyway ao vivo! The Big Show é comédia improvisada interativa, com nosso talentoso e premiado elenco. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas.",
-          "fr": "The Big Show - Comédie improvisée en direct à Miami. C'est notre spectacle signature : comédie improvisée en direct de la meilleure qualité. Pensez à Whose Line is It Anyway en direct ! The Big Show est de la comédie improvisée interactive, avec notre casting talentueux et primé. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous assoirons les groupes ensemble à des tables."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
         "id": "rss_1788618474335_0qri",
         "title": {
           "en": "South Miami DeMolay Youth Leadership Open House 9/17/26",
@@ -3671,58 +3335,6 @@
         "lat": 25.7211339,
         "lng": -80.2787553,
         "category": "community"
-      },
-      {
-        "id": "tm_1788618474957_e4nu",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-05",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 10:30 · Mana Wynwood Convention Center",
-          "es": "Diversos · Familia · Comienza 10:30 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 10:30 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Début 10:30 · Centre de Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1788618474957_pzu3",
-        "title": {
-          "en": "Miami Marlins vs. Chicago Cubs",
-          "es": "Miami Marlins vs. Chicago Cubs",
-          "pt": "Miami Marlins vs. Chicago Cubs",
-          "fr": "Miami Marlins vs. Chicago Cubs"
-        },
-        "date": "2026-09-05",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa08&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 16:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 16:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 16:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Début 16:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
       },
       {
         "id": "tm_1788618474957_vf3o",
@@ -3801,6 +3413,366 @@
         "lat": 26.2738,
         "lng": -80.256897,
         "category": "music"
+      },
+      {
+        "id": "rss_1788706192888_crtl",
+        "title": {
+          "en": "Gulfstream Park’s Taste at the Track: Bourbon & BBQ Saturday 9/19/26",
+          "es": "Gulfstream Park's Taste at the Track: Bourbon & BBQ Sábado 9/19/26",
+          "pt": "Gulfstream Park's Taste at the Track: Bourbon & BBQ Sábado 9/19/26",
+          "fr": "Gulfstream Park's Taste at the Track: Bourbon & BBQ Samedi 9/19/26"
+        },
+        "date": "2026-09-19",
+        "venue": "Gulfstream Park",
+        "address": "901 S Federal Highway, Hallandale Beach, Florida, 33009",
+        "url": "https://www.soulofmiami.org/2026/09/05/gulfstream-parks-taste-at-the-track-bourbon-bbq-saturday-9-19-26/",
+        "free": false,
+        "price": "$60",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/GSP-GEN-PIC-350x233.jpg",
+        "description": {
+          "en": "– $85 Join Gulfstream Park on Saturday, September 19 for Taste at",
+          "es": "– $85 Únete a Gulfstream Park el sábado, 19 de septiembre para Taste at",
+          "pt": "– $85 Junte-se ao Gulfstream Park no sábado, 19 de setembro para Taste at",
+          "fr": "– $85 Rejoignez Gulfstream Park samedi 19 septembre pour Taste at"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9964102,
+        "lng": -80.142622,
+        "category": "community"
+      },
+      {
+        "id": "rss_1788706192888_hyll",
+        "title": {
+          "en": "Ghost Haunting on the Rails 9/19/26",
+          "es": "Fantasma Encantado en los Rieles 9/19/26",
+          "pt": "Assombração Fantasmagórica nos Trilhos 9/19/26",
+          "fr": "Hantise Fantôme sur les Rails 9/19/26"
+        },
+        "date": "2026-09-19",
+        "venue": "Gold Coast Railroad Museum",
+        "address": "12450 Southwest 152nd Street, Miami, Florida, 33177",
+        "url": "https://www.soulofmiami.org/2026/09/05/ghost-haunting-on-the-rails-9-19-26/",
+        "free": false,
+        "price": "$44",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/161297-Ghost-Haunting-on-the-Rails-350x175.jpg",
+        "description": {
+          "en": "Step into the shadows at the Gold Coast Railroad Museum for a thrilling night of paranormal",
+          "es": "Adéntrate en las sombras del Museo del Ferrocarril de la Costa Dorada para una noche emocionante de lo paranormal",
+          "pt": "Mergulhe nas sombras do Museu da Ferrovia da Costa de Ouro para uma noite emocionante de paranormal",
+          "fr": "Plongez dans les ombres du Musée du Chemin de Fer de la Gold Coast pour une nuit palpitante de paranormal"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.6252557,
+        "lng": -80.394,
+        "category": "community"
+      },
+      {
+        "id": "rss_1788706192888_m3eu",
+        "title": {
+          "en": "Sunset Run at Atlantic Village 9/10/26",
+          "es": "Carrera al Atardecer en Atlantic Village 9/10/26",
+          "pt": "Corrida ao Pôr do Sol em Atlantic Village 9/10/26",
+          "fr": "Course au Coucher de Soleil à Atlantic Village 9/10/26"
+        },
+        "date": "2026-09-10",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/05/sunset-run-at-atlantic-village-9-10-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/HRC-September-Event-Graphic-350x437.jpeg",
+        "description": {
+          "en": "Join Hollywood Run Club for an evening community run at Atlantic Village in Hallandale Beach,",
+          "es": "Únete al Hollywood Run Club para una carrera comunitaria vespertina en Atlantic Village en Hallandale Beach,",
+          "pt": "Junte-se ao Hollywood Run Club para uma corrida comunitária noturna em Atlantic Village em Hallandale Beach,",
+          "fr": "Rejoignez le Hollywood Run Club pour une course communautaire en fin d'après-midi à Atlantic Village à Hallandale Beach,"
+        },
+        "source": "Soul of Miami",
+        "category": "sports"
+      },
+      {
+        "id": "tm_1788706193534_86e3",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-06",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
+          "es": "Varios · Familiar · Comienza a las 11:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Familiar · Começa às 11:00 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Familial · Commence à 11:00 · Centre de Congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1788706193534_j2o7",
+        "title": {
+          "en": "Miami Marlins vs. New York Mets",
+          "es": "Miami Marlins vs. New York Mets",
+          "pt": "Miami Marlins vs. New York Mets",
+          "fr": "Miami Marlins vs. New York Mets"
+        },
+        "date": "2026-09-07",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0K&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 13:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza a las 13:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa às 13:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence à 13:10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1788706193535_y4kl",
+        "title": {
+          "en": "Korolova",
+          "es": "Korolova",
+          "pt": "Korolova",
+          "fr": "Korolova"
+        },
+        "date": "2026-09-18",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fkorolova-liv-nightclub-miami-tickets%2F15014223&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/0aa/e4f3b47a-26a8-44fa-ab92-8f16b62c60aa_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:00 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso que não puder apresentar identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux plus de 21 ans. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1788706193535_e4oi",
+        "title": {
+          "en": "?\r\nEli & Fur - Dreams at Dusk - 21+",
+          "es": "Eli & Fur - Dreams at Dusk - 21+",
+          "pt": "Eli & Fur - Dreams at Dusk - 21+",
+          "fr": "Eli & Fur - Dreams at Dusk - 21+"
+        },
+        "date": "2026-09-19",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvd0x&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 18:00 · ZeyZey Miami",
+          "es": "Música · Otro · Comienza 18:00 · ZeyZey Miami",
+          "pt": "Música · Outro · Começa 18:00 · ZeyZey Miami",
+          "fr": "Musique · Autre · Commence 18:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
+      },
+      {
+        "id": "tm_1788706193535_o3w6",
+        "title": {
+          "en": "Vader",
+          "es": "Vader",
+          "pt": "Vader",
+          "fr": "Vader"
+        },
+        "date": "2026-09-19",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fvader-ft-lauderdale-florida-09-19-2026%2Fevent%2F0D0064EDB47C8137&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/63c/30a1a369-4520-4b76-9c34-ed9375e6463c_834501_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Vader with special guests Jungle Rot, Fleshcrawl, Trash Panda Doors open 6:30pm · Starts 18:30 · Culture Room",
+          "es": "Vader con invitados especiales Jungle Rot, Fleshcrawl, Trash Panda Las puertas abren a las 6:30pm · Comienza 18:30 · Culture Room",
+          "pt": "Vader com convidados especiais Jungle Rot, Fleshcrawl, Trash Panda As portas abrem às 18:30 · Começa 18:30 · Culture Room",
+          "fr": "Vader avec invités spéciaux Jungle Rot, Fleshcrawl, Trash Panda Les portes ouvrent à 18h30 · Commence 18:30 · Culture Room"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1788706193535_32t5",
+        "title": {
+          "en": "Bruno Mars - The Romantic Tour",
+          "es": "Bruno Mars - The Romantic Tour",
+          "pt": "Bruno Mars - The Romantic Tour",
+          "fr": "Bruno Mars - The Romantic Tour"
+        },
+        "date": "2026-09-19",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbruno-mars-the-romantic-tour-miami-florida-09-19-2026%2Fevent%2F0D0064218E1D56F3&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/386/bdd143e5-4726-49af-9523-7927682c9386_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 19:00 · Hard Rock Stadium",
+          "es": "Música · Pop · Comienza 19:00 · Hard Rock Stadium",
+          "pt": "Música · Pop · Começa 19:00 · Hard Rock Stadium",
+          "fr": "Musique · Pop · Commence 19:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1788706193535_eqsh",
+        "title": {
+          "en": "Elsten Torres: From Fulano To Forever",
+          "es": "Elsten Torres: From Fulano To Forever",
+          "pt": "Elsten Torres: From Fulano To Forever",
+          "fr": "Elsten Torres: From Fulano To Forever"
+        },
+        "date": "2026-09-19",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Felsten-torres-from-fulano-to-forever-ft-lauderdale-florida-09-19-2026%2Fevent%2F0D0064AC98BB7067&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/338/60c4f60f-88dc-49e1-a44e-7c51c12a0338_1193201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Join us as we celebrate a landmark moment in Music as Grammy-nominated singer-songwriter Elsten Torres brings his 30-year musical journey to the Broward Center for the Performing Arts on September 19, 2026. For one unforgettable night, Elsten revisits the path that began with Fulano in 1996 and leads all the way to the artist he is today-an evolution filled with timeless songs, global influences, ",
+          "es": "Únete a nosotros mientras celebramos un momento histórico en la Música ya que el cantautor nominado al Grammy Elsten Torres trae su viaje musical de 30 años al Broward Center for the Performing Arts el 19 de septiembre de 2026. Por una noche inolvidable, Elsten revisita el camino que comenzó con Fulano en 1996 y lleva al artista que es hoy - una evolución llena de canciones atemporales, influencias globales,",
+          "pt": "Junte-se a nós enquanto celebramos um momento histórico na Música, pois o cantor-compositor indicado ao Grammy Elsten Torres traz sua jornada musical de 30 anos para o Broward Center for the Performing Arts em 19 de setembro de 2026. Por uma noite inesquecível, Elsten revisita o caminho que começou com Fulano em 1996 e leva ao artista que é hoje - uma evolução cheia de músicas atemporais, influências globais,",
+          "fr": "Rejoignez-nous pour célébrer un moment historique en Musique alors que la chanteuse-compositrice nominée aux Grammy Awards Elsten Torres apporte son voyage musical de 30 ans au Broward Center for the Performing Arts le 19 septembre 2026. Pour une nuit inoubliable, Elsten revisit le chemin qui a commencé avec Fulano en 1996 et mène jusqu'à l'artiste qu'il est aujourd'hui - une évolution pleine de chansons intemporelles, d'influences mondiales,"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1788706193535_o0bz",
+        "title": {
+          "en": "Luisito Ayala y su Orquesta Puerto Rican Power",
+          "es": "Luisito Ayala y su Orquesta Puerto Rican Power",
+          "pt": "Luisito Ayala e sua Orquestra Puerto Rican Power",
+          "fr": "Luisito Ayala et son Orchestre Puerto Rican Power"
+        },
+        "date": "2026-09-19",
+        "venue": "Charles F. Dodge City Center Pembroke Pines",
+        "address": "601 City Center Blvd, Pembroke Pines, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fluisito-ayala-y-su-orquesta-puerto-pembroke-pines-florida-09-19-2026%2Fevent%2F0D0064D1B956831E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/9ad/7098f486-42ca-424a-b05d-d83c2f5fa9ad_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Luisito Ayala y su Orquesta Puerto Rican Power llegan a Pembroke Pines celebrando su 50 Aniversario con una noche de salsa, ritmo y grandes exitos en vivo. Visit CharlesFDodgeCityCenter.com for more information. The box office is open Thursday through Saturday, 10AM to 5PM at CFDCC 601 SW City Center Way, Pembroke Pines, FL. Ample free parking is available at the venue. · Starts 20:00 · Charles F.",
+          "es": "Luisito Ayala y su Orquesta Puerto Rican Power llegan a Pembroke Pines celebrando su 50 Aniversario con una noche de salsa, ritmo y grandes éxitos en vivo. Visite CharlesFDodgeCityCenter.com para más información. La taquilla está abierta de jueves a sábado, de 10AM a 5PM en CFDCC 601 SW City Center Way, Pembroke Pines, FL. Estacionamiento gratuito disponible en el lugar. · Comienza 20:00 · Charles F.",
+          "pt": "Luisito Ayala e sua Orquestra Puerto Rican Power chegam a Pembroke Pines celebrando seu 50º Aniversário com uma noite de salsa, ritmo e grandes sucessos ao vivo. Visite CharlesFDodgeCityCenter.com para mais informações. A bilheteria está aberta de quinta a sábado, das 10h às 17h no CFDCC 601 SW City Center Way, Pembroke Pines, FL. Estacionamento gratuito disponível no local. · Começa 20:00 · Charles F.",
+          "fr": "Luisito Ayala et son Orchestre Puerto Rican Power arrivent à Pembroke Pines pour célébrer son 50e Anniversaire avec une soirée de salsa, de rythme et de grands succès en direct. Visitez CharlesFDodgeCityCenter.com pour plus d'informations. La billetterie est ouverte jeudi à samedi, de 10h à 17h au CFDCC 601 SW City Center Way, Pembroke Pines, FL. Un parking gratuit est disponible sur place. · Commence 20:00 · Charles F."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.006998,
+        "lng": -80.281135
+      },
+      {
+        "id": "tm_1788706193535_icms",
+        "title": {
+          "en": "Zac Brown Band: Love & Fear Tour",
+          "es": "Zac Brown Band: Gira Love & Fear",
+          "pt": "Zac Brown Band: Turnê Love & Fear",
+          "fr": "Zac Brown Band: Tournée Love & Fear"
+        },
+        "date": "2026-09-19",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fzac-brown-band-love-fear-tour-hollywood-florida-09-19-2026%2Fevent%2F0D006436A53832DE&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/5a7/2bb73c6c-db79-4856-9be8-2c9315c1e5a7_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Country · Starts 20:00 · Hard Rock Live",
+          "es": "Música · Country · Comienza 20:00 · Hard Rock Live",
+          "pt": "Música · Country · Começa 20:00 · Hard Rock Live",
+          "fr": "Musique · Country · Commence 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1788706193535_xdij",
+        "title": {
+          "en": "Issac Delgado & Alain Perez",
+          "es": "Issac Delgado & Alain Perez",
+          "pt": "Issac Delgado & Alain Perez",
+          "fr": "Issac Delgado & Alain Perez"
+        },
+        "date": "2026-09-19",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fissac-delgado-alain-perez-miami-beach-florida-09-19-2026%2Fevent%2F0D0064C4D7B3405B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/5dd/af180d69-0c89-4e44-9a44-8dc02af465dd_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Latin · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Música · Latin · Comienza 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
+          "pt": "Música · Latin · Começa 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
+          "fr": "Musique · Latin · Commence 20:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "cp_1788706194165_qiqd",
+        "title": {
+          "en": "9/11 25th Anniversary Remembrance Ceremony",
+          "es": "Ceremonia de Conmemoración del 25 Aniversario del 11/9",
+          "pt": "Cerimônia de Comemoração do 25º Aniversário do 11/9",
+          "fr": "Cérémonie Commémorative du 25e Anniversaire du 11/9"
+        },
+        "date": "2026-09-11",
+        "venue": "Centennial Park &  Amphitheater",
+        "address": "120 East Ocean Ave.  Boynton Beach FL 33435",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=30",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://boynton-beach.org/calendar.aspx?EID=2702",
+          "es": "https://boynton-beach.org/calendar.aspx?EID=2702",
+          "pt": "https://boynton-beach.org/calendar.aspx?EID=2702",
+          "fr": "https://boynton-beach.org/calendar.aspx?EID=2702"
+        },
+        "source": "Boynton Beach",
+        "category": "community"
       }
     ]
   },
@@ -4704,7 +4676,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-05T14:28:24.931Z",
+    "fetchedAt": "2026-09-06T14:50:41.703Z",
     "items": []
   }
 }
