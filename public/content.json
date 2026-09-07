@@ -1,45 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-06T14:50:42.415Z",
+    "lastUpdated": "2026-09-07T17:08:29.710Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-06T14:50:41.702Z",
+    "fetchedAt": "2026-09-07T17:08:29.015Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 99,
+      "temp_f": 86,
+      "feels_f": 101,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 82,
-      "wind_mph": 3,
-      "rain_chance": 50,
+      "humidity": 78,
+      "wind_mph": 6,
+      "rain_chance": 32,
       "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-09-06",
+        "date": "2026-09-07",
         "high_f": 87,
         "low_f": 76,
-        "weathercode": 63,
-        "rain_chance": 50,
+        "weathercode": 53,
+        "rain_chance": 32,
         "description": {
-          "en": "Moderate rain",
-          "es": "Lluvia moderada",
-          "pt": "Chuva moderada",
-          "fr": "Pluie modérée"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
-        "date": "2026-09-07",
-        "high_f": 87,
+        "date": "2026-09-08",
+        "high_f": 86,
+        "low_f": 74,
+        "weathercode": 82,
+        "rain_chance": 28,
+        "description": {
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
+        }
+      },
+      {
+        "date": "2026-09-09",
+        "high_f": 89,
         "low_f": 75,
         "weathercode": 3,
-        "rain_chance": 43,
+        "rain_chance": 41,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -48,117 +61,86 @@
         }
       },
       {
-        "date": "2026-09-08",
-        "high_f": 90,
-        "low_f": 77,
-        "weathercode": 95,
-        "rain_chance": 61,
-        "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
-        }
-      },
-      {
-        "date": "2026-09-09",
+        "date": "2026-09-10",
         "high_f": 89,
         "low_f": 85,
-        "weathercode": 51,
-        "rain_chance": 29,
+        "weathercode": 3,
+        "rain_chance": 31,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
-        "date": "2026-09-10",
-        "high_f": 90,
-        "low_f": 85,
-        "weathercode": 95,
+        "date": "2026-09-11",
+        "high_f": 89,
+        "low_f": 84,
+        "weathercode": 96,
         "rain_chance": 37,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "10:00",
-        "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 4
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 85,
-        "weathercode": 1,
-        "rain_chance": 3
-      },
-      {
-        "hour": "12:00",
+        "hour": "13:00",
         "temp_f": 86,
         "weathercode": 1,
-        "rain_chance": 10
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 13
+        "rain_chance": 28
       },
       {
         "hour": "14:00",
         "temp_f": 87,
         "weathercode": 1,
-        "rain_chance": 26
+        "rain_chance": 30
       },
       {
         "hour": "15:00",
-        "temp_f": 80,
-        "weathercode": 53,
-        "rain_chance": 33
+        "temp_f": 86,
+        "weathercode": 1,
+        "rain_chance": 32
       },
       {
         "hour": "16:00",
-        "temp_f": 76,
-        "weathercode": 63,
-        "rain_chance": 29
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 25
       },
       {
         "hour": "17:00",
-        "temp_f": 80,
-        "weathercode": 51,
-        "rain_chance": 17
+        "temp_f": 85,
+        "weathercode": 2,
+        "rain_chance": 14
       },
       {
         "hour": "18:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 14
       },
       {
         "hour": "19:00",
-        "temp_f": 80,
+        "temp_f": 78,
         "weathercode": 3,
         "rain_chance": 12
       },
       {
         "hour": "20:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 77,
+        "weathercode": 53,
+        "rain_chance": 16
       },
       {
         "hour": "21:00",
-        "temp_f": 77,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 12
       },
       {
         "hour": "22:00",
@@ -170,67 +152,85 @@
         "hour": "23:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 6
       },
       {
         "hour": "00:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 4
       },
       {
         "hour": "01:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 4
       },
       {
         "hour": "02:00",
-        "temp_f": 78,
-        "weathercode": 2,
-        "rain_chance": 6
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 4
       },
       {
         "hour": "03:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 4
       },
       {
         "hour": "04:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 7
+        "temp_f": 75,
+        "weathercode": 1,
+        "rain_chance": 3
       },
       {
         "hour": "05:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 74,
+        "weathercode": 1,
+        "rain_chance": 7
       },
       {
         "hour": "06:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 9
       },
       {
         "hour": "07:00",
-        "temp_f": 75,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 11
       },
       {
         "hour": "08:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 7
       },
       {
         "hour": "09:00",
-        "temp_f": 81,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 9
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 80,
+        "weathercode": 82,
+        "rain_chance": 10
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 11
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 10
       }
     ]
   },
@@ -1767,32 +1767,6 @@
         "category": "arts"
       },
       {
-        "id": "tm_1786712138538_ulps",
-        "title": {
-          "en": "Chance The Rapper - Coloring Book 10 Year Anniversary Tour",
-          "es": "Chance The Rapper - Tour del 10 Aniversario de Coloring Book",
-          "pt": "Chance The Rapper - Turnê do 10º Aniversário de Coloring Book",
-          "fr": "Chance The Rapper - Tour du 10e Anniversaire de Coloring Book"
-        },
-        "date": "2026-09-06",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fchance-the-rapper-coloring-book-10-hollywood-florida-09-06-2026%2Fevent%2F0D0064ABA25277C9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/fd0/f1e801a1-dd16-4838-b39c-8a2817e9ffd0_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Hip-Hop/Rap · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Hip-Hop/Rap · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · Hip-Hop/Rap · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · Hip-Hop/Rap · Commence 20:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
         "id": "rss_1786796918199_kce6",
         "title": {
           "en": "Light Up the Night 11/14/26",
@@ -2565,32 +2539,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787661508498_3cqp",
-        "title": {
-          "en": "Kasbo ???Labyrinth Tour??? (Dj Set)",
-          "es": "Kasbo «Labyrinth Tour» (DJ Set)",
-          "pt": "Kasbo «Labyrinth Tour» (DJ Set)",
-          "fr": "Kasbo «Labyrinth Tour» (DJ Set)"
-        },
-        "date": "2026-09-06",
-        "venue": "ZeyZey Miami",
-        "address": "353 NE 61st St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70Kup&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ae8/099387ad-12c0-4834-b38c-5a1dbd0bdae8_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 19:00 · ZeyZey Miami",
-          "es": "Música · Otro · Comienza 19:00 · ZeyZey Miami",
-          "pt": "Música · Outro · Começa 19:00 · ZeyZey Miami",
-          "fr": "Musique · Autre · Commence 19:00 · ZeyZey Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.8172,
-        "lng": -80.188797
-      },
-      {
         "id": "tm_1787661508498_1op8",
         "title": {
           "en": "Satin Jackets",
@@ -2667,32 +2615,6 @@
         "category": "music",
         "lat": 25.8172,
         "lng": -80.188797
-      },
-      {
-        "id": "rss_1788019609231_oejh",
-        "title": {
-          "en": "Dembow Con Mangú Labor Day Party at The Pool at The Goodtime Hotel 9/6/26",
-          "es": "Fiesta de Dembow Con Mangú Fin de Semana del Día del Trabajo en The Pool at The Goodtime Hotel 9/6/26",
-          "pt": "Festa de Dembow Con Mangú Fim de Semana do Dia do Trabalho na The Pool at The Goodtime Hotel 9/6/26",
-          "fr": "Fête Dembow Con Mangú Fin de Semaine de la Fête du Travail au The Pool at The Goodtime Hotel 9/6/26"
-        },
-        "date": "2026-09-06",
-        "venue": "The Goodtime Hotel",
-        "address": "601 Washington Ave, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/28/dembow-con-mangu-labor-day-party-at-the-pool-at-the-goodtime-hotel-9-6-26/",
-        "free": false,
-        "price": "$20",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/IMG_2070-1-1-350x420.png",
-        "description": {
-          "en": "Celebrate Labor Day Weekend with Dominican music, culture and",
-          "es": "Celebra el fin de semana del Día del Trabajo con música, cultura y tradiciones dominicanas",
-          "pt": "Celebre o fim de semana do Dia do Trabalho com música, cultura e tradições dominicanas",
-          "fr": "Célébrez le week-end de la Fête du Travail avec la musique, la culture et les traditions dominicaines"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7763327,
-        "lng": -80.1334166,
-        "category": "community"
       },
       {
         "id": "rss_1788019609231_20c1",
@@ -2949,32 +2871,6 @@
         "lat": 26.0188099,
         "lng": -80.1162312,
         "category": "community"
-      },
-      {
-        "id": "tm_1788278356863_loxi",
-        "title": {
-          "en": "Lil Baby",
-          "es": "Lil Baby",
-          "pt": "Lil Baby",
-          "fr": "Lil Baby"
-        },
-        "date": "2026-09-06",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Flil-baby-liv-nightclub-miami-tickets%2F14295694&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/413/19c30ff1-3683-434d-ae08-37cd167c5413_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier portador de entrada que no pueda presentar identificación válida que indique que tiene al menos 21 años no será admitido en este evento y no será elegible para reembolso. · Comienza 23:30 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingressso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
       },
       {
         "id": "tm_1788278356863_qi28",
@@ -3259,32 +3155,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1788536396335_n75k",
-        "title": {
-          "en": "Mayami Labor Day Weekend Celebration 9/6/26",
-          "es": "Celebración del Fin de Semana del Día del Trabajo en Mayami 9/6/26",
-          "pt": "Celebração do Fim de Semana do Dia do Trabalho em Mayami 9/6/26",
-          "fr": "Célébration du Weekend de la Fête du Travail à Mayami 9/6/26"
-        },
-        "date": "2026-09-06",
-        "venue": "Mayami",
-        "address": "127 NW 23rd, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/09/03/mayami-labor-day-weekend-celebration-9-6-26/",
-        "free": false,
-        "price": "$35",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Comp-1-0_00_14_04-281x500.png",
-        "description": {
-          "en": "Get ready for an unforgettable Labor Day Weekend at Mayami! The King of Dembow, Chimbala, is taking over the night",
-          "es": "¡Prepárate para un fin de semana del Día del Trabajo inolvidable en Mayami! El Rey del Dembow, Chimbala, se apodera de la noche",
-          "pt": "Prepare-se para um fim de semana do Dia do Trabalho inesquecível em Mayami! O Rei do Dembow, Chimbala, toma conta da noite",
-          "fr": "Préparez-vous pour un week-end de la Fête du Travail inoubliable à Mayami! Le Roi du Dembow, Chimbala, prend le contrôle de la soirée"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7993382,
-        "lng": -80.1976922,
-        "category": "community"
-      },
-      {
         "id": "rss_1788618474335_0qri",
         "title": {
           "en": "South Miami DeMolay Youth Leadership Open House 9/17/26",
@@ -3335,84 +3205,6 @@
         "lat": 25.7211339,
         "lng": -80.2787553,
         "category": "community"
-      },
-      {
-        "id": "tm_1788618474957_vf3o",
-        "title": {
-          "en": "Miami Marlins vs Chicago Cubs: Hall of Fame Bobblehead #1 presented by Miccosukee",
-          "es": "Miami Marlins vs Chicago Cubs: Bobblehead Salón de la Fama #1 presentado por Miccosukee",
-          "pt": "Miami Marlins vs Chicago Cubs: Bobblehead Hall da Fama #1 apresentado por Miccosukee",
-          "fr": "Miami Marlins vs Chicago Cubs: Bobblehead Hall of Fame #1 présenté par Miccosukee"
-        },
-        "date": "2026-09-06",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa03&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 13:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 13:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 13:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Début 13:40 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1788618474957_whht",
-        "title": {
-          "en": "Orange Blossom Classic",
-          "es": "Clásico de la Flor de Naranja",
-          "pt": "Clássico da Flor de Laranja",
-          "fr": "Classique de la Fleur d'Oranger"
-        },
-        "date": "2026-09-06",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Forange-blossom-classic-miami-florida-09-06-2026%2Fevent%2F0D006471D7A3F603&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/440/c3bf5679-a73c-4340-a567-def827d82440_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 15:00 · Hard Rock Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza 15:00 · Hard Rock Stadium",
-          "pt": "Esportes · Futebol Americano · Começa 15:00 · Hard Rock Stadium",
-          "fr": "Sports · Football Américain · Commence 15:00 · Hard Rock Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1788618474957_jch6",
-        "title": {
-          "en": "Where Dere???s a Will, Dere???s a Criminal",
-          "es": "Donde Hay Voluntad, Hay un Criminal",
-          "pt": "Onde Há Vontade, Há um Criminoso",
-          "fr": "Où Il Y a une Volonté, Il Y a un Criminel"
-        },
-        "date": "2026-09-06",
-        "venue": "Coral Springs Center",
-        "address": "2855 Coral Springs Dr., Coral Springs, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZPQZ&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 18:00 · Coral Springs Center",
-          "es": "Comienza 18:00 · Centro Coral Springs",
-          "pt": "Começa 18:00 · Centro Coral Springs",
-          "fr": "Commence 18:00 · Centre Coral Springs"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.2738,
-        "lng": -80.256897,
-        "category": "music"
       },
       {
         "id": "rss_1788706192888_crtl",
@@ -3489,32 +3281,6 @@
         },
         "source": "Soul of Miami",
         "category": "sports"
-      },
-      {
-        "id": "tm_1788706193534_86e3",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-06",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Varios · Familiar · Comienza a las 11:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Familiar · Começa às 11:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Familial · Commence à 11:00 · Centre de Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
       },
       {
         "id": "tm_1788706193534_j2o7",
@@ -3772,6 +3538,262 @@
           "fr": "https://boynton-beach.org/calendar.aspx?EID=2702"
         },
         "source": "Boynton Beach",
+        "category": "community"
+      },
+      {
+        "id": "rss_1788800862466_sxir",
+        "title": {
+          "en": "Papel 3 Reception 9/13/26, 9/18/26",
+          "es": "Recepción Papel 3 9/13/26, 9/18/26",
+          "pt": "Recepção Papel 3 9/13/26, 9/18/26",
+          "fr": "Réception Papel 3 9/13/26, 9/18/26"
+        },
+        "date": "2026-09-13",
+        "venue": "FIU Green Library",
+        "address": "11200 SW 8th Street, Miami, Florida, 33199",
+        "url": "https://www.soulofmiami.org/2026/09/07/papel-3-reception-9-13-26-9-18-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/unnamed-12-350x175.jpg",
+        "description": {
+          "en": "Join collaboARTive for the third edition of Papel, a collective exhibition celebrating the endless creative possibilities of paper. Featuring",
+          "es": "Únete a collaboARTive para la tercera edición de Papel, una exposición colectiva que celebra las infinitas posibilidades creativas del papel. Con la participación de",
+          "pt": "Junte-se ao collaboARTive para a terceira edição do Papel, uma exposição coletiva que celebra as infinitas possibilidades criativas do papel. Apresentando",
+          "fr": "Rejoignez collaboARTive pour la troisième édition de Papel, une exposition collective célébrant les possibilités créatives infinies du papier. Mettant en vedette"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7553898,
+        "lng": -80.3762833,
+        "category": "arts"
+      },
+      {
+        "id": "rss_1788800862466_wrq5",
+        "title": {
+          "en": "Dining in the Dark benefiting Lighthouse of Broward 11/14/26",
+          "es": "Cena en la Oscuridad beneficiando al Faro de Broward 11/14/26",
+          "pt": "Jantar no Escuro beneficiando o Farol de Broward 11/14/26",
+          "fr": "Dîner dans l'Obscurité au profit du Phare de Broward 11/14/26"
+        },
+        "date": "2026-11-14",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/06/dining-in-the-dark-benefiting-lighthouse-of-broward-11-14-26/",
+        "free": false,
+        "price": "$250",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Dining-in-the-Dark-benefiting-Lighthouse-of-Broward-350x250.jpg",
+        "description": {
+          "en": "Dust off your sequins, platform shoes and disco style for an",
+          "es": "Desempolva tus lentejuelas, zapatos de plataforma y estilo disco para",
+          "pt": "Tire a poeira de suas lantejoulas, sapatos de plataforma e estilo disco para",
+          "fr": "Dépoussiérez vos paillettes, chaussures compensées et style disco pour"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1788800863076_ve8i",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-07",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 13:15 · Mana Wynwood Convention Center",
+          "es": "Diverso · Familiar · Comienza 13:15 · Centro de Convenciones Mana Wynwood",
+          "pt": "Variado · Família · Começa 13:15 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 13:15 · Centre de Congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1788800863076_ofkh",
+        "title": {
+          "en": "ONE: The Musical!",
+          "es": "ONE: ¡El Musical!",
+          "pt": "ONE: O Musical!",
+          "fr": "ONE: La Comédie Musicale!"
+        },
+        "date": "2026-09-08",
+        "venue": "Coral Springs Center",
+        "address": "2855 Coral Springs Dr., Coral Springs, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZEje&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 19:30 · Coral Springs Center",
+          "es": "Comienza 19:30 · Centro de Artes de Coral Springs",
+          "pt": "Começa 19:30 · Centro de Artes de Coral Springs",
+          "fr": "Commence 19:30 · Centre des Arts de Coral Springs"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.2738,
+        "lng": -80.256897,
+        "category": "music"
+      },
+      {
+        "id": "tm_1788800863076_d0s5",
+        "title": {
+          "en": "Rio Da Yung Og",
+          "es": "Rio Da Yung Og",
+          "pt": "Rio Da Yung Og",
+          "fr": "Rio Da Yung Og"
+        },
+        "date": "2026-09-08",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZpfJ&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 20:00 · ZeyZey Miami",
+          "es": "Comienza 20:00 · ZeyZey Miami",
+          "pt": "Começa 20:00 · ZeyZey Miami",
+          "fr": "Commence 20:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.8172,
+        "lng": -80.188797,
+        "category": "music"
+      },
+      {
+        "id": "tm_1788800863076_1mfo",
+        "title": {
+          "en": "Luis Alfonso Lindo Lindo USA Tour 2026",
+          "es": "Luis Alfonso Lindo Lindo Gira USA 2026",
+          "pt": "Luis Alfonso Lindo Lindo Turnê USA 2026",
+          "fr": "Luis Alfonso Lindo Lindo Tournée USA 2026"
+        },
+        "date": "2026-09-19",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fluis-alfonso-lindo-lindo-usa-tour-miami-florida-09-19-2026%2Fevent%2F0D0064ABC8C6ACF1&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ab0/43703410-7c45-4de9-aa6b-a86310d83ab0_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Experience the unmatched voice and charisma of Luis Alfonso, the rising star of Colombian música popular and ranchera. Born in Popayán, Colombia, Luis Alfonso's musical journey began at age 10, turning professional at 20 and quickly becoming a powerhouse in the industry. Widely known for his breakthrough appearance on Caracol TV's A Otro Nivel, he captivated national audiences with his stage prese",
+          "es": "Experimenta la voz inigualable y el carisma de Luis Alfonso, la estrella en ascenso de la música popular colombiana y ranchera. Nacido en Popayán, Colombia, el viaje musical de Luis Alfonso comenzó a los 10 años, volviéndose profesional a los 20 y rápidamente convirtiéndose en una potencia en la industria. Ampliamente conocido por su aparición revolucionaria en A Otro Nivel de Caracol TV, cautivó a audiencias nacionales con su presencia en el escenario",
+          "pt": "Experimente a voz incomparável e o carisma de Luis Alfonso, a estrela em ascensão da música popular colombiana e ranchera. Nascido em Popayán, Colômbia, a jornada musical de Luis Alfonso começou aos 10 anos, tornando-se profissional aos 20 e rapidamente se tornando uma potência na indústria. Amplamente conhecido por sua aparição revolucionária em A Otro Nivel da Caracol TV, ele cativou audiências nacionais com sua presença no palco",
+          "fr": "Vivez la voix inégalée et le charisme de Luis Alfonso, la jeune star de la musique populaire colombienne et ranchera. Né à Popayán, en Colombie, le parcours musical de Luis Alfonso a commencé à l'âge de 10 ans, devenant professionnel à 20 ans et devenant rapidement une puissance de l'industrie. Largement connu pour son apparition révolutionnaire sur A Otro Nivel de Caracol TV, il a captivé les audiences nationales avec sa présence sur scène"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7707756,
+        "lng": -80.1901174
+      },
+      {
+        "id": "tm_1788800863076_5irm",
+        "title": {
+          "en": "Emo Night Brooklyn",
+          "es": "Emo Night Brooklyn",
+          "pt": "Emo Night Brooklyn",
+          "fr": "Emo Night Brooklyn"
+        },
+        "date": "2026-09-19",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Femo-night-brooklyn-ft-lauderdale-florida-09-19-2026%2Fevent%2F0D0064F5E900A3F0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/a64/548ac550-288d-42b7-8449-8459bf4e5a64_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Emo Night Brooklyn will be coming to Revolution Live on Saturday, September 19th. This event is 21+. Doors open at 10:30pm. Show starts at 10:45pm. All support acts are subject to change without notice. Welcome to Emo Night Brooklyn, a late night DJ based dance party blasting the best emo and pop punk jams. We may even invite some of your favorite artists and bands to surprise you and join the par",
+          "es": "Emo Night Brooklyn llegará a Revolution Live el sábado 19 de septiembre. Este evento es solo para mayores de 21 años. Las puertas abren a las 22:30. El espectáculo comienza a las 22:45. Todos los actos de apoyo están sujetos a cambios sin previo aviso. Bienvenido a Emo Night Brooklyn, una fiesta de baile basada en DJ a altas horas de la noche que toca los mejores temas emo y pop punk. Incluso podemos invitar a algunos de tus artistas y bandas favoritas para sorprenderte y unirse a la fiesta",
+          "pt": "Emo Night Brooklyn virá para Revolution Live no sábado, 19 de setembro. Este evento é para maiores de 21 anos. As portas abrem às 22:30. O show começa às 22:45. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. Bem-vindo ao Emo Night Brooklyn, uma festa de dança com DJ até altas horas da noite com o melhor de emo e pop punk. Podemos até convidar alguns de seus artistas e bandas favoritos para te surpreender e se juntar à festa",
+          "fr": "Emo Night Brooklyn arrivera à Revolution Live le samedi 19 septembre. Cet événement est réservé aux plus de 21 ans. Les portes ouvrent à 22h30. Le spectacle commence à 22h45. Tous les actes de soutien sont sujets à modification sans préavis. Bienvenue à Emo Night Brooklyn, une fête dansante basée sur DJ tard dans la nuit avec les meilleurs morceaux emo et pop punk. Nous pourrions même inviter certains de vos artistes et groupes préférés pour vous surprendre et vous rejoindre à la fête"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1788800863076_sy5n",
+        "title": {
+          "en": "Matroda",
+          "es": "Matroda",
+          "pt": "Matroda",
+          "fr": "Matroda"
+        },
+        "date": "2026-09-19",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fmatroda-liv-nightclub-miami-tickets%2F15014873&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d7d/02bab180-5357-45eb-adb6-e209c9e9ad7d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido a este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não consiga apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23h30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1788800863076_bjah",
+        "title": {
+          "en": "The Manhattans Featuring Gerald Alston and Deniece Williams",
+          "es": "The Manhattans con Gerald Alston y Deniece Williams",
+          "pt": "The Manhattans com Gerald Alston e Deniece Williams",
+          "fr": "The Manhattans avec Gerald Alston et Deniece Williams"
+        },
+        "date": "2026-09-20",
+        "venue": "Charles F. Dodge City Center Pembroke Pines",
+        "address": "601 City Center Blvd, Pembroke Pines, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-manhattans-featuring-gerald-alston-and-pembroke-pines-florida-09-20-2026%2Fevent%2F0D0064EAA74A611D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/529/e4a185eb-9ce2-436a-833c-f45d319cb529_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Get ready South Florida Classic R and B powerhouse The Manhattans featuring Gerald Alston are bringing their unforgettable hits to the stage joined by four time Grammy winner Deniece Williams. A high-energy one night only celebration of soul, legacy and feel good R and B at the Charles F. Dodge City Center in Pembroke Pines, FL. · Starts 19:00 · Charles F. Dodge City Center Pembroke Pines",
+          "es": "Prepárate South Florida, la potencia clásica de R y B The Manhattans con Gerald Alston traen sus éxitos inolvidables al escenario junto a la ganadora de cuatro Premios Grammy Deniece Williams. Una celebración de alta energía de una sola noche de soul, legado y R y B agradable en el Charles F. Dodge City Center en Pembroke Pines, FL. · Comienza 19:00 · Charles F. Dodge City Center Pembroke Pines",
+          "pt": "Prepare-se South Florida, a potência clássica de R e B The Manhattans com Gerald Alston trazem seus sucessos inesquecíveis ao palco junto com a vencedora de quatro Grammys Deniece Williams. Uma celebração de alta energia de uma noite com soul, legado e R e B agradável no Charles F. Dodge City Center em Pembroke Pines, FL. · Começa 19:00 · Charles F. Dodge City Center Pembroke Pines",
+          "fr": "Préparez-vous South Florida, la puissance classique du R et B The Manhattans avec Gerald Alston apportent leurs succès inoubliables sur scène aux côtés de la quadruple gagnante des Grammy Awards Deniece Williams. Une célébration haute énergie d'une seule nuit d'âme, d'héritage et de R et B agréable au Charles F. Dodge City Center à Pembroke Pines, FL. · Commence 19h00 · Charles F. Dodge City Center Pembroke Pines"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.006998,
+        "lng": -80.281135
+      },
+      {
+        "id": "cp_1788800867558_fekp",
+        "title": {
+          "en": "International Coastal Cleanup",
+          "es": "Limpieza Costera Internacional",
+          "pt": "Limpeza Costeira Internacional",
+          "fr": "Nettoyage Côtier International"
+        },
+        "date": "2026-09-19",
+        "venue": "- 71 SE 21st Ave  Deerfield Beach FL 33441",
+        "address": "",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://deerfield-beach.com/calendar.aspx?EID=5773",
+          "es": "https://deerfield-beach.com/calendar.aspx?EID=5773",
+          "pt": "https://deerfield-beach.com/calendar.aspx?EID=5773",
+          "fr": "https://deerfield-beach.com/calendar.aspx?EID=5773"
+        },
+        "source": "Deerfield Beach",
         "category": "community"
       }
     ]
@@ -4676,7 +4698,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-06T14:50:41.703Z",
+    "fetchedAt": "2026-09-07T17:08:29.016Z",
     "items": []
   }
 }
