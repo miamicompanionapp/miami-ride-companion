@@ -1,45 +1,45 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-07T17:08:29.710Z",
+    "lastUpdated": "2026-09-08T15:53:58.360Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-07T17:08:29.015Z",
+    "fetchedAt": "2026-09-08T15:53:57.755Z",
     "current": {
       "temp_f": 86,
-      "feels_f": 101,
+      "feels_f": 97,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 78,
-      "wind_mph": 6,
-      "rain_chance": 32,
-      "weathercode": 1
+      "humidity": 74,
+      "wind_mph": 4,
+      "rain_chance": 15,
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-09-07",
+        "date": "2026-09-08",
         "high_f": 87,
         "low_f": 76,
-        "weathercode": 53,
-        "rain_chance": 32,
+        "weathercode": 3,
+        "rain_chance": 15,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
-        "date": "2026-09-08",
-        "high_f": 86,
-        "low_f": 74,
-        "weathercode": 82,
-        "rain_chance": 28,
+        "date": "2026-09-09",
+        "high_f": 85,
+        "low_f": 75,
+        "weathercode": 80,
+        "rain_chance": 51,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -48,37 +48,37 @@
         }
       },
       {
-        "date": "2026-09-09",
-        "high_f": 89,
-        "low_f": 75,
-        "weathercode": 3,
-        "rain_chance": 41,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-09-10",
         "high_f": 89,
-        "low_f": 85,
-        "weathercode": 3,
-        "rain_chance": 31,
+        "low_f": 76,
+        "weathercode": 96,
+        "rain_chance": 51,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-09-11",
         "high_f": 89,
-        "low_f": 84,
+        "low_f": 85,
+        "weathercode": 95,
+        "rain_chance": 50,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-09-12",
+        "high_f": 86,
+        "low_f": 78,
         "weathercode": 96,
-        "rain_chance": 37,
+        "rain_chance": 68,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -89,148 +89,148 @@
     ],
     "hourly": [
       {
-        "hour": "13:00",
+        "hour": "11:00",
         "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 28
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 87,
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "14:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 30
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "15:00",
         "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 32
+        "weathercode": 3,
+        "rain_chance": 9
       },
       {
         "hour": "16:00",
         "temp_f": 86,
         "weathercode": 3,
-        "rain_chance": 25
+        "rain_chance": 11
       },
       {
         "hour": "17:00",
         "temp_f": 85,
-        "weathercode": 2,
-        "rain_chance": 14
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "18:00",
-        "temp_f": 82,
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 83,
         "weathercode": 3,
         "rain_chance": 14
       },
       {
-        "hour": "19:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 12
-      },
-      {
         "hour": "20:00",
-        "temp_f": 77,
-        "weathercode": 53,
-        "rain_chance": 16
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "21:00",
-        "temp_f": 78,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 12
+        "rain_chance": 8
       },
       {
         "hour": "22:00",
-        "temp_f": 77,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 8
       },
       {
         "hour": "23:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 79,
+        "weathercode": 2,
+        "rain_chance": 13
       },
       {
         "hour": "00:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 4
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 75,
+        "temp_f": 78,
         "weathercode": 1,
-        "rain_chance": 3
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 74,
-        "weathercode": 1,
-        "rain_chance": 7
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 3,
         "rain_chance": 11
       },
       {
-        "hour": "08:00",
-        "temp_f": 79,
+        "hour": "01:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 10
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 11
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 11
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 14
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 15
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 16
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "09:00",
-        "temp_f": 83,
+        "temp_f": 82,
         "weathercode": 3,
         "rain_chance": 9
       },
       {
         "hour": "10:00",
-        "temp_f": 80,
-        "weathercode": 82,
-        "rain_chance": 10
-      },
-      {
-        "hour": "11:00",
         "temp_f": 83,
         "weathercode": 3,
         "rain_chance": 11
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 10
       }
     ]
   },
@@ -3283,32 +3283,6 @@
         "category": "sports"
       },
       {
-        "id": "tm_1788706193534_j2o7",
-        "title": {
-          "en": "Miami Marlins vs. New York Mets",
-          "es": "Miami Marlins vs. New York Mets",
-          "pt": "Miami Marlins vs. New York Mets",
-          "fr": "Miami Marlins vs. New York Mets"
-        },
-        "date": "2026-09-07",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0K&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 13:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza a las 13:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa às 13:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence à 13:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
         "id": "tm_1788706193535_y4kl",
         "title": {
           "en": "Korolova",
@@ -3591,32 +3565,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1788800863076_ve8i",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-07",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:15 · Mana Wynwood Convention Center",
-          "es": "Diverso · Familiar · Comienza 13:15 · Centro de Convenciones Mana Wynwood",
-          "pt": "Variado · Família · Começa 13:15 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 13:15 · Centre de Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1788800863076_ofkh",
         "title": {
           "en": "ONE: The Musical!",
@@ -3795,6 +3743,110 @@
         },
         "source": "Deerfield Beach",
         "category": "community"
+      },
+      {
+        "id": "tm_1788882818935_6mva",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-08",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneos · Familia · Comienza 13:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 13:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 13:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1788882818935_zax0",
+        "title": {
+          "en": "Miami Marlins vs. New York Mets",
+          "es": "Miami Marlins vs. New York Mets",
+          "pt": "Miami Marlins vs. New York Mets",
+          "fr": "Miami Marlins vs. New York Mets"
+        },
+        "date": "2026-09-08",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0f&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 18:40 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 18:40 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 18:40 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 18:40 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1788882818935_e10r",
+        "title": {
+          "en": "Disney On Ice presents Spotlight Magic!",
+          "es": "Disney En Hielo presenta ¡Spotlight Magic!",
+          "pt": "Disney no Gelo apresenta Spotlight Magic!",
+          "fr": "Disney sur Glace présente Spotlight Magic!"
+        },
+        "date": "2026-09-10",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A704J3&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2c5/afcac6d1-4de4-4bb1-9cc9-e460577b72c5_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Ice Shows · Starts 19:00 · Amerant Bank Arena",
+          "es": "Misceláneos · Espectáculos sobre Hielo · Comienza 19:00 · Amerant Bank Arena",
+          "pt": "Diversos · Espetáculos no Gelo · Começa 19:00 · Amerant Bank Arena",
+          "fr": "Divers · Spectacles sur Glace · Commence 19:00 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.238701,
+        "lng": -80.370499,
+        "category": "music"
+      },
+      {
+        "id": "tm_1788882818935_4zrf",
+        "title": {
+          "en": "Miami Hurricanes vs Florida A&M Rattlers",
+          "es": "Miami Hurricanes vs Florida A&M Rattlers",
+          "pt": "Miami Hurricanes vs Florida A&M Rattlers",
+          "fr": "Miami Hurricanes vs Florida A&M Rattlers"
+        },
+        "date": "2026-09-10",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-vs-florida-am-rattlers-miami-florida-09-10-2026%2Fevent%2F0D0064FCBFAC6F0F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/022/a96b1453-309b-48e2-a776-f2dd19d83022_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 20:00 · Hard Rock Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 20:00 · Hard Rock Stadium",
+          "pt": "Esportes · Futebol Americano · Começa 20:00 · Hard Rock Stadium",
+          "fr": "Sports · Football Américain · Commence 20:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
       }
     ]
   },
@@ -4698,7 +4750,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-07T17:08:29.016Z",
+    "fetchedAt": "2026-09-08T15:53:57.756Z",
     "items": []
   }
 }
