@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-12T14:54:44.746Z",
+    "lastUpdated": "2026-09-13T15:31:44.057Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-12T14:54:43.951Z",
+    "fetchedAt": "2026-09-13T15:31:43.191Z",
     "current": {
-      "temp_f": 86,
-      "feels_f": 98,
+      "temp_f": 87,
+      "feels_f": 100,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
-      "wind_mph": 6,
-      "rain_chance": 23,
+      "humidity": 77,
+      "wind_mph": 5,
+      "rain_chance": 43,
       "weathercode": 2
     },
     "forecast": [
       {
-        "date": "2026-09-12",
-        "high_f": 87,
-        "low_f": 78,
-        "weathercode": 3,
-        "rain_chance": 23,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-09-13",
-        "high_f": 86,
-        "low_f": 74,
+        "high_f": 88,
+        "low_f": 76,
         "weathercode": 3,
-        "rain_chance": 25,
+        "rain_chance": 43,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,10 +36,23 @@
       },
       {
         "date": "2026-09-14",
-        "high_f": 89,
-        "low_f": 73,
+        "high_f": 85,
+        "low_f": 74,
+        "weathercode": 3,
+        "rain_chance": 12,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
+      },
+      {
+        "date": "2026-09-15",
+        "high_f": 88,
+        "low_f": 75,
         "weathercode": 51,
-        "rain_chance": 33,
+        "rain_chance": 45,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -61,11 +61,11 @@
         }
       },
       {
-        "date": "2026-09-15",
-        "high_f": 88,
-        "low_f": 84,
+        "date": "2026-09-16",
+        "high_f": 86,
+        "low_f": 83,
         "weathercode": 53,
-        "rain_chance": 52,
+        "rain_chance": 75,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -74,163 +74,163 @@
         }
       },
       {
-        "date": "2026-09-16",
-        "high_f": 86,
+        "date": "2026-09-17",
+        "high_f": 87,
         "low_f": 81,
-        "weathercode": 53,
-        "rain_chance": 63,
+        "weathercode": 95,
+        "rain_chance": 65,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "10:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 15
-      },
-      {
         "hour": "11:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 87,
+        "weathercode": 2,
+        "rain_chance": 6
       },
       {
         "hour": "12:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 15
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 16
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 87,
-        "weathercode": 3,
-        "rain_chance": 18
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 22
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 22
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 22
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 86,
-        "weathercode": 3,
-        "rain_chance": 23
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 82,
-        "weathercode": 2,
-        "rain_chance": 23
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 80,
-        "weathercode": 1,
-        "rain_chance": 18
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 12
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 11
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 8
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 5
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 76,
+        "temp_f": 88,
         "weathercode": 3,
         "rain_chance": 6
       },
       {
-        "hour": "05:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 77,
+        "hour": "13:00",
+        "temp_f": 88,
         "weathercode": 3,
         "rain_chance": 8
       },
       {
-        "hour": "07:00",
+        "hour": "14:00",
+        "temp_f": 88,
+        "weathercode": 3,
+        "rain_chance": 14
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 30
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 38
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 82,
+        "weathercode": 2,
+        "rain_chance": 43
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 38
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 15
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 12
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 7
+      },
+      {
+        "hour": "22:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 5
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 76,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 75,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 75,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 74,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 74,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 2
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 3
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "08:00",
-        "temp_f": 77,
+        "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 4
       },
       {
         "hour": "09:00",
         "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 10
+        "weathercode": 2,
+        "rain_chance": 5
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 5
       }
     ]
   },
@@ -1819,32 +1819,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1786970084103_vabu",
-        "title": {
-          "en": "Tito Puente Jr & His Orchestra: The Music Of Tito Puente",
-          "es": "Tito Puente Jr & Su Orquesta: La Música de Tito Puente",
-          "pt": "Tito Puente Jr & Sua Orquestra: A Música de Tito Puente",
-          "fr": "Tito Puente Jr & Son Orchestre : La Musique de Tito Puente"
-        },
-        "date": "2026-09-12",
-        "venue": "Rose & Alfred Miniaci Performing Arts Center",
-        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftito-puente-jr-his-orchestra-the-ft-lauderdale-florida-09-12-2026%2Fevent%2F0D00642CE5297CED&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/548/5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The son of \"The King of the Timbales,\" Tito Puente Jr. continues to carry forward one of the most celebrated legacies in Latin music. Following in the footsteps of his legendary father, the iconic American salsa and Latin jazz pioneer Tito Puente, Tito Puente Jr. has emerged as one of today's most exciting and dynamic Latin musicians on tour. With recent performances wowing audiences across the co",
-          "es": "El hijo del \"Rey de los Timbales\", Tito Puente Jr. continúa llevando adelante uno de los legados más celebrados en la música latina. Siguiendo los pasos de su legendario padre, el icónico pionero de la salsa americana y el jazz latino Tito Puente, Tito Puente Jr. se ha convertido en uno de los músicos latinos más emocionantes y dinámicos en gira. Con recientes presentaciones que han maravillado a audiencias en todo el",
-          "pt": "O filho do \"Rei dos Timbales\", Tito Puente Jr. continua a levar adiante um dos legados mais celebrados da música latina. Seguindo os passos de seu lendário pai, o icônico pioneiro do samba americano e jazz latino Tito Puente, Tito Puente Jr. emergiu como um dos músicos latinos mais emocionantes e dinâmicos em turnê. Com apresentações recentes impressionando públicos em todo o",
-          "fr": "Le fils du \"Roi des Timbales\", Tito Puente Jr. poursuit l'une des plus célèbres traditions de la musique latine. Suivant les traces de son père légendaire, le pionnier emblématique de la salsa américaine et du jazz latino Tito Puente, Tito Puente Jr. est devenu l'un des musiciens latinos les plus passionnants et dynamiques en tournée. Avec des performances récentes impressionnant les publics dans le"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0884017,
-        "lng": -80.2461624
-      },
-      {
         "id": "rss_1787143022212_yfcd",
         "title": {
           "en": "The Moth StorySLAM: Nine to Five 9/17/26",
@@ -1919,32 +1893,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1787143023006_d5x1",
-        "title": {
-          "en": "Orishas",
-          "es": "Orishas",
-          "pt": "Orishas",
-          "fr": "Orishas"
-        },
-        "date": "2026-09-12",
-        "venue": "James L Knight Center",
-        "address": "400 SE 2nd Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Forishas-miami-florida-09-12-2026%2Fevent%2F0D006371B4E67363&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3db/c4706502-70e3-4fac-bfb8-7a0ef0a1f3db_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "NO BAG POLICY. Exceptions will be made for bags smaller than 10\" x 7\" x 2\". All bags are subject to inspection by our security team upon entry. · Starts 20:00 · James L Knight Center",
-          "es": "SIN POLÍTICA DE BOLSAS. Se harán excepciones para bolsas más pequeñas que 10\" x 7\" x 2\". Todas las bolsas están sujetas a inspección por parte de nuestro equipo de seguridad al entrar. · Comienza 20:00 · James L Knight Center",
-          "pt": "SEM POLÍTICA DE BOLSAS. Exceções serão feitas para bolsas menores que 10\" x 7\" x 2\". Todas as bolsas estão sujeitas a inspeção pela nossa equipe de segurança na entrada. · Começa 20:00 · James L Knight Center",
-          "fr": "PAS DE POLITIQUE DE SAC. Des exceptions seront faites pour les sacs plus petits que 10\" x 7\" x 2\". Tous les sacs seront inspectés par notre équipe de sécurité à l'entrée. · Commence 20:00 · James L Knight Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.7707756,
-        "lng": -80.1901174
       },
       {
         "id": "rss_1787229489903_kgq2",
@@ -2095,32 +2043,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1787488220886_u1j7",
-        "title": {
-          "en": "Noches De Neón con Los Hermanos Rosario",
-          "es": "Noches De Neón con Los Hermanos Rosario",
-          "pt": "Noites de Neon com Los Hermanos Rosario",
-          "fr": "Nuits de Néon avec Los Hermanos Rosario"
-        },
-        "date": "2026-09-12",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnoches-de-neon-con-los-hermanos-hollywood-florida-09-12-2026%2Fevent%2F0D0064F0A7CD611B&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/515/704c3a33-92cd-42f9-9881-2f228d49f515_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Must be 21+ To Attend · Starts 20:30 · Hard Rock Live",
-          "es": "Debe tener 21+ años para asistir · Comienza 20:30 · Hard Rock Live",
-          "pt": "Deve ter 21 anos ou mais para participar · Começa 20:30 · Hard Rock Live",
-          "fr": "Vous devez avoir 21 ans ou plus pour y assister · Commence à 20h30 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
       },
       {
         "id": "tm_1787488220886_oico",
@@ -2329,32 +2251,6 @@
         "lat": 25.732096,
         "lng": -80.3143531,
         "category": "community"
-      },
-      {
-        "id": "tm_1787661508498_1op8",
-        "title": {
-          "en": "Satin Jackets",
-          "es": "Satin Jackets",
-          "pt": "Satin Jackets",
-          "fr": "Satin Jackets"
-        },
-        "date": "2026-09-12",
-        "venue": "ZeyZey Miami",
-        "address": "353 NE 61st St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PEAZ&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 22:00 · ZeyZey Miami",
-          "es": "Música · Otro · Comienza 22:00 · ZeyZey Miami",
-          "pt": "Música · Outro · Começa 22:00 · ZeyZey Miami",
-          "fr": "Musique · Autre · Commence 22:00 · ZeyZey Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.8172,
-        "lng": -80.188797
       },
       {
         "id": "tm_1787748121555_bhb9",
@@ -2842,30 +2738,6 @@
         "source": "Soul of Miami",
         "lat": 26.1223084,
         "lng": -80.1433786,
-        "category": "community"
-      },
-      {
-        "id": "rss_1788536396335_0a9h",
-        "title": {
-          "en": "Free Beau Monde Pilates x Padel X Summer Club on Lincoln Road 9/12/26",
-          "es": "Beau Monde Pilates x Padel X Summer Club gratis en Lincoln Road 9/12/26",
-          "pt": "Beau Monde Pilates x Padel X Summer Club grátis na Lincoln Road 9/12/26",
-          "fr": "Beau Monde Pilates x Padel X Summer Club gratuit sur Lincoln Road 9/12/26"
-        },
-        "date": "2026-09-12",
-        "venue": "Lincoln Road",
-        "address": "1111 Lincoln Road, Ste 8, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/09/03/free-beau-monde-pilates-x-padel-x-summer-club-on-lincoln-road-9-12-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Beau-Monde-Pilates-x-Padel-X-350x172.png",
-        "description": {
-          "en": "Move, stretch, play and connect! Join Beau Monde Pilates",
-          "es": "¡Muévete, estírate, juega y conéctate! Únete a Beau Monde Pilates",
-          "pt": "Mexa-se, alongue, jogue e conecte-se! Junte-se ao Beau Monde Pilates",
-          "fr": "Bougez, étirez-vous, jouez et connectez-vous! Rejoignez Beau Monde Pilates"
-        },
-        "source": "Soul of Miami",
         "category": "community"
       },
       {
@@ -3437,110 +3309,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1789141566627_u235",
-        "title": {
-          "en": "Florida International Panthers Football vs. Buffalo Bulls Football",
-          "es": "Fútbol Americano: Panteras de la Universidad Internacional de Florida vs Toros de Buffalo",
-          "pt": "Futebol Americano: Panteras da Universidade Internacional da Flórida vs Touros de Buffalo",
-          "fr": "Football Américain: Panthers de la Université Internationale de Floride vs Taureaux de Buffalo"
-        },
-        "date": "2026-09-12",
-        "venue": "Pitbull Stadium",
-        "address": "11200 SW 8th Street, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7O_bs&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/db5/5acfb9a3-4315-40c6-824f-e0fd31bd5db5_723691_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 18:00 · Pitbull Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza 18:00 · Estadio Pitbull",
-          "pt": "Esportes · Futebol Americano · Começa 18:00 · Estádio Pitbull",
-          "fr": "Sports · Football Américain · Commence 18:00 · Stade Pitbull"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7577,
-        "lng": -80.374802
-      },
-      {
-        "id": "tm_1789141566627_xeuw",
-        "title": {
-          "en": "Inter Miami CF vs Nashville SC",
-          "es": "Inter Miami CF vs Nashville SC",
-          "pt": "Inter Miami CF vs Nashville SC",
-          "fr": "Inter Miami CF vs Nashville SC"
-        },
-        "date": "2026-09-12",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-nashville-sc-miami-florida-09-12-2026%2Fevent%2F0D0063739E06683E&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
-          "es": "Para información sobre Suite, por favor llame al 305-428-0611. · Comienza 19:30 · Estadio Nu",
-          "pt": "Para informações sobre Suítes, por favor ligue 305-428-0611. · Começa 19:30 · Estádio Nu",
-          "fr": "Pour informations sur les Suites, veuillez appeler 305-428-0611. · Commence 19:30 · Stade Nu"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
-        "id": "tm_1789141566627_71p4",
-        "title": {
-          "en": "Tejano Queen Forever-The Number 1 Selena Tribute",
-          "es": "Tejano Queen Forever - El Tributo a Selena Número 1",
-          "pt": "Tejano Queen Forever - O Tributo a Selena Número 1",
-          "fr": "Tejano Queen Forever - Le Tribut à Selena Numéro 1"
-        },
-        "date": "2026-09-12",
-        "venue": "Coral Springs Center",
-        "address": "2855 Coral Springs Dr., Coral Springs, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZJfe&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 19:30 · Coral Springs Center",
-          "es": "Comienza 19:30 · Centro de Artes de Coral Springs",
-          "pt": "Começa 19:30 · Centro de Artes de Coral Springs",
-          "fr": "Commence 19:30 · Centre des Arts de Coral Springs"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.2738,
-        "lng": -80.256897,
-        "category": "music"
-      },
-      {
-        "id": "tm_1789141566627_d9uc",
-        "title": {
-          "en": "Omar Courtz Official After Party",
-          "es": "Fiesta Oficial Después del Evento de Omar Courtz",
-          "pt": "Festa Oficial Pós-Evento de Omar Courtz",
-          "fr": "Fête Officielle Après l'Événement d'Omar Courtz"
-        },
-        "date": "2026-09-12",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fomar-courtz-official-after-party-tickets-HCG6WL%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/bfe/96e1fabe-9721-4046-b33f-b5d38eebebfe_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Hip-Hop/Rap · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Música · Hip-Hop/Rap · Comienza 23:00 · Discoteca LIV Miami",
-          "pt": "Música · Hip-Hop/Rap · Começa 23:00 · Boate LIV Miami",
-          "fr": "Musique · Hip-Hop/Rap · Commence 23:00 · Boîte de Nuit LIV Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
         "id": "tm_1789141566627_1w07",
         "title": {
           "en": "Sheck Wes",
@@ -3617,188 +3385,6 @@
         "lat": 25.792823,
         "lng": -80.190838,
         "category": "music"
-      },
-      {
-        "id": "tm_1789224840052_j6oh",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-12",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza 11:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 11:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 11:00 · Centre de Conférences Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1789224840052_zhot",
-        "title": {
-          "en": "Disney On Ice presents Spotlight Magic!",
-          "es": "Disney sobre Hielo presenta Magia en el Foco",
-          "pt": "Disney no Gelo apresenta Magia em Destaque",
-          "fr": "Disney sur Glace présente Magie sous les Feux de la Rampe"
-        },
-        "date": "2026-09-12",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A704Jp&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/2c5/afcac6d1-4de4-4bb1-9cc9-e460577b72c5_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Ice Shows · Starts 11:00 · Amerant Bank Arena",
-          "es": "Misceláneo · Espectáculos sobre Hielo · Comienza 11:00 · Amerant Bank Arena",
-          "pt": "Diversos · Espetáculos de Gelo · Começa 11:00 · Amerant Bank Arena",
-          "fr": "Divers · Spectacles sur Glace · Commence 11:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.238701,
-        "lng": -80.370499,
-        "category": "music"
-      },
-      {
-        "id": "tm_1789224840052_34iv",
-        "title": {
-          "en": "Jurassic Quest | Miami-Dade County Fair & Expo | Miami, FL 2026",
-          "es": "Jurassic Quest | Feria y Exposición del Condado de Miami-Dade | Miami, FL 2026",
-          "pt": "Jurassic Quest | Feira e Exposição do Condado de Miami-Dade | Miami, FL 2026",
-          "fr": "Jurassic Quest | Foire et Exposition du Comté de Miami-Dade | Miami, FL 2026"
-        },
-        "date": "2026-09-12",
-        "venue": "Miami Dade Fair Expo Center",
-        "address": "10901 Coral Way (SW 24 St.), Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fjurassic-quest-miami-dade-county-fair-expo-miami-fl-2026-tickets-K3Y0T5%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/4c2/bac7ae96-6fcc-42ac-882a-fb3843e1f4c2_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Fairs & Festivals · Starts 12:00 · Miami Dade Fair Expo Center",
-          "es": "Misceláneo · Ferias y Festivales · Comienza 12:00 · Centro de Feria y Exposición de Miami-Dade",
-          "pt": "Diversos · Feiras e Festivais · Começa 12:00 · Centro de Feira e Exposição de Miami-Dade",
-          "fr": "Divers · Foires et Festivals · Commence 12:00 · Centre d'Exposition et de Foire de Miami-Dade"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.7484912,
-        "lng": -80.2872643,
-        "category": "community"
-      },
-      {
-        "id": "tm_1789224840052_g61i",
-        "title": {
-          "en": "Miami Marlins vs. Los Angeles Dodgers",
-          "es": "Miami Marlins vs. Los Angeles Dodgers",
-          "pt": "Miami Marlins vs. Los Angeles Dodgers",
-          "fr": "Miami Marlins vs. Los Angeles Dodgers"
-        },
-        "date": "2026-09-12",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa09&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 16:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 16:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 16:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Débute 16:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1789224840052_sq6k",
-        "title": {
-          "en": "Florida Atlantic University Owls Football vs. Navy Midshipmen Football",
-          "es": "Fútbol Americano: Florida Atlantic University Owls vs. Navy Midshipmen",
-          "pt": "Futebol Americano: Florida Atlantic University Owls vs. Navy Midshipmen",
-          "fr": "Football Américain: Florida Atlantic University Owls vs. Navy Midshipmen"
-        },
-        "date": "2026-09-12",
-        "venue": "Flagler Credit Union Stadium",
-        "address": "777 Glades Rd, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fflorida-atlantic-university-owls-football-vs-boca-raton-florida-09-12-2026%2Fevent%2F0D0064C5CEB244EB&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/2ca/8aa0e41b-afc1-4098-a44c-bf8a0662d2ca_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 19:30 · Flagler Credit Union Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza 19:30 · Flagler Credit Union Stadium",
-          "pt": "Esportes · Futebol Americano · Começa 19:30 · Flagler Credit Union Stadium",
-          "fr": "Sports · Football Américain · Débute 19:30 · Flagler Credit Union Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.3656459,
-        "lng": -80.104592
-      },
-      {
-        "id": "tm_1789224840052_764x",
-        "title": {
-          "en": "OMAR COURTZ - POR SI MAÑANA NO ESTOY USA TOUR",
-          "es": "OMAR COURTZ - POR SI MAÑANA NO ESTOY USA TOUR",
-          "pt": "OMAR COURTZ - POR SI MAÑANA NO ESTOY USA TOUR",
-          "fr": "OMAR COURTZ - POR SI MAÑANA NO ESTOY USA TOUR"
-        },
-        "date": "2026-09-12",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fomar-courtz-por-si-manana-no-miami-florida-09-12-2026%2Fevent%2F0D00648DA32E7370&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/bfe/96e1fabe-9721-4046-b33f-b5d38eebebfe_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Hip-Hop/Rap · Starts 20:00 · Kaseya Center",
-          "es": "Música · Hip-Hop/Rap · Comienza 20:00 · Kaseya Center",
-          "pt": "Música · Hip-Hop/Rap · Começa 20:00 · Kaseya Center",
-          "fr": "Musique · Hip-Hop/Rap · Débute 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1789224840052_ykza",
-        "title": {
-          "en": "The BIG Show Improv Comedy Miami",
-          "es": "The BIG Show Comedia Improvisada Miami",
-          "pt": "The BIG Show Comédia Improvisada Miami",
-          "fr": "The BIG Show Comédie Improvisée Miami"
-        },
-        "date": "2026-09-12",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14897683&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Big Show - Improv Comedy in MiamiIts our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun!Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as cl",
-          "es": "El Big Show - Comedia improvisada en Miami. Nuestro show distintivo: comedia improvisada en vivo, rápida y de primera categoría. ¡Como Whose Line is It Anyway se encuentra con SNL! The Big Show es comedia improvisada interactiva, con nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este show.",
-          "pt": "O Big Show - Comédia improvisada em Miami. Nosso show distintivo: comédia improvisada ao vivo, rápida e de primeira classe. Como Whose Line is It Anyway encontra SNL! The Big Show é comédia improvisada interativa, com nosso talentoso e premiado elenco. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show.",
-          "fr": "Le Big Show - Comédie improvisée à Miami. Notre spectacle signature : comédie improvisée en direct, rapide et de première classe. Comme Whose Line is It Anyway rencontre SNL ! The Big Show est une comédie improvisée interactive, avec notre talentueuse et primée distribution. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
       },
       {
         "id": "tm_1789224840052_jvdm",
@@ -3927,6 +3513,316 @@
         },
         "source": "Boynton Beach",
         "category": "music"
+      },
+      {
+        "id": "rss_1789313457805_x1kn",
+        "title": {
+          "en": "Bulla Gastrobar’s Paella & Sangria Making Class September 2026 9/17/26",
+          "es": "Clase de Paella y Sangría de Bulla Gastrobar Septiembre 2026 9/17/26",
+          "pt": "Aula de Paella e Sangria da Bulla Gastrobar Setembro 2026 9/17/26",
+          "fr": "Cours de Paella et Sangria de Bulla Gastrobar Septembre 2026 9/17/26"
+        },
+        "date": "2026-09-17",
+        "venue": "Bulla Gastrobar",
+        "address": "2747 NE 193rd St, Miami, Florida, 33180",
+        "url": "https://www.soulofmiami.org/2026/09/12/bulla-gastrobars-paella-sangria-making-class-september-2026-9-17-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/BULDOR_10Anniversary2026_IGpost4-350x438.jpg",
+        "description": {
+          "en": "the art of Spain’s iconic paella! Join Bulla’s chefs for a hands-on experience as you",
+          "es": "¡el arte de la icónica paella española! Únete a los chefs de Bulla para una experiencia interactiva mientras",
+          "pt": "a arte da icônica paella espanhola! Junte-se aos chefs da Bulla para uma experiência prática enquanto",
+          "fr": "l'art de la paella emblématique d'Espagne! Rejoignez les chefs de Bulla pour une expérience pratique tandis que vous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9540888,
+        "lng": -80.1455721,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1789313457805_1otu",
+        "title": {
+          "en": "Photographing Myself 9/26/26",
+          "es": "Fotografiándome a Mí Mismo 9/26/26",
+          "pt": "Fotografando a Mim Mesmo 9/26/26",
+          "fr": "Me Photographier 9/26/26"
+        },
+        "date": "2026-09-26",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/12/photographing-myself-9-26-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/opening-350x448.jpeg",
+        "description": {
+          "en": "Join us for the opening reception of “Photographing Myself: Bunny Yeager [in Dialogue with Aldeide Delgado, Naomi Fisher, and",
+          "es": "Únete a nosotros para la recepción de apertura de \"Fotografiándome a Mí Mismo: Bunny Yeager [en Diálogo con Aldeide Delgado, Naomi Fisher, y",
+          "pt": "Junte-se a nós para a recepção de abertura de \"Fotografando a Mim Mesmo: Bunny Yeager [em Diálogo com Aldeide Delgado, Naomi Fisher, e",
+          "fr": "Rejoignez-nous pour le vernissage de « Me Photographier: Bunny Yeager [en Dialogue avec Aldeide Delgado, Naomi Fisher, et"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1789313458391_ecst",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-13",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:45 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:45 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 11:45 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 11:45 · Centre des Conventions Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1789313458391_csix",
+        "title": {
+          "en": "Jurassic Quest | Miami-Dade County Fair & Expo | Miami, FL 2026",
+          "es": "Jurassic Quest | Feria y Expo del Condado de Miami-Dade | Miami, FL 2026",
+          "pt": "Jurassic Quest | Feira e Expo do Condado de Miami-Dade | Miami, FL 2026",
+          "fr": "Jurassic Quest | Foire et Expo du Comté de Miami-Dade | Miami, FL 2026"
+        },
+        "date": "2026-09-13",
+        "venue": "Miami Dade Fair Expo Center",
+        "address": "10901 Coral Way (SW 24 St.), Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fjurassic-quest-miami-dade-county-fair-expo-miami-fl-2026-tickets-K3Y0T5%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/4c2/bac7ae96-6fcc-42ac-882a-fb3843e1f4c2_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Fairs & Festivals · Starts 12:00 · Miami Dade Fair Expo Center",
+          "es": "Miscelánea · Ferias y Festivales · Comienza 12:00 · Centro de Ferias y Expo Miami Dade",
+          "pt": "Diversos · Feiras e Festivais · Começa 12:00 · Centro de Exposições e Feiras de Miami Dade",
+          "fr": "Divers · Foires et Festivals · Commence 12:00 · Centre des Expositions et Foires de Miami Dade"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.7484912,
+        "lng": -80.2872643,
+        "category": "community"
+      },
+      {
+        "id": "tm_1789313458391_ns00",
+        "title": {
+          "en": "Disney On Ice presents Spotlight Magic!",
+          "es": "Disney On Ice presenta ¡Spotlight Magic!",
+          "pt": "Disney On Ice apresenta Spotlight Magic!",
+          "fr": "Disney On Ice présente Spotlight Magic!"
+        },
+        "date": "2026-09-13",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A704J9&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2c5/afcac6d1-4de4-4bb1-9cc9-e460577b72c5_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Ice Shows · Starts 12:00 · Amerant Bank Arena",
+          "es": "Miscelánea · Espectáculos sobre Hielo · Comienza 12:00 · Amerant Bank Arena",
+          "pt": "Diversos · Espetáculos no Gelo · Começa 12:00 · Amerant Bank Arena",
+          "fr": "Divers · Spectacles sur Glace · Commence 12:00 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.238701,
+        "lng": -80.370499,
+        "category": "music"
+      },
+      {
+        "id": "tm_1789313458391_folx",
+        "title": {
+          "en": "The Place to Be prior to Robin Trower",
+          "es": "El Lugar para Estar antes de Robin Trower",
+          "pt": "O Lugar para Estar antes de Robin Trower",
+          "fr": "Le Lieu à Être avant Robin Trower"
+        },
+        "date": "2026-09-15",
+        "venue": "The Place To Be at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-09-15-2026%2Fevent%2F0D00649CBADDB23D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
+          "es": "¡Este es El Lugar para Estar! El salón exclusivo para donantes en The Parker ofrece un número limitado de entradas para la venta pública según disponibilidad. $75.00 POR PERSONA. Este club privado proporciona una experiencia ultra premium - servicio complimentario de comida y bebida en un refugio privado en la planta baja de The Parker. Disfruta de un bar abierto con licores premium, una selección de camarones fríos y calientes",
+          "pt": "Este é o Lugar para Estar! O lounge exclusivo para doadores no The Parker oferece um número limitado de ingressos para venda ao público conforme disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço complimentar de comida e bebida em um refúgio privado no piso inferior do The Parker. Aproveite um bar aberto com destilados premium, uma seleção de entrada fria e quente",
+          "fr": "C'est le Lieu à Être! Le salon exclusif des donateurs au Parker offre un nombre limité de billets à la vente au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra-premium - service complimentaire de nourriture et de boissons dans un refuge privé au sous-sol du Parker. Profitez d'un bar ouvert avec des spiritueux haut de gamme, une sélection d'amuse-bouches chauds et froids"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1789313458391_867d",
+        "title": {
+          "en": "The Haller Club prior to Robin Trower",
+          "es": "The Haller Club antes de Robin Trower",
+          "pt": "The Haller Club antes de Robin Trower",
+          "fr": "The Haller Club avant Robin Trower"
+        },
+        "date": "2026-09-15",
+        "venue": "The Haller Club at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-robin-fort-lauderdale-florida-09-15-2026%2Fevent%2F0D00649CB959AA3F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
+          "es": "Mejora tu experiencia en The Parker con The Haller Club. Este salón premium completamente nuevo, con su elegante diseño retro, cuenta con un bar espacioso y amplio asiento. Por un precio todo incluido, tu entrada a The Haller Club ofrece uso exclusivo comenzando una hora antes de la hora del show y durante el intermedio (si está programado), bebidas suaves complimentarias, cerveza premium y vino, café y té (bebidas mixtas",
+          "pt": "Melhore sua experiência no The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um bar espaçoso e amplo assentos. Por um preço tudo incluído, sua entrada no The Haller Club oferece uso exclusivo começando uma hora antes da hora do show e durante o intervalo (quando programado), bebidas suaves complimentares, cerveja premium e vinho, café e chá (bebidas mistas",
+          "fr": "Améliorez votre expérience au Parker avec The Haller Club. Ce nouveau lounge premium, avec son élégant design rétro, dispose d'un bar spacieux et de nombreux sièges. Pour un prix tout compris, votre accès au Haller Club offre un usage exclusif commençant une heure avant l'heure du spectacle et pendant l'entracte (si prévu), boissons non alcoolisées gratuites, bière premium et vin, café et thé (cocktails"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1789313458391_t71r",
+        "title": {
+          "en": "YG",
+          "es": "YG",
+          "pt": "YG",
+          "fr": "YG"
+        },
+        "date": "2026-09-20",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fyg-liv-nightclub-miami-tickets%2F14318034&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/fb0/ba247291-960c-4926-931d-8aaea9feffb0_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años no será admitido a este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não possa apresentar uma identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence 23h30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1789313458391_nkwy",
+        "title": {
+          "en": "TLC & Salt-N-Pepa with En Vogue - IT'S ICONIC",
+          "es": "TLC y Salt-N-Pepa con En Vogue - ES ICÓNICO",
+          "pt": "TLC e Salt-N-Pepa com En Vogue - É ICÔNICO",
+          "fr": "TLC et Salt-N-Pepa avec En Vogue - C'EST ICONIQUE"
+        },
+        "date": "2026-09-24",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftlc-saltnpepa-with-en-vogue-its-hollywood-florida-09-24-2026%2Fevent%2F0D00647198F882CC&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b0b/5d495c78-fdc3-461e-b1f2-51333c23ab0b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Hip-Hop/Rap · Starts 19:30 · Hard Rock Live",
+          "es": "Música · Hip-Hop/Rap · Comienza 19:30 · Hard Rock Live",
+          "pt": "Música · Hip-Hop/Rap · Começa 19:30 · Hard Rock Live",
+          "fr": "Musique · Hip-Hop/Rap · Commence 19h30 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1789313458391_zl28",
+        "title": {
+          "en": "Adolescentes Orquesta",
+          "es": "Adolescentes Orquesta",
+          "pt": "Adolescentes Orquesta",
+          "fr": "Adolescentes Orquesta"
+        },
+        "date": "2026-09-25",
+        "venue": "Charles F. Dodge City Center Pembroke Pines",
+        "address": "601 City Center Blvd, Pembroke Pines, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fadolescentes-orquesta-pembroke-pines-florida-09-25-2026%2Fevent%2F0D0064EDEF81E520&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/7e7/14d76283-8702-4ead-a7fb-984a65d967e7_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Adolescentes Orquesta en vivo en Pembroke Pines. Una noche llena de salsa, romance y canciones inolvidables, este 25 de septiembre en el Charles F. Dodge City Center. Visit CharlesFDodgeCityCenter.com for more information. The box office is open Thursday through Saturday, 10AM to 5PM at CFDCC 601 SW City Center Way, Pembroke Pines, FL. Ample free parking is available at the venue. · Starts 20:00 ·",
+          "es": "Adolescentes Orquesta en vivo en Pembroke Pines. Una noche llena de salsa, romance y canciones inolvidables, este 25 de septiembre en el Charles F. Dodge City Center. Visita CharlesFDodgeCityCenter.com para más información. La taquilla está abierta de jueves a sábado, 10AM a 5PM en CFDCC 601 SW City Center Way, Pembroke Pines, FL. Estacionamiento gratuito amplio disponible en el lugar. · Comienza 20:00 ·",
+          "pt": "Adolescentes Orquesta ao vivo em Pembroke Pines. Uma noite repleta de salsa, romance e músicas inesquecíveis, em 25 de setembro no Charles F. Dodge City Center. Visite CharlesFDodgeCityCenter.com para mais informações. A bilheteria está aberta de quinta a sábado, 10h às 17h no CFDCC 601 SW City Center Way, Pembroke Pines, FL. Estacionamento gratuito amplo disponível no local. · Começa 20:00 ·",
+          "fr": "Adolescentes Orquesta en direct à Pembroke Pines. Une soirée remplie de salsa, de romance et de chansons inoubliables, le 25 septembre au Charles F. Dodge City Center. Visitez CharlesFDodgeCityCenter.com pour plus d'informations. La billetterie est ouverte jeudi à samedi, 10h à 17h au CFDCC 601 SW City Center Way, Pembroke Pines, FL. Parking gratuit abondant disponible sur le lieu. · Commence 20h00 ·"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.006998,
+        "lng": -80.281135
+      },
+      {
+        "id": "tm_1789313458391_xhqa",
+        "title": {
+          "en": "Arly Lariviere",
+          "es": "Arly Lariviere",
+          "pt": "Arly Lariviere",
+          "fr": "Arly Lariviere"
+        },
+        "date": "2026-09-25",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Farly-lariviere-miami-florida-09-25-2026%2Fevent%2F0D0064989005C8A9&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/17b/618b7084-f58f-4c11-b4f2-e6f797c2117b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · World · Starts 20:00 · Kaseya Center",
+          "es": "Música · World · Comienza 20:00 · Kaseya Center",
+          "pt": "Música · World · Começa 20:00 · Kaseya Center",
+          "fr": "Musique · World · Commence 20:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1789313458391_j9yk",
+        "title": {
+          "en": "Gasolina Reggaeton Party",
+          "es": "Fiesta Reggaeton Gasolina",
+          "pt": "Festa Reggaeton Gasolina",
+          "fr": "Fête Reggaeton Gasolina"
+        },
+        "date": "2026-09-25",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvde3&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 22:00 · ZeyZey Miami",
+          "es": "Música · Otro · Comienza 22:00 · ZeyZey Miami",
+          "pt": "Música · Outro · Começa 22:00 · ZeyZey Miami",
+          "fr": "Musique · Autre · Commence 22:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
       }
     ]
   },
@@ -4830,7 +4726,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-12T14:54:43.952Z",
+    "fetchedAt": "2026-09-13T15:31:43.191Z",
     "items": [
       {
         "id": "beach_bark-beach",
@@ -4851,7 +4747,7 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/bark-beach",
         "effectiveAt": "2026-09-09",
-        "expiresAt": "2026-09-13T14:54:43.952Z"
+        "expiresAt": "2026-09-14T15:31:43.191Z"
       }
     ]
   }
