@@ -1,13 +1,13 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-13T15:31:44.057Z",
+    "lastUpdated": "2026-09-14T17:32:57.570Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-13T15:31:43.191Z",
+    "fetchedAt": "2026-09-14T17:32:56.601Z",
     "current": {
-      "temp_f": 87,
+      "temp_f": 86,
       "feels_f": 100,
       "description": {
         "en": "Current conditions",
@@ -15,31 +15,18 @@
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 77,
-      "wind_mph": 5,
-      "rain_chance": 43,
-      "weathercode": 2
+      "humidity": 80,
+      "wind_mph": 6,
+      "rain_chance": 16,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-09-13",
-        "high_f": 88,
+        "date": "2026-09-14",
+        "high_f": 86,
         "low_f": 76,
         "weathercode": 3,
-        "rain_chance": 43,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-09-14",
-        "high_f": 85,
-        "low_f": 74,
-        "weathercode": 3,
-        "rain_chance": 12,
+        "rain_chance": 16,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,10 +36,23 @@
       },
       {
         "date": "2026-09-15",
-        "high_f": 88,
+        "high_f": 87,
         "low_f": 75,
+        "weathercode": 3,
+        "rain_chance": 26,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
+      },
+      {
+        "date": "2026-09-16",
+        "high_f": 87,
+        "low_f": 76,
         "weathercode": 51,
-        "rain_chance": 45,
+        "rain_chance": 67,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -61,24 +61,24 @@
         }
       },
       {
-        "date": "2026-09-16",
-        "high_f": 86,
-        "low_f": 83,
-        "weathercode": 53,
-        "rain_chance": 75,
+        "date": "2026-09-17",
+        "high_f": 87,
+        "low_f": 82,
+        "weathercode": 95,
+        "rain_chance": 64,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
         }
       },
       {
-        "date": "2026-09-17",
-        "high_f": 87,
+        "date": "2026-09-18",
+        "high_f": 88,
         "low_f": 81,
         "weathercode": 95,
-        "rain_chance": 65,
+        "rain_chance": 61,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,148 +89,148 @@
     ],
     "hourly": [
       {
-        "hour": "11:00",
-        "temp_f": 87,
-        "weathercode": 2,
-        "rain_chance": 6
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
         "hour": "13:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "14:00",
-        "temp_f": 88,
-        "weathercode": 3,
-        "rain_chance": 14
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 6
       },
       {
         "hour": "15:00",
-        "temp_f": 80,
-        "weathercode": 2,
-        "rain_chance": 30
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 9
       },
       {
         "hour": "16:00",
-        "temp_f": 78,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 38
+        "rain_chance": 7
       },
       {
         "hour": "17:00",
-        "temp_f": 82,
-        "weathercode": 2,
-        "rain_chance": 43
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 80,
-        "weathercode": 2,
-        "rain_chance": 38
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 15
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 78,
-        "weathercode": 2,
-        "rain_chance": 12
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 77,
+        "temp_f": 85,
         "weathercode": 0,
         "rain_chance": 7
       },
       {
+        "hour": "18:00",
+        "temp_f": 84,
+        "weathercode": 0,
+        "rain_chance": 6
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 6
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 6
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
         "hour": "22:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 5
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "23:00",
-        "temp_f": 76,
+        "temp_f": 79,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 2
       },
       {
         "hour": "00:00",
-        "temp_f": 75,
+        "temp_f": 78,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 2
       },
       {
         "hour": "01:00",
-        "temp_f": 75,
+        "temp_f": 78,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 2
       },
       {
         "hour": "02:00",
-        "temp_f": 74,
+        "temp_f": 78,
         "weathercode": 0,
         "rain_chance": 3
       },
       {
         "hour": "03:00",
-        "temp_f": 74,
+        "temp_f": 78,
         "weathercode": 0,
         "rain_chance": 3
       },
       {
         "hour": "04:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 74,
-        "weathercode": 3,
+        "temp_f": 78,
+        "weathercode": 0,
         "rain_chance": 4
       },
       {
-        "hour": "07:00",
-        "temp_f": 74,
+        "hour": "05:00",
+        "temp_f": 77,
         "weathercode": 3,
+        "rain_chance": 7
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 7
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 77,
+        "weathercode": 0,
         "rain_chance": 3
       },
       {
         "hour": "08:00",
-        "temp_f": 75,
+        "temp_f": 78,
         "weathercode": 3,
         "rain_chance": 4
       },
       {
         "hour": "09:00",
-        "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 5
+        "temp_f": 81,
+        "weathercode": 1,
+        "rain_chance": 10
       },
       {
         "hour": "10:00",
-        "temp_f": 81,
+        "temp_f": 84,
+        "weathercode": 1,
+        "rain_chance": 9
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 86,
         "weathercode": 0,
-        "rain_chance": 5
+        "rain_chance": 10
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 7
       }
     ]
   },
@@ -1613,32 +1613,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1786625954858_tr9u",
-        "title": {
-          "en": "Herpreneur Artisan Market at The Goodtime Hotel 9/13/26",
-          "es": "Mercado Artesanal Herpreneur en The Goodtime Hotel 13/9/26",
-          "pt": "Mercado Artesanal Herpreneur no The Goodtime Hotel 13/9/26",
-          "fr": "Marché Artisanal Herpreneur au The Goodtime Hotel 13/9/26"
-        },
-        "date": "2026-09-13",
-        "venue": "The Goodtime Hotel",
-        "address": "601 Washington Ave, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/12/herpreneur-artisan-market-at-the-goodtime-hotel-9-13-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/The-Goodtime-Hotel_Courtyard-333x500.jpg",
-        "description": {
-          "en": "Goodtime Hotel, Miami Beach will host a Sunday artisan market on Sunday,",
-          "es": "Goodtime Hotel, Miami Beach albergará un mercado artesanal dominical el domingo",
-          "pt": "Goodtime Hotel, Miami Beach sediará um mercado artesanal dominical no domingo",
-          "fr": "Goodtime Hotel, Miami Beach accueillera un marché artisanal dominical le dimanche"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7763327,
-        "lng": -80.1334166,
-        "category": "community"
-      },
-      {
         "id": "rss_1786625954858_nn09",
         "title": {
           "en": "Feeding South Florida to Host Annual Outrun Hunger 5K 9/19/26",
@@ -2043,58 +2017,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1787488220886_oico",
-        "title": {
-          "en": "Seraphic Fire - Pure Imagination",
-          "es": "Seraphic Fire - Pura Imaginación",
-          "pt": "Seraphic Fire - Pura Imaginação",
-          "fr": "Seraphic Fire - Pure Imagination"
-        },
-        "date": "2026-09-13",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fseraphic-fire-pure-imagination-ft-lauderdale-florida-09-13-2026%2Fevent%2F0D0064BBC01294EB&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/b24/faca7be3-7176-4d2e-99db-4839f5ce5b24_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This program is generously supported by Wayne and Lucretia Weiner. Seraphic Fire, South Florida's GRAMMY-nominated vocal ensemble, presents a fun, interactive, joyful children's concert that will be a blast for the entire family! The music celebrates beloved films, characters, and timeless stories as the voices of Seraphic Fire blend in perfect harmony. The audience will embark on a musical journe",
-          "es": "Este programa es generosamente patrocinado por Wayne y Lucretia Weiner. Seraphic Fire, el conjunto vocal nominado al GRAMMY del sur de Florida, presenta un concierto infantil divertido, interactivo y alegre que será una explosión para toda la familia. La música celebra películas, personajes e historias atemporales queridas mientras las voces de Seraphic Fire se mezclan en armonía perfecta. La audiencia se embarcará en un viaje musical",
-          "pt": "Este programa é generosamente apoiado por Wayne e Lucretia Weiner. Seraphic Fire, ensemble vocal indicado ao GRAMMY do sul da Flórida, apresenta um concerto infantil divertido, interativo e alegre que será sensacional para toda a família. A música celebra filmes, personagens e histórias atemporais queridas enquanto as vozes do Seraphic Fire se misturam em perfeita harmonia. O público embarcará em uma jornada musical",
-          "fr": "Ce programme est généreusement soutenu par Wayne et Lucretia Weiner. Seraphic Fire, l'ensemble vocal nominé aux GRAMMY du sud de la Floride, présente un concert pour enfants amusant, interactif et joyeux qui sera formidable pour toute la famille. La musique célèbre des films, des personnages et des histoires intemporelles bien-aimés tandis que les voix de Seraphic Fire se mélangent en parfaite harmonie. Le public s'embarquera pour un voyage musical"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
-        "id": "tm_1787488220886_pz50",
-        "title": {
-          "en": "The Strokes - Reality Awaits North America",
-          "es": "The Strokes - Reality Awaits North America",
-          "pt": "The Strokes - Reality Awaits North America",
-          "fr": "The Strokes - Reality Awaits North America"
-        },
-        "date": "2026-09-13",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-strokes-reality-awaits-north-america-hollywood-florida-09-13-2026%2Fevent%2F0D006489C635CAEA&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/436/bf45b6be-dfa4-4b6f-b46b-9063416ef436_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:00 · Hard Rock Live",
-          "es": "Música · Rock · Comienza 19:00 · Hard Rock Live",
-          "pt": "Música · Rock · Começa 19:00 · Hard Rock Live",
-          "fr": "Musique · Rock · Commence à 19h00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
       },
       {
         "id": "tm_1787488220886_99gp",
@@ -3053,32 +2975,6 @@
         "lng": -80.13314
       },
       {
-        "id": "rss_1788800862466_sxir",
-        "title": {
-          "en": "Papel 3 Reception 9/13/26, 9/18/26",
-          "es": "Recepción Papel 3 9/13/26, 9/18/26",
-          "pt": "Recepção Papel 3 9/13/26, 9/18/26",
-          "fr": "Réception Papel 3 9/13/26, 9/18/26"
-        },
-        "date": "2026-09-13",
-        "venue": "FIU Green Library",
-        "address": "11200 SW 8th Street, Miami, Florida, 33199",
-        "url": "https://www.soulofmiami.org/2026/09/07/papel-3-reception-9-13-26-9-18-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/unnamed-12-350x175.jpg",
-        "description": {
-          "en": "Join collaboARTive for the third edition of Papel, a collective exhibition celebrating the endless creative possibilities of paper. Featuring",
-          "es": "Únete a collaboARTive para la tercera edición de Papel, una exposición colectiva que celebra las infinitas posibilidades creativas del papel. Con la participación de",
-          "pt": "Junte-se ao collaboARTive para a terceira edição do Papel, uma exposição coletiva que celebra as infinitas possibilidades criativas do papel. Apresentando",
-          "fr": "Rejoignez collaboARTive pour la troisième édition de Papel, une exposition collective célébrant les possibilités créatives infinies du papier. Mettant en vedette"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7553898,
-        "lng": -80.3762833,
-        "category": "arts"
-      },
-      {
         "id": "rss_1788800862466_wrq5",
         "title": {
           "en": "Dining in the Dark benefiting Lighthouse of Broward 11/14/26",
@@ -3309,32 +3205,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1789141566627_1w07",
-        "title": {
-          "en": "Sheck Wes",
-          "es": "Sheck Wes",
-          "pt": "Sheck Wes",
-          "fr": "Sheck Wes"
-        },
-        "date": "2026-09-13",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsheck-wes-liv-nightclub-miami-tickets%2F14310624&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/5f5/270fa5cc-9f27-4dab-9d14-2c1872aad5f5_949121_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier comprador de boleto que no pueda presentar una identificación válida que demuestre que tiene al menos 21 años no será admitido a este evento y no será elegible para reembolso. · Comienza 23:30 · Discoteca LIV Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer comprador de ingresso que não possa apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · Boate LIV Miami",
-          "fr": "Cet événement est réservé aux personnes de 21 ans et plus. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:30 · Boîte de Nuit LIV Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
         "id": "rss_1789224839464_tala",
         "title": {
           "en": "Sounds of Screams Amusement Park 9/24/26",
@@ -3385,32 +3255,6 @@
         "lat": 25.792823,
         "lng": -80.190838,
         "category": "music"
-      },
-      {
-        "id": "tm_1789224840052_jvdm",
-        "title": {
-          "en": "Miami Marlins vs Los Angeles Dodgers: Hall of Fame Bobblehead #2",
-          "es": "Miami Marlins vs Los Angeles Dodgers: Bobblehead Hall of Fame #2",
-          "pt": "Miami Marlins vs Los Angeles Dodgers: Bobblehead Hall of Fame #2",
-          "fr": "Miami Marlins vs Los Angeles Dodgers: Bobblehead Hall of Fame #2"
-        },
-        "date": "2026-09-13",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0b&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 13:40 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 13:40 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 13:40 · LoanDepot Park",
-          "fr": "Sports · Baseball · Débute 13:40 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
       },
       {
         "id": "tm_1789224840052_r752",
@@ -3563,84 +3407,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1789313458391_ecst",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-13",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:45 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 11:45 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 11:45 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 11:45 · Centre des Conventions Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1789313458391_csix",
-        "title": {
-          "en": "Jurassic Quest | Miami-Dade County Fair & Expo | Miami, FL 2026",
-          "es": "Jurassic Quest | Feria y Expo del Condado de Miami-Dade | Miami, FL 2026",
-          "pt": "Jurassic Quest | Feira e Expo do Condado de Miami-Dade | Miami, FL 2026",
-          "fr": "Jurassic Quest | Foire et Expo du Comté de Miami-Dade | Miami, FL 2026"
-        },
-        "date": "2026-09-13",
-        "venue": "Miami Dade Fair Expo Center",
-        "address": "10901 Coral Way (SW 24 St.), Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fjurassic-quest-miami-dade-county-fair-expo-miami-fl-2026-tickets-K3Y0T5%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/4c2/bac7ae96-6fcc-42ac-882a-fb3843e1f4c2_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Fairs & Festivals · Starts 12:00 · Miami Dade Fair Expo Center",
-          "es": "Miscelánea · Ferias y Festivales · Comienza 12:00 · Centro de Ferias y Expo Miami Dade",
-          "pt": "Diversos · Feiras e Festivais · Começa 12:00 · Centro de Exposições e Feiras de Miami Dade",
-          "fr": "Divers · Foires et Festivals · Commence 12:00 · Centre des Expositions et Foires de Miami Dade"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.7484912,
-        "lng": -80.2872643,
-        "category": "community"
-      },
-      {
-        "id": "tm_1789313458391_ns00",
-        "title": {
-          "en": "Disney On Ice presents Spotlight Magic!",
-          "es": "Disney On Ice presenta ¡Spotlight Magic!",
-          "pt": "Disney On Ice apresenta Spotlight Magic!",
-          "fr": "Disney On Ice présente Spotlight Magic!"
-        },
-        "date": "2026-09-13",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A704J9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/2c5/afcac6d1-4de4-4bb1-9cc9-e460577b72c5_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Ice Shows · Starts 12:00 · Amerant Bank Arena",
-          "es": "Miscelánea · Espectáculos sobre Hielo · Comienza 12:00 · Amerant Bank Arena",
-          "pt": "Diversos · Espetáculos no Gelo · Começa 12:00 · Amerant Bank Arena",
-          "fr": "Divers · Spectacles sur Glace · Commence 12:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.238701,
-        "lng": -80.370499,
-        "category": "music"
       },
       {
         "id": "tm_1789313458391_folx",
@@ -3823,6 +3589,290 @@
         "category": "music",
         "lat": 25.8172,
         "lng": -80.188797
+      },
+      {
+        "id": "rss_1789407133031_ndzx",
+        "title": {
+          "en": "UTSAV 2026 9/26/26",
+          "es": "UTSAV 2026 9/26/26",
+          "pt": "UTSAV 2026 9/26/26",
+          "fr": "UTSAV 2026 9/26/26"
+        },
+        "date": "2026-09-26",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/13/utsav-2026-9-26-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-09-at-1.47.01-PM-1-333x500.jpeg",
+        "description": {
+          "en": "Miami 2026 will bring the sights, sounds, flavors and traditions of India to Miami Dade College’s Wolfson Campus on Saturday, September",
+          "es": "Miami 2026 llevará los espectáculos, sonidos, sabores y tradiciones de India al Campus Wolfson del Miami Dade College el sábado 26 de septiembre",
+          "pt": "Miami 2026 trará os espetáculos, sons, sabores e tradições da Índia para o Campus Wolfson do Miami Dade College no sábado, 26 de setembro",
+          "fr": "Miami 2026 apportera les spectacles, sons, saveurs et traditions de l'Inde au campus Wolfson du Miami Dade College le samedi 26 septembre"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1789407133606_e9k5",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-14",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 13:45 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 13:45 · Mana Wynwood Convention Center",
+          "pt": "Miscelânea · Família · Começa 13:45 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 13:45 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1789407133606_5101",
+        "title": {
+          "en": "2026 Campeones Cup: Inter Miami CF vs Cruz Azul",
+          "es": "Copa Campeones 2026: Inter Miami CF vs Cruz Azul",
+          "pt": "Copa Campeões 2026: Inter Miami CF vs Cruz Azul",
+          "fr": "Coupe Campeones 2026 : Inter Miami CF vs Cruz Azul"
+        },
+        "date": "2026-09-16",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F2026-campeones-cup-inter-miami-cf-miami-florida-09-16-2026%2Fevent%2F0D0064BAD9A14146&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Soccer · Starts 20:00 · Nu Stadium",
+          "es": "Deportes · Fútbol · Comienza 20:00 · Nu Stadium",
+          "pt": "Esportes · Futebol · Começa 20:00 · Nu Stadium",
+          "fr": "Sports · Football · Commence 20:00 · Nu Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
+      },
+      {
+        "id": "tm_1789407133606_1ks9",
+        "title": {
+          "en": "Steve Aoki",
+          "es": "Steve Aoki",
+          "pt": "Steve Aoki",
+          "fr": "Steve Aoki"
+        },
+        "date": "2026-09-25",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsteve-aoki-liv-nightclub-miami-tickets%2F15014233&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/957/e871e3e0-63ee-4c06-828f-844669576957_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Dance/Electronic · Starts 23:00 · LIV Nightclub Miami",
+          "es": "Música · Dance/Electrónica · Comienza 23:00 · LIV Nightclub Miami",
+          "pt": "Música · Dance/Eletrônica · Começa 23:00 · LIV Nightclub Miami",
+          "fr": "Musique · Dance/Électronique · Commence 23:00 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1789407133606_doeh",
+        "title": {
+          "en": "Legacy: A Tribute To Bharat Ratna Pt. Ravi Shankar",
+          "es": "Legacy: Un Tributo a Bharat Ratna Pt. Ravi Shankar",
+          "pt": "Legacy: Uma Homenagem ao Bharat Ratna Pt. Ravi Shankar",
+          "fr": "Legacy : Un Hommage au Bharat Ratna Pt. Ravi Shankar"
+        },
+        "date": "2026-09-26",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Flegacy-a-tribute-to-bharat-ratna-ft-lauderdale-florida-09-26-2026%2Fevent%2F0D0064A4A3F2867C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/548/5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Presented by the Association of Performing Arts of India Celebrating the visionary who introduced Indian classical music to global audiences, the legendary sitar player Pandit Ravi Shankar, \"Legacy: Tribute to Bharat Ratna Pt. Ravi Shankar\" transcends time, culture, and borders. This concert brings together internationally acclaimed maestros and disciples whose artistry reflects the depth, dynamis",
+          "es": "Presentado por la Asociación de Artes Escénicas de India. Celebrando al visionario que introdujo la música clásica india a audiencias globales, el legendario sitarista Pandit Ravi Shankar, \"Legacy: Tributo a Bharat Ratna Pt. Ravi Shankar\" trasciende el tiempo, la cultura y las fronteras. Este concierto reúne a maestros y discípulos aclamados internacionalmente cuya artesanía refleja la profundidad y dinámica",
+          "pt": "Apresentado pela Associação de Artes Cênicas da Índia. Celebrando o visionário que introduziu a música clássica indiana para audiências globais, o lendário sitarista Pandit Ravi Shankar, \"Legacy: Tributo ao Bharat Ratna Pt. Ravi Shankar\" transcende tempo, cultura e fronteiras. Este concerto reúne maestros e discípulos aclamados internacionalmente cuja arte reflete a profundidade e a dinâmica",
+          "fr": "Présenté par l'Association des Arts de la Scène de l'Inde. Célébrant le visionnaire qui a introduit la musique classique indienne aux audiences mondiales, le légendaire sitariste Pandit Ravi Shankar, \"Legacy: Tributo al Bharat Ratna Pt. Ravi Shankar\" transcende le temps, la culture et les frontières. Ce concert réunit des maestros et des disciples acclamés internationalement dont l'art reflète la profondeur et la dynamique"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1789407133606_q2nt",
+        "title": {
+          "en": "James Taylor And His All-Star Band",
+          "es": "James Taylor And His All-Star Band",
+          "pt": "James Taylor And His All-Star Band",
+          "fr": "James Taylor And His All-Star Band"
+        },
+        "date": "2026-09-26",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjames-taylor-and-his-allstar-band-hollywood-florida-09-26-2026%2Fevent%2F0D0064288FC83FA5&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/494/4a231626-0e28-4f17-b002-71cf03aab494_602141_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:30 · Hard Rock Live",
+          "es": "Música · Rock · Comienza 19:30 · Hard Rock Live",
+          "pt": "Música · Rock · Começa 19:30 · Hard Rock Live",
+          "fr": "Musique · Rock · Commence 19:30 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1789407133606_0pe8",
+        "title": {
+          "en": "Miamibloco - From The Streets To The Stage",
+          "es": "Miamibloco - De Las Calles Al Escenario",
+          "pt": "Miamibloco - Das Ruas Para o Palco",
+          "fr": "Miamibloco - De la Rue à la Scène"
+        },
+        "date": "2026-09-26",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiamibloco-from-the-streets-to-the-ft-lauderdale-florida-09-26-2026%2Fevent%2F0D00648A9561674D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b25/309af2b3-f980-4484-bb8c-e1e99830db25_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miamibloco brings the electrifying spirit of Brazil to life in a vibrant, high-energy celebration of rhythm, culture, and community. From the heartbeat of Carnaval drums to the rich sounds of Afro-Brazilian music and samba, this immersive performance transforms the stage into a colorful journey through Brazil's musical soul. What began in the streets of Miami comes to the stage in a powerful exper",
+          "es": "Miamibloco trae el espíritu electrizante de Brasil a la vida en una celebración vibrante y energética de ritmo, cultura y comunidad. Desde el latido de los tambores del Carnaval hasta los ricos sonidos de la música afrobrasilera y la samba, esta presentación inmersiva transforma el escenario en un colorido viaje a través del alma musical de Brasil. Lo que comenzó en las calles de Miami llega al escenario en una poderosa experiencia.",
+          "pt": "Miamibloco traz o espírito eletrizante do Brasil à vida em uma celebração vibrante e energética de ritmo, cultura e comunidade. Do batida dos tambores do Carnaval aos sons ricos da música afro-brasileira e samba, esta apresentação imersiva transforma o palco em uma jornada colorida pela alma musical do Brasil. O que começou nas ruas de Miami chega ao palco em uma poderosa experiência.",
+          "fr": "Miamibloco apporte l'esprit électrisant du Brésil à la vie dans une célébration vibrante et énergique du rythme, de la culture et de la communauté. Des battements des tambours du Carnaval aux riches sons de la musique afro-brésilienne et de la samba, cette performance immersive transforme la scène en un voyage coloré à travers l'âme musicale du Brésil. Ce qui a commencé dans les rues de Miami arrive sur scène dans une expérience puissante."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1789407133606_28f8",
+        "title": {
+          "en": "Benise",
+          "es": "Benise",
+          "pt": "Benise",
+          "fr": "Benise"
+        },
+        "date": "2026-09-26",
+        "venue": "Coral Springs Center",
+        "address": "2855 Coral Springs Dr., Coral Springs, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZPAf&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/afb/c865f8e3-1785-4e98-9401-eaba7613fafb_726571_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · World · Starts 19:30 · Coral Springs Center",
+          "es": "Música · Mundial · Comienza 19:30 · Coral Springs Center",
+          "pt": "Música · Mundial · Começa 19:30 · Coral Springs Center",
+          "fr": "Musique · Monde · Commence 19:30 · Coral Springs Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.2738,
+        "lng": -80.256897
+      },
+      {
+        "id": "tm_1789407133606_xkea",
+        "title": {
+          "en": "aespa LIVE TOUR - SYNK : COMPLæXITY - in MIAMI",
+          "es": "aespa LIVE TOUR - SYNK : COMPLæXITY - en MIAMI",
+          "pt": "aespa LIVE TOUR - SYNK : COMPLæXITY - em MIAMI",
+          "fr": "aespa LIVE TOUR - SYNK : COMPLæXITY - à MIAMI"
+        },
+        "date": "2026-09-26",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Faespa-live-tour-synk-complxity-in-miami-florida-09-26-2026%2Fevent%2F0D0064940F3C61C3&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/a6d/148c8f64-0e58-4410-ad35-7934f3a02a6d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 20:00 · Kaseya Center",
+          "es": "Música · Pop · Comienza 20:00 · Kaseya Center",
+          "pt": "Música · Pop · Começa 20:00 · Kaseya Center",
+          "fr": "Musique · Pop · Commence 20:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1789407133606_qx3r",
+        "title": {
+          "en": "Mid-Autumn Moon Festival",
+          "es": "Festival de la Luna de Mediados de Otoño",
+          "pt": "Festival da Lua do Meio do Outono",
+          "fr": "Festival de la Lune d'Automne"
+        },
+        "date": "2026-09-26",
+        "venue": "Seminole Classic Casino",
+        "address": "4150 North State Road 7, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fmid-autumn-moon-festival-seminole-classic-casino-tickets%2F15038893&utm_medium=affiliate",
+        "free": false,
+        "price": "$60",
+        "image": "https://i.ticketweb.com/i/00/13/63/53/83_Edp.jpg?v=14",
+        "description": {
+          "en": "21+Đan Nguyn is a renowned Vietnamese-American singer known for his powerful, emotional voice and signature performances of Vietnamese bolero, nhạc vng, and romantic ballads. With a career spanning more than 17 years, he has built a loyal international following and remains one of the most recognized voices in Vietnamese music today. Diễm Sương is a Vietnamese-American singer known for her elegant",
+          "es": "21+ Đan Nguyên es un cantante vietnamita-estadounidense de renombre conocido por su voz poderosa y emotiva y sus actuaciones características de bolero vietnamita, nhạc vọng y baladas románticas. Con una carrera que abarca más de 17 años, ha construido una leal base internacional de seguidores y sigue siendo una de las voces más reconocidas en la música vietnamita actual. Diễm Sương es una cantante vietnamita-estadounidense conocida por su elegancia.",
+          "pt": "21+ Đan Nguyên é um cantor vietnamita-americano renomado conhecido por sua voz poderosa e emotiva e suas apresentações características de bolero vietnamita, nhạc vọng e baladas românticas. Com uma carreira que abrange mais de 17 anos, ele construiu uma base de fãs internacionais leal e continua sendo uma das vozes mais reconhecidas na música vietnamita atualmente. Diễm Sương é uma cantora vietnamita-americana conhecida por sua elegância.",
+          "fr": "21+ Đan Nguyên est un chanteur vietnamien-américain renommé connu pour sa voix puissante et émouvante et ses performances caractéristiques de boléro vietnamien, nhạc vọng et ballades romantiques. Avec une carrière s'étendant sur plus de 17 ans, il a construit un public international fidèle et reste l'une des voix les plus reconnues de la musique vietnamienne actuelle. Diễm Sương est une chanteuse vietnamienne-américaine connue pour son élégance."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.043172,
+        "lng": -80.209478
+      },
+      {
+        "id": "tm_1789407133606_aaql",
+        "title": {
+          "en": "Club 90s Presents Ariana Grande Night",
+          "es": "Club 90s Presenta Noche de Ariana Grande",
+          "pt": "Club 90s Apresenta Noite de Ariana Grande",
+          "fr": "Club 90s Présente Soirée Ariana Grande"
+        },
+        "date": "2026-09-26",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fclub-90s-presents-ariana-grande-night-ft-lauderdale-florida-09-26-2026%2Fevent%2F0D0064FDE5E096E5&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/08f/dfb74e4a-95f6-46fd-bdb0-c699706e708f_1011401_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Club 90s Presents Ariana Grande Night will be coming to Revolution Live on Saturday, September 26th. This event is 18+. Doors open at 9pm. Show starts at 10pm. All support acts are subject to change without notice. Ariana Night is back! Celebrate Ariana's incredible catalog and new era with a night dedicated to all your favorite hits. Sing, dance, and scream every word with fellow fans all night l",
+          "es": "Club 90s Presenta Noche de Ariana Grande llegará a Revolution Live el sábado 26 de septiembre. Este evento es 18+. Las puertas abren a las 9pm. El show comienza a las 10pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. ¡La Noche de Ariana está de vuelta! Celebra el increíble catálogo de Ariana y su nueva era con una noche dedicada a todos tus éxitos favoritos. Canta, baila y grita cada palabra con otros fanáticos toda la noche.",
+          "pt": "Club 90s Apresenta Noite de Ariana Grande chegará ao Revolution Live no sábado, 26 de setembro. Este evento é 18+. As portas abrem às 21h. O show começa às 22h. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. A Noite de Ariana está de volta! Celebre o incrível catálogo de Ariana e sua nova era com uma noite dedicada a todos os seus sucessos favoritos. Cante, dance e grite cada palavra com outros fãs a noite toda.",
+          "fr": "Club 90s Présente Soirée Ariana Grande arrivera à Revolution Live samedi 26 septembre. Cet événement est 18+. Les portes ouvrent à 21h. Le spectacle commence à 22h. Tous les actes de soutien sont sujets à modification sans préavis. La Soirée Ariana est de retour! Célébrez le catalogue incroyable d'Ariana et sa nouvelle ère avec une soirée dédiée à tous vos succès préférés. Chantez, dansez et criez chaque parole avec d'autres fans toute la nuit."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
       }
     ]
   },
@@ -4726,7 +4776,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-13T15:31:43.191Z",
+    "fetchedAt": "2026-09-14T17:32:56.602Z",
     "items": [
       {
         "id": "beach_bark-beach",
@@ -4747,7 +4797,7 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/bark-beach",
         "effectiveAt": "2026-09-09",
-        "expiresAt": "2026-09-14T15:31:43.191Z"
+        "expiresAt": "2026-09-15T17:32:56.602Z"
       }
     ]
   }
