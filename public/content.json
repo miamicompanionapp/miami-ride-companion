@@ -1,13 +1,13 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-14T17:32:57.570Z",
+    "lastUpdated": "2026-09-15T16:08:03.673Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-14T17:32:56.601Z",
+    "fetchedAt": "2026-09-15T16:08:02.192Z",
     "current": {
-      "temp_f": 86,
+      "temp_f": 87,
       "feels_f": 100,
       "description": {
         "en": "Current conditions",
@@ -15,44 +15,18 @@
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
+      "humidity": 70,
       "wind_mph": 6,
-      "rain_chance": 16,
-      "weathercode": 0
+      "rain_chance": 23,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-09-14",
-        "high_f": 86,
-        "low_f": 76,
-        "weathercode": 3,
-        "rain_chance": 16,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-09-15",
         "high_f": 87,
-        "low_f": 75,
-        "weathercode": 3,
-        "rain_chance": 26,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-09-16",
-        "high_f": 87,
-        "low_f": 76,
+        "low_f": 79,
         "weathercode": 51,
-        "rain_chance": 67,
+        "rain_chance": 23,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -61,11 +35,24 @@
         }
       },
       {
+        "date": "2026-09-16",
+        "high_f": 84,
+        "low_f": 76,
+        "weathercode": 82,
+        "rain_chance": 34,
+        "description": {
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
+        }
+      },
+      {
         "date": "2026-09-17",
         "high_f": 87,
-        "low_f": 82,
+        "low_f": 75,
         "weathercode": 95,
-        "rain_chance": 64,
+        "rain_chance": 60,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,10 +62,23 @@
       },
       {
         "date": "2026-09-18",
-        "high_f": 88,
-        "low_f": 81,
+        "high_f": 87,
+        "low_f": 80,
         "weathercode": 95,
-        "rain_chance": 61,
+        "rain_chance": 72,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-09-19",
+        "high_f": 86,
+        "low_f": 82,
+        "weathercode": 95,
+        "rain_chance": 68,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,148 +89,148 @@
     ],
     "hourly": [
       {
+        "hour": "12:00",
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 3
+      },
+      {
         "hour": "13:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 3
       },
       {
         "hour": "14:00",
-        "temp_f": 86,
+        "temp_f": 87,
         "weathercode": 0,
-        "rain_chance": 6
+        "rain_chance": 5
       },
       {
         "hour": "15:00",
-        "temp_f": 86,
+        "temp_f": 87,
         "weathercode": 0,
-        "rain_chance": 9
+        "rain_chance": 7
       },
       {
         "hour": "16:00",
-        "temp_f": 85,
-        "weathercode": 3,
+        "temp_f": 86,
+        "weathercode": 2,
         "rain_chance": 7
       },
       {
         "hour": "17:00",
-        "temp_f": 85,
+        "temp_f": 86,
         "weathercode": 0,
-        "rain_chance": 7
+        "rain_chance": 8
       },
       {
         "hour": "18:00",
         "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 6
+        "rain_chance": 9
       },
       {
         "hour": "19:00",
         "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 6
+        "weathercode": 1,
+        "rain_chance": 9
       },
       {
         "hour": "20:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 6
+        "temp_f": 80,
+        "weathercode": 51,
+        "rain_chance": 10
       },
       {
         "hour": "21:00",
         "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 3
+        "weathercode": 1,
+        "rain_chance": 18
       },
       {
         "hour": "22:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 79,
+        "weathercode": 2,
+        "rain_chance": 21
       },
       {
         "hour": "23:00",
         "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 2
+        "weathercode": 1,
+        "rain_chance": 23
       },
       {
         "hour": "00:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 80,
+        "weathercode": 82,
+        "rain_chance": 11
       },
       {
         "hour": "01:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 18
       },
       {
         "hour": "02:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 3
+        "temp_f": 77,
+        "weathercode": 53,
+        "rain_chance": 24
       },
       {
         "hour": "03:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 3
+        "temp_f": 77,
+        "weathercode": 81,
+        "rain_chance": 34
       },
       {
         "hour": "04:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 21
       },
       {
         "hour": "05:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 14
       },
       {
         "hour": "06:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 21
       },
       {
         "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 3
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 19
       },
       {
         "hour": "08:00",
-        "temp_f": 78,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 14
       },
       {
         "hour": "09:00",
-        "temp_f": 81,
-        "weathercode": 1,
-        "rain_chance": 10
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "10:00",
-        "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 9
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "11:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 10
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 7
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 17
       }
     ]
   },
@@ -2019,32 +2019,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787488220886_99gp",
-        "title": {
-          "en": "ROSALÍA: LUX TOUR 2026",
-          "es": "ROSALÍA: LUX TOUR 2026",
-          "pt": "ROSALÍA: LUX TOUR 2026",
-          "fr": "ROSALÍA: LUX TOUR 2026"
-        },
-        "date": "2026-09-14",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frosalia-lux-tour-2026-miami-florida-09-14-2026%2Fevent%2F0D00636E0CE06340&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/8dd/9c01b5c5-7e57-4143-a2ea-d7710f3e68dd_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 20:30 · Kaseya Center",
-          "es": "Música · Latina · Comienza 20:30 · Kaseya Center",
-          "pt": "Música · Latina · Começa 20:30 · Kaseya Center",
-          "fr": "Musique · Latine · Commence à 20h30 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "tm_1787488220886_iww5",
         "title": {
           "en": "Robin Trower",
@@ -3615,32 +3589,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1789407133606_e9k5",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-14",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:45 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 13:45 · Mana Wynwood Convention Center",
-          "pt": "Miscelânea · Família · Começa 13:45 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 13:45 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1789407133606_5101",
         "title": {
           "en": "2026 Campeones Cup: Inter Miami CF vs Cruz Azul",
@@ -3873,6 +3821,58 @@
         "category": "music",
         "lat": 26.121094,
         "lng": -80.146162
+      },
+      {
+        "id": "tm_1789488456041_7ptq",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-15",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
+          "es": "Diversos · Familia · Comienza 13:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 13:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Débute 13:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1789488456041_5n0s",
+        "title": {
+          "en": "ROSALÍA: LUX TOUR 2026",
+          "es": "ROSALÍA: LUX TOUR 2026",
+          "pt": "ROSALÍA: LUX TOUR 2026",
+          "fr": "ROSALÍA: LUX TOUR 2026"
+        },
+        "date": "2026-09-16",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frosalia-lux-tour-2026-miami-florida-09-16-2026%2Fevent%2F0D0063886F882F2A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8dd/9c01b5c5-7e57-4143-a2ea-d7710f3e68dd_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Latin · Starts 20:30 · Kaseya Center",
+          "es": "Música · Latino · Comienza 20:30 · Kaseya Center",
+          "pt": "Música · Latino · Começa 20:30 · Kaseya Center",
+          "fr": "Musique · Latin · Débute 20:30 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
       }
     ]
   },
@@ -4776,7 +4776,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-14T17:32:56.602Z",
+    "fetchedAt": "2026-09-15T16:08:02.193Z",
     "items": [
       {
         "id": "beach_bark-beach",
@@ -4797,7 +4797,7 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/bark-beach",
         "effectiveAt": "2026-09-09",
-        "expiresAt": "2026-09-15T17:32:56.602Z"
+        "expiresAt": "2026-09-16T16:08:02.193Z"
       }
     ]
   }
