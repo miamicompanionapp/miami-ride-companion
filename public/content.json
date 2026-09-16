@@ -1,32 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-15T16:08:03.673Z",
+    "lastUpdated": "2026-09-16T16:01:15.131Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-15T16:08:02.192Z",
+    "fetchedAt": "2026-09-16T16:01:14.230Z",
     "current": {
-      "temp_f": 87,
-      "feels_f": 100,
+      "temp_f": 85,
+      "feels_f": 95,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 70,
-      "wind_mph": 6,
-      "rain_chance": 23,
-      "weathercode": 1
+      "humidity": 82,
+      "wind_mph": 9,
+      "rain_chance": 31,
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-09-15",
+        "date": "2026-09-16",
         "high_f": 87,
-        "low_f": 79,
+        "low_f": 78,
         "weathercode": 51,
-        "rain_chance": 23,
+        "rain_chance": 31,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -35,37 +35,24 @@
         }
       },
       {
-        "date": "2026-09-16",
-        "high_f": 84,
-        "low_f": 76,
-        "weathercode": 82,
-        "rain_chance": 34,
-        "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
-        }
-      },
-      {
         "date": "2026-09-17",
-        "high_f": 87,
-        "low_f": 75,
-        "weathercode": 95,
-        "rain_chance": 60,
+        "high_f": 83,
+        "low_f": 76,
+        "weathercode": 65,
+        "rain_chance": 31,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Heavy rain",
+          "es": "Lluvia intensa",
+          "pt": "Chuva forte",
+          "fr": "Pluie forte"
         }
       },
       {
         "date": "2026-09-18",
-        "high_f": 87,
-        "low_f": 80,
+        "high_f": 88,
+        "low_f": 74,
         "weathercode": 95,
-        "rain_chance": 72,
+        "rain_chance": 65,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-09-19",
-        "high_f": 86,
-        "low_f": 82,
-        "weathercode": 95,
-        "rain_chance": 68,
+        "high_f": 88,
+        "low_f": 83,
+        "weathercode": 96,
+        "rain_chance": 80,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-09-20",
+        "high_f": 89,
+        "low_f": 83,
+        "weathercode": 51,
+        "rain_chance": 84,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       }
     ],
     "hourly": [
       {
         "hour": "12:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 17
       },
       {
         "hour": "13:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 3
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 87,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 87,
-        "weathercode": 0,
-        "rain_chance": 7
-      },
-      {
-        "hour": "16:00",
         "temp_f": 86,
-        "weathercode": 2,
-        "rain_chance": 7
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 8
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 9
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 82,
-        "weathercode": 1,
-        "rain_chance": 9
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 80,
-        "weathercode": 51,
-        "rain_chance": 10
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 80,
-        "weathercode": 1,
-        "rain_chance": 18
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 79,
-        "weathercode": 2,
-        "rain_chance": 21
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 23
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 80,
-        "weathercode": 82,
-        "rain_chance": 11
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 18
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 77,
-        "weathercode": 53,
-        "rain_chance": 24
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 77,
-        "weathercode": 81,
-        "rain_chance": 34
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 21
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 76,
         "weathercode": 3,
         "rain_chance": 14
       },
       {
-        "hour": "06:00",
-        "temp_f": 77,
+        "hour": "14:00",
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 10
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 12
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 84,
+        "weathercode": 51,
+        "rain_chance": 17
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 21
+        "rain_chance": 23
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 19
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 31
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 79,
+        "weathercode": 1,
+        "rain_chance": 27
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 79,
+        "weathercode": 1,
+        "rain_chance": 24
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 19
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 80,
+        "weathercode": 51,
+        "rain_chance": 23
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 31
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 24
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 22
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 76,
+        "weathercode": 65,
+        "rain_chance": 26
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 76,
+        "weathercode": 51,
+        "rain_chance": 19
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 76,
+        "weathercode": 2,
+        "rain_chance": 18
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 76,
+        "weathercode": 2,
+        "rain_chance": 17
       },
       {
         "hour": "07:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 19
+        "rain_chance": 13
       },
       {
         "hour": "08:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 14
+        "rain_chance": 12
       },
       {
         "hour": "09:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 15
+        "weathercode": 51,
+        "rain_chance": 13
       },
       {
         "hour": "10:00",
         "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 13
+        "weathercode": 1,
+        "rain_chance": 16
       },
       {
         "hour": "11:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 17
+        "temp_f": 83,
+        "weathercode": 2,
+        "rain_chance": 13
       }
     ]
   },
@@ -2019,32 +2019,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1787488220886_iww5",
-        "title": {
-          "en": "Robin Trower",
-          "es": "Robin Trower",
-          "pt": "Robin Trower",
-          "fr": "Robin Trower"
-        },
-        "date": "2026-09-15",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frobin-trower-ft-lauderdale-florida-09-15-2026%2Fevent%2F0D00649CB76FA019&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/a66/3dc47e4b-5b49-4cd6-8d8e-530eaf46aa66_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "BACK BY POPULAR DEMAND! Tagged by the press with the nickname of \"The White Hendrix\" back in the 1970s, Trower has been heralded as one of the most influential guitar players to come out of the British rock scene. As the guitarist who fronted for Procol Harum before launching his own celebrated four-decade career, Trower-a true axeman's axeman-took the ethereal sound that Hendrix first introduced ",
-          "es": "¡DE VUELTA POR DEMANDA POPULAR! Etiquetado por la prensa con el apodo de \"El Hendrix Blanco\" en los años 70, Trower ha sido aclamado como uno de los guitarristas más influyentes de la escena del rock británico. Como el guitarrista que encabezó a Procol Harum antes de lanzar su propia carrera celebrada de cuatro décadas, Trower, un verdadero maestro del instrumento, tomó el sonido etéreo que Hendrix introdujo por primera vez",
-          "pt": "DE VOLTA POR DEMANDA POPULAR! Marcado pela imprensa com o apelido de \"O Hendrix Branco\" nos anos 70, Trower foi aclamado como um dos guitarristas mais influentes da cena do rock britânico. Como o guitarrista que foi destaque do Procol Harum antes de lançar sua própria carreira celebrada de quatro décadas, Trower, um verdadeiro mestre da guitarra, utilizou o som etéreo que Hendrix introduziu pela primeira vez",
-          "fr": "DE RETOUR PAR DEMANDE POPULAIRE ! Étiqueté par la presse avec le surnom du « Hendrix Blanc » dans les années 70, Trower a été acclamé comme l'un des guitaristes les plus influents de la scène du rock britannique. En tant que guitariste qui a mené Procol Harum avant de lancer sa propre carrière célébrée de quatre décennies, Trower, un véritable maître de la guitare, a adopté le son éthéré que Hendrix a introduit pour la première fois"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
         "id": "rss_1787575173885_1hz0",
         "title": {
           "en": "Un-Birthday Party: Neighbors 4 Neighbors Celebrates 34 Years at Bar Betty 10/5/26",
@@ -2147,32 +2121,6 @@
         "lat": 25.732096,
         "lng": -80.3143531,
         "category": "community"
-      },
-      {
-        "id": "tm_1787748121555_bhb9",
-        "title": {
-          "en": "WITCH + Jacuzzi Boys",
-          "es": "WITCH + Jacuzzi Boys",
-          "pt": "WITCH + Jacuzzi Boys",
-          "fr": "WITCH + Jacuzzi Boys"
-        },
-        "date": "2026-09-15",
-        "venue": "ZeyZey Miami",
-        "address": "353 NE 61st St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PFAt&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/151/bb8f3f76-c171-4351-b8d1-be3e93d06151_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 19:00 · ZeyZey Miami",
-          "es": "Música · Otros · Comienza 19:00 · ZeyZey Miami",
-          "pt": "Música · Outros · Começa 19:00 · ZeyZey Miami",
-          "fr": "Musique · Autres · Commence 19:00 · ZeyZey Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.8172,
-        "lng": -80.188797
       },
       {
         "id": "rss_1788019609231_20c1",
@@ -3383,58 +3331,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1789313458391_folx",
-        "title": {
-          "en": "The Place to Be prior to Robin Trower",
-          "es": "El Lugar para Estar antes de Robin Trower",
-          "pt": "O Lugar para Estar antes de Robin Trower",
-          "fr": "Le Lieu à Être avant Robin Trower"
-        },
-        "date": "2026-09-15",
-        "venue": "The Place To Be at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-09-15-2026%2Fevent%2F0D00649CBADDB23D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
-          "es": "¡Este es El Lugar para Estar! El salón exclusivo para donantes en The Parker ofrece un número limitado de entradas para la venta pública según disponibilidad. $75.00 POR PERSONA. Este club privado proporciona una experiencia ultra premium - servicio complimentario de comida y bebida en un refugio privado en la planta baja de The Parker. Disfruta de un bar abierto con licores premium, una selección de camarones fríos y calientes",
-          "pt": "Este é o Lugar para Estar! O lounge exclusivo para doadores no The Parker oferece um número limitado de ingressos para venda ao público conforme disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço complimentar de comida e bebida em um refúgio privado no piso inferior do The Parker. Aproveite um bar aberto com destilados premium, uma seleção de entrada fria e quente",
-          "fr": "C'est le Lieu à Être! Le salon exclusif des donateurs au Parker offre un nombre limité de billets à la vente au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra-premium - service complimentaire de nourriture et de boissons dans un refuge privé au sous-sol du Parker. Profitez d'un bar ouvert avec des spiritueux haut de gamme, une sélection d'amuse-bouches chauds et froids"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
-        "id": "tm_1789313458391_867d",
-        "title": {
-          "en": "The Haller Club prior to Robin Trower",
-          "es": "The Haller Club antes de Robin Trower",
-          "pt": "The Haller Club antes de Robin Trower",
-          "fr": "The Haller Club avant Robin Trower"
-        },
-        "date": "2026-09-15",
-        "venue": "The Haller Club at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-robin-fort-lauderdale-florida-09-15-2026%2Fevent%2F0D00649CB959AA3F&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
-          "es": "Mejora tu experiencia en The Parker con The Haller Club. Este salón premium completamente nuevo, con su elegante diseño retro, cuenta con un bar espacioso y amplio asiento. Por un precio todo incluido, tu entrada a The Haller Club ofrece uso exclusivo comenzando una hora antes de la hora del show y durante el intermedio (si está programado), bebidas suaves complimentarias, cerveza premium y vino, café y té (bebidas mixtas",
-          "pt": "Melhore sua experiência no The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um bar espaçoso e amplo assentos. Por um preço tudo incluído, sua entrada no The Haller Club oferece uso exclusivo começando uma hora antes da hora do show e durante o intervalo (quando programado), bebidas suaves complimentares, cerveja premium e vinho, café e chá (bebidas mistas",
-          "fr": "Améliorez votre expérience au Parker avec The Haller Club. Ce nouveau lounge premium, avec son élégant design rétro, dispose d'un bar spacieux et de nombreux sièges. Pour un prix tout compris, votre accès au Haller Club offre un usage exclusif commençant une heure avant l'heure du spectacle et pendant l'entracte (si prévu), boissons non alcoolisées gratuites, bière premium et vin, café et thé (cocktails"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
         "id": "tm_1789313458391_t71r",
         "title": {
           "en": "YG",
@@ -3823,32 +3719,6 @@
         "lng": -80.146162
       },
       {
-        "id": "tm_1789488456041_7ptq",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-15",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
-          "es": "Diversos · Familia · Comienza 13:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 13:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Débute 13:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1789488456041_5n0s",
         "title": {
           "en": "ROSALÍA: LUX TOUR 2026",
@@ -3873,6 +3743,240 @@
         "category": "music",
         "lat": 25.781232,
         "lng": -80.187805
+      },
+      {
+        "id": "rss_1789574419665_iooo",
+        "title": {
+          "en": "Florería Atlántico at Torno Subito 9/22/26",
+          "es": "Florería Atlántico en Torno Subito 9/22/26",
+          "pt": "Florería Atlántico no Torno Subito 9/22/26",
+          "fr": "Florería Atlántico au Torno Subito 9/22/26"
+        },
+        "date": "2026-09-22",
+        "venue": "Torno Subito",
+        "address": "191 NE 40th Street, Miami, Florida, 33137",
+        "url": "https://www.soulofmiami.org/2026/09/15/floreria-atlantico-at-torno-subito-9-22-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/torno-subito-x-floreria-atlantico-350x438.jpg",
+        "description": {
+          "en": "Torno Subito kicks off its new global bar series, bringing some of The World’s 50 Best Bars and",
+          "es": "Torno Subito inaugura su nueva serie global de bares, trayendo algunos de los 50 Mejores Bares del Mundo y",
+          "pt": "Torno Subito inaugura sua nova série global de bares, trazendo alguns dos 50 Melhores Bares do Mundo e",
+          "fr": "Torno Subito lance sa nouvelle série mondiale de bars, apportant certains des 50 Meilleurs Bars du Monde et"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8136101,
+        "lng": -80.1918403,
+        "category": "community"
+      },
+      {
+        "id": "rss_1789574419665_9c5p",
+        "title": {
+          "en": "Celebrate National Vodka Day at Ten Palms Gulfstream Park Sunday 10/4/26",
+          "es": "Celebra el Día Nacional del Vodka en Ten Palms Gulfstream Park domingo 10/4/26",
+          "pt": "Celebre o Dia Nacional da Vodka em Ten Palms Gulfstream Park domingo 10/4/26",
+          "fr": "Célébrez la Journée Nationale de la Vodka au Ten Palms Gulfstream Park dimanche 10/4/26"
+        },
+        "date": "2026-10-04",
+        "venue": "Gulfstream Park",
+        "address": "901 S Federal Highway, Hallandale Beach, Florida, 33009",
+        "url": "https://www.soulofmiami.org/2026/09/15/celebrate-national-vodka-day-at-ten-palms-gulfstream-park-sunday-10-4-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Titos-Italian-Lemonade_CREDIT-Gulfstream-Park-350x467.jpg",
+        "description": {
+          "en": "National Vodka Day at Ten Palms at Gulfstream Park with the Tito’s",
+          "es": "Día Nacional del Vodka en Ten Palms en Gulfstream Park con Tito's",
+          "pt": "Dia Nacional da Vodka em Ten Palms em Gulfstream Park com Tito's",
+          "fr": "Journée Nationale de la Vodka au Ten Palms à Gulfstream Park avec Tito's"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.993706,
+        "lng": -80.1426812,
+        "category": "community"
+      },
+      {
+        "id": "rss_1789574419665_d7xs",
+        "title": {
+          "en": "¡Qué Rico, Miami! Hispanic Heritage Cooking Demos 9/19/26",
+          "es": "¡Qué Rico, Miami! Demostraciones de Cocina de Herencia Hispana 9/19/26",
+          "pt": "¡Qué Rico, Miami! Demonstrações de Culinária de Herança Hispânica 9/19/26",
+          "fr": "¡Qué Rico, Miami! Démonstrations Culinaires du Patrimoine Hispanique 9/19/26"
+        },
+        "date": "2026-09-19",
+        "venue": "IKEA Miami",
+        "address": "1801 NW 117th AVE, Miami, Florida, 33172",
+        "url": "https://www.soulofmiami.org/2026/09/15/que-rico-miami-hispanic-heritage-cooking-demos-9-19-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Que-Rico-Image-350x348.png",
+        "description": {
+          "en": "Join us at IKEA for a flavorful celebration of Hispanic Heritage Month featuring live cooking demonstrations,",
+          "es": "Únete a nosotros en IKEA para una celebración sabrosa del Mes de la Herencia Hispana con demostraciones culinarias en vivo,",
+          "pt": "Junte-se a nós no IKEA para uma celebração saborosa do Mês da Herança Hispânica com demonstrações culinárias ao vivo,",
+          "fr": "Rejoignez-nous chez IKEA pour une célébration savoureuse du Mois du Patrimoine Hispanique avec des démonstrations culinaires en direct,"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7914349,
+        "lng": -80.3837142,
+        "category": "music"
+      },
+      {
+        "id": "tm_1789574420347_cf89",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-16",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneo · Familia · Comienza a las 13:00 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa às 13:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence à 13:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1789574420347_mo3u",
+        "title": {
+          "en": "Crankdat",
+          "es": "Crankdat",
+          "pt": "Crankdat",
+          "fr": "Crankdat"
+        },
+        "date": "2026-09-26",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcrankdat-liv-nightclub-miami-tickets%2F14246074&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b55/9ee4941d-32a7-4996-aa4a-7986aa4c7b55_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar identificación válida indicando que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza a las 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso incapaz de apresentar identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa às 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux personnes de 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence à 23:30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1789574420347_t62o",
+        "title": {
+          "en": "Rodrigo Teaser: Michael Lives Forever",
+          "es": "Rodrigo Teaser: Michael Lives Forever",
+          "pt": "Rodrigo Teaser: Michael Lives Forever",
+          "fr": "Rodrigo Teaser: Michael Lives Forever"
+        },
+        "date": "2026-09-27",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frodrigo-teaser-michael-lives-forever-ft-lauderdale-florida-09-27-2026%2Fevent%2F0D00649EA993BA09&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b90/eae4e593-edbb-4135-8c02-3d29ce0dcb90_1246031_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Rodrigo Teaser is internationally recognized as the greatest Michael Jackson tribute artists in the world. Born in Brazil, he has dedicated his life to mastering every detail of Michael Jackson's artistry - from vocals and choreography to stage presence and visual production. With over a decade of sold-out performances across Latin America and Europe, Rodrigo has built a reputation for delivering ",
+          "es": "Rodrigo Teaser es reconocido internacionalmente como el mejor artista tributo de Michael Jackson del mundo. Nacido en Brasil, ha dedicado su vida a dominar cada detalle del arte de Michael Jackson, desde la voz y coreografía hasta la presencia en escena y producción visual. Con más de una década de presentaciones agotadas en América Latina y Europa, Rodrigo ha construido una reputación por entregar",
+          "pt": "Rodrigo Teaser é reconhecido internacionalmente como o maior artista tributário de Michael Jackson do mundo. Nascido no Brasil, ele dedicou sua vida a dominar cada detalhe da arte de Michael Jackson - desde vocais e coreografia até presença de palco e produção visual. Com mais de uma década de apresentações com ingressos esgotados em toda a América Latina e Europa, Rodrigo construiu uma reputação por entregar",
+          "fr": "Rodrigo Teaser est reconnu internationalement comme le plus grand artiste tribute de Michael Jackson au monde. Né au Brésil, il a consacré sa vie à maîtriser chaque détail de l'art de Michael Jackson - de la voix et de la chorégraphie à la présence sur scène et à la production visuelle. Avec plus d'une décennie de représentations à guichet fermé en Amérique latine et en Europe, Rodrigo s'est bâti une réputation de"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1789574420347_r6fa",
+        "title": {
+          "en": "BossMan Dlow",
+          "es": "BossMan Dlow",
+          "pt": "BossMan Dlow",
+          "fr": "BossMan Dlow"
+        },
+        "date": "2026-09-27",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fbossman-dlow-liv-nightclub-miami-tickets%2F14322654&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/007/56c41e47-a437-4ef9-bb94-05a8bf880007_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier poseedor de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:00 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso que não puder apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1789574420347_z0x8",
+        "title": {
+          "en": "Of Monsters and Men - The Mouse Parade Tour",
+          "es": "Of Monsters and Men - The Mouse Parade Tour",
+          "pt": "Of Monsters and Men - The Mouse Parade Tour",
+          "fr": "Of Monsters and Men - The Mouse Parade Tour"
+        },
+        "date": "2026-09-30",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fof-monsters-and-men-the-mouse-miami-beach-florida-09-30-2026%2Fevent%2F0D0064D8C8F1C622&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/513/ab5f6d9d-4068-45ba-912e-1423477a0513_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Las entradas GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas son de pie y sentadas y funcionan por orden de llegada. Tenga en cuenta que una vez que se alcance la capacidad de un área, se verá limitado a otras áreas abiertas. · Comienza 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
+          "pt": "Ingressos GA significam Admissão Geral. Isso significa que não há assentos atribuídos. Essas áreas são em pé e sentadas e funcionam por ordem de chegada. Saiba que uma vez que a capacidade de uma área seja atingida, você será limitado a outras áreas abertas. · Começa 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
+          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de places assignées. Ces zones sont debout et assises et fonctionnent selon le principe du premier arrivé, premier servi. Veuillez noter qu'une fois que la capacité d'une zone est atteinte, vous serez limité à d'autres zones ouvertes. · Commence 20:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1789574420347_2y4s",
+        "title": {
+          "en": "Dadi Freyr",
+          "es": "Dadi Freyr",
+          "pt": "Dadi Freyr",
+          "fr": "Dadi Freyr"
+        },
+        "date": "2026-10-01",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-V4Y&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/124/20ba9f0d-d63e-46da-b014-861c050a0124_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 19:00 · ZeyZey Miami",
+          "es": "Música · Otros · Comienza 19:00 · ZeyZey Miami",
+          "pt": "Música · Outros · Começa 19:00 · ZeyZey Miami",
+          "fr": "Musique · Autres · Commence 19:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
       }
     ]
   },
@@ -4776,7 +4880,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-15T16:08:02.193Z",
+    "fetchedAt": "2026-09-16T16:01:14.231Z",
     "items": [
       {
         "id": "beach_bark-beach",
@@ -4789,15 +4893,15 @@
           "fr": "BARK BEACH — Avis de Qualité de l'Eau"
         },
         "detail": {
-          "en": "Elevated Enterococcus bacteria detected (78 CFU/100mL, sampled 2026-09-09). Health officials advise against swimming here until levels return to normal.",
-          "es": "Se detectaron niveles elevados de bacterias Enterococcus (78 UFC/100mL, muestreado el 2026-09-09). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
-          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (78 UFC/100mL, amostrado em 2026-09-09). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
-          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (78 UFC/100mL, échantillonné le 2026-09-09). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
+          "en": "Elevated Enterococcus bacteria detected (142 CFU/100mL, sampled 2026-09-14). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (142 UFC/100mL, muestreado el 2026-09-14). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (142 UFC/100mL, amostrado em 2026-09-14). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (142 UFC/100mL, échantillonné le 2026-09-14). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
         },
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/bark-beach",
-        "effectiveAt": "2026-09-09",
-        "expiresAt": "2026-09-16T16:08:02.193Z"
+        "effectiveAt": "2026-09-14",
+        "expiresAt": "2026-09-17T16:01:14.231Z"
       }
     ]
   }
