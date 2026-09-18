@@ -1,45 +1,45 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-17T16:08:15.058Z",
+    "lastUpdated": "2026-09-18T15:43:50.592Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-17T16:08:14.347Z",
+    "fetchedAt": "2026-09-18T15:43:49.716Z",
     "current": {
-      "temp_f": 80,
-      "feels_f": 88,
+      "temp_f": 85,
+      "feels_f": 96,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 87,
+      "humidity": 76,
       "wind_mph": 6,
-      "rain_chance": 48,
-      "weathercode": 3
+      "rain_chance": 38,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-09-17",
-        "high_f": 82,
-        "low_f": 74,
-        "weathercode": 81,
-        "rain_chance": 48,
+        "date": "2026-09-18",
+        "high_f": 86,
+        "low_f": 75,
+        "weathercode": 3,
+        "rain_chance": 38,
         "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
-        "date": "2026-09-18",
-        "high_f": 86,
+        "date": "2026-09-19",
+        "high_f": 84,
         "low_f": 73,
         "weathercode": 82,
-        "rain_chance": 30,
+        "rain_chance": 40,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -48,24 +48,11 @@
         }
       },
       {
-        "date": "2026-09-19",
-        "high_f": 88,
-        "low_f": 74,
-        "weathercode": 55,
-        "rain_chance": 78,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-09-20",
         "high_f": 89,
-        "low_f": 84,
+        "low_f": 74,
         "weathercode": 95,
-        "rain_chance": 90,
+        "rain_chance": 89,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,90 +62,109 @@
       },
       {
         "date": "2026-09-21",
-        "high_f": 89,
+        "high_f": 88,
         "low_f": 83,
         "weathercode": 95,
-        "rain_chance": 82,
+        "rain_chance": 89,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
           "pt": "Trovoada",
           "fr": "Orage"
         }
+      },
+      {
+        "date": "2026-09-22",
+        "high_f": 88,
+        "low_f": 83,
+        "weathercode": 51,
+        "rain_chance": 80,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
       }
     ],
     "hourly": [
       {
+        "hour": "11:00",
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 8
+      },
+      {
         "hour": "12:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 35
+        "temp_f": 85,
+        "weathercode": 1,
+        "rain_chance": 11
       },
       {
         "hour": "13:00",
-        "temp_f": 74,
-        "weathercode": 65,
-        "rain_chance": 39
+        "temp_f": 86,
+        "weathercode": 1,
+        "rain_chance": 12
       },
       {
         "hour": "14:00",
-        "temp_f": 77,
-        "weathercode": 81,
-        "rain_chance": 35
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 14
       },
       {
         "hour": "15:00",
-        "temp_f": 80,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 24
+        "rain_chance": 20
       },
       {
         "hour": "16:00",
-        "temp_f": 81,
+        "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 24
+        "rain_chance": 38
       },
       {
         "hour": "17:00",
-        "temp_f": 80,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 25
+        "rain_chance": 36
       },
       {
         "hour": "18:00",
-        "temp_f": 79,
-        "weathercode": 53,
-        "rain_chance": 37
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 33
       },
       {
         "hour": "19:00",
-        "temp_f": 76,
-        "weathercode": 55,
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 26
       },
       {
         "hour": "20:00",
-        "temp_f": 76,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 12
+        "rain_chance": 22
       },
       {
         "hour": "21:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 19
       },
       {
         "hour": "22:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 16
       },
       {
         "hour": "23:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 13
       },
       {
         "hour": "00:00",
@@ -170,67 +176,61 @@
         "hour": "01:00",
         "temp_f": 76,
         "weathercode": 2,
-        "rain_chance": 12
+        "rain_chance": 10
       },
       {
         "hour": "02:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 11
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "03:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 13
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "04:00",
         "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 15
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "05:00",
-        "temp_f": 74,
+        "temp_f": 73,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 12
       },
       {
         "hour": "06:00",
-        "temp_f": 74,
+        "temp_f": 73,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 11
       },
       {
         "hour": "07:00",
         "temp_f": 73,
-        "weathercode": 0,
-        "rain_chance": 14
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "08:00",
-        "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 14
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 9
       },
       {
         "hour": "09:00",
-        "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 14
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 12
       },
       {
         "hour": "10:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 18
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 21
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 16
       }
     ]
   },
@@ -1793,32 +1793,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1787143022212_yfcd",
-        "title": {
-          "en": "The Moth StorySLAM: Nine to Five 9/17/26",
-          "es": "The Moth StorySLAM: Nueve a Cinco 9/17/26",
-          "pt": "The Moth StorySLAM: Nove a Cinco 9/17/26",
-          "fr": "The Moth StorySLAM: Neuf à Cinq 9/17/26"
-        },
-        "date": "2026-09-17",
-        "venue": "Sandrell Rivers Theater",
-        "address": "6103 NW 7th Ave, Miami, Florida, 33127",
-        "url": "https://www.soulofmiami.org/2026/08/18/the-moth-storyslam-nine-to-five-9-17-26/",
-        "free": false,
-        "price": "$21",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/The-Moth-Nine-to-Five-WLRN-350x175.png",
-        "description": {
-          "en": "Prepare a five-minute story about being on the clock. First jobs and corporate climbing. Dream gigs, survival",
-          "es": "Prepara una historia de cinco minutos sobre estar trabajando. Primeros empleos y ascensos corporativos. Trabajos soñados, supervivencia",
-          "pt": "Prepare uma história de cinco minutos sobre estar trabalhando. Primeiros empregos e ascensões corporativas. Empregos dos sonhos, sobrevivência",
-          "fr": "Préparez une histoire de cinq minutes sur le fait de travailler. Premiers emplois et ascensions professionnelles. Emplois de rêve, survie"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.8315843,
-        "lng": -80.2082623,
-        "category": "community"
-      },
-      {
         "id": "rss_1787143022212_e6ce",
         "title": {
           "en": "Second Annual Superhero Bash 10/24/26",
@@ -2095,56 +2069,6 @@
         "lat": 25.732096,
         "lng": -80.3143531,
         "category": "community"
-      },
-      {
-        "id": "rss_1788019609231_20c1",
-        "title": {
-          "en": "“Viva Fort Lauderdale: Celebrating Hispanic Art & Culture” at History Fort Lauderdale 9/17/26 -10/25/26",
-          "es": "Viva Fort Lauderdale: Celebrando Arte y Cultura Hispana en History Fort Lauderdale 9/17/26 -10/25/26",
-          "pt": "Viva Fort Lauderdale: Celebrando Arte e Cultura Hispânica na History Fort Lauderdale 9/17/26 -10/25/26",
-          "fr": "Viva Fort Lauderdale : Célébration de l'Art et de la Culture Hispanique à History Fort Lauderdale 9/17/26 -10/25/26"
-        },
-        "date": "2026-09-17",
-        "venue": "History Fort Lauderdale",
-        "address": "231 SW Second Avenue, Fort Lauderdale, Florida, 33301",
-        "url": "https://www.soulofmiami.org/2026/08/28/viva-fort-lauderdale-celebrating-hispanic-art-culture-at-history-fort-lauderdale-9-17-26-9-18-26-9-19-26-9-20-26-9-21-26-9-22-26-9-23-26-9-24-26-9-25-26-9-26-26-9-27-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Viva-Fort-Lauderdale-Exhibit-Run-Dates-1080-x-1080-2026-350x350.jpg",
-        "description": {
-          "en": "History Fort Lauderdale, committed to preserving our collective heritage,",
-          "es": "History Fort Lauderdale, comprometida con la preservación de nuestro patrimonio colectivo",
-          "pt": "History Fort Lauderdale, comprometida com a preservação de nosso patrimônio coletivo",
-          "fr": "History Fort Lauderdale, engagée à préserver notre patrimoine collectif"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "tm_1788105394141_z7f1",
-        "title": {
-          "en": "JUTES - Smile You're on Tour",
-          "es": "JUTES - Sonríe Estás en Gira",
-          "pt": "JUTES - Sorria Você Está em Turnê",
-          "fr": "JUTES - Souris Tu Es en Tournée"
-        },
-        "date": "2026-09-17",
-        "venue": "Culture Room",
-        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjutes-smile-youre-on-tour-ft-lauderdale-florida-09-17-2026%2Fevent%2F0D006483343E3E90&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/f17/3548afa1-c603-4440-a0f7-2f27dcfbef17_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "JUTES - Smile You're on Tour with special guests Mothica, wilt Doors open 6:00pm · Starts 18:00 · Culture Room",
-          "es": "JUTES - Sonríe Estás en Gira con invitados especiales Mothica, wilt Las puertas abren a las 6:00pm · Comienza 18:00 · Culture Room",
-          "pt": "JUTES - Sorria Você Está em Turnê com convidados especiais Mothica, wilt As portas abrem às 6:00pm · Começa 18:00 · Culture Room",
-          "fr": "JUTES - Souris Tu Es en Tournée avec les invités spéciaux Mothica, wilt Les portes ouvrent à 18h00 · Commence 18:00 · Culture Room"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.166888,
-        "lng": -80.117058
       },
       {
         "id": "tm_1788105394141_ns83",
@@ -2556,32 +2480,6 @@
         "source": "Soul of Miami",
         "lat": 26.1223084,
         "lng": -80.1433786,
-        "category": "community"
-      },
-      {
-        "id": "rss_1788618474335_0qri",
-        "title": {
-          "en": "South Miami DeMolay Youth Leadership Open House 9/17/26",
-          "es": "Casa Abierta de Liderazgo Juvenil South Miami DeMolay 9/17/26",
-          "pt": "Casa Aberta de Liderança Juvenil South Miami DeMolay 9/17/26",
-          "fr": "Portes Ouvertes de Leadership Jeunesse South Miami DeMolay 9/17/26"
-        },
-        "date": "2026-09-17",
-        "venue": "Scottish Rite Temple",
-        "address": "471 NW 3rd Street, Miami, Florida, 33128",
-        "url": "https://www.soulofmiami.org/2026/09/04/south-miami-demolay-youth-leadership-open-house-9-17-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/South-Miami-DeMolay-Open-House-580x750-1-350x453.png",
-        "description": {
-          "en": "Young men ages 12-21 and their parents are invited to South Miami DeMolay’s free Youth",
-          "es": "Se invita a jóvenes de 12-21 años y sus padres a la Casa Abierta gratuita de South Miami DeMolay",
-          "pt": "Jovens de 12-21 anos e seus pais são convidados para a Casa Aberta gratuita do South Miami DeMolay",
-          "fr": "Les jeunes hommes de 12-21 ans et leurs parents sont invités à la Maison Ouverte gratuite de South Miami DeMolay"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7769873,
-        "lng": -80.2026713,
         "category": "community"
       },
       {
@@ -3255,32 +3153,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1789313457805_x1kn",
-        "title": {
-          "en": "Bulla Gastrobar’s Paella & Sangria Making Class September 2026 9/17/26",
-          "es": "Clase de Paella y Sangría de Bulla Gastrobar Septiembre 2026 9/17/26",
-          "pt": "Aula de Paella e Sangria da Bulla Gastrobar Setembro 2026 9/17/26",
-          "fr": "Cours de Paella et Sangria de Bulla Gastrobar Septembre 2026 9/17/26"
-        },
-        "date": "2026-09-17",
-        "venue": "Bulla Gastrobar",
-        "address": "2747 NE 193rd St, Miami, Florida, 33180",
-        "url": "https://www.soulofmiami.org/2026/09/12/bulla-gastrobars-paella-sangria-making-class-september-2026-9-17-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/BULDOR_10Anniversary2026_IGpost4-350x438.jpg",
-        "description": {
-          "en": "the art of Spain’s iconic paella! Join Bulla’s chefs for a hands-on experience as you",
-          "es": "¡el arte de la icónica paella española! Únete a los chefs de Bulla para una experiencia interactiva mientras",
-          "pt": "a arte da icônica paella espanhola! Junte-se aos chefs da Bulla para uma experiência prática enquanto",
-          "fr": "l'art de la paella emblématique d'Espagne! Rejoignez les chefs de Bulla pour une expérience pratique tandis que vous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.9540888,
-        "lng": -80.1455721,
-        "category": "food-drink"
-      },
-      {
         "id": "rss_1789313457805_1otu",
         "title": {
           "en": "Photographing Myself 9/26/26",
@@ -3927,58 +3799,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1789661250178_t717",
-        "title": {
-          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 9/17/26",
-          "es": "Damas que Almuerzan: Espectáculo de Drag los Jueves por la Tarde 9/17/26",
-          "pt": "Damas que Almoçam: Show de Drag às Quintas à Tarde 9/17/26",
-          "fr": "Dames qui Déjeunent: Spectacle de Drag le Jeudi Après-midi 9/17/26"
-        },
-        "date": "2026-09-17",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/09/16/ladies-who-lunch-thursday-afternoon-drag-show-9-17-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/tmp2dc8urjm-281x500.jpg",
-        "description": {
-          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los jueves son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
-          "pt": "As quintas-feiras são para os rapazes que brincam lindamente no Palace South Beach. Junte-se a nós",
-          "fr": "Les jeudis sont pour les garçons qui brunchent magnifiquement au Palace South Beach. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
-      },
-      {
-        "id": "tm_1789661250846_g744",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-17",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
-          "es": "Variado · Familia · Comienza a las 13:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa às 13:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence à 13:00 · Centre de Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1789661250846_a9mv",
         "title": {
           "en": "Nikki Glaser: The Stunning Tour",
@@ -4081,6 +3901,292 @@
         "category": "sports",
         "lat": 25.7150805,
         "lng": -80.2791777
+      },
+      {
+        "id": "rss_1789746199489_8pdw",
+        "title": {
+          "en": "The Bass Dialogues | Introducing Philippe Vergne 11/19/26",
+          "es": "The Bass Dialogues | Presentando a Philippe Vergne 11/19/26",
+          "pt": "The Bass Dialogues | Apresentando Philippe Vergne 11/19/26",
+          "fr": "The Bass Dialogues | Présentant Philippe Vergne 11/19/26"
+        },
+        "date": "2026-11-19",
+        "venue": "The Bass Museum of Art",
+        "address": "2100 Collins Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/17/the-bass-dialogues-introducing-philippe-vergne-11-19-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Philippe-Vergne-Credit-Joaquim-Norte-de-Sousa-350x243.jpg",
+        "description": {
+          "en": "6 PM Doors open 6:30 PM Talk starts (45 mins) Complimentary admission with",
+          "es": "6 PM Puertas abren 6:30 PM Charla comienza (45 mins) Entrada gratuita con",
+          "pt": "18h Portas abrem 18h30 Palestra começa (45 mins) Entrada gratuita com",
+          "fr": "18h Les portes ouvrent 18h30 La discussion commence (45 mins) Entrée gratuite avec"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7975852,
+        "lng": -80.1301531,
+        "category": "community"
+      },
+      {
+        "id": "rss_1789746199489_te9g",
+        "title": {
+          "en": "The Bass Dialogues | Featuring Pedro & Juana 12/2/26",
+          "es": "The Bass Dialogues | Presentando a Pedro & Juana 12/2/26",
+          "pt": "The Bass Dialogues | Apresentando Pedro & Juana 12/2/26",
+          "fr": "The Bass Dialogues | Présentant Pedro & Juana 12/2/26"
+        },
+        "date": "2026-12-02",
+        "venue": "The Bass Museum of Art",
+        "address": "2100 Collins Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/17/the-bass-dialogues-featuring-pedro-juana-12-2-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Pedro-and-Juana-LR-1-350x317.jpg",
+        "description": {
+          "en": "10 AM Doors open 10:30 AM Talk Starts (45min-1hr) Complimentary admission with",
+          "es": "10 AM Puertas abren 10:30 AM Charla comienza (45min-1hr) Entrada gratuita con",
+          "pt": "10h Portas abrem 10h30 Palestra começa (45min-1h) Entrada gratuita com",
+          "fr": "10h Les portes ouvrent 10h30 La discussion commence (45min-1h) Entrée gratuite avec"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7975852,
+        "lng": -80.1301531,
+        "category": "community"
+      },
+      {
+        "id": "rss_1789746199489_h4fq",
+        "title": {
+          "en": "The Bass Dialogues | Architects Johnston Marklee in Conversation with Tom Healy 12/3/26",
+          "es": "The Bass Dialogues | Arquitectos Johnston Marklee en Conversación con Tom Healy 12/3/26",
+          "pt": "The Bass Dialogues | Arquitetos Johnston Marklee em Conversa com Tom Healy 12/3/26",
+          "fr": "The Bass Dialogues | Architectes Johnston Marklee en Conversation avec Tom Healy 12/3/26"
+        },
+        "date": "2026-12-03",
+        "venue": "The Bass Museum of Art",
+        "address": "2100 Collins Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/17/the-bass-dialogues-architects-johnston-marklee-in-conversation-with-tom-healy-12-3-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Sharon-Johnston-FAIA-Mark-Lee-Portrait-by-Todd-Cole-350x244.jpg",
+        "description": {
+          "en": "10 AM Doors open 10:30 AM Talk Starts",
+          "es": "10 AM Puertas abren 10:30 AM Charla comienza",
+          "pt": "10h Portas abrem 10h30 Palestra começa",
+          "fr": "10h Les portes ouvrent 10h30 La discussion commence"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7975852,
+        "lng": -80.1301531,
+        "category": "community"
+      },
+      {
+        "id": "rss_1789746199490_24xn",
+        "title": {
+          "en": "The Bass Dialogues | Featuring Amalia Pica 12/4/26",
+          "es": "The Bass Dialogues | Presentando a Amalia Pica 12/4/26",
+          "pt": "The Bass Dialogues | Apresentando Amalia Pica 12/4/26",
+          "fr": "The Bass Dialogues | Présentant Amalia Pica 12/4/26"
+        },
+        "date": "2026-12-04",
+        "venue": "The Bass Museum of Art",
+        "address": "2100 Collins Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/17/the-bass-dialogues-featuring-amalia-pica-12-4-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Amalia-Pica-Portrait-350x244.jpg",
+        "description": {
+          "en": "10 AM Doors open 10:30 AM Talk Starts (45min-1hr) Complimentary admission with RSVP.",
+          "es": "10 AM Puertas abren 10:30 AM Charla comienza (45min-1hr) Entrada gratuita con RSVP.",
+          "pt": "10h Portas abrem 10h30 Palestra começa (45min-1h) Entrada gratuita com RSVP.",
+          "fr": "10h Les portes ouvrent 10h30 La discussion commence (45min-1h) Entrée gratuite avec RSVP."
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7975852,
+        "lng": -80.1301531,
+        "category": "community"
+      },
+      {
+        "id": "rss_1789746199490_bwd1",
+        "title": {
+          "en": "Third Thursdays | Hosted By Commissioner 12/17/26",
+          "es": "Terceros Jueves | Anfitrión Comisionado 12/17/26",
+          "pt": "Terceiras Quintas | Anfitrião Comissionado 12/17/26",
+          "fr": "Tiers Jeudis | Animé par le Commissaire 12/17/26"
+        },
+        "date": "2026-12-17",
+        "venue": "The Bass Museum of Art",
+        "address": "2100 Collins Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/17/third-thursdays-hosted-by-commissioner-12-17-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/COMMISSIONER-in-front-of-audience-350x244.jpg",
+        "description": {
+          "en": "6 PM Doors open Complimentary admission with RSVP. Limited capacity based on first-come, first-served.",
+          "es": "6 PM Puertas abren Entrada gratuita con RSVP. Capacidad limitada según orden de llegada.",
+          "pt": "18h Portas abrem Entrada gratuita com RSVP. Capacidade limitada conforme ordem de chegada.",
+          "fr": "18h Les portes ouvrent Entrée gratuite avec RSVP. Capacité limitée selon l'ordre d'arrivée."
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7975852,
+        "lng": -80.1301531,
+        "category": "community"
+      },
+      {
+        "id": "rss_1789746199490_5iuy",
+        "title": {
+          "en": "Third Thursdays | Featuring Miami Light Project & Screendance Miami Festival 1/21/27",
+          "es": "Terceros Jueves | Presentando Miami Light Project & Screendance Miami Festival 1/21/27",
+          "pt": "Terceiras Quintas | Apresentando Miami Light Project & Screendance Miami Festival 1/21/27",
+          "fr": "Troisièmes Jeudis | Présentant Miami Light Project & Screendance Miami Festival 1/21/27"
+        },
+        "date": "2027-01-21",
+        "venue": "The Bass Museum of Art",
+        "address": "2100 Collins Ave, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/17/third-thursdays-featuring-miami-light-project-screendance-miami-festival-1-21-27/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/SCREEN-DANCE-MLP--350x263.png",
+        "description": {
+          "en": "Miami Light Project presents the 2027 ScreenDance Miami Film",
+          "es": "Miami Light Project presenta el 2027 ScreenDance Miami Film",
+          "pt": "Miami Light Project apresenta o 2027 ScreenDance Miami Film",
+          "fr": "Miami Light Project présente le 2027 ScreenDance Miami Film"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7975852,
+        "lng": -80.1301531,
+        "category": "community"
+      },
+      {
+        "id": "tm_1789746200034_gd32",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-18",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:45 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 11:45 · Mana Wynwood Convention Center",
+          "pt": "Miscelânea · Família · Começa 11:45 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:45 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1789746200034_lp9e",
+        "title": {
+          "en": "Snow Strippers",
+          "es": "Snow Strippers",
+          "pt": "Snow Strippers",
+          "fr": "Snow Strippers"
+        },
+        "date": "2026-09-19",
+        "venue": "Factory Town",
+        "address": "4800 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7JKj4&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 17:00 · Factory Town",
+          "es": "Comienza 17:00 · Factory Town",
+          "pt": "Começa 17:00 · Factory Town",
+          "fr": "Commence 17:00 · Factory Town"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.811899,
+        "lng": -80.238998,
+        "category": "music"
+      },
+      {
+        "id": "tm_1789746200034_3i2r",
+        "title": {
+          "en": "Florida Atlantic University Owls Football vs. Florida International University Football",
+          "es": "Fútbol Americano: Florida Atlantic University Owls vs. Florida International University",
+          "pt": "Futebol Americano: Florida Atlantic University Owls vs. Florida International University",
+          "fr": "Football Américain: Florida Atlantic University Owls vs. Florida International University"
+        },
+        "date": "2026-09-19",
+        "venue": "Flagler Credit Union Stadium",
+        "address": "777 Glades Rd, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fflorida-atlantic-university-owls-football-vs-boca-raton-florida-09-19-2026%2Fevent%2F0D0064C5CEB444F3&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2ca/8aa0e41b-afc1-4098-a44c-bf8a0662d2ca_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 18:00 · Flagler Credit Union Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 18:00 · Flagler Credit Union Stadium",
+          "pt": "Esportes · Futebol Americano · Começa 18:00 · Flagler Credit Union Stadium",
+          "fr": "Sports · Football Américain · Commence 18:00 · Flagler Credit Union Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.3656459,
+        "lng": -80.104592
+      },
+      {
+        "id": "tm_1789746200034_1bqj",
+        "title": {
+          "en": "The BIG Show Improv Comedy Miami",
+          "es": "The BIG Show Comedia de Improvisación Miami",
+          "pt": "The BIG Show Comédia de Improvisação Miami",
+          "fr": "The BIG Show Comédie d'Improvisation Miami"
+        },
+        "date": "2026-09-19",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14897673&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Big Show - Improv Comedy in MiamiIts our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun!Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as cl",
+          "es": "The Big Show - Comedia de improvisación en Miami. Es nuestro espectáculo distintivo: comedia de improvisación en vivo, rápida y de primera categoría. ¡Piénsalo como Whose Line is It Anyway se encuentra con SNL! The Big Show es comedia de improvisación interactiva, con nuestro talentoso y galardonado elenco. ¡Ven a ser parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos en mesas.",
+          "pt": "The Big Show - Comédia de improvisação em Miami. É nosso espetáculo de assinatura: comédia improvisada ao vivo, rápida e de primeira qualidade. Pense nisto como Whose Line is It Anyway encontra SNL! The Big Show é comédia de improvisação interativa, com nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este espetáculo. Acomodaremos os grupos juntos em mesas.",
+          "fr": "The Big Show - Comédie d'improvisation à Miami. C'est notre spectacle vedette : comédie improvisée en direct, rapide et de première classe. Pensez à Whose Line is It Anyway rencontre SNL ! The Big Show est une comédie d'improvisation interactive, avec notre distribution talentueuse et primée. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous assoirons les groupes ensemble à des tables."
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1789746200034_dw5p",
+        "title": {
+          "en": "Nils Hoffmann",
+          "es": "Nils Hoffmann",
+          "pt": "Nils Hoffmann",
+          "fr": "Nils Hoffmann"
+        },
+        "date": "2026-09-19",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A708F_&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 22:00 · ZeyZey Miami",
+          "es": "Comienza 22:00 · ZeyZey Miami",
+          "pt": "Começa 22:00 · ZeyZey Miami",
+          "fr": "Commence 22:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.8172,
+        "lng": -80.188797,
+        "category": "music"
       }
     ]
   },
@@ -4984,7 +5090,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-17T16:08:14.347Z",
+    "fetchedAt": "2026-09-18T15:43:49.717Z",
     "items": [
       {
         "id": "beach_bark-beach",
@@ -5005,7 +5111,7 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/bark-beach",
         "effectiveAt": "2026-09-14",
-        "expiresAt": "2026-09-18T16:08:14.347Z"
+        "expiresAt": "2026-09-19T15:43:49.717Z"
       }
     ]
   }
