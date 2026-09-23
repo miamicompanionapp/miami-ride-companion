@@ -1,32 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-22T16:10:09.227Z",
+    "lastUpdated": "2026-09-23T15:59:53.915Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-22T16:10:08.142Z",
+    "fetchedAt": "2026-09-23T15:59:52.983Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 95,
+      "temp_f": 78,
+      "feels_f": 85,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 76,
-      "wind_mph": 9,
-      "rain_chance": 56,
-      "weathercode": 3
+      "humidity": 95,
+      "wind_mph": 10,
+      "rain_chance": 71,
+      "weathercode": 65
     },
     "forecast": [
       {
-        "date": "2026-09-22",
-        "high_f": 85,
+        "date": "2026-09-23",
+        "high_f": 80,
         "low_f": 75,
-        "weathercode": 82,
-        "rain_chance": 56,
+        "weathercode": 80,
+        "rain_chance": 71,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -35,37 +35,24 @@
         }
       },
       {
-        "date": "2026-09-23",
-        "high_f": 85,
-        "low_f": 75,
-        "weathercode": 63,
-        "rain_chance": 38,
-        "description": {
-          "en": "Moderate rain",
-          "es": "Lluvia moderada",
-          "pt": "Chuva moderada",
-          "fr": "Pluie modérée"
-        }
-      },
-      {
         "date": "2026-09-24",
-        "high_f": 88,
-        "low_f": 75,
-        "weathercode": 51,
-        "rain_chance": 75,
+        "high_f": 85,
+        "low_f": 74,
+        "weathercode": 61,
+        "rain_chance": 21,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Light rain",
+          "es": "Lluvia ligera",
+          "pt": "Chuva leve",
+          "fr": "Pluie légère"
         }
       },
       {
         "date": "2026-09-25",
         "high_f": 87,
-        "low_f": 80,
+        "low_f": 74,
         "weathercode": 51,
-        "rain_chance": 64,
+        "rain_chance": 55,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -76,161 +63,174 @@
       {
         "date": "2026-09-26",
         "high_f": 85,
-        "low_f": 79,
-        "weathercode": 51,
-        "rain_chance": 49,
+        "low_f": 81,
+        "weathercode": 53,
+        "rain_chance": 22,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-09-27",
+        "high_f": 85,
+        "low_f": 80,
+        "weathercode": 53,
+        "rain_chance": 32,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ],
     "hourly": [
       {
+        "hour": "11:00",
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 62
+      },
+      {
         "hour": "12:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 26
+        "temp_f": 75,
+        "weathercode": 65,
+        "rain_chance": 61
       },
       {
         "hour": "13:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 29
+        "temp_f": 76,
+        "weathercode": 65,
+        "rain_chance": 57
       },
       {
         "hour": "14:00",
-        "temp_f": 83,
-        "weathercode": 2,
-        "rain_chance": 32
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 60
       },
       {
         "hour": "15:00",
-        "temp_f": 83,
-        "weathercode": 2,
-        "rain_chance": 36
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 60
       },
       {
         "hour": "16:00",
-        "temp_f": 84,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 42
+        "rain_chance": 56
       },
       {
         "hour": "17:00",
-        "temp_f": 84,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 45
+        "rain_chance": 48
       },
       {
         "hour": "18:00",
         "temp_f": 79,
-        "weathercode": 51,
-        "rain_chance": 45
+        "weathercode": 3,
+        "rain_chance": 44
       },
       {
         "hour": "19:00",
-        "temp_f": 76,
-        "weathercode": 82,
-        "rain_chance": 47
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 29
       },
       {
         "hour": "20:00",
-        "temp_f": 75,
-        "weathercode": 65,
-        "rain_chance": 53
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 23
       },
       {
         "hour": "21:00",
-        "temp_f": 75,
-        "weathercode": 63,
-        "rain_chance": 56
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "22:00",
         "temp_f": 76,
-        "weathercode": 80,
-        "rain_chance": 53
+        "weathercode": 3,
+        "rain_chance": 16
       },
       {
         "hour": "23:00",
         "temp_f": 76,
-        "weathercode": 63,
-        "rain_chance": 45
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "00:00",
         "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 26
+        "rain_chance": 12
       },
       {
         "hour": "01:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 25
+        "temp_f": 76,
+        "weathercode": 61,
+        "rain_chance": 11
       },
       {
         "hour": "02:00",
-        "temp_f": 75,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 23
+        "rain_chance": 11
       },
       {
         "hour": "03:00",
         "temp_f": 75,
-        "weathercode": 63,
-        "rain_chance": 24
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "04:00",
-        "temp_f": 76,
-        "weathercode": 51,
-        "rain_chance": 24
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "05:00",
-        "temp_f": 76,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 22
+        "rain_chance": 7
       },
       {
         "hour": "06:00",
-        "temp_f": 76,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 19
+        "rain_chance": 8
       },
       {
         "hour": "07:00",
-        "temp_f": 76,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 17
+        "rain_chance": 7
       },
       {
         "hour": "08:00",
-        "temp_f": 76,
+        "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 21
+        "rain_chance": 8
       },
       {
         "hour": "09:00",
         "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 20
+        "rain_chance": 8
       },
       {
         "hour": "10:00",
-        "temp_f": 79,
-        "weathercode": 51,
-        "rain_chance": 23
-      },
-      {
-        "hour": "11:00",
         "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 28
+        "rain_chance": 7
       }
     ]
   },
@@ -2429,32 +2429,6 @@
         "category": "music"
       },
       {
-        "id": "tm_1789224840052_ux1b",
-        "title": {
-          "en": "Michael Franti Trio - Heartstrings & Dynamite",
-          "es": "Michael Franti Trio - Cuerdas del Corazón y Dinamita",
-          "pt": "Michael Franti Trio - Cordas do Coração e Dinamite",
-          "fr": "Michael Franti Trio - Cordes du Cœur et Dynamite"
-        },
-        "date": "2026-09-22",
-        "venue": "Revolution Live at the Backyard",
-        "address": "100 SW 3rd Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmichael-franti-trio-heartstrings-dynamite-ft-lauderdale-florida-09-22-2026%2Fevent%2F0D0064EFDEA9D904&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/ba0/52026846-32e7-4740-b01b-1862d064cba0_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Michael Franti Trio - Heartstrings & Dynamite will be coming to Revolution Live at the Backyard on September 22nd with special guests Wheeland Brothers. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. This event is Rain or Shine. The Michael Franti Trio is partnering with DO IT FOR THE LOVE non-profit for this tour. $1 of every ",
-          "es": "Michael Franti Trio - Cuerdas del Corazón y Dinamita se presentará en Revolution Live at the Backyard el 22 de septiembre con invitados especiales Wheeland Brothers. Este evento es para todas las edades. Las puertas abren a las 7pm. El espectáculo comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. Este evento es lluvia o brilla. El Michael Franti Trio se asocia con la organización sin fines de lucro DO IT FOR THE LOVE para esta gira. $1 de cada",
-          "pt": "Michael Franti Trio - Cordas do Coração e Dinamite vem ao Revolution Live at the Backyard no dia 22 de setembro com os convidados especiais Wheeland Brothers. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os artistas de apoio estão sujeitos a mudanças sem aviso prévio. Este evento é chuva ou sol. O Michael Franti Trio está em parceria com a organização sem fins lucrativos DO IT FOR THE LOVE para esta turnê. $1 de cada",
-          "fr": "Michael Franti Trio - Cordes du Cœur et Dynamite se présentera à Revolution Live at the Backyard le 22 septembre avec les invités spéciaux Wheeland Brothers. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien sont sujets à modification sans préavis. Cet événement est pluie ou brillant. Le Michael Franti Trio s'associe à l'organisation à but non lucratif DO IT FOR THE LOVE pour cette tournée. 1 $ de chaque"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.12123121,
-        "lng": -80.14625645
-      },
-      {
         "id": "cp_1789224840540_9j1f",
         "title": {
           "en": "First Friday @ 5",
@@ -2837,32 +2811,6 @@
         "category": "music",
         "lat": 26.121094,
         "lng": -80.146162
-      },
-      {
-        "id": "rss_1789574419665_iooo",
-        "title": {
-          "en": "Florería Atlántico at Torno Subito 9/22/26",
-          "es": "Florería Atlántico en Torno Subito 9/22/26",
-          "pt": "Florería Atlántico no Torno Subito 9/22/26",
-          "fr": "Florería Atlántico au Torno Subito 9/22/26"
-        },
-        "date": "2026-09-22",
-        "venue": "Torno Subito",
-        "address": "191 NE 40th Street, Miami, Florida, 33137",
-        "url": "https://www.soulofmiami.org/2026/09/15/floreria-atlantico-at-torno-subito-9-22-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/torno-subito-x-floreria-atlantico-350x438.jpg",
-        "description": {
-          "en": "Torno Subito kicks off its new global bar series, bringing some of The World’s 50 Best Bars and",
-          "es": "Torno Subito inaugura su nueva serie global de bares, trayendo algunos de los 50 Mejores Bares del Mundo y",
-          "pt": "Torno Subito inaugura sua nova série global de bares, trazendo alguns dos 50 Melhores Bares do Mundo e",
-          "fr": "Torno Subito lance sa nouvelle série mondiale de bars, apportant certains des 50 Meilleurs Bars du Monde et"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.8136101,
-        "lng": -80.1918403,
-        "category": "community"
       },
       {
         "id": "rss_1789574419665_9c5p",
@@ -3250,30 +3198,6 @@
         "source": "Soul of Miami",
         "lat": 26.0812886,
         "lng": -80.3494993,
-        "category": "community"
-      },
-      {
-        "id": "rss_1789830899591_0ecs",
-        "title": {
-          "en": "KŌSA: A Collaboration by Chef Reiji and Chef Seiya 9/22/26, 9/23/26",
-          "es": "KŌSA: Una Colaboración del Chef Reiji y Chef Seiya 9/22/26, 9/23/26",
-          "pt": "KŌSA: Uma Colaboração do Chef Reiji e Chef Seiya 9/22/26, 9/23/26",
-          "fr": "KŌSA: Une Collaboration du Chef Reiji et Chef Seiya 9/22/26, 9/23/26"
-        },
-        "date": "2026-09-22",
-        "venue": "ELYU",
-        "address": "2626 Ponce de Leon Blvd Unit 3, Coral Gables, FL 33134",
-        "url": "https://www.soulofmiami.org/2026/09/18/kosa-a-collaboration-by-chef-reiji-and-chef-seiya-9-22-26-9-23-26/",
-        "free": false,
-        "price": "$349",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/ELYU-X-SEIYA-350x438.jpeg",
-        "description": {
-          "en": "Two chefs. Two cultural identities. One Japanese table.",
-          "es": "Dos chefs. Dos identidades culturales. Una mesa japonesa.",
-          "pt": "Dois chefs. Duas identidades culturais. Uma mesa japonesa.",
-          "fr": "Deux chefs. Deux identités culturelles. Une table japonaise."
-        },
-        "source": "Soul of Miami",
         "category": "community"
       },
       {
@@ -3845,30 +3769,6 @@
         "lng": -80.149426
       },
       {
-        "id": "rss_1790012717803_uuuz",
-        "title": {
-          "en": "Insider Gaze: Ella Fontanals-Cisneros on Photography 9/22/26",
-          "es": "Mirada Interna: Ella Fontanals-Cisneros sobre Fotografía 9/22/26",
-          "pt": "Olhar Insider: Ella Fontanals-Cisneros sobre Fotografia 9/22/26",
-          "fr": "Regard Intérieur : Ella Fontanals-Cisneros sur la Photographie 9/22/26"
-        },
-        "date": "2026-09-22",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/09/20/insider-gaze-ella-fontanals-cisneros-on-photography-9-22-26/",
-        "free": false,
-        "price": "$150",
-        "image": "",
-        "description": {
-          "en": "Join us for an intimate conversation on photography, collecting, and the ideas and relationships that shape meaningful collections. What draws a collector to a",
-          "es": "Únete a nosotros para una conversación íntima sobre fotografía, coleccionismo, y las ideas y relaciones que dan forma a colecciones significativas. Qué atrae a un coleccionista a",
-          "pt": "Junte-se a nós para uma conversa íntima sobre fotografia, colecionismo e as ideias e relacionamentos que moldam coleções significativas. O que atrai um colecionador para",
-          "fr": "Rejoignez-nous pour une conversation intime sur la photographie, la collecte et les idées et relations qui façonnent les collections significatives. Ce qui attire un collectionneur vers"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1790012717803_5m9e",
         "title": {
           "en": "Bodegas Emilio Moro Meet the Winemaker Dinner at Sunness Supper Club 10/6/26",
@@ -4023,32 +3923,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790093384347_9m8g",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-22",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
-          "es": "Varios · Familiar · Comienza 13:00 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 13:00 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Débute 13:00 · Centre de Conférences Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1790093384347_iurs",
         "title": {
           "en": "Gabrielle Bernstein: Time to Trust",
@@ -4125,6 +3999,236 @@
         "category": "music",
         "lat": 25.811899,
         "lng": -80.238998
+      },
+      {
+        "id": "rss_1790179156218_rf6a",
+        "title": {
+          "en": "The Dalmore 17-Year-Old Dinner 10/22/26",
+          "es": "La Cena del Dalmore de 17 Años 10/22/26",
+          "pt": "Jantar Dalmore 17 Anos 10/22/26",
+          "fr": "Le Dîner Dalmore 17 Ans 10/22/26"
+        },
+        "date": "2026-10-22",
+        "venue": "Trump National Doral Miami",
+        "address": "4400 NW 87th Ave, Miami, Florida, 33178",
+        "url": "https://www.soulofmiami.org/2026/09/22/the-dalmore-17-year-old-dinner-10-22-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/tnd-dalmore-350x252.jpg",
+        "description": {
+          "en": "the rich, refined character of The Dalmore 17-Year-Old, an exceptional Highland single malt created through meticulous multi-cask",
+          "es": "el carácter rico y refinado del Dalmore de 17 Años, un excepcional single malt de las Highlands creado a través de un meticuloso proceso de múltiples barriles",
+          "pt": "o caráter rico e refinado do Dalmore de 17 Anos, um excepcional single malt das Highlands criado através de um meticuloso processo de múltiplos barris",
+          "fr": "le caractère riche et raffiné du Dalmore 17 Ans, un exceptional single malt des Highlands créé à travers un processus minutieux de fûts multiples"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8332136,
+        "lng": -80.3380469,
+        "category": "music"
+      },
+      {
+        "id": "rss_1790179156218_oomj",
+        "title": {
+          "en": "Whistlepig Private Barrel Dinner 11/19/26",
+          "es": "Cena Privada de Barril Whistlepig 11/19/26",
+          "pt": "Jantar Barril Privado Whistlepig 11/19/26",
+          "fr": "Le Dîner Barrique Privée Whistlepig 11/19/26"
+        },
+        "date": "2026-11-19",
+        "venue": "Trump National Doral Miami",
+        "address": "4400 NW 87th Ave, Miami, Florida, 33179",
+        "url": "https://www.soulofmiami.org/2026/09/22/whistlepig-private-barrel-dinner-11-19-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/tnd-whistlepig-350x233.jpg",
+        "description": {
+          "en": "exclusively for Trump National Doral, this one-of-a-kind bespoke expression reimagines WhistlePig 12-Year-Old World Rye through a custom",
+          "es": "exclusivamente para Trump National Doral, esta expresión bespoke única reimagina el Whistlepig de 12 Años World Rye a través de una personalización",
+          "pt": "exclusivamente para Trump National Doral, esta expressão bespoke única reimagina o Whistlepig de 12 Anos World Rye através de uma personalização",
+          "fr": "exclusivement pour Trump National Doral, cette expression bespoke unique réimagine le Whistlepig 12 Ans World Rye à travers une personnalisation"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9499144,
+        "lng": -80.3425955,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790179156218_b9e3",
+        "title": {
+          "en": "The Glendronach Single Malt Scotch Dinner 12/17/26",
+          "es": "Cena de Single Malt Scotch The Glendronach 12/17/26",
+          "pt": "Jantar Single Malt Scotch The Glendronach 12/17/26",
+          "fr": "Le Dîner Single Malt Scotch The Glendronach 12/17/26"
+        },
+        "date": "2026-12-17",
+        "venue": "Trump National Doral Miami",
+        "address": "4400 NW 87th Ave, Miamia, Florida, 33178",
+        "url": "https://www.soulofmiami.org/2026/09/22/the-glendronach-single-malt-scotchdinner-12-17-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/tnd-glendronach-350x233.jpg",
+        "description": {
+          "en": "the season with The Glendronach, a timeless Highland single malt renowned for its mastery of",
+          "es": "la temporada con The Glendronach, un single malt de las Highlands atemporal renombrado por su dominio",
+          "pt": "a estação com o The Glendronach, um single malt das Highlands atemporal renomado pelo seu domínio",
+          "fr": "la saison avec le The Glendronach, un single malt des Highlands intemporel réputé pour sa maîtrise"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8197347,
+        "lng": -80.3421135,
+        "category": "music"
+      },
+      {
+        "id": "rss_1790179156218_wlwa",
+        "title": {
+          "en": "Free Full Moon Yoga experience at Shooters Waterfront 9/29/26",
+          "es": "Experiencia de Yoga de Luna Llena Gratis en Shooters Waterfront 9/29/26",
+          "pt": "Experiência Gratuita de Yoga de Lua Cheia em Shooters Waterfront 9/29/26",
+          "fr": "Expérience de Yoga Pleine Lune Gratuite à Shooters Waterfront 9/29/26"
+        },
+        "date": "2026-09-29",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/22/free-full-moon-yoga-experience-at-shooters-waterfront-sept-29-9-28-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/FULL-MOON-YOGA-5-350x438.png",
+        "description": {
+          "en": "Go with the flow under the glow of a full moon. On Tuesday, September",
+          "es": "Fluye con la luz de la luna llena. El martes, 29 de septiembre",
+          "pt": "Flua com o brilho da lua cheia. Na terça-feira, 29 de setembro",
+          "fr": "Allez avec le courant sous la lueur de la pleine lune. Le mardi, 29 septembre"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790179156218_968n",
+        "title": {
+          "en": "Photography Today – Artist Studio Visit with Anastasia Samoylova 10/13/26",
+          "es": "Fotografía Hoy – Visita al Estudio del Artista con Anastasia Samoylova 10/13/26",
+          "pt": "Fotografia Hoje – Visita ao Estúdio da Artista com Anastasia Samoylova 10/13/26",
+          "fr": "Photographie Aujourd'hui – Visite de Studio d'Artiste avec Anastasia Samoylova 10/13/26"
+        },
+        "date": "2026-10-13",
+        "venue": "Green Space Miami Miami, FL",
+        "address": "7200 Biscayne Boulevard Miami, FL, miami, Florida, 33138",
+        "url": "https://www.soulofmiami.org/2026/09/22/photography-today-artist-studio-visit-with-anastasia-samoylova-10-13-26/",
+        "free": false,
+        "price": "$150",
+        "image": "",
+        "description": {
+          "en": "Visit the studio of the acclaimed photographer and explore artistic",
+          "es": "Visita el estudio de la aclamada fotógrafa y explora el artístico",
+          "pt": "Visite o estúdio da aclamada fotógrafa e explore o artístico",
+          "fr": "Visitez l'atelier de la photographe acclamée et explorez l'artistique"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8413578,
+        "lng": -80.1846388,
+        "category": "community"
+      },
+      {
+        "id": "tm_1790179156720_hm6r",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-23",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
+          "es": "Varios · Familiar · Comienza 13:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Familiar · Começa 13:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Familial · Commence 13:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1790179156720_nfjr",
+        "title": {
+          "en": "Ernest Tsosie & Tonia Jo Hall - Classic Comedy Night Show",
+          "es": "Ernest Tsosie & Tonia Jo Hall - Noche de Comedia Clásica",
+          "pt": "Ernest Tsosie & Tonia Jo Hall - Noite de Comédia Clássica",
+          "fr": "Ernest Tsosie & Tonia Jo Hall - Soirée de Comédie Classique"
+        },
+        "date": "2026-09-25",
+        "venue": "Seminole Classic Casino",
+        "address": "4150 North State Road 7, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fernest-tsosie-tonia-jo-seminole-classic-casino-tickets%2F15010333&utm_medium=affiliate",
+        "free": false,
+        "price": "$49",
+        "image": "https://i.ticketweb.com/i/00/13/61/23/23_Edp.jpg?v=18",
+        "description": {
+          "en": "21+Seminole Classic Casino will host co-headlining Native American comedians Ernest Tsosie & Tonia Jo Hall for two live performances in Hollywood Hall! Ernie Tsosie, comedian and actor is a member of the Screen Actors Guild, his professional acting credits include the Netflix movie , \"rdquo\" -> Rez Ball\", as well as multiple appearances on the popular AMC TV shoes , \"rdquo\" -> Longmire\", , \"rdquo\"",
+          "es": "Mayores de 21 años. El Seminole Classic Casino presentará a los comediantes nativos americanos Ernest Tsosie y Tonia Jo Hall en dos presentaciones en vivo en Hollywood Hall. Ernie Tsosie, comediante y actor, es miembro del Screen Actors Guild, con créditos profesionales incluyendo la película de Netflix \"Rez Ball\" y múltiples apariciones en la serie de AMC \"Longmire\".",
+          "pt": "Maiores de 21 anos. O Seminole Classic Casino apresentará os comediantes nativos americanos Ernest Tsosie e Tonia Jo Hall em duas apresentações ao vivo no Hollywood Hall. Ernie Tsosie, comediante e ator, é membro do Screen Actors Guild, com créditos profissionais incluindo o filme da Netflix \"Rez Ball\" e múltiplas aparições na série da AMC \"Longmire\".",
+          "fr": "21 ans et plus. Le Seminole Classic Casino accueillera les comédiens autochtones Ernest Tsosie et Tonia Jo Hall pour deux représentations en direct au Hollywood Hall. Ernie Tsosie, comédien et acteur, est membre du Screen Actors Guild, avec des crédits professionnels incluant le film Netflix \"Rez Ball\" et de multiples apparitions dans la série AMC \"Longmire\"."
+        },
+        "source": "Ticketmaster",
+        "lat": 26.043172,
+        "lng": -80.209478,
+        "category": "comedy"
+      },
+      {
+        "id": "tm_1790179156720_k52l",
+        "title": {
+          "en": "Miami Marlins vs. Atlanta Braves",
+          "es": "Miami Marlins vs. Atlanta Braves",
+          "pt": "Miami Marlins vs. Atlanta Braves",
+          "fr": "Miami Marlins vs. Atlanta Braves"
+        },
+        "date": "2026-09-25",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0_&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 19:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 19:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 19:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 19:10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "cp_1790179157736_7frt",
+        "title": {
+          "en": "Bingo",
+          "es": "Bingo",
+          "pt": "Bingo",
+          "fr": "Bingo"
+        },
+        "date": "2026-09-25",
+        "venue": "Sherbondy Village Community Center",
+        "address": "215 N Perviz Ave  Opa-locka FL 33054",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "🏈🎉 Get ready for a fun-filled evening at the City of Opa-locka’s Community Bingo! Join us for bingo, prizes, and good times at our special football-themed event, and wear your favorite football paraphernalia! 🏆🎲    Hosted by Commissioner Natasha L. Ervin, the event takes place on Friday, September 25, 2026, at 6:00 PM at Sherbondy Auditorium, 215 Perviz Ave., Opa-locka, FL 33054. Bring your fa",
+          "es": "¡Prepárate para una noche llena de diversión en el Bingo Comunitario de la Ciudad de Opa-locka! Únete a nosotros para jugar bingo, ganar premios y pasarlo bien en nuestro evento especial con temática de fútbol americano. ¡Usa tu equipamiento de fútbol favorito! Organizado por la Comisionada Natasha L. Ervin, el evento se llevará a cabo el viernes 25 de septiembre de 2026 a las 6:00 PM en Sherbondy Auditorium, 215 Perviz Ave., Opa-locka, FL 33054.",
+          "pt": "Prepare-se para uma noite divertida no Bingo Comunitário da Cidade de Opa-locka! Junte-se a nós para bingo, prêmios e bons momentos em nosso evento especial com tema de futebol americano. Use seu equipamento de futebol favorito! Hospedado pela Comissária Natasha L. Ervin, o evento acontecerá na sexta-feira, 25 de setembro de 2026, às 18:00 no Sherbondy Auditorium, 215 Perviz Ave., Opa-locka, FL 33054.",
+          "fr": "Préparez-vous pour une soirée amusante au Bingo Communautaire de la Ville d'Opa-locka ! Rejoignez-nous pour du bingo, des prix et de bons moments lors de notre événement spécial sur le thème du football américain. Portez votre équipement de football préféré ! Organisé par la Commissaire Natasha L. Ervin, l'événement aura lieu vendredi 25 septembre 2026 à 18h00 au Sherbondy Auditorium, 215 Perviz Ave., Opa-locka, FL 33054."
+        },
+        "source": "Opa-locka",
+        "category": "community"
       }
     ]
   },
@@ -5028,7 +5132,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-22T16:10:08.143Z",
+    "fetchedAt": "2026-09-23T15:59:52.984Z",
     "items": []
   }
 }
