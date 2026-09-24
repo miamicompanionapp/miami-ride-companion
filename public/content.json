@@ -1,32 +1,45 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-23T15:59:53.915Z",
+    "lastUpdated": "2026-09-24T16:23:59.669Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-23T15:59:52.983Z",
+    "fetchedAt": "2026-09-24T16:23:55.256Z",
     "current": {
-      "temp_f": 78,
-      "feels_f": 85,
+      "temp_f": 84,
+      "feels_f": 96,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 95,
-      "wind_mph": 10,
-      "rain_chance": 71,
-      "weathercode": 65
+      "humidity": 75,
+      "wind_mph": 6,
+      "rain_chance": 19,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-09-23",
-        "high_f": 80,
+        "date": "2026-09-24",
+        "high_f": 85,
         "low_f": 75,
+        "weathercode": 3,
+        "rain_chance": 19,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
+      },
+      {
+        "date": "2026-09-25",
+        "high_f": 86,
+        "low_f": 74,
         "weathercode": 80,
-        "rain_chance": 71,
+        "rain_chance": 19,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -35,24 +48,11 @@
         }
       },
       {
-        "date": "2026-09-24",
-        "high_f": 85,
-        "low_f": 74,
-        "weathercode": 61,
-        "rain_chance": 21,
-        "description": {
-          "en": "Light rain",
-          "es": "Lluvia ligera",
-          "pt": "Chuva leve",
-          "fr": "Pluie légère"
-        }
-      },
-      {
-        "date": "2026-09-25",
-        "high_f": 87,
-        "low_f": 74,
+        "date": "2026-09-26",
+        "high_f": 86,
+        "low_f": 73,
         "weathercode": 51,
-        "rain_chance": 55,
+        "rain_chance": 29,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -61,176 +61,176 @@
         }
       },
       {
-        "date": "2026-09-26",
-        "high_f": 85,
-        "low_f": 81,
-        "weathercode": 53,
-        "rain_chance": 22,
+        "date": "2026-09-27",
+        "high_f": 84,
+        "low_f": 79,
+        "weathercode": 51,
+        "rain_chance": 11,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       },
       {
-        "date": "2026-09-27",
+        "date": "2026-09-28",
         "high_f": 85,
-        "low_f": 80,
-        "weathercode": 53,
-        "rain_chance": 32,
+        "low_f": 81,
+        "weathercode": 3,
+        "rain_chance": 34,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "11:00",
-        "temp_f": 78,
-        "weathercode": 51,
-        "rain_chance": 62
-      },
-      {
         "hour": "12:00",
-        "temp_f": 75,
-        "weathercode": 65,
-        "rain_chance": 61
+        "temp_f": 84,
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "13:00",
-        "temp_f": 76,
-        "weathercode": 65,
-        "rain_chance": 57
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "14:00",
-        "temp_f": 79,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 60
+        "rain_chance": 2
       },
       {
         "hour": "15:00",
-        "temp_f": 80,
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 60
+        "rain_chance": 3
       },
       {
         "hour": "16:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 56
+        "temp_f": 84,
+        "weathercode": 1,
+        "rain_chance": 7
       },
       {
         "hour": "17:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 48
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 11
       },
       {
         "hour": "18:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 44
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 29
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 23
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 15
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 76,
+        "temp_f": 80,
         "weathercode": 3,
         "rain_chance": 16
       },
       {
+        "hour": "19:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 19
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 14
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 10
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 11
+      },
+      {
         "hour": "23:00",
         "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 13
+        "weathercode": 0,
+        "rain_chance": 6
       },
       {
         "hour": "00:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 76,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "01:00",
         "temp_f": 76,
-        "weathercode": 61,
-        "rain_chance": 11
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "02:00",
         "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 11
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "03:00",
         "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 8
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "04:00",
         "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 8
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 7
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "07:00",
         "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 7
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "08:00",
         "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 1
       },
       {
         "hour": "09:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 8
+        "weathercode": 2,
+        "rain_chance": 1
       },
       {
         "hour": "10:00",
         "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 7
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 83,
+        "weathercode": 0,
+        "rain_chance": 0
       }
     ]
   },
@@ -1537,30 +1537,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1786366660903_roik",
-        "title": {
-          "en": "MOAD Talks with Sports Journalist Michelle Kaufman 9/23/26",
-          "es": "Charlas MOAD con la Periodista Deportiva Michelle Kaufman 9/23/26",
-          "pt": "Conversas MOAD com a Jornalista Esportiva Michelle Kaufman 9/23/26",
-          "fr": "Discussions MOAD avec la Journaliste Sportive Michelle Kaufman 9/23/26"
-        },
-        "date": "2026-09-23",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/08/08/moad-talks-with-sports-journalist-michelle-kaufman-9-23-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/MichelleKaufmanHeadShot-350x350.jpg",
-        "description": {
-          "en": "Join Amy Galpin, Executive Director of the Museum of Art and Design, for a lively conversation with",
-          "es": "Únase a Amy Galpin, Directora Ejecutiva del Museo de Arte y Diseño, para una animada conversación con",
-          "pt": "Junte-se a Amy Galpin, Diretora Executiva do Museu de Arte e Design, para uma conversa animada com",
-          "fr": "Rejoignez Amy Galpin, Directrice Exécutive du Musée d'Art et de Design, pour une conversation animée avec"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1786625954858_jrao",
         "title": {
           "en": "Herpreneur Artisan Market at The Goodtime Hotel 9/27/26",
@@ -1738,30 +1714,6 @@
         "source": "Soul of Miami",
         "lat": 25.8097172,
         "lng": -80.3309119,
-        "category": "community"
-      },
-      {
-        "id": "rss_1787143022212_mvad",
-        "title": {
-          "en": "Hive House Presents: The Room at Claudie 9/23/26",
-          "es": "Hive House Presenta: The Room at Claudie 9/23/26",
-          "pt": "Hive House Apresenta: The Room at Claudie 9/23/26",
-          "fr": "Hive House Présente: The Room at Claudie 9/23/26"
-        },
-        "date": "2026-09-23",
-        "venue": "Claudie",
-        "address": "1101 Brickell Ave., Suite S-113, Miami, Florida, 33131",
-        "url": "https://www.soulofmiami.org/2026/08/18/hive-house-presents-the-room-at-claudie-9-23-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/HHC-Claudie-Invite-350x467.png",
-        "description": {
-          "en": "House Members — Free (with member promo code) | Non-Members — $45 Hive House invites you",
-          "es": "Miembros de la Casa — Gratis (con código de promoción de miembro) | No Miembros — $45 Hive House te invita",
-          "pt": "Membros da Casa — Grátis (com código de promoção de membro) | Não Membros — $45 Hive House convida você",
-          "fr": "Membres de la Maison — Gratuit (avec code promo membre) | Non-Membres — $45 Hive House vous invite"
-        },
-        "source": "Soul of Miami",
         "category": "community"
       },
       {
@@ -4129,32 +4081,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790179156720_hm6r",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-23",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
-          "es": "Varios · Familiar · Comienza 13:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Familiar · Começa 13:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Familial · Commence 13:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1790179156720_nfjr",
         "title": {
           "en": "Ernest Tsosie & Tonia Jo Hall - Classic Comedy Night Show",
@@ -4229,6 +4155,238 @@
         },
         "source": "Opa-locka",
         "category": "community"
+      },
+      {
+        "id": "rss_1790266998146_kt5i",
+        "title": {
+          "en": "Asian Food Festival, with music and more, West Palm Beach, Sept. 25-27",
+          "es": "Festival de Comida Asiática, con música y más, West Palm Beach, 25-27 de septiembre",
+          "pt": "Festival de Comida Asiática, com música e muito mais, West Palm Beach, 25-27 de setembro",
+          "fr": "Festival de la Cuisine Asiatique, avec musique et plus, West Palm Beach, 25-27 septembre"
+        },
+        "date": "2026-09-24",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/asian-food-festival-with-music-and-more-west-palm-beach/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/08/asian-food-fest2-728x628.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Saigon Night Market presents a free, 3-day downtown family foodie event. World Asian Food Festival When: Friday-Sunday, Sept. 25-27, 2026, from 2 to 10 p.m. Where: Centennial Square, 150 N.... Copyright South Florida on the Cheap. The post Asian Food Festival, with music and more, West Palm Beach, Sept. 25-27 appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap presenta el Saigon Night Market, un evento familiar gratuito de 3 días en el centro de la ciudad. Festival Mundial de Comida Asiática Cuándo: Viernes-Domingo, 25-27 de septiembre de 2026, de 2 a 10 p.m. Dónde: Centennial Square, 150 N....",
+          "pt": "South Florida on the Cheap apresenta o Saigon Night Market, um evento familiar gratuito de 3 dias no centro da cidade. Festival Mundial de Comida Asiática Quando: Sexta-Domingo, 25-27 de setembro de 2026, de 14h às 22h Onde: Centennial Square, 150 N....",
+          "fr": "South Florida on the Cheap présente le Saigon Night Market, un événement familial gratuit de 3 jours au centre-ville. Festival Mondial de la Cuisine Asiatique Quand: Vendredi-Dimanche, 25-27 septembre 2026, de 14h à 22h Où: Centennial Square, 150 N...."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790266998146_ob6y",
+        "title": {
+          "en": "Two22 Wellness Event at The Goodtime Hotel 9/25/26",
+          "es": "Evento Two22 Wellness en The Goodtime Hotel 25/9/26",
+          "pt": "Evento Two22 Wellness no The Goodtime Hotel 25/9/26",
+          "fr": "Événement Two22 Wellness au The Goodtime Hotel 25/9/26"
+        },
+        "date": "2026-09-25",
+        "venue": "The Pool at The Goodtime Hotel",
+        "address": "601 Washington Ave., Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/23/two22-wellness-event-at-the-goodtime-hotel-9-25-26/",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Visit The Goodtime Hotel on Friday, Sept. 25, from 8:30 to 11:30",
+          "es": "Visita The Goodtime Hotel el viernes, 25 de septiembre, de 8:30 a 11:30",
+          "pt": "Visite o The Goodtime Hotel na sexta-feira, 25 de setembro, das 8:30 às 11:30",
+          "fr": "Visitez The Goodtime Hotel le vendredi 25 septembre, de 8h30 à 11h30"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7763327,
+        "lng": -80.1334166,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790266998146_1anl",
+        "title": {
+          "en": "Pink Power Yoga at InterContinental Miami 10/12/26",
+          "es": "Yoga Pink Power en InterContinental Miami 12/10/26",
+          "pt": "Yoga Pink Power no InterContinental Miami 12/10/26",
+          "fr": "Yoga Pink Power à InterContinental Miami 12/10/26"
+        },
+        "date": "2026-10-12",
+        "venue": "InterContinental Miami",
+        "address": "100 Chopin Plaza, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/09/23/pink-power-yoga-at-intercontinental-miami-10-12-26/",
+        "free": false,
+        "price": "$20",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/ICM-SkyLawn-Yoga-2-350x248.jpg",
+        "description": {
+          "en": "On Monday, October 12, the InterContinental Miami partners with Brie Mazen of Florida Yoga Mama for a meaningful",
+          "es": "El lunes 12 de octubre, InterContinental Miami se asocia con Brie Mazen de Florida Yoga Mama para una sesión significativa",
+          "pt": "Na segunda-feira, 12 de outubro, o InterContinental Miami se associa com Brie Mazen da Florida Yoga Mama para uma sessão significativa",
+          "fr": "Le lundi 12 octobre, l'InterContinental Miami s'associe avec Brie Mazen de Florida Yoga Mama pour une séance significative"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.772449,
+        "lng": -80.1854687,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790266998146_ii4h",
+        "title": {
+          "en": "Howl-O-Ween Paws Patio™ 10/28/26",
+          "es": "Howl-O-Ween Paws Patio™ 28/10/26",
+          "pt": "Howl-O-Ween Paws Patio™ 28/10/26",
+          "fr": "Howl-O-Ween Paws Patio™ 28/10/26"
+        },
+        "date": "2026-10-28",
+        "venue": "InterContinental Miami",
+        "address": "100 Chopin Plaza, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/09/23/howl-o-ween-paws-patio-10-28-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/DoggizenFoodFest81-350x233.jpg",
+        "description": {
+          "en": "Wednesday, October 28, treat your pup to a special spooky edition of Paws Patio™ as InterContinental Miami hosts its fourth annual",
+          "es": "Miércoles, 28 de octubre, regala a tu mascota una edición especial y aterradora de Paws Patio™ mientras InterContinental Miami alberga su cuarta edición anual",
+          "pt": "Quarta-feira, 28 de outubro, trate seu cachorro a uma edição especial e assustadora de Paws Patio™ enquanto InterContinental Miami sedia sua quarta edição anual",
+          "fr": "Mercredi 28 octobre, offrez à votre chien une édition spéciale et effrayante de Paws Patio™ tandis que l'InterContinental Miami accueille sa quatrième édition annuelle"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.772449,
+        "lng": -80.1854687,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790266998146_6n9k",
+        "title": {
+          "en": "Salsa Night Hosted by Salsa Lovers 10/2/26",
+          "es": "Noche de Salsa organizada por Salsa Lovers 2/10/26",
+          "pt": "Noite de Salsa organizada por Salsa Lovers 2/10/26",
+          "fr": "Soirée Salsa organisée par Salsa Lovers 2/10/26"
+        },
+        "date": "2026-10-02",
+        "venue": "InterContinental Miami",
+        "address": "100 Chopin Plaza, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/09/23/salsa-night-hosted-by-salsa-lovers-10-2-26/",
+        "free": false,
+        "price": "$15",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/noche-de-artes1-350x243.jpeg",
+        "description": {
+          "en": "Dress to impress, grab your dancing shoes and get ready for an unforgettable night with non-stop salsa dancing",
+          "es": "Vístete para impresionar, coge tus zapatos de baile y prepárate para una noche inolvidable con salsa sin parar",
+          "pt": "Vista-se para impressionar, pegue seus sapatos de dança e prepare-se para uma noite inesquecível com salsa o tempo todo",
+          "fr": "Habillez-vous pour impressionner, enfilez vos chaussures de danse et préparez-vous pour une soirée inoubliable avec de la salsa non-stop"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.772449,
+        "lng": -80.1854687,
+        "category": "community"
+      },
+      {
+        "id": "tm_1790266998723_1uuq",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte Es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte É Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-24",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
+          "es": "Misceláneo · Familia · Comienza a las 13:00 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa às 13:00 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence à 13:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1790266998723_dlvf",
+        "title": {
+          "en": "Friday Night Live - Improv Comedy Miami Show",
+          "es": "Viernes por la Noche en Vivo - Show de Comedia Improvisada en Miami",
+          "pt": "Sexta à Noite ao Vivo - Show de Comédia de Improvisação em Miami",
+          "fr": "Vendredi Soir en Direct - Spectacle de Comédie d'Improvisation à Miami"
+        },
+        "date": "2026-09-25",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897503&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
+          "es": "¡Viernes por la Noche! - Comedia improvisada en Miami. La combinación especial de JTF de improvisación corta y larga. Disfruta mientras nuestro elenco ganador de premios te trae una improvisación fantástica perfecta para tu noche de viernes. Nuestros shows se describen a menudo como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway meets SNL con mucha interacción con la audiencia.",
+          "pt": "Sexta à Noite ao Vivo! - Comédia de improvisação em Miami. A combinação especial de JTF de improvisação de curta e longa duração. Aproveite enquanto nosso elenco premiado traz uma improvisação fantástica perfeita para sua noite de sexta. Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense nisso como Whose Line is It Anyway encontra SNL com muita interação com o público.",
+          "fr": "Vendredi Soir en Direct ! - Comédie d'improvisation à Miami. La combinaison spéciale de JTF d'improvisation courte et longue. Profitez pendant que notre cast primé vous apporte une improvisation fantastique parfaite pour votre vendredi soir. Nos spectacles sont souvent décrits comme de la comédie improvisée au rythme rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction avec le public."
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1790266998723_ishz",
+        "title": {
+          "en": "¡Dale! Impro - Impro en español",
+          "es": "¡Dale! Impro - Impro en español",
+          "pt": "¡Dale! Impro - Impro em Espanhol",
+          "fr": "¡Dale! Impro - Impro en Espagnol"
+        },
+        "date": "2026-09-25",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdale-impro-impro-just-the-funny-tickets%2F14338304&utm_medium=affiliate",
+        "free": false,
+        "price": "$18",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único... y cualquier cosa puede pasar. Aquí el público tiene la palabra",
+          "es": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único... y cualquier cosa puede pasar. Aquí el público tiene la palabra.",
+          "pt": "Prepare-se para uma noite em que você pode fazer parte do show! ¡Dale! Impro é comédia de improvisação em espanhol e Spanglish, com toda a energia, sabor e diversidade de Miami. Sem script e sem filtros, um elenco internacional transforma as sugestões do público em cenas interativas, inesperadas e cheias de humor. Cada show é único... e qualquer coisa pode acontecer. Aqui o público tem a palavra.",
+          "fr": "Préparez-vous pour une soirée où vous pouvez être partie du spectacle ! ¡Dale! Impro est de la comédie improvisée en espagnol et Spanglish, avec toute l'énergie, la saveur et la diversité de Miami. Sans script et sans filtres, une distribution internationale transforme les suggestions du public en scènes interactives, inattendues et pleines d'humour. Chaque spectacle est unique... et n'importe quoi peut arriver. Ici, le public a la parole."
+        },
+        "source": "Ticketmaster",
+        "lat": 25.750417,
+        "lng": -80.244412,
+        "category": "comedy"
+      },
+      {
+        "id": "tm_1790266998723_f1u3",
+        "title": {
+          "en": "Aerial Arts Society Competition 2026",
+          "es": "Competencia de Artes Aéreas 2026",
+          "pt": "Competição de Artes Aéreas 2026",
+          "fr": "Compétition des Arts Aériens 2026"
+        },
+        "date": "2026-09-26",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Faerial-arts-society-competition-2026-ft-lauderdale-florida-09-26-2026%2Fevent%2F0D006504E0F18862&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "THIS EVENT IS AT THE ROSE AND ALFRED MINIACI PERFORMING ARTS CENTER ON THE NOVA SOUTHEASTERN UNIVERSITY CAMPUS. Parking is available in the NSU Alvin Sherman Library parking garage for $1.00 per hour via PayByPhone.com App or kiosk located at the 1st floor elevators. Before you go to the show, visit MiniaciPAC.com/visit for more info on directions to the NSU campus, parking and FAQ. Use 3051 Ray F",
+          "es": "ESTE EVENTO ESTÁ EN EL CENTRO DE ARTES ESCÉNICAS ROSE Y ALFRED MINIACI EN EL CAMPUS DE LA UNIVERSIDAD NOVA SOUTHEASTERN. El estacionamiento está disponible en el garaje de estacionamiento de la Biblioteca Alvin Sherman de NSU por $1.00 por hora a través de la aplicación PayByPhone.com o el quiosco ubicado en los ascensores del primer piso. Antes de ir al espectáculo, visite MiniaciPAC.com/visit para más información sobre direcciones al campus de NSU, estacionamiento y preguntas frecuentes.",
+          "pt": "ESTE EVENTO ESTÁ NO CENTRO DE ARTES CÊNICAS ROSE E ALFRED MINIACI NO CAMPUS DA UNIVERSIDADE NOVA SOUTHEASTERN. Estacionamento está disponível no garagem de estacionamento da Biblioteca Alvin Sherman da NSU por $1.00 por hora através do aplicativo PayByPhone.com ou quiosque localizado nos elevadores do primeiro andar. Antes de ir ao show, visite MiniaciPAC.com/visit para mais informações sobre direções para o campus da NSU, estacionamento e perguntas frequentes.",
+          "fr": "CET ÉVÉNEMENT SE DÉROULE AU CENTRE DES ARTS DU SPECTACLE ROSE ET ALFRED MINIACI SUR LE CAMPUS DE L'UNIVERSITÉ NOVA SOUTHEASTERN. Le stationnement est disponible au garage de stationnement de la Bibliothèque Alvin Sherman de NSU pour 1,00 $ par heure via l'application PayByPhone.com ou le kiosque situé aux ascenseurs du premier étage. Avant d'aller au spectacle, visitez MiniaciPAC.com/visit pour plus d'informations sur les directions vers le campus NSU, le stationnement et les FAQ."
+        },
+        "source": "Ticketmaster",
+        "lat": 26.0884017,
+        "lng": -80.2461624,
+        "category": "music"
       }
     ]
   },
@@ -5132,7 +5290,29 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-23T15:59:52.984Z",
-    "items": []
+    "fetchedAt": "2026-09-24T16:23:55.256Z",
+    "items": [
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.6215afa4c24e6211c16967882e4ae9a02a488758.002.1",
+        "type": "weather",
+        "severity": "moderate",
+        "title": {
+          "en": "Rip Current Statement",
+          "es": "Aviso de Corrientes de Resaca",
+          "pt": "Aviso de Correntes de Retorno",
+          "fr": "Avis de Courants de Baïn"
+        },
+        "detail": {
+          "en": "* WHAT...Dangerous rip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...From Friday afternoon through Saturday morning.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+          "es": "* QUÉ...Se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Zona costera del Condado de Broward y Zona costera del Condado de Miami-Dade.\n\n* CUÁNDO...Desde el viernes por la tarde hasta el sábado por la mañana.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la costa hacia aguas más profundas.",
+          "pt": "* O QUÊ...Correntes de retorno perigosas esperadas.\n\n* ONDE...Litoral do Condado de Broward e Litoral do Condado de Miami-Dade.\n\n* QUANDO...De sexta-feira à tarde até sábado de manhã.\n\n* IMPACTOS...As correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da costa em direção a águas mais profundas.",
+          "fr": "* QUOI...Courants d'arrachement dangereux attendus.\n\n* OÙ...Zone côtière du comté de Broward et zone côtière du comté de Miami-Dade.\n\n* QUAND...Vendredi après-midi jusqu'à samedi matin.\n\n* IMPACTS...Les courants d'arrachement peuvent entraîner même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6215afa4c24e6211c16967882e4ae9a02a488758.002.1",
+        "effectiveAt": "2026-09-24T11:54:00-04:00",
+        "expiresAt": "2026-09-25T16:23:55.256Z"
+      }
+    ]
   }
 }
