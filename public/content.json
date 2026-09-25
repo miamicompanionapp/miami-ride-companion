@@ -1,44 +1,31 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-24T16:23:59.669Z",
+    "lastUpdated": "2026-09-25T16:24:41.722Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-24T16:23:55.256Z",
+    "fetchedAt": "2026-09-25T16:24:33.628Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 96,
+      "temp_f": 83,
+      "feels_f": 92,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 75,
-      "wind_mph": 6,
+      "humidity": 81,
+      "wind_mph": 9,
       "rain_chance": 19,
       "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-09-24",
-        "high_f": 85,
-        "low_f": 75,
-        "weathercode": 3,
-        "rain_chance": 19,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-09-25",
-        "high_f": 86,
-        "low_f": 74,
-        "weathercode": 80,
+        "high_f": 84,
+        "low_f": 75,
+        "weathercode": 82,
         "rain_chance": 19,
         "description": {
           "en": "Rain showers",
@@ -49,186 +36,199 @@
       },
       {
         "date": "2026-09-26",
-        "high_f": 86,
-        "low_f": 73,
-        "weathercode": 51,
-        "rain_chance": 29,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
-        "date": "2026-09-27",
         "high_f": 84,
-        "low_f": 79,
-        "weathercode": 51,
-        "rain_chance": 11,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
-        "date": "2026-09-28",
-        "high_f": 85,
-        "low_f": 81,
+        "low_f": 73,
         "weathercode": 3,
-        "rain_chance": 34,
+        "rain_chance": 13,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
           "pt": "Encoberto",
           "fr": "Couvert"
         }
+      },
+      {
+        "date": "2026-09-27",
+        "high_f": 85,
+        "low_f": 71,
+        "weathercode": 55,
+        "rain_chance": 35,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-09-28",
+        "high_f": 86,
+        "low_f": 79,
+        "weathercode": 51,
+        "rain_chance": 35,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-09-29",
+        "high_f": 87,
+        "low_f": 81,
+        "weathercode": 96,
+        "rain_chance": 70,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "12:00",
-        "temp_f": 84,
-        "weathercode": 2,
-        "rain_chance": 1
+        "temp_f": 82,
+        "weathercode": 1,
+        "rain_chance": 0
       },
       {
         "hour": "13:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 84,
+        "weathercode": 1,
+        "rain_chance": 0
       },
       {
         "hour": "14:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 2
+        "temp_f": 83,
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "15:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 7
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 11
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 16
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 19
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 14
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 10
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 11
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 6
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 76,
+        "temp_f": 83,
         "weathercode": 0,
         "rain_chance": 4
       },
       {
-        "hour": "02:00",
-        "temp_f": 76,
+        "hour": "16:00",
+        "temp_f": 82,
+        "weathercode": 2,
+        "rain_chance": 7
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 10
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 10
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 13
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 19
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 14
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 75,
+        "weathercode": 1,
+        "rain_chance": 4
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 4
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 74,
+        "weathercode": 1,
+        "rain_chance": 3
       },
       {
         "hour": "03:00",
-        "temp_f": 75,
+        "temp_f": 74,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 73,
         "weathercode": 0,
         "rain_chance": 2
       },
       {
-        "hour": "04:00",
-        "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
         "hour": "05:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 1
+        "temp_f": 74,
+        "weathercode": 1,
+        "rain_chance": 2
       },
       {
         "hour": "06:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 1
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "07:00",
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
+        "hour": "08:00",
         "temp_f": 74,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
-        "hour": "08:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 1
-      },
-      {
         "hour": "09:00",
-        "temp_f": 78,
-        "weathercode": 2,
-        "rain_chance": 1
-      },
-      {
-        "hour": "10:00",
-        "temp_f": 80,
+        "temp_f": 77,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
+        "hour": "10:00",
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 0
+      },
+      {
         "hour": "11:00",
-        "temp_f": 83,
+        "temp_f": 82,
         "weathercode": 0,
         "rain_chance": 0
       }
@@ -1767,30 +1767,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1787315837975_3jyg",
-        "title": {
-          "en": "Join Uchi & Uchiba For A Limited Time Collab: Uchi’s Summer Dinner Series 9/24/26",
-          "es": "Únase a Uchi y Uchiba para una Colaboración por Tiempo Limitado: Serie de Cenas de Verano de Uchi 9/24/26",
-          "pt": "Junte-se à Uchi e Uchiba para uma Colaboração por Tempo Limitado: Série de Jantares de Verão de Uchi 9/24/26",
-          "fr": "Rejoignez Uchi et Uchiba pour une Collaboration Limitée: Série de Dîners d'Été d'Uchi 9/24/26"
-        },
-        "date": "2026-09-24",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/08/20/join-uchi-uchiba-for-a-limited-time-collab-uchis-summer-dinner-series-9-24-26/",
-        "free": false,
-        "price": "$150",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Sushi-350x233.jpg",
-        "description": {
-          "en": "Uchi Miami’s iconic Summer Dinner Series concludes with a",
-          "es": "La icónica Serie de Cenas de Verano de Uchi Miami concluye con",
-          "pt": "A icônica Série de Jantares de Verão de Uchi Miami conclui com",
-          "fr": "La célèbre Série de Dîners d'Été d'Uchi Miami se termine par"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1787401780275_oz9a",
         "title": {
           "en": "The South Florida Pride Concert Band: Waves And Wanderers 11/7/26",
@@ -2227,32 +2203,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1788618474335_dv4x",
-        "title": {
-          "en": "Disrupting a Brilliant Colony 9/24/26",
-          "es": "Interrumpiendo una Colonia Brillante 9/24/26",
-          "pt": "Interrompendo uma Colônia Brilhante 9/24/26",
-          "fr": "Perturber une Colonie Brillante 9/24/26"
-        },
-        "date": "2026-09-24",
-        "venue": "Kislak Center at the University of Miami Otto G. Richter Library,",
-        "address": "1300 Memorial Dr, Coral Gables, FL, 33146",
-        "url": "https://www.soulofmiami.org/2026/09/04/disrupting-a-brilliant-colony-9-24-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Events-Localist-940x557-6-350x207.jpg",
-        "description": {
-          "en": "Join us for an evening with Cristina Soriano as",
-          "es": "Únase a nosotros para una velada con Cristina Soriano",
-          "pt": "Junte-se a nós para uma noite com Cristina Soriano",
-          "fr": "Rejoignez-nous pour une soirée avec Cristina Soriano"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7211339,
-        "lng": -80.2787553,
-        "category": "community"
-      },
-      {
         "id": "rss_1788800862466_wrq5",
         "title": {
           "en": "Dining in the Dark benefiting Lighthouse of Broward 11/14/26",
@@ -2329,32 +2279,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1789224839464_tala",
-        "title": {
-          "en": "Sounds of Screams Amusement Park 9/24/26",
-          "es": "Sonidos de Gritos Parque de Diversiones 9/24/26",
-          "pt": "Sons de Gritos Parque de Diversões 9/24/26",
-          "fr": "Sons de Cris Parc d'Attractions 9/24/26"
-        },
-        "date": "2026-09-24",
-        "venue": "Miami Dade County Fair & Expo Center",
-        "address": "10901 SW 24th St., Miami, Florida, 33165",
-        "url": "https://www.soulofmiami.org/2026/09/11/sounds-of-screams-amusement-park-9-24-26/",
-        "free": false,
-        "price": "$100",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/SOS-Image1-350x438.jpg",
-        "description": {
-          "en": "admission tickets start at $49.99. Fast pass tickets cost $99.99 (plus fee). Sounds",
-          "es": "Los boletos de admisión comienzan en $49.99. Los boletos Fast Pass cuestan $99.99 (más tarifa). Sonidos",
-          "pt": "Os ingressos de admissão começam em $49,99. Os ingressos Fast Pass custam $99,99 (mais taxa). Sons",
-          "fr": "Les billets d'admission commencent à $49,99. Les billets Fast Pass coûtent $99,99 (plus frais). Sons"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7479605,
-        "lng": -80.3719746,
-        "category": "community"
-      },
-      {
         "id": "rss_1789224839464_6oma",
         "title": {
           "en": "Spooktacular Miami City Cemetery Walking Tour 10/30/26",
@@ -2427,32 +2351,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1789313458391_nkwy",
-        "title": {
-          "en": "TLC & Salt-N-Pepa with En Vogue - IT'S ICONIC",
-          "es": "TLC y Salt-N-Pepa con En Vogue - ES ICÓNICO",
-          "pt": "TLC e Salt-N-Pepa com En Vogue - É ICÔNICO",
-          "fr": "TLC et Salt-N-Pepa avec En Vogue - C'EST ICONIQUE"
-        },
-        "date": "2026-09-24",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftlc-saltnpepa-with-en-vogue-its-hollywood-florida-09-24-2026%2Fevent%2F0D00647198F882CC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b0b/5d495c78-fdc3-461e-b1f2-51333c23ab0b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Hip-Hop/Rap · Starts 19:30 · Hard Rock Live",
-          "es": "Música · Hip-Hop/Rap · Comienza 19:30 · Hard Rock Live",
-          "pt": "Música · Hip-Hop/Rap · Começa 19:30 · Hard Rock Live",
-          "fr": "Musique · Hip-Hop/Rap · Commence 19h30 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
       },
       {
         "id": "tm_1789313458391_zl28",
@@ -3153,32 +3051,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1789830899591_aj18",
-        "title": {
-          "en": "House of Rare x Seiya 9/24/26",
-          "es": "House of Rare x Seiya 9/24/26",
-          "pt": "House of Rare x Seiya 9/24/26",
-          "fr": "House of Rare x Seiya 9/24/26"
-        },
-        "date": "2026-09-24",
-        "venue": "Seiya",
-        "address": "2889 McFarlane Road, Miami, FL 33133",
-        "url": "https://www.soulofmiami.org/2026/09/18/house-of-rare-x-seiya-9-24-26/",
-        "free": false,
-        "price": "$40",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/3D0A4712-Credit_-Flow-Gallery-350x233.jpg",
-        "description": {
-          "en": "for the tasting experience; $60 for the tasting experience and a bottle of House of Rare Blanco",
-          "es": "por la experiencia de degustación; $60 por la experiencia de degustación y una botella de House of Rare Blanco",
-          "pt": "pela experiência de degustação; $60 pela experiência de degustação e uma garrafa de House of Rare Blanco",
-          "fr": "pour l'expérience de dégustation; 60$ pour l'expérience de dégustation et une bouteille de House of Rare Blanco"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7272419,
-        "lng": -80.2406523,
-        "category": "community"
-      },
-      {
         "id": "rss_1789830899591_c2qw",
         "title": {
           "en": "MOAD Talks with Dr. Mauricio Castro 11/4/26",
@@ -3875,32 +3747,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790093384347_iurs",
-        "title": {
-          "en": "Gabrielle Bernstein: Time to Trust",
-          "es": "Gabrielle Bernstein: Es Hora de Confiar",
-          "pt": "Gabrielle Bernstein: Hora de Confiar",
-          "fr": "Gabrielle Bernstein: Le Moment de Faire Confiance"
-        },
-        "date": "2026-09-24",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgabrielle-bernstein-time-to-trust-miami-beach-florida-09-24-2026%2Fevent%2F0D006445B5A48814&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c2f/081cde70-52a7-4a1b-b6ca-043954c0cc2f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Lecture/Seminar · Starts 19:30 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Varios · Conferencia/Seminario · Comienza 19:30 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Diversos · Palestra/Seminário · Começa 19:30 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Divers · Conférence/Séminaire · Débute 19:30 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.792917,
-        "lng": -80.13314,
-        "category": "music"
-      },
-      {
         "id": "tm_1790093384347_krn9",
         "title": {
           "en": "Eli Brown - Ages 18+",
@@ -4157,30 +4003,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1790266998146_kt5i",
-        "title": {
-          "en": "Asian Food Festival, with music and more, West Palm Beach, Sept. 25-27",
-          "es": "Festival de Comida Asiática, con música y más, West Palm Beach, 25-27 de septiembre",
-          "pt": "Festival de Comida Asiática, com música e muito mais, West Palm Beach, 25-27 de setembro",
-          "fr": "Festival de la Cuisine Asiatique, avec musique et plus, West Palm Beach, 25-27 septembre"
-        },
-        "date": "2026-09-24",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/asian-food-festival-with-music-and-more-west-palm-beach/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/08/asian-food-fest2-728x628.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Saigon Night Market presents a free, 3-day downtown family foodie event. World Asian Food Festival When: Friday-Sunday, Sept. 25-27, 2026, from 2 to 10 p.m. Where: Centennial Square, 150 N.... Copyright South Florida on the Cheap. The post Asian Food Festival, with music and more, West Palm Beach, Sept. 25-27 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap presenta el Saigon Night Market, un evento familiar gratuito de 3 días en el centro de la ciudad. Festival Mundial de Comida Asiática Cuándo: Viernes-Domingo, 25-27 de septiembre de 2026, de 2 a 10 p.m. Dónde: Centennial Square, 150 N....",
-          "pt": "South Florida on the Cheap apresenta o Saigon Night Market, um evento familiar gratuito de 3 dias no centro da cidade. Festival Mundial de Comida Asiática Quando: Sexta-Domingo, 25-27 de setembro de 2026, de 14h às 22h Onde: Centennial Square, 150 N....",
-          "fr": "South Florida on the Cheap présente le Saigon Night Market, un événement familial gratuit de 3 jours au centre-ville. Festival Mondial de la Cuisine Asiatique Quand: Vendredi-Dimanche, 25-27 septembre 2026, de 14h à 22h Où: Centennial Square, 150 N...."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
         "id": "rss_1790266998146_ob6y",
         "title": {
           "en": "Two22 Wellness Event at The Goodtime Hotel 9/25/26",
@@ -4285,32 +4107,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790266998723_1uuq",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte Es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte É Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art Est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-24",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 13:00 · Mana Wynwood Convention Center",
-          "es": "Misceláneo · Familia · Comienza a las 13:00 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa às 13:00 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence à 13:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1790266998723_dlvf",
         "title": {
           "en": "Friday Night Live - Improv Comedy Miami Show",
@@ -4387,6 +4183,334 @@
         "lat": 26.0884017,
         "lng": -80.2461624,
         "category": "music"
+      },
+      {
+        "id": "rss_1790353431971_3gqc",
+        "title": {
+          "en": "Nights in Northwood Village, West Palm Beach, Sept. 25 & Nov. 27",
+          "es": "Noches en Northwood Village, West Palm Beach, 25 de sept. y 27 de nov.",
+          "pt": "Noites em Northwood Village, West Palm Beach, 25 de set. e 27 de nov.",
+          "fr": "Nuits à Northwood Village, West Palm Beach, 25 sept. et 27 nov."
+        },
+        "date": "2026-09-25",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/nights-in-northwood-village-west-palm-beach/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/03/northwood-25-728x410.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Northwood Village in West Palm Beach is hosting a free night of fun, food and family festivities, plus shopping opportunities, with holiday lights, one-of-a-kind holiday gifts from local artisans, and... Copyright South Florida on the Cheap. The post Nights in Northwood Village, West Palm Beach, Sept. 25 & Nov. 27 appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap Northwood Village en West Palm Beach presenta una noche gratuita de diversión, comida y festividades familiares, además de oportunidades de compra, con luces navideñas, regalos navideños únicos de artesanos locales, y más.",
+          "pt": "South Florida on the Cheap Northwood Village em West Palm Beach apresenta uma noite gratuita de diversão, comida e festividades familiares, além de oportunidades de compras, com luzes de férias, presentes de férias únicos de artesãos locais, e muito mais.",
+          "fr": "South Florida on the Cheap Northwood Village à West Palm Beach présente une nuit gratuite de plaisir, de nourriture et de festivités familiales, ainsi que des opportunités d'achat, avec des lumières festives, des cadeaux de vacances uniques d'artisans locaux, et plus."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790353431971_tc0k",
+        "title": {
+          "en": "Asian Food Festival, with music and more, West Palm Beach, Sept. 25-27",
+          "es": "Festival de Comida Asiática, con música y más, West Palm Beach, 25-27 de sept.",
+          "pt": "Festival de Comida Asiática, com música e muito mais, West Palm Beach, 25-27 de set.",
+          "fr": "Festival de Cuisine Asiatique, avec musique et plus, West Palm Beach, 25-27 sept."
+        },
+        "date": "2026-09-25",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/asian-food-festival-with-music-and-more-west-palm-beach/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/08/asian-food-fest2-728x628.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Saigon Night Market presents a free, 3-day downtown family foodie event. World Asian Food Festival When: Friday-Sunday, Sept. 25-27, 2026, from 2 to 10 p.m. Where: Centennial Square, 150 N.... Copyright South Florida on the Cheap. The post Asian Food Festival, with music and more, West Palm Beach, Sept. 25-27 appeared first on South Florida on the Cheap.",
+          "es": "Saigon Night Market presenta un evento gratuito de 3 días para toda la familia en el centro. Festival Mundial de Comida Asiática. Cuándo: viernes a domingo, 25-27 de septiembre de 2026, de 2 a 10 p.m. Dónde: Centennial Square, 150 N.",
+          "pt": "Saigon Night Market apresenta um evento gratuito de 3 dias para a família no centro. Festival Mundial de Comida Asiática. Quando: sexta a domingo, 25-27 de setembro de 2026, das 14h às 22h. Onde: Centennial Square, 150 N.",
+          "fr": "Saigon Night Market présente un événement gratuit de 3 jours pour toute la famille au centre-ville. Festival Mondial de Cuisine Asiatique. Quand: vendredi-dimanche, 25-27 septembre 2026, de 14h à 22h. Où: Centennial Square, 150 N."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790353431972_afcq",
+        "title": {
+          "en": "Thundercat wants to distract Miami",
+          "es": "Thundercat quiere distraer Miami",
+          "pt": "Thundercat quer distrair Miami",
+          "fr": "Thundercat veut distraire Miami"
+        },
+        "date": "2026-09-25",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/music/thundercat-wants-to-distract-miami-40587562/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2025/10/Thundercat.jpg",
+        "description": {
+          "en": "The LA provocateur will bring his Distracted AF tour to the Miami Beach Bandshell on Oct. 2.",
+          "es": "El provocador de LA traerá su gira Distracted AF al Miami Beach Bandshell el 2 de octubre.",
+          "pt": "O provocador de LA trará sua turnê Distracted AF para o Miami Beach Bandshell em 2 de outubro.",
+          "fr": "Le provocateur de LA apportera sa tournée Distracted AF au Miami Beach Bandshell le 2 octobre."
+        },
+        "source": "Miami New Times",
+        "category": "music"
+      },
+      {
+        "id": "rss_1790353431972_uj9q",
+        "title": {
+          "en": "Queen Symphony Sensation Miami 3/2/27",
+          "es": "Queen Symphony Sensation Miami 3/2/27",
+          "pt": "Queen Symphony Sensation Miami 3/2/27",
+          "fr": "Queen Symphony Sensation Miami 3/2/27"
+        },
+        "date": "2027-03-02",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/24/queen-symphony-sensation-miami-3-2-27/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/QSS-Miami-350x98.jpg",
+        "description": {
+          "en": "$49.67 Queen Symphony Sensation brings together 28 performers for a large scale live celebration",
+          "es": "$49.67 Queen Symphony Sensation reúne a 28 artistas para una gran celebración en vivo",
+          "pt": "$49.67 Queen Symphony Sensation reúne 28 artistas para uma grande celebração ao vivo",
+          "fr": "$49.67 Queen Symphony Sensation réunit 28 artistes pour une grande célébration en direct"
+        },
+        "source": "Soul of Miami",
+        "category": "music"
+      },
+      {
+        "id": "rss_1790353431972_ce0h",
+        "title": {
+          "en": "Plastic is Scary: Beach Cleanup, Guided Eco Walk, & Halloween Costume Swap 10/10/26",
+          "es": "El plástico es aterrador: Limpieza de playas, Caminata ecológica guiada e Intercambio de disfraces de Halloween 10/10/26",
+          "pt": "Plástico é assustador: Limpeza de praia, Caminhada ecológica guiada e Troca de fantasias de Halloween 10/10/26",
+          "fr": "Le plastique est effrayant: Nettoyage de plage, Promenade écologique guidée et Échange de costumes d'Halloween 10/10/26"
+        },
+        "date": "2026-10-10",
+        "venue": "Historic Virginia Key Beach Park",
+        "address": "4020 Virginia Beach Dr, Miami, Florida, 33149",
+        "url": "https://www.soulofmiami.org/2026/09/24/plastic-is-scary-beach-cleanup-guided-eco-walk-halloween-costume-swap-10-10-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/IMG_1829-338x500.png",
+        "description": {
+          "en": "Join Debris Free Oceans, MORAES, & Earth Breeze",
+          "es": "Únete a Debris Free Oceans, MORAES y Earth Breeze",
+          "pt": "Junte-se a Debris Free Oceans, MORAES e Earth Breeze",
+          "fr": "Rejoignez Debris Free Oceans, MORAES et Earth Breeze"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7363873,
+        "lng": -80.1561823,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790353431972_8qnt",
+        "title": {
+          "en": "Ghost Haunting on the Rails 10/31/26",
+          "es": "Fantasmas Acechando en las Vías 10/31/26",
+          "pt": "Fantasmas Assombrados nos Trilhos 10/31/26",
+          "fr": "Fantômes Hantant les Rails 10/31/26"
+        },
+        "date": "2026-10-31",
+        "venue": "Gold Coast Railroad Museum",
+        "address": "12450 SW 152nd St, Miami, Florida, 33177",
+        "url": "https://www.soulofmiami.org/2026/09/24/ghost-haunting-on-the-rails-10-31-26/",
+        "free": false,
+        "price": "$44",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Ghost-Haunting-on-the-Rails-350x175.jpeg",
+        "description": {
+          "en": "Step into the shadows at the Gold Coast Railroad Museum for a thrilling night of paranormal",
+          "es": "Adéntrate en las sombras del Gold Coast Railroad Museum para una noche emocionante llena de fenómenos paranormales",
+          "pt": "Entre nas sombras do Gold Coast Railroad Museum para uma noite emocionante cheia de fenômenos paranormais",
+          "fr": "Plongez dans les ombres du Gold Coast Railroad Museum pour une nuit palpitante remplie de phénomènes paranormaux"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.6252557,
+        "lng": -80.394,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790353431972_pwr4",
+        "title": {
+          "en": "Voices of a Changing Cuba 10/7/26",
+          "es": "Voces de una Cuba en Cambio 10/7/26",
+          "pt": "Vozes de uma Cuba em Mudança 10/7/26",
+          "fr": "Voix d'une Cuba en Changement 10/7/26"
+        },
+        "date": "2026-10-07",
+        "venue": "Roberto C. Goizueta Pavilion",
+        "address": "1300 Memorial Dr, Coral Gables, FL, 33146",
+        "url": "https://www.soulofmiami.org/2026/09/24/voices-of-a-changing-cuba-10-7-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Events_Eventbrite-2160x1080-1-350x175.jpg",
+        "description": {
+          "en": "Join the Cuban Heritage Collection for a special evening featuring Cuban dissidents and artists Luis",
+          "es": "Únete a la Colección de Patrimonio Cubano para una velada especial con disidentes y artistas cubanos Luis",
+          "pt": "Junte-se à Coleção de Patrimônio Cubano para uma noite especial apresentando dissidentes e artistas cubanos Luis",
+          "fr": "Rejoignez la Collection du Patrimoine Cubain pour une soirée spéciale présentant des dissidents et artistes cubains Luis"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7211339,
+        "lng": -80.2787553,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790353431972_2rwv",
+        "title": {
+          "en": "Girl Dinner at The Norton Museum of Art 10/15/26",
+          "es": "Cena Casual en el Museo Norton de Arte 10/15/26",
+          "pt": "Jantar Casual no Museu Norton de Arte 10/15/26",
+          "fr": "Dîner Décontracté au Musée d'Art Norton 10/15/26"
+        },
+        "date": "2026-10-15",
+        "venue": "The Restaurant at The Norton Museum of Art",
+        "address": "1450 S. Dixie Highway, West Palm Beach Farms, Florida, 33401",
+        "url": "https://www.soulofmiami.org/2026/09/24/girl-dinner-at-the-norton-museum-of-art-10-15-26/",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "the fries, pour the martinis, and",
+          "es": "las papas fritas, vierte los martinis, y",
+          "pt": "as batatas fritas, despeje os martinis, e",
+          "fr": "les frites, versez les martinis, et"
+        },
+        "source": "Soul of Miami",
+        "category": "arts"
+      },
+      {
+        "id": "tm_1790353432747_piu3",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-25",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 12:30 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 12:30 · Centro de Convenciones Mana Wynwood",
+          "pt": "Diversos · Família · Começa 12:30 · Centro de Convenções Mana Wynwood",
+          "fr": "Divers · Famille · Commence 12:30 · Centre de Congrès Mana Wynwood"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1790353432747_m5ss",
+        "title": {
+          "en": "Misfits Boxing",
+          "es": "Boxeo Misfits",
+          "pt": "Boxe Misfits",
+          "fr": "Boxe Misfits"
+        },
+        "date": "2026-09-26",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmisfits-boxing-miami-florida-09-26-2026%2Fevent%2F0D00651682D02D9A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/27a/4731ca99-5440-4c1f-890b-66a0d80d227a_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Misfits Boxing returns to the James L. Knight Center in Miami on September 26, 2026, bringing another highly anticipated night of boxing to Downtown Miami. Javon \"Wanna\" Walton steps into the ring against former UFC champion and Olympic gold medalist Henry Cejudo in a must-see matchup that brings together two distinct fighting styles and personalities. · Starts 18:00 · James L Knight Center",
+          "es": "Boxeo Misfits regresa al James L. Knight Center en Miami el 26 de septiembre de 2026, trayendo otra noche de boxeo muy esperada al Centro de Miami. Javon \"Wanna\" Walton sube al ring contra el ex campeón de UFC y medallista de oro olímpico Henry Cejudo en un enfrentamiento imprescindible que reúne dos estilos de lucha y personalidades distintas. · Comienza 18:00 · James L Knight Center",
+          "pt": "Boxe Misfits retorna ao James L. Knight Center em Miami em 26 de setembro de 2026, trazendo outra noite de boxe muito aguardada para o Centro de Miami. Javon \"Wanna\" Walton entra no ringue contra o ex-campeão do UFC e medalhista de ouro olímpico Henry Cejudo em uma luta imperdível que reúne dois estilos de luta e personalidades distintas. · Começa 18:00 · James L Knight Center",
+          "fr": "Boxe Misfits revient au James L. Knight Center à Miami le 26 septembre 2026, apportant une autre nuit de boxe très attendue au centre-ville de Miami. Javon \"Wanna\" Walton monte sur le ring contre l'ancien champion de l'UFC et médaillé d'or olympique Henry Cejudo dans un affrontement incontournable qui réunit deux styles de combat et personnalités distincts. · Commence 18:00 · James L Knight Center"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7707756,
+        "lng": -80.1901174
+      },
+      {
+        "id": "tm_1790353432747_as3z",
+        "title": {
+          "en": "Florida International Panthers Football vs. LIU Sharks Football",
+          "es": "Fútbol Americano Panthers de FIU vs Sharks de LIU",
+          "pt": "Futebol Americano Panthers da FIU vs Sharks do LIU",
+          "fr": "Football Américain Panthers de FIU contre Sharks de LIU"
+        },
+        "date": "2026-09-26",
+        "venue": "Pitbull Stadium",
+        "address": "11200 SW 8th Street, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-zoP&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/db5/5acfb9a3-4315-40c6-824f-e0fd31bd5db5_723691_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 18:00 · Pitbull Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 18:00 · Estadio Pitbull",
+          "pt": "Esportes · Futebol Americano · Começa 18:00 · Estádio Pitbull",
+          "fr": "Sports · Football Américain · Commence 18:00 · Stade Pitbull"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7577,
+        "lng": -80.374802
+      },
+      {
+        "id": "tm_1790353432747_tt3g",
+        "title": {
+          "en": "Florida Panthers vs. Tampa Bay Lightning",
+          "es": "Panthers de Florida vs Lightning de Tampa Bay",
+          "pt": "Panthers da Flórida vs Lightning de Tampa Bay",
+          "fr": "Panthers de Floride contre Lightning de Tampa Bay"
+        },
+        "date": "2026-09-26",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PV4v&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Hockey · Starts 18:00 · Amerant Bank Arena",
+          "es": "Deportes · Hockey · Comienza 18:00 · Amerant Bank Arena",
+          "pt": "Esportes · Hóquei · Começa 18:00 · Amerant Bank Arena",
+          "fr": "Sports · Hockey · Commence 18:00 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1790353432747_rblx",
+        "title": {
+          "en": "Miami Hurricanes vs Central Michigan Chippewas",
+          "es": "Hurricanes de Miami vs Chippewas de Central Michigan",
+          "pt": "Hurricanes de Miami vs Chippewas da Central Michigan",
+          "fr": "Hurricanes de Miami contre Chippewas de Central Michigan"
+        },
+        "date": "2026-09-26",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-vs-central-michigan-chippewas-miami-florida-09-26-2026%2Fevent%2F0D0064FCBFAF6F17&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/022/a96b1453-309b-48e2-a776-f2dd19d83022_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 18:30 · Hard Rock Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 18:30 · Hard Rock Stadium",
+          "pt": "Esportes · Futebol Americano · Começa 18:30 · Hard Rock Stadium",
+          "fr": "Sports · Football Américain · Commence 18:30 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
       }
     ]
   },
@@ -5290,10 +5414,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-24T16:23:55.256Z",
+    "fetchedAt": "2026-09-25T16:24:33.629Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.6215afa4c24e6211c16967882e4ae9a02a488758.002.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.5dd94328eaebdc71a5bc25ab09337b893bfc6a92.002.2",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -5303,15 +5427,36 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...Dangerous rip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...From Friday afternoon through Saturday morning.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
-          "es": "* QUÉ...Se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Zona costera del Condado de Broward y Zona costera del Condado de Miami-Dade.\n\n* CUÁNDO...Desde el viernes por la tarde hasta el sábado por la mañana.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la costa hacia aguas más profundas.",
-          "pt": "* O QUÊ...Correntes de retorno perigosas esperadas.\n\n* ONDE...Litoral do Condado de Broward e Litoral do Condado de Miami-Dade.\n\n* QUANDO...De sexta-feira à tarde até sábado de manhã.\n\n* IMPACTOS...As correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da costa em direção a águas mais profundas.",
-          "fr": "* QUOI...Courants d'arrachement dangereux attendus.\n\n* OÙ...Zone côtière du comté de Broward et zone côtière du comté de Miami-Dade.\n\n* QUAND...Vendredi après-midi jusqu'à samedi matin.\n\n* IMPACTS...Les courants d'arrachement peuvent entraîner même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
+          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding expected. For the High Rip Current Risk, dangerous\nrip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, from 6 AM EDT this\nmorning through Saturday evening. For the High Rip Current\nRisk, from 1 PM EDT this afternoon through Saturday evening.\n\n* IM",
+          "es": "* QUÉ...Para la Declaración de Inundación Costera, se esperan inundaciones costeras menores aisladas. Para el Riesgo Alto de Corrientes de Resaca, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Broward y Condado costero de Miami-Dade.\n\n* CUÁNDO...Para la Declaración de Inundación Costera, desde las 6 AM EDT esta mañana hasta el sábado por la noche. Para el Riesgo Alto de Corrientes de Resaca, desde la 1 PM EDT esta tarde hasta el sábado por la noche.\n\n* IM",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, espera-se inundação costeira menor isolada. Para o Risco Alto de Corrente de Retorno, esperadas correntes de retorno perigosas.\n\n* ONDE...Condado Costeiro de Broward e Condado Costeiro de Miami-Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, das 6 AM EDT desta manhã até sábado à noite. Para o Risco Alto de Corrente de Retorno, das 13 PM EDT desta tarde até sábado à noite.\n\n* IM",
+          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, des inondations côtières mineures isolées sont attendues. Pour le Risque Élevé de Courants de Retour, des courants de retour dangereux sont attendus.\n\n* OÙ...Comté côtier de Broward et Comté côtier de Miami-Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, de 6 h HAE ce matin jusqu'à samedi soir. Pour le Risque Élevé de Courants de Retour, de 13 h HAE cet après-midi jusqu'à samedi soir.\n\n* IM"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6215afa4c24e6211c16967882e4ae9a02a488758.002.1",
-        "effectiveAt": "2026-09-24T11:54:00-04:00",
-        "expiresAt": "2026-09-25T16:23:55.256Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5dd94328eaebdc71a5bc25ab09337b893bfc6a92.002.2",
+        "effectiveAt": "2026-09-25T02:08:00-04:00",
+        "expiresAt": "2026-09-26T12:00:00.000Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.5dd94328eaebdc71a5bc25ab09337b893bfc6a92.002.1",
+        "type": "weather",
+        "severity": "minor",
+        "title": {
+          "en": "Coastal Flood Statement",
+          "es": "Coastal Flood Statement",
+          "pt": "Coastal Flood Statement",
+          "fr": "Coastal Flood Statement"
+        },
+        "detail": {
+          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding expected. For the High Rip Current Risk, dangerous\nrip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, from 6 AM EDT this\nmorning through Saturday evening. For the High Rip Current\nRisk, from 1 PM EDT this afternoon through Saturday evening.\n\n* IM",
+          "es": "* QUÉ...Para la Declaración de Inundación Costera, se esperan inundaciones costeras menores aisladas. Para el Riesgo Alto de Corrientes de Resaca, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Broward y Condado costero de Miami-Dade.\n\n* CUÁNDO...Para la Declaración de Inundación Costera, desde las 6 AM EDT esta mañana hasta el sábado por la noche. Para el Riesgo Alto de Corrientes de Resaca, desde la 1 PM EDT esta tarde hasta el sábado por la noche.\n\n* IM",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, espera-se inundação costeira menor isolada. Para o Risco Alto de Corrente de Retorno, esperadas correntes de retorno perigosas.\n\n* ONDE...Condado Costeiro de Broward e Condado Costeiro de Miami-Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, das 6 AM EDT desta manhã até sábado à noite. Para o Risco Alto de Corrente de Retorno, das 13 PM EDT desta tarde até sábado à noite.\n\n* IM",
+          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, des inondations côtières mineures isolées sont attendues. Pour le Risque Élevé de Courants de Retour, des courants de retour dangereux sont attendus.\n\n* OÙ...Comté côtier de Broward et Comté côtier de Miami-Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, de 6 h HAE ce matin jusqu'à samedi soir. Pour le Risque Élevé de Courants de Retour, de 13 h HAE cet après-midi jusqu'à samedi soir.\n\n* IM"
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5dd94328eaebdc71a5bc25ab09337b893bfc6a92.002.1",
+        "effectiveAt": "2026-09-25T02:08:00-04:00",
+        "expiresAt": "2026-09-26T12:00:00.000Z"
       }
     ]
   }
