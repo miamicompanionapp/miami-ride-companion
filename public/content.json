@@ -1,13 +1,13 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-25T16:24:41.722Z",
+    "lastUpdated": "2026-09-26T15:39:18.959Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-25T16:24:33.628Z",
+    "fetchedAt": "2026-09-26T15:39:11.573Z",
     "current": {
-      "temp_f": 83,
+      "temp_f": 82,
       "feels_f": 92,
       "description": {
         "en": "Current conditions",
@@ -15,44 +15,31 @@
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 81,
-      "wind_mph": 9,
-      "rain_chance": 19,
-      "weathercode": 1
+      "humidity": 76,
+      "wind_mph": 7,
+      "rain_chance": 26,
+      "weathercode": 0
     },
     "forecast": [
-      {
-        "date": "2026-09-25",
-        "high_f": 84,
-        "low_f": 75,
-        "weathercode": 82,
-        "rain_chance": 19,
-        "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
-        }
-      },
       {
         "date": "2026-09-26",
         "high_f": 84,
         "low_f": 73,
-        "weathercode": 3,
-        "rain_chance": 13,
+        "weathercode": 61,
+        "rain_chance": 26,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Light rain",
+          "es": "Lluvia ligera",
+          "pt": "Chuva leve",
+          "fr": "Pluie légère"
         }
       },
       {
         "date": "2026-09-27",
-        "high_f": 85,
-        "low_f": 71,
+        "high_f": 84,
+        "low_f": 72,
         "weathercode": 55,
-        "rain_chance": 35,
+        "rain_chance": 7,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -62,10 +49,10 @@
       },
       {
         "date": "2026-09-28",
-        "high_f": 86,
-        "low_f": 79,
+        "high_f": 85,
+        "low_f": 71,
         "weathercode": 51,
-        "rain_chance": 35,
+        "rain_chance": 17,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -75,160 +62,173 @@
       },
       {
         "date": "2026-09-29",
-        "high_f": 87,
-        "low_f": 81,
-        "weathercode": 96,
-        "rain_chance": 70,
+        "high_f": 85,
+        "low_f": 80,
+        "weathercode": 53,
+        "rain_chance": 58,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
           "pt": "Parcialmente nublado",
           "fr": "Partiellement nuageux"
         }
+      },
+      {
+        "date": "2026-09-30",
+        "high_f": 85,
+        "low_f": 80,
+        "weathercode": 95,
+        "rain_chance": 61,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
       }
     ],
     "hourly": [
       {
-        "hour": "12:00",
+        "hour": "11:00",
         "temp_f": 82,
-        "weathercode": 1,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 83,
+        "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "13:00",
-        "temp_f": 84,
-        "weathercode": 1,
+        "temp_f": 83,
+        "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "14:00",
-        "temp_f": 83,
-        "weathercode": 1,
-        "rain_chance": 1
+        "temp_f": 84,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "15:00",
-        "temp_f": 83,
+        "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 4
+        "rain_chance": 0
       },
       {
         "hour": "16:00",
-        "temp_f": 82,
-        "weathercode": 2,
-        "rain_chance": 7
+        "temp_f": 84,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "17:00",
         "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 10
+        "rain_chance": 6
       },
       {
         "hour": "18:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 0,
-        "rain_chance": 10
+        "rain_chance": 11
       },
       {
         "hour": "19:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 13
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 20
       },
       {
         "hour": "20:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 19
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 26
       },
       {
         "hour": "21:00",
         "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 14
+        "weathercode": 61,
+        "rain_chance": 18
       },
       {
         "hour": "22:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 10
       },
       {
         "hour": "23:00",
         "temp_f": 75,
-        "weathercode": 1,
-        "rain_chance": 4
+        "weathercode": 2,
+        "rain_chance": 7
       },
       {
         "hour": "00:00",
         "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 6
       },
       {
         "hour": "01:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 4
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "02:00",
         "temp_f": 74,
-        "weathercode": 1,
-        "rain_chance": 3
+        "weathercode": 3,
+        "rain_chance": 2
       },
       {
         "hour": "03:00",
-        "temp_f": 74,
-        "weathercode": 0,
+        "temp_f": 73,
+        "weathercode": 3,
         "rain_chance": 3
       },
       {
         "hour": "04:00",
-        "temp_f": 73,
-        "weathercode": 0,
-        "rain_chance": 2
+        "temp_f": 72,
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 74,
-        "weathercode": 1,
-        "rain_chance": 2
+        "temp_f": 72,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 73,
+        "temp_f": 72,
         "weathercode": 0,
         "rain_chance": 2
       },
       {
         "hour": "07:00",
-        "temp_f": 73,
+        "temp_f": 72,
         "weathercode": 0,
         "rain_chance": 2
       },
       {
         "hour": "08:00",
-        "temp_f": 74,
+        "temp_f": 73,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "09:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 0,
         "rain_chance": 0
       },
       {
         "hour": "10:00",
-        "temp_f": 80,
-        "weathercode": 2,
-        "rain_chance": 0
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 82,
+        "temp_f": 78,
         "weathercode": 0,
         "rain_chance": 0
       }
@@ -1441,30 +1441,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1785852008678_6hu7",
-        "title": {
-          "en": "The IFA World Franchise Show 9/25/26, 9/26/26",
-          "es": "The IFA World Franchise Show 9/25/26, 9/26/26",
-          "pt": "The IFA World Franchise Show 9/25/26, 9/26/26",
-          "fr": "The IFA World Franchise Show 9/25/26, 9/26/26"
-        },
-        "date": "2026-09-25",
-        "venue": "Broward County Convention Center, Eisenhower Boulevard, Fort Lauderdale, FL,",
-        "address": "33316 Broward County Convention Center, Eisenhower Boulevard, Fort Lauderdale, Florida, 33316",
-        "url": "https://www.soulofmiami.org/2026/08/03/the-ifa-world-franchise-show-9-25-26-9-26-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/IFA-World-Franchise-Show-Free-Tickets-350x302.jpg",
-        "description": {
-          "en": "Get Free Tickets Here: https://www.bizsold.info/ifa-word-franchise-show-organic About this",
-          "es": "Obtén entradas gratis aquí: https://www.bizsold.info/ifa-word-franchise-show-organic Acerca de esto",
-          "pt": "Obtenha ingressos gratuitos aqui: https://www.bizsold.info/ifa-word-franchise-show-organic Sobre isso",
-          "fr": "Obtenez des billets gratuits ici: https://www.bizsold.info/ifa-word-franchise-show-organic À propos de ceci"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1786107183516_zson",
         "title": {
           "en": "Miami Zombie Crawl – Halloween Bar Crawl – Party Pass to 8+ Bars 10/30/26",
@@ -2353,84 +2329,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1789313458391_zl28",
-        "title": {
-          "en": "Adolescentes Orquesta",
-          "es": "Adolescentes Orquesta",
-          "pt": "Adolescentes Orquesta",
-          "fr": "Adolescentes Orquesta"
-        },
-        "date": "2026-09-25",
-        "venue": "Charles F. Dodge City Center Pembroke Pines",
-        "address": "601 City Center Blvd, Pembroke Pines, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fadolescentes-orquesta-pembroke-pines-florida-09-25-2026%2Fevent%2F0D0064EDEF81E520&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/7e7/14d76283-8702-4ead-a7fb-984a65d967e7_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Adolescentes Orquesta en vivo en Pembroke Pines. Una noche llena de salsa, romance y canciones inolvidables, este 25 de septiembre en el Charles F. Dodge City Center. Visit CharlesFDodgeCityCenter.com for more information. The box office is open Thursday through Saturday, 10AM to 5PM at CFDCC 601 SW City Center Way, Pembroke Pines, FL. Ample free parking is available at the venue. · Starts 20:00 ·",
-          "es": "Adolescentes Orquesta en vivo en Pembroke Pines. Una noche llena de salsa, romance y canciones inolvidables, este 25 de septiembre en el Charles F. Dodge City Center. Visita CharlesFDodgeCityCenter.com para más información. La taquilla está abierta de jueves a sábado, 10AM a 5PM en CFDCC 601 SW City Center Way, Pembroke Pines, FL. Estacionamiento gratuito amplio disponible en el lugar. · Comienza 20:00 ·",
-          "pt": "Adolescentes Orquesta ao vivo em Pembroke Pines. Uma noite repleta de salsa, romance e músicas inesquecíveis, em 25 de setembro no Charles F. Dodge City Center. Visite CharlesFDodgeCityCenter.com para mais informações. A bilheteria está aberta de quinta a sábado, 10h às 17h no CFDCC 601 SW City Center Way, Pembroke Pines, FL. Estacionamento gratuito amplo disponível no local. · Começa 20:00 ·",
-          "fr": "Adolescentes Orquesta en direct à Pembroke Pines. Une soirée remplie de salsa, de romance et de chansons inoubliables, le 25 septembre au Charles F. Dodge City Center. Visitez CharlesFDodgeCityCenter.com pour plus d'informations. La billetterie est ouverte jeudi à samedi, 10h à 17h au CFDCC 601 SW City Center Way, Pembroke Pines, FL. Parking gratuit abondant disponible sur le lieu. · Commence 20h00 ·"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.006998,
-        "lng": -80.281135
-      },
-      {
-        "id": "tm_1789313458391_xhqa",
-        "title": {
-          "en": "Arly Lariviere",
-          "es": "Arly Lariviere",
-          "pt": "Arly Lariviere",
-          "fr": "Arly Lariviere"
-        },
-        "date": "2026-09-25",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Farly-lariviere-miami-florida-09-25-2026%2Fevent%2F0D0064989005C8A9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/17b/618b7084-f58f-4c11-b4f2-e6f797c2117b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · World · Starts 20:00 · Kaseya Center",
-          "es": "Música · World · Comienza 20:00 · Kaseya Center",
-          "pt": "Música · World · Começa 20:00 · Kaseya Center",
-          "fr": "Musique · World · Commence 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1789313458391_j9yk",
-        "title": {
-          "en": "Gasolina Reggaeton Party",
-          "es": "Fiesta Reggaeton Gasolina",
-          "pt": "Festa Reggaeton Gasolina",
-          "fr": "Fête Reggaeton Gasolina"
-        },
-        "date": "2026-09-25",
-        "venue": "ZeyZey Miami",
-        "address": "353 NE 61st St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvde3&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 22:00 · ZeyZey Miami",
-          "es": "Música · Otro · Comienza 22:00 · ZeyZey Miami",
-          "pt": "Música · Outro · Começa 22:00 · ZeyZey Miami",
-          "fr": "Musique · Autre · Commence 22:00 · ZeyZey Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.8172,
-        "lng": -80.188797
-      },
-      {
         "id": "rss_1789407133031_ndzx",
         "title": {
           "en": "UTSAV 2026 9/26/26",
@@ -2453,32 +2351,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1789407133606_1ks9",
-        "title": {
-          "en": "Steve Aoki",
-          "es": "Steve Aoki",
-          "pt": "Steve Aoki",
-          "fr": "Steve Aoki"
-        },
-        "date": "2026-09-25",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsteve-aoki-liv-nightclub-miami-tickets%2F15014233&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/957/e871e3e0-63ee-4c06-828f-844669576957_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Dance/Electronic · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Música · Dance/Electrónica · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Música · Dance/Eletrônica · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Musique · Dance/Électronique · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
       },
       {
         "id": "tm_1789407133606_doeh",
@@ -3747,32 +3619,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790093384347_krn9",
-        "title": {
-          "en": "Eli Brown - Ages 18+",
-          "es": "Eli Brown - Mayores de 18 Años",
-          "pt": "Eli Brown - Maiores de 18 Anos",
-          "fr": "Eli Brown - 18 Ans et Plus"
-        },
-        "date": "2026-09-25",
-        "venue": "Factory Town",
-        "address": "4800 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J4eo&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/df8/81eadad8-4449-412e-a2b1-3d8bbb78edf8_106181_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 22:00 · Factory Town",
-          "es": "Música · Otro · Comienza 22:00 · Factory Town",
-          "pt": "Música · Outro · Começa 22:00 · Factory Town",
-          "fr": "Musique · Autre · Débute 22:00 · Factory Town"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.811899,
-        "lng": -80.238998
-      },
-      {
         "id": "tm_1790093384347_ya28",
         "title": {
           "en": "Fisher - Ages 18+",
@@ -3927,108 +3773,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790179156720_nfjr",
-        "title": {
-          "en": "Ernest Tsosie & Tonia Jo Hall - Classic Comedy Night Show",
-          "es": "Ernest Tsosie & Tonia Jo Hall - Noche de Comedia Clásica",
-          "pt": "Ernest Tsosie & Tonia Jo Hall - Noite de Comédia Clássica",
-          "fr": "Ernest Tsosie & Tonia Jo Hall - Soirée de Comédie Classique"
-        },
-        "date": "2026-09-25",
-        "venue": "Seminole Classic Casino",
-        "address": "4150 North State Road 7, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fernest-tsosie-tonia-jo-seminole-classic-casino-tickets%2F15010333&utm_medium=affiliate",
-        "free": false,
-        "price": "$49",
-        "image": "https://i.ticketweb.com/i/00/13/61/23/23_Edp.jpg?v=18",
-        "description": {
-          "en": "21+Seminole Classic Casino will host co-headlining Native American comedians Ernest Tsosie & Tonia Jo Hall for two live performances in Hollywood Hall! Ernie Tsosie, comedian and actor is a member of the Screen Actors Guild, his professional acting credits include the Netflix movie , \"rdquo\" -> Rez Ball\", as well as multiple appearances on the popular AMC TV shoes , \"rdquo\" -> Longmire\", , \"rdquo\"",
-          "es": "Mayores de 21 años. El Seminole Classic Casino presentará a los comediantes nativos americanos Ernest Tsosie y Tonia Jo Hall en dos presentaciones en vivo en Hollywood Hall. Ernie Tsosie, comediante y actor, es miembro del Screen Actors Guild, con créditos profesionales incluyendo la película de Netflix \"Rez Ball\" y múltiples apariciones en la serie de AMC \"Longmire\".",
-          "pt": "Maiores de 21 anos. O Seminole Classic Casino apresentará os comediantes nativos americanos Ernest Tsosie e Tonia Jo Hall em duas apresentações ao vivo no Hollywood Hall. Ernie Tsosie, comediante e ator, é membro do Screen Actors Guild, com créditos profissionais incluindo o filme da Netflix \"Rez Ball\" e múltiplas aparições na série da AMC \"Longmire\".",
-          "fr": "21 ans et plus. Le Seminole Classic Casino accueillera les comédiens autochtones Ernest Tsosie et Tonia Jo Hall pour deux représentations en direct au Hollywood Hall. Ernie Tsosie, comédien et acteur, est membre du Screen Actors Guild, avec des crédits professionnels incluant le film Netflix \"Rez Ball\" et de multiples apparitions dans la série AMC \"Longmire\"."
-        },
-        "source": "Ticketmaster",
-        "lat": 26.043172,
-        "lng": -80.209478,
-        "category": "comedy"
-      },
-      {
-        "id": "tm_1790179156720_k52l",
-        "title": {
-          "en": "Miami Marlins vs. Atlanta Braves",
-          "es": "Miami Marlins vs. Atlanta Braves",
-          "pt": "Miami Marlins vs. Atlanta Braves",
-          "fr": "Miami Marlins vs. Atlanta Braves"
-        },
-        "date": "2026-09-25",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0_&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 19:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 19:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 19:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 19:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "cp_1790179157736_7frt",
-        "title": {
-          "en": "Bingo",
-          "es": "Bingo",
-          "pt": "Bingo",
-          "fr": "Bingo"
-        },
-        "date": "2026-09-25",
-        "venue": "Sherbondy Village Community Center",
-        "address": "215 N Perviz Ave  Opa-locka FL 33054",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "🏈🎉 Get ready for a fun-filled evening at the City of Opa-locka’s Community Bingo! Join us for bingo, prizes, and good times at our special football-themed event, and wear your favorite football paraphernalia! 🏆🎲    Hosted by Commissioner Natasha L. Ervin, the event takes place on Friday, September 25, 2026, at 6:00 PM at Sherbondy Auditorium, 215 Perviz Ave., Opa-locka, FL 33054. Bring your fa",
-          "es": "¡Prepárate para una noche llena de diversión en el Bingo Comunitario de la Ciudad de Opa-locka! Únete a nosotros para jugar bingo, ganar premios y pasarlo bien en nuestro evento especial con temática de fútbol americano. ¡Usa tu equipamiento de fútbol favorito! Organizado por la Comisionada Natasha L. Ervin, el evento se llevará a cabo el viernes 25 de septiembre de 2026 a las 6:00 PM en Sherbondy Auditorium, 215 Perviz Ave., Opa-locka, FL 33054.",
-          "pt": "Prepare-se para uma noite divertida no Bingo Comunitário da Cidade de Opa-locka! Junte-se a nós para bingo, prêmios e bons momentos em nosso evento especial com tema de futebol americano. Use seu equipamento de futebol favorito! Hospedado pela Comissária Natasha L. Ervin, o evento acontecerá na sexta-feira, 25 de setembro de 2026, às 18:00 no Sherbondy Auditorium, 215 Perviz Ave., Opa-locka, FL 33054.",
-          "fr": "Préparez-vous pour une soirée amusante au Bingo Communautaire de la Ville d'Opa-locka ! Rejoignez-nous pour du bingo, des prix et de bons moments lors de notre événement spécial sur le thème du football américain. Portez votre équipement de football préféré ! Organisé par la Commissaire Natasha L. Ervin, l'événement aura lieu vendredi 25 septembre 2026 à 18h00 au Sherbondy Auditorium, 215 Perviz Ave., Opa-locka, FL 33054."
-        },
-        "source": "Opa-locka",
-        "category": "community"
-      },
-      {
-        "id": "rss_1790266998146_ob6y",
-        "title": {
-          "en": "Two22 Wellness Event at The Goodtime Hotel 9/25/26",
-          "es": "Evento Two22 Wellness en The Goodtime Hotel 25/9/26",
-          "pt": "Evento Two22 Wellness no The Goodtime Hotel 25/9/26",
-          "fr": "Événement Two22 Wellness au The Goodtime Hotel 25/9/26"
-        },
-        "date": "2026-09-25",
-        "venue": "The Pool at The Goodtime Hotel",
-        "address": "601 Washington Ave., Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/09/23/two22-wellness-event-at-the-goodtime-hotel-9-25-26/",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Visit The Goodtime Hotel on Friday, Sept. 25, from 8:30 to 11:30",
-          "es": "Visita The Goodtime Hotel el viernes, 25 de septiembre, de 8:30 a 11:30",
-          "pt": "Visite o The Goodtime Hotel na sexta-feira, 25 de setembro, das 8:30 às 11:30",
-          "fr": "Visitez The Goodtime Hotel le vendredi 25 septembre, de 8h30 à 11h30"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7763327,
-        "lng": -80.1334166,
-        "category": "community"
-      },
-      {
         "id": "rss_1790266998146_1anl",
         "title": {
           "en": "Pink Power Yoga at InterContinental Miami 10/12/26",
@@ -4107,58 +3851,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790266998723_dlvf",
-        "title": {
-          "en": "Friday Night Live - Improv Comedy Miami Show",
-          "es": "Viernes por la Noche en Vivo - Show de Comedia Improvisada en Miami",
-          "pt": "Sexta à Noite ao Vivo - Show de Comédia de Improvisação em Miami",
-          "fr": "Vendredi Soir en Direct - Spectacle de Comédie d'Improvisation à Miami"
-        },
-        "date": "2026-09-25",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14897503&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Friday Night Live! - Improv Comedy in Miami ShowIts JTFs special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv thats perfect for your Friday night...LIVE!Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part of th",
-          "es": "¡Viernes por la Noche! - Comedia improvisada en Miami. La combinación especial de JTF de improvisación corta y larga. Disfruta mientras nuestro elenco ganador de premios te trae una improvisación fantástica perfecta para tu noche de viernes. Nuestros shows se describen a menudo como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway meets SNL con mucha interacción con la audiencia.",
-          "pt": "Sexta à Noite ao Vivo! - Comédia de improvisação em Miami. A combinação especial de JTF de improvisação de curta e longa duração. Aproveite enquanto nosso elenco premiado traz uma improvisação fantástica perfeita para sua noite de sexta. Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense nisso como Whose Line is It Anyway encontra SNL com muita interação com o público.",
-          "fr": "Vendredi Soir en Direct ! - Comédie d'improvisation à Miami. La combinaison spéciale de JTF d'improvisation courte et longue. Profitez pendant que notre cast primé vous apporte une improvisation fantastique parfaite pour votre vendredi soir. Nos spectacles sont souvent décrits comme de la comédie improvisée au rythme rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction avec le public."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
-        "id": "tm_1790266998723_ishz",
-        "title": {
-          "en": "¡Dale! Impro - Impro en español",
-          "es": "¡Dale! Impro - Impro en español",
-          "pt": "¡Dale! Impro - Impro em Espanhol",
-          "fr": "¡Dale! Impro - Impro en Espagnol"
-        },
-        "date": "2026-09-25",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdale-impro-impro-just-the-funny-tickets%2F14338304&utm_medium=affiliate",
-        "free": false,
-        "price": "$18",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único... y cualquier cosa puede pasar. Aquí el público tiene la palabra",
-          "es": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único... y cualquier cosa puede pasar. Aquí el público tiene la palabra.",
-          "pt": "Prepare-se para uma noite em que você pode fazer parte do show! ¡Dale! Impro é comédia de improvisação em espanhol e Spanglish, com toda a energia, sabor e diversidade de Miami. Sem script e sem filtros, um elenco internacional transforma as sugestões do público em cenas interativas, inesperadas e cheias de humor. Cada show é único... e qualquer coisa pode acontecer. Aqui o público tem a palavra.",
-          "fr": "Préparez-vous pour une soirée où vous pouvez être partie du spectacle ! ¡Dale! Impro est de la comédie improvisée en espagnol et Spanglish, avec toute l'énergie, la saveur et la diversité de Miami. Sans script et sans filtres, une distribution internationale transforme les suggestions du public en scènes interactives, inattendues et pleines d'humour. Chaque spectacle est unique... et n'importe quoi peut arriver. Ici, le public a la parole."
-        },
-        "source": "Ticketmaster",
-        "lat": 25.750417,
-        "lng": -80.244412,
-        "category": "comedy"
-      },
-      {
         "id": "tm_1790266998723_f1u3",
         "title": {
           "en": "Aerial Arts Society Competition 2026",
@@ -4182,78 +3874,6 @@
         "source": "Ticketmaster",
         "lat": 26.0884017,
         "lng": -80.2461624,
-        "category": "music"
-      },
-      {
-        "id": "rss_1790353431971_3gqc",
-        "title": {
-          "en": "Nights in Northwood Village, West Palm Beach, Sept. 25 & Nov. 27",
-          "es": "Noches en Northwood Village, West Palm Beach, 25 de sept. y 27 de nov.",
-          "pt": "Noites em Northwood Village, West Palm Beach, 25 de set. e 27 de nov.",
-          "fr": "Nuits à Northwood Village, West Palm Beach, 25 sept. et 27 nov."
-        },
-        "date": "2026-09-25",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/nights-in-northwood-village-west-palm-beach/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/03/northwood-25-728x410.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Northwood Village in West Palm Beach is hosting a free night of fun, food and family festivities, plus shopping opportunities, with holiday lights, one-of-a-kind holiday gifts from local artisans, and... Copyright South Florida on the Cheap. The post Nights in Northwood Village, West Palm Beach, Sept. 25 & Nov. 27 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Northwood Village en West Palm Beach presenta una noche gratuita de diversión, comida y festividades familiares, además de oportunidades de compra, con luces navideñas, regalos navideños únicos de artesanos locales, y más.",
-          "pt": "South Florida on the Cheap Northwood Village em West Palm Beach apresenta uma noite gratuita de diversão, comida e festividades familiares, além de oportunidades de compras, com luzes de férias, presentes de férias únicos de artesãos locais, e muito mais.",
-          "fr": "South Florida on the Cheap Northwood Village à West Palm Beach présente une nuit gratuite de plaisir, de nourriture et de festivités familiales, ainsi que des opportunités d'achat, avec des lumières festives, des cadeaux de vacances uniques d'artisans locaux, et plus."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "rss_1790353431971_tc0k",
-        "title": {
-          "en": "Asian Food Festival, with music and more, West Palm Beach, Sept. 25-27",
-          "es": "Festival de Comida Asiática, con música y más, West Palm Beach, 25-27 de sept.",
-          "pt": "Festival de Comida Asiática, com música e muito mais, West Palm Beach, 25-27 de set.",
-          "fr": "Festival de Cuisine Asiatique, avec musique et plus, West Palm Beach, 25-27 sept."
-        },
-        "date": "2026-09-25",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/asian-food-festival-with-music-and-more-west-palm-beach/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/08/asian-food-fest2-728x628.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Saigon Night Market presents a free, 3-day downtown family foodie event. World Asian Food Festival When: Friday-Sunday, Sept. 25-27, 2026, from 2 to 10 p.m. Where: Centennial Square, 150 N.... Copyright South Florida on the Cheap. The post Asian Food Festival, with music and more, West Palm Beach, Sept. 25-27 appeared first on South Florida on the Cheap.",
-          "es": "Saigon Night Market presenta un evento gratuito de 3 días para toda la familia en el centro. Festival Mundial de Comida Asiática. Cuándo: viernes a domingo, 25-27 de septiembre de 2026, de 2 a 10 p.m. Dónde: Centennial Square, 150 N.",
-          "pt": "Saigon Night Market apresenta um evento gratuito de 3 dias para a família no centro. Festival Mundial de Comida Asiática. Quando: sexta a domingo, 25-27 de setembro de 2026, das 14h às 22h. Onde: Centennial Square, 150 N.",
-          "fr": "Saigon Night Market présente un événement gratuit de 3 jours pour toute la famille au centre-ville. Festival Mondial de Cuisine Asiatique. Quand: vendredi-dimanche, 25-27 septembre 2026, de 14h à 22h. Où: Centennial Square, 150 N."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "rss_1790353431972_afcq",
-        "title": {
-          "en": "Thundercat wants to distract Miami",
-          "es": "Thundercat quiere distraer Miami",
-          "pt": "Thundercat quer distrair Miami",
-          "fr": "Thundercat veut distraire Miami"
-        },
-        "date": "2026-09-25",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/music/thundercat-wants-to-distract-miami-40587562/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2025/10/Thundercat.jpg",
-        "description": {
-          "en": "The LA provocateur will bring his Distracted AF tour to the Miami Beach Bandshell on Oct. 2.",
-          "es": "El provocador de LA traerá su gira Distracted AF al Miami Beach Bandshell el 2 de octubre.",
-          "pt": "O provocador de LA trará sua turnê Distracted AF para o Miami Beach Bandshell em 2 de outubro.",
-          "fr": "Le provocateur de LA apportera sa tournée Distracted AF au Miami Beach Bandshell le 2 octobre."
-        },
-        "source": "Miami New Times",
         "category": "music"
       },
       {
@@ -4383,32 +4003,6 @@
         "category": "arts"
       },
       {
-        "id": "tm_1790353432747_piu3",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-25",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 12:30 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 12:30 · Centro de Convenciones Mana Wynwood",
-          "pt": "Diversos · Família · Começa 12:30 · Centro de Convenções Mana Wynwood",
-          "fr": "Divers · Famille · Commence 12:30 · Centre de Congrès Mana Wynwood"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1790353432747_m5ss",
         "title": {
           "en": "Misfits Boxing",
@@ -4511,6 +4105,340 @@
         "category": "sports",
         "lat": 25.957928,
         "lng": -80.238866
+      },
+      {
+        "id": "rss_1790437110319_i14u",
+        "title": {
+          "en": "GOLDLAW to Serve as Presenting Sponsor of Nonprofit Leadership Summit 2026 10/1/26",
+          "es": "GOLDLAW como Patrocinador Principal de la Cumbre de Liderazgo sin Fines de Lucro 2026 1/10/26",
+          "pt": "GOLDLAW como Patrocinador Apresentador da Cúpula de Liderança sem Fins Lucrativos 2026 01/10/26",
+          "fr": "GOLDLAW en tant que parrain présentateur du Sommet du leadership à but non lucratif 2026 01/10/26"
+        },
+        "date": "2026-10-01",
+        "venue": "Manatee Lagoon",
+        "address": "6000 N. Flagler Drive, West Palm Beach, Florida, 33407",
+        "url": "https://www.soulofmiami.org/2026/09/25/goldlaw-to-serve-as-presenting-sponsor-of-nonprofit-leadership-summit-2026-10-1-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/flyer-350x350.jpg",
+        "description": {
+          "en": "Chamber Member Individual Ticket: $100; Non-Member Individual Ticket: $125 GOLDLAW",
+          "es": "Entrada individual para miembro de la Cámara: $100; Entrada individual para no miembro: $125 GOLDLAW",
+          "pt": "Ingresso Individual para Membro da Câmara: $100; Ingresso Individual para Não-Membro: $125 GOLDLAW",
+          "fr": "Billet individuel pour membre de la Chambre: $100; Billet individuel pour non-membre: $125 GOLDLAW"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.7626497,
+        "lng": -80.0522129,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790437110319_rld9",
+        "title": {
+          "en": "A Prom Night to Remember: Carrie at Room 901 10/8/26",
+          "es": "Una Noche de Baile Inolvidable: Carrie en Room 901 8/10/26",
+          "pt": "Uma Noite de Baile Inesquecível: Carrie no Room 901 08/10/26",
+          "fr": "Une soirée de bal inoubliable: Carrie au Room 901 08/10/26"
+        },
+        "date": "2026-10-08",
+        "venue": "Hyatt Centric Las Olas",
+        "address": "100 E Las Olas Blvd, Fort Lauderdale, Florida, 33301",
+        "url": "https://www.soulofmiami.org/2026/09/25/a-prom-night-to-remember-carrie-at-room-901-10-8-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Prom-Night-at-901-3-350x271.jpg",
+        "description": {
+          "en": "required; pricing varies by experience. This October, Room 901 at",
+          "es": "requerido; los precios varían según la experiencia. Este octubre, Room 901 en",
+          "pt": "necessário; os preços variam de acordo com a experiência. Este outubro, Room 901 em",
+          "fr": "requis; les tarifs varient selon l'expérience. Ce mois d'octobre, Room 901 à"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1187724,
+        "lng": -80.1418439,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790437110319_cawz",
+        "title": {
+          "en": "OUTshine LGBTQ+ Film Festival Fall Edition 2026 10/15/26 – 10/25/26",
+          "es": "Festival de Cine LGBTQ+ OUTshine Edición de Otoño 2026 15/10/26 – 25/10/26",
+          "pt": "Festival de Cinema LGBTQ+ OUTshine Edição de Outono 2026 15/10/26 – 25/10/26",
+          "fr": "Festival du cinéma LGBTQ+ OUTshine Édition Automne 2026 15/10/26 – 25/10/26"
+        },
+        "date": "2026-10-15",
+        "venue": "Various locations PO Box 530280, Miami, Florida, 33153",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/25/outshine-lgbtq-film-festival-fall-edition-2026-10-15-26-10-25-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Festival-Poster-SQ-2000x2000-1-350x350.jpg",
+        "description": {
+          "en": "for individual films start at $17 each with group discounts, memberships and additional offers available. The OUTshine LGBTQ+",
+          "es": "para películas individuales comienzan en $17 cada una con descuentos grupales, membresías y ofertas adicionales disponibles. El LGBTQ+",
+          "pt": "para filmes individuais começam em $17 cada um com descontos em grupo, associações e ofertas adicionais disponíveis. O LGBTQ+",
+          "fr": "pour les films individuels commencent à $17 chacun avec des réductions de groupe, des adhésions et des offres supplémentaires disponibles. Le LGBTQ+"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790437110319_ly6h",
+        "title": {
+          "en": "Movement, Sound, and Abstraction 10/10/26",
+          "es": "Movimiento, Sonido y Abstracción 10/10/26",
+          "pt": "Movimento, Som e Abstração 10/10/26",
+          "fr": "Mouvement, son et abstraction 10/10/26"
+        },
+        "date": "2026-10-10",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/25/movement-sound-and-abstraction-10-10-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/778565460_18624488137021105_6628814237461379305_n-350x256.jpg",
+        "description": {
+          "en": "Join the Museum of Art and Design (MOAD) for an evening of embodied exploration where art, movement, and wellness converge.",
+          "es": "Únase al Museo de Arte y Diseño (MOAD) para una noche de exploración corporal donde el arte, el movimiento y el bienestar convergen.",
+          "pt": "Junte-se ao Museu de Arte e Design (MOAD) para uma noite de exploração corporal onde arte, movimento e bem-estar convergem.",
+          "fr": "Rejoignez le Musée d'art et de design (MOAD) pour une soirée d'exploration incarnée où l'art, le mouvement et le bien-être convergent."
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790437110319_fxsy",
+        "title": {
+          "en": "FLIFFShorts: Shorts in Paradise (Films & Party) 11/5/26",
+          "es": "FLIFFShorts: Cortometrajes en Paraíso (Películas y Fiesta) 5/11/26",
+          "pt": "FLIFFShorts: Curtas no Paraíso (Filmes e Festa) 05/11/26",
+          "fr": "FLIFFShorts: Courts-métrages au Paradis (Films et fête) 05/11/26"
+        },
+        "date": "2026-11-05",
+        "venue": "Savor Cinema",
+        "address": "503 SE 6th Street, Fort Lauderdale, Florida, 33301",
+        "url": "https://www.soulofmiami.org/2026/09/25/fliffshorts-shorts-in-paradise-films-party-11-5-26/",
+        "free": false,
+        "price": "$40",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/FLIFFShorts-5-x-7-350x490.png",
+        "description": {
+          "en": "Opening Night brings a taste from the far-side of the world to Savor Cinema, a",
+          "es": "La noche de apertura trae un sabor del otro lado del mundo a Savor Cinema, un",
+          "pt": "A noite de abertura traz um gostinho do outro lado do mundo para Savor Cinema, um",
+          "fr": "La soirée d'ouverture apporte une saveur de l'autre côté du monde à Savor Cinema, un"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1151203,
+        "lng": -80.1382475,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790437110319_cbrt",
+        "title": {
+          "en": "OUTshine LGBTQ+ Film Festival Presents Flesh & Fuel, its Men’s Spotlight Film & Afterparty 10/17/26",
+          "es": "OUTshine Festival de Cine LGBTQ+ presenta Flesh & Fuel, su Película de Enfoque para Hombres y Fiesta Posterior 10/17/26",
+          "pt": "OUTshine Festival de Cinema LGBTQ+ apresenta Flesh & Fuel, seu Filme em Destaque para Homens e Festa Posterior 10/17/26",
+          "fr": "OUTshine Festival du Cinéma LGBTQ+ présente Flesh & Fuel, son Film Phare pour Hommes et Soirée Après-Film 10/17/26"
+        },
+        "date": "2026-10-17",
+        "venue": "Paradigm Cinemas: Gateway Fort Lauderdale",
+        "address": "1820 E Sunrise Blvd., Fort Lauderdale, Florida, 33304",
+        "url": "https://www.soulofmiami.org/2026/09/25/outshine-lgbtq-film-festival-presents-flesh-fuel-its-mens-spotlight-film-afterparty-10-17-26/",
+        "free": false,
+        "price": "$40",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Flesh-and-Fuel-JPG-350x438.jpg",
+        "description": {
+          "en": "+ service fees; Includes afterparty",
+          "es": "+ tarifas de servicio; Incluye fiesta posterior",
+          "pt": "+ taxas de serviço; Inclui festa posterior",
+          "fr": "+ frais de service; Inclut la soirée après-film"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1368152,
+        "lng": -80.1213532,
+        "category": "nightlife"
+      },
+      {
+        "id": "tm_1790437110843_3i5u",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-26",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 11:45 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familiar · Comienza 11:45 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 11:45 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 11:45 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1790437110843_jboq",
+        "title": {
+          "en": "Miami Marlins vs. Atlanta Braves",
+          "es": "Miami Marlins vs. Atlanta Braves",
+          "pt": "Miami Marlins vs. Atlanta Braves",
+          "fr": "Miami Marlins vs. Atlanta Braves"
+        },
+        "date": "2026-09-26",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0O&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 16:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 16:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 16:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 16:10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1790437110843_bivt",
+        "title": {
+          "en": "Cheap Trills Musical Improv",
+          "es": "Improvisación Musical Cheap Trills",
+          "pt": "Improvisação Musical Cheap Trills",
+          "fr": "Improvisation Musicale Cheap Trills"
+        },
+        "date": "2026-09-26",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheap-trills-musical-improv-just-the-funny-tickets%2F14897753&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Cheap Trills Musical Improv Nothing beats a Cheap Trills show! It's a musical. It's a variety show. It's improv comedy. It's all of that and much more! Join the talented cast of Just The Funny and be prepared for a wild, hilarious ride. Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as close as possible, but may have to split",
+          "es": "¡Nada supera un show de Cheap Trills! Es un musical. Es un show de variedades. Es comedia de improvisación. ¡Es todo eso y mucho más! Únete al talentoso elenco de Just The Funny y prepárate para un viaje salvaje e hilarante. Los boletos son POR PERSONA para este show. Sentaremos a los grupos juntos en mesas. Haremos nuestro mejor esfuerzo para sentar grupos más grandes lo más cerca posible, pero podemos tener que dividirlos.",
+          "pt": "Nada supera um show do Cheap Trills! É um musical. É um show de variedades. É comédia de improvisação. É tudo isso e muito mais! Junte-se ao elenco talentoso do Just The Funny e prepare-se para um passeio selvagem e hilariante. Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas. Faremos o nosso melhor para sentar grupos maiores o mais próximo possível, mas podemos ter que dividi-los.",
+          "fr": "Rien ne vaut un spectacle de Cheap Trills! C'est une comédie musicale. C'est un spectacle de variétés. C'est de la comédie d'improvisation. C'est tout cela et bien plus encore! Rejoignez l'équipe talentueuse de Just The Funny et préparez-vous pour un voyage sauvage et hilarant. Les billets sont PAR PERSONNE pour ce spectacle. Nous assiérons les groupes ensemble aux tables. Nous ferons de notre mieux pour asseoir les plus grands groupes aussi près que possible, mais nous pourrions devoir les diviser."
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1790437110843_9z8m",
+        "title": {
+          "en": "Luxury & Suites: Miami Dolphins v Kansas City Chiefs",
+          "es": "Lujo y Suites: Miami Dolphins vs Kansas City Chiefs",
+          "pt": "Luxo e Suítes: Miami Dolphins vs Kansas City Chiefs",
+          "fr": "Luxe et Suites: Miami Dolphins vs Kansas City Chiefs"
+        },
+        "date": "2026-09-27",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fluxury-suites-miami-dolphins-v-kansas-miami-florida-09-27-2026%2Fevent%2F0D00646CE6601575&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season · Starts 13:00 · Hard Rock Stadium",
+          "es": "Horario Flexible: Por favor tenga en cuenta que ciertos juegos están sujetos a programación flexible y la fecha y hora de esos juegos pueden cambiar de lo que se refleja actualmente en el cronograma y lo que puede aparecer en el boleto. Para obtener información más detallada sobre los procedimientos de programación flexible de la NFL para la Temporada 2026 de la NFL · Comienza 13:00 · Hard Rock Stadium",
+          "pt": "Cronograma Flexível: Observe que certos jogos estão sujeitos a agendamento flexível e a data e hora desses jogos podem mudar do que é refletido atualmente no cronograma e o que pode aparecer no ingresso. Para informações mais detalhadas sobre os procedimentos de agendamento flexível da NFL para a Temporada 2026 da NFL · Começa 13:00 · Hard Rock Stadium",
+          "fr": "Horaire Flexible: Veuillez noter que certains matchs sont sujets à un calendrier flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement reflété dans le calendrier et ce qui peut apparaître sur le billet. Pour des informations plus détaillées sur les procédures de calendrier flexible de la NFL pour la saison 2026 de la NFL · Commence 13:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1790437110843_227h",
+        "title": {
+          "en": "Miami Marlins vs Atlanta Braves: 2027 Magnet Schedule presented by LoanDepot",
+          "es": "Miami Marlins vs Atlanta Braves: Calendario Magnético 2027 presentado por LoanDepot",
+          "pt": "Miami Marlins vs Atlanta Braves: Calendário Magnético 2027 apresentado por LoanDepot",
+          "fr": "Miami Marlins vs Atlanta Braves : Calendrier Magnétique 2027 présenté par LoanDepot"
+        },
+        "date": "2026-09-27",
+        "venue": "LoanDepot Park",
+        "address": "501 Marlins Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0-&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Baseball · Starts 15:10 · LoanDepot Park",
+          "es": "Deportes · Béisbol · Comienza 15:10 · LoanDepot Park",
+          "pt": "Esportes · Beisebol · Começa 15:10 · LoanDepot Park",
+          "fr": "Sports · Baseball · Commence 15:10 · LoanDepot Park"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.778057,
+        "lng": -80.219406
+      },
+      {
+        "id": "tm_1790437110843_zpy5",
+        "title": {
+          "en": "The Haller Club prior to Rodrigo Teaser",
+          "es": "The Haller Club previo a Rodrigo Teaser",
+          "pt": "The Haller Club antes de Rodrigo Teaser",
+          "fr": "The Haller Club avant Rodrigo Teaser"
+        },
+        "date": "2026-09-27",
+        "venue": "The Haller Club at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-rodrigo-fort-lauderdale-florida-09-27-2026%2Fevent%2F0D0064A892BB6CFF&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
+          "es": "Suma a tu experiencia en The Parker con The Haller Club. Este nuevo salón premium con un elegante diseño retro cuenta con un espacioso bar y abundantes asientos. Por un precio todo incluido, tu entrada a The Haller Club ofrece uso exclusivo comenzando una hora antes de la función y durante el intermedio (cuando esté programado), bebidas suaves complementarias, cerveza y vino premium, café y té (bebidas mezcladas",
+          "pt": "Adicione à sua experiência em The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um bar espaçoso e muitos assentos. Por um preço inclusivo, sua entrada em The Haller Club oferece uso exclusivo começando uma hora antes do show e durante o intervalo (quando agendado), refrigerantes complementares, cerveja e vinho premium, café e chá (bebidas mistas",
+          "fr": "Ajoutez à votre expérience au Parker avec The Haller Club. Ce nouveau lounge premium au design rétro élégant dispose d'un bar spacieux et de nombreux sièges. Pour un prix unique tout inclus, votre accès au Haller Club offre un usage exclusif une heure avant le spectacle et pendant l'entracte (si prévu), boissons non alcoolisées complimentaires, bière et vin premium, café et thé (cocktails"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1790437110843_vep0",
+        "title": {
+          "en": "The Place to Be prior to Rodrigo Teaser",
+          "es": "The Place to Be previo a Rodrigo Teaser",
+          "pt": "The Place to Be antes de Rodrigo Teaser",
+          "fr": "The Place to Be avant Rodrigo Teaser"
+        },
+        "date": "2026-09-27",
+        "venue": "The Place To Be at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-09-27-2026%2Fevent%2F0D0064A89C387DA8&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
+          "es": "¡Este es The Place To Be! El exclusivo salón para donantes en The Parker está ofreciendo un número limitado de entradas para venta al público según disponibilidad. $75.00 POR PERSONA. Este club privado proporciona una experiencia ultra premium - servicio de comida y bebida complementaria en un refugio privado en el piso inferior de The Parker. Disfruta de un bar abierto con licores de la más alta calidad, una selección de camarones fríos y calientes",
+          "pt": "Este é The Place To Be! O exclusivo lounge de doadores em The Parker está oferecendo um número limitado de ingressos à venda ao público conforme disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço de comida e bebida complimentar em um refúgio privado no andar inferior de The Parker. Desfrute de um bar aberto servindo destilados premium, uma seleção de camarinhos frios e quentes",
+          "fr": "C'est The Place To Be ! Le lounge exclusif des donateurs au Parker propose un nombre limité de billets à la vente au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra premium - service de nourriture et boisson complimentaire dans un refuge privé au sous-sol du Parker. Profitez d'un bar ouvert servant les meilleurs alcools, une sélection de crevettes froides et chaudes"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
       }
     ]
   },
@@ -5414,31 +5342,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-25T16:24:33.629Z",
+    "fetchedAt": "2026-09-26T15:39:11.573Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.5dd94328eaebdc71a5bc25ab09337b893bfc6a92.002.2",
-        "type": "weather",
-        "severity": "moderate",
-        "title": {
-          "en": "Rip Current Statement",
-          "es": "Aviso de Corrientes de Resaca",
-          "pt": "Aviso de Correntes de Retorno",
-          "fr": "Avis de Courants de Baïn"
-        },
-        "detail": {
-          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding expected. For the High Rip Current Risk, dangerous\nrip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, from 6 AM EDT this\nmorning through Saturday evening. For the High Rip Current\nRisk, from 1 PM EDT this afternoon through Saturday evening.\n\n* IM",
-          "es": "* QUÉ...Para la Declaración de Inundación Costera, se esperan inundaciones costeras menores aisladas. Para el Riesgo Alto de Corrientes de Resaca, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Broward y Condado costero de Miami-Dade.\n\n* CUÁNDO...Para la Declaración de Inundación Costera, desde las 6 AM EDT esta mañana hasta el sábado por la noche. Para el Riesgo Alto de Corrientes de Resaca, desde la 1 PM EDT esta tarde hasta el sábado por la noche.\n\n* IM",
-          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, espera-se inundação costeira menor isolada. Para o Risco Alto de Corrente de Retorno, esperadas correntes de retorno perigosas.\n\n* ONDE...Condado Costeiro de Broward e Condado Costeiro de Miami-Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, das 6 AM EDT desta manhã até sábado à noite. Para o Risco Alto de Corrente de Retorno, das 13 PM EDT desta tarde até sábado à noite.\n\n* IM",
-          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, des inondations côtières mineures isolées sont attendues. Pour le Risque Élevé de Courants de Retour, des courants de retour dangereux sont attendus.\n\n* OÙ...Comté côtier de Broward et Comté côtier de Miami-Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, de 6 h HAE ce matin jusqu'à samedi soir. Pour le Risque Élevé de Courants de Retour, de 13 h HAE cet après-midi jusqu'à samedi soir.\n\n* IM"
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5dd94328eaebdc71a5bc25ab09337b893bfc6a92.002.2",
-        "effectiveAt": "2026-09-25T02:08:00-04:00",
-        "expiresAt": "2026-09-26T12:00:00.000Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.5dd94328eaebdc71a5bc25ab09337b893bfc6a92.002.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.b11d61c0efcce07c0173cab89ca092d0ac2bdd62.003.1",
         "type": "weather",
         "severity": "minor",
         "title": {
@@ -5448,15 +5355,36 @@
           "fr": "Coastal Flood Statement"
         },
         "detail": {
-          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding expected. For the High Rip Current Risk, dangerous\nrip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, from 6 AM EDT this\nmorning through Saturday evening. For the High Rip Current\nRisk, from 1 PM EDT this afternoon through Saturday evening.\n\n* IM",
-          "es": "* QUÉ...Para la Declaración de Inundación Costera, se esperan inundaciones costeras menores aisladas. Para el Riesgo Alto de Corrientes de Resaca, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Broward y Condado costero de Miami-Dade.\n\n* CUÁNDO...Para la Declaración de Inundación Costera, desde las 6 AM EDT esta mañana hasta el sábado por la noche. Para el Riesgo Alto de Corrientes de Resaca, desde la 1 PM EDT esta tarde hasta el sábado por la noche.\n\n* IM",
-          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, espera-se inundação costeira menor isolada. Para o Risco Alto de Corrente de Retorno, esperadas correntes de retorno perigosas.\n\n* ONDE...Condado Costeiro de Broward e Condado Costeiro de Miami-Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, das 6 AM EDT desta manhã até sábado à noite. Para o Risco Alto de Corrente de Retorno, das 13 PM EDT desta tarde até sábado à noite.\n\n* IM",
-          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, des inondations côtières mineures isolées sont attendues. Pour le Risque Élevé de Courants de Retour, des courants de retour dangereux sont attendus.\n\n* OÙ...Comté côtier de Broward et Comté côtier de Miami-Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, de 6 h HAE ce matin jusqu'à samedi soir. Pour le Risque Élevé de Courants de Retour, de 13 h HAE cet après-midi jusqu'à samedi soir.\n\n* IM"
+          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding expected. For the High Rip Current Risk, dangerous\nrip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Sunday\nafternoon. For the High Rip Current Risk, through Sunday\nevening.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncu",
+          "es": "* QUÉ... Para la Declaración de Inundación Costera, se espera inundación costera menor aislada. Para el Riesgo Alto de Corrientes de Resaca, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE... Condado Costero de Broward y Condado Costero de Miami Dade.\n\n* CUÁNDO... Para la Declaración de Inundación Costera, hasta el domingo por la tarde. Para el Riesgo Alto de Corrientes de Resaca, hasta el domingo por la noche.\n\n* IMPACTOS... Agua en carreteras y propiedades bajas. Corrientes de resaca",
+          "pt": "* O QUÊ... Para o Comunicado de Inundação Costeira, inundação costeira menor isolada esperada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas esperadas.\n\n* ONDE... Condado Costeiro de Broward e Condado Costeiro de Miami Dade.\n\n* QUANDO... Para o Comunicado de Inundação Costeira, até domingo à tarde. Para o Risco Alto de Correntes de Retorno, até domingo à noite.\n\n* IMPACTOS... Água em estradas e propriedades baixas. Correntes de retorno",
+          "fr": "* QUOI... Pour l'Avis d'Inondation Côtière, inondation côtière mineure isolée prévue. Pour le Risque Élevé de Courant de Retour, courants de retour dangereux prévus.\n\n* OÙ... Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND... Pour l'Avis d'Inondation Côtière, jusqu'à dimanche après-midi. Pour le Risque Élevé de Courant de Retour, jusqu'à dimanche soir.\n\n* IMPACTS... Eau sur les routes et propriétés basses. Courants de retour"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5dd94328eaebdc71a5bc25ab09337b893bfc6a92.002.1",
-        "effectiveAt": "2026-09-25T02:08:00-04:00",
-        "expiresAt": "2026-09-26T12:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b11d61c0efcce07c0173cab89ca092d0ac2bdd62.003.1",
+        "effectiveAt": "2026-09-26T02:30:00-04:00",
+        "expiresAt": "2026-09-27T00:00:00.000Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.b11d61c0efcce07c0173cab89ca092d0ac2bdd62.003.2",
+        "type": "weather",
+        "severity": "moderate",
+        "title": {
+          "en": "Rip Current Statement",
+          "es": "Aviso de Corrientes de Resaca",
+          "pt": "Aviso de Correntes de Retorno",
+          "fr": "Avis de Courants de Baïn"
+        },
+        "detail": {
+          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding expected. For the High Rip Current Risk, dangerous\nrip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Sunday\nafternoon. For the High Rip Current Risk, through Sunday\nevening.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncu",
+          "es": "* QUÉ... Para la Declaración de Inundación Costera, se espera inundación costera menor aislada. Para el Riesgo Alto de Corrientes de Resaca, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE... Condado Costero de Broward y Condado Costero de Miami Dade.\n\n* CUÁNDO... Para la Declaración de Inundación Costera, hasta el domingo por la tarde. Para el Riesgo Alto de Corrientes de Resaca, hasta el domingo por la noche.\n\n* IMPACTOS... Agua en carreteras y propiedades bajas. Corrientes de resaca",
+          "pt": "* O QUÊ... Para o Comunicado de Inundação Costeira, inundação costeira menor isolada esperada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas esperadas.\n\n* ONDE... Condado Costeiro de Broward e Condado Costeiro de Miami Dade.\n\n* QUANDO... Para o Comunicado de Inundação Costeira, até domingo à tarde. Para o Risco Alto de Correntes de Retorno, até domingo à noite.\n\n* IMPACTOS... Água em estradas e propriedades baixas. Correntes de retorno",
+          "fr": "* QUOI... Pour l'Avis d'Inondation Côtière, inondation côtière mineure isolée prévue. Pour le Risque Élevé de Courant de Retour, courants de retour dangereux prévus.\n\n* OÙ... Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND... Pour l'Avis d'Inondation Côtière, jusqu'à dimanche après-midi. Pour le Risque Élevé de Courant de Retour, jusqu'à dimanche soir.\n\n* IMPACTS... Eau sur les routes et propriétés basses. Courants de retour"
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b11d61c0efcce07c0173cab89ca092d0ac2bdd62.003.2",
+        "effectiveAt": "2026-09-26T02:30:00-04:00",
+        "expiresAt": "2026-09-27T00:00:00.000Z"
       }
     ]
   }
