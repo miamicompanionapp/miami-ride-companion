@@ -1,84 +1,84 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-26T15:39:18.959Z",
+    "lastUpdated": "2026-09-27T16:18:33.670Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-26T15:39:11.573Z",
+    "fetchedAt": "2026-09-27T16:18:26.009Z",
     "current": {
-      "temp_f": 82,
-      "feels_f": 92,
+      "temp_f": 84,
+      "feels_f": 95,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 76,
-      "wind_mph": 7,
-      "rain_chance": 26,
+      "humidity": 66,
+      "wind_mph": 3,
+      "rain_chance": 7,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-09-26",
-        "high_f": 84,
-        "low_f": 73,
-        "weathercode": 61,
-        "rain_chance": 26,
-        "description": {
-          "en": "Light rain",
-          "es": "Lluvia ligera",
-          "pt": "Chuva leve",
-          "fr": "Pluie légère"
-        }
-      },
-      {
         "date": "2026-09-27",
         "high_f": 84,
         "low_f": 72,
-        "weathercode": 55,
+        "weathercode": 3,
         "rain_chance": 7,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-09-28",
-        "high_f": 85,
+        "high_f": 83,
         "low_f": 71,
-        "weathercode": 51,
-        "rain_chance": 17,
+        "weathercode": 3,
+        "rain_chance": 8,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-09-29",
-        "high_f": 85,
-        "low_f": 80,
-        "weathercode": 53,
-        "rain_chance": 58,
+        "high_f": 84,
+        "low_f": 72,
+        "weathercode": 3,
+        "rain_chance": 51,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-09-30",
-        "high_f": 85,
-        "low_f": 80,
+        "high_f": 82,
+        "low_f": 78,
         "weathercode": 95,
-        "rain_chance": 61,
+        "rain_chance": 64,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-10-01",
+        "high_f": 85,
+        "low_f": 81,
+        "weathercode": 95,
+        "rain_chance": 66,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,20 +89,14 @@
     ],
     "hourly": [
       {
-        "hour": "11:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
         "hour": "12:00",
         "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "13:00",
-        "temp_f": 83,
+        "temp_f": 84,
         "weathercode": 0,
         "rain_chance": 0
       },
@@ -110,127 +104,133 @@
         "hour": "14:00",
         "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 1
       },
       {
         "hour": "15:00",
         "temp_f": 84,
         "weathercode": 0,
-        "rain_chance": 0
+        "rain_chance": 2
       },
       {
         "hour": "16:00",
-        "temp_f": 84,
+        "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 2
       },
       {
         "hour": "17:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 6
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 5
       },
       {
         "hour": "18:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 11
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 7
       },
       {
         "hour": "19:00",
-        "temp_f": 78,
-        "weathercode": 2,
-        "rain_chance": 20
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 4
       },
       {
         "hour": "20:00",
-        "temp_f": 78,
-        "weathercode": 51,
-        "rain_chance": 26
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "21:00",
-        "temp_f": 77,
-        "weathercode": 61,
-        "rain_chance": 18
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "22:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 10
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 2
       },
       {
         "hour": "23:00",
+        "temp_f": 77,
+        "weathercode": 2,
+        "rain_chance": 1
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 76,
+        "weathercode": 1,
+        "rain_chance": 3
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 8
+      },
+      {
+        "hour": "02:00",
         "temp_f": 75,
         "weathercode": 2,
         "rain_chance": 7
       },
       {
-        "hour": "00:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
         "hour": "03:00",
-        "temp_f": 73,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 5
       },
       {
         "hour": "04:00",
-        "temp_f": 72,
-        "weathercode": 1,
-        "rain_chance": 1
+        "temp_f": 73,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "05:00",
         "temp_f": 72,
-        "weathercode": 0,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 72,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 72,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 73,
-        "weathercode": 0,
+        "temp_f": 71,
+        "weathercode": 3,
         "rain_chance": 1
       },
       {
-        "hour": "09:00",
-        "temp_f": 76,
-        "weathercode": 0,
+        "hour": "07:00",
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 72,
+        "weathercode": 3,
         "rain_chance": 0
       },
       {
+        "hour": "09:00",
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
         "hour": "10:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 0
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 1
       }
     ]
   },
@@ -1769,56 +1769,6 @@
         "category": "comedy"
       },
       {
-        "id": "rss_1787488220323_ccb6",
-        "title": {
-          "en": "LAUDERHILL LIVE – Lyrics & Laughs 90s Edition w/ Marc Curry, Kwame, & More 9/26/26",
-          "es": "LAUDERHILL LIVE – Letras y Risas Edición de los 90 con Marc Curry, Kwame y más 9/26/26",
-          "pt": "LAUDERHILL LIVE – Letras e Risadas Edição dos Anos 90 com Marc Curry, Kwame e Mais 9/26/26",
-          "fr": "LAUDERHILL LIVE – Paroles et Rires Édition Années 90 avec Marc Curry, Kwame et Plus 9/26/26"
-        },
-        "date": "2026-09-26",
-        "venue": "Lauderhill Performing Arts Center,",
-        "address": "3800 NW 11th Place, Lauderhill, Florida, 33311",
-        "url": "https://www.soulofmiami.org/2026/08/22/lauderhill-live-lyrics-laughs-90s-edition-w-marc-curry-kwame-more-9-26-26/",
-        "free": false,
-        "price": "$50",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/CH-qW-QazUabu2K3hxV10A.large_-350x250.jpg",
-        "description": {
-          "en": "to $100 21 and over. No Children",
-          "es": "hasta $100 21 años en adelante. Sin niños",
-          "pt": "até $100 21 anos ou mais. Sem crianças",
-          "fr": "jusqu'à $100 21 ans et plus. Pas d'enfants"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1387234,
-        "lng": -80.2031758,
-        "category": "music"
-      },
-      {
-        "id": "rss_1787488220323_3b5w",
-        "title": {
-          "en": "Full Moon Yoga at InterContinental Miami 9/26/26",
-          "es": "Yoga de Luna Llena en InterContinental Miami 9/26/26",
-          "pt": "Yoga de Lua Cheia no InterContinental Miami 9/26/26",
-          "fr": "Yoga de Pleine Lune à l'InterContinental Miami 9/26/26"
-        },
-        "date": "2026-09-26",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/08/22/full-moon-yoga-at-intercontinental-miami-9-26-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/YOGAAAAA-ICM-350x248.png",
-        "description": {
-          "en": "into National Yoga Month as InterContinental Miami hosts Full Moon Yoga & Sound Healing on Saturday, September 26",
-          "es": "Durante el Mes Nacional del Yoga, InterContinental Miami presenta Yoga de Luna Llena y Sanación de Sonido el sábado 26 de septiembre",
-          "pt": "Celebrando o Mês Nacional do Yoga, o InterContinental Miami apresenta Yoga de Lua Cheia e Cura do Som no sábado, 26 de setembro",
-          "fr": "Pour le Mois National du Yoga, l'InterContinental Miami accueille Yoga de Pleine Lune et Guérison par le Son le samedi 26 septembre"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1787575173885_1hz0",
         "title": {
           "en": "Un-Birthday Party: Neighbors 4 Neighbors Celebrates 34 Years at Bar Betty 10/5/26",
@@ -2129,56 +2079,6 @@
         "category": "community"
       },
       {
-        "id": "cp_1788450086967_g30e",
-        "title": {
-          "en": "Centennial Highland Village Community Center Block Party",
-          "es": "Fiesta Comunitaria del Centro Comunitario Centennial Highland Village",
-          "pt": "Festa Comunitária do Centro Comunitário Centennial Highland Village",
-          "fr": "Fête Communautaire du Centre Communautaire Centennial Highland Village"
-        },
-        "date": "2026-09-26",
-        "venue": "Highland Village Community Center",
-        "address": "13621 Highland Drive  North Miami Beach FL 33162",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "https://www.citynmb.com/calendar.aspx?EID=8858",
-          "es": "https://www.citynmb.com/calendar.aspx?EID=8858",
-          "pt": "https://www.citynmb.com/calendar.aspx?EID=8858",
-          "fr": "https://www.citynmb.com/calendar.aspx?EID=8858"
-        },
-        "source": "North Miami Beach",
-        "category": "community"
-      },
-      {
-        "id": "rss_1788536396335_bbzk",
-        "title": {
-          "en": "Free Stronger Together Couples Conference presented by Community-Based Connections, Inc. 9/26/26",
-          "es": "Conferencia Gratuita para Parejas Stronger Together presentada por Community-Based Connections, Inc. 9/26/26",
-          "pt": "Conferência Gratuita para Casais Stronger Together apresentada por Community-Based Connections, Inc. 9/26/26",
-          "fr": "Conférence Gratuite pour Couples Stronger Together présentée par Community-Based Connections, Inc. 9/26/26"
-        },
-        "date": "2026-09-26",
-        "venue": "New Mount Olive Baptist Church",
-        "address": "400 NW 9th Ave., Fort Lauderdale, Florida, 33311",
-        "url": "https://www.soulofmiami.org/2026/09/03/free-stronger-together-couples-conference-presented-by-community-based-connections-inc-9-26-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Stronger-Together-Couples-Conference-Broward-1080-x-1080-JPG-350x344.jpg",
-        "description": {
-          "en": "Community-Based Connections, Inc. (CBCI), a nonprofit organization dedicated to",
-          "es": "Community-Based Connections, Inc. (CBCI), una organización sin fines de lucro dedicada a",
-          "pt": "Community-Based Connections, Inc. (CBCI), uma organização sem fins lucrativos dedicada a",
-          "fr": "Community-Based Connections, Inc. (CBCI), une organisation à but non lucratif dédiée à"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1223084,
-        "lng": -80.1433786,
-        "category": "community"
-      },
-      {
         "id": "rss_1788800862466_wrq5",
         "title": {
           "en": "Dining in the Dark benefiting Lighthouse of Broward 11/14/26",
@@ -2200,32 +2100,6 @@
           "fr": "Dépoussiérez vos paillettes, chaussures compensées et style disco pour"
         },
         "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "rss_1789055075379_nwge",
-        "title": {
-          "en": "Shorts & Beats ~ Venezuela at the Deering Estate 9/26/26",
-          "es": "Shorts & Beats ~ Venezuela en la Deering Estate 9/26/26",
-          "pt": "Shorts & Beats ~ Venezuela na Deering Estate 9/26/26",
-          "fr": "Shorts & Beats ~ Venezuela au Deering Estate 9/26/26"
-        },
-        "date": "2026-09-26",
-        "venue": "Deering Estate Visitor Center",
-        "address": "16701 SW 72nd Avenue, Palmetto Bay, Florida, 33157",
-        "url": "https://www.soulofmiami.org/2026/09/09/shorts-beats-venezuela-at-the-deering-estate-9-26-26/",
-        "free": false,
-        "price": "$40",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/162039-SHORTS-BEATS-VENEZUELA-at-the-Deering-Estate-350x175.jpg",
-        "description": {
-          "en": "In partnership with Deering Estate, the MIAMI short FILM FESTIVAL (MIAMIsFF)",
-          "es": "En asociación con Deering Estate, el FESTIVAL DE CORTOMETRAJES MIAMI (MIAMIsFF)",
-          "pt": "Em parceria com Deering Estate, o FESTIVAL DE CURTAS-METRAGENS DE MIAMI (MIAMIsFF)",
-          "fr": "En partenariat avec Deering Estate, le FESTIVAL DU COURT-MÉTRAGE DE MIAMI (MIAMIsFF)"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.615703,
-        "lng": -80.3067338,
         "category": "community"
       },
       {
@@ -2305,236 +2179,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1789313457805_1otu",
-        "title": {
-          "en": "Photographing Myself 9/26/26",
-          "es": "Fotografiándome a Mí Mismo 9/26/26",
-          "pt": "Fotografando a Mim Mesmo 9/26/26",
-          "fr": "Me Photographier 9/26/26"
-        },
-        "date": "2026-09-26",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/09/12/photographing-myself-9-26-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/opening-350x448.jpeg",
-        "description": {
-          "en": "Join us for the opening reception of “Photographing Myself: Bunny Yeager [in Dialogue with Aldeide Delgado, Naomi Fisher, and",
-          "es": "Únete a nosotros para la recepción de apertura de \"Fotografiándome a Mí Mismo: Bunny Yeager [en Diálogo con Aldeide Delgado, Naomi Fisher, y",
-          "pt": "Junte-se a nós para a recepção de abertura de \"Fotografando a Mim Mesmo: Bunny Yeager [em Diálogo com Aldeide Delgado, Naomi Fisher, e",
-          "fr": "Rejoignez-nous pour le vernissage de « Me Photographier: Bunny Yeager [en Dialogue avec Aldeide Delgado, Naomi Fisher, et"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "rss_1789407133031_ndzx",
-        "title": {
-          "en": "UTSAV 2026 9/26/26",
-          "es": "UTSAV 2026 9/26/26",
-          "pt": "UTSAV 2026 9/26/26",
-          "fr": "UTSAV 2026 9/26/26"
-        },
-        "date": "2026-09-26",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/09/13/utsav-2026-9-26-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-09-at-1.47.01-PM-1-333x500.jpeg",
-        "description": {
-          "en": "Miami 2026 will bring the sights, sounds, flavors and traditions of India to Miami Dade College’s Wolfson Campus on Saturday, September",
-          "es": "Miami 2026 llevará los espectáculos, sonidos, sabores y tradiciones de India al Campus Wolfson del Miami Dade College el sábado 26 de septiembre",
-          "pt": "Miami 2026 trará os espetáculos, sons, sabores e tradições da Índia para o Campus Wolfson do Miami Dade College no sábado, 26 de setembro",
-          "fr": "Miami 2026 apportera les spectacles, sons, saveurs et traditions de l'Inde au campus Wolfson du Miami Dade College le samedi 26 septembre"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "tm_1789407133606_doeh",
-        "title": {
-          "en": "Legacy: A Tribute To Bharat Ratna Pt. Ravi Shankar",
-          "es": "Legacy: Un Tributo a Bharat Ratna Pt. Ravi Shankar",
-          "pt": "Legacy: Uma Homenagem ao Bharat Ratna Pt. Ravi Shankar",
-          "fr": "Legacy : Un Hommage au Bharat Ratna Pt. Ravi Shankar"
-        },
-        "date": "2026-09-26",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Flegacy-a-tribute-to-bharat-ratna-ft-lauderdale-florida-09-26-2026%2Fevent%2F0D0064A4A3F2867C&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/548/5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Presented by the Association of Performing Arts of India Celebrating the visionary who introduced Indian classical music to global audiences, the legendary sitar player Pandit Ravi Shankar, \"Legacy: Tribute to Bharat Ratna Pt. Ravi Shankar\" transcends time, culture, and borders. This concert brings together internationally acclaimed maestros and disciples whose artistry reflects the depth, dynamis",
-          "es": "Presentado por la Asociación de Artes Escénicas de India. Celebrando al visionario que introdujo la música clásica india a audiencias globales, el legendario sitarista Pandit Ravi Shankar, \"Legacy: Tributo a Bharat Ratna Pt. Ravi Shankar\" trasciende el tiempo, la cultura y las fronteras. Este concierto reúne a maestros y discípulos aclamados internacionalmente cuya artesanía refleja la profundidad y dinámica",
-          "pt": "Apresentado pela Associação de Artes Cênicas da Índia. Celebrando o visionário que introduziu a música clássica indiana para audiências globais, o lendário sitarista Pandit Ravi Shankar, \"Legacy: Tributo ao Bharat Ratna Pt. Ravi Shankar\" transcende tempo, cultura e fronteiras. Este concerto reúne maestros e discípulos aclamados internacionalmente cuja arte reflete a profundidade e a dinâmica",
-          "fr": "Présenté par l'Association des Arts de la Scène de l'Inde. Célébrant le visionnaire qui a introduit la musique classique indienne aux audiences mondiales, le légendaire sitariste Pandit Ravi Shankar, \"Legacy: Tributo al Bharat Ratna Pt. Ravi Shankar\" transcende le temps, la culture et les frontières. Ce concert réunit des maestros et des disciples acclamés internationalement dont l'art reflète la profondeur et la dynamique"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1789407133606_q2nt",
-        "title": {
-          "en": "James Taylor And His All-Star Band",
-          "es": "James Taylor And His All-Star Band",
-          "pt": "James Taylor And His All-Star Band",
-          "fr": "James Taylor And His All-Star Band"
-        },
-        "date": "2026-09-26",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjames-taylor-and-his-allstar-band-hollywood-florida-09-26-2026%2Fevent%2F0D0064288FC83FA5&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/494/4a231626-0e28-4f17-b002-71cf03aab494_602141_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:30 · Hard Rock Live",
-          "es": "Música · Rock · Comienza 19:30 · Hard Rock Live",
-          "pt": "Música · Rock · Começa 19:30 · Hard Rock Live",
-          "fr": "Musique · Rock · Commence 19:30 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1789407133606_0pe8",
-        "title": {
-          "en": "Miamibloco - From The Streets To The Stage",
-          "es": "Miamibloco - De Las Calles Al Escenario",
-          "pt": "Miamibloco - Das Ruas Para o Palco",
-          "fr": "Miamibloco - De la Rue à la Scène"
-        },
-        "date": "2026-09-26",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiamibloco-from-the-streets-to-the-ft-lauderdale-florida-09-26-2026%2Fevent%2F0D00648A9561674D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b25/309af2b3-f980-4484-bb8c-e1e99830db25_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miamibloco brings the electrifying spirit of Brazil to life in a vibrant, high-energy celebration of rhythm, culture, and community. From the heartbeat of Carnaval drums to the rich sounds of Afro-Brazilian music and samba, this immersive performance transforms the stage into a colorful journey through Brazil's musical soul. What began in the streets of Miami comes to the stage in a powerful exper",
-          "es": "Miamibloco trae el espíritu electrizante de Brasil a la vida en una celebración vibrante y energética de ritmo, cultura y comunidad. Desde el latido de los tambores del Carnaval hasta los ricos sonidos de la música afrobrasilera y la samba, esta presentación inmersiva transforma el escenario en un colorido viaje a través del alma musical de Brasil. Lo que comenzó en las calles de Miami llega al escenario en una poderosa experiencia.",
-          "pt": "Miamibloco traz o espírito eletrizante do Brasil à vida em uma celebração vibrante e energética de ritmo, cultura e comunidade. Do batida dos tambores do Carnaval aos sons ricos da música afro-brasileira e samba, esta apresentação imersiva transforma o palco em uma jornada colorida pela alma musical do Brasil. O que começou nas ruas de Miami chega ao palco em uma poderosa experiência.",
-          "fr": "Miamibloco apporte l'esprit électrisant du Brésil à la vie dans une célébration vibrante et énergique du rythme, de la culture et de la communauté. Des battements des tambours du Carnaval aux riches sons de la musique afro-brésilienne et de la samba, cette performance immersive transforme la scène en un voyage coloré à travers l'âme musicale du Brésil. Ce qui a commencé dans les rues de Miami arrive sur scène dans une expérience puissante."
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
-        "id": "tm_1789407133606_28f8",
-        "title": {
-          "en": "Benise",
-          "es": "Benise",
-          "pt": "Benise",
-          "fr": "Benise"
-        },
-        "date": "2026-09-26",
-        "venue": "Coral Springs Center",
-        "address": "2855 Coral Springs Dr., Coral Springs, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZPAf&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/afb/c865f8e3-1785-4e98-9401-eaba7613fafb_726571_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · World · Starts 19:30 · Coral Springs Center",
-          "es": "Música · Mundial · Comienza 19:30 · Coral Springs Center",
-          "pt": "Música · Mundial · Começa 19:30 · Coral Springs Center",
-          "fr": "Musique · Monde · Commence 19:30 · Coral Springs Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.2738,
-        "lng": -80.256897
-      },
-      {
-        "id": "tm_1789407133606_xkea",
-        "title": {
-          "en": "aespa LIVE TOUR - SYNK : COMPLæXITY - in MIAMI",
-          "es": "aespa LIVE TOUR - SYNK : COMPLæXITY - en MIAMI",
-          "pt": "aespa LIVE TOUR - SYNK : COMPLæXITY - em MIAMI",
-          "fr": "aespa LIVE TOUR - SYNK : COMPLæXITY - à MIAMI"
-        },
-        "date": "2026-09-26",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Faespa-live-tour-synk-complxity-in-miami-florida-09-26-2026%2Fevent%2F0D0064940F3C61C3&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/a6d/148c8f64-0e58-4410-ad35-7934f3a02a6d_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:00 · Kaseya Center",
-          "es": "Música · Pop · Comienza 20:00 · Kaseya Center",
-          "pt": "Música · Pop · Começa 20:00 · Kaseya Center",
-          "fr": "Musique · Pop · Commence 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1789407133606_qx3r",
-        "title": {
-          "en": "Mid-Autumn Moon Festival",
-          "es": "Festival de la Luna de Mediados de Otoño",
-          "pt": "Festival da Lua do Meio do Outono",
-          "fr": "Festival de la Lune d'Automne"
-        },
-        "date": "2026-09-26",
-        "venue": "Seminole Classic Casino",
-        "address": "4150 North State Road 7, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fmid-autumn-moon-festival-seminole-classic-casino-tickets%2F15038893&utm_medium=affiliate",
-        "free": false,
-        "price": "$60",
-        "image": "https://i.ticketweb.com/i/00/13/63/53/83_Edp.jpg?v=14",
-        "description": {
-          "en": "21+Đan Nguyn is a renowned Vietnamese-American singer known for his powerful, emotional voice and signature performances of Vietnamese bolero, nhạc vng, and romantic ballads. With a career spanning more than 17 years, he has built a loyal international following and remains one of the most recognized voices in Vietnamese music today. Diễm Sương is a Vietnamese-American singer known for her elegant",
-          "es": "21+ Đan Nguyên es un cantante vietnamita-estadounidense de renombre conocido por su voz poderosa y emotiva y sus actuaciones características de bolero vietnamita, nhạc vọng y baladas románticas. Con una carrera que abarca más de 17 años, ha construido una leal base internacional de seguidores y sigue siendo una de las voces más reconocidas en la música vietnamita actual. Diễm Sương es una cantante vietnamita-estadounidense conocida por su elegancia.",
-          "pt": "21+ Đan Nguyên é um cantor vietnamita-americano renomado conhecido por sua voz poderosa e emotiva e suas apresentações características de bolero vietnamita, nhạc vọng e baladas românticas. Com uma carreira que abrange mais de 17 anos, ele construiu uma base de fãs internacionais leal e continua sendo uma das vozes mais reconhecidas na música vietnamita atualmente. Diễm Sương é uma cantora vietnamita-americana conhecida por sua elegância.",
-          "fr": "21+ Đan Nguyên est un chanteur vietnamien-américain renommé connu pour sa voix puissante et émouvante et ses performances caractéristiques de boléro vietnamien, nhạc vọng et ballades romantiques. Avec une carrière s'étendant sur plus de 17 ans, il a construit un public international fidèle et reste l'une des voix les plus reconnues de la musique vietnamienne actuelle. Diễm Sương est une chanteuse vietnamienne-américaine connue pour son élégance."
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.043172,
-        "lng": -80.209478
-      },
-      {
-        "id": "tm_1789407133606_aaql",
-        "title": {
-          "en": "Club 90s Presents Ariana Grande Night",
-          "es": "Club 90s Presenta Noche de Ariana Grande",
-          "pt": "Club 90s Apresenta Noite de Ariana Grande",
-          "fr": "Club 90s Présente Soirée Ariana Grande"
-        },
-        "date": "2026-09-26",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fclub-90s-presents-ariana-grande-night-ft-lauderdale-florida-09-26-2026%2Fevent%2F0D0064FDE5E096E5&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/08f/dfb74e4a-95f6-46fd-bdb0-c699706e708f_1011401_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Club 90s Presents Ariana Grande Night will be coming to Revolution Live on Saturday, September 26th. This event is 18+. Doors open at 9pm. Show starts at 10pm. All support acts are subject to change without notice. Ariana Night is back! Celebrate Ariana's incredible catalog and new era with a night dedicated to all your favorite hits. Sing, dance, and scream every word with fellow fans all night l",
-          "es": "Club 90s Presenta Noche de Ariana Grande llegará a Revolution Live el sábado 26 de septiembre. Este evento es 18+. Las puertas abren a las 9pm. El show comienza a las 10pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. ¡La Noche de Ariana está de vuelta! Celebra el increíble catálogo de Ariana y su nueva era con una noche dedicada a todos tus éxitos favoritos. Canta, baila y grita cada palabra con otros fanáticos toda la noche.",
-          "pt": "Club 90s Apresenta Noite de Ariana Grande chegará ao Revolution Live no sábado, 26 de setembro. Este evento é 18+. As portas abrem às 21h. O show começa às 22h. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. A Noite de Ariana está de volta! Celebre o incrível catálogo de Ariana e sua nova era com uma noite dedicada a todos os seus sucessos favoritos. Cante, dance e grite cada palavra com outros fãs a noite toda.",
-          "fr": "Club 90s Présente Soirée Ariana Grande arrivera à Revolution Live samedi 26 septembre. Cet événement est 18+. Les portes ouvrent à 21h. Le spectacle commence à 22h. Tous les actes de soutien sont sujets à modification sans préavis. La Soirée Ariana est de retour! Célébrez le catalogue incroyable d'Ariana et sa nouvelle ère avec une soirée dédiée à tous vos succès préférés. Chantez, dansez et criez chaque parole avec d'autres fans toute la nuit."
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
         "id": "rss_1789574419665_9c5p",
         "title": {
           "en": "Celebrate National Vodka Day at Ten Palms Gulfstream Park Sunday 10/4/26",
@@ -2559,32 +2203,6 @@
         "lat": 25.993706,
         "lng": -80.1426812,
         "category": "community"
-      },
-      {
-        "id": "tm_1789574420347_mo3u",
-        "title": {
-          "en": "Crankdat",
-          "es": "Crankdat",
-          "pt": "Crankdat",
-          "fr": "Crankdat"
-        },
-        "date": "2026-09-26",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcrankdat-liv-nightclub-miami-tickets%2F14246074&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b55/9ee4941d-32a7-4996-aa4a-7986aa4c7b55_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar identificación válida indicando que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza a las 23:30 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso incapaz de apresentar identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa às 23:30 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux personnes de 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence à 23:30 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
       },
       {
         "id": "tm_1789574420347_t62o",
@@ -3619,32 +3237,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790093384347_ya28",
-        "title": {
-          "en": "Fisher - Ages 18+",
-          "es": "Fisher - Mayores de 18 años",
-          "pt": "Fisher - Maiores de 18 anos",
-          "fr": "Fisher - 18 ans et plus"
-        },
-        "date": "2026-09-26",
-        "venue": "Factory Town",
-        "address": "4800 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZYjI&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/7d9/2f46681a-589b-4c67-8142-d350d727a7d9_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 22:00 · Factory Town",
-          "es": "Música · Otros · Comienza 22:00 · Factory Town",
-          "pt": "Música · Outros · Começa 22:00 · Factory Town",
-          "fr": "Musique · Autres · Commence 22:00 · Factory Town"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.811899,
-        "lng": -80.238998
-      },
-      {
         "id": "rss_1790179156218_rf6a",
         "title": {
           "en": "The Dalmore 17-Year-Old Dinner 10/22/26",
@@ -3851,32 +3443,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790266998723_f1u3",
-        "title": {
-          "en": "Aerial Arts Society Competition 2026",
-          "es": "Competencia de Artes Aéreas 2026",
-          "pt": "Competição de Artes Aéreas 2026",
-          "fr": "Compétition des Arts Aériens 2026"
-        },
-        "date": "2026-09-26",
-        "venue": "Rose & Alfred Miniaci Performing Arts Center",
-        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Faerial-arts-society-competition-2026-ft-lauderdale-florida-09-26-2026%2Fevent%2F0D006504E0F18862&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/03e/e15ef00f-2c87-4421-ae61-d740851a703e_105891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "THIS EVENT IS AT THE ROSE AND ALFRED MINIACI PERFORMING ARTS CENTER ON THE NOVA SOUTHEASTERN UNIVERSITY CAMPUS. Parking is available in the NSU Alvin Sherman Library parking garage for $1.00 per hour via PayByPhone.com App or kiosk located at the 1st floor elevators. Before you go to the show, visit MiniaciPAC.com/visit for more info on directions to the NSU campus, parking and FAQ. Use 3051 Ray F",
-          "es": "ESTE EVENTO ESTÁ EN EL CENTRO DE ARTES ESCÉNICAS ROSE Y ALFRED MINIACI EN EL CAMPUS DE LA UNIVERSIDAD NOVA SOUTHEASTERN. El estacionamiento está disponible en el garaje de estacionamiento de la Biblioteca Alvin Sherman de NSU por $1.00 por hora a través de la aplicación PayByPhone.com o el quiosco ubicado en los ascensores del primer piso. Antes de ir al espectáculo, visite MiniaciPAC.com/visit para más información sobre direcciones al campus de NSU, estacionamiento y preguntas frecuentes.",
-          "pt": "ESTE EVENTO ESTÁ NO CENTRO DE ARTES CÊNICAS ROSE E ALFRED MINIACI NO CAMPUS DA UNIVERSIDADE NOVA SOUTHEASTERN. Estacionamento está disponível no garagem de estacionamento da Biblioteca Alvin Sherman da NSU por $1.00 por hora através do aplicativo PayByPhone.com ou quiosque localizado nos elevadores do primeiro andar. Antes de ir ao show, visite MiniaciPAC.com/visit para mais informações sobre direções para o campus da NSU, estacionamento e perguntas frequentes.",
-          "fr": "CET ÉVÉNEMENT SE DÉROULE AU CENTRE DES ARTS DU SPECTACLE ROSE ET ALFRED MINIACI SUR LE CAMPUS DE L'UNIVERSITÉ NOVA SOUTHEASTERN. Le stationnement est disponible au garage de stationnement de la Bibliothèque Alvin Sherman de NSU pour 1,00 $ par heure via l'application PayByPhone.com ou le kiosque situé aux ascenseurs du premier étage. Avant d'aller au spectacle, visitez MiniaciPAC.com/visit pour plus d'informations sur les directions vers le campus NSU, le stationnement et les FAQ."
-        },
-        "source": "Ticketmaster",
-        "lat": 26.0884017,
-        "lng": -80.2461624,
-        "category": "music"
-      },
-      {
         "id": "rss_1790353431972_uj9q",
         "title": {
           "en": "Queen Symphony Sensation Miami 3/2/27",
@@ -4001,110 +3567,6 @@
         },
         "source": "Soul of Miami",
         "category": "arts"
-      },
-      {
-        "id": "tm_1790353432747_m5ss",
-        "title": {
-          "en": "Misfits Boxing",
-          "es": "Boxeo Misfits",
-          "pt": "Boxe Misfits",
-          "fr": "Boxe Misfits"
-        },
-        "date": "2026-09-26",
-        "venue": "James L Knight Center",
-        "address": "400 SE 2nd Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmisfits-boxing-miami-florida-09-26-2026%2Fevent%2F0D00651682D02D9A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/27a/4731ca99-5440-4c1f-890b-66a0d80d227a_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Misfits Boxing returns to the James L. Knight Center in Miami on September 26, 2026, bringing another highly anticipated night of boxing to Downtown Miami. Javon \"Wanna\" Walton steps into the ring against former UFC champion and Olympic gold medalist Henry Cejudo in a must-see matchup that brings together two distinct fighting styles and personalities. · Starts 18:00 · James L Knight Center",
-          "es": "Boxeo Misfits regresa al James L. Knight Center en Miami el 26 de septiembre de 2026, trayendo otra noche de boxeo muy esperada al Centro de Miami. Javon \"Wanna\" Walton sube al ring contra el ex campeón de UFC y medallista de oro olímpico Henry Cejudo en un enfrentamiento imprescindible que reúne dos estilos de lucha y personalidades distintas. · Comienza 18:00 · James L Knight Center",
-          "pt": "Boxe Misfits retorna ao James L. Knight Center em Miami em 26 de setembro de 2026, trazendo outra noite de boxe muito aguardada para o Centro de Miami. Javon \"Wanna\" Walton entra no ringue contra o ex-campeão do UFC e medalhista de ouro olímpico Henry Cejudo em uma luta imperdível que reúne dois estilos de luta e personalidades distintas. · Começa 18:00 · James L Knight Center",
-          "fr": "Boxe Misfits revient au James L. Knight Center à Miami le 26 septembre 2026, apportant une autre nuit de boxe très attendue au centre-ville de Miami. Javon \"Wanna\" Walton monte sur le ring contre l'ancien champion de l'UFC et médaillé d'or olympique Henry Cejudo dans un affrontement incontournable qui réunit deux styles de combat et personnalités distincts. · Commence 18:00 · James L Knight Center"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7707756,
-        "lng": -80.1901174
-      },
-      {
-        "id": "tm_1790353432747_as3z",
-        "title": {
-          "en": "Florida International Panthers Football vs. LIU Sharks Football",
-          "es": "Fútbol Americano Panthers de FIU vs Sharks de LIU",
-          "pt": "Futebol Americano Panthers da FIU vs Sharks do LIU",
-          "fr": "Football Américain Panthers de FIU contre Sharks de LIU"
-        },
-        "date": "2026-09-26",
-        "venue": "Pitbull Stadium",
-        "address": "11200 SW 8th Street, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-zoP&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/db5/5acfb9a3-4315-40c6-824f-e0fd31bd5db5_723691_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 18:00 · Pitbull Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza 18:00 · Estadio Pitbull",
-          "pt": "Esportes · Futebol Americano · Começa 18:00 · Estádio Pitbull",
-          "fr": "Sports · Football Américain · Commence 18:00 · Stade Pitbull"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7577,
-        "lng": -80.374802
-      },
-      {
-        "id": "tm_1790353432747_tt3g",
-        "title": {
-          "en": "Florida Panthers vs. Tampa Bay Lightning",
-          "es": "Panthers de Florida vs Lightning de Tampa Bay",
-          "pt": "Panthers da Flórida vs Lightning de Tampa Bay",
-          "fr": "Panthers de Floride contre Lightning de Tampa Bay"
-        },
-        "date": "2026-09-26",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PV4v&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Hockey · Starts 18:00 · Amerant Bank Arena",
-          "es": "Deportes · Hockey · Comienza 18:00 · Amerant Bank Arena",
-          "pt": "Esportes · Hóquei · Começa 18:00 · Amerant Bank Arena",
-          "fr": "Sports · Hockey · Commence 18:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
-        "id": "tm_1790353432747_rblx",
-        "title": {
-          "en": "Miami Hurricanes vs Central Michigan Chippewas",
-          "es": "Hurricanes de Miami vs Chippewas de Central Michigan",
-          "pt": "Hurricanes de Miami vs Chippewas da Central Michigan",
-          "fr": "Hurricanes de Miami contre Chippewas de Central Michigan"
-        },
-        "date": "2026-09-26",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-vs-central-michigan-chippewas-miami-florida-09-26-2026%2Fevent%2F0D0064FCBFAF6F17&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/022/a96b1453-309b-48e2-a776-f2dd19d83022_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 18:30 · Hard Rock Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza 18:30 · Hard Rock Stadium",
-          "pt": "Esportes · Futebol Americano · Começa 18:30 · Hard Rock Stadium",
-          "fr": "Sports · Football Américain · Commence 18:30 · Hard Rock Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
       },
       {
         "id": "rss_1790437110319_i14u",
@@ -4259,84 +3721,6 @@
         "category": "nightlife"
       },
       {
-        "id": "tm_1790437110843_3i5u",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-26",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 11:45 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familiar · Comienza 11:45 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 11:45 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 11:45 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1790437110843_jboq",
-        "title": {
-          "en": "Miami Marlins vs. Atlanta Braves",
-          "es": "Miami Marlins vs. Atlanta Braves",
-          "pt": "Miami Marlins vs. Atlanta Braves",
-          "fr": "Miami Marlins vs. Atlanta Braves"
-        },
-        "date": "2026-09-26",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0O&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 16:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 16:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 16:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 16:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1790437110843_bivt",
-        "title": {
-          "en": "Cheap Trills Musical Improv",
-          "es": "Improvisación Musical Cheap Trills",
-          "pt": "Improvisação Musical Cheap Trills",
-          "fr": "Improvisation Musicale Cheap Trills"
-        },
-        "date": "2026-09-26",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheap-trills-musical-improv-just-the-funny-tickets%2F14897753&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Cheap Trills Musical Improv Nothing beats a Cheap Trills show! It's a musical. It's a variety show. It's improv comedy. It's all of that and much more! Join the talented cast of Just The Funny and be prepared for a wild, hilarious ride. Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as close as possible, but may have to split",
-          "es": "¡Nada supera un show de Cheap Trills! Es un musical. Es un show de variedades. Es comedia de improvisación. ¡Es todo eso y mucho más! Únete al talentoso elenco de Just The Funny y prepárate para un viaje salvaje e hilarante. Los boletos son POR PERSONA para este show. Sentaremos a los grupos juntos en mesas. Haremos nuestro mejor esfuerzo para sentar grupos más grandes lo más cerca posible, pero podemos tener que dividirlos.",
-          "pt": "Nada supera um show do Cheap Trills! É um musical. É um show de variedades. É comédia de improvisação. É tudo isso e muito mais! Junte-se ao elenco talentoso do Just The Funny e prepare-se para um passeio selvagem e hilariante. Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas. Faremos o nosso melhor para sentar grupos maiores o mais próximo possível, mas podemos ter que dividi-los.",
-          "fr": "Rien ne vaut un spectacle de Cheap Trills! C'est une comédie musicale. C'est un spectacle de variétés. C'est de la comédie d'improvisation. C'est tout cela et bien plus encore! Rejoignez l'équipe talentueuse de Just The Funny et préparez-vous pour un voyage sauvage et hilarant. Les billets sont PAR PERSONNE pour ce spectacle. Nous assiérons les groupes ensemble aux tables. Nous ferons de notre mieux pour asseoir les plus grands groupes aussi près que possible, mais nous pourrions devoir les diviser."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
         "id": "tm_1790437110843_9z8m",
         "title": {
           "en": "Luxury & Suites: Miami Dolphins v Kansas City Chiefs",
@@ -4439,6 +3823,394 @@
         "lat": 26.13364,
         "lng": -80.135769,
         "category": "music"
+      },
+      {
+        "id": "tm_1790525847162_0uth",
+        "title": {
+          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
+          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
+          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
+          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
+        },
+        "date": "2026-09-27",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Family · Starts 12:30 · Mana Wynwood Convention Center",
+          "es": "Miscelánea · Familia · Comienza 12:30 · Mana Wynwood Convention Center",
+          "pt": "Diversos · Família · Começa 12:30 · Mana Wynwood Convention Center",
+          "fr": "Divers · Famille · Commence 12:30 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797998,
+        "lng": -80.202062,
+        "category": "arts"
+      },
+      {
+        "id": "tm_1790525847162_mvp6",
+        "title": {
+          "en": "Buena Vista Social Club (Touring)",
+          "es": "Buena Vista Social Club (Gira)",
+          "pt": "Buena Vista Social Club (Turnê)",
+          "fr": "Buena Vista Social Club (Tournée)"
+        },
+        "date": "2026-09-29",
+        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-NGS&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Theatre · Starts 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "es": "Artes y Teatro · Teatro · Comienza 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "pt": "Artes e Teatro · Teatro · Começa 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "fr": "Arts et Théâtre · Théâtre · Commence 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.784901,
+        "lng": -80.189598
+      },
+      {
+        "id": "tm_1790525847162_hwxl",
+        "title": {
+          "en": "John Crist Live",
+          "es": "John Crist En Vivo",
+          "pt": "John Crist Ao Vivo",
+          "fr": "John Crist En Direct"
+        },
+        "date": "2026-10-01",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjohn-crist-live-ft-lauderdale-florida-10-01-2026%2Fevent%2F0D00646CC1C4C6DF&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/544/33c53e82-16ab-4677-8ab9-d88c8529a544_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Combining sharp wit, tactfully-unhinged stand-up and viral sketches, John Crist is one of today's most distinctive, fastest-rising comedic voices. With more than one billion video views and 8 million followers, Crist consistently ranks among Pollstar's Top 10 Global Touring Comedians. Following his nearly sold out Jokes For Humans Tour in 2025, Crist kicked off his national John Crist Live! Tour i",
+          "es": "Combinando ingenio afilado, stand-up desenfrenado y sketches virales, John Crist es una de las voces cómicas más distintivas y de más rápido crecimiento de hoy. Con más de mil millones de visualizaciones de videos y 8 millones de seguidores, Crist se clasifica constantemente entre los 10 mejores comediantes de gira global de Pollstar. Después de su gira casi agotada de Jokes For Humans en 2025, Crist lanzó su gira nacional John Crist Live!",
+          "pt": "Combinando humor afiado, stand-up descontrolado e sketches virais, John Crist é uma das vozes cômicas mais distintivas e de mais rápido crescimento atualmente. Com mais de um bilhão de visualizações de vídeo e 8 milhões de seguidores, Crist se classifica consistentemente entre os 10 principais comediantes em turnê global da Pollstar. Após seu tour quase esgotado Jokes For Humans em 2025, Crist iniciou seu tour nacional John Crist Live!",
+          "fr": "Combinant un humour acéré, un stand-up débridé et des sketches viraux, John Crist est l'une des voix comiques les plus distinctives et à la croissance la plus rapide d'aujourd'hui. Avec plus d'un milliard de vues vidéo et 8 millions de followers, Crist se classe régulièrement parmi les 10 meilleurs comédiens en tournée mondiale de Pollstar. Suite à sa tournée presque épuisée Jokes For Humans en 2025, Crist a lancé sa tournée nationale John Crist Live!"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1790525847162_9how",
+        "title": {
+          "en": "Courtside Cardshow Miami",
+          "es": "Courtside Cardshow Miami",
+          "pt": "Courtside Cardshow Miami",
+          "fr": "Courtside Cardshow Miami"
+        },
+        "date": "2026-10-02",
+        "venue": "James L Knight Center Riverfront Hall",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcourtside-cardshow-miami-miami-florida-10-02-2026%2Fevent%2F0D0064A6D96A25F7&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/51e/b15c1a66-c3d3-48f2-afb2-bc22b81a151e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Courtside Cardshow Miami October 2-4, 2026 Miami, Florida Sports Cards Pokemon TCG The BIGGEST CARD SHOW IN FLORIDA returns bigger than ever. Courtside Cardshow Miami is expanding from a 2-day show to a 3-day experience, bringing together 350+ tables and Americas top dealers in one premier, oceanfront venue. This is where serious collectors, investors, and enthusiasts come to buy, sell, and trade ",
+          "es": "Courtside Cardshow Miami 2-4 de octubre de 2026 Miami, Florida. Tarjetas deportivas, Pokémon TCG. El MAYOR ESPECTÁCULO DE TARJETAS DE FLORIDA regresa más grande que nunca. Courtside Cardshow Miami se expande de un espectáculo de 2 días a una experiencia de 3 días, reuniendo más de 350 mesas y los principales distribuidores de América en un único lugar oceanfront de clase mundial. Aquí es donde coleccionistas serios, inversores y entusiastas vienen a comprar, vender e intercambiar.",
+          "pt": "Courtside Cardshow Miami 2-4 de outubro de 2026 Miami, Florida. Cartões esportivos, Pokémon TCG. O MAIOR SHOW DE CARTÕES DA FLÓRIDA retorna maior do que nunca. Courtside Cardshow Miami está se expandindo de um show de 2 dias para uma experiência de 3 dias, reunindo mais de 350 mesas e os principais revendedores da América em um único local à beira-mar de classe mundial. É aqui que colecionadores sérios, investidores e entusiastas vêm para comprar, vender e negociar.",
+          "fr": "Courtside Cardshow Miami 2-4 octobre 2026 Miami, Floride. Cartes de sport, Pokémon TCG. Le PLUS GRAND SALON DE CARTES DE FLORIDE revient plus grand que jamais. Courtside Cardshow Miami passe d'un événement de 2 jours à une expérience de 3 jours, réunissant plus de 350 tables et les principaux distributeurs d'Amérique en un seul lieu haut de gamme en bord de mer. C'est ici que les collectionneurs sérieux, les investisseurs et les passionnés viennent acheter, vendre et échanger."
+        },
+        "source": "Ticketmaster",
+        "lat": 25.7707756,
+        "lng": -80.1901174,
+        "category": "music"
+      },
+      {
+        "id": "tm_1790525847162_wfr3",
+        "title": {
+          "en": "Pippin",
+          "es": "Pippin",
+          "pt": "Pippin",
+          "fr": "Pippin"
+        },
+        "date": "2026-10-02",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpippin-ft-lauderdale-florida-10-02-2026%2Fevent%2F0D0064E6AB6F7A7E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/11f/fba364d4-e1c6-4fa7-bfb4-8444e91ef11f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "PG-13, some material may be inappropriate for children under 13. There's magic to do when a prince learns the true meaning of glory, love and war in Stephen Schwartz iconic and unforgettable musical masterpiece. With an infectiously unforgettable score from four-time Grammy winer, three-time Oscar winner and musical theatre giant, Stephen Shwartz, this magical musical as performed by our talented ",
+          "es": "PG-13, algunos contenidos pueden no ser apropiados para menores de 13 años. Hay magia que hacer cuando un príncipe aprende el verdadero significado de la gloria, el amor y la guerra en la obra maestra musical icónica e inolvidable de Stephen Schwartz. Con una partitura contagiosamente memorable de Stephen Schwartz, ganador de cuatro Grammy, tres veces ganador del Oscar y gigante del teatro musical, este musical mágico es interpretado por nuestro talentoso elenco.",
+          "pt": "PG-13, alguns conteúdos podem ser inadequados para menores de 13 anos. Há magia a fazer quando um príncipe aprende o verdadeiro significado da glória, do amor e da guerra na obra-prima musical icônica e inesquecível de Stephen Schwartz. Com uma partitura infecciosamente memorável de Stephen Schwartz, ganhador de quatro Grammy, três vezes vencedor do Oscar e gigante do teatro musical, este musical mágico é interpretado pelo nosso talentoso elenco.",
+          "fr": "PG-13, certains contenus peuvent être inappropriés pour les enfants de moins de 13 ans. Il y a de la magie à faire quand un prince apprend le vrai sens de la gloire, de l'amour et de la guerre dans le chef-d'œuvre musical emblématique et inoubliable de Stephen Schwartz. Avec une partition contagieusement mémorable de Stephen Schwartz, quatre fois lauréat du Grammy, trois fois gagnant de l'Oscar et géant du théâtre musical, cette comédie musicale magique est interprétée par notre talentueux ensemble."
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.0884017,
+        "lng": -80.2461624
+      },
+      {
+        "id": "tm_1790525847162_vd1h",
+        "title": {
+          "en": "DeathMatch - Competitive Improv Show",
+          "es": "DeathMatch - Espectáculo de Improvisación Competitiva",
+          "pt": "DeathMatch - Show de Improvisação Competitiva",
+          "fr": "DeathMatch - Spectacle d'Improvisation Compétitif"
+        },
+        "date": "2026-10-02",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdeathmatch-competitive-improv-just-the-funny-tickets%2F14327474&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "DeathMatch - Short-Form Improv Comedy in Miami Two teams enter - one team wins! Two teams of improvisors complete in an all out comedy brawl performing fast-paced improv games completing for your laughs. Who wins? You decide! This show features members of our award-winning JTF cast and invited alums and improv celebrity performers. Tickets are PER PERSON for this show. We will seat parties togethe",
+          "es": "DeathMatch - Comedia de Improvisación de Forma Corta en Miami Dos equipos entran - ¡un equipo gana! Dos equipos de improvisadores compiten en una batalla de comedia total realizando juegos de improvisación de ritmo rápido compitiendo por tus risas. ¿Quién gana? ¡Tú decides! Este espectáculo presenta miembros de nuestro elenco ganador de premios JTF e improvisadores invitados y artistas de celebridad de improvisación. Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos",
+          "pt": "DeathMatch - Comédia de Improvisação de Forma Curta em Miami Dois times entram - um time vence! Dois times de improvisadores competem em uma batalha de comédia total realizando jogos de improvisação de ritmo acelerado competindo pelas suas risadas. Quem vence? Você decide! Este show apresenta membros de nosso elenco vencedor de prêmios JTF e improvisadores convidados e artistas celebridades de improvisação. Os ingressos são POR PESSOA para este show. Colocaremos os grupos juntos",
+          "fr": "DeathMatch - Comédie d'Improvisation de Forme Courte à Miami Deux équipes entrent - une équipe gagne ! Deux équipes d'improvisateurs s'affrontent dans une bataille de comédie totale en réalisant des jeux d'improvisation rapides en compétition pour vos rires. Qui gagne ? Vous décidez ! Ce spectacle présente des membres de notre distribution JTF primée et des improvisateurs invités et des artistes célébrités de l'improvisation. Les billets sont PAR PERSONNE pour ce spectacle. Nous placerons les groupes ensemble"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.750417,
+        "lng": -80.244412,
+        "category": "comedy"
+      },
+      {
+        "id": "tm_1790525847162_y1sx",
+        "title": {
+          "en": "Florida Atlantic University Owls Football vs. Texas Southern Tigers College Football",
+          "es": "Fútbol Americano de la Universidad de Atlantic Florida Owls vs. Texas Southern Tigers",
+          "pt": "Futebol Americano da Universidade Florida Atlantic Owls vs. Texas Southern Tigers",
+          "fr": "Football Universitaire Florida Atlantic Owls vs. Texas Southern Tigers"
+        },
+        "date": "2026-10-03",
+        "venue": "Flagler Credit Union Stadium",
+        "address": "777 Glades Rd, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fflorida-atlantic-university-owls-football-vs-boca-raton-florida-10-03-2026%2Fevent%2F0D0064C5CEB644FA&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2ca/8aa0e41b-afc1-4098-a44c-bf8a0662d2ca_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 18:00 · Flagler Credit Union Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 18:00 · Estadio Flagler Credit Union",
+          "pt": "Esportes · Futebol Americano · Começa 18:00 · Estádio Flagler Credit Union",
+          "fr": "Sports · Football Américain · Commence 18:00 · Stade Flagler Credit Union"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.3656459,
+        "lng": -80.104592
+      },
+      {
+        "id": "tm_1790525847162_2mhv",
+        "title": {
+          "en": "Atsuko Okatsuka: The Big Bowl Tour",
+          "es": "Atsuko Okatsuka: The Big Bowl Tour",
+          "pt": "Atsuko Okatsuka: The Big Bowl Tour",
+          "fr": "Atsuko Okatsuka: The Big Bowl Tour"
+        },
+        "date": "2026-10-03",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fatsuko-okatsuka-the-big-bowl-tour-ft-lauderdale-florida-10-03-2026%2Fevent%2F0D0064A78EA37332&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b13/13e23705-c0de-4181-bcbe-4b6034377b13_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Atsuko Okatsuka is a Taiwanese-Japanese American stand-up comedian, writer, and actor based in Los Angeles. She began her comedy career in 2008 and quickly gained recognition for her unique blend of absurdity and heartfelt humor. In 2022, she was named one of *Variety's Top 10 Comics to Watch* and became the second Asian American woman to release a stand-up special on HBO with *The Intruder*. Atsu",
+          "es": "Atsuko Okatsuka es una comediante de stand-up, escritora y actriz taiwanesa-japonesa-americana con sede en Los Ángeles. Comenzó su carrera en comedia en 2008 y rápidamente ganó reconocimiento por su mezcla única de absurdo y humor sincero. En 2022, fue nombrada una de los *10 Cómicos a Seguir de Variety* y se convirtió en la segunda mujer asiática americana en lanzar un especial de stand-up en HBO con *The Intruder*.",
+          "pt": "Atsuko Okatsuka é uma comediante stand-up, escritora e atriz taiwanesa-japonesa-americana com sede em Los Angeles. Ela começou sua carreira em comédia em 2008 e rapidamente ganhou reconhecimento por sua mistura única de absurdo e humor sincero. Em 2022, foi nomeada uma das *10 Comediantes para Assistir da Variety* e se tornou a segunda mulher asiática americana a lançar um especial stand-up na HBO com *The Intruder*.",
+          "fr": "Atsuko Okatsuka est une comédienne de stand-up, écrivaine et actrice taïwanaise-japonaise-américaine basée à Los Angeles. Elle a commencé sa carrière en comédie en 2008 et a rapidement acquis une reconnaissance pour son mélange unique d'absurdité et d'humour sincère. En 2022, elle a été nommée l'une des *10 Comiques à Regarder de Variety* et est devenue la deuxième femme d'origine asiatique à lancer un spécial de stand-up sur HBO avec *The Intruder*."
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1790525847162_32lr",
+        "title": {
+          "en": "Arts Ballet Theatre of FL: Program I: Classical & Neoclassical Ballets",
+          "es": "Arts Ballet Theatre de FL: Programa I: Ballets Clásicos y Neoclásicos",
+          "pt": "Arts Ballet Theatre de FL: Programa I: Balés Clássicos e Neoclássicos",
+          "fr": "Arts Ballet Theatre de FL: Programme I: Ballets Classiques et Néoclassiques"
+        },
+        "date": "2026-10-03",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Farts-ballet-theatre-of-fl-program-ft-lauderdale-florida-10-03-2026%2Fevent%2F0D0064F7A77E5B3A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c14/e2dd955f-e1ad-42cc-94f4-e59dc8cfec14_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts Ballet Theatre of Florida opens its 2026-2027 season with an inspiring program celebrating the beauty, elegance, and diversity of ballet. The evening features internationally acclaimed choreography, beloved classics, and contemporary works performed by the company's exceptional artists. Highlights include Vicente Nebrada's Pentimento, Asaf Messerer's exhilarating Spring Waters, Maestro Vladim",
+          "es": "Arts Ballet Theatre de Florida abre su temporada 2026-2027 con un programa inspirador que celebra la belleza, elegancia y diversidad del ballet. La velada presenta coreografía aclamada internacionalmente, clásicos amados y obras contemporáneas realizadas por los excepcionales artistas de la compañía. Los aspectos destacados incluyen Pentimento de Vicente Nebrada, el exhilarante Spring Waters de Asaf Messerer, Maestro Vladim",
+          "pt": "Arts Ballet Theatre da Flórida abre sua temporada 2026-2027 com um programa inspirador que celebra a beleza, elegância e diversidade do ballet. A noite apresenta coreografia aclamada internacionalmente, clássicos amados e obras contemporâneas realizadas pelos artistas excepcionais da companhia. Os destaques incluem Pentimento de Vicente Nebrada, a exhilarante Spring Waters de Asaf Messerer, Maestro Vladim",
+          "fr": "Arts Ballet Theatre de Floride ouvre sa saison 2026-2027 avec un programme inspirant célébrant la beauté, l'élégance et la diversité du ballet. La soirée présente une chorégraphie acclamée internationalement, des classiques bien-aimés et des œuvres contemporaines interprétées par les artistes exceptionnels de la compagnie. Les points forts incluent Pentimento de Vicente Nebrada, la Spring Waters exaltante d'Asaf Messerer, Maestro Vladim"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1790525847162_y1xk",
+        "title": {
+          "en": "Psychic Standup with Karen Rontowski",
+          "es": "Psychic Standup con Karen Rontowski",
+          "pt": "Psychic Standup com Karen Rontowski",
+          "fr": "Psychic Standup avec Karen Rontowski"
+        },
+        "date": "2026-10-03",
+        "venue": "The Studio at Mizner Park",
+        "address": "201 W Plaza Real, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpsychic-standup-with-karen-rontowski-boca-raton-florida-10-03-2026%2Fevent%2F0D0064C2E00142D0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/55f/c07b3319-5657-43e9-b6f8-6b17082de55f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Psychic Standup is a show unlike any other. Karen Rontowski combines her 35 years as a standup comic with her 25 years of tarot reading and the results are predictably hilarious. Karen has two DryBar Comedy Specials that currently have over 40 million views and has been seen on the Late Show with David Letterman, Comedy Central, Comics Unleashed, ComedyDotCom, as well as Sirius XM Radio. The show ",
+          "es": "Psychic Standup es un espectáculo como ningún otro. Karen Rontowski combina sus 35 años como comediante de stand-up con sus 25 años de lectura de tarot y los resultados son predeciblemente hilarantes. Karen tiene dos Especiales de Comedia DryBar que actualmente tienen más de 40 millones de visualizaciones y ha sido vista en Late Show con David Letterman, Comedy Central, Comics Unleashed, ComedyDotCom, así como en Sirius XM Radio. El espectáculo",
+          "pt": "Psychic Standup é um show como nenhum outro. Karen Rontowski combina seus 35 anos como comediante stand-up com seus 25 anos de leitura de tarô e os resultados são previsivelmente hilariantes. Karen tem dois Especiais de Comédia DryBar que atualmente têm mais de 40 milhões de visualizações e foi vista no Late Show com David Letterman, Comedy Central, Comics Unleashed, ComedyDotCom, bem como na Sirius XM Radio. O show",
+          "fr": "Psychic Standup est un spectacle comme aucun autre. Karen Rontowski combine ses 35 ans en tant que comédienne de stand-up avec ses 25 ans de lecture de tarot et les résultats sont prévisiblement hilarants. Karen a deux spéciaux de comédie DryBar qui ont actuellement plus de 40 millions de vues et a été vue au Late Show avec David Letterman, Comedy Central, Comics Unleashed, ComedyDotCom, ainsi qu'à Sirius XM Radio. Le spectacle"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.35289,
+        "lng": -80.08569
+      },
+      {
+        "id": "tm_1790525847162_gc31",
+        "title": {
+          "en": "The BIG Show Improv Comedy Miami",
+          "es": "The BIG Show - Comedia Improvisada Miami",
+          "pt": "The BIG Show - Comédia Improvisada Miami",
+          "fr": "The BIG Show - Comédie d'Improvisation Miami"
+        },
+        "date": "2026-10-03",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14327594&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Big Show - Improv Comedy in Miami It's our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun! Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as",
+          "es": "The Big Show - Comedia Improvisada en Miami. Es nuestro espectáculo insignia: comedia improvisada en vivo, rápida y de primera categoría. ¡Imagínalo como Whose Line is It Anyway combinado con SNL! The Big Show es comedia improvisada interactiva, presentada por nuestro talentoso y galardonado elenco. ¡Ven a ser parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos en mesas. Haremos nuestro mejor esfuerzo para sentar a grupos más grandes",
+          "pt": "The Big Show - Comédia Improvisada em Miami. É nosso espetáculo assinatura: comédia improvisada ao vivo, rápida e de primeira categoria. Pense nisso como Whose Line is It Anyway encontra SNL! The Big Show é comédia improvisada interativa, apresentada por nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este espetáculo. Sentaremos os grupos juntos em mesas. Faremos o nosso melhor para acomodar grupos maiores",
+          "fr": "The Big Show - Comédie d'Improvisation à Miami. C'est notre spectacle phare : comédie improvisée en direct, rapide et de première catégorie. Pensez-y comme Whose Line is It Anyway rencontre SNL ! The Big Show est une comédie improvisée interactive, présentée par notre casting talentueux et récompensé. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous placerons les groupes ensemble à des tables. Nous ferons de notre mieux pour accueillir les groupes plus importants"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1790525847162_83yn",
+        "title": {
+          "en": "Sensory-Inclusive: Clifford the Big Red Dog: The Musical",
+          "es": "Sensorial-Inclusiva: Clifford el Gran Perro Rojo: El Musical",
+          "pt": "Sensorial-Inclusivo: Clifford o Grande Cachorro Vermelho: O Musical",
+          "fr": "Sensoriellement Inclusif: Clifford le Grand Chien Rouge: La Comédie Musicale"
+        },
+        "date": "2026-10-04",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsensoryinclusive-clifford-the-big-red-dog-ft-lauderdale-florida-10-04-2026%2Fevent%2F0D0064D69DCB7A78&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/af0/cdaac674-0299-43cd-b417-8323f6cfcaf0_13061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "PLEASE NOTE: THIS EVENT IS A SENSORY-INCLUSIVE PERFORMANCE WHICH HAS BEEN MODIFIED. Everyone's favorite Big Red Dog, CLIFFORD- bounds onto the stage in a brand-new musical comedy adventure that celebrates friendship, imagination and the magic of unconditional love! Emily Elizabeth absolutely adores her new puppy - the tiny red runt of the litter. But when her GIANT love makes Clifford grow into a ",
+          "es": "NOTA IMPORTANTE: ESTE EVENTO ES UNA PRESENTACIÓN SENSORIAL-INCLUSIVA QUE HA SIDO MODIFICADA. El querido Gran Perro Rojo, CLIFFORD, salta al escenario en una nueva aventura de comedia musical que celebra la amistad, la imaginación y la magia del amor incondicional. Emily Elizabeth adora absolutamente a su nuevo cachorro - la pequeña cría roja de la camada. Pero cuando su amor GIGANTE hace que Clifford crezca hasta ser GIGANTE, la familia debe cambiar su apartamento",
+          "pt": "OBSERVE: ESTE EVENTO É UMA APRESENTAÇÃO SENSORIAL-INCLUSIVA QUE FOI MODIFICADA. O querido Grande Cachorro Vermelho, CLIFFORD, pula para o palco em uma nova aventura de comédia musical que celebra amizade, imaginação e a magia do amor incondicional. Emily Elizabeth adora absolutamente seu novo cachorro - o pequeno filhote vermelho da ninhada. Mas quando seu amor GIGANTE faz Clifford crescer até ser GIGANTE, a família deve trocar seu apartamento",
+          "fr": "VEUILLEZ NOTER: CET ÉVÉNEMENT EST UNE PERFORMANCE SENSORIELLEMENT INCLUSIVE QUI A ÉTÉ MODIFIÉE. Le bien-aimé Grand Chien Rouge, CLIFFORD, bondit sur scène dans une nouvelle aventure de comédie musicale qui célèbre l'amitié, l'imagination et la magie de l'amour inconditionnel. Emily Elizabeth adore absolument son nouveau chiot - le petit rejeton rouge de la portée. Mais quand son amour GIGANTESQUE fait croître Clifford jusqu'à devenir GIGANTESQUE, la famille doit échanger son appartement"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1790525847162_253x",
+        "title": {
+          "en": "Clifford the Big Red Dog: The Musical",
+          "es": "Clifford el Gran Perro Rojo: El Musical",
+          "pt": "Clifford o Grande Cachorro Vermelho: O Musical",
+          "fr": "Clifford le Grand Chien Rouge: La Comédie Musicale"
+        },
+        "date": "2026-10-04",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fclifford-the-big-red-dog-the-ft-lauderdale-florida-10-04-2026%2Fevent%2F0D00649CAD5F7499&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/af0/cdaac674-0299-43cd-b417-8323f6cfcaf0_13061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Everyone's favorite Big Red Dog, CLIFFORD- bounds onto the stage in a brand-new musical comedy adventure that celebrates friendship, imagination and the magic of unconditional love! Emily Elizabeth absolutely adores her new puppy - the tiny red runt of the litter. But when her GIANT love makes Clifford grow into a GIANT, the family must trade their cramped city apartment for a home on Birdwell Isl",
+          "es": "El querido Gran Perro Rojo, CLIFFORD, salta al escenario en una nueva aventura de comedia musical que celebra la amistad, la imaginación y la magia del amor incondicional. Emily Elizabeth adora absolutamente a su nuevo cachorro - la pequeña cría roja de la camada. Pero cuando su amor GIGANTE hace que Clifford crezca hasta ser GIGANTE, la familia debe cambiar su apartamento apretado en la ciudad por una casa en la Isla Birdwell",
+          "pt": "O querido Grande Cachorro Vermelho, CLIFFORD, pula para o palco em uma nova aventura de comédia musical que celebra amizade, imaginação e a magia do amor incondicional. Emily Elizabeth adora absolutamente seu novo cachorro - o pequeno filhote vermelho da ninhada. Mas quando seu amor GIGANTE faz Clifford crescer até ser GIGANTE, a família deve trocar seu apartamento apertado na cidade por uma casa na Ilha Birdwell",
+          "fr": "Le bien-aimé Grand Chien Rouge, CLIFFORD, bondit sur scène dans une nouvelle aventure de comédie musicale qui célèbre l'amitié, l'imagination et la magie de l'amour inconditionnel. Emily Elizabeth adore absolument son nouveau chiot - le petit rejeton rouge de la portée. Mais quand son amour GIGANTESQUE fait croître Clifford jusqu'à devenir GIGANTESQUE, la famille doit échanger son petit appartement en ville pour une maison sur l'Île Birdwell"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1790525847162_wrzy",
+        "title": {
+          "en": "Arts Ballet Theatre of FL: Program I: Classical & Neoclassical Ballets",
+          "es": "Arts Ballet Theatre de FL: Programa I: Ballets Clásicos y Neoclásicos",
+          "pt": "Arts Ballet Theatre de FL: Programa I: Balés Clássicos e Neoclássicos",
+          "fr": "Arts Ballet Theatre de FL: Programme I: Ballets Classiques et Néoclassiques"
+        },
+        "date": "2026-10-04",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Farts-ballet-theatre-of-fl-program-aventura-florida-10-04-2026%2Fevent%2F0D0064F0B1756B30&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/ff4/fb09c1b9-4b61-4c89-96bd-1e7e32a26ff4_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts Ballet Theatre of Florida opens its 2026-2027 season with an inspiring evening celebrating the beauty, elegance, and artistic diversity of ballet. This exciting program features internationally acclaimed choreography, beloved classical masterpieces, and contemporary works performed by the company's exceptional artists. The evening includes Vicente Nebrada's Pentimento, the exhilarating Spring",
+          "es": "Arts Ballet Theatre of Florida abre su temporada 2026-2027 con una noche inspiradora que celebra la belleza, elegancia y diversidad artística del ballet. Este emocionante programa presenta coreografía aclamada internacionalmente, obras maestras clásicas queridas y obras contemporáneas realizadas por los artistas excepcionales de la compañía. La noche incluye Pentimento de Vicente Nebrada, el exhilarante Spring",
+          "pt": "Arts Ballet Theatre of Florida abre sua temporada 2026-2027 com uma noite inspiradora que celebra a beleza, elegância e diversidade artística do balé. Este programa emocionante apresenta coreografia aclamada internacionalmente, obras-primas clássicas amadas e obras contemporâneas realizadas pelos artistas excepcionais da companhia. A noite inclui Pentimento de Vicente Nebrada, o exhilarante Spring",
+          "fr": "Arts Ballet Theatre of Florida ouvre sa saison 2026-2027 avec une soirée inspirante célébrant la beauté, l'élégance et la diversité artistique du ballet. Ce programme passionnant présente une chorégraphie acclamée internationalement, des chefs-d'œuvre classiques bien-aimés et des œuvres contemporaines interprétées par les artistes exceptionnels de la compagnie. La soirée comprend Pentimento de Vicente Nebrada, le printemps exaltant"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "cp_1790525847977_rqhm",
+        "title": {
+          "en": "Floating Pumpkin Patch",
+          "es": "Huerto de Calabazas Flotante",
+          "pt": "Abóbora Flutuante",
+          "fr": "Patch de Citrouille Flottante"
+        },
+        "date": "2026-10-10",
+        "venue": "<p>Peggy Noland Aquatics Complex&nbsp;</p>",
+        "address": "501 SE 6th Ave.  Deerfield Beach FL 33441",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://deerfield-beach.com/calendar.aspx?EID=5814",
+          "es": "https://deerfield-beach.com/calendar.aspx?EID=5814",
+          "pt": "https://deerfield-beach.com/calendar.aspx?EID=5814",
+          "fr": "https://deerfield-beach.com/calendar.aspx?EID=5814"
+        },
+        "source": "Deerfield Beach",
+        "category": "community"
       }
     ]
   },
@@ -5342,31 +5114,31 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-26T15:39:11.573Z",
+    "fetchedAt": "2026-09-27T16:18:26.009Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.b11d61c0efcce07c0173cab89ca092d0ac2bdd62.003.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.d7b5ae9919e44df52aa518dc891eddef7e4e7744.001.2",
         "type": "weather",
         "severity": "minor",
         "title": {
-          "en": "Coastal Flood Statement",
-          "es": "Coastal Flood Statement",
-          "pt": "Coastal Flood Statement",
-          "fr": "Coastal Flood Statement"
+          "en": "Coastal Flood Advisory",
+          "es": "Aviso de Inundación Costera",
+          "pt": "Aviso de Inundação Costeira",
+          "fr": "Avis d'Inondation Côtière"
         },
         "detail": {
-          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding expected. For the High Rip Current Risk, dangerous\nrip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Sunday\nafternoon. For the High Rip Current Risk, through Sunday\nevening.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncu",
-          "es": "* QUÉ... Para la Declaración de Inundación Costera, se espera inundación costera menor aislada. Para el Riesgo Alto de Corrientes de Resaca, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE... Condado Costero de Broward y Condado Costero de Miami Dade.\n\n* CUÁNDO... Para la Declaración de Inundación Costera, hasta el domingo por la tarde. Para el Riesgo Alto de Corrientes de Resaca, hasta el domingo por la noche.\n\n* IMPACTOS... Agua en carreteras y propiedades bajas. Corrientes de resaca",
-          "pt": "* O QUÊ... Para o Comunicado de Inundação Costeira, inundação costeira menor isolada esperada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas esperadas.\n\n* ONDE... Condado Costeiro de Broward e Condado Costeiro de Miami Dade.\n\n* QUANDO... Para o Comunicado de Inundação Costeira, até domingo à tarde. Para o Risco Alto de Correntes de Retorno, até domingo à noite.\n\n* IMPACTOS... Água em estradas e propriedades baixas. Correntes de retorno",
-          "fr": "* QUOI... Pour l'Avis d'Inondation Côtière, inondation côtière mineure isolée prévue. Pour le Risque Élevé de Courant de Retour, courants de retour dangereux prévus.\n\n* OÙ... Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND... Pour l'Avis d'Inondation Côtière, jusqu'à dimanche après-midi. Pour le Risque Élevé de Courant de Retour, jusqu'à dimanche soir.\n\n* IMPACTS... Eau sur les routes et propriétés basses. Courants de retour"
+          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 2 PM EDT Monday.\nFor the High Rip Current Risk, through Monday afternoon.\n\n* IMPACTS...Flooding of lots, parks, and roads with only isolated\nroad closures expected. Rip currents can sweep eve",
+          "es": "* QUÉ...Para la Alerta de Inundación Costera, inundación costera moderada. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas.\n\n* DÓNDE...Costa del Condado de Miami Dade.\n\n* CUÁNDO...Para la Alerta de Inundación Costera, hasta las 2 PM EDT del lunes. Para el Riesgo Alto de Corrientes de Resaca, hasta el lunes por la tarde.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados esperados. Las corrientes de resaca pueden arrastrar",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas.\n\n* ONDE...Costa do Condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 14h EDT segunda-feira. Para o Risco Alto de Correntes de Retorno, até segunda-feira à tarde.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados. Correntes de retorno podem arrastar",
+          "fr": "* QUOI...Pour l'avis d'inondation côtière, inondations côtières modérées. Pour le risque élevé de courants de retour, courants de retour dangereux.\n\n* OÙ...Côte du comté de Miami Dade.\n\n* QUAND...Pour l'avis d'inondation côtière, jusqu'à 14 h EDT lundi. Pour le risque élevé de courants de retour, jusqu'à lundi après-midi.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement des fermetures routières isolées prévues. Les courants de retour peuvent entraîner"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b11d61c0efcce07c0173cab89ca092d0ac2bdd62.003.1",
-        "effectiveAt": "2026-09-26T02:30:00-04:00",
-        "expiresAt": "2026-09-27T00:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d7b5ae9919e44df52aa518dc891eddef7e4e7744.001.2",
+        "effectiveAt": "2026-09-27T06:17:00-04:00",
+        "expiresAt": "2026-09-27T18:30:00.000Z"
       },
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.b11d61c0efcce07c0173cab89ca092d0ac2bdd62.003.2",
+        "id": "nws_urn-oid-2.49.0.1.840.0.d7b5ae9919e44df52aa518dc891eddef7e4e7744.001.3",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -5376,15 +5148,15 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding expected. For the High Rip Current Risk, dangerous\nrip currents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Sunday\nafternoon. For the High Rip Current Risk, through Sunday\nevening.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncu",
-          "es": "* QUÉ... Para la Declaración de Inundación Costera, se espera inundación costera menor aislada. Para el Riesgo Alto de Corrientes de Resaca, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE... Condado Costero de Broward y Condado Costero de Miami Dade.\n\n* CUÁNDO... Para la Declaración de Inundación Costera, hasta el domingo por la tarde. Para el Riesgo Alto de Corrientes de Resaca, hasta el domingo por la noche.\n\n* IMPACTOS... Agua en carreteras y propiedades bajas. Corrientes de resaca",
-          "pt": "* O QUÊ... Para o Comunicado de Inundação Costeira, inundação costeira menor isolada esperada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas esperadas.\n\n* ONDE... Condado Costeiro de Broward e Condado Costeiro de Miami Dade.\n\n* QUANDO... Para o Comunicado de Inundação Costeira, até domingo à tarde. Para o Risco Alto de Correntes de Retorno, até domingo à noite.\n\n* IMPACTOS... Água em estradas e propriedades baixas. Correntes de retorno",
-          "fr": "* QUOI... Pour l'Avis d'Inondation Côtière, inondation côtière mineure isolée prévue. Pour le Risque Élevé de Courant de Retour, courants de retour dangereux prévus.\n\n* OÙ... Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND... Pour l'Avis d'Inondation Côtière, jusqu'à dimanche après-midi. Pour le Risque Élevé de Courant de Retour, jusqu'à dimanche soir.\n\n* IMPACTS... Eau sur les routes et propriétés basses. Courants de retour"
+          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 2 PM EDT Monday.\nFor the High Rip Current Risk, through Monday afternoon.\n\n* IMPACTS...Flooding of lots, parks, and roads with only isolated\nroad closures expected. Rip currents can sweep eve",
+          "es": "* QUÉ...Para la Alerta de Inundación Costera, inundación costera moderada. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas.\n\n* DÓNDE...Costa del Condado de Miami Dade.\n\n* CUÁNDO...Para la Alerta de Inundación Costera, hasta las 2 PM EDT del lunes. Para el Riesgo Alto de Corrientes de Resaca, hasta el lunes por la tarde.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados esperados. Las corrientes de resaca pueden arrastrar",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas.\n\n* ONDE...Costa do Condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 14h EDT segunda-feira. Para o Risco Alto de Correntes de Retorno, até segunda-feira à tarde.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados. Correntes de retorno podem arrastar",
+          "fr": "* QUOI...Pour l'avis d'inondation côtière, inondations côtières modérées. Pour le risque élevé de courants de retour, courants de retour dangereux.\n\n* OÙ...Côte du comté de Miami Dade.\n\n* QUAND...Pour l'avis d'inondation côtière, jusqu'à 14 h EDT lundi. Pour le risque élevé de courants de retour, jusqu'à lundi après-midi.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement des fermetures routières isolées prévues. Les courants de retour peuvent entraîner"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b11d61c0efcce07c0173cab89ca092d0ac2bdd62.003.2",
-        "effectiveAt": "2026-09-26T02:30:00-04:00",
-        "expiresAt": "2026-09-27T00:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d7b5ae9919e44df52aa518dc891eddef7e4e7744.001.3",
+        "effectiveAt": "2026-09-27T06:17:00-04:00",
+        "expiresAt": "2026-09-27T18:30:00.000Z"
       }
     ]
   }
