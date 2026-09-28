@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-27T16:18:33.670Z",
+    "lastUpdated": "2026-09-28T19:10:11.484Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-27T16:18:26.009Z",
+    "fetchedAt": "2026-09-28T19:10:06.514Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 95,
+      "temp_f": 86,
+      "feels_f": 93,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 66,
-      "wind_mph": 3,
-      "rain_chance": 7,
-      "weathercode": 0
+      "humidity": 57,
+      "wind_mph": 8,
+      "rain_chance": 5,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-09-27",
-        "high_f": 84,
-        "low_f": 72,
-        "weathercode": 3,
-        "rain_chance": 7,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-09-28",
-        "high_f": 83,
-        "low_f": 71,
+        "high_f": 87,
+        "low_f": 70,
         "weathercode": 3,
-        "rain_chance": 8,
+        "rain_chance": 5,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,23 +36,23 @@
       },
       {
         "date": "2026-09-29",
-        "high_f": 84,
-        "low_f": 72,
-        "weathercode": 3,
-        "rain_chance": 51,
+        "high_f": 79,
+        "low_f": 71,
+        "weathercode": 63,
+        "rain_chance": 29,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Moderate rain",
+          "es": "Lluvia moderada",
+          "pt": "Chuva moderada",
+          "fr": "Pluie modérée"
         }
       },
       {
         "date": "2026-09-30",
-        "high_f": 82,
-        "low_f": 78,
+        "high_f": 83,
+        "low_f": 75,
         "weathercode": 95,
-        "rain_chance": 64,
+        "rain_chance": 49,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,10 +62,23 @@
       },
       {
         "date": "2026-10-01",
-        "high_f": 85,
+        "high_f": 87,
         "low_f": 81,
         "weathercode": 95,
-        "rain_chance": 66,
+        "rain_chance": 70,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-10-02",
+        "high_f": 87,
+        "low_f": 83,
+        "weathercode": 95,
+        "rain_chance": 63,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,148 +89,148 @@
     ],
     "hourly": [
       {
-        "hour": "12:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 84,
-        "weathercode": 0,
+        "hour": "15:00",
+        "temp_f": 86,
+        "weathercode": 1,
         "rain_chance": 0
       },
       {
-        "hour": "14:00",
+        "hour": "16:00",
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
+        "hour": "18:00",
         "temp_f": 84,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
-        "hour": "15:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 7
-      },
-      {
         "hour": "19:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 4
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "20:00",
         "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "21:00",
-        "temp_f": 79,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 0
       },
       {
         "hour": "22:00",
-        "temp_f": 79,
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 73,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 73,
         "weathercode": 3,
         "rain_chance": 2
       },
       {
-        "hour": "23:00",
-        "temp_f": 77,
-        "weathercode": 2,
-        "rain_chance": 1
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 76,
-        "weathercode": 1,
-        "rain_chance": 3
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 8
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 7
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
         "hour": "04:00",
         "temp_f": 73,
-        "weathercode": 3,
+        "weathercode": 2,
         "rain_chance": 3
       },
       {
         "hour": "05:00",
         "temp_f": 72,
-        "weathercode": 3,
-        "rain_chance": 1
+        "weathercode": 1,
+        "rain_chance": 5
       },
       {
         "hour": "06:00",
         "temp_f": 71,
-        "weathercode": 3,
-        "rain_chance": 1
+        "weathercode": 0,
+        "rain_chance": 10
       },
       {
         "hour": "07:00",
         "temp_f": 71,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 10
       },
       {
         "hour": "08:00",
         "temp_f": 72,
         "weathercode": 3,
-        "rain_chance": 0
+        "rain_chance": 12
       },
       {
         "hour": "09:00",
         "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 21
       },
       {
         "hour": "10:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 75,
+        "weathercode": 63,
+        "rain_chance": 22
       },
       {
         "hour": "11:00",
-        "temp_f": 81,
+        "temp_f": 74,
+        "weathercode": 53,
+        "rain_chance": 22
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 74,
+        "weathercode": 63,
+        "rain_chance": 22
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 74,
+        "weathercode": 51,
+        "rain_chance": 29
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 1
+        "rain_chance": 22
       }
     ]
   },
@@ -1513,32 +1513,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1786625954858_jrao",
-        "title": {
-          "en": "Herpreneur Artisan Market at The Goodtime Hotel 9/27/26",
-          "es": "Mercado Artesanal Herpreneur en The Goodtime Hotel 27/9/26",
-          "pt": "Mercado Artesanal Herpreneur no The Goodtime Hotel 27/9/26",
-          "fr": "Marché Artisanal Herpreneur au The Goodtime Hotel 27/9/26"
-        },
-        "date": "2026-09-27",
-        "venue": "The Goodtime Hotel",
-        "address": "601 Washington Ave, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/08/12/herpreneur-artisan-market-at-the-goodtime-hotel-9-27-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/The-Goodtime-Hotel_Courtyard1-333x500.jpg",
-        "description": {
-          "en": "The Goodtime Hotel, Miami Beach will host a Sunday artisan market on Sunday, September 27",
-          "es": "The Goodtime Hotel, Miami Beach albergará un mercado artesanal dominical el domingo 27 de septiembre",
-          "pt": "O The Goodtime Hotel, Miami Beach sediará um mercado artesanal dominical no domingo, 27 de setembro",
-          "fr": "The Goodtime Hotel, Miami Beach accueillera un marché artisanal dominical le dimanche 27 septembre"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7763327,
-        "lng": -80.1334166,
-        "category": "community"
-      },
-      {
         "id": "rss_1786625954858_li00",
         "title": {
           "en": "Miami-Dade County Homeless Trust Sprint for Seniors Bed Race 11/6/26",
@@ -2205,58 +2179,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1789574420347_t62o",
-        "title": {
-          "en": "Rodrigo Teaser: Michael Lives Forever",
-          "es": "Rodrigo Teaser: Michael Lives Forever",
-          "pt": "Rodrigo Teaser: Michael Lives Forever",
-          "fr": "Rodrigo Teaser: Michael Lives Forever"
-        },
-        "date": "2026-09-27",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frodrigo-teaser-michael-lives-forever-ft-lauderdale-florida-09-27-2026%2Fevent%2F0D00649EA993BA09&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b90/eae4e593-edbb-4135-8c02-3d29ce0dcb90_1246031_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Rodrigo Teaser is internationally recognized as the greatest Michael Jackson tribute artists in the world. Born in Brazil, he has dedicated his life to mastering every detail of Michael Jackson's artistry - from vocals and choreography to stage presence and visual production. With over a decade of sold-out performances across Latin America and Europe, Rodrigo has built a reputation for delivering ",
-          "es": "Rodrigo Teaser es reconocido internacionalmente como el mejor artista tributo de Michael Jackson del mundo. Nacido en Brasil, ha dedicado su vida a dominar cada detalle del arte de Michael Jackson, desde la voz y coreografía hasta la presencia en escena y producción visual. Con más de una década de presentaciones agotadas en América Latina y Europa, Rodrigo ha construido una reputación por entregar",
-          "pt": "Rodrigo Teaser é reconhecido internacionalmente como o maior artista tributário de Michael Jackson do mundo. Nascido no Brasil, ele dedicou sua vida a dominar cada detalhe da arte de Michael Jackson - desde vocais e coreografia até presença de palco e produção visual. Com mais de uma década de apresentações com ingressos esgotados em toda a América Latina e Europa, Rodrigo construiu uma reputação por entregar",
-          "fr": "Rodrigo Teaser est reconnu internationalement comme le plus grand artiste tribute de Michael Jackson au monde. Né au Brésil, il a consacré sa vie à maîtriser chaque détail de l'art de Michael Jackson - de la voix et de la chorégraphie à la présence sur scène et à la production visuelle. Avec plus d'une décennie de représentations à guichet fermé en Amérique latine et en Europe, Rodrigo s'est bâti une réputation de"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
-        "id": "tm_1789574420347_r6fa",
-        "title": {
-          "en": "BossMan Dlow",
-          "es": "BossMan Dlow",
-          "pt": "BossMan Dlow",
-          "fr": "BossMan Dlow"
-        },
-        "date": "2026-09-27",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fbossman-dlow-liv-nightclub-miami-tickets%2F14322654&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/007/56c41e47-a437-4ef9-bb94-05a8bf880007_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier poseedor de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso que não puder apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
         "id": "tm_1789574420347_z0x8",
         "title": {
           "en": "Of Monsters and Men - The Mouse Parade Tour",
@@ -2489,30 +2411,6 @@
         "lat": 25.7975852,
         "lng": -80.1301531,
         "category": "community"
-      },
-      {
-        "id": "rss_1789830899591_rg7n",
-        "title": {
-          "en": "Brunch N Dance 9/27/26",
-          "es": "Brunch N Dance 9/27/26",
-          "pt": "Brunch N Dance 9/27/26",
-          "fr": "Brunch N Dance 9/27/26"
-        },
-        "date": "2026-09-27",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/09/18/brunch-n-dance-9-27-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Sep-27-2026-Square-350x350.png",
-        "description": {
-          "en": "Come for brunch. Stay for the dance floor! Join us for Haitian brunch favorites, drink specials and",
-          "es": "¡Ven por el brunch y quédate por la pista de baile! Únete a nosotros para disfrutar de platos típicos haitianos, especiales en bebidas y",
-          "pt": "Venha pelo brunch e fique pela pista de dança! Junte-se a nós para desfrutar de comidas típicas haitianas, drinks especiais e",
-          "fr": "Venez pour le brunch. Restez pour la piste de danse! Rejoignez-nous pour savourer les favoris du brunch haïtien, les offres spéciales sur les boissons et"
-        },
-        "source": "Soul of Miami",
-        "category": "food-drink"
       },
       {
         "id": "rss_1789830899591_f4u9",
@@ -3721,136 +3619,6 @@
         "category": "nightlife"
       },
       {
-        "id": "tm_1790437110843_9z8m",
-        "title": {
-          "en": "Luxury & Suites: Miami Dolphins v Kansas City Chiefs",
-          "es": "Lujo y Suites: Miami Dolphins vs Kansas City Chiefs",
-          "pt": "Luxo e Suítes: Miami Dolphins vs Kansas City Chiefs",
-          "fr": "Luxe et Suites: Miami Dolphins vs Kansas City Chiefs"
-        },
-        "date": "2026-09-27",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fluxury-suites-miami-dolphins-v-kansas-miami-florida-09-27-2026%2Fevent%2F0D00646CE6601575&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season · Starts 13:00 · Hard Rock Stadium",
-          "es": "Horario Flexible: Por favor tenga en cuenta que ciertos juegos están sujetos a programación flexible y la fecha y hora de esos juegos pueden cambiar de lo que se refleja actualmente en el cronograma y lo que puede aparecer en el boleto. Para obtener información más detallada sobre los procedimientos de programación flexible de la NFL para la Temporada 2026 de la NFL · Comienza 13:00 · Hard Rock Stadium",
-          "pt": "Cronograma Flexível: Observe que certos jogos estão sujeitos a agendamento flexível e a data e hora desses jogos podem mudar do que é refletido atualmente no cronograma e o que pode aparecer no ingresso. Para informações mais detalhadas sobre os procedimentos de agendamento flexível da NFL para a Temporada 2026 da NFL · Começa 13:00 · Hard Rock Stadium",
-          "fr": "Horaire Flexible: Veuillez noter que certains matchs sont sujets à un calendrier flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement reflété dans le calendrier et ce qui peut apparaître sur le billet. Pour des informations plus détaillées sur les procédures de calendrier flexible de la NFL pour la saison 2026 de la NFL · Commence 13:00 · Hard Rock Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1790437110843_227h",
-        "title": {
-          "en": "Miami Marlins vs Atlanta Braves: 2027 Magnet Schedule presented by LoanDepot",
-          "es": "Miami Marlins vs Atlanta Braves: Calendario Magnético 2027 presentado por LoanDepot",
-          "pt": "Miami Marlins vs Atlanta Braves: Calendário Magnético 2027 apresentado por LoanDepot",
-          "fr": "Miami Marlins vs Atlanta Braves : Calendrier Magnétique 2027 présenté par LoanDepot"
-        },
-        "date": "2026-09-27",
-        "venue": "LoanDepot Park",
-        "address": "501 Marlins Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7Qa0-&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/343/37200823-952f-476c-8598-afc6ee04e343_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Baseball · Starts 15:10 · LoanDepot Park",
-          "es": "Deportes · Béisbol · Comienza 15:10 · LoanDepot Park",
-          "pt": "Esportes · Beisebol · Começa 15:10 · LoanDepot Park",
-          "fr": "Sports · Baseball · Commence 15:10 · LoanDepot Park"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.778057,
-        "lng": -80.219406
-      },
-      {
-        "id": "tm_1790437110843_zpy5",
-        "title": {
-          "en": "The Haller Club prior to Rodrigo Teaser",
-          "es": "The Haller Club previo a Rodrigo Teaser",
-          "pt": "The Haller Club antes de Rodrigo Teaser",
-          "fr": "The Haller Club avant Rodrigo Teaser"
-        },
-        "date": "2026-09-27",
-        "venue": "The Haller Club at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-rodrigo-fort-lauderdale-florida-09-27-2026%2Fevent%2F0D0064A892BB6CFF&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
-          "es": "Suma a tu experiencia en The Parker con The Haller Club. Este nuevo salón premium con un elegante diseño retro cuenta con un espacioso bar y abundantes asientos. Por un precio todo incluido, tu entrada a The Haller Club ofrece uso exclusivo comenzando una hora antes de la función y durante el intermedio (cuando esté programado), bebidas suaves complementarias, cerveza y vino premium, café y té (bebidas mezcladas",
-          "pt": "Adicione à sua experiência em The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um bar espaçoso e muitos assentos. Por um preço inclusivo, sua entrada em The Haller Club oferece uso exclusivo começando uma hora antes do show e durante o intervalo (quando agendado), refrigerantes complementares, cerveja e vinho premium, café e chá (bebidas mistas",
-          "fr": "Ajoutez à votre expérience au Parker avec The Haller Club. Ce nouveau lounge premium au design rétro élégant dispose d'un bar spacieux et de nombreux sièges. Pour un prix unique tout inclus, votre accès au Haller Club offre un usage exclusif une heure avant le spectacle et pendant l'entracte (si prévu), boissons non alcoolisées complimentaires, bière et vin premium, café et thé (cocktails"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
-        "id": "tm_1790437110843_vep0",
-        "title": {
-          "en": "The Place to Be prior to Rodrigo Teaser",
-          "es": "The Place to Be previo a Rodrigo Teaser",
-          "pt": "The Place to Be antes de Rodrigo Teaser",
-          "fr": "The Place to Be avant Rodrigo Teaser"
-        },
-        "date": "2026-09-27",
-        "venue": "The Place To Be at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-09-27-2026%2Fevent%2F0D0064A89C387DA8&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
-          "es": "¡Este es The Place To Be! El exclusivo salón para donantes en The Parker está ofreciendo un número limitado de entradas para venta al público según disponibilidad. $75.00 POR PERSONA. Este club privado proporciona una experiencia ultra premium - servicio de comida y bebida complementaria en un refugio privado en el piso inferior de The Parker. Disfruta de un bar abierto con licores de la más alta calidad, una selección de camarones fríos y calientes",
-          "pt": "Este é The Place To Be! O exclusivo lounge de doadores em The Parker está oferecendo um número limitado de ingressos à venda ao público conforme disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço de comida e bebida complimentar em um refúgio privado no andar inferior de The Parker. Desfrute de um bar aberto servindo destilados premium, uma seleção de camarinhos frios e quentes",
-          "fr": "C'est The Place To Be ! Le lounge exclusif des donateurs au Parker propose un nombre limité de billets à la vente au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra premium - service de nourriture et boisson complimentaire dans un refuge privé au sous-sol du Parker. Profitez d'un bar ouvert servant les meilleurs alcools, une sélection de crevettes froides et chaudes"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
-        "id": "tm_1790525847162_0uth",
-        "title": {
-          "en": "Balloon Museum | Pop Air - Art Is Inflatable - Miami 2026",
-          "es": "Museo de Globos | Pop Air - El Arte es Inflable - Miami 2026",
-          "pt": "Museu de Balões | Pop Air - A Arte é Inflável - Miami 2026",
-          "fr": "Musée des Ballons | Pop Air - L'Art est Gonflable - Miami 2026"
-        },
-        "date": "2026-09-27",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Fballoon-museum-pop-air-art-is-inflatable-miami-2026-tickets-K6QGW4%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c3f/b0066d0b-c019-41b2-bd7f-976408921c3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Family · Starts 12:30 · Mana Wynwood Convention Center",
-          "es": "Miscelánea · Familia · Comienza 12:30 · Mana Wynwood Convention Center",
-          "pt": "Diversos · Família · Começa 12:30 · Mana Wynwood Convention Center",
-          "fr": "Divers · Famille · Commence 12:30 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797998,
-        "lng": -80.202062,
-        "category": "arts"
-      },
-      {
         "id": "tm_1790525847162_mvp6",
         "title": {
           "en": "Buena Vista Social Club (Touring)",
@@ -4210,6 +3978,282 @@
           "fr": "https://deerfield-beach.com/calendar.aspx?EID=5814"
         },
         "source": "Deerfield Beach",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790622566158_pap8",
+        "title": {
+          "en": "Aespa stages a fight for the soul of humanity in Miami",
+          "es": "Aespa presenta una lucha por el alma de la humanidad en Miami",
+          "pt": "Aespa apresenta uma luta pela alma da humanidade em Miami",
+          "fr": "Aespa présente une lutte pour l'âme de l'humanité à Miami"
+        },
+        "date": "2026-09-28",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/music/aespa-stages-a-fight-for-the-soul-of-humanity-in-miami-40588414/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/09/Aespa.jpg",
+        "description": {
+          "en": "The K-pop icons thrilled its audience at Kaseya Center with anthemic pop, cinematic visuals, and a message of human-centered hope in an age of AI.",
+          "es": "Los íconos del K-pop emocionaron a su audiencia en el Kaseya Center con pop antémico, visuales cinematográficos y un mensaje de esperanza centrada en el ser humano en una era de IA.",
+          "pt": "Os ícones do K-pop emocionaram sua audiência no Kaseya Center com pop antêmico, visuais cinematográficos e uma mensagem de esperança centrada no ser humano em uma era de IA.",
+          "fr": "Les icônes de la K-pop ont ravi son public au Kaseya Center avec de la pop anthémique, des visuels cinématographiques et un message d'espoir centré sur l'humain à l'ère de l'IA."
+        },
+        "source": "Miami New Times",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790622566158_56mm",
+        "title": {
+          "en": "Free Fall Festival at Fountains plaza in Plantation",
+          "es": "Festival de Otoño Gratis en la plaza Fountains en Plantation",
+          "pt": "Festival de Outono Gratuito na praça Fountains em Plantation",
+          "fr": "Festival d'automne gratuit à la place Fountains à Plantation"
+        },
+        "date": "2026-09-28",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/fall-festival-at-fountains-plaza-in-plantation/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2024/09/leaves-3923413_1280-copy-728x728.jpeg",
+        "description": {
+          "en": "South Florida on the Cheap The Fountains shopping and dining plaza in Plantation is featuring a Fall Festival. The event offers pumpkin painting, photo op, face painting, DJ entertainment, vendors, a petting zoo and trick... Copyright South Florida on the Cheap. The post Free Fall Festival at Fountains plaza in Plantation appeared first on South Florida on the Cheap.",
+          "es": "La plaza comercial y gastronómica Fountains en Plantation presenta un Festival de Otoño. El evento ofrece pintura de calabazas, sesión de fotos, maquillaje artístico, entretenimiento con DJ, vendedores, granja de mascotas y más.",
+          "pt": "A praça de compras e gastronomia Fountains em Plantation apresenta um Festival de Outono. O evento oferece pintura de abóboras, sessão de fotos, maquiagem artística, entretenimento com DJ, vendedores, fazenda de animais de estimação e mais.",
+          "fr": "La place commerciale et gastronomique Fountains à Plantation présente un Festival d'automne. L'événement propose la peinture de citrouilles, des séances photos, du maquillage artistique, du divertissement avec DJ, des vendeurs, une ferme pédagogique et plus."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790622566158_1xtw",
+        "title": {
+          "en": "Free Oktoberfest in Coral Springs",
+          "es": "Oktoberfest Gratis en Coral Springs",
+          "pt": "Oktoberfest Gratuito em Coral Springs",
+          "fr": "Oktoberfest gratuit à Coral Springs"
+        },
+        "date": "2026-09-28",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-oktoberfest-in-coral-springs/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2024/09/oktoberfest-coral-springs-ho-728x528.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Yodeling and a German polka band are among the fun features at a free Oktoberfest event in Coral Springs. Oktoberfest in 2026 is 4 p.m. to 10 p.m. Saturday, October... Copyright South Florida on the Cheap. The post Free Oktoberfest in Coral Springs appeared first on South Florida on the Cheap.",
+          "es": "Yodel y una banda de polka alemana se encuentran entre los entretenimientos divertidos en un evento Oktoberfest gratuito en Coral Springs. El Oktoberfest 2026 es de 4 p.m. a 10 p.m. el sábado, octubre...",
+          "pt": "Yodel e uma banda de polka alemã estão entre os entretenimentos divertidos em um evento Oktoberfest gratuito em Coral Springs. O Oktoberfest 2026 é de 16h a 22h no sábado, outubro...",
+          "fr": "Le yodel et un groupe de polka allemande figurent parmi les divertissements amusants lors d'un événement Oktoberfest gratuit à Coral Springs. L'Oktoberfest 2026 se déroule de 16h à 22h le samedi, octobre..."
+        },
+        "source": "Miami on the Cheap",
+        "category": "music"
+      },
+      {
+        "id": "rss_1790622566158_x0po",
+        "title": {
+          "en": "Día de los Muertos Dinner at Toro Toro Miami 10/8/26",
+          "es": "Cena de Día de los Muertos en Toro Toro Miami 10/8/26",
+          "pt": "Jantar de Día de los Muertos no Toro Toro Miami 10/8/26",
+          "fr": "Dîner Día de los Muertos au Toro Toro Miami 10/8/26"
+        },
+        "date": "2026-10-08",
+        "venue": "Toro Toro Miami",
+        "address": "100 Chopin Plaza, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/09/26/dia-de-los-muertos-dinner-at-toro-toro-miami-10-8-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/toro-callll-350x233.png",
+        "description": {
+          "en": "celebration of Día de los Muertos, Toro Toro will present a special, one-night-only Pairing",
+          "es": "En celebración del Día de los Muertos, Toro Toro presentará un maridaje especial de una sola noche",
+          "pt": "Em celebração do Día de los Muertos, Toro Toro apresentará um emparelhamento especial de uma única noite",
+          "fr": "En célébration du Día de los Muertos, Toro Toro présentera un appairage spécial pour une seule nuit"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.772449,
+        "lng": -80.1854687,
+        "category": "community"
+      },
+      {
+        "id": "rss_1790622566158_7q0q",
+        "title": {
+          "en": "2026 Reel Minds Mental Health Film Festival! 10/10/26",
+          "es": "¡Festival de Cine de Salud Mental Reel Minds 2026! 10/10/26",
+          "pt": "Festival de Cinema de Saúde Mental Reel Minds 2026! 10/10/26",
+          "fr": "Festival du Cinéma sur la Santé Mentale Reel Minds 2026 ! 10/10/26"
+        },
+        "date": "2026-10-10",
+        "venue": "Little Haiti Cultural Center 212 Northeast 59th Terrace Miami, FL 33137, Miami,, Florida, 33137",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/09/26/2026-reel-minds-mental-health-film-festival-10-10-26/",
+        "free": false,
+        "price": "$18",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/2026-Reel-Minds-Ticket-Flyer-Social-Media-350x438.png",
+        "description": {
+          "en": "Join NAMI Miami-Dade on Saturday, October 10th for the 2026 Reel",
+          "es": "Únete a NAMI Miami-Dade el sábado, 10 de octubre para el Reel Minds 2026",
+          "pt": "Junte-se ao NAMI Miami-Dade no sábado, 10 de outubro para o Reel Minds 2026",
+          "fr": "Rejoignez NAMI Miami-Dade samedi 10 octobre pour le Reel Minds 2026"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790622566158_uolw",
+        "title": {
+          "en": "An Evening with S.A. Cosby and Commissioner Christine King 10/15/26",
+          "es": "Una Noche con S.A. Cosby y la Comisionada Christine King 10/15/26",
+          "pt": "Uma Noite com S.A. Cosby e a Comissionária Christine King 10/15/26",
+          "fr": "Une Soirée avec S.A. Cosby et la Commissaire Christine King 10/15/26"
+        },
+        "date": "2026-10-15",
+        "venue": "Black Archives – Historic Black Theater",
+        "address": "819 NW 2nd Ave, Miami, FL 33136",
+        "url": "https://www.soulofmiami.org/2026/09/26/an-evening-with-s-a-cosby-and-commissioner-christine-king-10-15-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/SA_Cosby_King_Event_under_2MB-350x438.png",
+        "description": {
+          "en": "– $33.63 City of Miami District Five",
+          "es": "– $33.63 Ciudad de Miami Distrito Cinco",
+          "pt": "– $33.63 Cidade de Miami Distrito Cinco",
+          "fr": "– $33.63 Ville de Miami District Cinq"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7822233,
+        "lng": -80.197696,
+        "category": "community"
+      },
+      {
+        "id": "tm_1790622566691_0z8a",
+        "title": {
+          "en": "Miami FC vs. Sporting Jax",
+          "es": "Miami FC vs. Sporting Jax",
+          "pt": "Miami FC vs. Sporting Jax",
+          "fr": "Miami FC vs. Sporting Jax"
+        },
+        "date": "2026-09-30",
+        "venue": "Pitbull Stadium",
+        "address": "11200 SW 8th Street, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7OF0d&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Miscellaneous · Starts 19:00 · Pitbull Stadium",
+          "es": "Deportes · Misceláneos · Comienza 19:00 · Estadio Pitbull",
+          "pt": "Esportes · Diversos · Começa 19:00 · Estádio Pitbull",
+          "fr": "Sports · Divers · Commence 19:00 · Stade Pitbull"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7577,
+        "lng": -80.374802
+      },
+      {
+        "id": "tm_1790622566691_e8kv",
+        "title": {
+          "en": "A Day Without Sunshine",
+          "es": "Un Día sin Sol",
+          "pt": "Um Dia sem Sol",
+          "fr": "Un Jour sans Soleil"
+        },
+        "date": "2026-10-05",
+        "venue": "Abdo New River Room at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fa-day-without-sunshine-ft-lauderdale-florida-10-05-2026%2Fevent%2F0D006521AAD5754D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/07d/fda8c807-42eb-4b81-9f16-f3a8367e107d_106371_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event contains adult language or content. This is a staged reading of a new play by Michael McKeever, Directed by Stuart Meltzer. In 1977 Miami, Florida, Dade County Commissioner Ruth Shack sponsored a pioneering ordinance banning discrimination against homosexuals. Over the next five months, a campaign led by singer Anita Bryant attempted to overturn the ruling. This battle transformed Ameri",
+          "es": "Este evento contiene lenguaje o contenido para adultos. Esta es una lectura en escena de una nueva obra de Michael McKeever, dirigida por Stuart Meltzer. En Miami, Florida en 1977, la Comisionada del Condado de Dade Ruth Shack patrocinó una ordenanza pionera que prohibía la discriminación contra homosexuales. Durante los siguientes cinco meses, una campaña liderada por la cantante Anita Bryant intentó revocar la decisión. Esta batalla transformó Ameri",
+          "pt": "Este evento contém linguagem ou conteúdo para adultos. Esta é uma leitura encenada de uma nova peça de Michael McKeever, dirigida por Stuart Meltzer. Em Miami, Flórida em 1977, a Comissionária do Condado de Dade Ruth Shack patrocinou uma ordenança pioneira que proibia a discriminação contra homossexuais. Nos próximos cinco meses, uma campanha liderada pela cantora Anita Bryant tentou anular a decisão. Esta batalha transformou Ameri",
+          "fr": "Cet événement contient du langage ou du contenu pour adultes. Ceci est une lecture sur scène d'une nouvelle pièce de Michael McKeever, dirigée par Stuart Meltzer. En 1977 à Miami, en Floride, la commissaire du comté de Dade Ruth Shack a parrainé une ordonnance pionnière interdisant la discrimination contre les homosexuels. Au cours des cinq mois suivants, une campagne dirigée par la chanteuse Anita Bryant a tenté d'annuler la décision. Cette bataille a transformé Ameri"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1790622566691_4ni6",
+        "title": {
+          "en": "MIAMI HEAT RED, WHITE & PINK GAME",
+          "es": "JUEGO ROJO, BLANCO Y ROSA DEL MIAMI HEAT",
+          "pt": "JOGO VERMELHO, BRANCO E ROSA DO MIAMI HEAT",
+          "fr": "JEU ROUGE, BLANC ET ROSE DU MIAMI HEAT"
+        },
+        "date": "2026-10-06",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-heat-red-white-pink-game-miami-florida-10-06-2026%2Fevent%2F0D0064FDD6DC869B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/89f/3b7bb388-5ecb-42d1-9506-fcfeb432289f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "All seating is general admission. Red, White & Pink game features an intra-squad scrimmage. Proceeds benefit the Baptist Health Herbert Wertheim Cancer Institute. · Starts 18:30 · Kaseya Center",
+          "es": "Todos los asientos son de admisión general. El juego Rojo, Blanco y Rosa presenta un partido de práctica intra-equipo. Los beneficios van al Instituto de Cáncer Herbert Wertheim de Baptist Health. · Comienza 18:30 · Centro Kaseya",
+          "pt": "Todos os assentos são de admissão geral. O jogo Vermelho, Branco e Rosa apresenta um scrimmage intra-equipe. Os lucros beneficiam o Instituto de Câncer Herbert Wertheim da Baptist Health. · Começa 18:30 · Centro Kaseya",
+          "fr": "Tous les sièges sont à admission générale. Le jeu Rouge, Blanc et Rose présente une mêlée intra-équipe. Les bénéfices profitent à l'Institut du Cancer Herbert Wertheim de Baptist Health. · Commence 18:30 · Centre Kaseya"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1790622566691_giv0",
+        "title": {
+          "en": "Colombia vs Peru",
+          "es": "Colombia vs Perú",
+          "pt": "Colômbia vs Peru",
+          "fr": "Colombie vs Pérou"
+        },
+        "date": "2026-10-06",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcolombia-vs-peru-miami-florida-10-06-2026%2Fevent%2F0D006512ADCBA2B3&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/0b0/2896c031-1776-456a-be3a-b86d4bc320b0_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Soccer · Starts 19:00 · Nu Stadium",
+          "es": "Deportes · Fútbol · Comienza 19:00 · Estadio Nu",
+          "pt": "Esportes · Futebol · Começa 19:00 · Estádio Nu",
+          "fr": "Sports · Football · Commence 19:00 · Stade Nu"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
+      },
+      {
+        "id": "cp_1790622568643_lnkf",
+        "title": {
+          "en": "NMB Centennial Festival",
+          "es": "Festival del Centenario de NMB",
+          "pt": "Festival do Centenário de NMB",
+          "fr": "Festival du Centenaire de NMB"
+        },
+        "date": "2026-10-03",
+        "venue": "-   North Miami Beach FL 33162",
+        "address": "",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://www.citynmb.com/calendar.aspx?EID=8967",
+          "es": "https://www.citynmb.com/calendar.aspx?EID=8967",
+          "pt": "https://www.citynmb.com/calendar.aspx?EID=8967",
+          "fr": "https://www.citynmb.com/calendar.aspx?EID=8967"
+        },
+        "source": "North Miami Beach",
         "category": "community"
       }
     ]
@@ -5114,10 +5158,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-27T16:18:26.009Z",
+    "fetchedAt": "2026-09-28T19:10:06.514Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.d7b5ae9919e44df52aa518dc891eddef7e4e7744.001.2",
+        "id": "nws_urn-oid-2.49.0.1.840.0.71c5005ee8e3030ce49f28f9bc734f02a1d7e70b.001.1",
         "type": "weather",
         "severity": "minor",
         "title": {
@@ -5127,36 +5171,15 @@
           "fr": "Avis d'Inondation Côtière"
         },
         "detail": {
-          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 2 PM EDT Monday.\nFor the High Rip Current Risk, through Monday afternoon.\n\n* IMPACTS...Flooding of lots, parks, and roads with only isolated\nroad closures expected. Rip currents can sweep eve",
-          "es": "* QUÉ...Para la Alerta de Inundación Costera, inundación costera moderada. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas.\n\n* DÓNDE...Costa del Condado de Miami Dade.\n\n* CUÁNDO...Para la Alerta de Inundación Costera, hasta las 2 PM EDT del lunes. Para el Riesgo Alto de Corrientes de Resaca, hasta el lunes por la tarde.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados esperados. Las corrientes de resaca pueden arrastrar",
-          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas.\n\n* ONDE...Costa do Condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 14h EDT segunda-feira. Para o Risco Alto de Correntes de Retorno, até segunda-feira à tarde.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados. Correntes de retorno podem arrastar",
-          "fr": "* QUOI...Pour l'avis d'inondation côtière, inondations côtières modérées. Pour le risque élevé de courants de retour, courants de retour dangereux.\n\n* OÙ...Côte du comté de Miami Dade.\n\n* QUAND...Pour l'avis d'inondation côtière, jusqu'à 14 h EDT lundi. Pour le risque élevé de courants de retour, jusqu'à lundi après-midi.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement des fermetures routières isolées prévues. Les courants de retour peuvent entraîner"
+          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 2 PM EDT Tuesday.\nFor the High Rip Current Risk, until 2 PM EDT this afternoon.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road closures exp",
+          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundación costera moderada. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Broward y Condado costero de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 2 PM EDT del martes. Para el Riesgo Alto de Corrientes de Resaca, hasta las 2 PM EDT esta tarde.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados.",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas.\n\n* ONDE...Condado costeiro de Broward e Condado costeiro de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 14h EDT de terça-feira. Para o Risco Alto de Correntes de Retorno, até 14h EDT desta tarde.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas.",
+          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, inondations côtières modérées. Pour le Risque Élevé de Courants de Retour, courants de retour dangereux.\n\n* OÙ...Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, jusqu'à 14h EDT mardi. Pour le Risque Élevé de Courants de Retour, jusqu'à 14h EDT cet après-midi.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec fermetures de routes isolées uniquement."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d7b5ae9919e44df52aa518dc891eddef7e4e7744.001.2",
-        "effectiveAt": "2026-09-27T06:17:00-04:00",
-        "expiresAt": "2026-09-27T18:30:00.000Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.d7b5ae9919e44df52aa518dc891eddef7e4e7744.001.3",
-        "type": "weather",
-        "severity": "moderate",
-        "title": {
-          "en": "Rip Current Statement",
-          "es": "Aviso de Corrientes de Resaca",
-          "pt": "Aviso de Correntes de Retorno",
-          "fr": "Avis de Courants de Baïn"
-        },
-        "detail": {
-          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 2 PM EDT Monday.\nFor the High Rip Current Risk, through Monday afternoon.\n\n* IMPACTS...Flooding of lots, parks, and roads with only isolated\nroad closures expected. Rip currents can sweep eve",
-          "es": "* QUÉ...Para la Alerta de Inundación Costera, inundación costera moderada. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas.\n\n* DÓNDE...Costa del Condado de Miami Dade.\n\n* CUÁNDO...Para la Alerta de Inundación Costera, hasta las 2 PM EDT del lunes. Para el Riesgo Alto de Corrientes de Resaca, hasta el lunes por la tarde.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados esperados. Las corrientes de resaca pueden arrastrar",
-          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas.\n\n* ONDE...Costa do Condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 14h EDT segunda-feira. Para o Risco Alto de Correntes de Retorno, até segunda-feira à tarde.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados. Correntes de retorno podem arrastar",
-          "fr": "* QUOI...Pour l'avis d'inondation côtière, inondations côtières modérées. Pour le risque élevé de courants de retour, courants de retour dangereux.\n\n* OÙ...Côte du comté de Miami Dade.\n\n* QUAND...Pour l'avis d'inondation côtière, jusqu'à 14 h EDT lundi. Pour le risque élevé de courants de retour, jusqu'à lundi après-midi.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement des fermetures routières isolées prévues. Les courants de retour peuvent entraîner"
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d7b5ae9919e44df52aa518dc891eddef7e4e7744.001.3",
-        "effectiveAt": "2026-09-27T06:17:00-04:00",
-        "expiresAt": "2026-09-27T18:30:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71c5005ee8e3030ce49f28f9bc734f02a1d7e70b.001.1",
+        "effectiveAt": "2026-09-28T12:09:00-04:00",
+        "expiresAt": "2026-09-29T00:15:00.000Z"
       }
     ]
   }
