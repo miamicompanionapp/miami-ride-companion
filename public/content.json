@@ -1,32 +1,45 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-29T17:31:42.092Z",
+    "lastUpdated": "2026-09-30T17:30:50.022Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-09-29T17:31:33.195Z",
+    "fetchedAt": "2026-09-30T17:30:46.433Z",
     "current": {
-      "temp_f": 80,
-      "feels_f": 93,
+      "temp_f": 78,
+      "feels_f": 80,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 92,
-      "wind_mph": 5,
-      "rain_chance": 49,
-      "weathercode": 3
+      "humidity": 83,
+      "wind_mph": 17,
+      "rain_chance": 66,
+      "weathercode": 55
     },
     "forecast": [
       {
-        "date": "2026-09-29",
-        "high_f": 80,
+        "date": "2026-09-30",
+        "high_f": 82,
         "low_f": 74,
-        "weathercode": 82,
-        "rain_chance": 49,
+        "weathercode": 61,
+        "rain_chance": 66,
+        "description": {
+          "en": "Light rain",
+          "es": "Lluvia ligera",
+          "pt": "Chuva leve",
+          "fr": "Pluie légère"
+        }
+      },
+      {
+        "date": "2026-10-01",
+        "high_f": 81,
+        "low_f": 75,
+        "weathercode": 80,
+        "rain_chance": 44,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -35,37 +48,11 @@
         }
       },
       {
-        "date": "2026-09-30",
-        "high_f": 77,
-        "low_f": 72,
-        "weathercode": 81,
-        "rain_chance": 44,
-        "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
-        }
-      },
-      {
-        "date": "2026-10-01",
-        "high_f": 87,
-        "low_f": 74,
-        "weathercode": 96,
-        "rain_chance": 64,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-10-02",
         "high_f": 87,
-        "low_f": 83,
+        "low_f": 78,
         "weathercode": 95,
-        "rain_chance": 58,
+        "rain_chance": 44,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-10-03",
-        "high_f": 87,
-        "low_f": 84,
-        "weathercode": 51,
-        "rain_chance": 31,
+        "high_f": 86,
+        "low_f": 83,
+        "weathercode": 95,
+        "rain_chance": 44,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-10-04",
+        "high_f": 87,
+        "low_f": 83,
+        "weathercode": 3,
+        "rain_chance": 13,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       }
     ],
     "hourly": [
       {
         "hour": "13:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 29
+        "temp_f": 81,
+        "weathercode": 51,
+        "rain_chance": 50
       },
       {
         "hour": "14:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 33
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 51
       },
       {
         "hour": "15:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 35
+        "temp_f": 76,
+        "weathercode": 53,
+        "rain_chance": 66
       },
       {
         "hour": "16:00",
-        "temp_f": 78,
-        "weathercode": 53,
-        "rain_chance": 37
+        "temp_f": 74,
+        "weathercode": 61,
+        "rain_chance": 53
       },
       {
         "hour": "17:00",
-        "temp_f": 76,
-        "weathercode": 61,
-        "rain_chance": 26
+        "temp_f": 77,
+        "weathercode": 51,
+        "rain_chance": 31
       },
       {
         "hour": "18:00",
-        "temp_f": 75,
-        "weathercode": 63,
-        "rain_chance": 22
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 23
       },
       {
         "hour": "19:00",
-        "temp_f": 74,
-        "weathercode": 65,
-        "rain_chance": 22
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 17
       },
       {
         "hour": "20:00",
-        "temp_f": 75,
-        "weathercode": 80,
-        "rain_chance": 15
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 21
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 21
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 75,
-        "weathercode": 1,
-        "rain_chance": 14
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 13
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 73,
-        "weathercode": 2,
-        "rain_chance": 13
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 73,
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 16
       },
       {
-        "hour": "03:00",
-        "temp_f": 73,
+        "hour": "21:00",
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 28
+        "rain_chance": 16
       },
       {
-        "hour": "04:00",
-        "temp_f": 74,
+        "hour": "22:00",
+        "temp_f": 77,
         "weathercode": 3,
+        "rain_chance": 23
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 24
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 25
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 76,
+        "weathercode": 53,
         "rain_chance": 34
       },
       {
-        "hour": "05:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 41
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 73,
-        "weathercode": 3,
-        "rain_chance": 31
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 73,
+        "hour": "02:00",
+        "temp_f": 76,
         "weathercode": 53,
-        "rain_chance": 43
+        "rain_chance": 27
       },
       {
-        "hour": "08:00",
-        "temp_f": 73,
-        "weathercode": 65,
-        "rain_chance": 35
+        "hour": "03:00",
+        "temp_f": 77,
+        "weathercode": 51,
+        "rain_chance": 21
       },
       {
-        "hour": "09:00",
-        "temp_f": 72,
-        "weathercode": 3,
+        "hour": "04:00",
+        "temp_f": 76,
+        "weathercode": 51,
         "rain_chance": 28
       },
       {
-        "hour": "10:00",
-        "temp_f": 73,
+        "hour": "05:00",
+        "temp_f": 77,
         "weathercode": 51,
-        "rain_chance": 38
+        "rain_chance": 42
       },
       {
-        "hour": "11:00",
-        "temp_f": 73,
+        "hour": "06:00",
+        "temp_f": 75,
         "weathercode": 65,
+        "rain_chance": 39
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 75,
+        "weathercode": 3,
         "rain_chance": 44
       },
       {
-        "hour": "12:00",
-        "temp_f": 75,
+        "hour": "08:00",
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 40
+        "rain_chance": 37
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 37
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 77,
+        "weathercode": 55,
+        "rain_chance": 35
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 38
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 35
       }
     ]
   },
@@ -3059,32 +3059,6 @@
         "lng": -80.187805
       },
       {
-        "id": "rss_1790093383490_l7m7",
-        "title": {
-          "en": "Miami Beach 5K and Permanent Magnetic Confidence Training 9/29/26",
-          "es": "Carrera 5K de Miami Beach y Entrenamiento de Confianza Magnética Permanente 9/29/26",
-          "pt": "Corrida 5K de Miami Beach e Treinamento de Confiança Magnética Permanente 9/29/26",
-          "fr": "Course 5K de Miami Beach et Formation de Confiance Magnétique Permanente 9/29/26"
-        },
-        "date": "2026-09-29",
-        "venue": "Miami Beach 5K",
-        "address": "873 Ocean Dr, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/09/21/miami-beach-5k-and-permanent-magnetic-confidence-training-9-29-26/",
-        "free": false,
-        "price": "$25",
-        "image": "",
-        "description": {
-          "en": "Join a group 5K run on Miami Beach, followed by an in-depth seminar on",
-          "es": "Únete a un grupo de carrera 5K en Miami Beach, seguido de un seminario detallado sobre",
-          "pt": "Junte-se a um grupo de corrida 5K em Miami Beach, seguido de um seminário aprofundado sobre",
-          "fr": "Rejoignez un groupe de course 5K à Miami Beach, suivi d'un séminaire approfondi sur"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7787588,
-        "lng": -80.1309092,
-        "category": "sports"
-      },
-      {
         "id": "rss_1790093383490_ogtm",
         "title": {
           "en": "Spooky Adventures: Monsters Unleashed 10/23/26",
@@ -3187,30 +3161,6 @@
         "lat": 25.8197347,
         "lng": -80.3421135,
         "category": "music"
-      },
-      {
-        "id": "rss_1790179156218_wlwa",
-        "title": {
-          "en": "Free Full Moon Yoga experience at Shooters Waterfront 9/29/26",
-          "es": "Experiencia de Yoga de Luna Llena Gratis en Shooters Waterfront 9/29/26",
-          "pt": "Experiência Gratuita de Yoga de Lua Cheia em Shooters Waterfront 9/29/26",
-          "fr": "Expérience de Yoga Pleine Lune Gratuite à Shooters Waterfront 9/29/26"
-        },
-        "date": "2026-09-29",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/09/22/free-full-moon-yoga-experience-at-shooters-waterfront-sept-29-9-28-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/FULL-MOON-YOGA-5-350x438.png",
-        "description": {
-          "en": "Go with the flow under the glow of a full moon. On Tuesday, September",
-          "es": "Fluye con la luz de la luna llena. El martes, 29 de septiembre",
-          "pt": "Flua com o brilho da lua cheia. Na terça-feira, 29 de setembro",
-          "fr": "Allez avec le courant sous la lueur de la pleine lune. Le mardi, 29 septembre"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
       },
       {
         "id": "rss_1790179156218_968n",
@@ -3593,32 +3543,6 @@
         "lat": 26.1368152,
         "lng": -80.1213532,
         "category": "nightlife"
-      },
-      {
-        "id": "tm_1790525847162_mvp6",
-        "title": {
-          "en": "Buena Vista Social Club (Touring)",
-          "es": "Buena Vista Social Club (Gira)",
-          "pt": "Buena Vista Social Club (Turnê)",
-          "fr": "Buena Vista Social Club (Tournée)"
-        },
-        "date": "2026-09-29",
-        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
-        "address": "1444 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-NGS&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Theatre · Starts 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "es": "Artes y Teatro · Teatro · Comienza 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "pt": "Artes e Teatro · Teatro · Começa 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "fr": "Arts et Théâtre · Théâtre · Commence 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.784901,
-        "lng": -80.189598
       },
       {
         "id": "tm_1790525847162_hwxl",
@@ -4161,54 +4085,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1790703075146_5s8h",
-        "title": {
-          "en": "Dining at the Park: food trucks, DJ & vendors at Volunteer Park in Plantation",
-          "es": "Comiendo en el Parque: food trucks, DJ y vendedores en Volunteer Park en Plantation",
-          "pt": "Comendo no Parque: food trucks, DJ e vendedores no Volunteer Park em Plantation",
-          "fr": "Dîner au Parc : food trucks, DJ et vendeurs au Volunteer Park à Plantation"
-        },
-        "date": "2026-09-29",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/food-truck-events-in-plantation/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2023/06/Volunteer-Park-Plantation-food-trucks-.png",
-        "description": {
-          "en": "South Florida on the Cheap If you're thinking about going out for dinner, perhaps you'll venture to a park. Food truck fare is featured at Volunteer Park in Plantation. Food trucks are at the park... Copyright South Florida on the Cheap. The post Dining at the Park: food trucks, DJ & vendors at Volunteer Park in Plantation appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Si estás pensando en salir a cenar, tal vez te dirijas a un parque. La comida de food trucks se presenta en Volunteer Park en Plantation. Los food trucks están en el parque... Copyright South Florida on the Cheap. El artículo Comiendo en el Parque: food trucks, DJ y vendedores en Volunteer Park en Plantation apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Se você está pensando em sair para jantar, talvez visite um parque. Comida de food trucks é apresentada no Volunteer Park em Plantation. Os food trucks estão no parque... Copyright South Florida on the Cheap. O artigo Comendo no Parque: food trucks, DJ e vendedores no Volunteer Park em Plantation apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Si vous pensez à sortir dîner, vous pourrez vous diriger vers un parc. La nourriture des food trucks est présentée au Volunteer Park à Plantation. Les food trucks sont au parc... Copyright South Florida on the Cheap. L'article Dîner au Parc : food trucks, DJ et vendeurs au Volunteer Park à Plantation est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "music"
-      },
-      {
-        "id": "rss_1790703075146_2ffw",
-        "title": {
-          "en": "Jazz Friday kicks off 'Nuestra Cultura' at Norton Museum, Oct. 2",
-          "es": "Jazz Friday inaugura 'Nuestra Cultura' en Norton Museum, 2 de octubre",
-          "pt": "Jazz Friday abre 'Nuestra Cultura' no Norton Museum, 2 de outubro",
-          "fr": "Jazz Friday lance 'Nuestra Cultura' au Norton Museum, 2 octobre"
-        },
-        "date": "2026-09-29",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/art-after-dark-norton-west-palm-beach/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/09/art-after-dark-jazz4-728x653.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Each week, after regular hours, the Norton Museum of Art presents a new experience, with an eclectic mix of live performances, film screenings, workshops, tours, and more, called Art After... Copyright South Florida on the Cheap. The post Jazz Friday kicks off 'Nuestra Cultura' at Norton Museum, Oct. 2 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Cada semana, después del horario regular, el Museo de Arte Norton presenta una nueva experiencia, con una mezcla ecléctica de presentaciones en vivo, proyecciones de películas, talleres, tours y más, llamada Art After... Copyright South Florida on the Cheap. El artículo Jazz Friday inaugura 'Nuestra Cultura' en Norton Museum, 2 de octubre apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Cada semana, após o horário regular, o Museu de Arte Norton apresenta uma nova experiência, com uma mistura eclética de apresentações ao vivo, exibições de filmes, oficinas, passeios e muito mais, chamada Art After... Copyright South Florida on the Cheap. O artigo Jazz Friday abre 'Nuestra Cultura' no Norton Museum, 2 de outubro apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Chaque semaine, après les heures régulières, le Musée d'Art Norton présente une nouvelle expérience, avec un mélange éclectique de performances en direct, de projections de films, d'ateliers, de visites et bien plus encore, appelé Art After... Copyright South Florida on the Cheap. L'article Jazz Friday lance 'Nuestra Cultura' au Norton Museum, 2 octobre est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "arts"
-      },
-      {
         "id": "rss_1790703075146_b9l5",
         "title": {
           "en": "Blood Feast Hard Techno Festival 10/2/26",
@@ -4233,28 +4109,106 @@
         "category": "community"
       },
       {
-        "id": "rss_1790703075146_8f2h",
+        "id": "rss_1790789426209_ytes",
         "title": {
-          "en": "A Miami child prodigy and world-renowned violinist reimagine Vivaldi",
-          "es": "Una niña prodigio de Miami y violinista de renombre mundial reinventan a Vivaldi",
-          "pt": "Uma menina prodígio de Miami e violinista de renome mundial reinventam Vivaldi",
-          "fr": "Une enfant prodige de Miami et une violoniste de renommée mondiale réimmaginent Vivaldi"
+          "en": "Free Beau Monde Pilates x Padel X Summer Club on Lincoln Road 10/10/26",
+          "es": "Pilates Beau Monde x Padel X Summer Club Gratis en Lincoln Road 10/10/26",
+          "pt": "Pilates Beau Monde x Padel X Summer Club Gratuito na Lincoln Road 10/10/26",
+          "fr": "Pilates Beau Monde x Padel X Summer Club Gratuit sur Lincoln Road 10/10/26"
         },
-        "date": "2026-09-29",
-        "venue": "Miami New Times",
+        "date": "2026-10-10",
+        "venue": "Soul of Miami",
         "address": "",
-        "url": "https://www.miaminewtimes.com/music/a-miami-child-prodigy-and-world-renowned-violinist-reimagine-vivaldi-40588512/",
+        "url": "https://www.soulofmiami.org/2026/09/29/free-beau-monde-pilates-x-padel-x-summer-club-on-lincoln-road-10-10-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Beau-Monde-Pilates-x-Padel-X-21-350x172.png",
+        "description": {
+          "en": "Move, stretch, play and connect! Join Beau Monde Pilates",
+          "es": "¡Muévete, estira, juega y conecta! Únete a Beau Monde Pilates",
+          "pt": "Mexa-se, estique, jogue e conecte! Junte-se ao Beau Monde Pilates",
+          "fr": "Bougez, étirez-vous, jouez et connectez! Rejoignez Beau Monde Pilates"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1790789426209_afox",
+        "title": {
+          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 9/30/26",
+          "es": "Damas que Almuerzan: Espectáculo de Drag Show Miércoles por la Tarde 9/30/26",
+          "pt": "Senhoras que Almoçam: Show de Drag Quarta à Tarde 9/30/26",
+          "fr": "Dames qui Déjeunent: Spectacle de Drag Show Mercredi Après-midi 9/30/26"
+        },
+        "date": "2026-09-30",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/29/ladies-who-lunch-wednesday-afternoon-drag-show-9-30-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/tmp82390r92-281x500.jpg",
+        "description": {
+          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los miércoles son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "As quartas são para os rapazes que brincam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les mercredis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1790789426209_rxc4",
+        "title": {
+          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 10/1/26",
+          "es": "Damas que Almuerzan: Espectáculo de Drag Show Jueves por la Tarde 10/1/26",
+          "pt": "Senhoras que Almoçam: Show de Drag Quinta à Tarde 10/1/26",
+          "fr": "Dames qui Déjeunent: Spectacle de Drag Show Jeudi Après-midi 10/1/26"
+        },
+        "date": "2026-10-01",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/09/29/ladies-who-lunch-thursday-afternoon-drag-show-10-1-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/tmpnex1moyz-281x500.jpg",
+        "description": {
+          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los jueves son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "As quintas são para os rapazes que brincam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les jeudis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "tm_1790789426781_3q0h",
+        "title": {
+          "en": "Buena Vista Social Club (Touring)",
+          "es": "Buena Vista Social Club (Gira)",
+          "pt": "Buena Vista Social Club (Em Turnê)",
+          "fr": "Buena Vista Social Club (En Tournée)"
+        },
+        "date": "2026-09-30",
+        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-NGV&utm_medium=affiliate",
         "free": false,
         "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/09/Amanda-Kobayashi-Nunez.jpeg",
+        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
         "description": {
-          "en": "The music education nonprofit Time & Harmony-curated show comes to Sanctuary of the Arts October 8.",
-          "es": "El show curado por la organización sin fines de lucro de educación musical Time & Harmony llega al Sanctuary of the Arts el 8 de octubre.",
-          "pt": "O show curado pela organização sem fins lucrativos de educação musical Time & Harmony chega ao Sanctuary of the Arts em 8 de outubro.",
-          "fr": "Le spectacle organisé par l'organisme à but non lucratif d'éducation musicale Time & Harmony arrive au Sanctuary of the Arts le 8 octobre."
+          "en": "Arts & Theatre · Theatre · Starts 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "es": "Artes y Teatro · Teatro · Comienza 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "pt": "Artes e Teatro · Teatro · Começa 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "fr": "Arts et Théâtre · Théâtre · Commence 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC"
         },
-        "source": "Miami New Times",
-        "category": "community"
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.784901,
+        "lng": -80.189598
       }
     ]
   },
@@ -5158,10 +5112,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-09-29T17:31:33.195Z",
+    "fetchedAt": "2026-09-30T17:30:46.434Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.f7ff4c3d4fd1ad9a0641216d12cc7dba7a0bf355.001.2",
+        "id": "nws_urn-oid-2.49.0.1.840.0.9e565d02140f1bd812895ef6a4e8bc916b0b8f7e.001.2",
         "type": "weather",
         "severity": "minor",
         "title": {
@@ -5171,36 +5125,15 @@
           "fr": "Coastal Flood Statement"
         },
         "detail": {
-          "en": "* WHAT...Moderate coastal flooding\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 8 AM EDT\nWednesday. For the Coastal Flood Statement, from Wednesday\nmorning through Wednesday afternoon.\n\n* IMPACTS...Flooding of lots, parks, and roads with only isolated\nroad closures expected.",
-          "es": "* QUÉ...Inundaciones costeras moderadas\n\n* DÓNDE...Condado costero de Palm Beach, Condado costero de Broward y Condado costero de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 AM EDT del miércoles. Para el Comunicado de Inundación Costera, desde la mañana del miércoles hasta la tarde del miércoles.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados esperados.",
-          "pt": "* O QUÊ...Inundação costeira moderada\n\n* ONDE...Condado costeiro de Palm Beach, Condado costeiro de Broward e Condado costeiro de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 8 AM EDT quarta-feira. Para o Comunicado de Inundação Costeira, desde a manhã de quarta-feira até a tarde de quarta-feira.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados.",
-          "fr": "* QUOI...Inondations côtières modérées\n\n* OÙ...Comté côtier de Palm Beach, Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Pour l'Avis d'inondation côtière, jusqu'à 8 h EDT mercredi. Pour le Bulletin d'inondation côtière, de mercredi matin à mercredi après-midi.\n\n* IMPACTS...Inondation de terrains, de parcs et de routes avec seulement des fermetures de routes isolées attendues."
+          "en": "* WHAT...Isolated minor coastal flooding expected.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...Through Thursday afternoon.\n\n* IMPACTS...Some water on low lying roads and property.",
+          "es": "* QUÉ...Se esperan inundaciones costeras menores aisladas.\n\n* DÓNDE...Condado costero de Palm Beach, Condado costero de Broward y Condado costero de Miami Dade.\n\n* CUÁNDO...Hasta el jueves por la tarde.\n\n* IMPACTOS...Agua en algunas carreteras y propiedades bajas.",
+          "pt": "* O QUÊ...Inundações costeiras menores isoladas esperadas.\n\n* ONDE...Condado costeiro de Palm Beach, Condado costeiro de Broward e Condado costeiro de Miami Dade.\n\n* QUANDO...Até quinta-feira à tarde.\n\n* IMPACTOS...Água em algumas estradas e propriedades baixas.",
+          "fr": "* QUOI...Inondations côtières mineures isolées prévues.\n\n* OÙ...Comté côtier de Palm Beach, Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Jusqu'à jeudi après-midi.\n\n* IMPACTS...Eau sur certaines routes basses et propriétés."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f7ff4c3d4fd1ad9a0641216d12cc7dba7a0bf355.001.2",
-        "effectiveAt": "2026-09-29T11:41:00-04:00",
-        "expiresAt": "2026-09-30T12:00:00.000Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.f7ff4c3d4fd1ad9a0641216d12cc7dba7a0bf355.001.1",
-        "type": "weather",
-        "severity": "minor",
-        "title": {
-          "en": "Coastal Flood Advisory",
-          "es": "Aviso de Inundación Costera",
-          "pt": "Aviso de Inundação Costeira",
-          "fr": "Avis d'Inondation Côtière"
-        },
-        "detail": {
-          "en": "* WHAT...Moderate coastal flooding\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 8 AM EDT\nWednesday. For the Coastal Flood Statement, from Wednesday\nmorning through Wednesday afternoon.\n\n* IMPACTS...Flooding of lots, parks, and roads with only isolated\nroad closures expected.",
-          "es": "* QUÉ...Inundaciones costeras moderadas\n\n* DÓNDE...Condado costero de Palm Beach, Condado costero de Broward y Condado costero de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 AM EDT del miércoles. Para el Comunicado de Inundación Costera, desde la mañana del miércoles hasta la tarde del miércoles.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados esperados.",
-          "pt": "* O QUÊ...Inundação costeira moderada\n\n* ONDE...Condado costeiro de Palm Beach, Condado costeiro de Broward e Condado costeiro de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 8 AM EDT quarta-feira. Para o Comunicado de Inundação Costeira, desde a manhã de quarta-feira até a tarde de quarta-feira.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados.",
-          "fr": "* QUOI...Inondations côtières modérées\n\n* OÙ...Comté côtier de Palm Beach, Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Pour l'Avis d'inondation côtière, jusqu'à 8 h EDT mercredi. Pour le Bulletin d'inondation côtière, de mercredi matin à mercredi après-midi.\n\n* IMPACTS...Inondation de terrains, de parcs et de routes avec seulement des fermetures de routes isolées attendues."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f7ff4c3d4fd1ad9a0641216d12cc7dba7a0bf355.001.1",
-        "effectiveAt": "2026-09-29T11:41:00-04:00",
-        "expiresAt": "2026-09-30T12:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e565d02140f1bd812895ef6a4e8bc916b0b8f7e.001.2",
+        "effectiveAt": "2026-09-30T08:00:00-04:00",
+        "expiresAt": "2026-10-01T06:00:00.000Z"
       }
     ]
   }
