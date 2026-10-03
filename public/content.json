@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-02T17:21:07.056Z",
+    "lastUpdated": "2026-10-03T15:38:15.993Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-02T17:21:03.268Z",
+    "fetchedAt": "2026-10-03T15:38:11.948Z",
     "current": {
       "temp_f": 84,
-      "feels_f": 93,
+      "feels_f": 95,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 84,
-      "wind_mph": 12,
-      "rain_chance": 28,
+      "humidity": 80,
+      "wind_mph": 10,
+      "rain_chance": 11,
       "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-10-02",
-        "high_f": 85,
-        "low_f": 80,
-        "weathercode": 3,
-        "rain_chance": 28,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-10-03",
-        "high_f": 84,
-        "low_f": 78,
+        "high_f": 85,
+        "low_f": 79,
         "weathercode": 3,
-        "rain_chance": 19,
+        "rain_chance": 11,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -49,23 +36,36 @@
       },
       {
         "date": "2026-10-04",
-        "high_f": 86,
-        "low_f": 78,
-        "weathercode": 51,
-        "rain_chance": 26,
+        "high_f": 85,
+        "low_f": 77,
+        "weathercode": 3,
+        "rain_chance": 8,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-10-05",
         "high_f": 86,
+        "low_f": 75,
+        "weathercode": 53,
+        "rain_chance": 21,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-10-06",
+        "high_f": 87,
         "low_f": 82,
         "weathercode": 51,
-        "rain_chance": 39,
+        "rain_chance": 62,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -74,11 +74,11 @@
         }
       },
       {
-        "date": "2026-10-06",
+        "date": "2026-10-07",
         "high_f": 86,
         "low_f": 81,
         "weathercode": 51,
-        "rain_chance": 66,
+        "rain_chance": 74,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -89,6 +89,18 @@
     ],
     "hourly": [
       {
+        "hour": "11:00",
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
         "hour": "13:00",
         "temp_f": 85,
         "weathercode": 3,
@@ -96,141 +108,129 @@
       },
       {
         "hour": "14:00",
-        "temp_f": 84,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 5
       },
       {
         "hour": "15:00",
-        "temp_f": 84,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 8
       },
       {
         "hour": "16:00",
         "temp_f": 84,
-        "weathercode": 2,
-        "rain_chance": 5
+        "weathercode": 3,
+        "rain_chance": 9
       },
       {
         "hour": "17:00",
-        "temp_f": 84,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 9
       },
       {
         "hour": "18:00",
         "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 8
       },
       {
         "hour": "19:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 14
+        "rain_chance": 8
       },
       {
         "hour": "20:00",
-        "temp_f": 81,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 8
       },
       {
         "hour": "21:00",
         "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 11
       },
       {
         "hour": "22:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 9
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 7
       },
       {
         "hour": "00:00",
-        "temp_f": 81,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 14
+        "rain_chance": 6
       },
       {
         "hour": "01:00",
-        "temp_f": 80,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 14
+        "rain_chance": 6
       },
       {
         "hour": "02:00",
-        "temp_f": 80,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 6
       },
       {
         "hour": "03:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 19
+        "temp_f": 79,
+        "weathercode": 2,
+        "rain_chance": 5
       },
       {
         "hour": "04:00",
-        "temp_f": 79,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 5
       },
       {
         "hour": "05:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 15
+        "temp_f": 78,
+        "weathercode": 2,
+        "rain_chance": 4
       },
       {
         "hour": "06:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 78,
+        "weathercode": 1,
+        "rain_chance": 4
       },
       {
         "hour": "07:00",
         "temp_f": 78,
-        "weathercode": 2,
-        "rain_chance": 10
+        "weathercode": 1,
+        "rain_chance": 5
       },
       {
         "hour": "08:00",
-        "temp_f": 80,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 6
       },
       {
         "hour": "09:00",
         "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 10
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "10:00",
         "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 9
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 5
       }
     ]
   },
@@ -1771,32 +1771,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1787661507987_ux9z",
-        "title": {
-          "en": "Gimme Gimme Disco 10/2/26",
-          "es": "Gimme Gimme Disco 10/2/26",
-          "pt": "Gimme Gimme Disco 10/2/26",
-          "fr": "Gimme Gimme Disco 10/2/26"
-        },
-        "date": "2026-10-02",
-        "venue": "Lincoln's Beard Brewing Co.",
-        "address": "7360 SW 41st St, Miami, Florida, 33155",
-        "url": "https://www.soulofmiami.org/2026/08/24/gimme-gimme-disco-10-2-26/",
-        "free": false,
-        "price": "$23",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/159395-350x175.jpeg",
-        "description": {
-          "en": "If you can’t get enough of ABBA, boy do we have THE dance party for you! We are",
-          "es": "¡Si no puedes tener suficiente de ABBA, tenemos LA fiesta de baile para ti! Somos",
-          "pt": "Se você não consegue ter o suficiente de ABBA, temos A festa de dança para você! Somos",
-          "fr": "Si vous n'en avez jamais assez d'ABBA, nous avons LA soirée dansante pour vous! Nous sommes"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.732096,
-        "lng": -80.3143531,
-        "category": "community"
-      },
-      {
         "id": "rss_1788201622932_sogo",
         "title": {
           "en": "Grunge Lives Here: Truly featuring Hiro Yamamoto 10/24/26",
@@ -2105,30 +2079,6 @@
         "category": "music"
       },
       {
-        "id": "cp_1789224840540_9j1f",
-        "title": {
-          "en": "First Friday @ 5",
-          "es": "Primer Viernes @ 5",
-          "pt": "Primeiro Sexta @ 5",
-          "fr": "Premier Vendredi @ 5"
-        },
-        "date": "2026-10-02",
-        "venue": "Centennial Park &  Amphitheater",
-        "address": "120 East Ocean Ave.  Boynton Beach FL 33435",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=30",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "Kick off your weekend with family-friendly fun at First Friday @ 5! Enjoy an evening filled with delicious food trucks, live music, and a vibrant community atmosphere in Downtown Boynton Beach. Bring the whole family and celebrate the first Friday of each month with great eats, good vibes, and local entertainment! https://boynton-beach.org/calendar.aspx?EID=2299",
-          "es": "¡Comienza tu fin de semana con diversión familiar en Primer Viernes @ 5! Disfruta una noche llena de deliciosos food trucks, música en vivo y un vibrante ambiente comunitario en el Centro de Boynton Beach. ¡Trae a toda la familia y celebra el primer viernes de cada mes con excelente comida, buenas vibras y entretenimiento local! https://boynton-beach.org/calendar.aspx?EID=2299",
-          "pt": "Comece seu fim de semana com diversão para toda a família no Primeiro Sexta @ 5! Aproveite uma noite repleta de deliciosos food trucks, música ao vivo e uma atmosfera comunitária vibrante no Centro de Boynton Beach. Traga toda a família e celebre o primeiro sexta de cada mês com ótima comida, boas vibrações e entretenimento local! https://boynton-beach.org/calendar.aspx?EID=2299",
-          "fr": "Commencez votre fin de semaine avec du plaisir en famille au Premier Vendredi @ 5 ! Profitez d'une soirée remplie de délicieux food trucks, de musique live et d'une atmosphère communautaire vibrante au centre-ville de Boynton Beach. Amenez toute la famille et célébrez le premier vendredi de chaque mois avec une excellente nourriture, de bonnes vibrations et du divertissement local ! https://boynton-beach.org/calendar.aspx?EID=2299"
-        },
-        "source": "Boynton Beach",
-        "category": "music"
-      },
-      {
         "id": "rss_1789574419665_9c5p",
         "title": {
           "en": "Celebrate National Vodka Day at Ten Palms Gulfstream Park Sunday 10/4/26",
@@ -2387,58 +2337,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1789830900163_ed2v",
-        "title": {
-          "en": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR",
-          "es": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR",
-          "pt": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR",
-          "fr": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR"
-        },
-        "date": "2026-10-02",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fkarol-g-viajando-por-el-mundo-miami-florida-10-02-2026%2Fevent%2F0D006494907D6BCB&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/aae/d27e184b-9f69-4963-9027-d3b5572a4aae_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 19:00 · Hard Rock Stadium",
-          "es": "Música · Latino · Comienza a las 19:00 · Hard Rock Stadium",
-          "pt": "Música · Latino · Começa às 19:00 · Hard Rock Stadium",
-          "fr": "Musique · Latin · Commence à 19:00 · Hard Rock Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1789830900163_y39r",
-        "title": {
-          "en": "Ziggy Marley and Gov't Mule",
-          "es": "Ziggy Marley y Gov't Mule",
-          "pt": "Ziggy Marley e Gov't Mule",
-          "fr": "Ziggy Marley et Gov't Mule"
-        },
-        "date": "2026-10-02",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fziggy-marley-and-govt-mule-hollywood-florida-10-02-2026%2Fevent%2F0D0064BBC555A70B&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/bc2/7f586991-1522-4471-88de-e1d4f13bfbc2_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Reggae · Starts 19:00 · Hard Rock Live",
-          "es": "Música · Reggae · Comienza a las 19:00 · Hard Rock Live",
-          "pt": "Música · Reggae · Começa às 19:00 · Hard Rock Live",
-          "fr": "Musique · Reggae · Commence à 19:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
         "id": "rss_1789917582376_tznn",
         "title": {
           "en": "Acqualina Resort To Host 31st Annual “I Have A Dream” Foundation Miami Gala 10/29/26",
@@ -2539,84 +2437,6 @@
         "lat": 25.9496322,
         "lng": -80.1351748,
         "category": "arts"
-      },
-      {
-        "id": "tm_1789917582924_eq9d",
-        "title": {
-          "en": "Gimme Gimme Disco in Miami",
-          "es": "Gimme Gimme Disco en Miami",
-          "pt": "Gimme Gimme Disco em Miami",
-          "fr": "Gimme Gimme Disco à Miami"
-        },
-        "date": "2026-10-02",
-        "venue": "Lincoln's Beard",
-        "address": "7360 SW 41st St. , Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fgimme-gimme-disco-in-miami-lincolns-beard-tickets%2F14274384&utm_medium=affiliate",
-        "free": true,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/118/4eb4c022-ae5b-49b0-8875-3991a9baa118_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 20:00 · Lincoln's Beard",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier comprador de entrada que no presente una identificación válida que demuestre que tiene al menos 21 años no será admitido a este evento y no será elegible para reembolso. · Comienza 20:00 · Lincoln's Beard",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer comprador de ingresso que não apresentar uma identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 20:00 · Lincoln's Beard",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Débute 20:00 · Lincoln's Beard"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.7321134,
-        "lng": -80.3143626
-      },
-      {
-        "id": "tm_1789917582924_pjqa",
-        "title": {
-          "en": "Club 90's Presents 2000's Night",
-          "es": "Club 90's Presenta Noche de los 2000",
-          "pt": "Club 90's Apresenta Noite dos Anos 2000",
-          "fr": "Club 90's Présente Soirée des Années 2000"
-        },
-        "date": "2026-10-02",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fclub-90s-presents-2000s-night-ft-lauderdale-florida-10-02-2026%2Fevent%2F0D0065051A40E1FB&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/08f/dfb74e4a-95f6-46fd-bdb0-c699706e708f_1011401_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Club 90's presents 2000's Night will be coming to Revolution Live on Friday, October 2nd. This event is 18+. Doors open at 9pm. Show starts at 10pm. All support acts are subject to change without notice. A massive party celebrating the best music, fashion, nostalgia, and anthems of the 2000s with huge synced visuals all night long. · Starts 21:00 · Revolution Live",
-          "es": "Club 90's presenta Noche de los 2000 que vendrá a Revolution Live el viernes 2 de octubre. Este evento es 18+. Las puertas se abren a las 21:00. El show comienza a las 22:00. Todos los actos de apoyo están sujetos a cambios sin previo aviso. Una fiesta masiva celebrando la mejor música, moda, nostalgia e himnos de los 2000 con enormes visuales sincronizados toda la noche. · Comienza 21:00 · Revolution Live",
-          "pt": "Club 90's apresenta Noite dos Anos 2000 que virá para Revolution Live na sexta-feira, 2 de outubro. Este evento é 18+. As portas abrem às 21:00. O show começa às 22:00. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. Uma festa em massa celebrando a melhor música, moda, nostalgia e hinos dos anos 2000 com visuais sincronizados enormes a noite toda. · Começa 21:00 · Revolution Live",
-          "fr": "Club 90's présente Soirée des Années 2000 qui arrivera à Revolution Live le vendredi 2 octobre. Cet événement est 18+. Les portes ouvrent à 21:00. Le spectacle commence à 22:00. Tous les actes de soutien sont sujets à changement sans préavis. Une fête massive célébrant la meilleure musique, la mode, la nostalgie et les hymnes des années 2000 avec d'énormes visuels synchronisés toute la nuit. · Débute 21:00 · Revolution Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1789917582924_mgdk",
-        "title": {
-          "en": "PartyNextDoor",
-          "es": "PartyNextDoor",
-          "pt": "PartyNextDoor",
-          "fr": "PartyNextDoor"
-        },
-        "date": "2026-10-02",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fpartynextdoor-liv-nightclub-miami-tickets%2F14329684&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/91c/f79af9b3-6d41-46e3-83d7-d69d86fbf91c_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier comprador de entrada que no presente una identificación válida que demuestre que tiene al menos 21 años no será admitido a este evento y no será elegible para reembolso. · Comienza 23:30 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer comprador de ingresso que não apresentar uma identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Débute 23:30 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
       },
       {
         "id": "tm_1789917582924_lz0c",
@@ -3111,32 +2931,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1790266998146_6n9k",
-        "title": {
-          "en": "Salsa Night Hosted by Salsa Lovers 10/2/26",
-          "es": "Noche de Salsa organizada por Salsa Lovers 2/10/26",
-          "pt": "Noite de Salsa organizada por Salsa Lovers 2/10/26",
-          "fr": "Soirée Salsa organisée par Salsa Lovers 2/10/26"
-        },
-        "date": "2026-10-02",
-        "venue": "InterContinental Miami",
-        "address": "100 Chopin Plaza, Miami, Florida, 33131",
-        "url": "https://www.soulofmiami.org/2026/09/23/salsa-night-hosted-by-salsa-lovers-10-2-26/",
-        "free": false,
-        "price": "$15",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/noche-de-artes1-350x243.jpeg",
-        "description": {
-          "en": "Dress to impress, grab your dancing shoes and get ready for an unforgettable night with non-stop salsa dancing",
-          "es": "Vístete para impresionar, coge tus zapatos de baile y prepárate para una noche inolvidable con salsa sin parar",
-          "pt": "Vista-se para impressionar, pegue seus sapatos de dança e prepare-se para uma noite inesquecível com salsa o tempo todo",
-          "fr": "Habillez-vous pour impressionner, enfilez vos chaussures de danse et préparez-vous pour une soirée inoubliable avec de la salsa non-stop"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.772449,
-        "lng": -80.1854687,
-        "category": "community"
-      },
-      {
         "id": "rss_1790353431972_uj9q",
         "title": {
           "en": "Queen Symphony Sensation Miami 3/2/27",
@@ -3387,84 +3181,6 @@
         "lat": 26.1368152,
         "lng": -80.1213532,
         "category": "nightlife"
-      },
-      {
-        "id": "tm_1790525847162_9how",
-        "title": {
-          "en": "Courtside Cardshow Miami",
-          "es": "Courtside Cardshow Miami",
-          "pt": "Courtside Cardshow Miami",
-          "fr": "Courtside Cardshow Miami"
-        },
-        "date": "2026-10-02",
-        "venue": "James L Knight Center Riverfront Hall",
-        "address": "400 SE 2nd Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcourtside-cardshow-miami-miami-florida-10-02-2026%2Fevent%2F0D0064A6D96A25F7&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/51e/b15c1a66-c3d3-48f2-afb2-bc22b81a151e_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Courtside Cardshow Miami October 2-4, 2026 Miami, Florida Sports Cards Pokemon TCG The BIGGEST CARD SHOW IN FLORIDA returns bigger than ever. Courtside Cardshow Miami is expanding from a 2-day show to a 3-day experience, bringing together 350+ tables and Americas top dealers in one premier, oceanfront venue. This is where serious collectors, investors, and enthusiasts come to buy, sell, and trade ",
-          "es": "Courtside Cardshow Miami 2-4 de octubre de 2026 Miami, Florida. Tarjetas deportivas, Pokémon TCG. El MAYOR ESPECTÁCULO DE TARJETAS DE FLORIDA regresa más grande que nunca. Courtside Cardshow Miami se expande de un espectáculo de 2 días a una experiencia de 3 días, reuniendo más de 350 mesas y los principales distribuidores de América en un único lugar oceanfront de clase mundial. Aquí es donde coleccionistas serios, inversores y entusiastas vienen a comprar, vender e intercambiar.",
-          "pt": "Courtside Cardshow Miami 2-4 de outubro de 2026 Miami, Florida. Cartões esportivos, Pokémon TCG. O MAIOR SHOW DE CARTÕES DA FLÓRIDA retorna maior do que nunca. Courtside Cardshow Miami está se expandindo de um show de 2 dias para uma experiência de 3 dias, reunindo mais de 350 mesas e os principais revendedores da América em um único local à beira-mar de classe mundial. É aqui que colecionadores sérios, investidores e entusiastas vêm para comprar, vender e negociar.",
-          "fr": "Courtside Cardshow Miami 2-4 octobre 2026 Miami, Floride. Cartes de sport, Pokémon TCG. Le PLUS GRAND SALON DE CARTES DE FLORIDE revient plus grand que jamais. Courtside Cardshow Miami passe d'un événement de 2 jours à une expérience de 3 jours, réunissant plus de 350 tables et les principaux distributeurs d'Amérique en un seul lieu haut de gamme en bord de mer. C'est ici que les collectionneurs sérieux, les investisseurs et les passionnés viennent acheter, vendre et échanger."
-        },
-        "source": "Ticketmaster",
-        "lat": 25.7707756,
-        "lng": -80.1901174,
-        "category": "music"
-      },
-      {
-        "id": "tm_1790525847162_wfr3",
-        "title": {
-          "en": "Pippin",
-          "es": "Pippin",
-          "pt": "Pippin",
-          "fr": "Pippin"
-        },
-        "date": "2026-10-02",
-        "venue": "Rose & Alfred Miniaci Performing Arts Center",
-        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpippin-ft-lauderdale-florida-10-02-2026%2Fevent%2F0D0064E6AB6F7A7E&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/11f/fba364d4-e1c6-4fa7-bfb4-8444e91ef11f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "PG-13, some material may be inappropriate for children under 13. There's magic to do when a prince learns the true meaning of glory, love and war in Stephen Schwartz iconic and unforgettable musical masterpiece. With an infectiously unforgettable score from four-time Grammy winer, three-time Oscar winner and musical theatre giant, Stephen Shwartz, this magical musical as performed by our talented ",
-          "es": "PG-13, algunos contenidos pueden no ser apropiados para menores de 13 años. Hay magia que hacer cuando un príncipe aprende el verdadero significado de la gloria, el amor y la guerra en la obra maestra musical icónica e inolvidable de Stephen Schwartz. Con una partitura contagiosamente memorable de Stephen Schwartz, ganador de cuatro Grammy, tres veces ganador del Oscar y gigante del teatro musical, este musical mágico es interpretado por nuestro talentoso elenco.",
-          "pt": "PG-13, alguns conteúdos podem ser inadequados para menores de 13 anos. Há magia a fazer quando um príncipe aprende o verdadeiro significado da glória, do amor e da guerra na obra-prima musical icônica e inesquecível de Stephen Schwartz. Com uma partitura infecciosamente memorável de Stephen Schwartz, ganhador de quatro Grammy, três vezes vencedor do Oscar e gigante do teatro musical, este musical mágico é interpretado pelo nosso talentoso elenco.",
-          "fr": "PG-13, certains contenus peuvent être inappropriés pour les enfants de moins de 13 ans. Il y a de la magie à faire quand un prince apprend le vrai sens de la gloire, de l'amour et de la guerre dans le chef-d'œuvre musical emblématique et inoubliable de Stephen Schwartz. Avec une partition contagieusement mémorable de Stephen Schwartz, quatre fois lauréat du Grammy, trois fois gagnant de l'Oscar et géant du théâtre musical, cette comédie musicale magique est interprétée par notre talentueux ensemble."
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.0884017,
-        "lng": -80.2461624
-      },
-      {
-        "id": "tm_1790525847162_vd1h",
-        "title": {
-          "en": "DeathMatch - Competitive Improv Show",
-          "es": "DeathMatch - Espectáculo de Improvisación Competitiva",
-          "pt": "DeathMatch - Show de Improvisação Competitiva",
-          "fr": "DeathMatch - Spectacle d'Improvisation Compétitif"
-        },
-        "date": "2026-10-02",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdeathmatch-competitive-improv-just-the-funny-tickets%2F14327474&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "DeathMatch - Short-Form Improv Comedy in Miami Two teams enter - one team wins! Two teams of improvisors complete in an all out comedy brawl performing fast-paced improv games completing for your laughs. Who wins? You decide! This show features members of our award-winning JTF cast and invited alums and improv celebrity performers. Tickets are PER PERSON for this show. We will seat parties togethe",
-          "es": "DeathMatch - Comedia de Improvisación de Forma Corta en Miami Dos equipos entran - ¡un equipo gana! Dos equipos de improvisadores compiten en una batalla de comedia total realizando juegos de improvisación de ritmo rápido compitiendo por tus risas. ¿Quién gana? ¡Tú decides! Este espectáculo presenta miembros de nuestro elenco ganador de premios JTF e improvisadores invitados y artistas de celebridad de improvisación. Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos",
-          "pt": "DeathMatch - Comédia de Improvisação de Forma Curta em Miami Dois times entram - um time vence! Dois times de improvisadores competem em uma batalha de comédia total realizando jogos de improvisação de ritmo acelerado competindo pelas suas risadas. Quem vence? Você decide! Este show apresenta membros de nosso elenco vencedor de prêmios JTF e improvisadores convidados e artistas celebridades de improvisação. Os ingressos são POR PESSOA para este show. Colocaremos os grupos juntos",
-          "fr": "DeathMatch - Comédie d'Improvisation de Forme Courte à Miami Deux équipes entrent - une équipe gagne ! Deux équipes d'improvisateurs s'affrontent dans une bataille de comédie totale en réalisant des jeux d'improvisation rapides en compétition pour vos rires. Qui gagne ? Vous décidez ! Ce spectacle présente des membres de notre distribution JTF primée et des improvisateurs invités et des artistes célébrités de l'improvisation. Les billets sont PAR PERSONNE pour ce spectacle. Nous placerons les groupes ensemble"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.750417,
-        "lng": -80.244412,
-        "category": "comedy"
       },
       {
         "id": "tm_1790525847162_y1sx",
@@ -3877,30 +3593,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1790703075146_b9l5",
-        "title": {
-          "en": "Blood Feast Hard Techno Festival 10/2/26",
-          "es": "Festival Blood Feast Hard Techno 10/2/26",
-          "pt": "Festival Blood Feast Hard Techno 10/2/26",
-          "fr": "Festival Blood Feast Hard Techno 10/2/26"
-        },
-        "date": "2026-10-02",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/09/28/blood-feast-hard-techno-festival-10-2-26/",
-        "free": false,
-        "price": "$30",
-        "image": "",
-        "description": {
-          "en": "and up Blood Feast brings a festival-style hard techno experience to Casa Nube Wynwood",
-          "es": "Blood Feast trae una experiencia de festival de hard techno a Casa Nube Wynwood",
-          "pt": "Blood Feast traz uma experiência de festival de hard techno para Casa Nube Wynwood",
-          "fr": "Blood Feast apporte une expérience de festival de hard techno à Casa Nube Wynwood"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1790789426209_ytes",
         "title": {
           "en": "Free Beau Monde Pilates x Padel X Summer Club on Lincoln Road 10/10/26",
@@ -4077,30 +3769,6 @@
         "lng": -80.374802
       },
       {
-        "id": "rss_1790961630257_2knj",
-        "title": {
-          "en": "Pinecrest Gardens 2026-2027 music season is fan (and peacock) approved",
-          "es": "La temporada musical 2026-2027 de Pinecrest Gardens es aprobada (por fanáticos y pavos reales)",
-          "pt": "A temporada musical 2026-2027 do Pinecrest Gardens é aprovada (por fãs e pavões)",
-          "fr": "La saison musicale 2026-2027 de Pinecrest Gardens est approuvée (par les fans et les paons)"
-        },
-        "date": "2026-10-02",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/music/pinecrest-gardens-2026-2027-music-season-is-fan-and-peacock-approved-40589023/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/10/Banyan-Bowl-Courtesy-of-Pinecrest-Gardens-.jpeg",
-        "description": {
-          "en": "The botanic oasis’s amphitheater hosts genre-defying performances of jazz, Latin, pop, progressive, and more beginning October 24.",
-          "es": "El anfiteatro del oasis botánico presenta actuaciones sin género que van desde jazz, latino, pop, progresivo y más comenzando el 24 de octubre.",
-          "pt": "O anfiteatro do oásis botânico apresenta apresentações que transgridem gêneros de jazz, latino, pop, progressivo e muito mais começando em 24 de outubro.",
-          "fr": "L'amphithéâtre de l'oasis botanique accueille des performances transcendant les genres incluant le jazz, le latin, la pop, le progressif et bien d'autres à partir du 24 octobre."
-        },
-        "source": "Miami New Times",
-        "category": "music"
-      },
-      {
         "id": "rss_1790961630257_imc1",
         "title": {
           "en": "An Evening in Miami Beach Dinner Series with South Beach Seafood Festival 10/22/26",
@@ -4223,32 +3891,6 @@
         "category": "nightlife"
       },
       {
-        "id": "tm_1790961631021_8prg",
-        "title": {
-          "en": "Buena Vista Social Club (Touring)",
-          "es": "Buena Vista Social Club (Gira)",
-          "pt": "Buena Vista Social Club (Turnê)",
-          "fr": "Buena Vista Social Club (Tournée)"
-        },
-        "date": "2026-10-02",
-        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
-        "address": "1444 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-NGU&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Theatre · Starts 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "es": "Artes y Teatro · Teatro · Comienza 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "pt": "Artes e Teatro · Teatro · Começa 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "fr": "Arts et Théâtre · Théâtre · Commence 20:00 · Ziff Ballet Opera House-Adrienne Arsht PAC"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.784901,
-        "lng": -80.189598
-      },
-      {
         "id": "tm_1790961631021_hbqh",
         "title": {
           "en": "Fortune Feimster: Takin' Care of Biscuits Comedy Tour",
@@ -4351,6 +3993,264 @@
         "category": "music",
         "lat": 25.792917,
         "lng": -80.13314
+      },
+      {
+        "id": "tm_1791041854916_t9gm",
+        "title": {
+          "en": "Buena Vista Social Club (Touring)",
+          "es": "Buena Vista Social Club (Gira)",
+          "pt": "Buena Vista Social Club (Turnê)",
+          "fr": "Buena Vista Social Club (Tournée)"
+        },
+        "date": "2026-10-03",
+        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-NGz&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Theatre · Starts 14:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "es": "Artes y Teatro · Teatro · Comienza a las 14:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "pt": "Artes e Teatro · Teatro · Começa às 14:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "fr": "Arts et Théâtre · Théâtre · Commence à 14:00 · Ziff Ballet Opera House-Adrienne Arsht PAC"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.784901,
+        "lng": -80.189598
+      },
+      {
+        "id": "tm_1791041854916_b91a",
+        "title": {
+          "en": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR",
+          "es": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR",
+          "pt": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR",
+          "fr": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR"
+        },
+        "date": "2026-10-03",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fkarol-g-viajando-por-el-mundo-miami-florida-10-03-2026%2Fevent%2F0D00649502030D29&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/aae/d27e184b-9f69-4963-9027-d3b5572a4aae_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Latin · Starts 19:00 · Hard Rock Stadium",
+          "es": "Música · Latino · Comienza a las 19:00 · Hard Rock Stadium",
+          "pt": "Música · Latino · Começa às 19:00 · Hard Rock Stadium",
+          "fr": "Musique · Latin · Commence à 19:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1791041854916_59qb",
+        "title": {
+          "en": "Pippin",
+          "es": "Pippin",
+          "pt": "Pippin",
+          "fr": "Pippin"
+        },
+        "date": "2026-10-03",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpippin-ft-lauderdale-florida-10-03-2026%2Fevent%2F0D0064E6AB747A8A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/11f/fba364d4-e1c6-4fa7-bfb4-8444e91ef11f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "PG-13, some material may be inappropriate for children under 13. There's magic to do when a prince learns the true meaning of glory, love and war in Stephen Schwartz iconic and unforgettable musical masterpiece. With an infectiously unforgettable score from four-time Grammy winer, three-time Oscar winner and musical theatre giant, Stephen Shwartz, this magical musical as performed by our talented ",
+          "es": "PG-13, algún material puede no ser apropiado para menores de 13 años. Hay magia que hacer cuando un príncipe aprende el verdadero significado de gloria, amor y guerra en la obra maestra icónica e inolvidable de Stephen Schwartz. Con una partitura pegadiza e inolvidable de Stephen Schwartz, ganador de cuatro premios Grammy, tres premios Oscar y gigante del teatro musical, este musical mágico tal como lo interpretan nuestros talentosos",
+          "pt": "PG-13, algum material pode ser inapropriado para menores de 13 anos. Há magia a fazer quando um príncipe aprende o verdadeiro significado de glória, amor e guerra na obra-prima icônica e inesquecível de Stephen Schwartz. Com uma trilha sonora infecciosa e inesquecível de Stephen Schwartz, vencedor de quatro prêmios Grammy, três prêmios Oscar e gigante do teatro musical, este musical mágico conforme interpretado pelos nossos talentosos",
+          "fr": "PG-13, certains éléments peuvent être inadaptés aux enfants de moins de 13 ans. Il y a de la magie à faire quand un prince apprend le vrai sens de la gloire, l'amour et la guerre dans le chef-d'œuvre iconique et inoubliable de Stephen Schwartz. Avec une partition contagieuse et inoubliable de Stephen Schwartz, quatre fois lauréat du Grammy, trois fois lauréat de l'Oscar et géant du théâtre musical, cette comédie musicale magique telle qu'interprétée par nos talentueux"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.0884017,
+        "lng": -80.2461624
+      },
+      {
+        "id": "tm_1791041854916_35mz",
+        "title": {
+          "en": "Courtside Cardshow Miami",
+          "es": "Courtside Cardshow Miami",
+          "pt": "Courtside Cardshow Miami",
+          "fr": "Courtside Cardshow Miami"
+        },
+        "date": "2026-10-04",
+        "venue": "James L Knight Center Riverfront Hall",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcourtside-cardshow-miami-miami-florida-10-04-2026%2Fevent%2F0D0064A6D96E2622&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/51e/b15c1a66-c3d3-48f2-afb2-bc22b81a151e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Courtside Cardshow Miami October 2-4, 2026 Miami, Florida Sports Cards Pokemon TCG The BIGGEST CARD SHOW IN FLORIDA returns bigger than ever. Courtside Cardshow Miami is expanding from a 2-day show to a 3-day experience, bringing together 350+ tables and Americas top dealers in one premier, oceanfront venue. This is where serious collectors, investors, and enthusiasts come to buy, sell, and trade ",
+          "es": "Courtside Cardshow Miami 2-4 de octubre de 2026 Miami, Florida Tarjetas deportivas Pokemon TCG LA MAYOR FERIA DE TARJETAS EN FLORIDA regresa más grande que nunca. Courtside Cardshow Miami se expande de una feria de 2 días a una experiencia de 3 días, reuniendo más de 350 mesas y los principales distribuidores de América en una sede oceanfront de primer nivel. Aquí es donde coleccionistas serios, inversores y entusiastas vienen a comprar, vender e intercambiar",
+          "pt": "Courtside Cardshow Miami 2-4 de outubro de 2026 Miami, Flórida Cartões esportivos Pokemon TCG A MAIOR FEIRA DE CARTAS NA FLÓRIDA retorna maior do que nunca. Courtside Cardshow Miami se expande de um show de 2 dias para uma experiência de 3 dias, reunindo mais de 350 mesas e os principais revendedores da América em um local à beira-mar de primeira qualidade. É aqui que colecionadores sérios, investidores e entusiastas vêm para comprar, vender e trocar",
+          "fr": "Courtside Cardshow Miami 2-4 octobre 2026 Miami, Floride Cartes de sport Pokemon TCG LE PLUS GRAND SALON DE CARTES DE FLORIDE revient plus grand que jamais. Courtside Cardshow Miami passe d'un salon de 2 jours à une expérience de 3 jours, rassemblant plus de 350 tables et les principaux distributeurs d'Amérique en un seul lieu de prestige en bord de mer. C'est ici que les collectionneurs sérieux, les investisseurs et les enthousiastes viennent acheter, vendre et échanger"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.7707756,
+        "lng": -80.1901174,
+        "category": "music"
+      },
+      {
+        "id": "tm_1791041854916_fjvc",
+        "title": {
+          "en": "Breast Cancer's A Drag - Beauty, Bravery & Bold Entertainment",
+          "es": "Cáncer de Mama es un Drag - Belleza, Valentía y Entretenimiento Audaz",
+          "pt": "Câncer de Mama é um Drag - Beleza, Coragem e Entretenimento Ousado",
+          "fr": "Le Cancer du Sein c'est un Drag - Beauté, Courage et Divertissement Audacieux"
+        },
+        "date": "2026-10-09",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbreast-cancers-a-drag-beauty-bravery-ft-lauderdale-florida-10-09-2026%2Fevent%2F0D0064FBEFBC969C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/07d/fda8c807-42eb-4b81-9f16-f3a8367e107d_106371_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Parking is available in the Alvin Sherman Library parking garage using PayByPhone app or pay at booth. · Starts 19:00 · Rose & Alfred Miniaci Performing Arts Center",
+          "es": "El estacionamiento está disponible en el garaje de estacionamiento de la Biblioteca Alvin Sherman usando la aplicación PayByPhone o pagando en la caseta. · Comienza a las 19:00 · Rose & Alfred Miniaci Performing Arts Center",
+          "pt": "Estacionamento disponível na garagem de estacionamento da Biblioteca Alvin Sherman usando o aplicativo PayByPhone ou pagando no guichê. · Começa às 19:00 · Rose & Alfred Miniaci Performing Arts Center",
+          "fr": "Le stationnement est disponible au garage de stationnement de la Bibliothèque Alvin Sherman en utilisant l'application PayByPhone ou en payant au guichet. · Commence à 19:00 · Rose & Alfred Miniaci Performing Arts Center"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.0884017,
+        "lng": -80.2461624
+      },
+      {
+        "id": "tm_1791041854916_6jf7",
+        "title": {
+          "en": "Patti Smith",
+          "es": "Patti Smith",
+          "pt": "Patti Smith",
+          "fr": "Patti Smith"
+        },
+        "date": "2026-10-09",
+        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZ_Fg&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ec5/a3a8a9ab-2de0-439e-9348-54e4a540bec5_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "es": "Música · Rock · Comienza 19:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "pt": "Música · Rock · Começa 19:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "fr": "Musique · Rock · Commence 19:00 · Ziff Ballet Opera House-Adrienne Arsht PAC"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.784901,
+        "lng": -80.189598
+      },
+      {
+        "id": "tm_1791041854916_ktha",
+        "title": {
+          "en": "Trap Karaoke: Miami Beach",
+          "es": "Trap Karaoke: Miami Beach",
+          "pt": "Trap Karaoke: Miami Beach",
+          "fr": "Trap Karaoke: Miami Beach"
+        },
+        "date": "2026-10-09",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Ftrap-karaoke-miami-beach-tickets-ZWX24Y%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/64c/76cc8226-9c36-4d1a-b616-d5acc3fa564c_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Hip-Hop/Rap · Starts 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Música · Hip-Hop/Rap · Comienza 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "pt": "Música · Hip-Hop/Rap · Começa 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "fr": "Musique · Hip-Hop/Rap · Commence 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1791041854916_u2xn",
+        "title": {
+          "en": "Aziz Ansari: Hypothetical Tour",
+          "es": "Aziz Ansari: Hypothetical Tour",
+          "pt": "Aziz Ansari: Hypothetical Tour",
+          "fr": "Aziz Ansari: Hypothetical Tour"
+        },
+        "date": "2026-10-09",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Faziz-ansari-hypothetical-tour-hollywood-florida-10-09-2026%2Fevent%2F0D0064FFCB3B96E7&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/3f9/c644b0f2-8d68-4c2d-86ba-90151ef883f9_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Recommended for Ages 12 and Older · Starts 19:30 · Hard Rock Live",
+          "es": "Recomendado para mayores de 12 años · Comienza 19:30 · Hard Rock Live",
+          "pt": "Recomendado para maiores de 12 anos · Começa 19:30 · Hard Rock Live",
+          "fr": "Recommandé pour les 12 ans et plus · Commence 19:30 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1791041854916_xy4x",
+        "title": {
+          "en": "Ben Bankas",
+          "es": "Ben Bankas",
+          "pt": "Ben Bankas",
+          "fr": "Ben Bankas"
+        },
+        "date": "2026-10-09",
+        "venue": "Miami Improv",
+        "address": "3450 Northwest 83rd Ave, #224, Doral, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-b7d&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 19:30 · Miami Improv",
+          "es": "Comienza 19:30 · Miami Improv",
+          "pt": "Começa 19:30 · Miami Improv",
+          "fr": "Commence 19:30 · Miami Improv"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797899,
+        "lng": -80.307098,
+        "category": "comedy"
+      },
+      {
+        "id": "cp_1791041861053_ka03",
+        "title": {
+          "en": "First Friday @ 5",
+          "es": "First Friday @ 5",
+          "pt": "First Friday @ 5",
+          "fr": "First Friday @ 5"
+        },
+        "date": "2026-11-06",
+        "venue": "Centennial Park &  Amphitheater",
+        "address": "120 East Ocean Ave.  Boynton Beach FL 33435",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=30",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Kick off your weekend with family-friendly fun at First Friday @ 5! Enjoy an evening filled with delicious food trucks, live music, and a vibrant community atmosphere in Downtown Boynton Beach. Bring the whole family and celebrate the first Friday of each month with great eats, good vibes, and local entertainment! https://boynton-beach.org/calendar.aspx?EID=2300",
+          "es": "¡Comienza tu fin de semana con diversión familiar en First Friday @ 5! Disfruta una noche llena de deliciosos food trucks, música en vivo y un vibrante ambiente comunitario en el centro de Boynton Beach. ¡Trae a toda la familia y celebra el primer viernes de cada mes con excelente comida, buena onda y entretenimiento local! https://boynton-beach.org/calendar.aspx?EID=2300",
+          "pt": "Comece seu fim de semana com diversão em família no First Friday @ 5! Desfrute de uma noite cheia de deliciosos food trucks, música ao vivo e um vibrante ambiente comunitário no centro de Boynton Beach. Traga toda a família e celebre o primeiro sexta-feira de cada mês com ótima comida, boas vibrações e entretenimento local! https://boynton-beach.org/calendar.aspx?EID=2300",
+          "fr": "Lancez votre fin de semaine avec du plaisir en famille à First Friday @ 5 ! Profitez d'une soirée remplie de délicieux food trucks, de musique live et d'une atmosphère communautaire vibrante au centre-ville de Boynton Beach. Amenez toute la famille et célébrez le premier vendredi de chaque mois avec une excellente nourriture, de bonnes vibrations et du divertissement local ! https://boynton-beach.org/calendar.aspx?EID=2300"
+        },
+        "source": "Boynton Beach",
+        "category": "music"
       }
     ]
   },
@@ -5254,10 +5154,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-02T17:21:03.269Z",
+    "fetchedAt": "2026-10-03T15:38:11.948Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.368448b1a6f1f61afeb7695d27b68213b149a7e2.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.6678b2a0d24f754810f5240b7cfa102beafa0d84.001.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -5267,15 +5167,15 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...Through Saturday evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
-          "es": "* QUÉ...Corrientes de resaca peligrosas.\n\n* DÓNDE...Zona costera del Condado de Palm Beach, Zona costera del Condado de Broward y Zona costera del Condado de Miami Dade.\n\n* CUÁNDO...Hasta el sábado por la noche.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores alejándolos de la costa hacia aguas más profundas.",
-          "pt": "* O QUÊ...Correntes de retorno perigosas.\n\n* ONDE...Litoral do Condado de Palm Beach, Litoral do Condado de Broward e Litoral do Condado de Miami Dade.\n\n* QUANDO...Até sábado à noite.\n\n* IMPACTOS...As correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da costa em direção a águas mais profundas.",
-          "fr": "* QUOI...Courants de retour dangereux.\n\n* OÙ...Côtes du comté de Palm Beach, Côtes du comté de Broward et Côtes du comté de Miami Dade.\n\n* QUAND...Jusqu'à samedi soir.\n\n* IMPACTS...Les courants de retour peuvent emporter même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
+          "en": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...Through Sunday evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+          "es": "* QUÉ...Corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Palm Beach, Condado costero de Broward y Condado costero de Miami Dade.\n\n* CUÁNDO...Hasta el domingo por la noche.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores hacia aguas más profundas.",
+          "pt": "* O QUÊ...Correntes de retorno perigosas.\n\n* ONDE...Condado costeiro de Palm Beach, Condado costeiro de Broward e Condado costeiro de Miami Dade.\n\n* QUANDO...Até domingo à noite.\n\n* IMPACTOS...As correntes de retorno podem arrastar até mesmo os melhores nadadores para águas mais profundas.",
+          "fr": "* QUOI...Courants de retour dangereux.\n\n* OÙ...Comté côtier de Palm Beach, Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Jusqu'à dimanche soir.\n\n* IMPACTS...Les courants de retour peuvent emporter même les meilleurs nageurs vers les eaux plus profondes."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.368448b1a6f1f61afeb7695d27b68213b149a7e2.001.1",
-        "effectiveAt": "2026-10-02T11:55:00-04:00",
-        "expiresAt": "2026-10-03T10:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6678b2a0d24f754810f5240b7cfa102beafa0d84.001.1",
+        "effectiveAt": "2026-10-03T08:31:00-04:00",
+        "expiresAt": "2026-10-04T15:38:11.948Z"
       }
     ]
   }
