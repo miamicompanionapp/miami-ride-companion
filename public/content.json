@@ -1,32 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-05T20:08:44.025Z",
+    "lastUpdated": "2026-10-06T17:50:02.126Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-05T20:08:42.923Z",
+    "fetchedAt": "2026-10-06T17:50:01.340Z",
     "current": {
       "temp_f": 85,
-      "feels_f": 94,
+      "feels_f": 96,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 78,
+      "humidity": 75,
       "wind_mph": 7,
-      "rain_chance": 9,
-      "weathercode": 3
+      "rain_chance": 28,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-10-05",
+        "date": "2026-10-06",
         "high_f": 86,
-        "low_f": 78,
+        "low_f": 75,
         "weathercode": 3,
-        "rain_chance": 9,
+        "rain_chance": 28,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -35,37 +35,24 @@
         }
       },
       {
-        "date": "2026-10-06",
+        "date": "2026-10-07",
         "high_f": 85,
         "low_f": 75,
-        "weathercode": 53,
-        "rain_chance": 30,
+        "weathercode": 82,
+        "rain_chance": 31,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
-        "date": "2026-10-07",
-        "high_f": 86,
-        "low_f": 75,
-        "weathercode": 51,
-        "rain_chance": 80,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-10-08",
-        "high_f": 86,
-        "low_f": 81,
+        "high_f": 87,
+        "low_f": 75,
         "weathercode": 53,
-        "rain_chance": 64,
+        "rain_chance": 75,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -75,10 +62,23 @@
       },
       {
         "date": "2026-10-09",
-        "high_f": 86,
+        "high_f": 87,
         "low_f": 82,
+        "weathercode": 53,
+        "rain_chance": 36,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-10-10",
+        "high_f": 85,
+        "low_f": 81,
         "weathercode": 95,
-        "rain_chance": 26,
+        "rain_chance": 64,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,50 +89,68 @@
     ],
     "hourly": [
       {
-        "hour": "16:00",
+        "hour": "13:00",
         "temp_f": 85,
-        "weathercode": 3,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 85,
+        "weathercode": 1,
         "rain_chance": 2
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 85,
+        "weathercode": 1,
+        "rain_chance": 3
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 84,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "17:00",
         "temp_f": 83,
-        "weathercode": 2,
-        "rain_chance": 2
+        "weathercode": 1,
+        "rain_chance": 5
       },
       {
         "hour": "18:00",
         "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 3
+        "weathercode": 1,
+        "rain_chance": 11
       },
       {
         "hour": "19:00",
         "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 17
       },
       {
         "hour": "20:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 28
       },
       {
         "hour": "21:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 26
       },
       {
         "hour": "22:00",
         "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 10
       },
       {
         "hour": "23:00",
-        "temp_f": 78,
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 9
       },
@@ -140,97 +158,79 @@
         "hour": "00:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 7
       },
       {
         "hour": "01:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 5
       },
       {
         "hour": "02:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 5
       },
       {
         "hour": "03:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 5
       },
       {
         "hour": "04:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 6
       },
       {
         "hour": "05:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 5
+        "temp_f": 77,
+        "weathercode": 2,
+        "rain_chance": 8
       },
       {
         "hour": "06:00",
-        "temp_f": 75,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 9
       },
       {
         "hour": "07:00",
-        "temp_f": 75,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 9
       },
       {
         "hour": "08:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 9
       },
       {
         "hour": "09:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "10:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 84,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 85,
-        "weathercode": 2,
         "rain_chance": 7
       },
       {
-        "hour": "15:00",
-        "temp_f": 84,
+        "hour": "10:00",
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 5
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 6
       }
     ]
   },
@@ -1695,32 +1695,6 @@
         "category": "comedy"
       },
       {
-        "id": "rss_1787575173885_1hz0",
-        "title": {
-          "en": "Un-Birthday Party: Neighbors 4 Neighbors Celebrates 34 Years at Bar Betty 10/5/26",
-          "es": "Fiesta de No-Cumpleaños: Neighbors 4 Neighbors Celebra 34 Años en Bar Betty 10/5/26",
-          "pt": "Festa de Não-Aniversário: Neighbors 4 Neighbors Celebra 34 Anos no Bar Betty 10/5/26",
-          "fr": "Fête de Non-Anniversaire: Neighbors 4 Neighbors Célèbre 34 Ans au Bar Betty 10/5/26"
-        },
-        "date": "2026-10-05",
-        "venue": "Bar Betty at Sunness Supper Club",
-        "address": "2465 East Sunrise Boulevard, Fort Lauderdale, Florida, 33304",
-        "url": "https://www.soulofmiami.org/2026/08/23/un-birthday-party-neighbors-4-neighbors-celebrates-34-years-at-bar-betty-10-5-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/Un-Birthday-Flyer-Web-SM-350x453.jpg",
-        "description": {
-          "en": "the white rabbit to Bar Betty for",
-          "es": "el conejo blanco a Bar Betty para",
-          "pt": "o coelho branco para o Bar Betty para",
-          "fr": "le lapin blanc au Bar Betty pour"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1377642,
-        "lng": -80.1136025,
-        "category": "community"
-      },
-      {
         "id": "rss_1787661507987_pial",
         "title": {
           "en": "Made in Miami Kicks Off South Beach Seafood Festival at Phuc Yea 10/21/26",
@@ -2413,32 +2387,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1790012718457_63aa",
-        "title": {
-          "en": "Jonas Brothers: The Burning Up Tour All Over Again",
-          "es": "Jonas Brothers: The Burning Up Tour All Over Again",
-          "pt": "Jonas Brothers: The Burning Up Tour All Over Again",
-          "fr": "Jonas Brothers: The Burning Up Tour All Over Again"
-        },
-        "date": "2026-10-05",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjonas-brothers-the-burning-up-tour-miami-florida-10-05-2026%2Fevent%2F0D00650C15C53D08&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/378/809a1187-1545-43be-b5ab-e2d220621378_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 19:30 · Kaseya Center",
-          "es": "Música · Pop · Comienza 19:30 · Kaseya Center",
-          "pt": "Música · Pop · Começa 19:30 · Kaseya Center",
-          "fr": "Musique · Pop · Commence 19:30 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "rss_1790093383490_ogtm",
         "title": {
           "en": "Spooky Adventures: Monsters Unleashed 10/23/26",
@@ -2971,32 +2919,6 @@
         "lat": 25.7822233,
         "lng": -80.197696,
         "category": "community"
-      },
-      {
-        "id": "tm_1790622566691_e8kv",
-        "title": {
-          "en": "A Day Without Sunshine",
-          "es": "Un Día sin Sol",
-          "pt": "Um Dia sem Sol",
-          "fr": "Un Jour sans Soleil"
-        },
-        "date": "2026-10-05",
-        "venue": "Abdo New River Room at the Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fa-day-without-sunshine-ft-lauderdale-florida-10-05-2026%2Fevent%2F0D006521AAD5754D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/07d/fda8c807-42eb-4b81-9f16-f3a8367e107d_106371_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event contains adult language or content. This is a staged reading of a new play by Michael McKeever, Directed by Stuart Meltzer. In 1977 Miami, Florida, Dade County Commissioner Ruth Shack sponsored a pioneering ordinance banning discrimination against homosexuals. Over the next five months, a campaign led by singer Anita Bryant attempted to overturn the ruling. This battle transformed Ameri",
-          "es": "Este evento contiene lenguaje o contenido para adultos. Esta es una lectura en escena de una nueva obra de Michael McKeever, dirigida por Stuart Meltzer. En Miami, Florida en 1977, la Comisionada del Condado de Dade Ruth Shack patrocinó una ordenanza pionera que prohibía la discriminación contra homosexuales. Durante los siguientes cinco meses, una campaña liderada por la cantante Anita Bryant intentó revocar la decisión. Esta batalla transformó Ameri",
-          "pt": "Este evento contém linguagem ou conteúdo para adultos. Esta é uma leitura encenada de uma nova peça de Michael McKeever, dirigida por Stuart Meltzer. Em Miami, Flórida em 1977, a Comissionária do Condado de Dade Ruth Shack patrocinou uma ordenança pioneira que proibia a discriminação contra homossexuais. Nos próximos cinco meses, uma campanha liderada pela cantora Anita Bryant tentou anular a decisão. Esta batalha transformou Ameri",
-          "fr": "Cet événement contient du langage ou du contenu pour adultes. Ceci est une lecture sur scène d'une nouvelle pièce de Michael McKeever, dirigée par Stuart Meltzer. En 1977 à Miami, en Floride, la commissaire du comté de Dade Ruth Shack a parrainé une ordonnance pionnière interdisant la discrimination contre les homosexuels. Au cours des cinq mois suivants, une campagne dirigée par la chanteuse Anita Bryant a tenté d'annuler la décision. Cette bataille a transformé Ameri"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
       },
       {
         "id": "tm_1790622566691_4ni6",
@@ -3995,30 +3917,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1791230872724_aqu0",
-        "title": {
-          "en": "Tamarac offers festive Hispanic Heritage event with free entry",
-          "es": "Tamarac ofrece evento festivo de Herencia Hispana con entrada gratuita",
-          "pt": "Tamarac oferece evento festivo de Herança Hispânica com entrada gratuita",
-          "fr": "Tamarac propose un événement festif de patrimoine hispanique avec entrée gratuite"
-        },
-        "date": "2026-10-05",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/tamarac-offers-hispanic-heritage-event-with-free-entry/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/09/hispanic-heritage-tamarac-parks-and-recreation-.png",
-        "description": {
-          "en": "South Florida on the Cheap Delight in the tantalizing Latin flavors and rhythms at a free event in Tamarac. A Hispanic Heritage event event in Tamarac in 2026 is 6 p.m. to 9 p.m. Saturday,... Copyright South Florida on the Cheap. The post Tamarac offers festive Hispanic Heritage event with free entry appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Disfruta de los sabores y ritmos latinos tentadores en un evento gratuito en Tamarac. Un evento de Herencia Hispana en Tamarac en 2026 es de 6 p.m. a 9 p.m. sábado,... Copyright South Florida on the Cheap. El artículo Tamarac ofrece evento festivo de Herencia Hispana con entrada gratuita apareció primero en South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Delicie-se com os sabores e ritmos latinos tentadores em um evento gratuito em Tamarac. Um evento de Herança Hispânica em Tamarac em 2026 é das 18h às 21h sábado,... Copyright South Florida on the Cheap. O artigo Tamarac oferece evento festivo de Herança Hispânica com entrada gratuita apareceu primeiro em South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Délectez-vous des saveurs et des rythmes latins alléchants lors d'un événement gratuit à Tamarac. Un événement du patrimoine hispanique à Tamarac en 2026 se déroule de 18h à 21h samedi,... Copyright South Florida on the Cheap. L'article Tamarac propose un événement festif de patrimoine hispanique avec entrée gratuite est apparu en premier sur South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
         "id": "rss_1791230872724_byef",
         "title": {
           "en": "Fashion Without Filters – The Truth Behind the Industry (Live Filmed Panel Discussion) 10/9/26",
@@ -4323,6 +4221,134 @@
         },
         "source": "North Miami Beach",
         "category": "sports"
+      },
+      {
+        "id": "rss_1791308973308_ys0c",
+        "title": {
+          "en": "10th Annual Hair Peace & Hope 5K Run/Walk 10/24/26",
+          "es": "10ª Carrera/Caminata Anual Hair Peace & Hope 5K 10/24/26",
+          "pt": "10ª Corrida/Caminhada Anual Hair Peace & Hope 5K 10/24/26",
+          "fr": "10e Course/Marche Annuelle Hair Peace & Hope 5K 10/24/26"
+        },
+        "date": "2026-10-24",
+        "venue": "Miramar Regional Park",
+        "address": "16801 Miramar Pkwy, Miramar, Florida, 33027",
+        "url": "https://www.soulofmiami.org/2026/10/05/10th-annual-hair-peace-hope-5k-run-walk-10-24-26/",
+        "free": false,
+        "price": "$40",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/HPH-5K-Flyer-2026-JPG-350x457.jpg",
+        "description": {
+          "en": "Join Us for the 10th Annual Hair Peace & Hope 5K Run/Walk! 🏃‍♀️🎗️ South Florida",
+          "es": "¡Únete a nuestra 10ª Carrera/Caminata Anual Hair Peace & Hope 5K! 🏃‍♀️🎗️ Sur de Florida",
+          "pt": "Junte-se a nós na 10ª Corrida/Caminhada Anual Hair Peace & Hope 5K! 🏃‍♀️🎗️ Sul da Flórida",
+          "fr": "Rejoignez-nous pour la 10e Course/Marche Annuelle Hair Peace & Hope 5K! 🏃‍♀️🎗️ Sud de la Floride"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9783963,
+        "lng": -80.3654453,
+        "category": "sports"
+      },
+      {
+        "id": "rss_1791308973308_dn9j",
+        "title": {
+          "en": "Speed Dating Beyond Small Talk | Miami (Miami Beach) Speed Dating | Tantra Speed Date® 10/25/26",
+          "es": "Speed Dating Beyond Small Talk | Miami (Miami Beach) Speed Dating | Tantra Speed Date® 10/25/26",
+          "pt": "Speed Dating Beyond Small Talk | Miami (Miami Beach) Speed Dating | Tantra Speed Date® 10/25/26",
+          "fr": "Speed Dating Beyond Small Talk | Miami (Miami Beach) Speed Dating | Tantra Speed Date® 10/25/26"
+        },
+        "date": "2026-10-25",
+        "venue": "Synergy Yoga Center",
+        "address": "844 Alton Rd 2nd floor, Miami, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/05/speed-dating-beyond-small-talk-miami-miami-beach-speed-dating-tantra-speed-date-10-25-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/12-350x175.jpg",
+        "description": {
+          "en": "43.00 – USD 140.00 Try the",
+          "es": "43.00 – 140.00 USD Prueba el",
+          "pt": "43.00 – 140.00 USD Experimente o",
+          "fr": "43.00 – 140.00 USD Essayez le"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1791308973888_07gx",
+        "title": {
+          "en": "Sidepiece",
+          "es": "Sidepiece",
+          "pt": "Sidepiece",
+          "fr": "Sidepiece"
+        },
+        "date": "2026-10-10",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsidepiece-liv-nightclub-miami-tickets%2F14246084&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/3f2/d7d1d04d-5805-4963-a9d7-c8250dece3f2_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido a este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer portador de ingresso incapaz de apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1791308973888_jg74",
+        "title": {
+          "en": "Luxury & Suites: Miami Dolphins v Cincinnati Bengals",
+          "es": "Lujo & Suites: Miami Dolphins v Cincinnati Bengals",
+          "pt": "Luxo & Suites: Miami Dolphins v Cincinnati Bengals",
+          "fr": "Luxe & Suites: Miami Dolphins v Cincinnati Bengals"
+        },
+        "date": "2026-10-11",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fluxury-suites-miami-dolphins-v-cincinnati-miami-florida-10-11-2026%2Fevent%2F0D00646CE658155C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season · Starts 13:00 · Hard Rock Stadium",
+          "es": "Calendario Flexible: Tenga en cuenta que ciertos juegos están sujetos a programación flexible y la fecha y hora de esos juegos pueden cambiar de lo que se refleja actualmente en el calendario y lo que puede aparecer en la entrada. Para obtener más información detallada sobre los procedimientos de programación flexible de la NFL para la temporada 2026 de la NFL · Comienza 13:00 · Hard Rock Stadium",
+          "pt": "Cronograma Flexível: Por favor, esteja ciente de que certos jogos estão sujeitos a agendamento flexível e a data e hora desses jogos podem ser alteradas do que está atualmente refletido no cronograma e no que pode aparecer no ingresso. Para informações mais detalhadas sobre os procedimentos de agendamento flexível da NFL para a temporada 2026 da NFL · Começa 13:00 · Hard Rock Stadium",
+          "fr": "Calendrier Flexible: Veuillez noter que certains matchs sont sujets à un calendrier flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement reflété dans le calendrier et ce qui peut apparaître sur le billet. Pour plus d'informations détaillées sur les procédures de planification flexible de la NFL pour la saison 2026 de la NFL · Commence 13:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1791308973888_6ka7",
+        "title": {
+          "en": "Miami Dolphins v Cincinnati Bengals",
+          "es": "Miami Dolphins v Cincinnati Bengals",
+          "pt": "Miami Dolphins v Cincinnati Bengals",
+          "fr": "Miami Dolphins v Cincinnati Bengals"
+        },
+        "date": "2026-10-11",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-dolphins-v-cincinnati-bengals-miami-florida-10-11-2026%2Fevent%2F0D00646CE56D131E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season please visit: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
+          "es": "Calendario Flexible: Tenga en cuenta que ciertos juegos están sujetos a programación flexible y la fecha y hora de esos juegos pueden cambiar de lo que se refleja actualmente en el calendario y lo que puede aparecer en la entrada. Para obtener más información detallada sobre los procedimientos de programación flexible de la NFL para la temporada 2026 de la NFL, visite: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
+          "pt": "Cronograma Flexível: Por favor, esteja ciente de que certos jogos estão sujeitos a agendamento flexível e a data e hora desses jogos podem ser alteradas do que está atualmente refletido no cronograma e no que pode aparecer no ingresso. Para informações mais detalhadas sobre os procedimentos de agendamento flexível da NFL para a temporada 2026 da NFL, visite: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
+          "fr": "Calendrier Flexible: Veuillez noter que certains matchs sont sujets à un calendrier flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement reflété dans le calendrier et ce qui peut apparaître sur le billet. Pour plus d'informations détaillées sur les procédures de planification flexible de la NFL pour la saison 2026 de la NFL, veuillez visiter: https://www.nfl.com/ways-to-watch/flexible-scheduling-p"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
       }
     ]
   },
@@ -5226,7 +5252,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-05T20:08:42.923Z",
+    "fetchedAt": "2026-10-06T17:50:01.340Z",
     "items": [
       {
         "id": "beach_crandon-park-south",
@@ -5247,7 +5273,7 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-south",
         "effectiveAt": "2026-10-01",
-        "expiresAt": "2026-10-06T20:08:42.923Z"
+        "expiresAt": "2026-10-07T17:50:01.340Z"
       }
     ]
   }
