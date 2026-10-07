@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-06T17:50:02.126Z",
+    "lastUpdated": "2026-10-07T18:22:30.181Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-06T17:50:01.340Z",
+    "fetchedAt": "2026-10-07T18:22:25.001Z",
     "current": {
       "temp_f": 85,
-      "feels_f": 96,
+      "feels_f": 94,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 75,
-      "wind_mph": 7,
-      "rain_chance": 28,
+      "humidity": 82,
+      "wind_mph": 10,
+      "rain_chance": 43,
       "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-10-06",
-        "high_f": 86,
-        "low_f": 75,
-        "weathercode": 3,
-        "rain_chance": 28,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-10-07",
-        "high_f": 85,
-        "low_f": 75,
+        "high_f": 86,
+        "low_f": 77,
         "weathercode": 82,
-        "rain_chance": 31,
+        "rain_chance": 43,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -49,23 +36,36 @@
       },
       {
         "date": "2026-10-08",
-        "high_f": 87,
+        "high_f": 85,
         "low_f": 75,
-        "weathercode": 53,
-        "rain_chance": 75,
+        "weathercode": 3,
+        "rain_chance": 18,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-10-09",
         "high_f": 87,
-        "low_f": 82,
+        "low_f": 75,
+        "weathercode": 51,
+        "rain_chance": 45,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-10-10",
+        "high_f": 87,
+        "low_f": 84,
         "weathercode": 53,
-        "rain_chance": 36,
+        "rain_chance": 63,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -74,131 +74,125 @@
         }
       },
       {
-        "date": "2026-10-10",
-        "high_f": 85,
-        "low_f": 81,
-        "weathercode": 95,
-        "rain_chance": 64,
+        "date": "2026-10-11",
+        "high_f": 87,
+        "low_f": 84,
+        "weathercode": 3,
+        "rain_chance": 38,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "13:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
         "hour": "14:00",
         "temp_f": 85,
         "weathercode": 1,
-        "rain_chance": 2
+        "rain_chance": 9
       },
       {
         "hour": "15:00",
-        "temp_f": 85,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 84,
+        "weathercode": 2,
+        "rain_chance": 18
       },
       {
         "hour": "16:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 3
+        "temp_f": 80,
+        "weathercode": 51,
+        "rain_chance": 27
       },
       {
         "hour": "17:00",
-        "temp_f": 83,
-        "weathercode": 1,
-        "rain_chance": 5
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 82,
-        "weathercode": 1,
-        "rain_chance": 11
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 17
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 28
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 79,
+        "temp_f": 81,
         "weathercode": 3,
         "rain_chance": 26
       },
       {
-        "hour": "22:00",
-        "temp_f": 78,
+        "hour": "18:00",
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 10
+        "rain_chance": 37
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 77,
+        "weathercode": 82,
+        "rain_chance": 43
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 77,
+        "weathercode": 53,
+        "rain_chance": 38
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 32
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 25
       },
       {
         "hour": "23:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 13
       },
       {
         "hour": "00:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 10
       },
       {
         "hour": "01:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 5
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 6
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 77,
-        "weathercode": 2,
-        "rain_chance": 8
-      },
-      {
-        "hour": "06:00",
         "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 9
       },
       {
+        "hour": "02:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 5
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 6
+      },
+      {
         "hour": "07:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
         "rain_chance": 9
       },
@@ -206,31 +200,37 @@
         "hour": "08:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 12
       },
       {
         "hour": "09:00",
-        "temp_f": 79,
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 10
       },
       {
         "hour": "10:00",
-        "temp_f": 80,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 8
       },
       {
         "hour": "11:00",
-        "temp_f": 82,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 10
       },
       {
         "hour": "12:00",
-        "temp_f": 85,
+        "temp_f": 84,
+        "weathercode": 2,
+        "rain_chance": 17
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 84,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 17
       }
     ]
   },
@@ -2337,56 +2337,6 @@
         "category": "arts"
       },
       {
-        "id": "rss_1790012717803_5m9e",
-        "title": {
-          "en": "Bodegas Emilio Moro Meet the Winemaker Dinner at Sunness Supper Club 10/6/26",
-          "es": "Cena Conoce al Viverista de Bodegas Emilio Moro en Sunness Supper Club 10/6/26",
-          "pt": "Jantar Conheça o Sommelier de Bodegas Emilio Moro no Sunness Supper Club 10/6/26",
-          "fr": "Dîner Rencontrez le Vigneron de Bodegas Emilio Moro au Sunness Supper Club 10/6/26"
-        },
-        "date": "2026-10-06",
-        "venue": "Sunness Supper Club",
-        "address": "2465 East Sunrise Boulevard, Fort Lauderdale, Florida, 33304",
-        "url": "https://www.soulofmiami.org/2026/09/20/bodegas-emilio-moro-meet-the-winemaker-dinner-at-sunness-supper-club-10-6-26/",
-        "free": false,
-        "price": "$179",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Sunness-Supper-Club_Photo-Credit_-Zack-Perl-_-@thebacyard-1-350x234.jpg",
-        "description": {
-          "en": "plus tax and gratuity per person with wine pairings; $119",
-          "es": "más impuestos y propina por persona con maridaje de vinos; $119",
-          "pt": "mais impostos e gorjeta por pessoa com harmonização de vinhos; $119",
-          "fr": "plus taxes et pourboire par personne avec accords mets-vins ; $119"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1380982,
-        "lng": -80.1135475,
-        "category": "community"
-      },
-      {
-        "id": "rss_1790012717803_r1mx",
-        "title": {
-          "en": "Fairs, Networks, and the Future of Collecting 10/6/26",
-          "es": "Ferias, Redes y el Futuro del Coleccionismo 10/6/26",
-          "pt": "Feiras, Redes e o Futuro do Colecionismo 10/6/26",
-          "fr": "Foires, Réseaux et l'Avenir de la Collecte 10/6/26"
-        },
-        "date": "2026-10-06",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/09/20/fairs-networks-and-the-future-of-collecting-10-6-26/",
-        "free": false,
-        "price": "$150",
-        "image": "",
-        "description": {
-          "en": "Gain insider access to the world’s leading photography fair, Paris Photo, with its Artistic Director, Anna Planas. Module Description Part",
-          "es": "Obtén acceso exclusivo a la feria de fotografía líder mundial, Paris Photo, con su Directora Artística, Anna Planas. Descripción del Módulo Parte",
-          "pt": "Obtenha acesso exclusivo à maior feira de fotografia do mundo, Paris Photo, com sua Diretora Artística, Anna Planas. Descrição do Módulo Parte",
-          "fr": "Accédez à la plus grande foire de photographie au monde, Paris Photo, avec sa Directrice Artistique, Anna Planas. Description du Module Partie"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1790093383490_ogtm",
         "title": {
           "en": "Spooky Adventures: Monsters Unleashed 10/23/26",
@@ -2919,58 +2869,6 @@
         "lat": 25.7822233,
         "lng": -80.197696,
         "category": "community"
-      },
-      {
-        "id": "tm_1790622566691_4ni6",
-        "title": {
-          "en": "MIAMI HEAT RED, WHITE & PINK GAME",
-          "es": "JUEGO ROJO, BLANCO Y ROSA DEL MIAMI HEAT",
-          "pt": "JOGO VERMELHO, BRANCO E ROSA DO MIAMI HEAT",
-          "fr": "JEU ROUGE, BLANC ET ROSE DU MIAMI HEAT"
-        },
-        "date": "2026-10-06",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-heat-red-white-pink-game-miami-florida-10-06-2026%2Fevent%2F0D0064FDD6DC869B&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/89f/3b7bb388-5ecb-42d1-9506-fcfeb432289f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "All seating is general admission. Red, White & Pink game features an intra-squad scrimmage. Proceeds benefit the Baptist Health Herbert Wertheim Cancer Institute. · Starts 18:30 · Kaseya Center",
-          "es": "Todos los asientos son de admisión general. El juego Rojo, Blanco y Rosa presenta un partido de práctica intra-equipo. Los beneficios van al Instituto de Cáncer Herbert Wertheim de Baptist Health. · Comienza 18:30 · Centro Kaseya",
-          "pt": "Todos os assentos são de admissão geral. O jogo Vermelho, Branco e Rosa apresenta um scrimmage intra-equipe. Os lucros beneficiam o Instituto de Câncer Herbert Wertheim da Baptist Health. · Começa 18:30 · Centro Kaseya",
-          "fr": "Tous les sièges sont à admission générale. Le jeu Rouge, Blanc et Rose présente une mêlée intra-équipe. Les bénéfices profitent à l'Institut du Cancer Herbert Wertheim de Baptist Health. · Commence 18:30 · Centre Kaseya"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1790622566691_giv0",
-        "title": {
-          "en": "Colombia vs Peru",
-          "es": "Colombia vs Perú",
-          "pt": "Colômbia vs Peru",
-          "fr": "Colombie vs Pérou"
-        },
-        "date": "2026-10-06",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcolombia-vs-peru-miami-florida-10-06-2026%2Fevent%2F0D006512ADCBA2B3&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/0b0/2896c031-1776-456a-be3a-b86d4bc320b0_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Soccer · Starts 19:00 · Nu Stadium",
-          "es": "Deportes · Fútbol · Comienza 19:00 · Estadio Nu",
-          "pt": "Esportes · Futebol · Começa 19:00 · Estádio Nu",
-          "fr": "Sports · Football · Commence 19:00 · Stade Nu"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
       },
       {
         "id": "rss_1790789426209_ytes",
@@ -4349,6 +4247,628 @@
         "category": "sports",
         "lat": 25.957928,
         "lng": -80.238866
+      },
+      {
+        "id": "rss_1791397264162_t4ib",
+        "title": {
+          "en": "Boost Mobile Miami Beach Cleanup 10/10/26",
+          "es": "Limpieza de Miami Beach con Boost Mobile 10/10/26",
+          "pt": "Limpeza de Miami Beach com Boost Mobile 10/10/26",
+          "fr": "Nettoyage de Miami Beach avec Boost Mobile 10/10/26"
+        },
+        "date": "2026-10-10",
+        "venue": "Miami Beach 35th Street Lifegaurd Tower",
+        "address": "3501 Collins Avene, Miami Beach, Florida, 33140",
+        "url": "https://www.soulofmiami.org/2026/10/06/boost-mobile-miami-beach-cleanup-10-10-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Boost-Mobile-Logo-350x232.png",
+        "description": {
+          "en": "Join Boost Mobile and The International SeaKeepers Society for a free Miami Beach cleanup!",
+          "es": "¡Únete a Boost Mobile y The International SeaKeepers Society para una limpieza gratuita de Miami Beach!",
+          "pt": "Junte-se à Boost Mobile e à The International SeaKeepers Society para uma limpeza gratuita de Miami Beach!",
+          "fr": "Rejoignez Boost Mobile et The International SeaKeepers Society pour un nettoyage gratuit de Miami Beach!"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1791397264162_y3tc",
+        "title": {
+          "en": "Kimpton Surfcomber’s The Witches’ Pact Mystery Dinner 10/17/26",
+          "es": "Cena Misterio La Conspiración de las Brujas en Kimpton Surfcomber 10/17/26",
+          "pt": "Jantar Mistério O Pacto das Bruxas no Kimpton Surfcomber 10/17/26",
+          "fr": "Dîner Mystère Le Pacte des Sorcières au Kimpton Surfcomber 10/17/26"
+        },
+        "date": "2026-10-17",
+        "venue": "Kimpton Surfcomber Hotel",
+        "address": "1717 Collins Ave, Miami Beach, FL 33139",
+        "url": "https://www.soulofmiami.org/2026/10/06/kimpton-surfcombers-the-witches-pact-mystery-dinner-10-17-26/",
+        "free": false,
+        "price": "$194",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Screenshot-2026-09-24-at-2.36.06-PM-350x249.png",
+        "description": {
+          "en": "Join us at Kimpton Surfcomber Hotel’s Solei Beach Club for an",
+          "es": "Únete a nosotros en el Solei Beach Club del Hotel Kimpton Surfcomber para una",
+          "pt": "Junte-se a nós no Solei Beach Club do Hotel Kimpton Surfcomber para um",
+          "fr": "Rejoignez-nous au Solei Beach Club de l'hôtel Kimpton Surfcomber pour une"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7929111,
+        "lng": -80.1286393,
+        "category": "community"
+      },
+      {
+        "id": "rss_1791397264162_i6lx",
+        "title": {
+          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 10/7/26",
+          "es": "Damas Almorzando: Espectáculo de Drag Miércoles por la Tarde 10/7/26",
+          "pt": "Damas Almoçando: Espetáculo de Drag Quarta-feira à Tarde 10/7/26",
+          "fr": "Les Dames Déjeunent: Spectacle de Drag le Mercredi Après-midi 10/7/26"
+        },
+        "date": "2026-10-07",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/06/ladies-who-lunch-wednesday-afternoon-drag-show-10-7-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpqakiygee-281x500.jpg",
+        "description": {
+          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los miércoles son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quartas-feiras são para os rapazes que almoçam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les mercredis, c'est pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1791397264162_efsd",
+        "title": {
+          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 10/8/26",
+          "es": "Damas Almorzando: Espectáculo de Drag Jueves por la Tarde 10/8/26",
+          "pt": "Damas Almoçando: Espetáculo de Drag Quinta-feira à Tarde 10/8/26",
+          "fr": "Les Dames Déjeunent: Spectacle de Drag le Jeudi Après-midi 10/8/26"
+        },
+        "date": "2026-10-08",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/06/ladies-who-lunch-thursday-afternoon-drag-show-10-8-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpm97_949g-281x500.jpg",
+        "description": {
+          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los jueves son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quintas-feiras são para os rapazes que almoçam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les jeudis, c'est pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "tm_1791397264547_pwl5",
+        "title": {
+          "en": "Bethel Music 2026 Tour",
+          "es": "Gira Bethel Music 2026",
+          "pt": "Turnê Bethel Music 2026",
+          "fr": "Tournée Bethel Music 2026"
+        },
+        "date": "2026-10-11",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbethel-music-2026-tour-miami-beach-florida-10-11-2026%2Fevent%2F0D006392D705CDCB&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b8d/29977ca4-0692-41f1-8bf2-4f5c97623b8d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Las entradas GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas tienen asientos de pie y disponibles por orden de llegada. Tenga en cuenta que una vez que se alcance la capacidad de un área, estará limitado a otras áreas abiertas. · Comienza 19:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
+          "pt": "Ingressos GA significam Admissão Geral. Isso significa que não há assentos designados. Essas áreas possuem assentos em pé e são por ordem de chegada. Observe que quando a capacidade de uma área for atingida, você será limitado a outras áreas abertas. · Começa 19:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
+          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de places assignées. Ces zones sont debout et assises et sont disponibles selon le principe du premier arrivé, premier servi. Veuillez noter qu'une fois la capacité d'une zone atteinte, vous serez limité à d'autres zones ouvertes. · Commence 19:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1791397264547_7wh6",
+        "title": {
+          "en": "Black Violin",
+          "es": "Black Violin",
+          "pt": "Black Violin",
+          "fr": "Black Violin"
+        },
+        "date": "2026-10-11",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fblack-violin-ft-lauderdale-florida-10-11-2026%2Fevent%2F0D0064D0980E4BA0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/9e6/99b295f8-215b-4a82-8fec-11ee84a289e6_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Black Violin's Be Free Tour is a high-energy, genre-defying experience that blends classical musicianship with the pulse of hip-hop. GRAMMY-nominated duo Wil Baptiste and Kev Marcus deliver an inspiring night of soaring strings, bold beats, and messages of authenticity and self-expression. More than a concert, Be Free celebrates individuality, creativity, and connection, encouraging audiences to e",
+          "es": "La gira Be Free de Black Violin es una experiencia de alta energía que desafía los géneros, fusionando la maestría musical clásica con el pulso del hip-hop. El dúo nominado a los Grammy, Wil Baptiste y Kev Marcus, ofrecen una noche inspiradora de cuerdas sonadoras, ritmos audaces y mensajes de autenticidad y autoexpresión. Más que un concierto, Be Free celebra la individualidad, la creatividad y la conexión, animando al público a expresarse",
+          "pt": "A turnê Be Free do Black Violin é uma experiência de alta energia que desafia os gêneros, mesclando a maestria musical clássica com o pulso do hip-hop. O duo indicado ao Grammy, Wil Baptiste e Kev Marcus, oferece uma noite inspiradora de cordas vibrantes, batidas audaciosas e mensagens de autenticidade e autoexpressão. Mais do que um show, Be Free celebra a individualidade, a criatividade e a conexão, encorajando o público a se expressar",
+          "fr": "La tournée Be Free de Black Violin est une expérience haute en énergie qui transcende les genres, fusionnant la maîtrise musicale classique avec le pouls du hip-hop. Le duo nominé aux Grammy Awards, Wil Baptiste et Kev Marcus, offre une soirée inspirante de cordes résonnantes, de rythmes audacieux et de messages d'authenticité et d'expression de soi. Plus qu'un concert, Be Free célèbre l'individualité, la créativité et la connexion, encourageant le public à s'exprimer"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1791397264547_otqs",
+        "title": {
+          "en": "Arcángel - La 8va Maravilla World Tour",
+          "es": "Arcángel - La 8va Maravilla World Tour",
+          "pt": "Arcángel - La 8va Maravilla World Tour",
+          "fr": "Arcángel - La 8va Maravilla World Tour"
+        },
+        "date": "2026-10-11",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Farcangel-la-8va-maravilla-world-tour-miami-florida-10-11-2026%2Fevent%2F0D0064AC03232957&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/4e9/464f3b9f-8fd0-4986-9565-c7e8ccd934e9_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Hip-Hop/Rap · Starts 20:00 · Kaseya Center",
+          "es": "Música · Hip-Hop/Rap · Comienza a las 20:00 · Kaseya Center",
+          "pt": "Música · Hip-Hop/Rap · Começa às 20:00 · Kaseya Center",
+          "fr": "Musique · Hip-Hop/Rap · Commence à 20:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1791397264547_o00s",
+        "title": {
+          "en": "Scott Bradlee's Postmodern Jukebox",
+          "es": "Scott Bradlee's Postmodern Jukebox",
+          "pt": "Scott Bradlee's Postmodern Jukebox",
+          "fr": "Scott Bradlee's Postmodern Jukebox"
+        },
+        "date": "2026-10-11",
+        "venue": "Pompano Beach Amphitheatre",
+        "address": "1806 Northeast 6th St., Pompano Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A709fA&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/984/1f04975e-793c-4068-88b5-4b92a3b24984_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 20:00 · Pompano Beach Amphitheatre",
+          "es": "Música · Otro · Comienza a las 20:00 · Pompano Beach Amphitheatre",
+          "pt": "Música · Outro · Começa às 20:00 · Pompano Beach Amphitheatre",
+          "fr": "Musique · Autre · Commence à 20:00 · Pompano Beach Amphitheatre"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.2349,
+        "lng": -80.120102
+      },
+      {
+        "id": "tm_1791397264547_9yb1",
+        "title": {
+          "en": "Quavo",
+          "es": "Quavo",
+          "pt": "Quavo",
+          "fr": "Quavo"
+        },
+        "date": "2026-10-11",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fquavo-liv-nightclub-miami-tickets%2F14363394&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/42d/6d977bcb-e3a6-4648-91ad-adaa1ff1c42d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier asistente que no presente una identificación válida indicando que tiene al menos 21 años no será admitido a este evento y no será elegible para un reembolso. · Comienza a las 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer participante incapaz de apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa às 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout détenteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence à 23:30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1791397264547_djjp",
+        "title": {
+          "en": "WEEZER- The Gathering",
+          "es": "WEEZER- The Gathering",
+          "pt": "WEEZER- The Gathering",
+          "fr": "WEEZER- The Gathering"
+        },
+        "date": "2026-10-13",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fweezer-tickets%2Fsunrise-florida-amerant-bank-arena-2026-10-13-7-pm%2Fconcert%2F18128599&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/a2e/4990f811-a315-4173-adcf-405a96de3a2e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:00 · Amerant Bank Arena ",
+          "es": "Música · Rock · Comienza a las 19:00 · Amerant Bank Arena",
+          "pt": "Música · Rock · Começa às 19:00 · Amerant Bank Arena",
+          "fr": "Musique · Rock · Commence à 19:00 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.155362,
+        "lng": -80.33023
+      },
+      {
+        "id": "tm_1791397264547_0y13",
+        "title": {
+          "en": "KATSEYE: THE WILDWORLD TOUR",
+          "es": "KATSEYE: THE WILDWORLD TOUR",
+          "pt": "KATSEYE: THE WILDWORLD TOUR",
+          "fr": "KATSEYE: THE WILDWORLD TOUR"
+        },
+        "date": "2026-10-13",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fkatseye-the-wildworld-tour-miami-florida-10-13-2026%2Fevent%2F0D0064ABEED4E240&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/13f/9786b713-3692-4a92-8b10-90c5c944813f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 20:00 · Kaseya Center",
+          "es": "Música · Pop · Comienza 20:00 · Kaseya Center",
+          "pt": "Música · Pop · Começa 20:00 · Kaseya Center",
+          "fr": "Musique · Pop · Commence 20:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1791397264547_b9wj",
+        "title": {
+          "en": "Freya Skye - Stars Align Tour",
+          "es": "Freya Skye - Stars Align Tour",
+          "pt": "Freya Skye - Stars Align Tour",
+          "fr": "Freya Skye - Stars Align Tour"
+        },
+        "date": "2026-10-14",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ffreya-skye-stars-align-tour-hollywood-florida-10-14-2026%2Fevent%2F0D00644BB1727EF8&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/bd1/4bf9a435-fa2b-4157-a4c9-add083e81bd1_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Freya Skye is contributing $1 per ticket sold to PLUS1, a 501(c)(3), to benefit Active Minds in mobilizing youth and young adults to lead a transformative movement in mental health, forever changing how it is valued and prioritized in society. No portion of the ticket purchase is tax deductible. Please see www.plus1.org for more information. No Resale Over Face Value: Freya Skye is using Ticketmas",
+          "es": "Freya Skye está contribuyendo $1 por boleto vendido a PLUS1, una organización 501(c)(3), para beneficiar a Active Minds en la movilización de jóvenes y adultos jóvenes para liderar un movimiento transformador en salud mental, cambiando para siempre cómo se valora y se prioriza en la sociedad. Ninguna parte de la compra de boletos es deducible de impuestos. Consulte www.plus1.org para más información. Sin reventa por encima del valor nominal: Freya Skye está utilizando Ticketmas",
+          "pt": "Freya Skye está contribuindo $1 por ingresso vendido para PLUS1, uma organização 501(c)(3), para beneficiar Active Minds na mobilização de jovens e adultos jovens para liderar um movimento transformador em saúde mental, mudando para sempre como é valorizado e priorizado na sociedade. Nenhuma parte da compra do ingresso é dedutível de impostos. Consulte www.plus1.org para mais informações. Sem revenda acima do valor nominal: Freya Skye está usando Ticketmas",
+          "fr": "Freya Skye contribue 1 $ par billet vendu à PLUS1, une organisation 501(c)(3), pour bénéficier à Active Minds en mobilisant les jeunes et les jeunes adultes pour mener un mouvement transformateur en santé mentale, changeant à jamais la façon dont il est valorisé et priorisé dans la société. Aucune partie de l'achat de billet n'est déductible d'impôt. Veuillez consulter www.plus1.org pour plus d'informations. Pas de revente au-dessus de la valeur nominale: Freya Skye utilise Ticketmas"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1791397264547_vf7k",
+        "title": {
+          "en": "Toadies: The Charmer Tour",
+          "es": "Toadies: The Charmer Tour",
+          "pt": "Toadies: The Charmer Tour",
+          "fr": "Toadies: The Charmer Tour"
+        },
+        "date": "2026-10-15",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftoadies-the-charmer-tour-ft-lauderdale-florida-10-15-2026%2Fevent%2F0D006497B40BAF6B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/741/baee6151-021c-4463-a432-a78849c32741_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Toadies: The Charmer Tour will be coming to Revolution Live on October 15th with special guests Local H and Emily Wolfe. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
+          "es": "Toadies: The Charmer Tour llegará a Revolution Live el 15 de octubre con invitados especiales Local H y Emily Wolfe. Este evento es para todas las edades. Las puertas abren a las 7 p.m. El espectáculo comienza a las 8 p.m. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
+          "pt": "Toadies: The Charmer Tour chegará ao Revolution Live em 15 de outubro com convidados especiais Local H e Emily Wolfe. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
+          "fr": "Toadies: The Charmer Tour viendra à Revolution Live le 15 octobre avec les invités spéciaux Local H et Emily Wolfe. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 19:00 · Revolution Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1791397264548_03t5",
+        "title": {
+          "en": "Def Leppard",
+          "es": "Def Leppard",
+          "pt": "Def Leppard",
+          "fr": "Def Leppard"
+        },
+        "date": "2026-10-15",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdef-leppard-hollywood-florida-10-15-2026%2Fevent%2F0D0064BCDD61E246&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/861/d7e41d08-4127-4710-b298-e566b30ac861_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 20:00 · Hard Rock Live",
+          "es": "Música · Rock · Comienza 20:00 · Hard Rock Live",
+          "pt": "Música · Rock · Começa 20:00 · Hard Rock Live",
+          "fr": "Musique · Rock · Commence 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1791397264548_wjtw",
+        "title": {
+          "en": "III Points",
+          "es": "III Points",
+          "pt": "III Points",
+          "fr": "III Points"
+        },
+        "date": "2026-10-16",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fon.fgtix.com%2Ftrk%2Fcp4M&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/65b/e72b617c-d2f8-4ff4-bf01-e828776a165b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Starts 16:00 · Mana Wynwood Convention Center",
+          "es": "Música · Comienza 16:00 · Mana Wynwood Convention Center",
+          "pt": "Música · Começa 16:00 · Mana Wynwood Convention Center",
+          "fr": "Musique · Commence 16:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.797998,
+        "lng": -80.202062
+      },
+      {
+        "id": "tm_1791397264548_eudv",
+        "title": {
+          "en": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026",
+          "es": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026",
+          "pt": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026",
+          "fr": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026"
+        },
+        "date": "2026-10-16",
+        "venue": "Revolution Live at the Backyard",
+        "address": "100 SW 3rd Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Farch-enemy-the-black-dahlia-murder-ft-lauderdale-florida-10-16-2026%2Fevent%2F0D0064B2B94C82B2&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/3b5/08cefbd6-5bc5-4252-bd8b-f3e0e8ba33b5_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026 will be coming to Revolution Live at the Backyard on Friday, October 16th with special guests Septicflesh, Crypta, and Thrown Into Exile. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. This event is Rain or Shine. · Starts 17:00 · Revolution Live at the Backy",
+          "es": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026 llegará a Revolution Live at the Backyard el viernes 16 de octubre con los artistas especiales Septicflesh, Crypta y Thrown Into Exile. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. Este evento es lluvia o brilla.",
+          "pt": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026 virá para Revolution Live at the Backyard na sexta-feira, 16 de outubro com convidados especiais Septicflesh, Crypta e Thrown Into Exile. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. Este evento é chuva ou brilho.",
+          "fr": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026 arrivera à Revolution Live at the Backyard vendredi 16 octobre avec les invités spéciaux Septicflesh, Crypta et Thrown Into Exile. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien sont sujets à changement sans préavis. Cet événement est pluie ou brillant."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.12123121,
+        "lng": -80.14625645
+      },
+      {
+        "id": "tm_1791397264548_1rkp",
+        "title": {
+          "en": "Journey",
+          "es": "Journey",
+          "pt": "Journey",
+          "fr": "Journey"
+        },
+        "date": "2026-10-16",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70_73&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f9d/80e7f1f1-5db4-4a72-8cfa-7e36d66b4f9d_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:30 · Amerant Bank Arena",
+          "es": "Música · Rock · Comienza 19:30 · Amerant Bank Arena",
+          "pt": "Música · Rock · Começa 19:30 · Amerant Bank Arena",
+          "fr": "Musique · Rock · Commence 19:30 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1791397264548_ppfe",
+        "title": {
+          "en": "ICONS: Latin Rhythms",
+          "es": "ICONS: Latin Rhythms",
+          "pt": "ICONS: Latin Rhythms",
+          "fr": "ICONS: Latin Rhythms"
+        },
+        "date": "2026-10-16",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ficons-latin-rhythms-aventura-florida-10-16-2026%2Fevent%2F0D0064A7E314F962&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/adf/55caf971-5a43-4c25-a957-c126c914aadf_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "From the creative team behind Migguel Anggelo's acclaimed ICONS series comes a dynamic new concert celebrating the music that has shaped Latiné culture worldwide. Led by Migguel's unmistakable voice, humor, and theatrical flair, ICONS: LATIN RHYTHMS is a joyful celebration of songs generations have loved, danced to, and passed down. Featuring music by artists like Rubén Blades and Oscar D'León alo",
+          "es": "Del equipo creativo detrás de la aclamada serie ICONS de Migguel Anggelo viene un concierto dinámico que celebra la música que ha moldeado la cultura latina en todo el mundo. Liderado por la voz inconfundible de Migguel, su humor y su flair teatral, ICONS: LATIN RHYTHMS es una celebración alegre de canciones que las generaciones han amado, bailado y transmitido. Presentando música de artistas como Rubén Blades y Oscar D'León.",
+          "pt": "Do time criativo por trás da aclamada série ICONS de Migguel Anggelo vem um concerto dinâmico celebrando a música que moldou a cultura latina em todo o mundo. Liderado pela voz inconfundível de Migguel, seu humor e floreio teatral, ICONS: LATIN RHYTHMS é uma celebração alegre de músicas que gerações amaram, dançaram e transmitiram. Apresentando músicas de artistas como Rubén Blades e Oscar D'León.",
+          "fr": "De l'équipe créative derrière la série ICONS acclamée de Migguel Anggelo vient un concert dynamique célébrant la musique qui a façonné la culture latine dans le monde entier. Dirigé par la voix inconfondible de Migguel, son humour et son flair théâtral, ICONS: LATIN RHYTHMS est une célébration joyeuse de chansons que les générations ont aimées, dansées et transmises. Mettant en vedette la musique d'artistes comme Rubén Blades et Oscar D'León."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "tm_1791397264548_ilbt",
+        "title": {
+          "en": "The Rhinestone Cowgirls",
+          "es": "The Rhinestone Cowgirls",
+          "pt": "The Rhinestone Cowgirls",
+          "fr": "The Rhinestone Cowgirls"
+        },
+        "date": "2026-10-16",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-rhinestone-cowgirls-ft-lauderdale-florida-10-16-2026%2Fevent%2F0D00644CC9F7F13E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/8d0/2c5f99c1-29f3-4d20-ac78-fdd2d97e18d0_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Pay homage to the iconic female vocalists of yesterday and today with RHINESTONE COWGIRLS: Legendary Ladies of Country Music! Three powerhouse singers perform fresh arrangements of classic and contemporary country hits in this elegant and authentic journey celebrating the evolution of country music's humble beginnings to the giants of today's music industry. Relive classics like Patsy Cline's \"Cra",
+          "es": "¡Rinde homenaje a las icónicas vocalistas femeninas de ayer y hoy con RHINESTONE COWGIRLS: Legendary Ladies of Country Music! Tres cantantes poderosas realizan arreglos frescos de éxitos clásicos y contemporáneos del country en este elegante y auténtico viaje celebrando la evolución de los humildes comienzos de la música country hasta los gigantes de la industria musical actual. Revive clásicos como 'Crazy' de Patsy Cline.",
+          "pt": "Renda homenagem às vocalistas femininas icônicas de ontem e hoje com RHINESTONE COWGIRLS: Legendary Ladies of Country Music! Três cantoras poderosas realizam novos arranjos de sucessos clássicos e contemporâneos do country nesta jornada elegante e autêntica celebrando a evolução dos humildes começos da música country até os gigantes da indústria musical atual. Reviva clássicos como 'Crazy' de Patsy Cline.",
+          "fr": "Rendez hommage aux vocalistes féminines emblématiques d'hier et d'aujourd'hui avec RHINESTONE COWGIRLS: Legendary Ladies of Country Music! Trois chanteuses puissantes interprètent des arrangements frais de succès classiques et contemporains du country dans ce voyage élégant et authentique célébrant l'évolution des débuts modestes de la musique country aux géants de l'industrie musicale d'aujourd'hui. Revivez des classiques comme 'Crazy' de Patsy Cline."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0884017,
+        "lng": -80.2461624
+      },
+      {
+        "id": "tm_1791397264548_ewkx",
+        "title": {
+          "en": "Black Coffee",
+          "es": "Black Coffee",
+          "pt": "Black Coffee",
+          "fr": "Black Coffee"
+        },
+        "date": "2026-10-16",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fblack-coffee-liv-nightclub-miami-tickets%2F14322564&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/0d3/689112b6-e898-465a-973e-e5621e5910d3_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier poseedor de entrada que no pueda presentar identificación válida que indique que tiene al menos 21 años no será admitido a este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não puder apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1791397264548_lnik",
+        "title": {
+          "en": "Soccer Mommy, Snail Mail, and Scarlet Rae in Miami",
+          "es": "Soccer Mommy, Snail Mail y Scarlet Rae en Miami",
+          "pt": "Soccer Mommy, Snail Mail e Scarlet Rae em Miami",
+          "fr": "Soccer Mommy, Snail Mail et Scarlet Rae à Miami"
+        },
+        "date": "2026-10-17",
+        "venue": "Lincoln's Beard",
+        "address": "7360 SW 41st St. , Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsoccer-mommy-snail-mail-and-lincolns-beard-tickets%2F14268284&utm_medium=affiliate",
+        "free": false,
+        "price": "$47",
+        "image": "https://s1.ticketm.net/dam/a/71e/9f88e2f0-ace6-4156-a8dd-0101b686f71e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 18:00 · Lincoln's Beard",
+          "es": "Música · Pop · Comienza 18:00 · Lincoln's Beard",
+          "pt": "Música · Pop · Começa 18:00 · Lincoln's Beard",
+          "fr": "Musique · Pop · Commence 18:00 · Lincoln's Beard"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7321134,
+        "lng": -80.3143626
+      },
+      {
+        "id": "tm_1791397264548_petc",
+        "title": {
+          "en": "Knocked Loose w/ Denzel Curry",
+          "es": "Knocked Loose con Denzel Curry",
+          "pt": "Knocked Loose com Denzel Curry",
+          "fr": "Knocked Loose avec Denzel Curry"
+        },
+        "date": "2026-10-17",
+        "venue": "War Memorial Auditorium-FL",
+        "address": "800 NE. 8th St., Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70yjp&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b0a/7b2fc4c9-d154-43a8-b2b7-c00bf2e17b0a_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 19:00 · War Memorial Auditorium-FL",
+          "es": "Música · Otro · Comienza 19:00 · War Memorial Auditorium-FL",
+          "pt": "Música · Outro · Começa 19:00 · War Memorial Auditorium-FL",
+          "fr": "Musique · Autre · Commence 19:00 · War Memorial Auditorium-FL"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.138399,
+        "lng": -80.130997
+      },
+      {
+        "id": "tm_1791397264548_m81t",
+        "title": {
+          "en": "iHeartRadio Fiesta Latina",
+          "es": "iHeartRadio Fiesta Latina",
+          "pt": "iHeartRadio Fiesta Latina",
+          "fr": "iHeartRadio Fiesta Latina"
+        },
+        "date": "2026-10-17",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fiheartradio-fiesta-latina-miami-florida-10-17-2026%2Fevent%2F0D0064C58CC07B23&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/5ab/f1d059ed-7459-46f7-be76-361bff0595ab_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "***Artist Lineup is Subject to Change*** · Starts 20:00 · Kaseya Center",
+          "es": "***El Alineamiento de Artistas Está Sujeto a Cambios*** · Comienza 20:00 · Kaseya Center",
+          "pt": "***O Alineamento de Artistas Está Sujeito a Mudanças*** · Começa 20:00 · Kaseya Center",
+          "fr": "***La Formation des Artistes est Sujette à Changement*** · Commence 20:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1791397264548_ae6u",
+        "title": {
+          "en": "Slip-N-Slide: Trick-N-Trina Live!",
+          "es": "Slip-N-Slide: ¡Trick-N-Trina en Vivo!",
+          "pt": "Slip-N-Slide: Trick-N-Trina ao Vivo!",
+          "fr": "Slip-N-Slide: Trick-N-Trina en Direct!"
+        },
+        "date": "2026-10-17",
+        "venue": "Coral Springs Center",
+        "address": "2855 Coral Springs Dr., Coral Springs, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A703j_&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ad2/c6a19eb8-19e5-4b7a-bc92-75caa495aad2_1467871_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 20:00 · Coral Springs Center",
+          "es": "Música · Otro · Comienza 20:00 · Coral Springs Center",
+          "pt": "Música · Outro · Começa 20:00 · Coral Springs Center",
+          "fr": "Musique · Autre · Commence 20:00 · Coral Springs Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.2738,
+        "lng": -80.256897
       }
     ]
   },
@@ -5252,7 +5772,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-06T17:50:01.340Z",
+    "fetchedAt": "2026-10-07T18:22:25.002Z",
     "items": [
       {
         "id": "beach_crandon-park-south",
@@ -5273,7 +5793,28 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-south",
         "effectiveAt": "2026-10-01",
-        "expiresAt": "2026-10-07T17:50:01.340Z"
+        "expiresAt": "2026-10-08T18:22:25.002Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.10af6cd096aa59d531600eef1f3086bb369bc5a0.001.1",
+        "type": "weather",
+        "severity": "minor",
+        "title": {
+          "en": "Coastal Flood Statement",
+          "es": "Coastal Flood Statement",
+          "pt": "Coastal Flood Statement",
+          "fr": "Coastal Flood Statement"
+        },
+        "detail": {
+          "en": "* WHAT...Isolated minor coastal flooding expected.  * WHERE...Coastal Palm Beach County, Coastal Broward County, Coastal Miami Dade County and Far South Miami-Dade County.  * WHEN...From 4 PM EDT this afternoon through Thursday morning.  * IMPACTS...Some water on low lying roads and property.  * ADDITIONAL DETAILS...Minor coastal flooding is expected during the high tide cycle early this evening a",
+          "es": "* QUÉ...Se esperan inundaciones costeras menores aisladas. * DÓNDE...Zona costera del condado de Palm Beach, zona costera del condado de Broward, zona costera del condado de Miami-Dade y sur lejano del condado de Miami-Dade. * CUÁNDO...Desde las 4 PM EDT esta tarde hasta la mañana del jueves. * IMPACTOS...Agua en algunas carreteras y propiedades bajas. * DETALLES ADICIONALES...Se esperan inundaciones costeras menores durante el ciclo de marea alta a principios de esta noche.",
+          "pt": "* O QUÊ...Inundações costeiras menores isoladas esperadas. * ONDE...Costa do Condado de Palm Beach, costa do Condado de Broward, costa do Condado de Miami-Dade e extremo sul do Condado de Miami-Dade. * QUANDO...Das 16h EDT desta tarde até a manhã de quinta-feira. * IMPACTOS...Água em algumas estradas e propriedades baixas. * DETALHES ADICIONAIS...Inundações costeiras menores são esperadas durante o ciclo de maré alta no início desta noite.",
+          "fr": "* QUOI...Inondations côtières mineures et isolées attendues. * OÙ...Côte du comté de Palm Beach, côte du comté de Broward, côte du comté de Miami-Dade et extrême sud du comté de Miami-Dade. * QUAND...De 16h EDT cet après-midi jusqu'à jeudi matin. * IMPACTS...De l'eau sur certaines routes et propriétés basses. * DÉTAILS SUPPLÉMENTAIRES...Des inondations côtières mineures sont attendues pendant le cycle de marée haute en début de soirée."
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.10af6cd096aa59d531600eef1f3086bb369bc5a0.001.1",
+        "effectiveAt": "2026-10-07T08:26:00-04:00",
+        "expiresAt": "2026-10-08T00:00:00.000Z"
       }
     ]
   }
