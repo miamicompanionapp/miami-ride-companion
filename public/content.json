@@ -1,32 +1,45 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-07T18:22:30.181Z",
+    "lastUpdated": "2026-10-08T18:21:42.399Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-07T18:22:25.001Z",
+    "fetchedAt": "2026-10-08T18:21:32.244Z",
     "current": {
-      "temp_f": 85,
-      "feels_f": 94,
+      "temp_f": 86,
+      "feels_f": 96,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 82,
-      "wind_mph": 10,
-      "rain_chance": 43,
-      "weathercode": 1
+      "humidity": 76,
+      "wind_mph": 12,
+      "rain_chance": 15,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "high_f": 86,
-        "low_f": 77,
+        "low_f": 76,
+        "weathercode": 53,
+        "rain_chance": 15,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-10-09",
+        "high_f": 85,
+        "low_f": 75,
         "weathercode": 82,
-        "rain_chance": 43,
+        "rain_chance": 18,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -35,37 +48,11 @@
         }
       },
       {
-        "date": "2026-10-08",
-        "high_f": 85,
-        "low_f": 75,
-        "weathercode": 3,
-        "rain_chance": 18,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-10-09",
-        "high_f": 87,
-        "low_f": 75,
-        "weathercode": 51,
-        "rain_chance": 45,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
         "date": "2026-10-10",
-        "high_f": 87,
-        "low_f": 84,
+        "high_f": 88,
+        "low_f": 79,
         "weathercode": 53,
-        "rain_chance": 63,
+        "rain_chance": 45,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -77,160 +64,173 @@
         "date": "2026-10-11",
         "high_f": 87,
         "low_f": 84,
-        "weathercode": 3,
-        "rain_chance": 38,
+        "weathercode": 51,
+        "rain_chance": 17,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-10-12",
+        "high_f": 87,
+        "low_f": 83,
+        "weathercode": 1,
+        "rain_chance": 16,
+        "description": {
+          "en": "Mainly clear",
+          "es": "Mayormente despejado",
+          "pt": "Principalmente limpo",
+          "fr": "Principalement dégagé"
         }
       }
     ],
     "hourly": [
       {
         "hour": "14:00",
-        "temp_f": 85,
-        "weathercode": 1,
-        "rain_chance": 9
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "15:00",
-        "temp_f": 84,
-        "weathercode": 2,
-        "rain_chance": 18
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 10
       },
       {
         "hour": "16:00",
-        "temp_f": 80,
-        "weathercode": 51,
-        "rain_chance": 27
+        "temp_f": 86,
+        "weathercode": 2,
+        "rain_chance": 14
       },
       {
         "hour": "17:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 26
+        "temp_f": 85,
+        "weathercode": 51,
+        "rain_chance": 14
       },
       {
         "hour": "18:00",
-        "temp_f": 80,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 37
+        "rain_chance": 15
       },
       {
         "hour": "19:00",
-        "temp_f": 77,
-        "weathercode": 82,
-        "rain_chance": 43
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 14
       },
       {
         "hour": "20:00",
         "temp_f": 77,
         "weathercode": 53,
-        "rain_chance": 38
+        "rain_chance": 10
       },
       {
         "hour": "21:00",
-        "temp_f": 77,
+        "temp_f": 78,
         "weathercode": 3,
-        "rain_chance": 32
+        "rain_chance": 4
       },
       {
         "hour": "22:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 25
+        "rain_chance": 4
       },
       {
         "hour": "23:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 13
+        "temp_f": 76,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "00:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 76,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "01:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 76,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "02:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 75,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "03:00",
         "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 8
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "04:00",
         "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "05:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 5
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "06:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "07:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "08:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "09:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 83,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "10:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 84,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "11:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 10
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "12:00",
         "temp_f": 84,
-        "weathercode": 2,
-        "rain_chance": 17
+        "weathercode": 82,
+        "rain_chance": 18
       },
       {
         "hour": "13:00",
-        "temp_f": 84,
+        "temp_f": 85,
         "weathercode": 3,
-        "rain_chance": 17
+        "rain_chance": 18
       }
     ]
   },
@@ -2261,30 +2261,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1789917582376_lbqh",
-        "title": {
-          "en": "DJ Stochastic and Miami Mike performing 10/7/26",
-          "es": "DJ Stochastic y Miami Mike presentando 10/7/26",
-          "pt": "DJ Stochastic e Miami Mike apresentando 10/7/26",
-          "fr": "DJ Stochastic et Miami Mike se produisant 10/7/26"
-        },
-        "date": "2026-10-07",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/09/19/dj-stochastic-and-miami-mike-performing-10-7-26/",
-        "free": false,
-        "price": "$25",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/IMG_3579-333x500.png",
-        "description": {
-          "en": "An Exclusive Book Launch Party for DJ Stochastic/Jared Dillian’s seventh book, The",
-          "es": "Una Fiesta Exclusiva de Lanzamiento del Libro del séptimo libro de DJ Stochastic/Jared Dillian, The",
-          "pt": "Uma Festa Exclusiva de Lançamento do Livro do sétimo livro de DJ Stochastic/Jared Dillian, The",
-          "fr": "Une Fête Exclusive de Lancement du Livre du septième livre de DJ Stochastic/Jared Dillian, The"
-        },
-        "source": "Soul of Miami",
-        "category": "music"
-      },
-      {
         "id": "rss_1789917582376_wzlr",
         "title": {
           "en": "Hollywood Real Jazz Festival Saturday 11/21/26",
@@ -2592,32 +2568,6 @@
         "source": "Soul of Miami",
         "lat": 25.6252557,
         "lng": -80.394,
-        "category": "community"
-      },
-      {
-        "id": "rss_1790353431972_pwr4",
-        "title": {
-          "en": "Voices of a Changing Cuba 10/7/26",
-          "es": "Voces de una Cuba en Cambio 10/7/26",
-          "pt": "Vozes de uma Cuba em Mudança 10/7/26",
-          "fr": "Voix d'une Cuba en Changement 10/7/26"
-        },
-        "date": "2026-10-07",
-        "venue": "Roberto C. Goizueta Pavilion",
-        "address": "1300 Memorial Dr, Coral Gables, FL, 33146",
-        "url": "https://www.soulofmiami.org/2026/09/24/voices-of-a-changing-cuba-10-7-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Events_Eventbrite-2160x1080-1-350x175.jpg",
-        "description": {
-          "en": "Join the Cuban Heritage Collection for a special evening featuring Cuban dissidents and artists Luis",
-          "es": "Únete a la Colección de Patrimonio Cubano para una velada especial con disidentes y artistas cubanos Luis",
-          "pt": "Junte-se à Coleção de Patrimônio Cubano para uma noite especial apresentando dissidentes e artistas cubanos Luis",
-          "fr": "Rejoignez la Collection du Patrimoine Cubain pour une soirée spéciale présentant des dissidents et artistes cubains Luis"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7211339,
-        "lng": -80.2787553,
         "category": "community"
       },
       {
@@ -2993,32 +2943,6 @@
         "lat": 25.8315843,
         "lng": -80.2082623,
         "category": "community"
-      },
-      {
-        "id": "tm_1790877318876_fwvy",
-        "title": {
-          "en": "Florida International Panthers Football vs. New Mexico State Aggies Football",
-          "es": "Fútbol Americano Florida International Panthers vs. New Mexico State Aggies",
-          "pt": "Futebol Americano Florida International Panthers vs. New Mexico State Aggies",
-          "fr": "Football Américain Florida International Panthers vs. New Mexico State Aggies"
-        },
-        "date": "2026-10-07",
-        "venue": "Pitbull Stadium",
-        "address": "11200 SW 8th Street, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-zoJ&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/db5/5acfb9a3-4315-40c6-824f-e0fd31bd5db5_723691_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 19:30 · Pitbull Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza 19:30 · Pitbull Stadium",
-          "pt": "Esportes · Futebol Americano · Começa 19:30 · Pitbull Stadium",
-          "fr": "Sports · Football Américain · Commence 19:30 · Pitbull Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7577,
-        "lng": -80.374802
       },
       {
         "id": "rss_1790961630257_imc1",
@@ -3399,32 +3323,6 @@
         },
         "source": "Boynton Beach",
         "category": "music"
-      },
-      {
-        "id": "rss_1791130891008_eoy0",
-        "title": {
-          "en": "Silver Oak Wine Dinner w/ Fogo de Chão 10/7/26",
-          "es": "Cena de Vinos Silver Oak con Fogo de Chão 10/7/26",
-          "pt": "Jantar de Vinhos Silver Oak com Fogo de Chão 10/7/26",
-          "fr": "Dîner aux Vins Silver Oak avec Fogo de Chão 10/7/26"
-        },
-        "date": "2026-10-07",
-        "venue": "Fogo de Chão",
-        "address": "8815 SW 72nd Pl, Miami, Florida, 33156",
-        "url": "https://www.soulofmiami.org/2026/10/03/silver-oak-wine-dinner-w-fogo-de-chao-10-7-26/",
-        "free": false,
-        "price": "$129",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/96831302-1-350x350.jpeg",
-        "description": {
-          "en": "Join us for a four-course dinner featuring premium Silver Oak wines from the valleys",
-          "es": "Únete a nosotros para una cena de cuatro platos que presenta vinos premium Silver Oak de los valles",
-          "pt": "Junte-se a nós para um jantar de quatro pratos com vinhos premium Silver Oak dos vales",
-          "fr": "Rejoignez-nous pour un dîner de quatre plats mettant en vedette les vins premium Silver Oak des vallées"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.6884639,
-        "lng": -80.3127672,
-        "category": "community"
       },
       {
         "id": "rss_1791130891008_w19k",
@@ -4299,32 +4197,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1791397264162_i6lx",
-        "title": {
-          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 10/7/26",
-          "es": "Damas Almorzando: Espectáculo de Drag Miércoles por la Tarde 10/7/26",
-          "pt": "Damas Almoçando: Espetáculo de Drag Quarta-feira à Tarde 10/7/26",
-          "fr": "Les Dames Déjeunent: Spectacle de Drag le Mercredi Après-midi 10/7/26"
-        },
-        "date": "2026-10-07",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/06/ladies-who-lunch-wednesday-afternoon-drag-show-10-7-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpqakiygee-281x500.jpg",
-        "description": {
-          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los miércoles son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
-          "pt": "Quartas-feiras são para os rapazes que almoçam lindamente no Palace South Beach. Junte-se a nós",
-          "fr": "Les mercredis, c'est pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
-      },
-      {
         "id": "rss_1791397264162_efsd",
         "title": {
           "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 10/8/26",
@@ -4869,6 +4741,278 @@
         "category": "music",
         "lat": 26.2738,
         "lng": -80.256897
+      },
+      {
+        "id": "rss_1791483641456_xsvj",
+        "title": {
+          "en": "University of Miami to host first-ever Miccosukee Indigenous Film Festival",
+          "es": "Universidad de Miami presenta el primer Festival de Cine Indígena Miccosukee",
+          "pt": "Universidade de Miami apresenta o primeiro Festival de Cinema Indígena Miccosukee",
+          "fr": "L'Université de Miami accueille le premier Festival du Cinéma Autochtone Miccosukee"
+        },
+        "date": "2026-10-08",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/arts-culture/university-of-miami-to-host-first-ever-miccosukee-indigenous-film-festival-40590213/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/10/Miccosukee-Indian-Village-entrance-Nick-FoxAdobeStock.jpeg",
+        "description": {
+          "en": "The showcase features Indigenous-made films from around the world and coincides with Indigenous Peoples’ Day.",
+          "es": "La exhibición presenta películas hechas por indígenas de todo el mundo y coincide con el Día de los Pueblos Indígenas.",
+          "pt": "A mostra apresenta filmes feitos por indígenas de todo o mundo e coincide com o Dia dos Povos Indígenas.",
+          "fr": "L'exposition présente des films réalisés par des autochtones du monde entier et coïncide avec la Journée des peuples autochtones."
+        },
+        "source": "Miami New Times",
+        "category": "community"
+      },
+      {
+        "id": "rss_1791483641456_me01",
+        "title": {
+          "en": "Exciting drone display at the Pompano pier is free",
+          "es": "Emocionante espectáculo de drones en el muelle de Pompano es gratis",
+          "pt": "Emocionante show de drones no píer de Pompano é gratuito",
+          "fr": "Spectaculaire spectacle de drones au quai de Pompano est gratuit"
+        },
+        "date": "2026-10-08",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/dazzling-lights-pompano-presents-a-free-drone-show-off-fisher-family-pier/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2022/09/firefly-drone-shows-.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Pompano Beach is presenting free dazzling drone shows over the ocean. The show in 2026 is 7 p.m. Saturday, November 7, with free entry. Entertainment is 5:30 p.m. - 7... Copyright South Florida on the Cheap. The post Exciting drone display at the Pompano pier is free appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap presenta espectáculos de drones deslumbrantes y gratuitos sobre el océano en Pompano Beach. El espectáculo de 2026 es a las 7 p.m. sábado, 7 de noviembre, con entrada gratuita.",
+          "pt": "South Florida on the Cheap apresenta shows de drones deslumbrantes e gratuitos sobre o oceano em Pompano Beach. O show de 2026 é às 19h, sábado, 7 de novembro, com entrada gratuita.",
+          "fr": "South Florida on the Cheap présente des spectacles de drones gratuits et éblouissants au-dessus de l'océan à Pompano Beach. Le spectacle de 2026 est à 19h samedi 7 novembre, avec entrée gratuite."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1791483641456_dzku",
+        "title": {
+          "en": "Free Kite Days Festival at Haulover Park",
+          "es": "Festival Gratuito de Cometas en el Parque Haulover",
+          "pt": "Festival Gratuito de Pipas no Parque Haulover",
+          "fr": "Festival Gratuit des Cerfs-volants au Parc Haulover"
+        },
+        "date": "2026-10-08",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-kite-day-festival-haulover-park/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2023/02/kite-g0d530bd89_1920-728x485.jpg",
+        "description": {
+          "en": "South Florida on the Cheap The skies will be awash in colorful, multi-shaped and fluttering kites during the now biannual free Kite Days Festival from noon to 5 p.m. Oct. 24-25, 2026, at Haulover Park,... Copyright South Florida on the Cheap. The post Free Kite Days Festival at Haulover Park appeared first on South Florida on the Cheap.",
+          "es": "Los cielos estarán llenos de cometas coloridas, multiformes y ondeantes durante el Festival de Cometas de ahora bienal gratuito de mediodía a 5 p.m. del 24-25 de octubre de 2026 en el Parque Haulover.",
+          "pt": "Os céus estarão repletos de pipas coloridas, multiformes e flutuantes durante o Festival de Pipas bienal gratuito do meio-dia às 17h nos dias 24-25 de outubro de 2026 no Parque Haulover.",
+          "fr": "Les cieux seront remplis de cerfs-volants colorés, multiformes et ondulants lors du Festival des Cerfs-volants biennal gratuit de midi à 17h les 24-25 octobre 2026 au Parc Haulover."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1791483641456_36vr",
+        "title": {
+          "en": "Free screening of new 'Street Fighter' film in Miami, Oct. 14",
+          "es": "Proyección gratuita de la nueva película 'Street Fighter' en Miami, 14 de octubre",
+          "pt": "Exibição gratuita do novo filme 'Street Fighter' em Miami, 14 de outubro",
+          "fr": "Projection gratuite du nouveau film 'Street Fighter' à Miami, 14 octobre"
+        },
+        "date": "2026-10-08",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-movie-premiere/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/09/streetfighter2.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Before there were superheroes, there were legends — and the ultimate battle is about to begin. Get your free pass for an advance screening of this new edition of the... Copyright South Florida on the Cheap. The post Free screening of new 'Street Fighter' film in Miami, Oct. 14 appeared first on South Florida on the Cheap.",
+          "es": "Antes de que hubiera superhéroes, había leyendas, y la batalla definitiva está por comenzar. Obtén tu pase gratuito para una proyección anticipada de esta nueva edición.",
+          "pt": "Antes de haver super-heróis, havia lendas, e a batalha definitiva está prestes a começar. Obtenha seu passe gratuito para uma exibição antecipada desta nova edição.",
+          "fr": "Avant qu'il y ait des super-héros, il y avait des légendes, et la bataille ultime est sur le point de commencer. Obtenez votre laissez-passer gratuit pour une projection anticipée de cette nouvelle édition."
+        },
+        "source": "Miami on the Cheap",
+        "category": "arts"
+      },
+      {
+        "id": "rss_1791483641456_9094",
+        "title": {
+          "en": "Two weekends to celebrate Oktoberfest, Lake Worth, Oct. 9-18",
+          "es": "Dos fines de semana para celebrar Oktoberfest, Lake Worth, 9-18 de octubre",
+          "pt": "Dois finais de semana para celebrar Oktoberfest, Lake Worth, 9-18 de outubro",
+          "fr": "Deux fins de semaine pour célébrer l'Oktoberfest, Lake Worth, 9-18 octobre"
+        },
+        "date": "2026-10-08",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/oktoberfest-in-lake-worth/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2025/10/oktoberfest-1.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Whether you’re rocking your best dirndl or lederhosen, get ready to party! We all know that Oktoberfest (or Octoberfest) is a celebration of Bavarian culture and traditions that not only... Copyright South Florida on the Cheap. The post Two weekends to celebrate Oktoberfest, Lake Worth, Oct. 9-18 appeared first on South Florida on the Cheap.",
+          "es": "Ya sea que uses tu mejor dirndl o lederhosen, ¡prepárate para festejar! Sabemos que Oktoberfest es una celebración de la cultura y tradiciones bávaras.",
+          "pt": "Quer você esteja usando seu melhor dirndl ou lederhosen, prepare-se para festejar! Sabemos que Oktoberfest é uma celebração da cultura e tradições bávaras.",
+          "fr": "Que vous portiez votre meilleur dirndl ou lederhosen, préparez-vous à faire la fête! Nous savons tous qu'Oktoberfest est une célébration de la culture et des traditions bavaroises."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1791483641456_816u",
+        "title": {
+          "en": "PURRR Adoption + Sanctuary to Host a Viewing of “25 Cats of Qatar” Film 10/18/26",
+          "es": "PURRR Adoption + Sanctuary presenta una proyección de la película \"25 Cats of Qatar\" 10/18/26",
+          "pt": "PURRR Adoption + Sanctuary apresenta uma sessão do filme \"25 Cats of Qatar\" 10/18/26",
+          "fr": "PURRR Adoption + Sanctuary présente une projection du film \"25 Cats of Qatar\" 10/18/26"
+        },
+        "date": "2026-10-18",
+        "venue": "Savor Cinema",
+        "address": "503 SE 6th Street, Fort Lauderdale, Florida, 33301",
+        "url": "https://www.soulofmiami.org/2026/10/07/purrr-adoption-sanctuary-to-host-a-viewing-of-25-cats-of-qatar-film-10-18-26/",
+        "free": false,
+        "price": "$15",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Savor-Cinema-Event-Flyer-copy-350x467.png",
+        "description": {
+          "en": "Lights, camera, meow! PURRR Adoption + Sanctuary (PURRR)",
+          "es": "¡Luces, cámara, maullido! PURRR Adoption + Sanctuary (PURRR)",
+          "pt": "Luzes, câmera, miado! PURRR Adoption + Sanctuary (PURRR)",
+          "fr": "Lumières, caméra, miaou! PURRR Adoption + Sanctuary (PURRR)"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1151203,
+        "lng": -80.1382475,
+        "category": "community"
+      },
+      {
+        "id": "rss_1791483641456_sez5",
+        "title": {
+          "en": "YMCA of South Florida’s 12th Annual Veterans Day Salute 11/6/26",
+          "es": "12º Saludo Anual del Día de los Veteranos de la YMCA del Sur de Florida 11/6/26",
+          "pt": "12º Saludo Anual do Dia dos Veteranos da YMCA do Sul da Flórida 11/6/26",
+          "fr": "12e Salut annuel de la Journée des anciens combattants de la YMCA du sud de la Floride 11/6/26"
+        },
+        "date": "2026-11-06",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/07/ymca-of-south-floridas-12th-annual-veterans-day-salute-11-6-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/2026-Save-the-Date-Veterans-Day-Salute-YMCASFL-sml-350x453.jpg",
+        "description": {
+          "en": "with RSVP Join us to honor our veterans and all",
+          "es": "con RSVP Únete a nosotros para honrar a nuestros veteranos y a todos",
+          "pt": "com RSVP Junte-se a nós para homenagear nossos veteranos e todos",
+          "fr": "avec RSVP Rejoignez-nous pour honorer nos vétérans et tous"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1791483641456_mffp",
+        "title": {
+          "en": "Salute to Vienna New Year’s Concert 1/2/27",
+          "es": "Homenaje al Concierto de Año Nuevo de Viena 1/2/27",
+          "pt": "Tributo ao Concerto de Ano Novo de Viena 1/2/27",
+          "fr": "Hommage au Concert du Nouvel An de Vienne 1/2/27"
+        },
+        "date": "2027-01-01",
+        "venue": "Adrienne Arsht Center for the Performing Arts of Miami-Dade County",
+        "address": "1300 Biscayne Blvd, Miami, Florida, 33132",
+        "url": "https://www.soulofmiami.org/2026/10/07/salute-to-vienna-new-years-concert-1-2-27/",
+        "free": false,
+        "price": "$59",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/STV2027_MAINPHOTO_under_1MB-350x233.jpg",
+        "description": {
+          "en": "– $188 A timeless tradition, a dazzling celebration, Salute to",
+          "es": "– $188 Una tradición atemporal, una celebración deslumbrante, Homenaje a",
+          "pt": "– $188 Uma tradição intemporal, uma celebração deslumbrante, Tributo a",
+          "fr": "– $188 Une tradition intemporelle, une célébration éblouissante, Hommage à"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7876286,
+        "lng": -80.1900593,
+        "category": "music"
+      },
+      {
+        "id": "rss_1791483641456_py9q",
+        "title": {
+          "en": "Golf for a Cause with Wonder Paws Rescue 10/17/26",
+          "es": "Golf por una Causa con Wonder Paws Rescue 10/17/26",
+          "pt": "Golfe por uma Causa com Wonder Paws Rescue 10/17/26",
+          "fr": "Golf pour une Cause avec Wonder Paws Rescue 10/17/26"
+        },
+        "date": "2026-10-17",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/07/golf-for-a-cause-with-wonder-paws-rescue-10-17-26/",
+        "free": false,
+        "price": "$75",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Wonder_Paws_Golf_Under_200KB-350x350.jpg",
+        "description": {
+          "en": "Join Wonder Paws Rescue for its annual charity golf tournament on Saturday, October",
+          "es": "Únete a Wonder Paws Rescue en su torneo anual de golf benéfico el sábado, 17 de octubre",
+          "pt": "Junte-se ao Wonder Paws Rescue no seu torneio de golfe beneficente anual no sábado, 17 de outubro",
+          "fr": "Rejoignez Wonder Paws Rescue pour son tournoi de golf caritatif annuel samedi 17 octobre"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1791483642146_d9to",
+        "title": {
+          "en": "CABRINI",
+          "es": "CABRINI",
+          "pt": "CABRINI",
+          "fr": "CABRINI"
+        },
+        "date": "2026-10-11",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcabrini-ft-lauderdale-florida-10-11-2026%2Fevent%2F0D00653DA521674C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/07d/fda8c807-42eb-4b81-9f16-f3a8367e107d_106371_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Parking is available in the Alvin Sherman Library parking garage using PayByPhone app or pay at booth. · Starts 14:00 · Rose & Alfred Miniaci Performing Arts Center",
+          "es": "El estacionamiento está disponible en el garaje de estacionamiento de la Biblioteca Alvin Sherman usando la aplicación PayByPhone o pagando en la caseta. · Comienza 14:00 · Rose & Alfred Miniaci Performing Arts Center",
+          "pt": "Estacionamento disponível no estacionamento da Biblioteca Alvin Sherman usando o aplicativo PayByPhone ou pagando no guichê. · Começa 14:00 · Rose & Alfred Miniaci Performing Arts Center",
+          "fr": "Le stationnement est disponible au garage de la bibliothèque Alvin Sherman en utilisant l'application PayByPhone ou en payant à la cabine. · Commence 14:00 · Rose & Alfred Miniaci Performing Arts Center"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.0884017,
+        "lng": -80.2461624
+      },
+      {
+        "id": "tm_1791483642146_40bb",
+        "title": {
+          "en": "Roberto Moldavsky",
+          "es": "Roberto Moldavsky",
+          "pt": "Roberto Moldavsky",
+          "fr": "Roberto Moldavsky"
+        },
+        "date": "2026-10-11",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Froberto-moldavsky-ft-lauderdale-florida-10-11-2026%2Fevent%2F0D006469E32FEA0F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Roberto Moldavsky llega a La Florida, Estados Unidos con una propuesta renovada que combina humor político, anécdotas familiares, confesiones sobre los cambios de la edad y su pelea permanente con las nuevas tecnologías. Con su estilo único y una mirada tan cercana como filosa, el comediante vuelve a escena para confirmar por qué es uno de los referentes más celebrados del humor nacional. Acompaña",
+          "es": "Roberto Moldavsky llega a La Florida, Estados Unidos con una propuesta renovada que combina humor político, anécdotas familiares, confesiones sobre los cambios de la edad y su pelea permanente con las nuevas tecnologías. Con su estilo único y una mirada tan cercana como filosa, el comediante vuelve a escena para confirmar por qué es uno de los referentes más celebrados del humor nacional.",
+          "pt": "Roberto Moldavsky chega a La Florida, Estados Unidos com uma proposta renovada que combina humor político, anedotas familiares, confissões sobre as mudanças da idade e sua luta permanente com as novas tecnologias. Com seu estilo único e um olhar tão próximo quanto aguçado, o comediante volta ao palco para confirmar por que é uma das maiores referências do humor nacional.",
+          "fr": "Roberto Moldavsky arrive à La Florida, États-Unis avec une proposition renouvelée qui combine l'humour politique, des anecdotes familiales, des confessions sur les changements de l'âge et sa lutte permanente contre les nouvelles technologies. Avec son style unique et un regard aussi proche que tranchant, le comédien revient sur scène pour confirmer pourquoi il est l'une des plus grandes références de l'humour national."
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.134246,
+        "lng": -80.136172
       }
     ]
   },
@@ -5772,31 +5916,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-07T18:22:25.002Z",
+    "fetchedAt": "2026-10-08T18:21:32.245Z",
     "items": [
       {
-        "id": "beach_crandon-park-south",
-        "type": "water_quality",
-        "severity": "advisory",
-        "title": {
-          "en": "CRANDON PARK - SOUTH — Water Quality Advisory",
-          "es": "CRANDON PARK - SOUTH — Aviso de Calidad del Agua",
-          "pt": "CRANDON PARK - SOUTH — Aviso de Qualidade da Água",
-          "fr": "CRANDON PARK - SOUTH — Avis de Qualité de l'Eau"
-        },
-        "detail": {
-          "en": "Elevated Enterococcus bacteria detected (104 CFU/100mL, sampled 2026-10-01). Health officials advise against swimming here until levels return to normal.",
-          "es": "Se detectaron niveles elevados de bacterias Enterococcus (104 UFC/100mL, muestreado el 2026-10-01). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
-          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (104 UFC/100mL, amostrado em 2026-10-01). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
-          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (104 UFC/100mL, échantillonné le 2026-10-01). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
-        },
-        "source": "Florida Dept. of Health — Healthy Beaches",
-        "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-south",
-        "effectiveAt": "2026-10-01",
-        "expiresAt": "2026-10-08T18:22:25.002Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.10af6cd096aa59d531600eef1f3086bb369bc5a0.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.49229713b893d0d2339d807a3b37744b2782ad08.002.1",
         "type": "weather",
         "severity": "minor",
         "title": {
@@ -5806,15 +5929,15 @@
           "fr": "Coastal Flood Statement"
         },
         "detail": {
-          "en": "* WHAT...Isolated minor coastal flooding expected.  * WHERE...Coastal Palm Beach County, Coastal Broward County, Coastal Miami Dade County and Far South Miami-Dade County.  * WHEN...From 4 PM EDT this afternoon through Thursday morning.  * IMPACTS...Some water on low lying roads and property.  * ADDITIONAL DETAILS...Minor coastal flooding is expected during the high tide cycle early this evening a",
-          "es": "* QUÉ...Se esperan inundaciones costeras menores aisladas. * DÓNDE...Zona costera del condado de Palm Beach, zona costera del condado de Broward, zona costera del condado de Miami-Dade y sur lejano del condado de Miami-Dade. * CUÁNDO...Desde las 4 PM EDT esta tarde hasta la mañana del jueves. * IMPACTOS...Agua en algunas carreteras y propiedades bajas. * DETALLES ADICIONALES...Se esperan inundaciones costeras menores durante el ciclo de marea alta a principios de esta noche.",
-          "pt": "* O QUÊ...Inundações costeiras menores isoladas esperadas. * ONDE...Costa do Condado de Palm Beach, costa do Condado de Broward, costa do Condado de Miami-Dade e extremo sul do Condado de Miami-Dade. * QUANDO...Das 16h EDT desta tarde até a manhã de quinta-feira. * IMPACTOS...Água em algumas estradas e propriedades baixas. * DETALHES ADICIONAIS...Inundações costeiras menores são esperadas durante o ciclo de maré alta no início desta noite.",
-          "fr": "* QUOI...Inondations côtières mineures et isolées attendues. * OÙ...Côte du comté de Palm Beach, côte du comté de Broward, côte du comté de Miami-Dade et extrême sud du comté de Miami-Dade. * QUAND...De 16h EDT cet après-midi jusqu'à jeudi matin. * IMPACTS...De l'eau sur certaines routes et propriétés basses. * DÉTAILS SUPPLÉMENTAIRES...Des inondations côtières mineures sont attendues pendant le cycle de marée haute en début de soirée."
+          "en": "* WHAT...Isolated minor coastal flooding.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County,\nCoastal Miami Dade County and Far South Miami-Dade County.\n\n* WHEN...Through Friday evening.\n\n* IMPACTS...Some water on low lying roads and property.",
+          "es": "* QUÉ...Inundaciones costeras menores aisladas.\n\n* DÓNDE...Condado costero de Palm Beach, Condado costero de Broward, Condado costero de Miami Dade y sur lejano del Condado de Miami-Dade.\n\n* CUÁNDO...Hasta el viernes por la noche.\n\n* IMPACTOS...Agua en caminos y propiedades bajas.",
+          "pt": "* O QUÊ...Enchentes costeiras menores isoladas.\n\n* ONDE...Condado costeiro de Palm Beach, Condado costeiro de Broward, Condado costeiro de Miami Dade e extremo sul do Condado de Miami-Dade.\n\n* QUANDO...Até sexta-feira à noite.\n\n* IMPACTOS...Água em estradas e propriedades baixas.",
+          "fr": "* QUOI...Inondations côtières mineures isolées.\n\n* OÙ...Comté côtier de Palm Beach, Comté côtier de Broward, Comté côtier de Miami Dade et extrême sud du Comté de Miami-Dade.\n\n* QUAND...Jusqu'à vendredi soir.\n\n* IMPACTS...Eau sur les routes et propriétés basses."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.10af6cd096aa59d531600eef1f3086bb369bc5a0.001.1",
-        "effectiveAt": "2026-10-07T08:26:00-04:00",
-        "expiresAt": "2026-10-08T00:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.49229713b893d0d2339d807a3b37744b2782ad08.002.1",
+        "effectiveAt": "2026-10-08T01:36:00-04:00",
+        "expiresAt": "2026-10-08T21:00:00.000Z"
       }
     ]
   }
