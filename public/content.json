@@ -1,32 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-09T17:54:43.730Z",
+    "lastUpdated": "2026-10-10T16:52:33.550Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-09T17:54:39.490Z",
+    "fetchedAt": "2026-10-10T16:52:29.232Z",
     "current": {
-      "temp_f": 86,
-      "feels_f": 94,
+      "temp_f": 88,
+      "feels_f": 97,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 78,
+      "humidity": 71,
       "wind_mph": 13,
-      "rain_chance": 13,
-      "weathercode": 1
+      "rain_chance": 21,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-10-09",
-        "high_f": 87,
-        "low_f": 79,
+        "date": "2026-10-10",
+        "high_f": 88,
+        "low_f": 81,
         "weathercode": 3,
-        "rain_chance": 13,
+        "rain_chance": 21,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -35,24 +35,11 @@
         }
       },
       {
-        "date": "2026-10-10",
-        "high_f": 85,
-        "low_f": 77,
-        "weathercode": 82,
-        "rain_chance": 37,
-        "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
-        }
-      },
-      {
         "date": "2026-10-11",
-        "high_f": 88,
-        "low_f": 80,
+        "high_f": 89,
+        "low_f": 79,
         "weathercode": 3,
-        "rain_chance": 32,
+        "rain_chance": 19,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -62,10 +49,10 @@
       },
       {
         "date": "2026-10-12",
-        "high_f": 87,
-        "low_f": 83,
+        "high_f": 86,
+        "low_f": 75,
         "weathercode": 3,
-        "rain_chance": 26,
+        "rain_chance": 33,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -77,70 +64,89 @@
         "date": "2026-10-13",
         "high_f": 85,
         "low_f": 81,
-        "weathercode": 3,
-        "rain_chance": 9,
+        "weathercode": 1,
+        "rain_chance": 5,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Mainly clear",
+          "es": "Mayormente despejado",
+          "pt": "Principalmente limpo",
+          "fr": "Principalement dégagé"
+        }
+      },
+      {
+        "date": "2026-10-14",
+        "high_f": 85,
+        "low_f": 79,
+        "weathercode": 51,
+        "rain_chance": 12,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "13:00",
-        "temp_f": 85,
-        "weathercode": 1,
-        "rain_chance": 7
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 86,
-        "weathercode": 1,
+        "hour": "12:00",
+        "temp_f": 87,
+        "weathercode": 0,
         "rain_chance": 9
       },
       {
+        "hour": "13:00",
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 8
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 6
+      },
+      {
         "hour": "15:00",
-        "temp_f": 86,
+        "temp_f": 88,
         "weathercode": 1,
-        "rain_chance": 13
+        "rain_chance": 6
       },
       {
         "hour": "16:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 87,
+        "weathercode": 1,
+        "rain_chance": 8
       },
       {
         "hour": "17:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 6
+        "temp_f": 86,
+        "weathercode": 3,
+        "rain_chance": 10
       },
       {
         "hour": "18:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 8
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 11
       },
       {
         "hour": "19:00",
-        "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 6
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "20:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 5
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 9
       },
       {
         "hour": "21:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 8
+        "temp_f": 82,
+        "weathercode": 1,
+        "rain_chance": 7
       },
       {
         "hour": "22:00",
@@ -150,87 +156,81 @@
       },
       {
         "hour": "23:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 13
+        "temp_f": 82,
+        "weathercode": 2,
+        "rain_chance": 12
       },
       {
         "hour": "00:00",
         "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 17
+        "rain_chance": 9
       },
       {
         "hour": "01:00",
-        "temp_f": 80,
-        "weathercode": 51,
-        "rain_chance": 18
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "02:00",
-        "temp_f": 79,
-        "weathercode": 82,
-        "rain_chance": 37
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 19
       },
       {
         "hour": "03:00",
-        "temp_f": 79,
-        "weathercode": 51,
-        "rain_chance": 36
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 78,
-        "weathercode": 82,
-        "rain_chance": 16
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 78,
-        "weathercode": 81,
-        "rain_chance": 18
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 77,
-        "weathercode": 53,
-        "rain_chance": 24
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 26
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 22
-      },
-      {
-        "hour": "09:00",
-        "temp_f": 79,
-        "weathercode": 3,
+        "temp_f": 81,
+        "weathercode": 2,
         "rain_chance": 14
       },
       {
-        "hour": "10:00",
-        "temp_f": 82,
-        "weathercode": 2,
+        "hour": "04:00",
+        "temp_f": 81,
+        "weathercode": 3,
         "rain_chance": 13
       },
       {
-        "hour": "11:00",
-        "temp_f": 85,
+        "hour": "05:00",
+        "temp_f": 81,
         "weathercode": 3,
-        "rain_chance": 16
+        "rain_chance": 12
       },
       {
-        "hour": "12:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 19
+        "hour": "06:00",
+        "temp_f": 80,
+        "weathercode": 1,
+        "rain_chance": 9
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 4
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 84,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 85,
+        "weathercode": 0,
+        "rain_chance": 2
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 1
       }
     ]
   },
@@ -3015,136 +3015,6 @@
         "category": "nightlife"
       },
       {
-        "id": "tm_1791041854916_fjvc",
-        "title": {
-          "en": "Breast Cancer's A Drag - Beauty, Bravery & Bold Entertainment",
-          "es": "Cáncer de Mama es un Drag - Belleza, Valentía y Entretenimiento Audaz",
-          "pt": "Câncer de Mama é um Drag - Beleza, Coragem e Entretenimento Ousado",
-          "fr": "Le Cancer du Sein c'est un Drag - Beauté, Courage et Divertissement Audacieux"
-        },
-        "date": "2026-10-09",
-        "venue": "Rose & Alfred Miniaci Performing Arts Center",
-        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbreast-cancers-a-drag-beauty-bravery-ft-lauderdale-florida-10-09-2026%2Fevent%2F0D0064FBEFBC969C&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/07d/fda8c807-42eb-4b81-9f16-f3a8367e107d_106371_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Parking is available in the Alvin Sherman Library parking garage using PayByPhone app or pay at booth. · Starts 19:00 · Rose & Alfred Miniaci Performing Arts Center",
-          "es": "El estacionamiento está disponible en el garaje de estacionamiento de la Biblioteca Alvin Sherman usando la aplicación PayByPhone o pagando en la caseta. · Comienza a las 19:00 · Rose & Alfred Miniaci Performing Arts Center",
-          "pt": "Estacionamento disponível na garagem de estacionamento da Biblioteca Alvin Sherman usando o aplicativo PayByPhone ou pagando no guichê. · Começa às 19:00 · Rose & Alfred Miniaci Performing Arts Center",
-          "fr": "Le stationnement est disponible au garage de stationnement de la Bibliothèque Alvin Sherman en utilisant l'application PayByPhone ou en payant au guichet. · Commence à 19:00 · Rose & Alfred Miniaci Performing Arts Center"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.0884017,
-        "lng": -80.2461624
-      },
-      {
-        "id": "tm_1791041854916_6jf7",
-        "title": {
-          "en": "Patti Smith",
-          "es": "Patti Smith",
-          "pt": "Patti Smith",
-          "fr": "Patti Smith"
-        },
-        "date": "2026-10-09",
-        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
-        "address": "1444 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZ_Fg&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ec5/a3a8a9ab-2de0-439e-9348-54e4a540bec5_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "es": "Música · Rock · Comienza 19:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "pt": "Música · Rock · Começa 19:00 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "fr": "Musique · Rock · Commence 19:00 · Ziff Ballet Opera House-Adrienne Arsht PAC"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.784901,
-        "lng": -80.189598
-      },
-      {
-        "id": "tm_1791041854916_ktha",
-        "title": {
-          "en": "Trap Karaoke: Miami Beach",
-          "es": "Trap Karaoke: Miami Beach",
-          "pt": "Trap Karaoke: Miami Beach",
-          "fr": "Trap Karaoke: Miami Beach"
-        },
-        "date": "2026-10-09",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Ftrap-karaoke-miami-beach-tickets-ZWX24Y%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/64c/76cc8226-9c36-4d1a-b616-d5acc3fa564c_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Hip-Hop/Rap · Starts 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Música · Hip-Hop/Rap · Comienza 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "pt": "Música · Hip-Hop/Rap · Começa 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "fr": "Musique · Hip-Hop/Rap · Commence 19:00 · The Fillmore Miami Beach at Jackie Gleason Theater"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.792917,
-        "lng": -80.13314
-      },
-      {
-        "id": "tm_1791041854916_u2xn",
-        "title": {
-          "en": "Aziz Ansari: Hypothetical Tour",
-          "es": "Aziz Ansari: Hypothetical Tour",
-          "pt": "Aziz Ansari: Hypothetical Tour",
-          "fr": "Aziz Ansari: Hypothetical Tour"
-        },
-        "date": "2026-10-09",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Faziz-ansari-hypothetical-tour-hollywood-florida-10-09-2026%2Fevent%2F0D0064FFCB3B96E7&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3f9/c644b0f2-8d68-4c2d-86ba-90151ef883f9_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Recommended for Ages 12 and Older · Starts 19:30 · Hard Rock Live",
-          "es": "Recomendado para mayores de 12 años · Comienza 19:30 · Hard Rock Live",
-          "pt": "Recomendado para maiores de 12 anos · Começa 19:30 · Hard Rock Live",
-          "fr": "Recommandé pour les 12 ans et plus · Commence 19:30 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1791041854916_xy4x",
-        "title": {
-          "en": "Ben Bankas",
-          "es": "Ben Bankas",
-          "pt": "Ben Bankas",
-          "fr": "Ben Bankas"
-        },
-        "date": "2026-10-09",
-        "venue": "Miami Improv",
-        "address": "3450 Northwest 83rd Ave, #224, Doral, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-b7d&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 19:30 · Miami Improv",
-          "es": "Comienza 19:30 · Miami Improv",
-          "pt": "Começa 19:30 · Miami Improv",
-          "fr": "Commence 19:30 · Miami Improv"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.797899,
-        "lng": -80.307098,
-        "category": "comedy"
-      },
-      {
         "id": "cp_1791041861053_ka03",
         "title": {
           "en": "First Friday @ 5",
@@ -3193,214 +3063,6 @@
         "lat": 25.7037558,
         "lng": -80.2895565,
         "category": "food-drink"
-      },
-      {
-        "id": "tm_1791130891516_hmuq",
-        "title": {
-          "en": "Jefferson Starship Runaway Again Tour 2026",
-          "es": "Jefferson Starship Gira Runaway Again 2026",
-          "pt": "Jefferson Starship Turnê Runaway Again 2026",
-          "fr": "Jefferson Starship Tournée Runaway Again 2026"
-        },
-        "date": "2026-10-09",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjefferson-starship-runaway-again-tour-2026-ft-lauderdale-florida-10-09-2026%2Fevent%2F0D0064ABA9638128&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d95/ad71a92f-acb4-4aaa-a1d2-17e720d27d95_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "One of the most successful arena rock groups of the 70s and 80s, earning 3 platinum and 8 gold records, as well as numerous Top 40 singles, Jefferson Starship broke onto the scene with a unique fusion of psychedelic and progressive rock. Praised for their electrifying performances and innovative sound, Jefferson Starship has captivated audiences with their iconic music and stage presence for 50 ye",
-          "es": "Uno de los grupos de rock de arena más exitosos de los años 70 y 80, con 3 discos de platino y 8 de oro, así como numerosos sencillos Top 40, Jefferson Starship irrumpió en la escena con una fusión única de rock psicodélico y progresivo. Elogiados por sus actuaciones electrizantes e innovador sonido, Jefferson Starship ha cautivado a audiencias con su música icónica y presencia en el escenario durante 50 años",
-          "pt": "Um dos grupos de rock arena mais bem-sucedidos dos anos 70 e 80, conquistando 3 discos de platina e 8 de ouro, além de inúmeros singles Top 40, Jefferson Starship surgiu na cena com uma fusão única de rock psicodélico e progressivo. Elogiados por suas apresentações eletrizantes e som inovador, Jefferson Starship cativou audiências com sua música icônica e presença no palco por 50 anos",
-          "fr": "L'un des groupes de rock arena les plus prospères des années 70 et 80, accumulant 3 disques de platine et 8 d'or, ainsi que de nombreux singles Top 40, Jefferson Starship a fait irruption sur la scène avec une fusion unique de rock psychédélique et progressif. Loués pour leurs performances électrisantes et leur son innovant, Jefferson Starship a captivé les audiences avec leur musique emblématique et leur présence sur scène pendant 50 ans"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
-        "id": "tm_1791130891516_0rgv",
-        "title": {
-          "en": "The 'From Whose Line Is It Anyway' Tour",
-          "es": "Gira 'From Whose Line Is It Anyway'",
-          "pt": "Turnê 'From Whose Line Is It Anyway'",
-          "fr": "Tournée 'From Whose Line Is It Anyway'"
-        },
-        "date": "2026-10-09",
-        "venue": "Coral Springs Center",
-        "address": "2855 Coral Springs Dr., Coral Springs, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7qoZv&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Starts 19:30 · Coral Springs Center",
-          "es": "Artes y Teatro · Comienza 19:30 · Coral Springs Center",
-          "pt": "Artes e Teatro · Começa 19:30 · Coral Springs Center",
-          "fr": "Arts et Théâtre · Commence 19:30 · Coral Springs Center"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.2738,
-        "lng": -80.256897
-      },
-      {
-        "id": "tm_1791130891516_rnir",
-        "title": {
-          "en": "El Perro del Hortelano",
-          "es": "El Perro del Hortelano",
-          "pt": "O Cão do Jardineiro",
-          "fr": "Le Chien du Jardinier"
-        },
-        "date": "2026-10-09",
-        "venue": "Aventura Arts & Cultural Center",
-        "address": "3385 NE 188th Street, Aventura, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fel-perro-del-hortelano-aventura-florida-10-09-2026%2Fevent%2F0D0064A7E15DF660&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/69a/7a93e05e-885e-4672-818f-f756f4d5269a_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Presented in Spanish with English supertitles Lope de Vega's El Perro del Hortelano (The Dog in the Manger) is a sparkling comedy of desire, jealousy, and power. Countess Diana of Belflor proudly guards her independence and rejects all noble suitors-until she discovers that her secretary, Teodoro, is in love with Marcela, one of her ladies-in-waiting. Caught between pride and passion, Diana launch",
-          "es": "Presentada en español con supertítulos en inglés. La comedia brillante de Lope de Vega sobre el deseo, los celos y el poder. La Condesa Diana de Belflor guarda orgullosamente su independencia y rechaza todos los pretendientes nobles, hasta que descubre que su secretario Teodoro está enamorado de Marcela, una de sus damas de compañía. Atrapada entre el orgullo y la pasión, Diana se lanza",
-          "pt": "Apresentada em espanhol com supertítulos em inglês. A comédia brilhante de Lope de Vega sobre desejo, ciúme e poder. A Condessa Diana de Belflor guarda orgulhosamente sua independência e rejeita todos os pretendentes nobres, até descobrir que seu secretário Teodoro está apaixonado por Marcela, uma de suas damas de companhia. Presa entre o orgulho e a paixão, Diana se lança",
-          "fr": "Présentée en espagnol avec des supertitres en anglais. La comédie brillante de Lope de Vega sur le désir, la jalousie et le pouvoir. La Comtesse Diana de Belflor garde fièrement son indépendance et rejette tous les prétendants nobles, jusqu'à découvrir que son secrétaire Teodoro est amoureux de Marcela, l'une de ses demoiselles de compagnie. Prise entre l'orgueil et la passion, Diana se lance"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.94960232,
-        "lng": -80.13458177
-      },
-      {
-        "id": "tm_1791130891516_j5ei",
-        "title": {
-          "en": "Black Country, New Road w/ Lily Seabird",
-          "es": "Black Country, New Road con Lily Seabird",
-          "pt": "Black Country, New Road com Lily Seabird",
-          "fr": "Black Country, New Road avec Lily Seabird"
-        },
-        "date": "2026-10-09",
-        "venue": "Miami Beach Bandshell",
-        "address": "7275 Collins Avenue, Miami Beach FL 33141, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7x9ef&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/10d/456042a5-c6ad-4ef6-aa5a-eefd64be010d_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 20:00 · Miami Beach Bandshell",
-          "es": "Música · Otro · Comienza 20:00 · Miami Beach Bandshell",
-          "pt": "Música · Outro · Começa 20:00 · Miami Beach Bandshell",
-          "fr": "Musique · Autre · Commence 20:00 · Miami Beach Bandshell"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.8619,
-        "lng": -80.1259
-      },
-      {
-        "id": "tm_1791130891516_88uc",
-        "title": {
-          "en": "Camilo - USA 2026 Tour",
-          "es": "Camilo - Gira USA 2026",
-          "pt": "Camilo - Turnê USA 2026",
-          "fr": "Camilo - Tournée USA 2026"
-        },
-        "date": "2026-10-09",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcamilo-usa-2026-tour-miami-florida-10-09-2026%2Fevent%2F0D006331BF132ABC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ac2/d1be5a0b-187f-4a66-bfa5-7d97e0f1aac2_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Latin · Starts 20:00 · Kaseya Center",
-          "es": "Música · Latino · Comienza 20:00 · Kaseya Center",
-          "pt": "Música · Latino · Começa 20:00 · Kaseya Center",
-          "fr": "Musique · Latino · Commence 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1791130891516_ccor",
-        "title": {
-          "en": "Friday Night Live - Improv Comedy Miami Show",
-          "es": "Friday Night Live - Show de Comedia Improvisada de Miami",
-          "pt": "Friday Night Live - Show de Comédia Improvisada de Miami",
-          "fr": "Friday Night Live - Spectacle de Comédie Improvisée de Miami"
-        },
-        "date": "2026-10-09",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14327484&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Friday Night Live! - Improv Comedy in Miami Show It's JTF's special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv that's perfect for your Friday night...LIVE! Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part ",
-          "es": "¡Viernes por la Noche en Vivo! - Comedia Improvisada en Miami. Es la combinación especial de JTF de improvisación corta y larga. Disfruta mientras nuestro elenco galardonado te trae una comedia improvisada fantástica perfecta para tu viernes por la noche... ¡EN VIVO! Nuestros espectáculos a menudo se describen como comedia improvisada rápida. Piénsalo como Whose Line is It Anyway combinado con SNL con mucha interacción divertida con la audiencia. Ven a ser parte",
-          "pt": "Friday Night Live! - Comédia Improvisada em Miami. É a combinação especial de JTF de improvisação curta e longa! Aproveite enquanto nosso elenco premiado traz uma comédia improvisada fantástica perfeita para sua noite de sexta-feira... AO VIVO! Nossos shows costumam ser descritos como comédia improvisada de ritmo rápido. Pense nisso como Whose Line is It Anyway encontra SNL com muita diversão e interação com o público. Venha fazer parte",
-          "fr": "Friday Night Live! - Comédie Improvisée à Miami. C'est la combinaison spéciale de JTF d'improvisation courte et longue ! Profitez pendant que notre distribution lauréate vous apporte une comédie improvisée fantastique parfaite pour votre vendredi soir... EN DIRECT ! Nos spectacles sont souvent décrits comme une comédie improvisée au rythme rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interactions amusantes avec le public. Venez faire partie"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
-        "id": "tm_1791130891516_n012",
-        "title": {
-          "en": "WORSHIP - Ages 18+",
-          "es": "WORSHIP - Mayores de 18+",
-          "pt": "WORSHIP - Maiores de 18+",
-          "fr": "WORSHIP - 18 ans et plus"
-        },
-        "date": "2026-10-09",
-        "venue": "Factory Town",
-        "address": "4800 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvovp&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/6c7/5ebcbe7d-bca7-4c4a-aa11-91ed452846c7_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Dance/Electronic · Starts 22:00 · Factory Town",
-          "es": "Música · Dance/Electrónico · Comienza 22:00 · Factory Town",
-          "pt": "Música · Dance/Eletrônico · Começa 22:00 · Factory Town",
-          "fr": "Musique · Dance/Électronique · Commence 22:00 · Factory Town"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.811899,
-        "lng": -80.238998
-      },
-      {
-        "id": "tm_1791130891516_tzpq",
-        "title": {
-          "en": "Alesso",
-          "es": "Alesso",
-          "pt": "Alesso",
-          "fr": "Alesso"
-        },
-        "date": "2026-10-09",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Falesso-liv-nightclub-miami-tickets%2F15014263&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b48/622b78a5-588f-4005-85b3-feef99fedb48_748731_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier asistente que no pueda presentar una identificación válida indicando que tiene al menos 21 años no será admitido y no será elegible para reembolso. · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer pessoa que não apresentar identificação válida indicando que tem pelo menos 21 anos não será admitida e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
       },
       {
         "id": "tm_1791130891516_f7j5",
@@ -3555,30 +3217,6 @@
         },
         "source": "Boca Raton",
         "category": "community"
-      },
-      {
-        "id": "rss_1791230872724_byef",
-        "title": {
-          "en": "Fashion Without Filters – The Truth Behind the Industry (Live Filmed Panel Discussion) 10/9/26",
-          "es": "Moda sin Filtros – La Verdad Detrás de la Industria (Panel en Vivo Filmado) 10/9/26",
-          "pt": "Moda Sem Filtros – A Verdade Por Trás da Indústria (Discussão em Painel ao Vivo Filmada) 10/9/26",
-          "fr": "Mode sans filtres – La vérité derrière l'industrie (Discussion en direct filmée) 10/9/26"
-        },
-        "date": "2026-10-09",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/10/04/fashion-without-filters-the-truth-behind-the-industry-live-filmed-panel-discussion-10-9-26/",
-        "free": false,
-        "price": "$54",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-03-at-11.58.29-350x438.jpeg",
-        "description": {
-          "en": "Fashion looks flawless. The industry isn’t. 🎭 Get the last remaining",
-          "es": "La moda se ve impecable. La industria no lo es. 🎭 Obtén los últimos",
-          "pt": "A moda parece impecável. A indústria não é. 🎭 Pegue os últimos",
-          "fr": "La mode semble impeccable. L'industrie ne l'est pas. 🎭 Obtenez les derniers"
-        },
-        "source": "Soul of Miami",
-        "category": "music"
       },
       {
         "id": "rss_1791230872724_kc26",
@@ -4713,78 +4351,6 @@
         "lng": -80.136172
       },
       {
-        "id": "rss_1791568432724_w0yu",
-        "title": {
-          "en": "Hop On & Honk at Free Truck Extravaganza in Fort Lauderdale",
-          "es": "¡Sube y Toca la Bocina en la Gran Extravaganza de Camiones Gratis en Fort Lauderdale",
-          "pt": "Suba e Buzine na Grande Extravagância de Caminhões Grátis em Fort Lauderdale",
-          "fr": "Montez et Klaxonnez à la Grande Extravagance des Camions Gratuits à Fort Lauderdale"
-        },
-        "date": "2026-10-09",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/truck-extravaganza-in-fort-lauderdale-is-a-free-event/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2022/10/truck-extravaganza-fort-lauderdale-florida.png",
-        "description": {
-          "en": "South Florida on the Cheap Fire trucks, a school bus and police vehicles are among the types of equipment on display at a free Truck Extravaganza in Fort Lauderdale. The Big Toy and Truck Extravaganza... Copyright South Florida on the Cheap. The post Hop On & Honk at Free Truck Extravaganza in Fort Lauderdale appeared first on South Florida on the Cheap.",
-          "es": "En el Sur de Florida Económico, camiones de bomberos, un autobús escolar y vehículos policiales están entre los tipos de equipos en exhibición en una Extravagancia de Camiones gratis en Fort Lauderdale. La Gran Extravagancia de Juguetes y Camiones...",
-          "pt": "No Sul da Flórida Barato, caminhões de bombeiros, um ônibus escolar e veículos policiais estão entre os tipos de equipamentos em exposição em uma Grande Extravagância de Caminhões gratuita em Fort Lauderdale. A Grande Extravagância de Brinquedos e Caminhões...",
-          "fr": "Au Sud de la Floride Économique, les camions de pompiers, un autobus scolaire et les véhicules de police sont parmi les types d'équipements exposés à la Grande Extravagance des Camions gratuits à Fort Lauderdale. La Grande Extravagance des Jouets et Camions..."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "rss_1791568432724_n7ib",
-        "title": {
-          "en": "Free live bands at TY Park in Hollywood",
-          "es": "Bandas en vivo gratis en TY Park en Hollywood",
-          "pt": "Bandas ao vivo grátis no TY Park em Hollywood",
-          "fr": "Groupes en direct gratuits au TY Park à Hollywood"
-        },
-        "date": "2026-10-09",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/live-music-ty-park-hollywood/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2021/11/Topeekeegee-Yugnee-Park-1.jpg",
-        "description": {
-          "en": "South Florida on the Cheap T-Y Park in Hollywood, featuring a lake and lots of shady trees, presents free live performances. Often food trucks are on site for the music events. Entry to T-Y Park... Copyright South Florida on the Cheap. The post Free live bands at TY Park in Hollywood appeared first on South Florida on the Cheap.",
-          "es": "En el Sur de Florida Económico, el Parque T-Y en Hollywood, que cuenta con un lago y muchos árboles frondosos, presenta presentaciones en vivo gratuitas. A menudo hay food trucks en el lugar para los eventos musicales.",
-          "pt": "No Sul da Flórida Barato, o Parque T-Y em Hollywood, apresentando um lago e muitas árvores frondosas, oferece apresentações ao vivo gratuitas. Frequentemente há food trucks no local para os eventos musicais.",
-          "fr": "Au Sud de la Floride Économique, le Parc T-Y à Hollywood, présentant un lac et beaucoup d'arbres ombragés, propose des spectacles en direct gratuits. Des food trucks sont souvent sur place pour les événements musicaux."
-        },
-        "source": "Miami on the Cheap",
-        "category": "music"
-      },
-      {
-        "id": "rss_1791568432724_6im5",
-        "title": {
-          "en": "Parade of Nations & entertainment at Hispanic Heritage Festival at ArtsPark in Hollywood",
-          "es": "Desfile de Naciones y entretenimiento en el Festival de Herencia Hispana en ArtsPark en Hollywood",
-          "pt": "Desfile das Nações e entretenimento no Festival de Herança Hispânica no ArtsPark em Hollywood",
-          "fr": "Défilé des Nations et divertissement au Festival du Patrimoine Hispanique à ArtsPark à Hollywood"
-        },
-        "date": "2026-10-09",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/parade-of-nations-entertainment-at-hispanic-heritage-festival-at-artspark-in-hollywood/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2025/09/melina-almodovar-.png",
-        "description": {
-          "en": "South Florida on the Cheap Lots of entertainment and a Parade of Nations are featured at the Hispanic Heritage Festival at ArtsPark in Hollywood. The festival in 2026 is 3 p.m. to 9 p.m. October... Copyright South Florida on the Cheap. The post Parade of Nations & entertainment at Hispanic Heritage Festival at ArtsPark in Hollywood appeared first on South Florida on the Cheap.",
-          "es": "En el Sur de Florida Económico, se presenta mucho entretenimiento y un Desfile de Naciones en el Festival de Herencia Hispana en ArtsPark en Hollywood. El festival en 2026 es de 3 p.m. a 9 p.m. en octubre...",
-          "pt": "No Sul da Flórida Barato, muito entretenimento e um Desfile das Nações são apresentados no Festival de Herança Hispânica no ArtsPark em Hollywood. O festival em 2026 é de 15h às 21h em outubro...",
-          "fr": "Au Sud de la Floride Économique, beaucoup de divertissement et un Défilé des Nations sont présentés au Festival du Patrimoine Hispanique à ArtsPark à Hollywood. Le festival en 2026 se déroule de 15h à 21h en octobre..."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
         "id": "rss_1791568432724_ql0x",
         "title": {
           "en": "MOAD + Kinetic Family Event 10/18/26",
@@ -4935,6 +4501,290 @@
         "category": "arts",
         "lat": 25.94960232,
         "lng": -80.13458177
+      },
+      {
+        "id": "rss_1791651105726_asgw",
+        "title": {
+          "en": "Fit For The Fight: A Miami Fitness Event to Support Breast Cancer Awareness 10/31/26",
+          "es": "Fit For The Fight: Un Evento de Fitness en Miami para Apoyar la Conciencia del Cáncer de Mama 10/31/26",
+          "pt": "Fit For The Fight: Um Evento de Fitness em Miami para Apoiar a Conscientização sobre o Câncer de Mama 10/31/26",
+          "fr": "Fit For The Fight: Un Événement de Fitness à Miami pour Soutenir la Sensibilisation au Cancer du Sein 10/31/26"
+        },
+        "date": "2026-10-31",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/09/fit-for-the-fight-a-miami-fitness-event-to-support-breast-cancer-awareness-10-31-26/",
+        "free": false,
+        "price": "$45",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Event-Flyer-333x500.png",
+        "description": {
+          "en": "Join us in pink this Halloween for Fit For",
+          "es": "Únete a nosotros en rosa este Halloween para Fit For",
+          "pt": "Junte-se a nós em rosa neste Halloween para Fit For",
+          "fr": "Rejoignez-nous en rose cet Halloween pour Fit For"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1791651105726_jqip",
+        "title": {
+          "en": "Coconut Grove Jewelry & Watch Show 11/13/26, 11/14/26, 11/15/26",
+          "es": "Exposición de Joyas y Relojes de Coconut Grove 11/13/26, 11/14/26, 11/15/26",
+          "pt": "Exposição de Joias e Relógios de Coconut Grove 11/13/26, 11/14/26, 11/15/26",
+          "fr": "Exposition de Bijoux et Montres de Coconut Grove 11/13/26, 11/14/26, 11/15/26"
+        },
+        "date": "2026-10-13",
+        "venue": "The Hangar at Regatta Harbour",
+        "address": "3385 Pan American Drive, Miami, Florida, 33133",
+        "url": "https://www.soulofmiami.org/2026/10/09/coconut-grove-jewelry-watch-show-11-13-26-11-14-26-11-15-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Coconut-Grove-Jewelry-Watch-Show-350x175.jpg",
+        "description": {
+          "en": "A little sparkle. A lot of history. Your next extraordinary find. The Coconut Grove",
+          "es": "Un poco de brillo. Mucha historia. Tu próximo descubrimiento extraordinario. El Coconut Grove",
+          "pt": "Um pouco de brilho. Muita história. Seu próximo achado extraordinário. O Coconut Grove",
+          "fr": "Un peu de brillance. Beaucoup d'histoire. Votre prochaine découverte extraordinaire. Le Coconut Grove"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7284643,
+        "lng": -80.2339205,
+        "category": "community"
+      },
+      {
+        "id": "rss_1791651105726_hkyt",
+        "title": {
+          "en": "OUTshine LGBTQ+ Film Festival Presents Before I Do Closing Film & Afterparty 10/25/26",
+          "es": "OUTshine Festival de Cine LGBTQ+ Presenta Before I Do Película de Cierre y Afterparty 10/25/26",
+          "pt": "OUTshine Festival de Cinema LGBTQ+ Apresenta Before I Do Filme de Encerramento e Afterparty 10/25/26",
+          "fr": "OUTshine Festival de Cinéma LGBTQ+ Présente Before I Do Film de Clôture et Afterparty 10/25/26"
+        },
+        "date": "2026-10-25",
+        "venue": "Little Haiti Cultural Complex",
+        "address": "212 NE 59th Terrace, Miami, Florida, 33137",
+        "url": "https://www.soulofmiami.org/2026/10/09/outshine-lgbtq-film-festival-presents-before-i-do-closing-film-afterparty-10-25-26/",
+        "free": false,
+        "price": "$40",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Before-I-Do-JPG-350x438.jpg",
+        "description": {
+          "en": "The OUTshine LGBTQ+ Film Festival Fall Edition presents the",
+          "es": "El Festival de Cine OUTshine LGBTQ+ Edición de Otoño presenta el",
+          "pt": "O Festival de Cinema OUTshine LGBTQ+ Edição de Outono apresenta o",
+          "fr": "Le Festival de Cinéma OUTshine LGBTQ+ Édition Automne présente le"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8301861,
+        "lng": -80.1914299,
+        "category": "nightlife"
+      },
+      {
+        "id": "tm_1791651106422_jhpk",
+        "title": {
+          "en": "Ben Bankas",
+          "es": "Ben Bankas",
+          "pt": "Ben Bankas",
+          "fr": "Ben Bankas"
+        },
+        "date": "2026-10-10",
+        "venue": "Miami Improv",
+        "address": "3450 Northwest 83rd Ave, #224, Doral, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-b7F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 19:00 · Miami Improv",
+          "es": "Comienza a las 19:00 · Miami Improv",
+          "pt": "Começa às 19:00 · Miami Improv",
+          "fr": "Commence à 19:00 · Miami Improv"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.797899,
+        "lng": -80.307098,
+        "category": "comedy"
+      },
+      {
+        "id": "tm_1791651106422_112n",
+        "title": {
+          "en": "El Perro del Hortelano",
+          "es": "El Perro del Hortelano",
+          "pt": "El Perro del Hortelano",
+          "fr": "El Perro del Hortelano"
+        },
+        "date": "2026-10-10",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fel-perro-del-hortelano-aventura-florida-10-10-2026%2Fevent%2F0D0064A7E160F66B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/5d1/553758ec-ee82-48e4-aa72-4b77ceef35d1_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Presented in Spanish with English supertitles Lope de Vega's El Perro del Hortelano (The Dog in the Manger) is a sparkling comedy of desire, jealousy, and power. Countess Diana of Belflor proudly guards her independence and rejects all noble suitors-until she discovers that her secretary, Teodoro, is in love with Marcela, one of her ladies-in-waiting. Caught between pride and passion, Diana launch",
+          "es": "Presentado en español con supertítulos en inglés. El Perro del Hortelano de Lope de Vega es una brillante comedia de deseo, celos y poder. La Condesa Diana de Belflor guarda orgullosamente su independencia y rechaza a todos los pretendientes nobles, hasta que descubre que su secretario, Teodoro, está enamorado de Marcela, una de sus damas de compañía. Atrapada entre el orgullo y la pasión, Diana lanza",
+          "pt": "Apresentado em espanhol com supertítulos em inglês. El Perro del Hortelano de Lope de Vega é uma brilhante comédia de desejo, ciúmes e poder. A Condessa Diana de Belflor guarda orgulhosamente sua independência e rejeita todos os pretendentes nobres, até que descobre que seu secretário, Teodoro, está apaixonado por Marcela, uma de suas damas de companhia. Presa entre o orgulho e a paixão, Diana lança",
+          "fr": "Présenté en espagnol avec des supertitres en anglais. El Perro del Hortelano de Lope de Vega est une brillante comédie de désir, de jalousie et de pouvoir. La Comtesse Diana de Belflor garde fierement son indépendance et rejette tous les prétendants nobles, jusqu'à ce qu'elle découvre que son secrétaire, Teodoro, est amoureux de Marcela, l'une de ses demoiselles de compagnie. Prise entre l'orgueil et la passion, Diana lance"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "tm_1791651106422_gtrn",
+        "title": {
+          "en": "Inter Miami CF vs New York City FC",
+          "es": "Inter Miami CF vs FC Nueva York",
+          "pt": "Inter Miami CF vs FC Nova York",
+          "fr": "Inter Miami CF vs FC New York"
+        },
+        "date": "2026-10-14",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-new-york-miami-florida-10-14-2026%2Fevent%2F0D0063739E5F6886&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
+          "es": "Para información sobre Suites llame al 305-428-0611. · Comienza 19:30 · Estadio Nu",
+          "pt": "Para informações sobre suítes, ligue para 305-428-0611. · Começa 19:30 · Estádio Nu",
+          "fr": "Pour plus d'informations sur les suites, appelez le 305-428-0611. · Commence 19:30 · Stade Nu"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
+      },
+      {
+        "id": "tm_1791651106422_wsq2",
+        "title": {
+          "en": "Miami Heat vs. Brooklyn Nets",
+          "es": "Miami Heat vs. Brooklyn Nets",
+          "pt": "Miami Heat vs. Brooklyn Nets",
+          "fr": "Miami Heat vs. Brooklyn Nets"
+        },
+        "date": "2026-10-14",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-heat-vs-brooklyn-nets-miami-florida-10-14-2026%2Fevent%2F0D0064A5AB2A9E04&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/599/f9331497-7667-4f9d-9d26-d144cb25a599_1339911_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Basketball · Starts 19:30 · Kaseya Center",
+          "es": "Deportes · Baloncesto · Comienza 19:30 · Centro Kaseya",
+          "pt": "Esportes · Basquete · Começa 19:30 · Centro Kaseya",
+          "fr": "Sports · Basket-ball · Commence 19:30 · Centre Kaseya"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1791651106422_mdss",
+        "title": {
+          "en": "Florida Panthers vs. Vancouver Canucks",
+          "es": "Florida Panthers vs. Vancouver Canucks",
+          "pt": "Florida Panthers vs. Vancouver Canucks",
+          "fr": "Florida Panthers vs. Vancouver Canucks"
+        },
+        "date": "2026-10-15",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J48Z&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Hockey · Starts 19:00 · Amerant Bank Arena",
+          "es": "Deportes · Hockey · Comienza 19:00 · Arena Amerant Bank",
+          "pt": "Esportes · Hóquei · Começa 19:00 · Arena Amerant Bank",
+          "fr": "Sports · Hockey · Commence 19:00 · Arène Amerant Bank"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1791651106422_gt7r",
+        "title": {
+          "en": "Friday First Admission for the 2026 Redland International Orchid Festival",
+          "es": "Primera Admisión de Viernes para el Festival Internacional de Orquídeas Redland 2026",
+          "pt": "Primeira Admissão de Sexta-feira para o Festival Internacional de Orquídeas Redland 2026",
+          "fr": "Première Admission du Vendredi pour le Festival International des Orchidées Redland 2026"
+        },
+        "date": "2026-10-16",
+        "venue": "Fruit and Spice Park",
+        "address": "24801 SW 187 Avenue, Homestead, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Ffriday-first-admission-for-the-2026-redland-international-orchid-festival-tickets-C92L71%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/732/d37f3fa7-208f-4c54-a2d6-cdc280c19732_106281_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Fairs & Festivals · Starts 09:00 · Fruit and Spice Park",
+          "es": "Varios · Ferias y Festivales · Comienza 09:00 · Parque Frutas y Especias",
+          "pt": "Diversos · Feiras e Festivais · Começa 09:00 · Parque Frutas e Especiarias",
+          "fr": "Divers · Foires et Festivals · Commence 09:00 · Parc des Fruits et Épices"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.5354661,
+        "lng": -80.4942107,
+        "category": "community"
+      },
+      {
+        "id": "tm_1791651106422_33hp",
+        "title": {
+          "en": "2026 Redland International Orchid Festival",
+          "es": "Festival Internacional de Orquídeas Redland 2026",
+          "pt": "Festival Internacional de Orquídeas Redland 2026",
+          "fr": "Festival International des Orchidées Redland 2026"
+        },
+        "date": "2026-10-16",
+        "venue": "Fruit and Spice Park",
+        "address": "24801 SW 187 Avenue, Homestead, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2F2026-redland-international-orchid-festival-tickets-L46PNC%3Fref%3Dticketmaster&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/732/d37f3fa7-208f-4c54-a2d6-cdc280c19732_106281_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Miscellaneous · Fairs & Festivals · Starts 12:00 · Fruit and Spice Park",
+          "es": "Varios · Ferias y Festivales · Comienza 12:00 · Parque Frutas y Especias",
+          "pt": "Diversos · Feiras e Festivais · Começa 12:00 · Parque Frutas e Especiarias",
+          "fr": "Divers · Foires et Festivals · Commence 12:00 · Parc des Fruits et Épices"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.5354661,
+        "lng": -80.4942107,
+        "category": "community"
+      },
+      {
+        "id": "tm_1791651106422_brfj",
+        "title": {
+          "en": "Miami City Ballet",
+          "es": "Ballet de la Ciudad de Miami",
+          "pt": "Ballet da Cidade de Miami",
+          "fr": "Ballet de la Ville de Miami"
+        },
+        "date": "2026-10-16",
+        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70J4N&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/889/70b973b9-9475-4efe-a67d-aa417e587889_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Starts 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "es": "Artes y Teatro · Comienza 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "pt": "Artes e Teatro · Começa 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "fr": "Arts et Théâtre · Commence 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.784901,
+        "lng": -80.189598
       }
     ]
   },
@@ -5838,10 +5688,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-09T17:54:39.491Z",
+    "fetchedAt": "2026-10-10T16:52:29.232Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.daa287eda6ebd9bc6f919cc94d0b7c9a7105d2d2.003.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.4625919330933f91c99d3f410cbce8c427999774.003.1",
         "type": "weather",
         "severity": "minor",
         "title": {
@@ -5851,15 +5701,15 @@
           "fr": "Coastal Flood Statement"
         },
         "detail": {
-          "en": "* WHAT...Isolated minor coastal flooding.\n\n* WHERE...Mainland Monroe, Coastal Broward County, Coastal Miami\nDade County and Far South Miami- Dade County.\n\n* WHEN...Through Saturday morning.\n\n* IMPACTS...Some water on low lying roads and property.",
-          "es": "* QUÉ...Inundaciones costeras menores aisladas.\n\n* DÓNDE...Tierra firme de Monroe, Condado costero de Broward, Condado costero de Miami-Dade y sur lejano del Condado de Miami-Dade.\n\n* CUÁNDO...Hasta el sábado por la mañana.\n\n* IMPACTOS...Agua en caminos y propiedades bajas.",
-          "pt": "* O QUÊ...Alagamentos costeiros menores isolados.\n\n* ONDE...Zona continental de Monroe, Condado costeiro de Broward, Condado costeiro de Miami-Dade e extremo sul do Condado de Miami-Dade.\n\n* QUANDO...Até sábado pela manhã.\n\n* IMPACTOS...Água em vias e propriedades baixas.",
-          "fr": "* QUOI...Inondations côtières mineures isolées.\n\n* OÙ...Terre ferme de Monroe, comté côtier de Broward, comté côtier de Miami-Dade et extrême sud du comté de Miami-Dade.\n\n* QUAND...Jusqu'à samedi matin.\n\n* IMPACTS...Eau sur les routes et propriétés basses."
+          "en": "* WHAT...Isolated minor coastal flooding.\n\n* WHERE...Mainland Monroe, Coastal Broward County, Coastal Miami\nDade County and Far South Miami-Dade County.\n\n* WHEN...Through Sunday morning.\n\n* IMPACTS...Some water on low lying roads and property.",
+          "es": "* QUÉ...Inundaciones costeras menores aisladas.\n\n* DÓNDE...Monroe continental, condado costero de Broward, condado costero de Miami-Dade y sur extremo del condado de Miami-Dade.\n\n* CUÁNDO...Hasta el domingo por la mañana.\n\n* IMPACTOS...Agua en caminos y propiedades bajos.",
+          "pt": "* O QUÊ...Inundações costeiras menores isoladas.\n\n* ONDE...Monroe continental, Condado costeiro de Broward, Condado costeiro de Miami-Dade e extremo sul do Condado de Miami-Dade.\n\n* QUANDO...Até domingo de manhã.\n\n* IMPACTOS...Água em estradas e propriedades baixas.",
+          "fr": "* QUOI...Inondations côtières mineures isolées.\n\n* OÙ...Monroe continental, Comté côtier de Broward, Comté côtier de Miami-Dade et extrême sud du Comté de Miami-Dade.\n\n* QUAND...Jusqu'à dimanche matin.\n\n* IMPACTS...Eau sur les routes et propriétés basses."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.daa287eda6ebd9bc6f919cc94d0b7c9a7105d2d2.003.1",
-        "effectiveAt": "2026-10-09T10:02:00-04:00",
-        "expiresAt": "2026-10-10T00:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4625919330933f91c99d3f410cbce8c427999774.003.1",
+        "effectiveAt": "2026-10-10T00:53:00-04:00",
+        "expiresAt": "2026-10-11T00:00:00.000Z"
       }
     ]
   }
