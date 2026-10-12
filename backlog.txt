@@ -1,6 +1,6 @@
 Miami Ride Companion — Backlog & Working Notes
 ================================================
-Last updated: 2026-07-19 (#84: offline event-image pre-caching actually works now — was silently CORS-blocked for every passenger)
+Last updated: 2026-10-11 (#85: Spotify Jam guide — idle card + sidebar button + 3-step guide, EN/ES/PT/FR, analytics)
 Owner: Abdullah
 
 
@@ -23,6 +23,19 @@ NEXT UP — open items, ranked  (updated 2026-07-13)
 ---------------------------------------------------
 Full notes for each item live in the numbered entries below (search "[ ] N.").
 Re-order freely; mark [X] when done.
+
+  1. [X] #85  Spotify Jam guide for passengers (DONE 2026-10-11, SW v1.93.0). A passenger
+       asked to "join your Jam" and could control the car's Spotify — turned that into a
+       feature. The 'spotify' attractor card now reads "Be the DJ on this ride" with a
+       Spotify icon + "Tap to see how" pill; tapping opens a 3-step guide modal (ask
+       driver to start a Jam → open Spotify w/ Bluetooth, tap Join or scan QR → add songs;
+       "Needs the Spotify app · free account works") that auto-closes after 30s. A green
+       "Play your music · Spotify Jam" sidebar button opens the same guide on demand
+       (no timer; idle attractor waits 2 min while it's open). EN/ES/PT/FR. Analytics:
+       attractor_spotify / jam_open_sidebar / jam_close taps + GA jam_guide_open; new
+       "Spotify Jam guide" card in the dashboard. Tests: tests/jam.spec.js (npm run
+       test:jam) + editor-units roll-up test. Mock: mocks/spotify-jam-card.html.
+       NOTE: "NEW" tag on the sidebar button — remove after a few weeks.
 
   1. [X] #84  Offline event-image pre-caching was silently broken for every passenger
        (surfaced by #83's investigation, fixed separately): prewarmEventImages()

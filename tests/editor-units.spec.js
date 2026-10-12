@@ -82,6 +82,18 @@ test.describe('Editor units: analytics roll-up', { tag: ['@editor', '@unit'] }, 
     expect(s.topVenues[0]).toMatchObject({ id: 'v1', taps: 2 });
   });
 
+  test('summarizeAnalytics counts Spotify Jam guide opens by source and closes', async ({ page }) => {
+    const s = await page.evaluate(() => summarizeAnalytics({
+      sessions: [{ duration: 30, lang: 'en', firstTap: 'jam_open_sidebar' }],
+      taps: [
+        { key: 'attractor_spotify' }, { key: 'attractor_spotify' },
+        { key: 'jam_open_sidebar' }, { key: 'jam_close' },
+      ],
+    }));
+    expect(s.jam).toEqual({ card: 2, sidebar: 1, closed: 1 });
+    expect(s.entryPoints[0][0]).toBe('Spotify Jam button');
+  });
+
   test('@negative summarizeAnalytics handles no data without dividing by zero', async ({ page }) => {
     const s = await page.evaluate(() => summarizeAnalytics({ sessions: [], taps: [] }));
     expect(s).toMatchObject({ sessions: 0, avgDuration: 0, qrTaps: 0 });

@@ -23,6 +23,7 @@
     "test:i18n": "playwright test --grep @i18n",
     "test:units": "playwright test --grep @unit",
     "test:feedback": "playwright test --grep @feedback",
+    "test:jam": "playwright test --grep @jam",
     "check:civicplus": "node scripts/check-civicplus-feeds.mjs"
   },
   "repository": {

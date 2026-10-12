@@ -504,6 +504,10 @@
           <div class="card-header"><div><div class="card-title">Driver page taps</div><div class="card-sub">Pets, your photo, and the contact QR codes</div></div></div>
           <div id="driver-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">No driver-page taps yet</div></div>
         </div>
+        <div class="card">
+          <div class="card-header"><div><div class="card-title">Spotify Jam guide</div><div class="card-sub">How passengers find the "join my Jam" instructions</div></div></div>
+          <div id="jam-tops"><div style="font-size:12px;color:var(--muted);padding:8px 0">Nobody has opened the Jam guide yet</div></div>
+        </div>
       </div>
       <div class="card">
         <div class="card-header">
@@ -1901,6 +1905,7 @@ function entryLabel(key) {
   if (key.startsWith('event_'))              return 'Event';
   if (key.startsWith('driver_pet_'))         return 'Pet photo';
   if (key === 'driver_photo')                return 'Driver photo';
+  if (key === 'jam_open_sidebar')            return 'Spotify Jam button';
   return key;
 }
 
@@ -1912,6 +1917,7 @@ function summarizeAnalytics({ sessions, taps, cycles = 0, feedback = [] }) {
   const gameOpens = {}, tapCounts = {};
   const driver = { pets: {}, photo: 0, qrThumbtack: 0, qrPhone: 0 };
   const qrCounts = {};
+  const jam = { card: 0, sidebar: 0, closed: 0 };  // Spotify Jam guide opens (idle card / sidebar) + manual closes
   let qrTaps = 0, heroQr = 0;
   for (const tp of taps) {
     const k = tp.key || '';
@@ -1926,6 +1932,9 @@ function summarizeAnalytics({ sessions, taps, cycles = 0, feedback = [] }) {
     }
     else if (k.startsWith('hero_qr_')) heroQr++;  // subset of qr_venue, not re-counted
     else if (k === 'driver_photo') driver.photo++;
+    else if (k === 'attractor_spotify') jam.card++;
+    else if (k === 'jam_open_sidebar') jam.sidebar++;
+    else if (k === 'jam_close') jam.closed++;
     else if (k.startsWith('driver_pet_')) driver.pets[k.slice(11)] = (driver.pets[k.slice(11)] || 0) + 1;
     else { const m = k.match(/^venue_(?!sheet_)(.+)$/); if (m) venueCounts[m[1]] = (venueCounts[m[1]] || 0) + 1; }
     const g = k.match(/^game_open_(.+)$/); if (g) gameOpens[g[1]] = (gameOpens[g[1]] || 0) + 1;
@@ -1979,7 +1988,7 @@ function summarizeAnalytics({ sessions, taps, cycles = 0, feedback = [] }) {
   const fb = { total: feedback.length, completed: completedFeedback.length, avgRating, ratingDist, topChips, recentComments };
 
   return { sessions: sessions.length, engagedSessions, cycles, engagementPct, avgDuration, qrTaps, qrBreakdown, heroQr,
-           tabCounts, langCounts, topVenues, entryPoints, games, driver, byDay, fb };
+           tabCounts, langCounts, topVenues, entryPoints, games, driver, jam, byDay, fb };
 }
 
 function renderBars(containerId, entries, colors) {
@@ -2037,6 +2046,12 @@ function renderAnalytics(data) {
   for (const [name, n] of Object.entries(s.driver.pets).sort((a, b) => b[1] - a[1]))
     driverRows.push([`Pet: ${name}`, n + ' taps']);
   renderKvList('driver-tops', driverRows, 'No driver-page taps yet');
+
+  const jamRows = [];
+  if (s.jam.card)    jamRows.push(['From idle card (auto-closes in 30s)', s.jam.card + ' opens']);
+  if (s.jam.sidebar) jamRows.push(['From sidebar button', s.jam.sidebar + ' opens']);
+  if (s.jam.closed)  jamRows.push(['Closed by passenger', s.jam.closed + ' closes']);
+  renderKvList('jam-tops', jamRows, 'Nobody has opened the Jam guide yet');
 
   renderKvList('day-tops', s.byDay.map(([d, n]) => [d, n + (n === 1 ? ' session' : ' sessions')]), 'No sessions yet');
 

@@ -70,6 +70,7 @@ await expect(locator).toHaveClass(/visible/);   // in tests
 ### Z-index layer cake
 ```
 80  — QR modal
+84  — Spotify Jam guide modal
 85  — Attractor overlay (idle screen)
 87  — Feedback teaser card
 88  — Feedback follow-up modal
@@ -137,6 +138,7 @@ All specs in `tests/`. Use `./fixtures` for flow tests (strict console-error gat
 npm test                  # all specs
 npm run test:index        # @index — full passenger app
 npm run test:feedback     # @feedback — ride feedback feature
+npm run test:jam          # @jam — Spotify Jam guide
 npm run test:games        # @games — all games
 npm run test:editor       # @editor — driver dashboard
 npm run test:backend      # @backend — Cloudflare Functions
@@ -162,4 +164,5 @@ npm run test:units        # @unit — pure function unit tests
 | `games-logic.spec.js` | @games @unit | Pure game logic (trivia scoring, word puzzle, etc.) |
 | `editor.spec.js` | @editor | PIN login, venue edit, publish flow |
 | `editor-units.spec.js` | @editor @unit | Editor helper functions |
+| `jam.spec.js` | @index @jam | Spotify Jam idle card, sidebar button, guide modal, auto-close, i18n |
 | `backend.spec.js` | @backend | Cloudflare Function helpers (no live network) |

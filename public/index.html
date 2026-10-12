@@ -1254,6 +1254,85 @@
       background: var(--gold); margin: 0 auto 22px;
     }
 
+    .attractor-cta {
+      align-items: center; gap: 8px; margin-top: 20px; padding: 9px 18px; border-radius: 999px;
+      font-size: 15px; font-weight: 600; color: #1DB954;
+      background: rgba(29,185,84,0.12); border: 1px solid rgba(29,185,84,0.35);
+    }
+
+    /* ── Spotify Jam: sidebar button + 3-step guide modal ──────── */
+    .jam-btn {
+      margin: 8px 14px 0; padding: 10px 12px; border-radius: 14px; position: relative;
+      display: flex; align-items: center; gap: 10px; cursor: pointer;
+      background: linear-gradient(135deg, rgba(29,185,84,0.22), rgba(29,185,84,0.06));
+      border: 1px solid rgba(29,185,84,0.5);
+      box-shadow: 0 0 0 4px rgba(29,185,84,0.12);
+      animation: jam-glow 2.4s ease-in-out infinite;
+    }
+    @keyframes jam-glow { 50% { box-shadow: 0 0 0 7px rgba(29,185,84,0.04); } }
+    .jam-btn:active { transform: scale(0.98); }
+    .jam-btn-icon {
+      width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+      background: #1DB954; display: flex; align-items: center; justify-content: center;
+    }
+    .jam-btn-icon i { font-size: 24px; color: var(--navy-deep); }
+    .jam-btn-title { font-size: 14px; font-weight: 700; color: white; line-height: 1.2; }
+    .jam-btn-sub { font-size: 11px; color: #1DB954; }
+    .jam-new-tag {
+      position: absolute; top: -7px; right: 10px; font-size: 9px; font-weight: 700;
+      letter-spacing: 1px; background: var(--pink); color: white; padding: 2px 6px; border-radius: 6px;
+    }
+    .jam-modal {
+      position: fixed; inset: 0; z-index: 84;
+      background: rgba(8,15,26,0.84); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 350ms ease;
+    }
+    .jam-modal.visible { opacity: 1; pointer-events: all; }
+    .jam-box {
+      background: var(--card-solid); border: 1px solid rgba(229,192,107,0.25); border-radius: 30px;
+      padding: 32px 40px 26px; width: min(760px, 92vw); max-height: 94vh; overflow-y: auto;
+      text-align: center; box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+    .jam-box::before {
+      content: ''; display: block; width: 40px; height: 2px; border-radius: 2px;
+      background: var(--gold); margin: 0 auto 18px;
+    }
+    .jam-logo { font-size: 56px; line-height: 1; color: #1DB954; margin-bottom: 10px; }
+    .jam-title { font-family: var(--font-display); font-size: 32px; color: var(--heading); font-weight: 500; line-height: 1.25; margin-bottom: 6px; }
+    .jam-sub { font-size: 16px; color: var(--muted); }
+    .jam-needs {
+      display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; padding: 7px 14px;
+      border-radius: 999px; font-size: 14px; color: var(--heading);
+      background: rgba(29,185,84,0.12); border: 1px solid rgba(29,185,84,0.35);
+    }
+    .jam-needs i { color: #1DB954; font-size: 18px; }
+    .jam-needs b { color: #1DB954; font-weight: 600; }
+    .jam-steps { list-style: none; text-align: left; margin: 20px 0 16px; padding: 0; display: grid; gap: 10px; }
+    .jam-step {
+      display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: center;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(229,192,107,0.14);
+      border-radius: 16px; padding: 12px 18px;
+    }
+    .jam-step-num {
+      width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 22px; color: var(--navy-deep); background: var(--gold);
+    }
+    .jam-step-title { font-size: 18px; font-weight: 600; color: var(--heading); margin-bottom: 2px; }
+    .jam-step-text { font-size: 15px; color: var(--muted); line-height: 1.45; }
+    .jam-step-text b { color: var(--heading); font-weight: 600; }
+    .jam-fine { font-size: 13px; color: var(--muted); opacity: 0.8; }
+    .jam-close {
+      margin-top: 16px; padding: 12px 34px; border-radius: 13px; border: none; cursor: pointer;
+      background: var(--teal); color: white; font-family: var(--font-body); font-size: 15px; font-weight: 600;
+    }
+    .jam-close:active { opacity: 0.85; }
+    .jam-countdown { height: 3px; border-radius: 3px; background: rgba(255,255,255,0.08); margin-top: 16px; overflow: hidden; display: none; }
+    .jam-countdown.running { display: block; }
+    .jam-countdown span { display: block; height: 100%; width: 100%; background: var(--teal); }
+    .jam-countdown.running span { animation: jam-drain 30s linear forwards; }
+    @keyframes jam-drain { from { width: 100%; } to { width: 0; } }
+
     /* ── Feedback: emoji row inside attractor card ──────────────── */
     .feedback-emoji-row {
       display: flex; justify-content: center; gap: 10px; margin-top: 18px;
@@ -2276,6 +2355,15 @@
         </div>
       </nav>
 
+      <div class="jam-btn" id="jam-btn" onclick="openJamGuide('sidebar')">
+        <div class="jam-btn-icon"><i class="ti ti-brand-spotify"></i></div>
+        <div>
+          <div class="jam-btn-title" id="jam-btn-title">Play your music</div>
+          <div class="jam-btn-sub">Spotify Jam</div>
+        </div>
+        <span class="jam-new-tag">NEW</span>
+      </div>
+
       <div class="driver-bubble" id="nav-driver" onclick="switchTab('driver')">
         <div class="driver-avatar" id="db-avatar">A</div>
         <div class="db-info">
@@ -3293,6 +3381,7 @@
     <div class="attractor-visual" id="attractor-visual">☀️</div>
     <div class="attractor-headline" id="attractor-headline">Miami weather right now</div>
     <div class="attractor-sub" id="attractor-sub">Tap to see the hourly forecast</div>
+    <div class="attractor-cta" id="attractor-cta" style="display:none"></div>
     <div class="feedback-emoji-row" id="attractor-emoji-row" style="display:none">
       <button class="feedback-emoji-btn" onclick="event.stopPropagation();onFeedbackEmoji(5)" title="Great">😄</button>
       <button class="feedback-emoji-btn" onclick="event.stopPropagation();onFeedbackEmoji(4)" title="Good">😊</button>
@@ -3302,6 +3391,24 @@
     </div>
   </div>
   <div class="attractor-hint" id="attractor-hint">Tap anywhere to browse</div>
+</div>
+
+<!-- ── Spotify Jam guide (opened from the attractor card or the sidebar button) ── -->
+<div class="jam-modal" id="jam-modal" onclick="closeJamGuide(true)">
+  <div class="jam-box" onclick="event.stopPropagation()">
+    <div class="jam-logo"><i class="ti ti-brand-spotify"></i></div>
+    <div class="jam-title" id="jam-title"></div>
+    <div class="jam-sub" id="jam-sub"></div>
+    <div class="jam-needs"><i class="ti ti-brand-spotify"></i><span id="jam-needs"></span></div>
+    <ol class="jam-steps">
+      <li class="jam-step"><div class="jam-step-num">1</div><div><div class="jam-step-title" id="jam-s1t"></div><div class="jam-step-text" id="jam-s1d"></div></div></li>
+      <li class="jam-step"><div class="jam-step-num">2</div><div><div class="jam-step-title" id="jam-s2t"></div><div class="jam-step-text" id="jam-s2d"></div></div></li>
+      <li class="jam-step"><div class="jam-step-num">3</div><div><div class="jam-step-title" id="jam-s3t"></div><div class="jam-step-text" id="jam-s3d"></div></div></li>
+    </ol>
+    <div class="jam-fine" id="jam-fine"></div>
+    <button class="jam-close" id="jam-close" onclick="closeJamGuide(true)"></button>
+    <div class="jam-countdown" id="jam-countdown"><span></span></div>
+  </div>
 </div>
 
 <!-- ── Feedback Follow-up Modal ── -->
@@ -3571,12 +3678,80 @@ const ATTRACTOR_HINT = {
   fr: 'Appuyez sur la carte pour explorer',
 };
 
-const ATTRACTOR_SPOTIFY_FLASH = {
-  en: { headline: 'Tell your driver! 🎵', sub: "Just say the word — I've got Spotify!" },
-  es: { headline: '¡Díselo a tu conductor! 🎵', sub: '¡Solo dilo — tengo Spotify!' },
-  pt: { headline: 'Fale com seu motorista! 🎵', sub: 'É só falar — tenho Spotify!' },
-  fr: { headline: 'Dites-le à votre chauffeur! 🎵', sub: "Il suffit de le dire — j'ai Spotify!" },
+// ── Spotify Jam guide ────────────────────────────────────────
+// Passengers can join the driver's Spotify Jam over Bluetooth and queue songs.
+// Opened from the 'spotify' attractor card (auto-closes after JAM_GUIDE_AUTO_MS)
+// or the sidebar button (stays until closed). Strings contain trusted <b> markup.
+const JAM_GUIDE_AUTO_MS = 30000;
+// Passengers set up the Jam on their own phone without touching the tablet, so the
+// idle attractor waits at least this long while the guide is open.
+const JAM_GUIDE_IDLE_MS = 120000;
+const JAM_STRINGS = {
+  btn: { en: 'Play your music', es: 'Pon tu música', pt: 'Toque sua música', fr: 'Votre musique' },
+  title: { en: 'Join the Jam in 3 steps', es: 'Únete a la Jam en 3 pasos', pt: 'Entre na Jam em 3 passos', fr: 'Rejoignez la Jam en 3 étapes' },
+  sub: { en: 'Control the music in the car from your own phone', es: 'Controla la música del auto desde tu propio teléfono', pt: 'Controle a música do carro pelo seu próprio celular', fr: 'Contrôlez la musique de la voiture depuis votre téléphone' },
+  needs: { en: 'Needs the Spotify app · <b>free account works</b>', es: 'Necesitas la app de Spotify · <b>la cuenta gratis funciona</b>', pt: 'Precisa do app do Spotify · <b>conta grátis funciona</b>', fr: "Nécessite l'appli Spotify · <b>un compte gratuit suffit</b>" },
+  s1t: { en: 'Ask your driver to start a Jam', es: 'Pídele a tu conductor que inicie una Jam', pt: 'Peça ao motorista para iniciar uma Jam', fr: 'Demandez à votre chauffeur de lancer une Jam' },
+  s1d: { en: 'Just say <b>"Can I join your Jam?"</b>', es: 'Solo di <b>"¿Me puedo unir a tu Jam?"</b>', pt: 'É só dizer <b>"Posso entrar na sua Jam?"</b>', fr: 'Dites simplement <b>« Je peux rejoindre votre Jam? »</b>' },
+  s2t: { en: 'Open Spotify on your phone', es: 'Abre Spotify en tu teléfono', pt: 'Abra o Spotify no seu celular', fr: 'Ouvrez Spotify sur votre téléphone' },
+  s2d: { en: "Turn on <b>Bluetooth</b> and tap <b>Join</b> when the Jam pops up — or scan the QR code on your driver's phone", es: 'Activa el <b>Bluetooth</b> y toca <b>Unirse</b> cuando aparezca la Jam — o escanea el código QR en el teléfono de tu conductor', pt: 'Ative o <b>Bluetooth</b> e toque em <b>Entrar</b> quando a Jam aparecer — ou escaneie o QR code no celular do motorista', fr: 'Activez le <b>Bluetooth</b> et appuyez sur <b>Rejoindre</b> quand la Jam apparaît — ou scannez le QR code sur le téléphone de votre chauffeur' },
+  s3t: { en: 'Add your songs', es: 'Agrega tus canciones', pt: 'Adicione suas músicas', fr: 'Ajoutez vos chansons' },
+  s3d: { en: 'Search and add to the queue — they play through the car speakers. You can skip too!', es: 'Busca y agrégalas a la cola — suenan por los parlantes del auto. ¡También puedes saltar canciones!', pt: 'Pesquise e adicione à fila — elas tocam nos alto-falantes do carro. Dá pra pular também!', fr: "Cherchez et ajoutez-les à la file d'attente — elles passent sur les haut-parleurs de la voiture. Vous pouvez aussi passer des titres!" },
+  fine: { en: 'No Premium needed to join in person', es: 'No necesitas Premium para unirte en persona', pt: 'Não precisa de Premium para entrar presencialmente', fr: 'Pas besoin de Premium pour rejoindre sur place' },
+  close: { en: 'Got it', es: 'Entendido', pt: 'Entendi', fr: 'Compris' },
 };
+let jamGuideTimer = null;
+
+function renderJamStrings() {
+  const set = (id, key) => { const el = document.getElementById(id); if (el) el.innerHTML = aL(JAM_STRINGS[key]); };
+  set('jam-btn-title', 'btn');
+  set('jam-title', 'title'); set('jam-sub', 'sub'); set('jam-needs', 'needs');
+  set('jam-s1t', 's1t'); set('jam-s1d', 's1d');
+  set('jam-s2t', 's2t'); set('jam-s2d', 's2d');
+  set('jam-s3t', 's3t'); set('jam-s3d', 's3d');
+  set('jam-fine', 'fine'); set('jam-close', 'close');
+}
+
+// source: 'attractor' (timed, 30s) | 'sidebar' (stays until closed)
+function openJamGuide(source) {
+  renderJamStrings();
+  clearTimeout(jamGuideTimer);
+  const bar = document.getElementById('jam-countdown');
+  bar.classList.remove('running');
+  if (source === 'attractor') {
+    void bar.offsetWidth;  // restart the drain animation
+    bar.classList.add('running');
+    jamGuideTimer = setTimeout(() => closeJamGuide(false), JAM_GUIDE_AUTO_MS);
+  } else {
+    logTap('jam_open_sidebar');
+  }
+  track('jam_guide_open', { source });
+  document.getElementById('jam-modal').classList.add('visible');
+  if (!attractorActive) resetInactivity();  // re-arm idle with the longer guide delay
+}
+
+function jamGuideOpen() {
+  const modal = document.getElementById('jam-modal');
+  return !!(modal && modal.classList.contains('visible'));
+}
+
+// manual: true when the passenger closed it (button/backdrop), false on auto-close / idle
+function closeJamGuide(manual) {
+  if (!hideJamGuide()) return;
+  if (manual) logTap('jam_close');
+  else resetInactivity();
+}
+
+// Hide with no side effects (used when the idle flow takes over). Returns true if it was open.
+function hideJamGuide() {
+  const modal = document.getElementById('jam-modal');
+  if (!modal || !modal.classList.contains('visible')) return false;
+  clearTimeout(jamGuideTimer);
+  jamGuideTimer = null;
+  modal.classList.remove('visible');
+  document.getElementById('jam-countdown').classList.remove('running');
+  return true;
+}
 
 // ── Language cards (always first in each cycle, rotating L0→L1→L2→L0) ──────
 const ATTRACTOR_LANG_CARDS = [
@@ -3733,9 +3908,11 @@ function buildContentCards() {
       sub:      { en: 'Drop discs, connect 4 in a row — challenge your fellow passenger!\n🔴🟡', es: 'Deja caer fichas y conecta 4 en fila — ¡reta a tu compañero!\n🔴🟡', pt: 'Solte discos e conecte 4 em linha — desafie seu companheiro!\n🔴🟡', fr: 'Faites tomber des jetons, alignez 4 — défiez votre voisin!\n🔴🟡' },
       action: () => openGame('c4') },
 
-    { id: 'spotify', visual: '🎵',
-      headline: { en: 'Want to hear a song?', es: '¿Quieres escuchar una canción?', pt: 'Quer ouvir uma música?', fr: 'Vous voulez écouter une chanson?' },
-      sub:      { en: "Tell your driver — I have Spotify and I'm taking requests! 🎶", es: '¡Dile a tu conductor — tengo Spotify y acepto solicitudes! 🎶', pt: 'Fale com seu motorista — tenho Spotify e aceito pedidos! 🎶', fr: "Dites-le à votre chauffeur — j'ai Spotify et j'accepte les demandes! 🎶" },
+    { id: 'spotify',
+      visualHtml: '<i class="ti ti-brand-spotify" style="color:#1DB954"></i>',
+      cta:      { en: '▶ Tap to see how', es: '▶ Toca para ver cómo', pt: '▶ Toque para ver como', fr: '▶ Appuyez pour voir comment' },
+      headline: { en: 'Be the DJ on this ride', es: 'Sé el DJ de este viaje', pt: 'Seja o DJ desta corrida', fr: 'Soyez le DJ de ce trajet' },
+      sub:      { en: "Your driver has Spotify. Join the car's Jam from your phone and queue up your own songs! 🎶", es: 'Tu conductor tiene Spotify. ¡Únete a la Jam del auto desde tu teléfono y pon tus propias canciones! 🎶', pt: 'Seu motorista tem Spotify. Entre na Jam do carro pelo seu celular e coloque suas próprias músicas! 🎶', fr: 'Votre chauffeur a Spotify. Rejoignez la Jam de la voiture depuis votre téléphone et ajoutez vos propres chansons! 🎶' },
       action: 'spotify' },
 
     { id: 'qr', visual: '📱',
@@ -3824,6 +4001,9 @@ function renderAttractorCard(card) {
   headlineEl.textContent = aL(card.headline);
   subEl.textContent      = aL(card.sub);
   emojiRow.style.display = card.isFeedback ? 'flex' : 'none';
+  const ctaEl = document.getElementById('attractor-cta');
+  ctaEl.textContent   = card.cta ? aL(card.cta) : '';
+  ctaEl.style.display = card.cta ? 'inline-flex' : 'none';
 }
 
 function cycleAttractorCard() {
@@ -3837,6 +4017,7 @@ function cycleAttractorCard() {
 
 function showAttractor() {
   if (restActive) return;
+  hideJamGuide();
   attractorInCycle = 0;  // always rebuild content cards with fresh dates
   attractorActive = true;
   track('attractor_shown');
@@ -3882,15 +4063,10 @@ function onAttractorTap() {
   }
 
   if (card.action === 'spotify') {
-    const flash = ATTRACTOR_SPOTIFY_FLASH[lang] || ATTRACTOR_SPOTIFY_FLASH.en;
-    document.getElementById('attractor-visual').textContent = '🎶';
-    document.getElementById('attractor-headline').textContent = flash.headline;
-    document.getElementById('attractor-sub').textContent = flash.sub;
-    clearInterval(attractorCardTimer);
-    clearTimeout(attractorDoneTimer);
-    currentAttractorCard = null;
+    hideAttractor();
     logTap('attractor_spotify');
-    setTimeout(() => { hideAttractor(); resetInactivity(); }, 2000);
+    track('attractor_tap', { card_id: card.id });
+    openJamGuide('attractor');
     return;
   }
 
@@ -4450,6 +4626,7 @@ function applyStrings() {
     el.textContent = t(key);
   });
   updateGreeting();
+  renderJamStrings();
 }
 
 // ════════════════════════════════════════════════════════════
@@ -7751,7 +7928,8 @@ function resetInactivity() {
   clearInterval(countdownTimer);
   dismissInactivity(true);
   hideAttractor();
-  inactivityTimer = setTimeout(showAttractor, attractorDelayMs());
+  const idleMs = jamGuideOpen() ? Math.max(attractorDelayMs(), JAM_GUIDE_IDLE_MS) : attractorDelayMs();
+  inactivityTimer = setTimeout(showAttractor, idleMs);
 }
 
 function showInactivityModal() {
@@ -7759,6 +7937,7 @@ function showInactivityModal() {
   // Close any open game screen, QR modal, venue detail sheet, or advisories overlay
   closeGames();
   document.getElementById('qr-modal').classList.remove('open');
+  hideJamGuide();
   closeVenueSheet();
   document.getElementById('advisories-overlay').classList.remove('visible');
 

@@ -7,6 +7,49 @@ Read this for context on why things are the way they are; not for daily work.
 
 ## Completed Items
 
+### [X] #85 Spotify Jam guide — idle card, sidebar button, 3-step guide  *(DONE 2026-10-11, SW v1.93.0)*
+
+A passenger asked "Can I join your Jam?" and was able to control the car's Spotify. Spotify **Jam**
+(host needs Premium; in-person guests can join on free Spotify via Bluetooth proximity "Join" prompt
+or the host's QR code; guests can play/pause/skip/add/reorder, only the host controls volume — per
+support.spotify.com/us/article/jam/). The old 'spotify' attractor card just said "tell your driver,
+I take requests" and flashed "Tell your driver!" for 2s on tap.
+
+**Changes (`public/index.html`):**
+- `buildContentCards()` 'spotify' card: new copy "Be the DJ on this ride" / "Your driver has Spotify.
+  Join the car's Jam…", `ti-brand-spotify` icon via `visualHtml`, and a new optional `cta` field
+  (rendered into new `#attractor-cta` pill by `renderAttractorCard()`; hidden for cards without one).
+- Removed `ATTRACTOR_SPOTIFY_FLASH`. `onAttractorTap()` spotify branch now hides the attractor, logs
+  `attractor_spotify`, and calls `openJamGuide('attractor')`.
+- New `#jam-modal` (z-index 84, `visible` class pattern) with `JAM_STRINGS` (EN/ES/PT/FR, trusted
+  `<b>` markup), `renderJamStrings()` (called from `applyStrings()` so language switches re-render),
+  `openJamGuide(source)`, `closeJamGuide(manual)`, `hideJamGuide()`, `jamGuideOpen()`.
+- Attractor entry auto-closes after `JAM_GUIDE_AUTO_MS` = 30s (teal drain bar shows time left).
+  Sidebar entry has no timer.
+- New sidebar button `#jam-btn` ("Play your music · Spotify Jam", green, glowing, "NEW" tag) between
+  the nav links and the driver bubble — visible on every tab.
+- Idle handling: `resetInactivity()` uses `max(attractorDelay, JAM_GUIDE_IDLE_MS=120s)` while the
+  guide is open — content.json `attractorDelay` is 30s, which would otherwise yank the guide away
+  while the passenger is setting up the Jam on their own phone (caught by the auto-close test).
+  `showAttractor()` and `showInactivityModal()` call `hideJamGuide()`.
+
+**Analytics:** IndexedDB taps `attractor_spotify` (card → guide), `jam_open_sidebar` (sidebar; opens a
+session), `jam_close` (passenger closed it manually; auto-close isn't logged). GA `jam_guide_open
+{source}`. `public/editor.html`: `summarizeAnalytics()` returns `jam: {card, sidebar, closed}`,
+rendered in a new "Spotify Jam guide" dashboard card; `entryLabel('jam_open_sidebar')` →
+"Spotify Jam button".
+
+**Tests:** new `tests/jam.spec.js` (@index @jam, 8 tests: card render + CTA, attractor tap → guide
+with countdown, sidebar open/close + tap keys, backdrop vs inside tap, attractor closes guide,
+30s auto-close vs 2-min sidebar idle via `page.clock`, translation completeness, language re-render);
+`tests/editor-units.spec.js` Jam roll-up test. New script `npm run test:jam`. Full @index/@editor run:
+152 passed, 1 pre-existing unrelated failure (local content.json has stale July events —
+"published events are all upcoming").
+
+**Mock:** `mocks/spotify-jam-card.html`. **Follow-up:** remove the "NEW" tag after a few weeks.
+
+---
+
 ### [X] #84 Offline event-image pre-caching fixed — was silently CORS-blocked for every passenger  *(DONE 2026-07-19, SW v1.92.0)*
 
 Follow-up to [[#83]]'s investigation, which surfaced this as a real product bug distinct from the
