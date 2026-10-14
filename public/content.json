@@ -1,13 +1,13 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-13T18:48:34.125Z",
+    "lastUpdated": "2026-10-14T16:24:33.716Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-13T18:48:33.445Z",
+    "fetchedAt": "2026-10-14T16:24:32.571Z",
     "current": {
-      "temp_f": 87,
+      "temp_f": 84,
       "feels_f": 92,
       "description": {
         "en": "Current conditions",
@@ -15,57 +15,18 @@
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 58,
-      "wind_mph": 12,
-      "rain_chance": 3,
-      "weathercode": 0
+      "humidity": 77,
+      "wind_mph": 8,
+      "rain_chance": 16,
+      "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-10-13",
-        "high_f": 89,
-        "low_f": 74,
-        "weathercode": 3,
-        "rain_chance": 3,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-10-14",
-        "high_f": 87,
-        "low_f": 72,
-        "weathercode": 3,
-        "rain_chance": 15,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-10-15",
         "high_f": 86,
-        "low_f": 75,
-        "weathercode": 55,
-        "rain_chance": 26,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
-        "date": "2026-10-16",
-        "high_f": 86,
-        "low_f": 83,
+        "low_f": 76,
         "weathercode": 51,
-        "rain_chance": 36,
+        "rain_chance": 16,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -74,11 +35,50 @@
         }
       },
       {
-        "date": "2026-10-17",
+        "date": "2026-10-15",
+        "high_f": 88,
+        "low_f": 77,
+        "weathercode": 51,
+        "rain_chance": 30,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-10-16",
         "high_f": 86,
+        "low_f": 78,
+        "weathercode": 53,
+        "rain_chance": 21,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
+      },
+      {
+        "date": "2026-10-17",
+        "high_f": 87,
         "low_f": 82,
+        "weathercode": 51,
+        "rain_chance": 72,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-10-18",
+        "high_f": 82,
+        "low_f": 81,
         "weathercode": 95,
-        "rain_chance": 73,
+        "rain_chance": 78,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -89,148 +89,148 @@
     ],
     "hourly": [
       {
+        "hour": "12:00",
+        "temp_f": 84,
+        "weathercode": 1,
+        "rain_chance": 6
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 85,
+        "weathercode": 1,
+        "rain_chance": 10
+      },
+      {
         "hour": "14:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 85,
+        "weathercode": 3,
+        "rain_chance": 16
       },
       {
         "hour": "15:00",
-        "temp_f": 87,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 84,
+        "weathercode": 51,
+        "rain_chance": 15
       },
       {
         "hour": "16:00",
-        "temp_f": 86,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 13
       },
       {
         "hour": "17:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 83,
+        "weathercode": 2,
+        "rain_chance": 10
       },
       {
         "hour": "18:00",
-        "temp_f": 84,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 8
       },
       {
         "hour": "19:00",
         "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 3,
+        "rain_chance": 6
       },
       {
         "hour": "20:00",
         "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 1
+        "weathercode": 3,
+        "rain_chance": 5
       },
       {
         "hour": "21:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 74,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 73,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 73,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 73,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 73,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 74,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "09:00",
         "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 2
-      },
-      {
-        "hour": "10:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 84,
-        "weathercode": 0,
+        "weathercode": 1,
         "rain_chance": 6
       },
       {
-        "hour": "12:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 4
+        "hour": "22:00",
+        "temp_f": 79,
+        "weathercode": 1,
+        "rain_chance": 8
       },
       {
-        "hour": "13:00",
-        "temp_f": 87,
+        "hour": "23:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 8
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 12
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 21
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 27
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 78,
         "weathercode": 1,
-        "rain_chance": 4
+        "rain_chance": 30
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 17
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 15
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 10
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 8
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 83,
+        "weathercode": 0,
+        "rain_chance": 11
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 84,
+        "weathercode": 1,
+        "rain_chance": 6
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 83,
+        "weathercode": 2,
+        "rain_chance": 9
       }
     ]
   },
@@ -2365,32 +2365,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1790179156218_968n",
-        "title": {
-          "en": "Photography Today – Artist Studio Visit with Anastasia Samoylova 10/13/26",
-          "es": "Fotografía Hoy – Visita al Estudio del Artista con Anastasia Samoylova 10/13/26",
-          "pt": "Fotografia Hoje – Visita ao Estúdio da Artista com Anastasia Samoylova 10/13/26",
-          "fr": "Photographie Aujourd'hui – Visite de Studio d'Artiste avec Anastasia Samoylova 10/13/26"
-        },
-        "date": "2026-10-13",
-        "venue": "Green Space Miami Miami, FL",
-        "address": "7200 Biscayne Boulevard Miami, FL, miami, Florida, 33138",
-        "url": "https://www.soulofmiami.org/2026/09/22/photography-today-artist-studio-visit-with-anastasia-samoylova-10-13-26/",
-        "free": false,
-        "price": "$150",
-        "image": "",
-        "description": {
-          "en": "Visit the studio of the acclaimed photographer and explore artistic",
-          "es": "Visita el estudio de la aclamada fotógrafa y explora el artístico",
-          "pt": "Visite o estúdio da aclamada fotógrafa e explore o artístico",
-          "fr": "Visitez l'atelier de la photographe acclamée et explorez l'artistique"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.8413578,
-        "lng": -80.1846388,
-        "category": "community"
-      },
-      {
         "id": "rss_1790266998146_ii4h",
         "title": {
           "en": "Howl-O-Ween Paws Patio™ 10/28/26",
@@ -2991,58 +2965,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1791397264547_djjp",
-        "title": {
-          "en": "WEEZER- The Gathering",
-          "es": "WEEZER- The Gathering",
-          "pt": "WEEZER- The Gathering",
-          "fr": "WEEZER- The Gathering"
-        },
-        "date": "2026-10-13",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fweezer-tickets%2Fsunrise-florida-amerant-bank-arena-2026-10-13-7-pm%2Fconcert%2F18128599&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/a2e/4990f811-a315-4173-adcf-405a96de3a2e_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:00 · Amerant Bank Arena ",
-          "es": "Música · Rock · Comienza a las 19:00 · Amerant Bank Arena",
-          "pt": "Música · Rock · Começa às 19:00 · Amerant Bank Arena",
-          "fr": "Musique · Rock · Commence à 19:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.155362,
-        "lng": -80.33023
-      },
-      {
-        "id": "tm_1791397264547_0y13",
-        "title": {
-          "en": "KATSEYE: THE WILDWORLD TOUR",
-          "es": "KATSEYE: THE WILDWORLD TOUR",
-          "pt": "KATSEYE: THE WILDWORLD TOUR",
-          "fr": "KATSEYE: THE WILDWORLD TOUR"
-        },
-        "date": "2026-10-13",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fkatseye-the-wildworld-tour-miami-florida-10-13-2026%2Fevent%2F0D0064ABEED4E240&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/13f/9786b713-3692-4a92-8b10-90c5c944813f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:00 · Kaseya Center",
-          "es": "Música · Pop · Comienza 20:00 · Kaseya Center",
-          "pt": "Música · Pop · Começa 20:00 · Kaseya Center",
-          "fr": "Musique · Pop · Commence 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "tm_1791397264547_b9wj",
         "title": {
           "en": "Freya Skye - Stars Align Tour",
@@ -3581,32 +3503,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1791568433304_t0am",
-        "title": {
-          "en": "Buena Vista Social Club (Touring)",
-          "es": "Buena Vista Social Club (Gira)",
-          "pt": "Buena Vista Social Club (Turnê)",
-          "fr": "Buena Vista Social Club (Tournée)"
-        },
-        "date": "2026-10-13",
-        "venue": "Au-Rene Theater at the Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbuena-vista-social-club-touring-ft-lauderdale-florida-10-13-2026%2Fevent%2F0D0064EE8D9F4CB1&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. For group discounts visit BrowardCenter.org/group-sales. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Ho",
-          "es": "Para convertirse en miembro del Broward Center y recibir acceso a excelentes asientos y preventas, visite BrowardCenter.org/Entourage hoy. Para descuentos grupales visite BrowardCenter.org/group-sales. Planifique su visita antes de ir al show para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluyendo el Nicklaus Children's Health System Intermezzo Lounge y nuestras opciones de comida y bebida en",
-          "pt": "Para se tornar membro do Broward Center e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Para descontos para grupos visite BrowardCenter.org/group-sales. Planeje sua visita antes de ir ao show para informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Nicklaus Children's Health System Intermezzo Lounge e nossas opções de comida e bebida em",
-          "fr": "Pour devenir membre du Broward Center et avoir accès à d'excellents sièges et à des préventes, visitez BrowardCenter.org/Entourage aujourd'hui. Pour les réductions de groupe, visitez BrowardCenter.org/group-sales. Planifiez votre visite avant d'aller au spectacle pour obtenir des informations sur le stationnement via l'application ParkMobile, les expériences culinaires incluant le Nicklaus Children's Health System Intermezzo Lounge et nos options de nourriture et boissons à"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
         "id": "tm_1791568433304_x73i",
         "title": {
           "en": "Don Soffer Aventura High School: Rome & Julie",
@@ -3654,32 +3550,6 @@
           "fr": "Rejoignez-nous en rose cet Halloween pour Fit For"
         },
         "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "rss_1791651105726_jqip",
-        "title": {
-          "en": "Coconut Grove Jewelry & Watch Show 11/13/26, 11/14/26, 11/15/26",
-          "es": "Exposición de Joyas y Relojes de Coconut Grove 11/13/26, 11/14/26, 11/15/26",
-          "pt": "Exposição de Joias e Relógios de Coconut Grove 11/13/26, 11/14/26, 11/15/26",
-          "fr": "Exposition de Bijoux et Montres de Coconut Grove 11/13/26, 11/14/26, 11/15/26"
-        },
-        "date": "2026-10-13",
-        "venue": "The Hangar at Regatta Harbour",
-        "address": "3385 Pan American Drive, Miami, Florida, 33133",
-        "url": "https://www.soulofmiami.org/2026/10/09/coconut-grove-jewelry-watch-show-11-13-26-11-14-26-11-15-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Coconut-Grove-Jewelry-Watch-Show-350x175.jpg",
-        "description": {
-          "en": "A little sparkle. A lot of history. Your next extraordinary find. The Coconut Grove",
-          "es": "Un poco de brillo. Mucha historia. Tu próximo descubrimiento extraordinario. El Coconut Grove",
-          "pt": "Um pouco de brilho. Muita história. Seu próximo achado extraordinário. O Coconut Grove",
-          "fr": "Un peu de brillance. Beaucoup d'histoire. Votre prochaine découverte extraordinaire. Le Coconut Grove"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7284643,
-        "lng": -80.2339205,
         "category": "community"
       },
       {
@@ -4707,6 +4577,236 @@
         },
         "source": "North Miami Beach",
         "category": "community"
+      },
+      {
+        "id": "rss_1791995023942_s2qm",
+        "title": {
+          "en": "Tuna And Tequila 10/15/26",
+          "es": "Atún y Tequila 15/10/26",
+          "pt": "Atum e Tequila 15/10/26",
+          "fr": "Thon et Tequila 15/10/26"
+        },
+        "date": "2026-10-15",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/13/tuna-and-tequila-10-15-26/",
+        "free": false,
+        "price": "$30",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Screenshot-2026-10-12-at-2.20.09-PM-350x325.png",
+        "description": {
+          "en": "On October 15, Jacinta de México will host its TUNA & TEQUILA event starting at 5 p.m., inviting guests to",
+          "es": "El 15 de octubre, Jacinta de México organizará su evento ATÚN Y TEQUILA a partir de las 5 p.m., invitando a los huéspedes a",
+          "pt": "Em 15 de outubro, Jacinta de México será anfitriã de seu evento ATUM E TEQUILA começando às 17h, convidando os convidados a",
+          "fr": "Le 15 octobre, Jacinta de México accueillera son événement THON ET TEQUILA à partir de 17h, invitant les invités à"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1791995023942_7jlw",
+        "title": {
+          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 10/14/26",
+          "es": "Damas Que Almuerzan: Show de Drag Miércoles por la Tarde 14/10/26",
+          "pt": "Damas Que Almoçam: Show de Drag Quarta-Feira à Tarde 14/10/26",
+          "fr": "Les Dames qui Déjeunent: Spectacle de Drag Mercredi Après-Midi 14/10/26"
+        },
+        "date": "2026-10-14",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/13/ladies-who-lunch-wednesday-afternoon-drag-show-10-14-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpy77q2vo7-281x500.jpg",
+        "description": {
+          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los miércoles son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quartas-feiras são para os rapazes que almoçam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les mercredis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1791995023942_1etb",
+        "title": {
+          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 10/15/26",
+          "es": "Damas Que Almuerzan: Show de Drag Jueves por la Tarde 15/10/26",
+          "pt": "Damas Que Almoçam: Show de Drag Quinta-Feira à Tarde 15/10/26",
+          "fr": "Les Dames qui Déjeunent: Spectacle de Drag Jeudi Après-Midi 15/10/26"
+        },
+        "date": "2026-10-15",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/13/ladies-who-lunch-thursday-afternoon-drag-show-10-15-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpwoirb5qy-281x500.jpg",
+        "description": {
+          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los jueves son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quintas-feiras são para os rapazes que almoçam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les jeudis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1791995023942_fvau",
+        "title": {
+          "en": "Cafe Con Leche: Thursday Night Latin Drag Revue 10/15/26",
+          "es": "Café Con Leche: Revista de Drag Latino Jueves por la Noche 15/10/26",
+          "pt": "Café Com Leite: Revista de Drag Latino Quinta-Feira à Noite 15/10/26",
+          "fr": "Café Avec du Lait: Revue de Drag Latino Jeudi Soir 15/10/26"
+        },
+        "date": "2026-10-15",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/13/cafe-con-leche-thursday-night-latin-drag-revue-10-15-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpm9_ca3fv-281x500.jpg",
+        "description": {
+          "en": "Turn up the flavor and the fantasy at Palace South Beach for Café",
+          "es": "Aumenta el sabor y la fantasía en Palace South Beach para Café",
+          "pt": "Aumente o sabor e a fantasia no Palace South Beach para Café",
+          "fr": "Augmentez la saveur et la fantaisie au Palace South Beach pour Café"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "community"
+      },
+      {
+        "id": "rss_1791995023942_cdyr",
+        "title": {
+          "en": "Drag Madness: Friday Night Drag Cabaret 10/16/26",
+          "es": "Locura de Drag: Cabaret de Drag Viernes por la Noche 16/10/26",
+          "pt": "Loucura de Drag: Cabaré de Drag Sexta-Feira à Noite 16/10/26",
+          "fr": "Folie de Drag: Cabaret de Drag Vendredi Soir 16/10/26"
+        },
+        "date": "2026-10-16",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/13/drag-madness-friday-night-drag-cabaret-10-16-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpa8x371e7-281x500.jpg",
+        "description": {
+          "en": "Fridays at Palace South Beach are pure chaos in the best way. Join us for",
+          "es": "Los viernes en Palace South Beach son puro caos de la mejor manera. Únete a nosotros para",
+          "pt": "Sextas-feiras no Palace South Beach são puro caos da melhor forma. Junte-se a nós para",
+          "fr": "Les vendredis au Palace South Beach sont du pur chaos de la meilleure façon. Rejoignez-nous pour"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "community"
+      },
+      {
+        "id": "rss_1791995023942_ozm6",
+        "title": {
+          "en": "Free: HallowMarine event at Loggerhead Marinelife Center, Oct. 17-18",
+          "es": "Gratis: evento HallowMarine en Loggerhead Marinelife Center, 17-18 de octubre",
+          "pt": "Grátis: evento HallowMarine no Loggerhead Marinelife Center, 17-18 de outubro",
+          "fr": "Gratuit : événement HallowMarine au Loggerhead Marinelife Center, 17-18 octobre"
+        },
+        "date": "2026-10-14",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-hallowmarine-event-at-loggerhead-marinelife-center-oct-17-18/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/10/hallowmarine2-1-728x587.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Get ready for the annual HallowMarine event at Loggerhead Marinelife Center. Activities include sustainable trick-or-treating, interactive displays, discovery shows, a junior vet lab, a costume contest and parade, plus visits... Copyright South Florida on the Cheap. The post Free: HallowMarine event at Loggerhead Marinelife Center, Oct. 17-18 appeared first on South Flor",
+          "es": "South Florida on the Cheap Prepárate para el evento anual HallowMarine en Loggerhead Marinelife Center. Las actividades incluyen truco o trato sostenible, exhibiciones interactivas, espectáculos de descubrimiento, un laboratorio de veterinario junior, un concurso de disfraces y desfile, además de visitas... Copyright South Florida on the Cheap.",
+          "pt": "South Florida on the Cheap Prepare-se para o evento anual HallowMarine no Loggerhead Marinelife Center. As atividades incluem truque ou trato sustentável, exibições interativas, shows de descoberta, um laboratório veterinário júnior, concurso de fantasias e desfile, além de visitas... Copyright South Florida on the Cheap.",
+          "fr": "South Florida on the Cheap Préparez-vous pour l'événement annuel HallowMarine au Loggerhead Marinelife Center. Les activités incluent des bonbons ou friandises écologiques, des expositions interactives, des spectacles de découverte, un laboratoire de vétérinaire junior, un concours de costumes et une parade, plus des visites... Copyright South Florida on the Cheap."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "tm_1791995024544_8mfk",
+        "title": {
+          "en": "Buena Vista Social Club (Touring)",
+          "es": "Buena Vista Social Club (Gira)",
+          "pt": "Buena Vista Social Club (Turnê)",
+          "fr": "Buena Vista Social Club (Tournée)"
+        },
+        "date": "2026-10-14",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbuena-vista-social-club-touring-ft-lauderdale-florida-10-14-2026%2Fevent%2F0D0064EE8DA44CC6&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. For group discounts visit BrowardCenter.org/group-sales. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Ho",
+          "es": "Para convertirse en miembro del Broward Center y recibir acceso a excelentes asientos y preventas, visite BrowardCenter.org/Entourage hoy. Para descuentos grupales, visite BrowardCenter.org/group-sales. Planifique su visita antes de ir al espectáculo para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluyendo el Nicklaus Children's Health System Intermezzo Lounge y nuestras opciones de comida y bebida en el Ho",
+          "pt": "Para se tornar membro do Broward Center e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Para descontos em grupo, visite BrowardCenter.org/group-sales. Planeje sua visita antes de ir ao show para informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Nicklaus Children's Health System Intermezzo Lounge e nossas opções de comida e bebida no Ho",
+          "fr": "Pour devenir membre du Broward Center et avoir accès à d'excellents sièges et préachats, visitez BrowardCenter.org/Entourage dès aujourd'hui. Pour les remises groupées, visitez BrowardCenter.org/group-sales. Planifiez votre visite avant le spectacle pour des informations sur le stationnement via l'application ParkMobile, des expériences culinaires incluant le Nicklaus Children's Health System Intermezzo Lounge et nos options de nourriture et de boissons au Ho"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1791995024544_z93h",
+        "title": {
+          "en": "The Haller Club prior to A Tribute to ABBA",
+          "es": "The Haller Club antes de Un Tributo a ABBA",
+          "pt": "The Haller Club antes de Uma Homenagem ao ABBA",
+          "fr": "The Haller Club avant Un Hommage à ABBA"
+        },
+        "date": "2026-10-20",
+        "venue": "The Haller Club at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-a-fort-lauderdale-florida-10-20-2026%2Fevent%2F0D0064EF9F886B33&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
+          "es": "Agregue a su experiencia en The Parker con The Haller Club. Este nuevo salón premium, con su diseño retro elegante, cuenta con un amplio bar y abundante asiento. Por un precio todo incluido, su admisión a The Haller Club ofrece uso exclusivo comenzando una hora antes de la hora del espectáculo y durante el intermedio (cuando está programado), bebidas suaves, cerveza y vino premium, café y té gratuitos (cócteles mixtos",
+          "pt": "Adicione à sua experiência no The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um amplo bar e muitos assentos. Por um preço único e inclusivo, sua admissão ao The Haller Club oferece uso exclusivo começando uma hora antes da hora do show e durante o intervalo (quando programado), refrigerantes, cerveja e vinho premium, café e chá grátis (bebidas mistas",
+          "fr": "Ajoutez à votre expérience au Parker avec The Haller Club. Ce tout nouveau lounge premium, avec son élégant design rétro, dispose d'un bar spacieux et de nombreux sièges. Pour un prix unique et tout compris, votre admission au Haller Club offre un usage exclusif commençant une heure avant le spectacle et pendant l'entracte (s'il est prévu), boissons gazeuses, bières et vins premium, café et thé gratuits (cocktails mixtes"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1791995024544_vddb",
+        "title": {
+          "en": "The Place To Be prior to A Tribute to ABBA",
+          "es": "The Place To Be antes de Un Tributo a ABBA",
+          "pt": "The Place To Be antes de Uma Homenagem ao ABBA",
+          "fr": "The Place To Be avant Un Hommage à ABBA"
+        },
+        "date": "2026-10-20",
+        "venue": "The Place To Be at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-10-20-2026%2Fevent%2F0D0064EFA0106C1E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
+          "es": "¡Este es The Place To Be! El salón exclusivo de donantes en The Parker ofrece un número limitado de entradas a la venta al público según disponibilidad. $75.00 POR PERSONA. Este club privado ofrece una experiencia ultra premium: servicio gratuito de comida y bebida en un refugio privado abajo en The Parker. Disfrute de un bar abierto con bebidas alcohólicas de la mejor calidad, una selección de camarones fríos y calientes",
+          "pt": "Este é The Place To Be! O lounge exclusivo de doadores no The Parker está oferecendo um número limitado de ingressos à venda para o público, conforme disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço gratuito de comida e bebida em um refúgio privado no andar de baixo do The Parker. Aproveite um bar aberto com bebidas alcoólicas premium, uma seleção de camarões frios e quentes",
+          "fr": "C'est The Place To Be ! Le lounge exclusif des donateurs au Parker offre un nombre limité de billets à vendre au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra premium - service gratuit de nourriture et de boissons dans un refuge privé en bas du Parker. Profitez d'un bar ouvert servant des alcools haut de gamme, une sélection de crevettes froides et chaudes"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
       }
     ]
   },
@@ -5610,7 +5710,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-13T18:48:33.445Z",
+    "fetchedAt": "2026-10-14T16:24:32.571Z",
     "items": []
   }
 }
