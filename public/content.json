@@ -1,57 +1,44 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-14T16:24:33.716Z",
+    "lastUpdated": "2026-10-15T16:12:34.483Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-14T16:24:32.571Z",
+    "fetchedAt": "2026-10-15T16:12:33.525Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 92,
+      "temp_f": 87,
+      "feels_f": 97,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 77,
+      "humidity": 73,
       "wind_mph": 8,
-      "rain_chance": 16,
+      "rain_chance": 10,
       "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-10-14",
-        "high_f": 86,
-        "low_f": 76,
-        "weathercode": 51,
-        "rain_chance": 16,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
         "date": "2026-10-15",
         "high_f": 88,
-        "low_f": 77,
-        "weathercode": 51,
-        "rain_chance": 30,
+        "low_f": 79,
+        "weathercode": 3,
+        "rain_chance": 10,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-10-16",
-        "high_f": 86,
-        "low_f": 78,
-        "weathercode": 53,
+        "high_f": 87,
+        "low_f": 77,
+        "weathercode": 55,
         "rain_chance": 21,
         "description": {
           "en": "Partly cloudy",
@@ -62,23 +49,36 @@
       },
       {
         "date": "2026-10-17",
-        "high_f": 87,
-        "low_f": 82,
-        "weathercode": 51,
-        "rain_chance": 72,
+        "high_f": 84,
+        "low_f": 75,
+        "weathercode": 81,
+        "rain_chance": 90,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
         }
       },
       {
         "date": "2026-10-18",
-        "high_f": 82,
-        "low_f": 81,
+        "high_f": 79,
+        "low_f": 76,
+        "weathercode": 81,
+        "rain_chance": 77,
+        "description": {
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
+        }
+      },
+      {
+        "date": "2026-10-19",
+        "high_f": 83,
+        "low_f": 78,
         "weathercode": 95,
-        "rain_chance": 78,
+        "rain_chance": 61,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -90,147 +90,147 @@
     "hourly": [
       {
         "hour": "12:00",
-        "temp_f": 84,
+        "temp_f": 87,
         "weathercode": 1,
-        "rain_chance": 6
+        "rain_chance": 3
       },
       {
         "hour": "13:00",
-        "temp_f": 85,
-        "weathercode": 1,
-        "rain_chance": 10
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "14:00",
-        "temp_f": 85,
-        "weathercode": 3,
-        "rain_chance": 16
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "15:00",
-        "temp_f": 84,
-        "weathercode": 51,
-        "rain_chance": 15
+        "temp_f": 88,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "16:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 13
+        "temp_f": 87,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "17:00",
-        "temp_f": 83,
-        "weathercode": 2,
-        "rain_chance": 10
+        "temp_f": 86,
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "18:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 8
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 81,
-        "weathercode": 3,
+        "temp_f": 84,
+        "weathercode": 0,
         "rain_chance": 6
       },
       {
-        "hour": "20:00",
-        "temp_f": 80,
-        "weathercode": 3,
+        "hour": "19:00",
+        "temp_f": 82,
+        "weathercode": 0,
         "rain_chance": 5
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 10
       },
       {
         "hour": "21:00",
         "temp_f": 80,
-        "weathercode": 1,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 10
       },
       {
         "hour": "22:00",
-        "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 8
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "23:00",
         "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 8
+        "weathercode": 0,
+        "rain_chance": 9
       },
       {
         "hour": "00:00",
         "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 10
+        "weathercode": 0,
+        "rain_chance": 9
       },
       {
         "hour": "01:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 79,
+        "weathercode": 0,
+        "rain_chance": 10
       },
       {
         "hour": "02:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 21
+        "weathercode": 0,
+        "rain_chance": 11
       },
       {
         "hour": "03:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 27
+        "weathercode": 2,
+        "rain_chance": 10
       },
       {
         "hour": "04:00",
-        "temp_f": 78,
-        "weathercode": 1,
-        "rain_chance": 30
+        "temp_f": 77,
+        "weathercode": 0,
+        "rain_chance": 8
       },
       {
         "hour": "05:00",
         "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 17
+        "weathercode": 55,
+        "rain_chance": 10
       },
       {
         "hour": "06:00",
         "temp_f": 77,
         "weathercode": 1,
-        "rain_chance": 15
+        "rain_chance": 9
       },
       {
         "hour": "07:00",
         "temp_f": 77,
         "weathercode": 0,
-        "rain_chance": 10
+        "rain_chance": 7
       },
       {
         "hour": "08:00",
-        "temp_f": 78,
+        "temp_f": 77,
         "weathercode": 0,
-        "rain_chance": 8
+        "rain_chance": 9
       },
       {
         "hour": "09:00",
-        "temp_f": 83,
-        "weathercode": 0,
+        "temp_f": 81,
+        "weathercode": 1,
         "rain_chance": 11
       },
       {
         "hour": "10:00",
         "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 6
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "11:00",
-        "temp_f": 83,
-        "weathercode": 2,
-        "rain_chance": 9
+        "temp_f": 85,
+        "weathercode": 1,
+        "rain_chance": 8
       }
     ]
   },
@@ -2965,32 +2965,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1791397264547_b9wj",
-        "title": {
-          "en": "Freya Skye - Stars Align Tour",
-          "es": "Freya Skye - Stars Align Tour",
-          "pt": "Freya Skye - Stars Align Tour",
-          "fr": "Freya Skye - Stars Align Tour"
-        },
-        "date": "2026-10-14",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ffreya-skye-stars-align-tour-hollywood-florida-10-14-2026%2Fevent%2F0D00644BB1727EF8&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/bd1/4bf9a435-fa2b-4157-a4c9-add083e81bd1_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Freya Skye is contributing $1 per ticket sold to PLUS1, a 501(c)(3), to benefit Active Minds in mobilizing youth and young adults to lead a transformative movement in mental health, forever changing how it is valued and prioritized in society. No portion of the ticket purchase is tax deductible. Please see www.plus1.org for more information. No Resale Over Face Value: Freya Skye is using Ticketmas",
-          "es": "Freya Skye está contribuyendo $1 por boleto vendido a PLUS1, una organización 501(c)(3), para beneficiar a Active Minds en la movilización de jóvenes y adultos jóvenes para liderar un movimiento transformador en salud mental, cambiando para siempre cómo se valora y se prioriza en la sociedad. Ninguna parte de la compra de boletos es deducible de impuestos. Consulte www.plus1.org para más información. Sin reventa por encima del valor nominal: Freya Skye está utilizando Ticketmas",
-          "pt": "Freya Skye está contribuindo $1 por ingresso vendido para PLUS1, uma organização 501(c)(3), para beneficiar Active Minds na mobilização de jovens e adultos jovens para liderar um movimento transformador em saúde mental, mudando para sempre como é valorizado e priorizado na sociedade. Nenhuma parte da compra do ingresso é dedutível de impostos. Consulte www.plus1.org para mais informações. Sem revenda acima do valor nominal: Freya Skye está usando Ticketmas",
-          "fr": "Freya Skye contribue 1 $ par billet vendu à PLUS1, une organisation 501(c)(3), pour bénéficier à Active Minds en mobilisant les jeunes et les jeunes adultes pour mener un mouvement transformateur en santé mentale, changeant à jamais la façon dont il est valorisé et priorisé dans la société. Aucune partie de l'achat de billet n'est déductible d'impôt. Veuillez consulter www.plus1.org pour plus d'informations. Pas de revente au-dessus de la valeur nominale: Freya Skye utilise Ticketmas"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
         "id": "tm_1791397264547_vf7k",
         "title": {
           "en": "Toadies: The Charmer Tour",
@@ -3503,32 +3477,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1791568433304_x73i",
-        "title": {
-          "en": "Don Soffer Aventura High School: Rome & Julie",
-          "es": "Escuela Preparatoria Don Soffer Aventura: Romeo y Julieta",
-          "pt": "Escola de Ensino Médio Don Soffer Aventura: Romeu e Julieta",
-          "fr": "Lycée Don Soffer Aventura: Roméo et Juliette"
-        },
-        "date": "2026-10-14",
-        "venue": "Aventura Arts & Cultural Center",
-        "address": "3385 NE 188th Street, Aventura, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdon-soffer-aventura-high-school-rome-aventura-florida-10-14-2026%2Fevent%2F0D006541B8A7E117&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/de4/07bb8e65-4d29-48f8-83cf-df60b8432de4_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Rome & Julie: A Modern Retelling of Romeo & Juliet Shakespeare's classic jumps forward in time to 2026, where the bitter feud between the Capulets and the Montagues takes center stage in the hallways of a Floridian high school. Romeo and Juliet have more than SATs to worry about, as their hidden romance begins to exacerbate the conflict between the families. Soon these fierce rivals will discover ",
-          "es": "Romeo y Julieta: Una reinterpretación moderna de Romeo y Julieta. El clásico de Shakespeare avanza en el tiempo a 2026, donde la amarga enemistad entre los Capuletos y los Montescos toma protagonismo en los pasillos de una escuela preparatoria de Florida. Romeo y Julieta tienen más de qué preocuparse que los exámenes, cuando su romance oculto comienza a exacerbar el conflicto entre las familias. Pronto estos feroces rivales descubrirán",
-          "pt": "Romeu e Julieta: Uma Releitura Moderna de Romeu e Julieta. O clássico de Shakespeare avança no tempo para 2026, onde a amarga rivalidade entre os Capuletas e os Montéquios toma o centro do palco nos corredores de uma escola de ensino médio da Flórida. Romeu e Julieta têm mais do que provas para se preocupar, quando seu romance oculto começa a exacerbar o conflito entre as famílias. Logo esses ferozes rivais descobrirão",
-          "fr": "Roméo et Juliette: Une réinterprétation moderne de Roméo et Juliette. Le classique de Shakespeare s'avance dans le temps jusqu'en 2026, où l'amère inimité entre les Capulet et les Montague prend le devant de la scène dans les couloirs d'un lycée en Floride. Roméo et Juliette ont plus que les SAT dont s'inquiéter, alors que leur romance cachée commence à exacerber le conflit entre les familles. Bientôt, ces farouches rivaux découvriront"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.94960232,
-        "lng": -80.13458177
-      },
-      {
         "id": "rss_1791651105726_asgw",
         "title": {
           "en": "Fit For The Fight: A Miami Fitness Event to Support Breast Cancer Awareness 10/31/26",
@@ -3577,58 +3525,6 @@
         "lat": 25.8301861,
         "lng": -80.1914299,
         "category": "nightlife"
-      },
-      {
-        "id": "tm_1791651106422_gtrn",
-        "title": {
-          "en": "Inter Miami CF vs New York City FC",
-          "es": "Inter Miami CF vs FC Nueva York",
-          "pt": "Inter Miami CF vs FC Nova York",
-          "fr": "Inter Miami CF vs FC New York"
-        },
-        "date": "2026-10-14",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-new-york-miami-florida-10-14-2026%2Fevent%2F0D0063739E5F6886&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For information about Suites please call 305-428-0611. · Starts 19:30 · Nu Stadium",
-          "es": "Para información sobre Suites llame al 305-428-0611. · Comienza 19:30 · Estadio Nu",
-          "pt": "Para informações sobre suítes, ligue para 305-428-0611. · Começa 19:30 · Estádio Nu",
-          "fr": "Pour plus d'informations sur les suites, appelez le 305-428-0611. · Commence 19:30 · Stade Nu"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
-        "id": "tm_1791651106422_wsq2",
-        "title": {
-          "en": "Miami Heat vs. Brooklyn Nets",
-          "es": "Miami Heat vs. Brooklyn Nets",
-          "pt": "Miami Heat vs. Brooklyn Nets",
-          "fr": "Miami Heat vs. Brooklyn Nets"
-        },
-        "date": "2026-10-14",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-heat-vs-brooklyn-nets-miami-florida-10-14-2026%2Fevent%2F0D0064A5AB2A9E04&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/599/f9331497-7667-4f9d-9d26-d144cb25a599_1339911_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Basketball · Starts 19:30 · Kaseya Center",
-          "es": "Deportes · Baloncesto · Comienza 19:30 · Centro Kaseya",
-          "pt": "Esportes · Basquete · Começa 19:30 · Centro Kaseya",
-          "fr": "Sports · Basket-ball · Commence 19:30 · Centre Kaseya"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.781232,
-        "lng": -80.187805
       },
       {
         "id": "tm_1791651106422_mdss",
@@ -4479,32 +4375,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1791917287001_l0zd",
-        "title": {
-          "en": "Sustainable Art Workshop 10/14/26, 21/14/26, 28/14/26",
-          "es": "Taller de Arte Sostenible 14/10/26, 21/10/26, 28/10/26",
-          "pt": "Oficina de Arte Sustentável 14/10/26, 21/10/26, 28/10/26",
-          "fr": "Atelier d'Art Durable 14/10/26, 21/10/26, 28/10/26"
-        },
-        "date": "2026-10-14",
-        "venue": "InterContinental Miami by IHGMiami",
-        "address": "100 Chopin Plaza, Miami, Florida, 33131",
-        "url": "https://www.soulofmiami.org/2026/10/12/sustainable-art-workshop-10-14-26-21-14-26-28-14-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/167439-350x175.jpeg",
-        "description": {
-          "en": "Three Wednesday evenings of hands-on art, conversation, and community, grounded in Miami’s land, water, and plants. Grounded: Sustainable Art",
-          "es": "Tres miércoles por la noche de arte práctico, conversación y comunidad, enraizados en la tierra, agua y plantas de Miami. Enraizado: Arte Sostenible",
-          "pt": "Três noites de quarta-feira de arte prática, conversa e comunidade, enraizadas na terra, água e plantas de Miami. Enraizado: Arte Sustentável",
-          "fr": "Trois soirées de mercredi d'art pratique, de conversation et de communauté, ancrées dans la terre, l'eau et les plantes de Miami. Enraciné: Art Durable"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.772449,
-        "lng": -80.1854687,
-        "category": "community"
-      },
-      {
         "id": "rss_1791917287001_if00",
         "title": {
           "en": "Anima Animus 10/15/26",
@@ -4603,32 +4473,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1791995023942_7jlw",
-        "title": {
-          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 10/14/26",
-          "es": "Damas Que Almuerzan: Show de Drag Miércoles por la Tarde 14/10/26",
-          "pt": "Damas Que Almoçam: Show de Drag Quarta-Feira à Tarde 14/10/26",
-          "fr": "Les Dames qui Déjeunent: Spectacle de Drag Mercredi Après-Midi 14/10/26"
-        },
-        "date": "2026-10-14",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/13/ladies-who-lunch-wednesday-afternoon-drag-show-10-14-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpy77q2vo7-281x500.jpg",
-        "description": {
-          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los miércoles son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
-          "pt": "Quartas-feiras são para os rapazes que almoçam lindamente no Palace South Beach. Junte-se a nós",
-          "fr": "Les mercredis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
-      },
-      {
         "id": "rss_1791995023942_1etb",
         "title": {
           "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 10/15/26",
@@ -4707,56 +4551,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1791995023942_ozm6",
-        "title": {
-          "en": "Free: HallowMarine event at Loggerhead Marinelife Center, Oct. 17-18",
-          "es": "Gratis: evento HallowMarine en Loggerhead Marinelife Center, 17-18 de octubre",
-          "pt": "Grátis: evento HallowMarine no Loggerhead Marinelife Center, 17-18 de outubro",
-          "fr": "Gratuit : événement HallowMarine au Loggerhead Marinelife Center, 17-18 octobre"
-        },
-        "date": "2026-10-14",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-hallowmarine-event-at-loggerhead-marinelife-center-oct-17-18/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/10/hallowmarine2-1-728x587.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Get ready for the annual HallowMarine event at Loggerhead Marinelife Center. Activities include sustainable trick-or-treating, interactive displays, discovery shows, a junior vet lab, a costume contest and parade, plus visits... Copyright South Florida on the Cheap. The post Free: HallowMarine event at Loggerhead Marinelife Center, Oct. 17-18 appeared first on South Flor",
-          "es": "South Florida on the Cheap Prepárate para el evento anual HallowMarine en Loggerhead Marinelife Center. Las actividades incluyen truco o trato sostenible, exhibiciones interactivas, espectáculos de descubrimiento, un laboratorio de veterinario junior, un concurso de disfraces y desfile, además de visitas... Copyright South Florida on the Cheap.",
-          "pt": "South Florida on the Cheap Prepare-se para o evento anual HallowMarine no Loggerhead Marinelife Center. As atividades incluem truque ou trato sustentável, exibições interativas, shows de descoberta, um laboratório veterinário júnior, concurso de fantasias e desfile, além de visitas... Copyright South Florida on the Cheap.",
-          "fr": "South Florida on the Cheap Préparez-vous pour l'événement annuel HallowMarine au Loggerhead Marinelife Center. Les activités incluent des bonbons ou friandises écologiques, des expositions interactives, des spectacles de découverte, un laboratoire de vétérinaire junior, un concours de costumes et une parade, plus des visites... Copyright South Florida on the Cheap."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "tm_1791995024544_8mfk",
-        "title": {
-          "en": "Buena Vista Social Club (Touring)",
-          "es": "Buena Vista Social Club (Gira)",
-          "pt": "Buena Vista Social Club (Turnê)",
-          "fr": "Buena Vista Social Club (Tournée)"
-        },
-        "date": "2026-10-14",
-        "venue": "Au-Rene Theater at the Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbuena-vista-social-club-touring-ft-lauderdale-florida-10-14-2026%2Fevent%2F0D0064EE8DA44CC6&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. For group discounts visit BrowardCenter.org/group-sales. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Ho",
-          "es": "Para convertirse en miembro del Broward Center y recibir acceso a excelentes asientos y preventas, visite BrowardCenter.org/Entourage hoy. Para descuentos grupales, visite BrowardCenter.org/group-sales. Planifique su visita antes de ir al espectáculo para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluyendo el Nicklaus Children's Health System Intermezzo Lounge y nuestras opciones de comida y bebida en el Ho",
-          "pt": "Para se tornar membro do Broward Center e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Para descontos em grupo, visite BrowardCenter.org/group-sales. Planeje sua visita antes de ir ao show para informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Nicklaus Children's Health System Intermezzo Lounge e nossas opções de comida e bebida no Ho",
-          "fr": "Pour devenir membre du Broward Center et avoir accès à d'excellents sièges et préachats, visitez BrowardCenter.org/Entourage dès aujourd'hui. Pour les remises groupées, visitez BrowardCenter.org/group-sales. Planifiez votre visite avant le spectacle pour des informations sur le stationnement via l'application ParkMobile, des expériences culinaires incluant le Nicklaus Children's Health System Intermezzo Lounge et nos options de nourriture et de boissons au Ho"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
         "id": "tm_1791995024544_z93h",
         "title": {
           "en": "The Haller Club prior to A Tribute to ABBA",
@@ -4807,6 +4601,260 @@
         "lat": 26.13364,
         "lng": -80.135769,
         "category": "music"
+      },
+      {
+        "id": "rss_1792080710416_b3d4",
+        "title": {
+          "en": "Pumpkins Meet Palms: Coconut Grove Harvest Brings Halloween to Miami’s Village 10/23/26",
+          "es": "Las Calabazas Conocen las Palmas: La Cosecha de Coconut Grove Trae Halloween al Pueblo de Miami 10/23/26",
+          "pt": "Abóboras Encontram Palmeiras: A Colheita de Coconut Grove Traz Halloween para a Aldeia de Miami 10/23/26",
+          "fr": "Les Citrouilles Rencontrent les Palmiers: la Récolte de Coconut Grove Apporte Halloween au Village de Miami 10/23/26"
+        },
+        "date": "2026-10-23",
+        "venue": "Fuller Street Coconut Grove Fuller Street Coconut Grove, Miami, Florida, 33133",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/14/pumpkins-meet-palms-coconut-grove-harvest-brings-halloween-to-miamis-village-10-23-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/unnamed-2-2-350x350.png",
+        "description": {
+          "en": "COCONUT GROVE, Fla. — Fall in Miami comes with a",
+          "es": "COCONUT GROVE, Fla. — El otoño en Miami viene con un",
+          "pt": "COCONUT GROVE, Fla. — O outono em Miami vem com um",
+          "fr": "COCONUT GROVE, Fla. — L'automne à Miami vient avec un"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1792080710416_51ua",
+        "title": {
+          "en": "REAL STYLE: An Evening with Kristen Naiman in Conversation with Emme Parsons 10/26/26",
+          "es": "ESTILO REAL: Una Noche con Kristen Naiman en Conversación con Emme Parsons 10/26/26",
+          "pt": "ESTILO REAL: Uma Noite com Kristen Naiman em Conversa com Emme Parsons 10/26/26",
+          "fr": "VRAI STYLE: Une Soirée avec Kristen Naiman en Conversation avec Emme Parsons 10/26/26"
+        },
+        "date": "2026-10-26",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/14/real-style-an-evening-with-kristen-naiman-in-conversation-with-emme-parsons-10-26-26/",
+        "free": false,
+        "price": "$35",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/RR-Miami-Event-Flyer-350x350.png",
+        "description": {
+          "en": "Join Kristen Naiman of The RealReal to chat about",
+          "es": "Únete a Kristen Naiman de The RealReal para charlar sobre",
+          "pt": "Junte-se a Kristen Naiman do The RealReal para conversar sobre",
+          "fr": "Rejoignez Kristen Naiman de The RealReal pour discuter de"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1792080710416_71ym",
+        "title": {
+          "en": "Taste at the Track: Rum & Caribbean at Gulfstream Park 10/24/26",
+          "es": "Degustación en la Pista: Ron y Caribeño en Gulfstream Park 10/24/26",
+          "pt": "Degustação na Pista: Rum e Caribenho no Gulfstream Park 10/24/26",
+          "fr": "Dégustation à l'Hippodrome: Rhum et Caraïbes au Gulfstream Park 10/24/26"
+        },
+        "date": "2026-10-24",
+        "venue": "Gulfstream Park",
+        "address": "901 S Federal Highway, Hallandale Beach, Florida, 33009",
+        "url": "https://www.soulofmiami.org/2026/10/14/taste-at-the-track-rum-caribbean-at-gulfstream-park-10-24-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/GSP-GEN-PIC-350x233.jpg",
+        "description": {
+          "en": "Taste at the Track: Rum & Caribbean returns to Gulfstream Park on",
+          "es": "Degustación en la Pista: Ron y Caribeño regresa a Gulfstream Park el",
+          "pt": "Degustação na Pista: Rum e Caribenho retorna ao Gulfstream Park em",
+          "fr": "Dégustation à l'Hippodrome: Rhum et Caraïbes revient au Gulfstream Park le"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9964102,
+        "lng": -80.142622,
+        "category": "community"
+      },
+      {
+        "id": "rss_1792080710416_yt1l",
+        "title": {
+          "en": "MOAD Moves: Salsa Workshop with Michelle Gonzalez de la Cruz 11/8/26",
+          "es": "MOAD Se Mueve: Taller de Salsa con Michelle González de la Cruz 11/8/26",
+          "pt": "MOAD se Move: Oficina de Salsa com Michelle González de la Cruz 11/8/26",
+          "fr": "MOAD se Déplace: Atelier de Salsa avec Michelle González de la Cruz 11/8/26"
+        },
+        "date": "2026-11-08",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/14/moad-moves-salsa-workshop-with-michelle-gonzalez-de-la-cruz-11-8-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/no-copy_NOV-SALSA-CLASS-IG-POST1-350x197.png",
+        "description": {
+          "en": "Without a doubt, any time you spend in Miami will involve salsa music, so",
+          "es": "Sin lugar a dudas, cualquier tiempo que pases en Miami implicará música de salsa, así que",
+          "pt": "Sem dúvida, qualquer tempo que você passar em Miami envolverá música de salsa, então",
+          "fr": "Sans aucun doute, tout temps que vous passerez à Miami impliquera de la musique de salsa, donc"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1792080710416_if4u",
+        "title": {
+          "en": "A Haunted Affair | Halloween Party at Earls – Miami Worldcenter 10/31/26",
+          "es": "Un Asunto Embrujado | Fiesta de Halloween en Earls – Miami Worldcenter 10/31/26",
+          "pt": "Um Assunto Assombrado | Festa de Halloween em Earls – Miami Worldcenter 10/31/26",
+          "fr": "Une Affaire Hantée | Fête d'Halloween chez Earls – Miami Worldcenter 10/31/26"
+        },
+        "date": "2026-10-31",
+        "venue": "Earls Kitchen + Bar Miami Worldcenter",
+        "address": "150 NE 8th St Miami, FL, Miami, Florida, 33132",
+        "url": "https://www.soulofmiami.org/2026/10/14/a-haunted-affair-halloween-party-at-earls-miami-worldcenter-10-31-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Halloween-at-MWC-342x500.png",
+        "description": {
+          "en": "officially invited to our Haunted Affair",
+          "es": "estás oficialmente invitado a nuestro Asunto Embrujado",
+          "pt": "você está oficialmente convidado para nosso Assunto Assombrado",
+          "fr": "vous êtes officiellement invité à notre Affaire Hantée"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812735,
+        "lng": -80.1914254,
+        "category": "community"
+      },
+      {
+        "id": "tm_1792080711005_e8ao",
+        "title": {
+          "en": "Don Soffer Aventura High School: Rome & Julie",
+          "es": "Don Soffer Aventura High School: Rome & Julie",
+          "pt": "Don Soffer Aventura High School: Rome & Julie",
+          "fr": "Don Soffer Aventura High School: Rome & Julie"
+        },
+        "date": "2026-10-15",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdon-soffer-aventura-high-school-rome-aventura-florida-10-15-2026%2Fevent%2F0D006541B8AAE121&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/a81/5e4f80a2-8b44-49cd-895d-bcb388a27a81_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Rome & Julie: A Modern Retelling of Romeo & Juliet Shakespeare's classic jumps forward in time to 2026, where the bitter feud between the Capulets and the Montagues takes center stage in the hallways of a Floridian high school. Romeo and Juliet have more than SATs to worry about, as their hidden romance begins to exacerbate the conflict between the families. Soon these fierce rivals will discover ",
+          "es": "Rome & Julie: Una reinterpretación moderna de Romeo y Julieta. El clásico de Shakespeare avanza en el tiempo hasta 2026, donde la amarga enemistad entre los Capuletos y los Montescos toma protagonismo en los pasillos de una escuela secundaria de Florida. Romeo y Julieta tienen más de qué preocuparse que de los exámenes SAT, ya que su romance oculto comienza a exacerbar el conflicto entre las familias. Pronto estos fieros rivales descubrirán",
+          "pt": "Rome & Julie: Uma releitura moderna de Romeu e Julieta. O clássico de Shakespeare avança no tempo para 2026, onde a amarga rivalidade entre os Capuletos e os Montéquios toma o palco nos corredores de uma escola secundária da Flórida. Romeu e Julieta têm mais do que provas SAT para se preocupar, pois seu romance escondido começa a exacerbar o conflito entre as famílias. Em breve esses rivais ferozes descobrirão",
+          "fr": "Rome & Julie: Une réinterprétation moderne de Roméo et Juliette. Le classique de Shakespeare avance dans le temps jusqu'en 2026, où la amère rivalité entre les Capulet et les Montaigu prend le devant de la scène dans les couloirs d'une école secondaire en Floride. Roméo et Juliette ont plus à craindre que les examens SAT, car leur romance cachée commence à exacerber le conflit entre les familles. Bientôt ces rivaux féroces découvriront"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "tm_1792080711005_md15",
+        "title": {
+          "en": "Buena Vista Social Club (Touring)",
+          "es": "Buena Vista Social Club (Gira)",
+          "pt": "Buena Vista Social Club (Turnê)",
+          "fr": "Buena Vista Social Club (Tournée)"
+        },
+        "date": "2026-10-15",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbuena-vista-social-club-touring-ft-lauderdale-florida-10-15-2026%2Fevent%2F0D0064EE8DA84CD4&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. For group discounts visit BrowardCenter.org/group-sales. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Ho",
+          "es": "Para convertirse en miembro del Broward Center y recibir acceso a excelentes asientos y preventas, visite BrowardCenter.org/Entourage hoy. Para descuentos grupales visite BrowardCenter.org/group-sales. Planifique su visita antes de ir al espectáculo para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluyendo el Nicklaus Children's Health System Intermezzo Lounge y nuestras opciones de comida y bebida en el Ho",
+          "pt": "Para se tornar membro do Broward Center e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Para descontos em grupo, visite BrowardCenter.org/group-sales. Planeje sua visita antes de ir ao show para informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Nicklaus Children's Health System Intermezzo Lounge e nossas opções de comida e bebida no Ho",
+          "fr": "Pour devenir membre du Broward Center et accéder à d'excellents sièges et préventes, visitez BrowardCenter.org/Entourage aujourd'hui. Pour les réductions de groupe, visitez BrowardCenter.org/group-sales. Planifiez votre visite avant d'aller au spectacle pour obtenir des informations sur le stationnement à l'aide de l'application ParkMobile, des expériences culinaires y compris le Nicklaus Children's Health System Intermezzo Lounge et nos options de nourriture et boisson au Ho"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1792080711005_pdat",
+        "title": {
+          "en": "Miami FC vs. Charleston Battery",
+          "es": "Miami FC vs. Charleston Battery",
+          "pt": "Miami FC vs. Charleston Battery",
+          "fr": "Miami FC vs. Charleston Battery"
+        },
+        "date": "2026-10-17",
+        "venue": "Pitbull Stadium",
+        "address": "11200 SW 8th Street, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7OF0A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Miscellaneous · Starts 19:00 · Pitbull Stadium",
+          "es": "Deportes · Miscelánea · Comienza 19:00 · Estadio Pitbull",
+          "pt": "Esportes · Diversos · Começa 19:00 · Estádio Pitbull",
+          "fr": "Sports · Divers · Débute 19:00 · Stade Pitbull"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7577,
+        "lng": -80.374802
+      },
+      {
+        "id": "tm_1792080711005_5m8b",
+        "title": {
+          "en": "The Concert: A Tribute To ABBA",
+          "es": "The Concert: Un tributo a ABBA",
+          "pt": "The Concert: Uma homenagem ao ABBA",
+          "fr": "The Concert: Un hommage à ABBA"
+        },
+        "date": "2026-10-20",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-concert-a-tribute-to-abba-ft-lauderdale-florida-10-20-2026%2Fevent%2F0D0064EF9EC76A5F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d7e/c1454db6-3aff-43e1-92db-3deea96e2d7e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "To become a member of the Broward Center, including The Parker, and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. Visit ParkerPlayhouse.com/visit before you go to the show for info on parking, dining, concessions and premium experiences The Haller Club and The Place To Be. Everyone must have a ticket to enter the venue. For group discounts visit BrowardCenter",
+          "es": "Para convertirse en miembro del Broward Center, incluyendo The Parker, y recibir acceso a excelentes asientos y preventas, visite BrowardCenter.org/Entourage hoy. Visite ParkerPlayhouse.com/visit antes de ir al espectáculo para obtener información sobre estacionamiento, gastronomía, concesiones y experiencias premium The Haller Club y The Place To Be. Todos deben tener una entrada para ingresar al lugar. Para descuentos grupales visite BrowardCenter",
+          "pt": "Para se tornar membro do Broward Center, incluindo The Parker, e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Visite ParkerPlayhouse.com/visit antes de ir ao show para informações sobre estacionamento, gastronomia, concessões e experiências premium The Haller Club e The Place To Be. Todos devem ter um ingresso para entrar no local. Para descontos em grupo, visite BrowardCenter",
+          "fr": "Pour devenir membre du Broward Center, y compris The Parker, et accéder à d'excellents sièges et préventes, visitez BrowardCenter.org/Entourage aujourd'hui. Visitez ParkerPlayhouse.com/visit avant d'aller au spectacle pour obtenir des informations sur le stationnement, la gastronomie, les concessions et les expériences premium The Haller Club et The Place To Be. Tous doivent avoir un billet pour entrer dans le lieu. Pour les réductions de groupe, visitez BrowardCenter"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1792080711005_rk1k",
+        "title": {
+          "en": "The Doobie Brothers: Walk This Road Tour",
+          "es": "The Doobie Brothers: Walk This Road Tour",
+          "pt": "The Doobie Brothers: Walk This Road Tour",
+          "fr": "The Doobie Brothers: Walk This Road Tour"
+        },
+        "date": "2026-10-20",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-doobie-brothers-walk-this-road-hollywood-florida-10-20-2026%2Fevent%2F0D006478A5AE8BB7&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/10f/71863892-5d02-47ee-a56d-68fe340c910f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 20:00 · Hard Rock Live",
+          "es": "Música · Rock · Comienza 20:00 · Hard Rock Live",
+          "pt": "Música · Rock · Começa 20:00 · Hard Rock Live",
+          "fr": "Musique · Rock · Débute 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
       }
     ]
   },
@@ -5710,7 +5758,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-14T16:24:32.571Z",
+    "fetchedAt": "2026-10-15T16:12:33.526Z",
     "items": []
   }
 }
