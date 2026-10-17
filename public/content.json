@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-16T15:59:41.152Z",
+    "lastUpdated": "2026-10-17T14:52:58.761Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-16T15:59:40.231Z",
+    "fetchedAt": "2026-10-17T14:52:54.194Z",
     "current": {
-      "temp_f": 87,
-      "feels_f": 97,
+      "temp_f": 84,
+      "feels_f": 94,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 69,
-      "wind_mph": 8,
-      "rain_chance": 17,
-      "weathercode": 1
+      "humidity": 80,
+      "wind_mph": 5,
+      "rain_chance": 60,
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-10-16",
-        "high_f": 89,
-        "low_f": 78,
-        "weathercode": 3,
-        "rain_chance": 17,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-10-17",
-        "high_f": 86,
+        "high_f": 85,
         "low_f": 74,
-        "weathercode": 65,
-        "rain_chance": 76,
+        "weathercode": 55,
+        "rain_chance": 60,
         "description": {
-          "en": "Heavy rain",
-          "es": "Lluvia intensa",
-          "pt": "Chuva forte",
-          "fr": "Pluie forte"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-10-18",
-        "high_f": 79,
+        "high_f": 80,
         "low_f": 74,
-        "weathercode": 81,
-        "rain_chance": 76,
+        "weathercode": 82,
+        "rain_chance": 58,
         "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-10-19",
-        "high_f": 83,
-        "low_f": 77,
+        "high_f": 82,
+        "low_f": 74,
         "weathercode": 51,
-        "rain_chance": 20,
+        "rain_chance": 34,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-10-20",
-        "high_f": 82,
-        "low_f": 78,
+        "high_f": 83,
+        "low_f": 79,
         "weathercode": 51,
-        "rain_chance": 17,
+        "rain_chance": 15,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-10-21",
+        "high_f": 83,
+        "low_f": 79,
+        "weathercode": 53,
+        "rain_chance": 9,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
       }
     ],
     "hourly": [
       {
+        "hour": "10:00",
+        "temp_f": 84,
+        "weathercode": 2,
+        "rain_chance": 6
+      },
+      {
         "hour": "11:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 3
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 89,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 88,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 87,
-        "weathercode": 1,
-        "rain_chance": 7
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 86,
-        "weathercode": 1,
-        "rain_chance": 10
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 85,
-        "weathercode": 0,
-        "rain_chance": 14
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 17
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 12
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 13
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 12
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 78,
+        "temp_f": 84,
         "weathercode": 3,
         "rain_chance": 9
       },
       {
-        "hour": "00:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 12
+        "hour": "12:00",
+        "temp_f": 85,
+        "weathercode": 2,
+        "rain_chance": 7
       },
       {
-        "hour": "01:00",
-        "temp_f": 77,
+        "hour": "13:00",
+        "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 15
+        "rain_chance": 7
       },
       {
-        "hour": "02:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 17
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 76,
+        "hour": "14:00",
+        "temp_f": 84,
         "weathercode": 3,
         "rain_chance": 14
       },
       {
-        "hour": "04:00",
+        "hour": "15:00",
+        "temp_f": 84,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 82,
+        "weathercode": 51,
+        "rain_chance": 30
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 81,
+        "weathercode": 53,
+        "rain_chance": 33
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 78,
+        "weathercode": 55,
+        "rain_chance": 48
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 76,
+        "weathercode": 55,
+        "rain_chance": 60
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 76,
+        "weathercode": 51,
+        "rain_chance": 54
+      },
+      {
+        "hour": "21:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 46
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 59
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 75,
+        "weathercode": 51,
+        "rain_chance": 55
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 75,
+        "weathercode": 51,
+        "rain_chance": 49
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 75,
+        "weathercode": 3,
+        "rain_chance": 47
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 39
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 34
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 33
       },
       {
         "hour": "05:00",
-        "temp_f": 77,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 39
       },
       {
         "hour": "06:00",
-        "temp_f": 77,
+        "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 41
       },
       {
         "hour": "07:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 7
+        "temp_f": 75,
+        "weathercode": 82,
+        "rain_chance": 40
       },
       {
         "hour": "08:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 76,
+        "weathercode": 80,
+        "rain_chance": 34
       },
       {
         "hour": "09:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
-        "hour": "10:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 20
+        "temp_f": 76,
+        "weathercode": 51,
+        "rain_chance": 41
       }
     ]
   },
@@ -1849,32 +1849,6 @@
         "category": "arts"
       },
       {
-        "id": "rss_1788364346941_z207",
-        "title": {
-          "en": "SongFest – First Sing 10/16/26",
-          "es": "SongFest – Primer Canto 10/16/26",
-          "pt": "SongFest – Primeiro Canto 10/16/26",
-          "fr": "SongFest – Premier Chant 10/16/26"
-        },
-        "date": "2026-10-16",
-        "venue": "First Miami Presbyterian Church",
-        "address": "609 Brickell Ave, Miami, Florida, 33131",
-        "url": "https://www.soulofmiami.org/2026/09/02/songfest-first-sing-10-16-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/Songfest-Image-350x193.jpg",
-        "description": {
-          "en": "Join Florida Grand Opera for the first Studio Artist Concert of the season as we introduce the talented",
-          "es": "Únete a la Ópera Gran de Florida para el primer Concierto de Artista de Estudio de la temporada mientras presentamos el talentoso",
-          "pt": "Junte-se à Ópera Grand Florida para o primeiro Concerto de Artista de Estúdio da temporada enquanto apresentamos o talentoso",
-          "fr": "Rejoignez l'Opéra Grand de Floride pour le premier Concert d'Artiste en Studio de la saison alors que nous présentons le talentueux"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7676732,
-        "lng": -80.1896902,
-        "category": "music"
-      },
-      {
         "id": "rss_1788364346941_crwf",
         "title": {
           "en": "SongFest – Rhythms & Reflections: A Celebration of Latin American Art Songs 11/22/27",
@@ -2891,162 +2865,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1791397264548_wjtw",
-        "title": {
-          "en": "III Points",
-          "es": "III Points",
-          "pt": "III Points",
-          "fr": "III Points"
-        },
-        "date": "2026-10-16",
-        "venue": "Mana Wynwood Convention Center",
-        "address": "318 NW 23rd St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fon.fgtix.com%2Ftrk%2Fcp4M&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/65b/e72b617c-d2f8-4ff4-bf01-e828776a165b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Starts 16:00 · Mana Wynwood Convention Center",
-          "es": "Música · Comienza 16:00 · Mana Wynwood Convention Center",
-          "pt": "Música · Começa 16:00 · Mana Wynwood Convention Center",
-          "fr": "Musique · Commence 16:00 · Mana Wynwood Convention Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.797998,
-        "lng": -80.202062
-      },
-      {
-        "id": "tm_1791397264548_eudv",
-        "title": {
-          "en": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026",
-          "es": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026",
-          "pt": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026",
-          "fr": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026"
-        },
-        "date": "2026-10-16",
-        "venue": "Revolution Live at the Backyard",
-        "address": "100 SW 3rd Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Farch-enemy-the-black-dahlia-murder-ft-lauderdale-florida-10-16-2026%2Fevent%2F0D0064B2B94C82B2&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3b5/08cefbd6-5bc5-4252-bd8b-f3e0e8ba33b5_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026 will be coming to Revolution Live at the Backyard on Friday, October 16th with special guests Septicflesh, Crypta, and Thrown Into Exile. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. This event is Rain or Shine. · Starts 17:00 · Revolution Live at the Backy",
-          "es": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026 llegará a Revolution Live at the Backyard el viernes 16 de octubre con los artistas especiales Septicflesh, Crypta y Thrown Into Exile. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. Este evento es lluvia o brilla.",
-          "pt": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026 virá para Revolution Live at the Backyard na sexta-feira, 16 de outubro com convidados especiais Septicflesh, Crypta e Thrown Into Exile. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. Este evento é chuva ou brilho.",
-          "fr": "Arch Enemy & The Black Dahlia Murder: Wrath Across North America 2026 arrivera à Revolution Live at the Backyard vendredi 16 octobre avec les invités spéciaux Septicflesh, Crypta et Thrown Into Exile. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien sont sujets à changement sans préavis. Cet événement est pluie ou brillant."
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.12123121,
-        "lng": -80.14625645
-      },
-      {
-        "id": "tm_1791397264548_1rkp",
-        "title": {
-          "en": "Journey",
-          "es": "Journey",
-          "pt": "Journey",
-          "fr": "Journey"
-        },
-        "date": "2026-10-16",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70_73&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/f9d/80e7f1f1-5db4-4a72-8cfa-7e36d66b4f9d_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:30 · Amerant Bank Arena",
-          "es": "Música · Rock · Comienza 19:30 · Amerant Bank Arena",
-          "pt": "Música · Rock · Começa 19:30 · Amerant Bank Arena",
-          "fr": "Musique · Rock · Commence 19:30 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
-        "id": "tm_1791397264548_ppfe",
-        "title": {
-          "en": "ICONS: Latin Rhythms",
-          "es": "ICONS: Latin Rhythms",
-          "pt": "ICONS: Latin Rhythms",
-          "fr": "ICONS: Latin Rhythms"
-        },
-        "date": "2026-10-16",
-        "venue": "Aventura Arts & Cultural Center",
-        "address": "3385 NE 188th Street, Aventura, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ficons-latin-rhythms-aventura-florida-10-16-2026%2Fevent%2F0D0064A7E314F962&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/adf/55caf971-5a43-4c25-a957-c126c914aadf_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "From the creative team behind Migguel Anggelo's acclaimed ICONS series comes a dynamic new concert celebrating the music that has shaped Latiné culture worldwide. Led by Migguel's unmistakable voice, humor, and theatrical flair, ICONS: LATIN RHYTHMS is a joyful celebration of songs generations have loved, danced to, and passed down. Featuring music by artists like Rubén Blades and Oscar D'León alo",
-          "es": "Del equipo creativo detrás de la aclamada serie ICONS de Migguel Anggelo viene un concierto dinámico que celebra la música que ha moldeado la cultura latina en todo el mundo. Liderado por la voz inconfundible de Migguel, su humor y su flair teatral, ICONS: LATIN RHYTHMS es una celebración alegre de canciones que las generaciones han amado, bailado y transmitido. Presentando música de artistas como Rubén Blades y Oscar D'León.",
-          "pt": "Do time criativo por trás da aclamada série ICONS de Migguel Anggelo vem um concerto dinâmico celebrando a música que moldou a cultura latina em todo o mundo. Liderado pela voz inconfundível de Migguel, seu humor e floreio teatral, ICONS: LATIN RHYTHMS é uma celebração alegre de músicas que gerações amaram, dançaram e transmitiram. Apresentando músicas de artistas como Rubén Blades e Oscar D'León.",
-          "fr": "De l'équipe créative derrière la série ICONS acclamée de Migguel Anggelo vient un concert dynamique célébrant la musique qui a façonné la culture latine dans le monde entier. Dirigé par la voix inconfondible de Migguel, son humour et son flair théâtral, ICONS: LATIN RHYTHMS est une célébration joyeuse de chansons que les générations ont aimées, dansées et transmises. Mettant en vedette la musique d'artistes comme Rubén Blades et Oscar D'León."
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.94960232,
-        "lng": -80.13458177
-      },
-      {
-        "id": "tm_1791397264548_ilbt",
-        "title": {
-          "en": "The Rhinestone Cowgirls",
-          "es": "The Rhinestone Cowgirls",
-          "pt": "The Rhinestone Cowgirls",
-          "fr": "The Rhinestone Cowgirls"
-        },
-        "date": "2026-10-16",
-        "venue": "Rose & Alfred Miniaci Performing Arts Center",
-        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-rhinestone-cowgirls-ft-lauderdale-florida-10-16-2026%2Fevent%2F0D00644CC9F7F13E&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/8d0/2c5f99c1-29f3-4d20-ac78-fdd2d97e18d0_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Pay homage to the iconic female vocalists of yesterday and today with RHINESTONE COWGIRLS: Legendary Ladies of Country Music! Three powerhouse singers perform fresh arrangements of classic and contemporary country hits in this elegant and authentic journey celebrating the evolution of country music's humble beginnings to the giants of today's music industry. Relive classics like Patsy Cline's \"Cra",
-          "es": "¡Rinde homenaje a las icónicas vocalistas femeninas de ayer y hoy con RHINESTONE COWGIRLS: Legendary Ladies of Country Music! Tres cantantes poderosas realizan arreglos frescos de éxitos clásicos y contemporáneos del country en este elegante y auténtico viaje celebrando la evolución de los humildes comienzos de la música country hasta los gigantes de la industria musical actual. Revive clásicos como 'Crazy' de Patsy Cline.",
-          "pt": "Renda homenagem às vocalistas femininas icônicas de ontem e hoje com RHINESTONE COWGIRLS: Legendary Ladies of Country Music! Três cantoras poderosas realizam novos arranjos de sucessos clássicos e contemporâneos do country nesta jornada elegante e autêntica celebrando a evolução dos humildes começos da música country até os gigantes da indústria musical atual. Reviva clássicos como 'Crazy' de Patsy Cline.",
-          "fr": "Rendez hommage aux vocalistes féminines emblématiques d'hier et d'aujourd'hui avec RHINESTONE COWGIRLS: Legendary Ladies of Country Music! Trois chanteuses puissantes interprètent des arrangements frais de succès classiques et contemporains du country dans ce voyage élégant et authentique célébrant l'évolution des débuts modestes de la musique country aux géants de l'industrie musicale d'aujourd'hui. Revivez des classiques comme 'Crazy' de Patsy Cline."
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0884017,
-        "lng": -80.2461624
-      },
-      {
-        "id": "tm_1791397264548_ewkx",
-        "title": {
-          "en": "Black Coffee",
-          "es": "Black Coffee",
-          "pt": "Black Coffee",
-          "fr": "Black Coffee"
-        },
-        "date": "2026-10-16",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fblack-coffee-liv-nightclub-miami-tickets%2F14322564&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/0d3/689112b6-e898-465a-973e-e5621e5910d3_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Cualquier poseedor de entrada que no pueda presentar identificación válida que indique que tiene al menos 21 años no será admitido a este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não puder apresentar identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
         "id": "tm_1791397264548_lnik",
         "title": {
           "en": "Soccer Mommy, Snail Mail, and Scarlet Rae in Miami",
@@ -3401,84 +3219,6 @@
         "category": "nightlife"
       },
       {
-        "id": "tm_1791651106422_gt7r",
-        "title": {
-          "en": "Friday First Admission for the 2026 Redland International Orchid Festival",
-          "es": "Primera Admisión de Viernes para el Festival Internacional de Orquídeas Redland 2026",
-          "pt": "Primeira Admissão de Sexta-feira para o Festival Internacional de Orquídeas Redland 2026",
-          "fr": "Première Admission du Vendredi pour le Festival International des Orchidées Redland 2026"
-        },
-        "date": "2026-10-16",
-        "venue": "Fruit and Spice Park",
-        "address": "24801 SW 187 Avenue, Homestead, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2Ffriday-first-admission-for-the-2026-redland-international-orchid-festival-tickets-C92L71%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/732/d37f3fa7-208f-4c54-a2d6-cdc280c19732_106281_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Fairs & Festivals · Starts 09:00 · Fruit and Spice Park",
-          "es": "Varios · Ferias y Festivales · Comienza 09:00 · Parque Frutas y Especias",
-          "pt": "Diversos · Feiras e Festivais · Começa 09:00 · Parque Frutas e Especiarias",
-          "fr": "Divers · Foires et Festivals · Commence 09:00 · Parc des Fruits et Épices"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.5354661,
-        "lng": -80.4942107,
-        "category": "community"
-      },
-      {
-        "id": "tm_1791651106422_33hp",
-        "title": {
-          "en": "2026 Redland International Orchid Festival",
-          "es": "Festival Internacional de Orquídeas Redland 2026",
-          "pt": "Festival Internacional de Orquídeas Redland 2026",
-          "fr": "Festival International des Orchidées Redland 2026"
-        },
-        "date": "2026-10-16",
-        "venue": "Fruit and Spice Park",
-        "address": "24801 SW 187 Avenue, Homestead, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.universe.com%2Fevents%2F2026-redland-international-orchid-festival-tickets-L46PNC%3Fref%3Dticketmaster&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/732/d37f3fa7-208f-4c54-a2d6-cdc280c19732_106281_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Miscellaneous · Fairs & Festivals · Starts 12:00 · Fruit and Spice Park",
-          "es": "Varios · Ferias y Festivales · Comienza 12:00 · Parque Frutas y Especias",
-          "pt": "Diversos · Feiras e Festivais · Começa 12:00 · Parque Frutas e Especiarias",
-          "fr": "Divers · Foires et Festivals · Commence 12:00 · Parc des Fruits et Épices"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.5354661,
-        "lng": -80.4942107,
-        "category": "community"
-      },
-      {
-        "id": "tm_1791651106422_brfj",
-        "title": {
-          "en": "Miami City Ballet",
-          "es": "Ballet de la Ciudad de Miami",
-          "pt": "Ballet da Cidade de Miami",
-          "fr": "Ballet de la Ville de Miami"
-        },
-        "date": "2026-10-16",
-        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
-        "address": "1444 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70J4N&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/889/70b973b9-9475-4efe-a67d-aa417e587889_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Starts 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "es": "Artes y Teatro · Comienza 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "pt": "Artes e Teatro · Começa 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
-          "fr": "Arts et Théâtre · Commence 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.784901,
-        "lng": -80.189598
-      },
-      {
         "id": "rss_1791738899629_b01r",
         "title": {
           "en": "Southernmost Playboy House – Beach Bunny Pool Party Bash 10/23/26",
@@ -3577,32 +3317,6 @@
         "lat": 26.1369729,
         "lng": -80.1135854,
         "category": "community"
-      },
-      {
-        "id": "tm_1791738900214_8vdf",
-        "title": {
-          "en": "Friday Night Live - Improv Comedy Miami Show",
-          "es": "Viernes por la Noche en Vivo - Show de Comedia de Improvisación en Miami",
-          "pt": "Sexta-feira à Noite ao Vivo - Show de Comédia de Improvisação em Miami",
-          "fr": "Vendredi Soir en Direct - Show de Comédie d'Improvisation à Miami"
-        },
-        "date": "2026-10-16",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14327584&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Friday Night Live! - Improv Comedy in Miami Show It's JTF's special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv that's perfect for your Friday night...LIVE! Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part ",
-          "es": "¡Viernes por la Noche en Vivo! - Comedia de Improvisación en Miami. Es la combinación especial de improvisación de forma corta y larga de JTF. Disfruta mientras nuestro elenco galardonado te trae una improvisación fantástica que es perfecta para tu noche de viernes en VIVO. Nuestros shows a menudo se describen como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway? se encuentra con SNL con mucha interacción del público. Ven y sé parte",
-          "pt": "Sexta-feira à Noite ao Vivo! - Comédia de Improvisação em Miami. É a combinação especial de improvisação de forma curta e longa da JTF. Aproveite enquanto nosso elenco premiado traz improvisação fantástica perfeita para sua noite de sexta-feira AO VIVO! Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense como Whose Line is It Anyway? encontra SNL com muita interação com o público. Venha ser parte",
-          "fr": "Vendredi Soir en Direct! - Comédie d'Improvisation à Miami. C'est la combinaison spéciale de l'improvisation de forme courte et longue de JTF! Profitez de la fantastique improvisation de notre troupe primée qui est parfaite pour votre vendredi soir EN DIRECT! Nos spectacles sont souvent décrits comme une comédie improvisée au rythme rapide. Pensez à Whose Line is It Anyway? rencontre SNL avec beaucoup d'interaction avec le public. Venez en faire partie"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
       },
       {
         "id": "tm_1791738900214_qx4s",
@@ -4197,32 +3911,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1791995023942_cdyr",
-        "title": {
-          "en": "Drag Madness: Friday Night Drag Cabaret 10/16/26",
-          "es": "Locura de Drag: Cabaret de Drag Viernes por la Noche 16/10/26",
-          "pt": "Loucura de Drag: Cabaré de Drag Sexta-Feira à Noite 16/10/26",
-          "fr": "Folie de Drag: Cabaret de Drag Vendredi Soir 16/10/26"
-        },
-        "date": "2026-10-16",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/13/drag-madness-friday-night-drag-cabaret-10-16-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpa8x371e7-281x500.jpg",
-        "description": {
-          "en": "Fridays at Palace South Beach are pure chaos in the best way. Join us for",
-          "es": "Los viernes en Palace South Beach son puro caos de la mejor manera. Únete a nosotros para",
-          "pt": "Sextas-feiras no Palace South Beach são puro caos da melhor forma. Junte-se a nós para",
-          "fr": "Les vendredis au Palace South Beach sont du pur chaos de la meilleure façon. Rejoignez-nous pour"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "community"
-      },
-      {
         "id": "tm_1791995024544_z93h",
         "title": {
           "en": "The Haller Club prior to A Tribute to ABBA",
@@ -4629,58 +4317,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1792166322497_qda8",
-        "title": {
-          "en": "Slow Burn Theatre Co: Come From Away",
-          "es": "Slow Burn Theatre Co: Come From Away",
-          "pt": "Slow Burn Theatre Co: Come From Away",
-          "fr": "Slow Burn Theatre Co: Come From Away"
-        },
-        "date": "2026-10-16",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fslow-burn-theatre-co-come-from-ft-lauderdale-florida-10-16-2026%2Fevent%2F0D006436A75B44C5&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/608/5bacba60-29ce-4057-930a-e4b7d45bc608_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Broadway's COME FROM AWAY is a Best Musical winner all across North America! This New York Times Critics' Pick takes you into the heart of the remarkable true story of 7,000 stranded passengers and the small town in Newfoundland that welcomed them. Cultures clashed and nerves ran high, but uneasiness turned into trust, music soared into the night, and gratitude grew into enduring friendships. News",
-          "es": "¡COME FROM AWAY de Broadway es ganador del Mejor Musical en toda América del Norte! Esta crítica favorita del New York Times te lleva al corazón de la extraordinaria historia real de 7,000 pasajeros varados y el pequeño pueblo de Terranova que los acogió. Las culturas chocaron y los nervios se dispararon, pero la inquietud se convirtió en confianza, la música se elevó en la noche, y la gratitud se convirtió en amistades duraderas. Noticias",
-          "pt": "COME FROM AWAY da Broadway é um vencedor de Melhor Musical em toda América do Norte! Esta crítica favorita do New York Times o leva ao coração da extraordinária história real de 7.000 passageiros presos e da pequena cidade em Terra Nova que os recebeu. As culturas entraram em conflito e os nervos ficaram tensos, mas a inquietação se transformou em confiança, a música soou pela noite, e a gratidão se tornou amizades duradouras. Notícias",
-          "fr": "COME FROM AWAY de Broadway est un gagnant de la Meilleure Comédie musicale partout en Amérique du Nord! Ce coup de cœur des critiques du New York Times vous plonge au cœur de la remarquable histoire vraie de 7 000 passagers échoués et la petite ville de Terre-Neuve qui les a accueillis. Les cultures ont choqué et les nerfs étaient tendus, mais le malaise s'est transformé en confiance, la musique a retenti dans la nuit, et la gratitude s'est transformée en amitiés durables. Nouvelles"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1792166322497_958b",
-        "title": {
-          "en": "Buena Vista Social Club (Touring)",
-          "es": "Buena Vista Social Club (Gira)",
-          "pt": "Buena Vista Social Club (Turnê)",
-          "fr": "Buena Vista Social Club (Tournée)"
-        },
-        "date": "2026-10-16",
-        "venue": "Au-Rene Theater at the Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbuena-vista-social-club-touring-ft-lauderdale-florida-10-16-2026%2Fevent%2F0D0064EE8DAC4CE7&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. For group discounts visit BrowardCenter.org/group-sales. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Ho",
-          "es": "Para convertirte en miembro del Broward Center y obtener acceso a excelentes asientos y preventa, visita BrowardCenter.org/Entourage hoy. Para descuentos grupales visita BrowardCenter.org/group-sales. Planifica tu visita antes de ir al espectáculo para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluyendo el Salón Intermezzo del Sistema de Salud Infantil Nicklaus y nuestras opciones de comida y bebida en el Ho",
-          "pt": "Para se tornar membro do Broward Center e ter acesso a ótimos assentos e pré-venda, visite BrowardCenter.org/Entourage hoje. Para descontos em grupos, visite BrowardCenter.org/group-sales. Planeje sua visita antes de ir ao show para informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Salão Intermezzo do Nicklaus Children's Health System e nossas opções de comida e bebida no Ho",
-          "fr": "Pour devenir membre du Broward Center et accéder à d'excellents sièges et aux préventes, visitez BrowardCenter.org/Entourage aujourd'hui. Pour les réductions de groupe, visitez BrowardCenter.org/group-sales. Planifiez votre visite avant le spectacle pour obtenir des informations sur le stationnement via l'application ParkMobile, les expériences culinaires y compris le salon Intermezzo du Nicklaus Children's Health System et nos options de nourriture et de boissons au Ho"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
         "id": "tm_1792166322497_xz92",
         "title": {
           "en": "Mister C Vol. 3: When Science Goes Viral: Smart Stage Matinee Series",
@@ -4785,28 +4421,388 @@
         "lng": -80.187805
       },
       {
-        "id": "cp_1792166323636_qb18",
+        "id": "rss_1792248710739_0zqu",
         "title": {
-          "en": "La Gran Fiesta Una Noche Tropical",
-          "es": "La Gran Fiesta Una Noche Tropical",
-          "pt": "La Gran Fiesta Uma Noite Tropical",
-          "fr": "La Gran Fiesta Une Nuit Tropicale"
+          "en": "Dayshift – The 30+ Daytime Party 11/14/26",
+          "es": "Dayshift – La Fiesta Diurna para Mayores de 30 años 11/14/26",
+          "pt": "Dayshift – A Festa Diurna para Maiores de 30 anos 11/14/26",
+          "fr": "Dayshift – La Fête de Jour pour les Plus de 30 ans 11/14/26"
         },
-        "date": "2026-10-16",
-        "venue": "<p>MOCA Plaza</p>",
-        "address": "770 NE 125 Street  North Miami FL 33161",
-        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=14",
+        "date": "2026-11-14",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/16/dayshift-the-30-daytime-party-11-14-26/",
         "free": false,
+        "price": "$25",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/dayshift-photo-1200x800-1-350x233.jpg",
+        "description": {
+          "en": "Dayshift is a party for the 30+ generation who want the unmatched energy of a club,",
+          "es": "Dayshift es una fiesta para la generación de 30+ que desea la energía incomparable de un club",
+          "pt": "Dayshift é uma festa para a geração 30+ que quer a energia incomparável de uma balada",
+          "fr": "Dayshift est une fête pour la génération 30+ qui veut l'énergie inégalée d'une discothèque"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1792248710739_x64z",
+        "title": {
+          "en": "Uchiko’s Wine & Wagyu Dinner Series with Hundred Acre Wines 11/4/26",
+          "es": "Serie de Cena de Vino y Wagyu de Uchiko con Vinos Hundred Acre 11/4/26",
+          "pt": "Série de Jantar de Vinho e Wagyu do Uchiko com Vinhos Hundred Acre 11/4/26",
+          "fr": "Série de Dîner Vin et Wagyu d'Uchiko avec les Vins Hundred Acre 11/4/26"
+        },
+        "date": "2026-11-04",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/16/uchikos-wine-wagyu-dinner-series-with-hundred-acre-wines-11-4-26/",
+        "free": false,
+        "price": "$575",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Hundred-Acre-Wine-Group-Family-2021_06-HAWG-SET2_0083_Matt-Armendariz-350x233.jpg",
+        "description": {
+          "en": "An evening of exceptional wines and premium Wagyu awaits at Uchiko",
+          "es": "Una noche de vinos excepcionales y Wagyu premium te espera en Uchiko",
+          "pt": "Uma noite de vinhos excepcionais e Wagyu premium te aguarda no Uchiko",
+          "fr": "Une soirée de vins exceptionnels et de Wagyu premium vous attend à Uchiko"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1792248710739_08dz",
+        "title": {
+          "en": "Universoul Frequency: A Limited-Series Micro-Music Concert at Superblue Miami 10/23/26",
+          "es": "Universoul Frequency: Un Concierto Micro-Musical de Serie Limitada en Superblue Miami 10/23/26",
+          "pt": "Universoul Frequency: Um Concerto Micro-Musical de Série Limitada no Superblue Miami 10/23/26",
+          "fr": "Universoul Frequency: Un Micro-Concert Musical en Série Limitée au Superblue Miami 10/23/26"
+        },
+        "date": "2026-10-23",
+        "venue": "Superblue Miami",
+        "address": "1101 NW 23rd St, Miami, FL 33127",
+        "url": "https://www.soulofmiami.org/2026/10/16/universoul-frequency-a-limited-series-micro-music-concert-at-superblue-miami-10-23-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/unnamed-350x438.jpg",
+        "description": {
+          "en": "an immersive evening of live opera, music, art, and sound healing",
+          "es": "una noche inmersiva de ópera en vivo, música, arte y sanación sonora",
+          "pt": "uma noite imersiva de ópera ao vivo, música, arte e cura sonora",
+          "fr": "une soirée immersive d'opéra en direct, de musique, d'art et de guérison sonore"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7993639,
+        "lng": -80.2144875,
+        "category": "music"
+      },
+      {
+        "id": "rss_1792248710739_cz0w",
+        "title": {
+          "en": "Card House Society x Rolling Waves — FREE Collab Card Show (Doral) 10/18/26",
+          "es": "Card House Society x Rolling Waves — Espectáculo de Tarjetas Gratuito de Colaboración (Doral) 10/18/26",
+          "pt": "Card House Society x Rolling Waves — Show de Cartas Gratuito de Colaboração (Doral) 10/18/26",
+          "fr": "Card House Society x Rolling Waves — Spectacle de Cartes Gratuit en Collaboration (Doral) 10/18/26"
+        },
+        "date": "2026-10-18",
+        "venue": "Rolling Waves Brewing & Distillery",
+        "address": "10400 NW 33rd St #150, Doral, Florida, 33172",
+        "url": "https://www.soulofmiami.org/2026/10/16/card-house-society-x-rolling-waves-free-collab-card-show-doral-10-18-26/",
+        "free": true,
         "price": "",
         "image": "",
         "description": {
-          "en": "Hispanic Heritage Month Celebration https://northmiamifl.gov/calendar.aspx?EID=6616",
-          "es": "Celebración del Mes de la Herencia Hispana https://northmiamifl.gov/calendar.aspx?EID=6616",
-          "pt": "Celebração do Mês da Herança Hispânica https://northmiamifl.gov/calendar.aspx?EID=6616",
-          "fr": "Célébration du Mois du Patrimoine Hispanique https://northmiamifl.gov/calendar.aspx?EID=6616"
+          "en": "Card House Society x Rolling Waves Brewing",
+          "es": "Card House Society x Rolling Waves Brewing",
+          "pt": "Card House Society x Rolling Waves Brewing",
+          "fr": "Card House Society x Rolling Waves Brewing"
         },
-        "source": "North Miami",
+        "source": "Soul of Miami",
         "category": "community"
+      },
+      {
+        "id": "tm_1792248711455_kc1h",
+        "title": {
+          "en": "Slow Burn Theatre Co: Come From Away",
+          "es": "Slow Burn Theatre Co: Come From Away",
+          "pt": "Slow Burn Theatre Co: Come From Away",
+          "fr": "Slow Burn Theatre Co: Come From Away"
+        },
+        "date": "2026-10-17",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fslow-burn-theatre-co-come-from-ft-lauderdale-florida-10-17-2026%2Fevent%2F0D006436A76044E1&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/608/5bacba60-29ce-4057-930a-e4b7d45bc608_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Broadway's COME FROM AWAY is a Best Musical winner all across North America! This New York Times Critics' Pick takes you into the heart of the remarkable true story of 7,000 stranded passengers and the small town in Newfoundland that welcomed them. Cultures clashed and nerves ran high, but uneasiness turned into trust, music soared into the night, and gratitude grew into enduring friendships. News",
+          "es": "¡Come From Away de Broadway es ganador del Mejor Musical en toda América del Norte! Este Critics' Pick del New York Times te lleva al corazón de la historia verdadera notable de 7,000 pasajeros varados y el pequeño pueblo en Terranova que los recibió. Las culturas chocaron y los nervios se dispararon, pero la inquietud se convirtió en confianza, la música se elevó en la noche, y la gratitud creció en amistades duraderas.",
+          "pt": "Come From Away da Broadway é vencedor do Melhor Musical em toda a América do Norte! Este Critics' Pick do New York Times leva você ao coração da notável história verdadeira de 7.000 passageiros desabrigados e a pequena cidade em Terra Nova que os recebeu. As culturas colidiram e os nervos dispararam, mas a inquietação se transformou em confiança, a música ecoou pela noite, e a gratidão cresceu em amizades duradouras.",
+          "fr": "Come From Away de Broadway est un gagnant du Meilleur Musical partout en Amérique du Nord ! Ce Critics' Pick du New York Times vous plonge au cœur de l'histoire vraie remarquable de 7 000 passagers bloqués et de la petite ville de Terre-Neuve qui les a accueillis. Les cultures se sont heurtées et les nerfs se sont tendus, mais le malaise s'est transformé en confiance, la musique s'est élevée dans la nuit, et la gratitude a grandi en amitiés durables."
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1792248711455_c9eh",
+        "title": {
+          "en": "Buena Vista Social Club (Touring)",
+          "es": "Buena Vista Social Club (Gira)",
+          "pt": "Buena Vista Social Club (Turnê)",
+          "fr": "Buena Vista Social Club (Tournée)"
+        },
+        "date": "2026-10-17",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbuena-vista-social-club-touring-ft-lauderdale-florida-10-17-2026%2Fevent%2F0D0064EE8DB14D03&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8cf/25c443a0-c9bf-4043-8975-7a74db6578cf_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. For group discounts visit BrowardCenter.org/group-sales. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Ho",
+          "es": "Para convertirse en miembro del Broward Center y recibir acceso a excelentes asientos y preventas, visite BrowardCenter.org/Entourage hoy. Para descuentos grupales visite BrowardCenter.org/group-sales. Planifique su visita antes del espectáculo para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluido el Nicklaus Children's Health System Intermezzo Lounge y nuestras opciones de comida y bebida en el Ho",
+          "pt": "Para se tornar membro do Broward Center e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Para descontos em grupos visite BrowardCenter.org/group-sales. Planeje sua visita antes do show para informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Nicklaus Children's Health System Intermezzo Lounge e nossas opções de comida e bebida no Ho",
+          "fr": "Pour devenir membre du Broward Center et accéder à d'excellents sièges et préventes, visitez BrowardCenter.org/Entourage aujourd'hui. Pour les rabais de groupe, visitez BrowardCenter.org/group-sales. Planifiez votre visite avant le spectacle pour obtenir des informations sur le stationnement en utilisant l'application ParkMobile, les expériences culinaires incluant le Nicklaus Children's Health System Intermezzo Lounge et nos options de nourriture et boissons au Ho"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1792248711455_a9db",
+        "title": {
+          "en": "III Points",
+          "es": "III Points",
+          "pt": "III Points",
+          "fr": "III Points"
+        },
+        "date": "2026-10-17",
+        "venue": "Mana Wynwood Convention Center",
+        "address": "318 NW 23rd St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fon.fgtix.com%2Ftrk%2Fcp4M&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/65b/e72b617c-d2f8-4ff4-bf01-e828776a165b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Starts 16:00 · Mana Wynwood Convention Center",
+          "es": "Música · Comienza 16:00 · Mana Wynwood Convention Center",
+          "pt": "Música · Começa 16:00 · Mana Wynwood Convention Center",
+          "fr": "Musique · Commence 16:00 · Mana Wynwood Convention Center"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.797998,
+        "lng": -80.202062
+      },
+      {
+        "id": "tm_1792248711455_hnk1",
+        "title": {
+          "en": "Miami City Ballet",
+          "es": "Ballet de Miami",
+          "pt": "Ballet de Miami",
+          "fr": "Ballet de Miami"
+        },
+        "date": "2026-10-17",
+        "venue": "Ziff Ballet Opera House-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A70J4-&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/889/70b973b9-9475-4efe-a67d-aa417e587889_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Starts 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "es": "Artes y Teatro · Comienza 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "pt": "Artes e Teatro · Começa 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC",
+          "fr": "Arts et Théâtre · Commence 19:30 · Ziff Ballet Opera House-Adrienne Arsht PAC"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.784901,
+        "lng": -80.189598
+      },
+      {
+        "id": "tm_1792248711455_tktc",
+        "title": {
+          "en": "ICONS: Latin Rhythms",
+          "es": "ICONS: Ritmos Latinos",
+          "pt": "ICONS: Ritmos Latinos",
+          "fr": "ICONS: Rythmes Latins"
+        },
+        "date": "2026-10-17",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ficons-latin-rhythms-aventura-florida-10-17-2026%2Fevent%2F0D0064A7E316F967&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/adf/55caf971-5a43-4c25-a957-c126c914aadf_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "From the creative team behind Migguel Anggelo's acclaimed ICONS series comes a dynamic new concert celebrating the music that has shaped Latiné culture worldwide. Led by Migguel's unmistakable voice, humor, and theatrical flair, ICONS: LATIN RHYTHMS is a joyful celebration of songs generations have loved, danced to, and passed down. Featuring music by artists like Rubén Blades and Oscar D'León alo",
+          "es": "Del equipo creativo detrás de la aclamada serie ICONS de Migguel Anggelo viene un nuevo concierto dinámico que celebra la música que ha moldeado la cultura latina en todo el mundo. Liderado por la voz inconfundible de Migguel, su humor y su talento teatral, ICONS: LATIN RHYTHMS es una celebración gozosa de canciones que las generaciones han amado, bailado y transmitido. Con música de artistas como Rubén Blades y Oscar D'León alo",
+          "pt": "Do time criativo por trás da aclamada série ICONS de Migguel Anggelo vem um novo e dinâmico concerto celebrando a música que moldou a cultura latina em todo o mundo. Liderado pela voz inconfundível de Migguel, seu humor e talento teatral, ICONS: LATIN RHYTHMS é uma celebração alegre de músicas que gerações amaram, dançaram e transmitiram. Apresentando músicas de artistas como Rubén Blades e Oscar D'León alo",
+          "fr": "De l'équipe créative derrière la série ICONS acclamée de Migguel Anggelo vient un nouveau concert dynamique célébrant la musique qui a façonné la culture latine dans le monde entier. Dirigé par la voix distinctive de Migguel, son humour et son talent théâtral, ICONS: LATIN RHYTHMS est une célébration joyeuse de chansons que les générations ont aimées, dansées et transmises. Mettant en vedette la musique d'artistes comme Rubén Blades et Oscar D'León alo"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "tm_1792248711455_3nti",
+        "title": {
+          "en": "Live Dead & Brothers Perform The Music of Grateful Dead & Allman Bros",
+          "es": "Live Dead & Brothers Interpretan la Música de Grateful Dead y Allman Bros",
+          "pt": "Live Dead & Brothers Interpretam a Música de Grateful Dead e Allman Bros",
+          "fr": "Live Dead & Brothers Interprètent la Musique de Grateful Dead et Allman Bros"
+        },
+        "date": "2026-10-21",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Flive-dead-brothers-perform-the-music-ft-lauderdale-florida-10-21-2026%2Fevent%2F0D0064C283C1533A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/98f/e6f9a328-64e1-4b7c-9b11-a7f4b041d98f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Prepare to rejoin the mesmerizing journey through the golden era of psychedelic blues and the roots of the jam band scene as Live Dead & Brothers takes the stage. Composed of actual and legacy members from the extended Grateful Dead and Allman Brothers families, this exceptional ensemble is set to revive the timeless magic of two halcyon repertoires, delivering an experience like no other. The bra",
+          "es": "Prepárese para reunirse nuevamente en el fascinante viaje a través de la era dorada del blues psicodélico y las raíces de la escena de jam bands mientras Live Dead & Brothers sube al escenario. Compuesto por miembros actuales y heredados de las familias extendidas de Grateful Dead y Allman Brothers, este conjunto excepcional está listo para revivir la magia atemporal de dos repertorios dorados, ofreciendo una experiencia como ninguna otra. La bra",
+          "pt": "Prepare-se para se reunir novamente na jornada fascinante através da era dourada do blues psicodélico e das raízes da cena jam band enquanto Live Dead & Brothers sobe ao palco. Composto por membros atuais e herdeiros das famílias estendidas de Grateful Dead e Allman Brothers, este conjunto excepcional está pronto para reviver a magia intemporal de dois repertórios áureos, oferecendo uma experiência como nenhuma outra. A bra",
+          "fr": "Préparez-vous à vous réunir à nouveau dans le voyage captivant à travers l'ère dorée du blues psychédélique et les racines de la scène jam band alors que Live Dead & Brothers montent sur scène. Composé de membres actuels et hérités des familles étendues de Grateful Dead et Allman Brothers, cet ensemble exceptionnel est prêt à raviver la magie intemporelle de deux répertoires aurifères, offrant une expérience comme nulle autre. Le bra"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1792248711455_8ip3",
+        "title": {
+          "en": "Slow Burn Theatre Co: Come From Away - Smart Stage Matinee Series",
+          "es": "Slow Burn Theatre Co: Come From Away - Serie de Funciones Matutinas Smart Stage",
+          "pt": "Slow Burn Theatre Co: Come From Away - Série de Apresentações Matinais Smart Stage",
+          "fr": "Slow Burn Theatre Co: Come From Away - Série de Représentations Matinales Smart Stage"
+        },
+        "date": "2026-10-22",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fslow-burn-theatre-co-come-from-ft-lauderdale-florida-10-22-2026%2Fevent%2F0D0064B2A6DB6B9E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/608/5bacba60-29ce-4057-930a-e4b7d45bc608_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Come From Away is based on the true story of what happened in the small town of Gander, Newfoundland, in the days following September 11, 2001. When U.S. airspace was suddenly closed, 38 international planes were diverted to Gander, nearly doubling the town's population overnight. This full-length show follows both the stranded passengers and the local residents who welcomed them with extraordinar",
+          "es": "Come From Away se basa en la historia verdadera de lo que sucedió en el pequeño pueblo de Gander, Terranova, en los días posteriores al 11 de septiembre de 2001. Cuando el espacio aéreo estadounidense se cerró repentinamente, 38 aviones internacionales fueron desviados a Gander, casi duplicando la población del pueblo durante la noche. Este espectáculo de larga duración sigue tanto a los pasajeros varados como a los residentes locales que los recibieron con extraordinar",
+          "pt": "Come From Away é baseado na história verdadeira do que aconteceu na pequena cidade de Gander, Terra Nova, nos dias seguintes a 11 de setembro de 2001. Quando o espaço aéreo dos EUA foi repentinamente fechado, 38 aviões internacionais foram desviados para Gander, quase dobrando a população da cidade durante a noite. Este espetáculo completo acompanha tanto os passageiros retidos quanto os moradores locais que os receberam com extraordinar",
+          "fr": "Come From Away est basé sur la véritable histoire de ce qui s'est passé dans la petite ville de Gander, Terre-Neuve, dans les jours suivant le 11 septembre 2001. Lorsque l'espace aérien américain a été soudainement fermé, 38 avions internationaux ont été détournés vers Gander, doublant presque la population de la ville du jour au lendemain. Ce spectacle complet suit à la fois les passagers échoués et les résidents locaux qui les ont accueillis avec extraordinair"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1792248711455_lk9q",
+        "title": {
+          "en": "Dear Maryanne, MooseCreek Park, and Excuse Me, Who Are You? in Miami",
+          "es": "Dear Maryanne, MooseCreek Park, y Excuse Me, Who Are You? en Miami",
+          "pt": "Dear Maryanne, MooseCreek Park, e Excuse Me, Who Are You? em Miami",
+          "fr": "Dear Maryanne, MooseCreek Park, et Excuse Me, Who Are You? à Miami"
+        },
+        "date": "2026-10-22",
+        "venue": "Churchill's Pub",
+        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdear-maryanne-moosecreek-park-and-churchills-pub-tickets%2F14290174&utm_medium=affiliate",
+        "free": false,
+        "price": "$24",
+        "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 18 and over. Any ticket holder unable to present valid identification indicating that they are at least 18 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 19:00 · Churchill's Pub",
+          "es": "Este evento es solo para mayores de 18 años. Cualquier comprador de entrada que no pueda presentar una identificación válida que indique que tiene al menos 18 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza a las 19:00 · Churchill's Pub",
+          "pt": "Este evento é apenas para maiores de 18 anos. Qualquer titular de ingresso que não possa apresentar uma identificação válida indicando que tem pelo menos 18 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa às 19:00 · Churchill's Pub",
+          "fr": "Cet événement est réservé aux 18 ans et plus. Tout porteur de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 18 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence à 19h00 · Churchill's Pub"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.82647681611792,
+        "lng": -80.19169187791115
+      },
+      {
+        "id": "tm_1792248711455_b8eb",
+        "title": {
+          "en": "Yung Gravy: The Joyrider Tour",
+          "es": "Yung Gravy: The Joyrider Tour",
+          "pt": "Yung Gravy: The Joyrider Tour",
+          "fr": "Yung Gravy: The Joyrider Tour"
+        },
+        "date": "2026-10-22",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fyung-gravy-the-joyrider-tour-ft-lauderdale-florida-10-22-2026%2Fevent%2F0D006515FC6B7B8C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/020/a2c4a4ec-313e-45a7-8901-7256b7b72020_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Yung Gravy: The Joyrider Tour will be coming to Revolution Live on October 22nd with special guest Terror Reid. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
+          "es": "Yung Gravy: The Joyrider Tour llegará a Revolution Live el 22 de octubre con el artista especial Terror Reid. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza a las 19:00 · Revolution Live",
+          "pt": "Yung Gravy: The Joyrider Tour virá para Revolution Live em 22 de outubro com o artista especial Terror Reid. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa às 19:00 · Revolution Live",
+          "fr": "Yung Gravy: The Joyrider Tour viendra à Revolution Live le 22 octobre avec l'artiste spécial Terror Reid. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien sont sujets à modification sans préavis. · Commence à 19h00 · Revolution Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1792248711455_hdx8",
+        "title": {
+          "en": "Arts Ballet Theatre of Florida: Dracula",
+          "es": "Arts Ballet Theatre of Florida: Drácula",
+          "pt": "Arts Ballet Theatre of Florida: Drácula",
+          "fr": "Arts Ballet Theatre of Florida: Dracula"
+        },
+        "date": "2026-10-22",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Farts-ballet-theatre-of-florida-dracula-aventura-florida-10-22-2026%2Fevent%2F0D0064F0B73B709F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/032/f2bdf0eb-b179-4b33-a0ff-e3b3a9d6f032_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Experience the mystery, romance, and haunting beauty of Dracula in this Miami premiere of Roberto Forleo's captivating full-length ballet, presented by Arts Ballet Theatre of Florida. Filled with suspense, passion, and breathtaking dancing, Dracula promises an extraordinary evening of ballet and theatrical storytelling that will leave audiences spellbound. A FREE 30 minute pre-show discussion for ",
+          "es": "Experimenta el misterio, el romance y la belleza inquietante de Drácula en este estreno de Miami del cautivador ballet de larga duración de Roberto Forleo, presentado por Arts Ballet Theatre of Florida. Lleno de suspenso, pasión y danzas impresionantes, Drácula promete una noche extraordinaria de ballet y narrativa teatral que dejará a la audiencia hechizada. Una discusión previa gratuita de 30 minutos para",
+          "pt": "Experimente o mistério, o romance e a beleza assombrada de Drácula nesta estreia em Miami do cativante balé de longa duração de Roberto Forleo, apresentado pela Arts Ballet Theatre of Florida. Repleto de suspense, paixão e dança impressionante, Drácula promete uma noite extraordinária de balé e narrativa teatral que deixará o público fascinado. Uma discussão pré-apresentação gratuita de 30 minutos para",
+          "fr": "Découvrez le mystère, la romance et la beauté obsédante de Dracula dans cette première mondiale à Miami du ballet captivant de Roberto Forleo, présenté par Arts Ballet Theatre of Florida. Rempli de suspense, de passion et de danse à couper le souffle, Dracula promet une soirée extraordinaire de ballet et de narration théâtrale qui laissera le public ensorcelé. Une discussion gratuite de 30 minutes avant le spectacle pour"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "tm_1792248711455_gqwz",
+        "title": {
+          "en": "Premios Billboard De La Musica Latina",
+          "es": "Premios Billboard De La Música Latina",
+          "pt": "Prêmios Billboard Da Música Latina",
+          "fr": "Prix Billboard De La Musique Latine"
+        },
+        "date": "2026-10-22",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fpremios-billboard-de-la-musica-latina-miami-florida-10-22-2026%2Fevent%2F0D006530893148E5&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/e8f/a8fd59e1-45a9-4e66-9578-942a1a28fe8f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "2026 Billboard Latin Music Awards brings together global stars, chart-topping finalists and some of the most exciting voices shaping Latin music today. Artists appearing include Carlos Rivera, Chuyin, Cristian Castro, Elvis Crespo, Erick Brian, Fuerza Regida, Ha*Ash, Jessi Uribe, Kapo, La Nueva Ola de la Cumbia, Manuel Turizo, Melymel, Nanpa Básico, Nella, Ozuna, Pablo Alborán, Paola Jara, Pututi ",
+          "es": "Los Premios Billboard De La Música Latina 2026 reúnen a estrellas globales, finalistas de las listas de éxitos y algunas de las voces más emocionantes que están moldeando la música latina hoy. Los artistas que aparecen incluyen Carlos Rivera, Chuyin, Cristian Castro, Elvis Crespo, Erick Brian, Fuerza Regida, Ha*Ash, Jessi Uribe, Kapo, La Nueva Ola de la Cumbia, Manuel Turizo, Melymel, Nanpa Básico, Nella, Ozuna, Pablo Alborán, Paola Jara, Pututi",
+          "pt": "Os Prêmios Billboard Da Música Latina 2026 reúnem estrelas globais, finalistas das paradas de sucesso e algumas das vozes mais empolgantes que estão moldando a música latina hoje. Os artistas que aparecem incluem Carlos Rivera, Chuyin, Cristian Castro, Elvis Crespo, Erick Brian, Fuerza Regida, Ha*Ash, Jessi Uribe, Kapo, La Nueva Ola de la Cumbia, Manuel Turizo, Melymel, Nanpa Básico, Nella, Ozuna, Pablo Alborán, Paola Jara, Pututi",
+          "fr": "Les Prix Billboard De La Musique Latine 2026 réunissent des stars mondiales, des finalistes des classements et certaines des voix les plus passionnantes qui façonnent la musique latine aujourd'hui. Les artistes présents incluent Carlos Rivera, Chuyin, Cristian Castro, Elvis Crespo, Erick Brian, Fuerza Regida, Ha*Ash, Jessi Uribe, Kapo, La Nueva Ola de la Cumbia, Manuel Turizo, Melymel, Nanpa Básico, Nella, Ozuna, Pablo Alborán, Paola Jara, Pututi"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7707756,
+        "lng": -80.1901174
       }
     ]
   },
@@ -5710,7 +5706,29 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-16T15:59:40.231Z",
-    "items": []
+    "fetchedAt": "2026-10-17T14:52:54.194Z",
+    "items": [
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.b63d50b627f64f46519e84641aee03ec8656738d.001.1",
+        "type": "weather",
+        "severity": "moderate",
+        "title": {
+          "en": "Rip Current Statement",
+          "es": "Aviso de Corrientes de Resaca",
+          "pt": "Aviso de Correntes de Retorno",
+          "fr": "Avis de Courants de Baïn"
+        },
+        "detail": {
+          "en": "* WHAT...Dangerous rip currents expected.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...From late tonight through late Monday night.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+          "es": "* QUÉ...Se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Costa del Condado de Palm Beach, Costa del Condado de Broward y Costa del Condado de Miami Dade.\n\n* CUÁNDO...Desde esta noche hasta el lunes por la noche.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la orilla hacia aguas más profundas.",
+          "pt": "* O QUÊ...Correntes de retorno perigosas esperadas.\n\n* ONDE...Litoral do Condado de Palm Beach, Litoral do Condado de Broward e Litoral do Condado de Miami Dade.\n\n* QUANDO...De hoje à noite até segunda-feira à noite.\n\n* IMPACTOS...Correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da praia em direção a águas mais profundas.",
+          "fr": "* QUOI...Courants d'arrachement dangereux attendus.\n\n* OÙ...Littoral du comté de Palm Beach, littoral du comté de Broward et littoral du comté de Miami Dade.\n\n* QUAND...D'aujourd'hui en fin de soirée à lundi en fin de soirée.\n\n* IMPACTS...Les courants d'arrachement peuvent emporter même les meilleurs nageurs au large vers des eaux plus profondes."
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b63d50b627f64f46519e84641aee03ec8656738d.001.1",
+        "effectiveAt": "2026-10-17T03:40:00-04:00",
+        "expiresAt": "2026-10-18T08:00:00.000Z"
+      }
+    ]
   }
 }
