@@ -1,58 +1,45 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-19T18:16:23.561Z",
+    "lastUpdated": "2026-10-20T16:16:02.443Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-19T18:16:18.991Z",
+    "fetchedAt": "2026-10-20T16:15:58.127Z",
     "current": {
-      "temp_f": 84,
-      "feels_f": 87,
+      "temp_f": 81,
+      "feels_f": 84,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 60,
-      "wind_mph": 15,
-      "rain_chance": 18,
+      "humidity": 67,
+      "wind_mph": 13,
+      "rain_chance": 27,
       "weathercode": 1
     },
     "forecast": [
       {
-        "date": "2026-10-19",
-        "high_f": 85,
-        "low_f": 74,
-        "weathercode": 3,
-        "rain_chance": 18,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-10-20",
-        "high_f": 83,
-        "low_f": 68,
-        "weathercode": 3,
-        "rain_chance": 15,
+        "high_f": 82,
+        "low_f": 71,
+        "weathercode": 53,
+        "rain_chance": 27,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       },
       {
         "date": "2026-10-21",
-        "high_f": 82,
-        "low_f": 65,
+        "high_f": 77,
+        "low_f": 71,
         "weathercode": 53,
-        "rain_chance": 13,
+        "rain_chance": 8,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -62,175 +49,188 @@
       },
       {
         "date": "2026-10-22",
-        "high_f": 80,
-        "low_f": 77,
-        "weathercode": 55,
-        "rain_chance": 25,
+        "high_f": 79,
+        "low_f": 69,
+        "weathercode": 51,
+        "rain_chance": 23,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       },
       {
         "date": "2026-10-23",
         "high_f": 80,
-        "low_f": 77,
-        "weathercode": 53,
-        "rain_chance": 54,
+        "low_f": 76,
+        "weathercode": 51,
+        "rain_chance": 48,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-10-24",
+        "high_f": 79,
+        "low_f": 75,
+        "weathercode": 95,
+        "rain_chance": 81,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "14:00",
-        "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 1
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 3
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 1
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 7
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 8
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 74,
-        "weathercode": 1,
-        "rain_chance": 5
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 1
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 74,
-        "weathercode": 2,
-        "rain_chance": 1
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 73,
-        "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 74,
-        "weathercode": 2,
-        "rain_chance": 4
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 1
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 72,
-        "weathercode": 1,
-        "rain_chance": 5
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 71,
-        "weathercode": 0,
-        "rain_chance": 7
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 71,
-        "weathercode": 0,
-        "rain_chance": 11
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 69,
-        "weathercode": 0,
-        "rain_chance": 10
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 69,
-        "weathercode": 2,
-        "rain_chance": 15
-      },
-      {
-        "hour": "09:00",
-        "temp_f": 73,
-        "weathercode": 1,
-        "rain_chance": 11
-      },
-      {
-        "hour": "10:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 11
-      },
-      {
-        "hour": "11:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 11
-      },
-      {
         "hour": "12:00",
-        "temp_f": 79,
+        "temp_f": 80,
         "weathercode": 2,
-        "rain_chance": 6
+        "rain_chance": 5
       },
       {
         "hour": "13:00",
         "temp_f": 81,
         "weathercode": 1,
+        "rain_chance": 4
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
+        "hour": "17:00",
+        "temp_f": 81,
+        "weathercode": 1,
+        "rain_chance": 4
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 78,
+        "weathercode": 0,
         "rain_chance": 2
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 74,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 72,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 71,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 71,
+        "weathercode": 2,
+        "rain_chance": 7
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 71,
+        "weathercode": 0,
+        "rain_chance": 6
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 71,
+        "weathercode": 51,
+        "rain_chance": 8
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 3
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 71,
+        "weathercode": 53,
+        "rain_chance": 2
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 3
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "09:00",
+        "temp_f": 73,
+        "weathercode": 3,
+        "rain_chance": 1
+      },
+      {
+        "hour": "10:00",
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 1
+      },
+      {
+        "hour": "11:00",
+        "temp_f": 76,
+        "weathercode": 1,
+        "rain_chance": 0
       }
     ]
   },
@@ -4469,30 +4469,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1792433724984_xd9z",
-        "title": {
-          "en": "Sounds of the Set: Free music, market, Delray Beach, Oct. 22",
-          "es": "Sonidos del Set: Música gratis, mercado, Delray Beach, 22 de oct.",
-          "pt": "Sons do Set: Música gratuita, mercado, Delray Beach, 22 de out.",
-          "fr": "Sons de l'Ensemble: Musique gratuite, marché, Delray Beach, 22 oct."
-        },
-        "date": "2026-10-19",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-music-market-community-delray-beach/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2025/10/delray-music-728x689.jpg",
-        "description": {
-          "en": "South Florida on the Cheap \"Sounds of the Set\" is a community event in Downtown Delray Beach that features live music and local vendors at Blackmer's Market, for an evening of rhythm, community, and culture.... Copyright South Florida on the Cheap. The post Sounds of the Set: Free music, market, Delray Beach, Oct. 22 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap \"Sonidos del Set\" es un evento comunitario en el Centro de Delray Beach que presenta música en vivo y vendedores locales en el Mercado de Blackmer, para una noche de ritmo, comunidad y cultura.",
-          "pt": "South Florida on the Cheap \"Sons do Set\" é um evento comunitário no Centro de Delray Beach que apresenta música ao vivo e vendedores locais no Mercado de Blackmer, para uma noite de ritmo, comunidade e cultura.",
-          "fr": "South Florida on the Cheap \"Sons de l'Ensemble\" est un événement communautaire au centre-ville de Delray Beach présentant de la musique live et des vendeurs locaux au Marché de Blackmer, pour une soirée de rythme, de communauté et de culture."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
         "id": "tm_1792433725501_0oje",
         "title": {
           "en": "Slow Burn Theatre Co: Come From Away",
@@ -4673,6 +4649,32 @@
         "category": "comedy",
         "lat": 26.134246,
         "lng": -80.136172
+      },
+      {
+        "id": "rss_1792512937486_wljn",
+        "title": {
+          "en": "Quantum Dance Hypnosis Wellness Showcase Miami Beach 10/23/26",
+          "es": "Espectáculo de Bienestar Hipnosis Danza Cuántica Miami Beach 10/23/26",
+          "pt": "Showcase de Bem-estar Hipnose Dança Quântica Miami Beach 10/23/26",
+          "fr": "Spectacle de Bien-être Hypnose Danse Quantique Miami Beach 10/23/26"
+        },
+        "date": "2026-10-23",
+        "venue": "Carillon Miami Wellness Resort",
+        "address": "6801 Collins Ave, Miami Beach, Florida, 33141",
+        "url": "https://www.soulofmiami.org/2026/10/19/quantum-dance-hypnosis-wellness-showcase-miami-beach-10-23-26/",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "$77 Friday October 23 2026 5:30 pm to 9:30 pm Carillon Miami Wellness Resort",
+          "es": "$77 Viernes 23 de octubre de 2026 de 5:30 pm a 9:30 pm Carillon Miami Wellness Resort",
+          "pt": "$77 Sexta-feira 23 de outubro de 2026 das 5:30 pm às 9:30 pm Carillon Miami Wellness Resort",
+          "fr": "$77 Vendredi 23 octobre 2026 de 17h30 à 21h30 Carillon Miami Wellness Resort"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.8525145,
+        "lng": -80.1198083,
+        "category": "community"
       }
     ]
   },
@@ -5576,10 +5578,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-19T18:16:18.991Z",
+    "fetchedAt": "2026-10-20T16:15:58.127Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.ed5148c074e8a21898a74e652d77c1f4292b31d2.003.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.79bf28f1179992e781a0af2af0be524ff920fc1d.003.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -5589,15 +5591,15 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...Dangerous rip currents expected.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...From late tonight through Thursday evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
-          "es": "* QUÉ...Se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Costas del Condado de Palm Beach, Costas del Condado de Broward y Costas del Condado de Miami Dade.\n\n* CUÁNDO...Desde esta noche hasta el jueves por la tarde.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la orilla hacia aguas más profundas.",
-          "pt": "* O QUÊ...Correntes de retorno perigosas esperadas.\n\n* ONDE...Litoral do Condado de Palm Beach, Litoral do Condado de Broward e Litoral do Condado de Miami Dade.\n\n* QUANDO...De hoje à noite até a quinta-feira à noite.\n\n* IMPACTOS...Correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da costa em águas mais profundas.",
-          "fr": "* QUOI...Courants de baïne dangereux attendus.\n\n* OÙ...Côtes du comté de Palm Beach, côtes du comté de Broward et côtes du comté de Miami Dade.\n\n* QUAND...À partir de ce soir jusqu'à jeudi soir.\n\n* IMPACTS...Les courants de baïne peuvent emporter même les meilleurs nageurs au large vers des eaux plus profondes."
+          "en": "* WHAT...Dangerous rip currents expected.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County and\nCoastal Miami Dade County.\n\n* WHEN...Through Thursday evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+          "es": "* QUÉ...Se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Palm Beach, Condado costero de Broward y Condado costero de Miami Dade.\n\n* CUÁNDO...Hasta el jueves por la noche.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la orilla hacia aguas más profundas.",
+          "pt": "* O QUÊ...Correntes de retorno perigosas esperadas.\n\n* ONDE...Condado costeiro de Palm Beach, Condado costeiro de Broward e Condado costeiro de Miami Dade.\n\n* QUANDO...Até quinta-feira à noite.\n\n* IMPACTOS...As correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da costa em direção a águas mais profundas.",
+          "fr": "* QUOI...Courants d'arrachement dangereux attendus.\n\n* OÙ...Comté côtier de Palm Beach, Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Jusqu'à jeudi soir.\n\n* IMPACTS...Les courants d'arrachement peuvent emporter même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ed5148c074e8a21898a74e652d77c1f4292b31d2.003.1",
-        "effectiveAt": "2026-10-19T01:40:00-04:00",
-        "expiresAt": "2026-10-20T08:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.79bf28f1179992e781a0af2af0be524ff920fc1d.003.1",
+        "effectiveAt": "2026-10-20T02:19:00-04:00",
+        "expiresAt": "2026-10-20T20:00:00.000Z"
       }
     ]
   }
