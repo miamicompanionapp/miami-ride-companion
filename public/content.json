@@ -1,45 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-27T17:21:51.581Z",
+    "lastUpdated": "2026-10-28T17:50:55.459Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-27T17:21:41.024Z",
+    "fetchedAt": "2026-10-28T17:50:41.744Z",
     "current": {
-      "temp_f": 81,
-      "feels_f": 82,
+      "temp_f": 82,
+      "feels_f": 90,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 71,
-      "wind_mph": 18,
-      "rain_chance": 43,
-      "weathercode": 3
+      "humidity": 77,
+      "wind_mph": 11,
+      "rain_chance": 39,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-10-27",
-        "high_f": 82,
-        "low_f": 74,
-        "weathercode": 3,
-        "rain_chance": 43,
+        "date": "2026-10-28",
+        "high_f": 83,
+        "low_f": 73,
+        "weathercode": 61,
+        "rain_chance": 39,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Light rain",
+          "es": "Lluvia ligera",
+          "pt": "Chuva leve",
+          "fr": "Pluie légère"
         }
       },
       {
-        "date": "2026-10-28",
-        "high_f": 81,
+        "date": "2026-10-29",
+        "high_f": 83,
         "low_f": 73,
+        "weathercode": 82,
+        "rain_chance": 16,
+        "description": {
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
+        }
+      },
+      {
+        "date": "2026-10-30",
+        "high_f": 83,
+        "low_f": 75,
         "weathercode": 81,
-        "rain_chance": 32,
+        "rain_chance": 22,
         "description": {
           "en": "Moderate showers",
           "es": "Chubascos moderados",
@@ -48,189 +61,176 @@
         }
       },
       {
-        "date": "2026-10-29",
-        "high_f": 84,
-        "low_f": 73,
-        "weathercode": 51,
-        "rain_chance": 42,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
-        "date": "2026-10-30",
-        "high_f": 83,
-        "low_f": 79,
-        "weathercode": 53,
-        "rain_chance": 17,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-10-31",
         "high_f": 83,
         "low_f": 79,
-        "weathercode": 53,
-        "rain_chance": 23,
+        "weathercode": 80,
+        "rain_chance": 56,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
+        }
+      },
+      {
+        "date": "2026-11-01",
+        "high_f": 83,
+        "low_f": 79,
+        "weathercode": 80,
+        "rain_chance": 65,
+        "description": {
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       }
     ],
     "hourly": [
       {
         "hour": "13:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 14
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "14:00",
         "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 14
+        "weathercode": 0,
+        "rain_chance": 8
       },
       {
         "hour": "15:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 15
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 10
       },
       {
         "hour": "16:00",
-        "temp_f": 82,
-        "weathercode": 2,
-        "rain_chance": 17
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "17:00",
-        "temp_f": 81,
-        "weathercode": 1,
-        "rain_chance": 14
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 4
       },
       {
         "hour": "18:00",
         "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 18
+        "weathercode": 1,
+        "rain_chance": 4
       },
       {
         "hour": "19:00",
         "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 24
+        "weathercode": 53,
+        "rain_chance": 3
       },
       {
         "hour": "20:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 21
+        "temp_f": 76,
+        "weathercode": 1,
+        "rain_chance": 3
       },
       {
         "hour": "21:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 32
+        "temp_f": 76,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "22:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 37
+        "temp_f": 75,
+        "weathercode": 0,
+        "rain_chance": 6
       },
       {
         "hour": "23:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 32
+        "temp_f": 75,
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "00:00",
         "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 32
+        "weathercode": 0,
+        "rain_chance": 11
       },
       {
         "hour": "01:00",
-        "temp_f": 76,
-        "weathercode": 2,
-        "rain_chance": 23
+        "temp_f": 74,
+        "weathercode": 0,
+        "rain_chance": 7
       },
       {
         "hour": "02:00",
-        "temp_f": 75,
-        "weathercode": 1,
-        "rain_chance": 19
+        "temp_f": 74,
+        "weathercode": 0,
+        "rain_chance": 4
       },
       {
         "hour": "03:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 27
+        "temp_f": 74,
+        "weathercode": 82,
+        "rain_chance": 4
       },
       {
         "hour": "04:00",
-        "temp_f": 76,
-        "weathercode": 1,
-        "rain_chance": 21
+        "temp_f": 74,
+        "weathercode": 80,
+        "rain_chance": 6
       },
       {
         "hour": "05:00",
-        "temp_f": 75,
-        "weathercode": 1,
-        "rain_chance": 25
+        "temp_f": 74,
+        "weathercode": 51,
+        "rain_chance": 5
       },
       {
         "hour": "06:00",
         "temp_f": 74,
-        "weathercode": 0,
-        "rain_chance": 24
+        "weathercode": 3,
+        "rain_chance": 5
       },
       {
         "hour": "07:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 23
+        "temp_f": 73,
+        "weathercode": 1,
+        "rain_chance": 5
       },
       {
         "hour": "08:00",
-        "temp_f": 76,
-        "weathercode": 2,
-        "rain_chance": 27
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 4
       },
       {
         "hour": "09:00",
-        "temp_f": 78,
-        "weathercode": 2,
-        "rain_chance": 17
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 3
       },
       {
         "hour": "10:00",
         "temp_f": 80,
-        "weathercode": 1,
-        "rain_chance": 19
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "11:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 21
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 6
       },
       {
         "hour": "12:00",
-        "temp_f": 81,
+        "temp_f": 82,
         "weathercode": 1,
-        "rain_chance": 21
+        "rain_chance": 7
       }
     ]
   },
@@ -3083,32 +3083,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1792686686296_tt3c",
-        "title": {
-          "en": "WTE Miami 10/27/26",
-          "es": "WTE Miami 10/27/26",
-          "pt": "WTE Miami 10/27/26",
-          "fr": "WTE Miami 10/27/26"
-        },
-        "date": "2026-10-27",
-        "venue": "Miami Beach Convention Center",
-        "address": "1901 Convention Center Drive, Miami, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/21/wte-miami-10-27-26/",
-        "free": false,
-        "price": "$20",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/IMG_5053-DxO_DeepPRIME-3-350x176.jpg",
-        "description": {
-          "en": "WTE Miami brings together 500+ exhibitors representing 70+ countries, including more than 40 tourism boards, alongside airlines, hotels, cruise",
-          "es": "WTE Miami reúne a 500+ expositores que representan 70+ países, incluyendo más de 40 oficinas de turismo, junto con aerolíneas, hoteles, cruceros",
-          "pt": "WTE Miami reúne 500+ expositores representando 70+ países, incluindo mais de 40 órgãos de turismo, juntamente com companhias aéreas, hotéis, cruzeiros",
-          "fr": "WTE Miami rassemble 500+ exposants représentant 70+ pays, dont plus de 40 offices de tourisme, aux côtés de compagnies aériennes, hôtels, croisières"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7955257,
-        "lng": -80.133515,
-        "category": "arts"
-      },
-      {
         "id": "cp_1792686687884_ersx",
         "title": {
           "en": "NMB Menorah Lighting Ceremony",
@@ -3307,58 +3281,6 @@
         "lat": 25.7973284,
         "lng": -80.2362329,
         "category": "arts"
-      },
-      {
-        "id": "tm_1792855065565_rtfk",
-        "title": {
-          "en": "The Linda Lindas",
-          "es": "The Linda Lindas",
-          "pt": "The Linda Lindas",
-          "fr": "The Linda Lindas"
-        },
-        "date": "2026-10-27",
-        "venue": "Culture Room",
-        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-linda-lindas-ft-lauderdale-florida-10-27-2026%2Fevent%2F0D0064EC329ADC15&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/90d/719c31d1-77bf-4d72-9f16-6bb7998cb90d_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Linda Lindas with special guests The Rat Utopia Experiment and Woolbright Doors open 7:00pm The Linda Lindas have partnered with PLUS1 so that $1 from every ticket sold on our tour will go towards supporting organizations working for equity, access, and dignity for all. www.plus1.org · Starts 19:00 · Culture Room",
-          "es": "The Linda Lindas con artistas especiales The Rat Utopia Experiment y Woolbright. Las puertas abren a las 19:00. The Linda Lindas se ha asociado con PLUS1 para que $1 de cada entrada vendida en nuestra gira se destine a organizaciones que trabajen por la equidad, el acceso y la dignidad para todos. www.plus1.org · Comienza 19:00 · Culture Room",
-          "pt": "The Linda Lindas com convidados especiais The Rat Utopia Experiment e Woolbright. Portas abrem às 19:00. The Linda Lindas fez uma parceria com PLUS1 para que $1 de cada ingresso vendido em nossa turnê vá para organizações que trabalham pela equidade, acesso e dignidade para todos. www.plus1.org · Começa 19:00 · Culture Room",
-          "fr": "The Linda Lindas avec les artistes spéciaux The Rat Utopia Experiment et Woolbright. Les portes ouvrent à 19h00. The Linda Lindas s'est associé avec PLUS1 pour que 1 $ de chaque billet vendu lors de notre tournée aille aux organisations travaillant pour l'équité, l'accès et la dignité pour tous. www.plus1.org · Début 19:00 · Culture Room"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.166888,
-        "lng": -80.117058
-      },
-      {
-        "id": "tm_1792855065565_w31y",
-        "title": {
-          "en": "An Evening With David Sedaris",
-          "es": "Una Noche con David Sedaris",
-          "pt": "Uma Noite com David Sedaris",
-          "fr": "Une Soirée avec David Sedaris"
-        },
-        "date": "2026-10-27",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fan-evening-with-david-sedaris-ft-lauderdale-florida-10-27-2026%2Fevent%2F0D006487B36BEB98&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/520/fd7e913c-a71d-49a1-9e46-ec5c0b019520_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "David Sedaris, America's best-selling humorist and social satirist, returns following publication of his most recent book of short stories, The Land and Its People. In his customary sartorial and humorous manner, David will make you laugh and think in equal measures, with all new, unpublished stories and commentary. As always, the reading will be accompanied by a pre and post-show book signing. Th",
-          "es": "David Sedaris, el humorista más vendido de América y satírico social, regresa tras la publicación de su libro más reciente de historias cortas, La Tierra y Su Gente. A su manera habitual, sartorial y humorística, David te hará reír y pensar en igual medida, con historias y comentarios completamente nuevos e inéditos. Como siempre, la lectura irá acompañada de una firma de libros previa y posterior al espectáculo.",
-          "pt": "David Sedaris, o humorista mais vendido da América e satírico social, retorna após a publicação de seu livro mais recente de histórias curtas, A Terra e Seu Povo. À sua maneira habitual, sartorial e humorística, David o fará rir e pensar em igual medida, com histórias e comentários completamente novos e inéditos. Como sempre, a leitura será acompanhada por uma sessão de autógrafos antes e depois do show.",
-          "fr": "David Sedaris, le humoriste le plus vendu d'Amérique et satiriste social, revient suite à la publication de son dernier recueil d'histoires courtes, La Terre et Son Peuple. À sa manière habituelle, vestimentaire et humoristique, David vous fera rire et réfléchir à égalité, avec des histoires et des commentaires complètement nouveaux et inédits. Comme toujours, la lecture sera accompagnée d'une séance de signature de livres avant et après le spectacle."
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.134246,
-        "lng": -80.136172
       },
       {
         "id": "tm_1792855065565_pz6r",
@@ -4211,30 +4133,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1793038103358_0zjm",
-        "title": {
-          "en": "Catch the Bad Guy Miami Free GPS Outdoor Challenge Race 10/27/26, 10/28/26, 10/29/26",
-          "es": "Carrera de Desafío al Aire Libre Gratis Catch the Bad Guy Miami GPS 27/10/26, 28/10/26, 29/10/26",
-          "pt": "Corrida de Desafio ao Ar Livre Grátis Catch the Bad Guy Miami GPS 27/10/26, 28/10/26, 29/10/26",
-          "fr": "Course de Défi en Plein Air Gratuite Catch the Bad Guy Miami GPS 27/10/26, 28/10/26, 29/10/26"
-        },
-        "date": "2026-10-27",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/10/25/catch-the-bad-guy-miami-free-gps-outdoor-challenge-race-10-27-26-10-28-26-10-29-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/georace-eventbrite-banner-350x175.png",
-        "description": {
-          "en": "Catch the Bad Guy is a free GPS outdoor challenge race from GeoRace. Download",
-          "es": "Catch the Bad Guy es una carrera de desafío al aire libre gratis de GeoRace. Descarga",
-          "pt": "Catch the Bad Guy é uma corrida de desafio ao ar livre gratuita da GeoRace. Baixe",
-          "fr": "Catch the Bad Guy est une course de défi en plein air gratuite de GeoRace. Télécharger"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "tm_1793038104129_i07m",
         "title": {
           "en": "Lost Frequencies",
@@ -4619,30 +4517,6 @@
         "category": "arts"
       },
       {
-        "id": "rss_1793121652395_ng05",
-        "title": {
-          "en": "Free 'Downtown Day of the Dead Celebration' in Fort Lauderdale",
-          "es": "Celebración Gratuita 'Downtown Día de Muertos' en Fort Lauderdale",
-          "pt": "Celebração Gratuita 'Downtown Dia de Finados' em Fort Lauderdale",
-          "fr": "Célébration Gratuite 'Downtown Jour des Morts' à Fort Lauderdale"
-        },
-        "date": "2026-10-27",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-day-of-the-dead-celebration-fort-lauderdale/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2022/10/day-of-the-dead-1868836_1920-728x485.jpg",
-        "description": {
-          "en": "South Florida on the Cheap The Downtown Day of the Dead celebration will take place Saturday, Nov. 7, 2026, in Fort Lauderdale. The free event will be 3 p.m. to 11 p.m., with the Day... Copyright South Florida on the Cheap. The post Free 'Downtown Day of the Dead Celebration' in Fort Lauderdale appeared first on South Florida on the Cheap.",
-          "es": "La celebración Downtown Día de Muertos tendrá lugar el sábado, 7 de noviembre de 2026, en Fort Lauderdale. El evento gratuito será de 3 p.m. a 11 p.m., con el Día...",
-          "pt": "A celebração Downtown Dia de Finados acontecerá no sábado, 7 de novembro de 2026, em Fort Lauderdale. O evento gratuito será de 3 p.m. a 11 p.m., com o Dia...",
-          "fr": "La célébration Downtown Jour des Morts aura lieu le samedi 7 novembre 2026 à Fort Lauderdale. L'événement gratuit se déroulera de 15h à 23h, avec le Jour..."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
         "id": "tm_1793121652984_t5fl",
         "title": {
           "en": "Florida Atlantic University Vs. Liu",
@@ -4769,6 +4643,286 @@
         },
         "source": "Opa-locka",
         "category": "community"
+      },
+      {
+        "id": "rss_1793209797262_ms01",
+        "title": {
+          "en": "Piano Masters & New Voices at The Betsy Tuesday Series (November) 11/3/26",
+          "es": "Piano Masters & New Voices at The Betsy Tuesday Series (Noviembre) 11/3/26",
+          "pt": "Piano Masters & New Voices at The Betsy Tuesday Series (Novembro) 11/3/26",
+          "fr": "Piano Masters & New Voices at The Betsy Tuesday Series (Novembre) 11/3/26"
+        },
+        "date": "2026-11-03",
+        "venue": "The Betsy Hotel",
+        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/27/piano-masters-new-voices-at-the-betsy-tuesday-series-november-11-3-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/169588-350x175.jpeg",
+        "description": {
+          "en": "The longest-running live music series on Miami Beach, 7 days a",
+          "es": "La serie de música en vivo más antigua de Miami Beach, 7 días a la semana",
+          "pt": "A série de música ao vivo mais antiga de Miami Beach, 7 dias por semana",
+          "fr": "La plus ancienne série de musique live de Miami Beach, 7 jours par semaine"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7864648,
+        "lng": -80.129768,
+        "category": "music"
+      },
+      {
+        "id": "rss_1793209797262_gfma",
+        "title": {
+          "en": "Live Jazz at Betsy Wednesday Series (November) 11/4/26",
+          "es": "Jazz en Vivo en Betsy Wednesday Series (Noviembre) 11/4/26",
+          "pt": "Jazz ao Vivo em Betsy Wednesday Series (Novembro) 11/4/26",
+          "fr": "Jazz en Direct à Betsy Wednesday Series (Novembre) 11/4/26"
+        },
+        "date": "2026-11-04",
+        "venue": "The Piano Bar Miami Beach, Florida, Florida, 33139",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/27/live-jazz-at-betsy-wednesday-series-november-11-4-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/169589-350x175.jpeg",
+        "description": {
+          "en": "The Betsy’s legendary arts program – live jazz, poetry readings, art exhibits, and more – is a",
+          "es": "El legendario programa de artes de The Betsy – jazz en vivo, lecturas de poesía, exposiciones de arte y más",
+          "pt": "O lendário programa de artes do The Betsy – jazz ao vivo, leituras de poesia, exposições de arte e muito mais",
+          "fr": "Le légendaire programme artistique du Betsy – jazz en direct, lectures de poésie, expositions d'art et plus"
+        },
+        "source": "Soul of Miami",
+        "category": "arts"
+      },
+      {
+        "id": "rss_1793209797262_b8qd",
+        "title": {
+          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 10/28/26",
+          "es": "Ladies Who Lunch: Espectáculo de Drag Show Miércoles por la Tarde 10/28/26",
+          "pt": "Ladies Who Lunch: Show de Drag Quarta-feira à Tarde 10/28/26",
+          "fr": "Ladies Who Lunch: Spectacle de Drag Show l'Après-midi du Mercredi 10/28/26"
+        },
+        "date": "2026-10-28",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/27/ladies-who-lunch-wednesday-afternoon-drag-show-10-28-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmp_o3mpcsy-281x500.jpg",
+        "description": {
+          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los miércoles son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quartas-feiras são para os rapazes que brincam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les mercredis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1793209797262_xfil",
+        "title": {
+          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 10/29/26",
+          "es": "Ladies Who Lunch: Espectáculo de Drag Show Jueves por la Tarde 10/29/26",
+          "pt": "Ladies Who Lunch: Show de Drag Quinta-feira à Tarde 10/29/26",
+          "fr": "Ladies Who Lunch: Spectacle de Drag Show l'Après-midi du Jeudi 10/29/26"
+        },
+        "date": "2026-10-29",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/27/ladies-who-lunch-thursday-afternoon-drag-show-10-29-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpkq43kgss-281x500.jpg",
+        "description": {
+          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los jueves son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quintas-feiras são para os rapazes que brincam lindamente no Palace South Beach. Junte-se a nós",
+          "fr": "Les jeudis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1793209797262_8mo8",
+        "title": {
+          "en": "Cafe Con Leche: Thursday Night Latin Drag Revue 10/29/26",
+          "es": "Café Con Leche: Revista de Drag Latino Jueves por la Noche 10/29/26",
+          "pt": "Café Com Leite: Revista de Drag Latino Quinta-feira à Noite 10/29/26",
+          "fr": "Café Con Leche: Revue de Drag Latino Jeudi Soir 10/29/26"
+        },
+        "date": "2026-10-29",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/27/cafe-con-leche-thursday-night-latin-drag-revue-10-29-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmp92lt0y5j-281x500.jpg",
+        "description": {
+          "en": "Turn up the flavor and the fantasy at Palace South Beach for Café",
+          "es": "Sube el sabor y la fantasía en Palace South Beach para Café",
+          "pt": "Aumente o sabor e a fantasia no Palace South Beach para Café",
+          "fr": "Relevez la saveur et la fantaisie au Palace South Beach pour Café"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "community"
+      },
+      {
+        "id": "rss_1793209797262_dnji",
+        "title": {
+          "en": "North Miami Greek Food & Wine Festival",
+          "es": "Festival de Comida y Vino Griegos de North Miami",
+          "pt": "Festival de Comida e Vinho Grego de North Miami",
+          "fr": "Festival de Cuisine et Vin Grecs de North Miami"
+        },
+        "date": "2026-10-28",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/north-miami-greek-food-wine-festival/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2018/11/Greek-Fest-in-North-Miami-e1634220116696.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Annunciation Greek Orthodox Church is celebrating its annual North Miami Greek Food & Wine Festival, from Nov. 6-8, 2026. Admission to this event is free. From 11 a.m. to 11... Copyright South Florida on the Cheap. The post North Miami Greek Food & Wine Festival appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap La Iglesia Ortodoxa Griega de la Anunciación está celebrando su Festival anual de Comida y Vino Griegos de North Miami, del 6 al 8 de noviembre de 2026. La entrada a este evento es gratuita. De 11 a.m. a 11...",
+          "pt": "South Florida on the Cheap A Igreja Ortodoxa Grega da Anunciação está celebrando seu Festival anual de Comida e Vinho Grego de North Miami, de 6 a 8 de novembro de 2026. A entrada para este evento é gratuita. De 11h às 23h...",
+          "fr": "South Florida on the Cheap L'Église Orthodoxe Grecque de l'Annonciation célèbre son Festival annuel de Cuisine et Vin Grecs de North Miami, du 6 au 8 novembre 2026. L'entrée à cet événement est gratuite. De 11h à 23h..."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1793209797262_y0i2",
+        "title": {
+          "en": "Free 1st Saturday Art Walk & Dia de los Muertos at The Peach, West Palm Beach",
+          "es": "Caminata de Arte Gratuita del Primer Sábado y Día de Muertos en The Peach, West Palm Beach",
+          "pt": "Passeio de Arte Gratuito do Primeiro Sábado e Dia de Finados na The Peach, West Palm Beach",
+          "fr": "Promenade Gratuite d'Art du Premier Samedi et Jour des Morts à The Peach, West Palm Beach"
+        },
+        "date": "2026-10-28",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/art-and-music-at-the-peach-west-palm-beach/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/10/the-peach2-728x657.jpg",
+        "description": {
+          "en": "South Florida on the Cheap The Peach is celebrating the Mexican tradition of the Day of the Dead during its monthly artwalk on the first Saturday in November. Monthly Art Walk & Dia de los... Copyright South Florida on the Cheap. The post Free 1st Saturday Art Walk & Dia de los Muertos at The Peach, West Palm Beach appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap The Peach está celebrando la tradición mexicana del Día de Muertos durante su caminata de arte mensual el primer sábado de noviembre. Caminata de Arte Mensual & Día de...",
+          "pt": "South Florida on the Cheap The Peach está celebrando a tradição mexicana do Dia de Finados durante seu passeio de arte mensal no primeiro sábado de novembro. Passeio de Arte Mensal & Dia de...",
+          "fr": "South Florida on the Cheap The Peach célèbre la tradition mexicaine du Jour des Morts lors de sa promenade d'art mensuelle le premier samedi de novembre. Promenade d'Art Mensuelle & Jour des..."
+        },
+        "source": "Miami on the Cheap",
+        "category": "arts"
+      },
+      {
+        "id": "tm_1793209798038_x86z",
+        "title": {
+          "en": "In Flames",
+          "es": "In Flames",
+          "pt": "In Flames",
+          "fr": "In Flames"
+        },
+        "date": "2026-11-04",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fin-flames-ft-lauderdale-florida-11-04-2026%2Fevent%2F0D0065219995598D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/8f8/26cb202d-3153-48b8-a355-77f86c7b08f8_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "In Flames with special guests We're Wolves Doors open 7:00pm · Starts 19:00 · Culture Room",
+          "es": "In Flames con invitados especiales We're Wolves Las puertas abren a las 7:00pm · Comienza 19:00 · Culture Room",
+          "pt": "In Flames com convidados especiais We're Wolves Portas abrem às 19h · Começa 19:00 · Culture Room",
+          "fr": "In Flames avec les invités spéciaux We're Wolves Les portes ouvrent à 19h · Commence 19:00 · Culture Room"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1793209798038_1aso",
+        "title": {
+          "en": "Florida Panthers vs. Chicago Blackhawks",
+          "es": "Florida Panthers vs. Chicago Blackhawks",
+          "pt": "Florida Panthers vs. Chicago Blackhawks",
+          "fr": "Florida Panthers vs. Chicago Blackhawks"
+        },
+        "date": "2026-11-04",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J487&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Hockey · Starts 19:30 · Amerant Bank Arena",
+          "es": "Deportes · Hockey · Comienza 19:30 · Amerant Bank Arena",
+          "pt": "Esportes · Hóquei · Começa 19:30 · Amerant Bank Arena",
+          "fr": "Sports · Hockey · Commence 19:30 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1793209798038_2uyu",
+        "title": {
+          "en": "STA Players: Alice in Wonderland",
+          "es": "STA Players: Alicia en el País de las Maravillas",
+          "pt": "STA Players: Alice no País das Maravilhas",
+          "fr": "STA Players: Alice au Pays des Merveilles"
+        },
+        "date": "2026-11-05",
+        "venue": "Bienes Center at St. Thomas Aquinas",
+        "address": "2801 SW 12th St., Ft. Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsta-players-alice-in-wonderland-bienes-center-at-st-thomas-tickets%2F14383764&utm_medium=affiliate",
+        "free": false,
+        "price": "$7",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "NOTE: This performance will begin at 6:00 p.m. Venue: Bienes Center for the Arts at St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 for directions and info visit www.bca-sta.org Will Call and Lobby Doors will open at 5:15 p.m. Theater seating will begin at 5:30 p.m. Performance will begin at 6:00 p.m. Refreshments and light snacks available at lobby vending area. TICKET FEES: **Servi",
+          "es": "NOTA: Esta presentación comenzará a las 6:00 p.m. Lugar: Bienes Center for the Arts en St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 para direcciones e información visite www.bca-sta.org La ventanilla de Will Call y las puertas del vestíbulo abrirán a las 5:15 p.m. La entrada al teatro comenzará a las 5:30 p.m. La presentación comenzará a las 6:00 p.m.",
+          "pt": "NOTA: Esta apresentação começará às 18h. Local: Bienes Center for the Arts na St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 para direções e informações visite www.bca-sta.org Porta de Cortesia e portas do saguão abrem às 17h15. A entrada do teatro começará às 17h30. A apresentação começará às 18h.",
+          "fr": "REMARQUE: Cette présentation commencera à 18h. Lieu: Bienes Center for the Arts à St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 pour les directions et informations visitez www.bca-sta.org Will Call et les portes du hall ouvriront à 17h15. L'entrée du théâtre commencera à 17h30. La présentation commencera à 18h."
+        },
+        "source": "Ticketmaster",
+        "lat": 26.108381,
+        "lng": -80.181182,
+        "category": "music"
+      },
+      {
+        "id": "tm_1793209798038_lwwp",
+        "title": {
+          "en": "The Floozies",
+          "es": "The Floozies",
+          "pt": "The Floozies",
+          "fr": "The Floozies"
+        },
+        "date": "2026-11-05",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZIAb&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b6c/9d4a1433-8ef0-4b75-813b-8f8ec88bbb6c_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Dance/Electronic · Starts 19:00 · ZeyZey Miami",
+          "es": "Música · Baile/Electrónica · Comienza 19:00 · ZeyZey Miami",
+          "pt": "Música · Dança/Eletrônica · Começa 19:00 · ZeyZey Miami",
+          "fr": "Musique · Danse/Électronique · Commence 19:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
       }
     ]
   },
@@ -5672,31 +5826,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-27T17:21:41.025Z",
+    "fetchedAt": "2026-10-28T17:50:41.744Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.4d15134a2a5fc7268dea427236199e1c4fd3591a.001.1",
-        "type": "weather",
-        "severity": "moderate",
-        "title": {
-          "en": "Wind Advisory",
-          "es": "Wind Advisory",
-          "pt": "Wind Advisory",
-          "fr": "Wind Advisory"
-        },
-        "detail": {
-          "en": "* WHAT...Northeast winds 15 to 25 mph with gusts up to 40 mph Metro\nand coastal areas of Miami-Dade, Broward, and Palm Beach counties.\n\n* WHERE...Coastal Broward, Coastal Miami Dade, Coastal Palm Beach,\nMetro Broward, Metro Palm Beach, and Metropolitan Miami Dade\nCounties.\n\n* WHEN...Until 8 PM EDT this evening.\n\n* IMPACTS...Gusty winds will blow around unsecured objects. Tree\nlimbs could be blown ",
-          "es": "* QUÉ...Vientos del noreste de 15 a 25 mph con ráfagas hasta 40 mph en el área metropolitana y zonas costeras de los condados de Miami-Dade, Broward y Palm Beach.\n\n* DÓNDE...Broward costero, Miami Dade costero, Palm Beach costero, Broward metropolitano, Palm Beach metropolitano y condados metropolitanos de Miami Dade.\n\n* CUÁNDO...Hasta las 8 PM EDT esta noche.\n\n* IMPACTOS...Los vientos fuertes derribarán objetos no asegurados. Las ramas de los árboles podrían ser arrancadas.",
-          "pt": "* O QUÊ...Ventos do nordeste de 15 a 25 mph com rajadas até 40 mph nas áreas metropolitanas e costeiras dos condados de Miami-Dade, Broward e Palm Beach.\n\n* ONDE...Broward costeiro, Miami Dade costeiro, Palm Beach costeiro, Broward metropolitano, Palm Beach metropolitano e condados metropolitanos de Miami Dade.\n\n* QUANDO...Até 20h EDT esta noite.\n\n* IMPACTOS...Ventos fortes derrubará objetos soltos. Galhos de árvores poderão ser arrancados.",
-          "fr": "* QUOI...Vents du nord-est de 15 à 25 mph avec rafales jusqu'à 40 mph dans les zones métropolitaines et côtières des comtés de Miami-Dade, Broward et Palm Beach.\n\n* OÙ...Broward côtier, Miami Dade côtier, Palm Beach côtier, Broward métropolitain, Palm Beach métropolitain et comtés métropolitains de Miami Dade.\n\n* QUAND...Jusqu'à 20h EDT ce soir.\n\n* IMPACTS...Les vents forts renverseront les objets non sécurisés. Les branches d'arbres pourraient être cassées."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4d15134a2a5fc7268dea427236199e1c4fd3591a.001.1",
-        "effectiveAt": "2026-10-27T01:25:00-04:00",
-        "expiresAt": "2026-10-28T00:00:00.000Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.5b802797dd4b716ab1f8fdf245140621cd525817.002.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.276bcc50d1808cb9c38e41c9f0285b73195307e4.002.1",
         "type": "weather",
         "severity": "severe",
         "title": {
@@ -5706,18 +5839,39 @@
           "fr": "Alerte d'Inondation Côtière"
         },
         "detail": {
-          "en": "* WHAT...For the High Rip Current Risk, dangerous rip currents.\nFor the Coastal Flood Advisory, moderate coastal flooding. For\nthe Coastal Flood Warning, significant coastal flooding\nexpected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the High Rip Current Risk, through Wednesday\nevening. For the Coastal Flood Advisory, until 2 AM EDT early\nthis morning. For the",
-          "es": "* QUÉ...Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas. Para la Advertencia de Inundación Costera, inundación costera moderada. Para la Alerta de Inundación Costera, se espera inundación costera significativa.\n\n* DÓNDE...Condado de Broward costero y condado de Miami Dade costero.\n\n* CUÁNDO...Para el Riesgo Alto de Corrientes de Resaca, hasta el miércoles por la noche. Para la Advertencia de Inundación Costera, hasta las 2 AM EDT temprano esta mañana.",
-          "pt": "* O QUÊ...Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas. Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Alerta de Inundação Costeira, inundação costeira significativa esperada.\n\n* ONDE...Condado de Broward costeiro e condado de Miami Dade costeiro.\n\n* QUANDO...Para o Risco Alto de Correntes de Retorno, até quarta-feira à noite. Para o Aviso de Inundação Costeira, até 2h EDT no início desta manhã.",
-          "fr": "* QUOI...Pour le Risque Élevé de Courants de Retour, courants de retour dangereux. Pour l'Avis d'Inondation Côtière, inondation côtière modérée. Pour l'Alerte d'Inondation Côtière, inondation côtière importante attendue.\n\n* OÙ...Comté de Broward côtier et comté de Miami Dade côtier.\n\n* QUAND...Pour le Risque Élevé de Courants de Retour, jusqu'à mercredi soir. Pour l'Avis d'Inondation Côtière, jusqu'à 2h EDT tôt le matin."
+          "en": "* WHAT...For the Coastal Flood Warning, significant coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents. For the Coastal Flood Advisory, moderate coastal\nflooding expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Warning, until 8 PM EDT this\nevening. For the High Rip Current Risk, through this evening.\nFor the Coastal Flo",
+          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundación costera significativa. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas. Para el Aviso de Inundación Costera, se espera inundación costera moderada.\n\n* DÓNDE...Condado Costero de Broward y Condado Costero de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 PM EDT esta noche. Para el Riesgo Alto de Corrientes de Resaca, hasta esta noche. Para la Inundación Costera",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira significativa. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas. Para o Aviso de Inundação Costeira, inundação costeira moderada esperada.\n\n* ONDE...Condado Costeiro de Broward e Condado Costeiro de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até as 20h EDT desta noite. Para o Risco Alto de Correntes de Retorno, durante esta noite. Para a Inundação Costera",
+          "fr": "* QUOI...Pour l'Avertissement de Submersion Côtière, submersion côtière importante. Pour le Risque Élevé de Courants de Retour, courants de retour dangereux. Pour l'Avis de Submersion Côtière, submersion côtière modérée attendue.\n\n* OÙ...Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Pour l'Avertissement de Submersion Côtière, jusqu'à 20h EDT ce soir. Pour le Risque Élevé de Courants de Retour, jusqu'à ce soir. Pour la Submersion Côtière"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b802797dd4b716ab1f8fdf245140621cd525817.002.1",
-        "effectiveAt": "2026-10-27T01:22:00-04:00",
-        "expiresAt": "2026-10-28T06:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.276bcc50d1808cb9c38e41c9f0285b73195307e4.002.1",
+        "effectiveAt": "2026-10-28T05:39:00-04:00",
+        "expiresAt": "2026-10-28T20:00:00.000Z"
       },
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.5b802797dd4b716ab1f8fdf245140621cd525817.002.2",
+        "id": "nws_urn-oid-2.49.0.1.840.0.276bcc50d1808cb9c38e41c9f0285b73195307e4.002.2",
+        "type": "weather",
+        "severity": "minor",
+        "title": {
+          "en": "Coastal Flood Advisory",
+          "es": "Aviso de Inundación Costera",
+          "pt": "Aviso de Inundação Costeira",
+          "fr": "Avis d'Inondation Côtière"
+        },
+        "detail": {
+          "en": "* WHAT...For the Coastal Flood Warning, significant coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents. For the Coastal Flood Advisory, moderate coastal\nflooding expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Warning, until 8 PM EDT this\nevening. For the High Rip Current Risk, through this evening.\nFor the Coastal Flo",
+          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundación costera significativa. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas. Para el Aviso de Inundación Costera, se espera inundación costera moderada.\n\n* DÓNDE...Condado Costero de Broward y Condado Costero de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 PM EDT esta noche. Para el Riesgo Alto de Corrientes de Resaca, hasta esta noche. Para la Inundación Costera",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira significativa. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas. Para o Aviso de Inundação Costeira, inundação costeira moderada esperada.\n\n* ONDE...Condado Costeiro de Broward e Condado Costeiro de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até as 20h EDT desta noite. Para o Risco Alto de Correntes de Retorno, durante esta noite. Para a Inundação Costera",
+          "fr": "* QUOI...Pour l'Avertissement de Submersion Côtière, submersion côtière importante. Pour le Risque Élevé de Courants de Retour, courants de retour dangereux. Pour l'Avis de Submersion Côtière, submersion côtière modérée attendue.\n\n* OÙ...Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Pour l'Avertissement de Submersion Côtière, jusqu'à 20h EDT ce soir. Pour le Risque Élevé de Courants de Retour, jusqu'à ce soir. Pour la Submersion Côtière"
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.276bcc50d1808cb9c38e41c9f0285b73195307e4.002.2",
+        "effectiveAt": "2026-10-28T05:39:00-04:00",
+        "expiresAt": "2026-10-28T20:00:00.000Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.276bcc50d1808cb9c38e41c9f0285b73195307e4.002.3",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -5727,15 +5881,15 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...For the High Rip Current Risk, dangerous rip currents.\nFor the Coastal Flood Advisory, moderate coastal flooding. For\nthe Coastal Flood Warning, significant coastal flooding\nexpected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the High Rip Current Risk, through Wednesday\nevening. For the Coastal Flood Advisory, until 2 AM EDT early\nthis morning. For the",
-          "es": "* QUÉ...Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas. Para la Advertencia de Inundación Costera, inundación costera moderada. Para la Alerta de Inundación Costera, se espera inundación costera significativa.\n\n* DÓNDE...Condado de Broward costero y condado de Miami Dade costero.\n\n* CUÁNDO...Para el Riesgo Alto de Corrientes de Resaca, hasta el miércoles por la noche. Para la Advertencia de Inundación Costera, hasta las 2 AM EDT temprano esta mañana.",
-          "pt": "* O QUÊ...Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas. Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Alerta de Inundação Costeira, inundação costeira significativa esperada.\n\n* ONDE...Condado de Broward costeiro e condado de Miami Dade costeiro.\n\n* QUANDO...Para o Risco Alto de Correntes de Retorno, até quarta-feira à noite. Para o Aviso de Inundação Costeira, até 2h EDT no início desta manhã.",
-          "fr": "* QUOI...Pour le Risque Élevé de Courants de Retour, courants de retour dangereux. Pour l'Avis d'Inondation Côtière, inondation côtière modérée. Pour l'Alerte d'Inondation Côtière, inondation côtière importante attendue.\n\n* OÙ...Comté de Broward côtier et comté de Miami Dade côtier.\n\n* QUAND...Pour le Risque Élevé de Courants de Retour, jusqu'à mercredi soir. Pour l'Avis d'Inondation Côtière, jusqu'à 2h EDT tôt le matin."
+          "en": "* WHAT...For the Coastal Flood Warning, significant coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents. For the Coastal Flood Advisory, moderate coastal\nflooding expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Warning, until 8 PM EDT this\nevening. For the High Rip Current Risk, through this evening.\nFor the Coastal Flo",
+          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundación costera significativa. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas. Para el Aviso de Inundación Costera, se espera inundación costera moderada.\n\n* DÓNDE...Condado Costero de Broward y Condado Costero de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 PM EDT esta noche. Para el Riesgo Alto de Corrientes de Resaca, hasta esta noche. Para la Inundación Costera",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira significativa. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas. Para o Aviso de Inundação Costeira, inundação costeira moderada esperada.\n\n* ONDE...Condado Costeiro de Broward e Condado Costeiro de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até as 20h EDT desta noite. Para o Risco Alto de Correntes de Retorno, durante esta noite. Para a Inundação Costera",
+          "fr": "* QUOI...Pour l'Avertissement de Submersion Côtière, submersion côtière importante. Pour le Risque Élevé de Courants de Retour, courants de retour dangereux. Pour l'Avis de Submersion Côtière, submersion côtière modérée attendue.\n\n* OÙ...Comté côtier de Broward et Comté côtier de Miami Dade.\n\n* QUAND...Pour l'Avertissement de Submersion Côtière, jusqu'à 20h EDT ce soir. Pour le Risque Élevé de Courants de Retour, jusqu'à ce soir. Pour la Submersion Côtière"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b802797dd4b716ab1f8fdf245140621cd525817.002.2",
-        "effectiveAt": "2026-10-27T01:22:00-04:00",
-        "expiresAt": "2026-10-28T06:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.276bcc50d1808cb9c38e41c9f0285b73195307e4.002.3",
+        "effectiveAt": "2026-10-28T05:39:00-04:00",
+        "expiresAt": "2026-10-28T20:00:00.000Z"
       }
     ]
   }
