@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-29T17:58:14.416Z",
+    "lastUpdated": "2026-10-30T17:40:05.442Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-29T17:58:10.178Z",
+    "fetchedAt": "2026-10-30T17:39:55.584Z",
     "current": {
       "temp_f": 83,
-      "feels_f": 91,
+      "feels_f": 93,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 75,
-      "wind_mph": 8,
-      "rain_chance": 13,
+      "humidity": 80,
+      "wind_mph": 7,
+      "rain_chance": 21,
       "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-10-29",
+        "date": "2026-10-30",
         "high_f": 84,
         "low_f": 74,
-        "weathercode": 3,
-        "rain_chance": 13,
+        "weathercode": 81,
+        "rain_chance": 21,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-10-30",
-        "high_f": 83,
-        "low_f": 73,
-        "weathercode": 3,
-        "rain_chance": 15,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
         }
       },
       {
         "date": "2026-10-31",
         "high_f": 81,
-        "low_f": 74,
-        "weathercode": 96,
-        "rain_chance": 67,
+        "low_f": 75,
+        "weathercode": 82,
+        "rain_chance": 42,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-11-01",
-        "high_f": 81,
-        "low_f": 78,
+        "high_f": 82,
+        "low_f": 73,
         "weathercode": 96,
-        "rain_chance": 82,
+        "rain_chance": 85,
         "description": {
           "en": "Partly cloudy",
           "es": "Parcialmente nublado",
@@ -76,161 +63,174 @@
       {
         "date": "2026-11-02",
         "high_f": 83,
-        "low_f": 79,
+        "low_f": 78,
         "weathercode": 95,
-        "rain_chance": 68,
+        "rain_chance": 74,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
           "pt": "Trovoada",
           "fr": "Orage"
         }
+      },
+      {
+        "date": "2026-11-03",
+        "high_f": 85,
+        "low_f": 78,
+        "weathercode": 0,
+        "rain_chance": 24,
+        "description": {
+          "en": "Clear skies",
+          "es": "Cielo despejado",
+          "pt": "Céu limpo",
+          "fr": "Ciel dégagé"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "13:00",
-        "temp_f": 84,
+        "temp_f": 83,
         "weathercode": 1,
-        "rain_chance": 4
+        "rain_chance": 6
       },
       {
         "hour": "14:00",
-        "temp_f": 84,
+        "temp_f": 83,
         "weathercode": 0,
-        "rain_chance": 4
+        "rain_chance": 7
       },
       {
         "hour": "15:00",
-        "temp_f": 84,
-        "weathercode": 1,
-        "rain_chance": 9
+        "temp_f": 82,
+        "weathercode": 2,
+        "rain_chance": 6
       },
       {
         "hour": "16:00",
         "temp_f": 82,
-        "weathercode": 0,
-        "rain_chance": 9
+        "weathercode": 3,
+        "rain_chance": 5
       },
       {
         "hour": "17:00",
         "temp_f": 81,
-        "weathercode": 1,
-        "rain_chance": 8
+        "weathercode": 2,
+        "rain_chance": 4
       },
       {
         "hour": "18:00",
-        "temp_f": 80,
-        "weathercode": 0,
-        "rain_chance": 8
+        "temp_f": 79,
+        "weathercode": 1,
+        "rain_chance": 4
       },
       {
         "hour": "19:00",
         "temp_f": 77,
         "weathercode": 0,
-        "rain_chance": 7
+        "rain_chance": 3
       },
       {
         "hour": "20:00",
-        "temp_f": 76,
-        "weathercode": 0,
+        "temp_f": 77,
+        "weathercode": 3,
         "rain_chance": 3
       },
       {
         "hour": "21:00",
         "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 3
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 5
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 74,
-        "weathercode": 1,
-        "rain_chance": 5
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 74,
         "weathercode": 1,
         "rain_chance": 6
       },
       {
+        "hour": "22:00",
+        "temp_f": 76,
+        "weathercode": 0,
+        "rain_chance": 4
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 76,
+        "weathercode": 51,
+        "rain_chance": 6
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 11
+      },
+      {
         "hour": "01:00",
-        "temp_f": 74,
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 10
       },
       {
         "hour": "02:00",
-        "temp_f": 74,
-        "weathercode": 2,
-        "rain_chance": 9
+        "temp_f": 75,
+        "weathercode": 51,
+        "rain_chance": 16
       },
       {
         "hour": "03:00",
-        "temp_f": 74,
-        "weathercode": 0,
-        "rain_chance": 7
+        "temp_f": 76,
+        "weathercode": 2,
+        "rain_chance": 21
       },
       {
         "hour": "04:00",
-        "temp_f": 74,
-        "weathercode": 0,
-        "rain_chance": 5
+        "temp_f": 76,
+        "weathercode": 81,
+        "rain_chance": 22
       },
       {
         "hour": "05:00",
-        "temp_f": 74,
-        "weathercode": 0,
-        "rain_chance": 5
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 22
       },
       {
         "hour": "06:00",
-        "temp_f": 73,
-        "weathercode": 1,
-        "rain_chance": 7
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 29
       },
       {
         "hour": "07:00",
         "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 30
       },
       {
         "hour": "08:00",
-        "temp_f": 75,
-        "weathercode": 2,
-        "rain_chance": 2
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 30
       },
       {
         "hour": "09:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 4
+        "temp_f": 75,
+        "weathercode": 65,
+        "rain_chance": 30
       },
       {
         "hour": "10:00",
-        "temp_f": 80,
-        "weathercode": 2,
-        "rain_chance": 6
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 32
       },
       {
         "hour": "11:00",
-        "temp_f": 81,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 26
       },
       {
         "hour": "12:00",
-        "temp_f": 78,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 27
       }
     ]
   },
@@ -2053,32 +2053,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1789917582376_tznn",
-        "title": {
-          "en": "Acqualina Resort To Host 31st Annual “I Have A Dream” Foundation Miami Gala 10/29/26",
-          "es": "Acqualina Resort Alberga la 31ª Gala Anual de la Fundación \"I Have A Dream\" Miami 10/29/26",
-          "pt": "Acqualina Resort Recebe a 31ª Gala Anual da Fundação \"I Have A Dream\" Miami 10/29/26",
-          "fr": "Acqualina Resort Accueille le 31e Gala Annuel de la Fondation \"I Have A Dream\" Miami 10/29/26"
-        },
-        "date": "2026-10-29",
-        "venue": "JW Marriott Turnberry Resort",
-        "address": "19999 W Country Club Dr, Aventura, Florida, 33180",
-        "url": "https://www.soulofmiami.org/2026/09/19/acqualina-resort-to-host-31st-annual-i-have-a-dream-foundation-miami-gala-10-29-26/",
-        "free": false,
-        "price": "$500",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/IMG_8388-350x233.jpg",
-        "description": {
-          "en": "Acqualina Resort & Residences Trump family, Stephanie,",
-          "es": "Acqualina Resort & Residences familia Trump, Stephanie,",
-          "pt": "Acqualina Resort & Residences família Trump, Stephanie,",
-          "fr": "Acqualina Resort & Residences famille Trump, Stephanie,"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.9600985,
-        "lng": -80.1388319,
-        "category": "community"
-      },
-      {
         "id": "rss_1789917582376_wzlr",
         "title": {
           "en": "Hollywood Real Jazz Festival Saturday 11/21/26",
@@ -2602,32 +2576,6 @@
           "fr": "$40 Cette Halloween, les méchants prennent le contrôle de Wynwood!"
         },
         "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "rss_1791738899629_3sll",
-        "title": {
-          "en": "Free Halloween Boo Bash Family Fun at Galleria Fort Lauderdale 10/29/2026",
-          "es": "Fiesta Familiar Gratuita Halloween Boo Bash en Galleria Fort Lauderdale 10/29/2026",
-          "pt": "Festa Familiar Gratuita Halloween Boo Bash na Galleria Fort Lauderdale 10/29/2026",
-          "fr": "Fête Familiale Gratuite Halloween Boo Bash à Galleria Fort Lauderdale 10/29/2026"
-        },
-        "date": "2026-10-29",
-        "venue": "Galleria Fort Lauderdale",
-        "address": "2414 E. Sunrise Blvd., Fort Lauderdale, Florida, 33304",
-        "url": "https://www.soulofmiami.org/2026/10/10/free-halloween-boo-bash-family-fun-at-galleria-fort-lauderdale-10-29-2026/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/HalloweenBooBash_2026_1080x1080_v3-350x350.jpg",
-        "description": {
-          "en": "Summoning all friendly spirits…get ready to gather round for an afternoon",
-          "es": "Convocando a todos los espíritus amigables…prepárate para reunirte para una tarde",
-          "pt": "Convocando todos os espíritos amigáveis…prepare-se para se reunir para uma tarde",
-          "fr": "Invoquant tous les esprits amicaux…préparez-vous à vous réunir pour un après-midi"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1369729,
-        "lng": -80.1135854,
         "category": "community"
       },
       {
@@ -3355,162 +3303,6 @@
         "lat": 26.155611,
         "lng": -80.132681,
         "category": "community"
-      },
-      {
-        "id": "tm_1792942060258_6i5m",
-        "title": {
-          "en": "Prof",
-          "es": "Prof",
-          "pt": "Prof",
-          "fr": "Prof"
-        },
-        "date": "2026-10-29",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fprof-ft-lauderdale-florida-10-29-2026%2Fevent%2F0D0064A11A8DF06E&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b04/b1627e57-7415-43fc-b6fd-43f3e313fb04_30431_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Prof will be performing at Revolution Live on October 29th with Special Guests Grieves, Norman Sann, Khantrast & Willie Wonka. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "Prof se presentará en Revolution Live el 29 de octubre con Invitados Especiales Grieves, Norman Sann, Khantrast y Willie Wonka. Este evento es para Todas las Edades. Las puertas abren a las 7pm. El espectáculo comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
-          "pt": "Prof se apresentará no Revolution Live em 29 de outubro com Convidados Especiais Grieves, Norman Sann, Khantrast e Willie Wonka. Este evento é Para Todas as Idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "Prof se produira au Revolution Live le 29 octobre avec les invités spéciaux Grieves, Norman Sann, Khantrast et Willie Wonka. Cet événement est Tous Âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence 19:00 · Revolution Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1792942060258_pemx",
-        "title": {
-          "en": "Black Label Society",
-          "es": "Black Label Society",
-          "pt": "Black Label Society",
-          "fr": "Black Label Society"
-        },
-        "date": "2026-10-29",
-        "venue": "FTL War Memorial Auditorium",
-        "address": "800 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fblack-label-society-tickets%2Ffort-lauderdale-florida-ftl-war-memorial-auditorium-2026-10-29-7-30-pm%2Fconcert%2F18292644%3Fquantity%3D2&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/197/5f1295dd-f818-41ce-83b4-50db41750197_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:30 · FTL War Memorial Auditorium",
-          "es": "Música · Rock · Comienza 19:30 · FTL War Memorial Auditorium",
-          "pt": "Música · Rock · Começa 19:30 · FTL War Memorial Auditorium",
-          "fr": "Musique · Rock · Commence 19:30 · FTL War Memorial Auditorium"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.133662,
-        "lng": -80.134063
-      },
-      {
-        "id": "tm_1792942060258_is26",
-        "title": {
-          "en": "Black Label Society",
-          "es": "Black Label Society",
-          "pt": "Black Label Society",
-          "fr": "Black Label Society"
-        },
-        "date": "2026-10-29",
-        "venue": "War Memorial Auditorium-FL",
-        "address": "800 NE. 8th St., Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PSZA&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/197/5f1295dd-f818-41ce-83b4-50db41750197_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:30 · War Memorial Auditorium-FL",
-          "es": "Música · Rock · Comienza 19:30 · War Memorial Auditorium-FL",
-          "pt": "Música · Rock · Começa 19:30 · War Memorial Auditorium-FL",
-          "fr": "Musique · Rock · Commence 19:30 · War Memorial Auditorium-FL"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.138399,
-        "lng": -80.130997
-      },
-      {
-        "id": "tm_1792942060258_3v7x",
-        "title": {
-          "en": "The Seven Wonders - Tribute to Fleetwood Mac (18+ Event)",
-          "es": "The Seven Wonders - Tributo a Fleetwood Mac (Evento 18+)",
-          "pt": "The Seven Wonders - Tributo ao Fleetwood Mac (Evento 18+)",
-          "fr": "The Seven Wonders - Hommage à Fleetwood Mac (Événement 18+)"
-        },
-        "date": "2026-10-29",
-        "venue": "Boca Black Box",
-        "address": "8221 Glades Rd #10, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvZ13&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 19:30 · Boca Black Box",
-          "es": "Comienza 19:30 · Boca Black Box",
-          "pt": "Começa 19:30 · Boca Black Box",
-          "fr": "Commence 19:30 · Boca Black Box"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.381201,
-        "lng": -80.1707,
-        "category": "music"
-      },
-      {
-        "id": "tm_1792942060258_ia3o",
-        "title": {
-          "en": "Ed Sheeran: LOOP Tour",
-          "es": "Ed Sheeran: LOOP Tour",
-          "pt": "Ed Sheeran: LOOP Tour",
-          "fr": "Ed Sheeran: LOOP Tour"
-        },
-        "date": "2026-10-29",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fed-sheeran-loop-tour-hollywood-florida-10-29-2026%2Fevent%2F0D006331A7D91AFF&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/7ac/222f0ea8-3b7e-4039-b40b-04a68ccde7ac_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Pop · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · Pop · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · Pop · Commence 20:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1792942060258_l3u0",
-        "title": {
-          "en": "Dani Barranco",
-          "es": "Dani Barranco",
-          "pt": "Dani Barranco",
-          "fr": "Dani Barranco"
-        },
-        "date": "2026-10-29",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdani-barranco-liv-nightclub-miami-tickets%2F14381604&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/df8/81eadad8-4449-412e-a2b1-3d8bbb78edf8_106181_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Dance/Electronic · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Música · Dance/Electrónica · Comienza 23:00 · LIV Nightclub Miami",
-          "pt": "Música · Dance/Eletrônica · Começa 23:00 · LIV Nightclub Miami",
-          "fr": "Musique · Dance/Électronique · Commence 23:00 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
       },
       {
         "id": "tm_1792942060258_knp8",
@@ -4513,58 +4305,6 @@
         "category": "arts"
       },
       {
-        "id": "rss_1793209797262_xfil",
-        "title": {
-          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 10/29/26",
-          "es": "Ladies Who Lunch: Espectáculo de Drag Show Jueves por la Tarde 10/29/26",
-          "pt": "Ladies Who Lunch: Show de Drag Quinta-feira à Tarde 10/29/26",
-          "fr": "Ladies Who Lunch: Spectacle de Drag Show l'Après-midi du Jeudi 10/29/26"
-        },
-        "date": "2026-10-29",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/27/ladies-who-lunch-thursday-afternoon-drag-show-10-29-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmpkq43kgss-281x500.jpg",
-        "description": {
-          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
-          "es": "Los jueves son para los chicos que desayunan hermosamente en Palace South Beach. Únete a nosotros",
-          "pt": "Quintas-feiras são para os rapazes que brincam lindamente no Palace South Beach. Junte-se a nós",
-          "fr": "Les jeudis sont pour les garçons qui brunchen magnifiquement au Palace South Beach. Rejoignez-nous"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "food-drink"
-      },
-      {
-        "id": "rss_1793209797262_8mo8",
-        "title": {
-          "en": "Cafe Con Leche: Thursday Night Latin Drag Revue 10/29/26",
-          "es": "Café Con Leche: Revista de Drag Latino Jueves por la Noche 10/29/26",
-          "pt": "Café Com Leite: Revista de Drag Latino Quinta-feira à Noite 10/29/26",
-          "fr": "Café Con Leche: Revue de Drag Latino Jeudi Soir 10/29/26"
-        },
-        "date": "2026-10-29",
-        "venue": "Palace Bar & Restaurant",
-        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/27/cafe-con-leche-thursday-night-latin-drag-revue-10-29-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/tmp92lt0y5j-281x500.jpg",
-        "description": {
-          "en": "Turn up the flavor and the fantasy at Palace South Beach for Café",
-          "es": "Sube el sabor y la fantasía en Palace South Beach para Café",
-          "pt": "Aumente o sabor e a fantasia no Palace South Beach para Café",
-          "fr": "Relevez la saveur et la fantaisie au Palace South Beach pour Café"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7812488,
-        "lng": -80.130772,
-        "category": "community"
-      },
-      {
         "id": "tm_1793209798038_x86z",
         "title": {
           "en": "In Flames",
@@ -4667,30 +4407,6 @@
         "category": "music",
         "lat": 25.8172,
         "lng": -80.188797
-      },
-      {
-        "id": "rss_1793296629929_gutb",
-        "title": {
-          "en": "AFTERCITO HALLOWEEN 10/29/26",
-          "es": "AFTERCITO HALLOWEEN 10/29/26",
-          "pt": "AFTERCITO HALLOWEEN 10/29/26",
-          "fr": "AFTERCITO HALLOWEEN 10/29/26"
-        },
-        "date": "2026-10-29",
-        "venue": "Lions Den",
-        "address": "150 NW 73rd St, Second Floor, Miami, Florida, 33150",
-        "url": "https://www.soulofmiami.org/2026/10/28/aftercito-halloween-10-29-26/",
-        "free": false,
-        "price": "$11",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/FLYER-AFTERCITO-OCT-350x467.png",
-        "description": {
-          "en": "📞🔪 “WHAT’S YOUR FAVORITE CAFECITO?” Wrong answer… you might not make it through the night. ☕️👻 This Halloween, the",
-          "es": "📞🔪 \"¿CUÁL ES TU CAFECITO FAVORITO?\" Respuesta equivocada… podrías no sobrevivir la noche. ☕️👻 Este Halloween, el",
-          "pt": "📞🔪 \"QUAL É SEU CAFEZINHO FAVORITO?\" Resposta errada… você pode não sobreviver à noite. ☕️👻 Este Halloween, o",
-          "fr": "📞🔪 \"QUEL EST TON CAFECITO PRÉFÉRÉ?\" Mauvaise réponse… tu pourrais ne pas survivre à la nuit. ☕️👻 Cet Halloween, le"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
       },
       {
         "id": "rss_1793296629929_pua5",
@@ -4823,54 +4539,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1793296629929_ug10",
-        "title": {
-          "en": "Something Scary: Block Party & Haunted House, Delray Beach, Oct. 30",
-          "es": "Algo Aterrador: Fiesta Callejera y Casa Embrujada, Delray Beach, 30 de oct.",
-          "pt": "Algo Assustador: Festa de Rua e Casa Assombrada, Delray Beach, 30 de out.",
-          "fr": "Quelque Chose de Terrifiant: Fête de rue et Maison hantée, Delray Beach, 30 oct."
-        },
-        "date": "2026-10-29",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/something-scary-block-party-haunted-house-delray-beach/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/10/something-scary2.jpg",
-        "description": {
-          "en": "South Florida on the Cheap The Community Classroom Project at Space of Mind in Delray Beach is hosting a community fundraiser that features a free Block Party, plus a Haunted House ($15 per entry or... Copyright South Florida on the Cheap. The post Something Scary: Block Party & Haunted House, Delray Beach, Oct. 30 appeared first on South Florida on the Cheap.",
-          "es": "El Community Classroom Project en Space of Mind en Delray Beach organiza una recaudación de fondos comunitaria que presenta una fiesta callejera gratuita, más una casa embrujada ($15 por entrada).",
-          "pt": "O Community Classroom Project no Space of Mind em Delray Beach está organizando uma arrecadação comunitária que apresenta uma festa de rua gratuita, além de uma casa assombrada ($15 por entrada).",
-          "fr": "Le Community Classroom Project à Space of Mind à Delray Beach organise une collecte de fonds communautaire proposant une fête de rue gratuite, plus une maison hantée ($15 par entrée)."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "rss_1793296629929_go8b",
-        "title": {
-          "en": "Decorated vehicles: Little Scream Trunk or Treat, Lake Worth, Oct. 30",
-          "es": "Vehículos Decorados: Little Scream Trunk or Treat, Lake Worth, 30 de oct.",
-          "pt": "Veículos Decorados: Little Scream Trunk or Treat, Lake Worth, 30 de out.",
-          "fr": "Véhicules Décorés: Little Scream Trunk or Treat, Lake Worth, 30 oct."
-        },
-        "date": "2026-10-29",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/decorated-vehicles-little-scream-trunk-or-treat-lake-worth/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2024/10/lake-worth-little-scream-728x472.jpg",
-        "description": {
-          "en": "South Florida on the Cheap The Little Scream Trunk or Treat, presented by The City of Lake Worth Beach, promises a fang-tastic time for kids and adults, too. This event will not only be a safe... Copyright South Florida on the Cheap. The post Decorated vehicles: Little Scream Trunk or Treat, Lake Worth, Oct. 30 appeared first on South Florida on the Cheap.",
-          "es": "El Little Scream Trunk or Treat, presentado por la Ciudad de Lake Worth Beach, promete un momento colmilludo para niños y adultos. Este evento será un lugar seguro.",
-          "pt": "O Little Scream Trunk or Treat, apresentado pela Cidade de Lake Worth Beach, promete um tempo assustador para crianças e adultos também. Este evento será um lugar seguro.",
-          "fr": "Le Little Scream Trunk or Treat, présenté par la Ville de Lake Worth Beach, promet un moment terrifiant pour les enfants et les adultes. Cet événement sera un endroit sûr."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
         "id": "tm_1793296630720_spdp",
         "title": {
           "en": "¡Dale! Impro - Impro en español",
@@ -4999,6 +4667,236 @@
         "category": "music",
         "lat": 26.134246,
         "lng": -80.136172
+      },
+      {
+        "id": "rss_1793381956774_bwmr",
+        "title": {
+          "en": "Live Jazz at Betsy (Saturday) 11/7/26",
+          "es": "Jazz en Vivo en Betsy (Sábado) 11/7/26",
+          "pt": "Jazz ao Vivo no Betsy (Sábado) 11/7/26",
+          "fr": "Jazz en Direct au Betsy (Samedi) 11/7/26"
+        },
+        "date": "2026-11-07",
+        "venue": "The Betsy Hotel",
+        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/30/live-jazz-at-betsy-saturday-11-7-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Betsy-Saturday-350x175.png",
+        "description": {
+          "en": "The Betsy’s legendary arts program – live jazz, poetry readings, art exhibits, and more – is a",
+          "es": "El legendario programa de artes de The Betsy – jazz en vivo, lecturas de poesía, exposiciones de arte y más – es un",
+          "pt": "O lendário programa de artes do The Betsy – jazz ao vivo, leituras de poesia, exposições de arte e muito mais – é um",
+          "fr": "Le légendaire programme artistique du Betsy – jazz en direct, lectures de poésie, expositions d'art et bien plus – est un"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7864648,
+        "lng": -80.129768,
+        "category": "arts"
+      },
+      {
+        "id": "rss_1793381956774_3cis",
+        "title": {
+          "en": "Live Music: Intergenerational Jazz with the Ellis Duo 11/13/26",
+          "es": "Música en Vivo: Jazz Intergeneracional con Ellis Duo 11/13/26",
+          "pt": "Música ao Vivo: Jazz Intergeracional com Ellis Duo 11/13/26",
+          "fr": "Musique en Direct: Jazz Intergénérationnel avec Ellis Duo 11/13/26"
+        },
+        "date": "2026-11-13",
+        "venue": "The Betsy Hotel",
+        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/10/30/live-music-intergenerational-jazz-with-the-ellis-duo-11-13-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Betsy-Saturday1-350x175.png",
+        "description": {
+          "en": "with support from the Jorge Pérez Family Foundation CreARTE Grant Program, and the Greater",
+          "es": "con apoyo del Programa de Becas CreARTE de la Fundación de la Familia Jorge Pérez, y el",
+          "pt": "com apoio do Programa de Bolsas CreARTE da Fundação da Família Jorge Pérez, e do",
+          "fr": "avec le soutien du Programme de Bourses CreARTE de la Fondation Jorge Pérez Family, et du"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7864648,
+        "lng": -80.129768,
+        "category": "music"
+      },
+      {
+        "id": "rss_1793381956774_impt",
+        "title": {
+          "en": "Wynwood Music Series Los Flamencos at Panther Coffee 11/19/26",
+          "es": "Serie de Música Wynwood Los Flamencos en Panther Coffee 11/19/26",
+          "pt": "Série de Música Wynwood Los Flamencos no Panther Coffee 11/19/26",
+          "fr": "Série Musicale Wynwood Los Flamencos au Panther Coffee 11/19/26"
+        },
+        "date": "2026-11-19",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/29/wynwood-music-series-los-flamencos-at-panther-coffee-11-19-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/wynwood-music-series-nov19-los-flamencos-350x197.jpg",
+        "description": {
+          "en": "The Wynwood Music Series, the Wynwood Business Improvement District’s free monthly live-music",
+          "es": "La Serie de Música Wynwood, el programa de música en vivo mensual gratuito del Distrito de Mejora Comercial de Wynwood",
+          "pt": "A Série de Música Wynwood, o programa mensal gratuito de música ao vivo do Distrito de Melhoria Comercial de Wynwood",
+          "fr": "La Série Musicale Wynwood, le programme mensuel gratuit de musique en direct du Wynwood Business Improvement District"
+        },
+        "source": "Soul of Miami",
+        "category": "comedy"
+      },
+      {
+        "id": "rss_1793381956774_hokf",
+        "title": {
+          "en": "MOAD Music Featuring Clave Y Cuba and Carne Viva 11/15/26",
+          "es": "Música MOAD Presentando Clave Y Cuba y Carne Viva 11/15/26",
+          "pt": "Música MOAD Apresentando Clave Y Cuba e Carne Viva 11/15/26",
+          "fr": "Musique MOAD Présentant Clave Y Cuba et Carne Viva 11/15/26"
+        },
+        "date": "2026-11-15",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/10/29/moad-music-featuring-clave-y-cuba-and-carne-viva-11-15-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/DSC_0859_smaller-350x233.jpg",
+        "description": {
+          "en": "Join the Museum of Art and Design (MOAD) for an afternoon filled with music, dance,",
+          "es": "Únase al Museo de Arte y Diseño (MOAD) para una tarde llena de música, danza,",
+          "pt": "Junte-se ao Museu de Arte e Design (MOAD) para uma tarde repleta de música, dança,",
+          "fr": "Rejoignez le Musée d'Art et de Design (MOAD) pour un après-midi rempli de musique, de danse,"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1793381957600_2z6t",
+        "title": {
+          "en": "Ed Sheeran: LOOP Tour",
+          "es": "Ed Sheeran: LOOP Tour",
+          "pt": "Ed Sheeran: LOOP Tour",
+          "fr": "Ed Sheeran: LOOP Tour"
+        },
+        "date": "2026-10-30",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fed-sheeran-loop-tour-hollywood-florida-10-30-2026%2Fevent%2F0D006331F45E4089&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/7ac/222f0ea8-3b7e-4039-b40b-04a68ccde7ac_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 20:00 · Hard Rock Live",
+          "es": "Música · Pop · Comienza 20:00 · Hard Rock Live",
+          "pt": "Música · Pop · Começa 20:00 · Hard Rock Live",
+          "fr": "Musique · Pop · Commence 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1793381957600_6qod",
+        "title": {
+          "en": "Undertale: Determination Symphony",
+          "es": "Undertale: Sinfonía de Determinación",
+          "pt": "Undertale: Sinfonia da Determinação",
+          "fr": "Undertale: Symphonie de la Détermination"
+        },
+        "date": "2026-11-05",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fundertale-determination-symphony-ft-lauderdale-florida-11-05-2026%2Fevent%2F0D0064ACC296B760&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/89f/cfc4e11c-9cb4-4c46-b44c-0140a127189f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "UNDERTALE: The Determination Symphony is an unforgettable concert experience featuring the most memorable themes from the hit indie game, newly arranged and performed live by a 25-piece orchestra. With gameplay footage displayed on a screen above the stage, audiences will be fully immersed in the world of UNDERTALE, experiencing its story and music like never before. Concert-goers can look forward",
+          "es": "UNDERTALE: The Determination Symphony es una experiencia de concierto inolvidable que presenta los temas más memorables del videojuego indie exitoso, recientemente arreglados y ejecutados en vivo por una orquesta de 25 músicos. Con material de gameplay mostrado en una pantalla sobre el escenario, la audiencia estará completamente inmersa en el mundo de UNDERTALE, experimentando su historia y música como nunca antes. Los asistentes al concierto pueden esperar",
+          "pt": "UNDERTALE: The Determination Symphony é uma experiência de concerto inesquecível apresentando os temas mais memoráveis do jogo indie de sucesso, recém-orquestrados e executados ao vivo por uma orquestra de 25 músicos. Com gameplay exibido em uma tela acima do palco, o público estará completamente imerso no mundo de UNDERTALE, experimentando sua história e música como nunca antes. Os frequentadores do concerto podem esperar",
+          "fr": "UNDERTALE: The Determination Symphony est une expérience de concert inoubliable présentant les thèmes les plus mémorables du jeu vidéo indépendant à succès, nouvellement orchestrés et interprétés en direct par un orchestre de 25 musiciens. Avec des séquences de gameplay affichées sur un écran au-dessus de la scène, le public sera complètement immergé dans l'univers d'UNDERTALE, vivant son histoire et sa musique comme jamais auparavant. Les spectateurs peuvent s'attendre"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1793381957600_so4s",
+        "title": {
+          "en": "Florida Atlantic University Owls Football vs. UTSA Roadrunners Football",
+          "es": "Fútbol Americano: Florida Atlantic University Owls vs. UTSA Roadrunners",
+          "pt": "Futebol Americano: Florida Atlantic University Owls vs. UTSA Roadrunners",
+          "fr": "Football Américain: Florida Atlantic University Owls vs. UTSA Roadrunners"
+        },
+        "date": "2026-11-05",
+        "venue": "Flagler Credit Union Stadium",
+        "address": "777 Glades Rd, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fflorida-atlantic-university-owls-football-vs-boca-raton-florida-11-05-2026%2Fevent%2F0D0064C5CEB94509&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2ca/8aa0e41b-afc1-4098-a44c-bf8a0662d2ca_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 20:00 · Flagler Credit Union Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 20:00 · Flagler Credit Union Stadium",
+          "pt": "Esportes · Futebol Americano · Começa 20:00 · Flagler Credit Union Stadium",
+          "fr": "Sports · Football Américain · Commence 20:00 · Flagler Credit Union Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.3656459,
+        "lng": -80.104592
+      },
+      {
+        "id": "tm_1793381957600_52z1",
+        "title": {
+          "en": "Strawberry Girls & Andres in Miami",
+          "es": "Strawberry Girls & Andres en Miami",
+          "pt": "Strawberry Girls & Andres em Miami",
+          "fr": "Strawberry Girls & Andres à Miami"
+        },
+        "date": "2026-11-06",
+        "venue": "The Boombox Miami",
+        "address": "4447 SW 75th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fstrawberry-girls-andres-in-the-boombox-miami-tickets%2F14372594&utm_medium=affiliate",
+        "free": false,
+        "price": "$24",
+        "image": "https://s1.ticketm.net/dam/a/274/8a7dc146-9be7-4933-90ec-319a23794274_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 18:00 · The Boombox Miami",
+          "es": "Música · Rock · Comienza 18:00 · The Boombox Miami",
+          "pt": "Música · Rock · Começa 18:00 · The Boombox Miami",
+          "fr": "Musique · Rock · Commence 18:00 · The Boombox Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7287118,
+        "lng": -80.3168469
+      },
+      {
+        "id": "tm_1793381957600_0phn",
+        "title": {
+          "en": "Soulpax, Mid-Day Moon, Vania Junco, and Ceci Leon in Miami",
+          "es": "Soulpax, Mid-Day Moon, Vania Junco y Ceci Leon en Miami",
+          "pt": "Soulpax, Mid-Day Moon, Vania Junco e Ceci Leon em Miami",
+          "fr": "Soulpax, Mid-Day Moon, Vania Junco et Ceci Leon à Miami"
+        },
+        "date": "2026-11-06",
+        "venue": "Churchill's Pub",
+        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsoulpax-mid-day-moon-vania-churchills-pub-tickets%2F14305134&utm_medium=affiliate",
+        "free": false,
+        "price": "$22",
+        "image": "https://s1.ticketm.net/dam/c/797/5e693c26-2881-4776-8f0c-3aa94bfa3797_106511_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 18 and over. Any ticket holder unable to present valid identification indicating that they are at least 18 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 19:00 · Churchill's Pub",
+          "es": "Este evento es solo para mayores de 18 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 18 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 19:00 · Churchill's Pub",
+          "pt": "Este evento é apenas para maiores de 18 anos. Qualquer portador de ingresso que não puder apresentar uma identificação válida indicando que tem pelo menos 18 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 19:00 · Churchill's Pub",
+          "fr": "Cet événement est réservé aux 18 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 18 ans ne sera pas admis à cet événement et ne sera pas éligible à un remboursement. · Commence 19:00 · Churchill's Pub"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.82647681611792,
+        "lng": -80.19169187791115
       }
     ]
   },
@@ -5902,10 +5800,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-29T17:58:10.178Z",
+    "fetchedAt": "2026-10-30T17:39:55.584Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.cbbc1e94b5bd1c4a6d0a14e7558f4969551332bd.002.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.5e25c64dad0f01964e3f0a03bce709561e7dd2ff.002.1",
         "type": "weather",
         "severity": "minor",
         "title": {
@@ -5915,15 +5813,36 @@
           "fr": "Avis d'Inondation Côtière"
         },
         "detail": {
-          "en": "* WHAT...Moderate coastal flooding expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...Until 8 PM EDT Friday.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road closures expected.",
-          "es": "* QUÉ...Se esperan inundaciones costeras moderadas.\n\n* DÓNDE...Zona costera del condado de Broward y zona costera del condado de Miami-Dade.\n\n* CUÁNDO...Hasta las 8 PM EDT del viernes.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados esperados.",
-          "pt": "* O QUÊ...Inundações costeiras moderadas esperadas.\n\n* ONDE...Zona costeira do condado de Broward e zona costeira do condado de Miami-Dade.\n\n* QUANDO...Até 20h EDT de sexta-feira.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados.",
-          "fr": "* QUOI...Inondations côtières modérées attendues.\n\n* OÙ...Côtes du comté de Broward et côtes du comté de Miami-Dade.\n\n* QUAND...Jusqu'à 20h EDT vendredi.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement des fermetures de routes isolées prévues."
+          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 8 PM EDT\nSaturday. For the High Rip Current Risk, from this evening\nthrough Sunday evening.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisola",
+          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundación costera moderada. Para el Riesgo de Corriente de Resaca Alto, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Zona costera del Condado de Broward y Zona costera del Condado de Miami-Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 PM EDT del sábado. Para el Riesgo de Corriente de Resaca Alto, desde esta noche hasta el domingo por la noche.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo isola",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Corrente de Retorno, correntes de retorno perigosas esperadas.\n\n* ONDE...Zona costeira do Condado de Broward e Zona costeira do Condado de Miami-Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 20h EDT de sábado. Para o Risco Alto de Corrente de Retorno, de esta noite até domingo à noite.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas isola",
+          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, inondation côtière modérée. Pour le Risque Élevé de Courant de Retour, des courants de retour dangereux attendus.\n\n* OÙ...Zone côtière du Comté de Broward et Zone côtière du Comté de Miami-Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, jusqu'à 20h EDT samedi. Pour le Risque Élevé de Courant de Retour, de ce soir jusqu'à dimanche soir.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement isola"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cbbc1e94b5bd1c4a6d0a14e7558f4969551332bd.002.1",
-        "effectiveAt": "2026-10-29T13:18:00-04:00",
-        "expiresAt": "2026-10-30T08:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5e25c64dad0f01964e3f0a03bce709561e7dd2ff.002.1",
+        "effectiveAt": "2026-10-30T10:38:00-04:00",
+        "expiresAt": "2026-10-31T08:00:00.000Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.5e25c64dad0f01964e3f0a03bce709561e7dd2ff.002.2",
+        "type": "weather",
+        "severity": "moderate",
+        "title": {
+          "en": "Rip Current Statement",
+          "es": "Aviso de Corrientes de Resaca",
+          "pt": "Aviso de Correntes de Retorno",
+          "fr": "Avis de Courants de Baïn"
+        },
+        "detail": {
+          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 8 PM EDT\nSaturday. For the High Rip Current Risk, from this evening\nthrough Sunday evening.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisola",
+          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundación costera moderada. Para el Riesgo de Corriente de Resaca Alto, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Zona costera del Condado de Broward y Zona costera del Condado de Miami-Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 PM EDT del sábado. Para el Riesgo de Corriente de Resaca Alto, desde esta noche hasta el domingo por la noche.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo isola",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Corrente de Retorno, correntes de retorno perigosas esperadas.\n\n* ONDE...Zona costeira do Condado de Broward e Zona costeira do Condado de Miami-Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 20h EDT de sábado. Para o Risco Alto de Corrente de Retorno, de esta noite até domingo à noite.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas isola",
+          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, inondation côtière modérée. Pour le Risque Élevé de Courant de Retour, des courants de retour dangereux attendus.\n\n* OÙ...Zone côtière du Comté de Broward et Zone côtière du Comté de Miami-Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, jusqu'à 20h EDT samedi. Pour le Risque Élevé de Courant de Retour, de ce soir jusqu'à dimanche soir.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement isola"
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5e25c64dad0f01964e3f0a03bce709561e7dd2ff.002.2",
+        "effectiveAt": "2026-10-30T10:38:00-04:00",
+        "expiresAt": "2026-10-31T08:00:00.000Z"
       }
     ]
   }
