@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-30T17:40:05.442Z",
+    "lastUpdated": "2026-10-31T16:44:21.203Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-10-30T17:39:55.584Z",
+    "fetchedAt": "2026-10-31T16:44:13.796Z",
     "current": {
-      "temp_f": 83,
-      "feels_f": 93,
+      "temp_f": 82,
+      "feels_f": 89,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
-      "wind_mph": 7,
-      "rain_chance": 21,
-      "weathercode": 0
+      "humidity": 81,
+      "wind_mph": 11,
+      "rain_chance": 32,
+      "weathercode": 2
     },
     "forecast": [
       {
-        "date": "2026-10-30",
-        "high_f": 84,
-        "low_f": 74,
-        "weathercode": 81,
-        "rain_chance": 21,
-        "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
-        }
-      },
-      {
         "date": "2026-10-31",
-        "high_f": 81,
-        "low_f": 75,
-        "weathercode": 82,
-        "rain_chance": 42,
+        "high_f": 83,
+        "low_f": 76,
+        "weathercode": 3,
+        "rain_chance": 32,
         "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-11-01",
-        "high_f": 82,
-        "low_f": 73,
-        "weathercode": 96,
-        "rain_chance": 85,
+        "high_f": 80,
+        "low_f": 74,
+        "weathercode": 51,
+        "rain_chance": 52,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       },
       {
         "date": "2026-11-02",
-        "high_f": 83,
-        "low_f": 78,
+        "high_f": 80,
+        "low_f": 76,
         "weathercode": 95,
-        "rain_chance": 74,
+        "rain_chance": 72,
         "description": {
           "en": "Thunderstorm",
           "es": "Tormenta eléctrica",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-11-03",
-        "high_f": 85,
+        "high_f": 82,
         "low_f": 78,
-        "weathercode": 0,
-        "rain_chance": 24,
+        "weathercode": 51,
+        "rain_chance": 43,
         "description": {
-          "en": "Clear skies",
-          "es": "Cielo despejado",
-          "pt": "Céu limpo",
-          "fr": "Ciel dégagé"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-11-04",
+        "high_f": 82,
+        "low_f": 78,
+        "weathercode": 53,
+        "rain_chance": 19,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ],
     "hourly": [
       {
-        "hour": "13:00",
+        "hour": "12:00",
         "temp_f": 83,
         "weathercode": 1,
-        "rain_chance": 6
+        "rain_chance": 21
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 30
       },
       {
         "hour": "14:00",
         "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 7
+        "weathercode": 3,
+        "rain_chance": 24
       },
       {
         "hour": "15:00",
-        "temp_f": 82,
-        "weathercode": 2,
-        "rain_chance": 6
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 29
       },
       {
         "hour": "16:00",
         "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 32
       },
       {
         "hour": "17:00",
         "temp_f": 81,
-        "weathercode": 2,
-        "rain_chance": 4
+        "weathercode": 3,
+        "rain_chance": 20
       },
       {
         "hour": "18:00",
         "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 4
+        "weathercode": 3,
+        "rain_chance": 18
       },
       {
         "hour": "19:00",
         "temp_f": 77,
-        "weathercode": 0,
-        "rain_chance": 3
+        "weathercode": 3,
+        "rain_chance": 18
       },
       {
         "hour": "20:00",
         "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 3
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 76,
-        "weathercode": 1,
-        "rain_chance": 6
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 76,
-        "weathercode": 0,
-        "rain_chance": 4
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 76,
-        "weathercode": 51,
-        "rain_chance": 6
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 11
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 75,
-        "weathercode": 51,
         "rain_chance": 16
       },
       {
-        "hour": "03:00",
-        "temp_f": 76,
-        "weathercode": 2,
+        "hour": "21:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 20
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 78,
+        "weathercode": 3,
         "rain_chance": 21
       },
       {
+        "hour": "23:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 13
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 16
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 19
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 25
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 35
+      },
+      {
         "hour": "04:00",
-        "temp_f": 76,
-        "weathercode": 81,
-        "rain_chance": 22
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 39
       },
       {
         "hour": "05:00",
-        "temp_f": 77,
+        "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 22
+        "rain_chance": 36
       },
       {
         "hour": "06:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 29
+        "rain_chance": 40
       },
       {
         "hour": "07:00",
-        "temp_f": 75,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 30
+        "rain_chance": 35
       },
       {
         "hour": "08:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 30
       },
       {
         "hour": "09:00",
         "temp_f": 75,
-        "weathercode": 65,
-        "rain_chance": 30
+        "weathercode": 3,
+        "rain_chance": 37
       },
       {
         "hour": "10:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 32
+        "temp_f": 78,
+        "weathercode": 1,
+        "rain_chance": 36
       },
       {
         "hour": "11:00",
-        "temp_f": 80,
+        "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 26
-      },
-      {
-        "hour": "12:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 27
+        "rain_chance": 38
       }
     ]
   },
@@ -1417,30 +1417,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1786107183516_zson",
-        "title": {
-          "en": "Miami Zombie Crawl – Halloween Bar Crawl – Party Pass to 8+ Bars 10/30/26",
-          "es": "Miami Zombie Crawl – Recorrido de Bares de Halloween – Pase de Fiesta a 8+ Bares 30/10/26",
-          "pt": "Miami Zombie Crawl – Passeio de Bares de Halloween – Passe de Festa para 8+ Bares 30/10/26",
-          "fr": "Miami Zombie Crawl – Tournée des Bars Halloween – Forfait Fête pour 8+ Bars 30/10/26"
-        },
-        "date": "2026-10-30",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/08/07/miami-zombie-crawl-halloween-bar-crawl-party-pass-to-8-bars-fri-oct-30th-10-30-26/",
-        "free": false,
-        "price": "$19",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/08/3769594-350x175.jpg",
-        "description": {
-          "en": "MIAMI ZOMBIE CRAWL – Halloween Bar Crawl Friday, October 30th Join the biggest",
-          "es": "MIAMI ZOMBIE CRAWL – Recorrido de Bares de Halloween Viernes, 30 de octubre Únete al mayor",
-          "pt": "MIAMI ZOMBIE CRAWL – Passeio de Bares de Halloween Sexta-feira, 30 de outubro Junte-se ao maior",
-          "fr": "MIAMI ZOMBIE CRAWL – Tournée des Bars Halloween Vendredi, 30 octobre Rejoignez le plus grand"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1786279201616_pf6n",
         "title": {
           "en": "Miami Zombie Crawl – Halloween Bar Crawl – Party Pass to 8+ Bars 10/31/26",
@@ -1819,32 +1795,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "rss_1789224839464_6oma",
-        "title": {
-          "en": "Spooktacular Miami City Cemetery Walking Tour 10/30/26",
-          "es": "Tour a Pie Espeluznante del Cementerio de Miami 10/30/26",
-          "pt": "Tour a Pé Assustador do Cemitério de Miami 10/30/26",
-          "fr": "Visite à Pied Terrifiante du Cimetière de Miami 10/30/26"
-        },
-        "date": "2026-10-30",
-        "venue": "Miami City Cemetery",
-        "address": "1800 NE 2nd Ave, Miami, Florida, 33132",
-        "url": "https://www.soulofmiami.org/2026/09/11/spooktacular-miami-city-cemetery-walking-tour-10-30-26/",
-        "free": false,
-        "price": "$35",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/162547-Spooktacular-Miami-City-Cemetery-Walking-Tour-350x175.jpg",
-        "description": {
-          "en": "Celebrate spooky season with a visit to Miami City Cemetery! Families are invited to meet Julia",
-          "es": "¡Celebra la temporada de sustos con una visita al Cementerio de Miami! Las familias están invitadas a conocer a Julia",
-          "pt": "Celebre a temporada de sustos com uma visita ao Cemitério de Miami! As famílias são convidadas a conhecer Julia",
-          "fr": "Célébrez la saison des frayeurs avec une visite au cimetière de Miami! Les familles sont invitées à rencontrer Julia"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.792823,
-        "lng": -80.190838,
-        "category": "music"
       },
       {
         "id": "rss_1789661250178_jsjn",
@@ -3305,188 +3255,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1792942060258_knp8",
-        "title": {
-          "en": "Honey Revenge x Dead Poet Society",
-          "es": "Honey Revenge x Dead Poet Society",
-          "pt": "Honey Revenge x Dead Poet Society",
-          "fr": "Honey Revenge x Dead Poet Society"
-        },
-        "date": "2026-10-30",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhoney-revenge-x-dead-poet-society-ft-lauderdale-florida-10-30-2026%2Fevent%2F0D0064F8CD3A9A3D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/4cc/2edffc3d-032c-4191-8711-b8d2037db4cc_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Honey Revenge x Dead Poet Society will be coming to Revolution Live on Friday, October 30th with special guests Hunny and Broadside. This event is All Ages. Doors open at 6pm. Show starts at 7pm. All support acts are subject to change without notice. · Starts 18:00 · Revolution Live",
-          "es": "Honey Revenge x Dead Poet Society llegará a Revolution Live el viernes 30 de octubre con los artistas especiales Hunny y Broadside. Este evento es para todas las edades. Las puertas abren a las 6pm. El espectáculo comienza a las 7pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza a las 18:00 · Revolution Live",
-          "pt": "Honey Revenge x Dead Poet Society virá para Revolution Live na sexta-feira, 30 de outubro com convidados especiais Hunny e Broadside. Este evento é para todas as idades. As portas abrem às 18h. O show começa às 19h. Todos os atos de apoio estão sujeitos a mudanças sem aviso prévio. · Começa às 18:00 · Revolution Live",
-          "fr": "Honey Revenge x Dead Poet Society se produira à Revolution Live vendredi 30 octobre avec les invités spéciaux Hunny et Broadside. Cet événement est pour tous les âges. Les portes ouvrent à 18h. Le spectacle commence à 19h. Tous les actes de soutien peuvent être modifiés sans préavis. · Commence à 18:00 · Revolution Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1792942060258_b3ii",
-        "title": {
-          "en": "Florida Panthers vs. Winnipeg Jets",
-          "es": "Florida Panthers vs. Winnipeg Jets",
-          "pt": "Florida Panthers vs. Winnipeg Jets",
-          "fr": "Florida Panthers vs. Winnipeg Jets"
-        },
-        "date": "2026-10-30",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J48e&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Hockey · Starts 19:00 · Amerant Bank Arena",
-          "es": "Deportes · Hockey · Comienza a las 19:00 · Amerant Bank Arena",
-          "pt": "Esportes · Hóquei · Começa às 19:00 · Amerant Bank Arena",
-          "fr": "Sports · Hockey · Commence à 19:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
-        "id": "tm_1792942060258_j1wh",
-        "title": {
-          "en": "Lemon City Trio",
-          "es": "Lemon City Trio",
-          "pt": "Lemon City Trio",
-          "fr": "Lemon City Trio"
-        },
-        "date": "2026-10-30",
-        "venue": "Thomson Plaza for the Arts",
-        "address": "1300 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAeZ0v&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 19:30 · Thomson Plaza for the Arts",
-          "es": "Comienza a las 19:30 · Thomson Plaza for the Arts",
-          "pt": "Começa às 19:30 · Thomson Plaza for the Arts",
-          "fr": "Commence à 19:30 · Thomson Plaza for the Arts"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.784901,
-        "lng": -80.189598,
-        "category": "music"
-      },
-      {
-        "id": "tm_1792942060258_kia9",
-        "title": {
-          "en": "Hocus Pocus - 3 Day Pass",
-          "es": "Hocus Pocus - Pase de 3 Días",
-          "pt": "Hocus Pocus - Passe de 3 Dias",
-          "fr": "Hocus Pocus - Pass 3 Jours"
-        },
-        "date": "2026-10-30",
-        "venue": "Factory Town",
-        "address": "4800 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZKvd&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Factory Town",
-          "es": "Factory Town",
-          "pt": "Factory Town",
-          "fr": "Factory Town"
-        },
-        "source": "Ticketmaster",
-        "lat": 25.811899,
-        "lng": -80.238998,
-        "category": "music"
-      },
-      {
-        "id": "tm_1792942060258_yepp",
-        "title": {
-          "en": "The Rocky Horror Picture Show (18+)",
-          "es": "The Rocky Horror Picture Show (18+)",
-          "pt": "The Rocky Horror Picture Show (18+)",
-          "fr": "The Rocky Horror Picture Show (18+)"
-        },
-        "date": "2026-10-30",
-        "venue": "Rose & Alfred Miniaci Performing Arts Center",
-        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-rocky-horror-picture-show-18-ft-lauderdale-florida-10-30-2026%2Fevent%2F0D00647A9A7E77CF&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/879/eb0656ac-c826-4a4a-944e-7ba18cf9f879_816351_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The Ultimate Halloween Experience: The Rocky Horror Picture Show: Shadow Cast Performance! THE ROCKY HORROR PICTURE SHOW is a rated R film with adult language and content . 18+ Audience Show Join us for a wild night of music, costumes, and cult classic chaos as we celebrate the legendary 1975 musical tribute to vintage sci-fi - The Rocky Horror Picture Show. Now preserved by the Library of Congres",
-          "es": "La Experiencia Definitiva de Halloween: ¡The Rocky Horror Picture Show: Shadow Cast Performance! THE ROCKY HORROR PICTURE SHOW es una película clasificada R con lenguaje y contenido adulto. Espectáculo solo para mayores de 18 años. Únete a nosotros para una noche salvaje de música, disfraces y caos clásico de culto mientras celebramos el legendario tributo musical de 1975 a la ciencia ficción vintage - The Rocky Horror Picture Show. Ahora preservado por la Biblioteca del Congreso",
-          "pt": "A Experiência Definitiva de Halloween: The Rocky Horror Picture Show: Shadow Cast Performance! THE ROCKY HORROR PICTURE SHOW é um filme classificado R com linguagem e conteúdo adulto. Público com 18 anos ou mais. Junte-se a nós para uma noite selvagem de música, fantasias e caos clássico de culto enquanto celebramos o lendário tributo musical de 1975 à ficção científica vintage - The Rocky Horror Picture Show. Agora preservado pela Biblioteca do Congresso",
-          "fr": "L'Expérience Halloween Ultime : The Rocky Horror Picture Show : Shadow Cast Performance ! THE ROCKY HORROR PICTURE SHOW est un film classé R avec un langage et un contenu pour adultes. Spectacle 18 ans et plus. Rejoignez-nous pour une nuit sauvage de musique, de costumes et du chaos classique du culte en célébrant le légendaire hommage musical de 1975 à la science-fiction vintage - The Rocky Horror Picture Show. Désormais préservé par la Bibliothèque du Congrès"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.0884017,
-        "lng": -80.2461624
-      },
-      {
-        "id": "tm_1792942060258_lw15",
-        "title": {
-          "en": "Miami Heat vs. Indiana Pacers (Emirates NBA Cup Game)",
-          "es": "Miami Heat vs. Indiana Pacers (Juego de la Copa NBA Emirates)",
-          "pt": "Miami Heat vs. Indiana Pacers (Jogo da Copa NBA Emirates)",
-          "fr": "Miami Heat vs. Indiana Pacers (Jeu de la Coupe NBA Emirates)"
-        },
-        "date": "2026-10-30",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-heat-vs-indiana-pacers-emirates-miami-florida-10-30-2026%2Fevent%2F0D00650C8C12375A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/599/f9331497-7667-4f9d-9d26-d144cb25a599_1339911_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Basketball · Starts 20:00 · Kaseya Center",
-          "es": "Deportes · Baloncesto · Comienza 20:00 · Kaseya Center",
-          "pt": "Esportes · Basquete · Começa 20:00 · Kaseya Center",
-          "fr": "Sports · Basket-ball · Commence 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1792942060258_sjyj",
-        "title": {
-          "en": "FearProv - Halloween Improv Show",
-          "es": "FearProv - Espectáculo de Improvisación de Halloween",
-          "pt": "FearProv - Show de Improvisação de Halloween",
-          "fr": "FearProv - Spectacle d'Improvisation d'Halloween"
-        },
-        "date": "2026-10-30",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffearprov-halloween-improv-just-the-funny-tickets%2F14351294&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "FEARPROV - Halloween Improv Show Dive into the eerie, the hilarious, and the unexpected! Join us at Just The Funny for our annual Halloween improv show that will have you howling with laughter and shivering with delight. Our talented JTF cast will spin tales of terror and comedy, blending spine-chilling stories with side-splitting humor. **Costumes Encouraged!** Dress to impress in your spookiest ",
-          "es": "FEARPROV - Espectáculo de Improvisación de Halloween ¡Sumérgete en lo espeluznante, lo hilarante y lo inesperado! Únete a nosotros en Just The Funny para nuestro espectáculo anual de improvisación de Halloween que te hará reír a carcajadas y temblar de alegría. Nuestro talentoso elenco de JTF tejirá historias de terror y comedia, combinando historias escalofriantes con humor desternillante. **¡Se recomiendan disfraces!** Viste tu disfraz más espeluznante",
-          "pt": "FEARPROV - Show de Improvisação de Halloween Mergulhe no assustador, no hilariante e no inesperado! Junte-se a nós no Just The Funny para nosso show anual de improvisação de Halloween que vai fazer você rir e arrepiar. Nosso talentoso elenco do JTF criará histórias de terror e comédia, misturando histórias arrepiantes com humor hilariante. **Fantasias Encorajadas!** Vista seu disfarce mais assustador",
-          "fr": "FEARPROV - Spectacle d'Improvisation d'Halloween Plongez dans l'effrayant, l'hilarant et l'inattendu ! Rejoignez-nous chez Just The Funny pour notre spectacle annuel d'improvisation d'Halloween qui vous fera rire et frissonner. Notre talentueux casting de JTF tissera des histoires de terreur et de comédie, mélangez des histoires glaçantes avec de l'humour irrésistible. **Les costumes sont encouragés !** Portez votre costume le plus terrifiant"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
         "id": "tm_1792942060258_vpjx",
         "title": {
           "en": "Sonic Live in Concert",
@@ -4027,30 +3795,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1793121652395_m875",
-        "title": {
-          "en": "The Crimson Mask Halloween Red and Black Masquerade 10/30/26",
-          "es": "The Crimson Mask Mascarada Roja y Negra de Halloween 30/10/26",
-          "pt": "The Crimson Mask Mascarada Vermelha e Preta de Halloween 30/10/26",
-          "fr": "The Crimson Mask Bal Masqué Rouge et Noir d'Halloween 30/10/26"
-        },
-        "date": "2026-10-30",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/10/26/the-crimson-mask-halloween-red-and-black-masquerade-10-30-26/",
-        "free": false,
-        "price": "$49",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/IMG_2930-350x438.jpeg",
-        "description": {
-          "en": "One night. Endless surprises. Step behind the mask and discover what",
-          "es": "Una noche. Sorpresas infinitas. Cruza el umbral del antifaz y descubre qué",
-          "pt": "Uma noite. Surpresas infinitas. Cruze o limiar da máscara e descubra o que",
-          "fr": "Une nuit. Des surprises infinies. Franchissez le seuil du masque et découvrez ce que"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1793121652395_gb45",
         "title": {
           "en": "Overtown Legacy Series at The Betsy: Carole Ann Taylor & Angel Perez Trio 11/21/26",
@@ -4487,32 +4231,6 @@
         "category": "food-drink"
       },
       {
-        "id": "rss_1793296629929_l92a",
-        "title": {
-          "en": "Gulfstream Park Hosts Breeders’ Cup Viewing Experience at Ten Palms 10/30/26 – 10/31/26",
-          "es": "Gulfstream Park presenta Experiencia de Visualización de Breeders' Cup en Ten Palms 10/30/26 – 10/31/26",
-          "pt": "Gulfstream Park apresenta Experiência de Visualização da Breeders' Cup em Ten Palms 10/30/26 – 10/31/26",
-          "fr": "Gulfstream Park présente l'Expérience de Visionnage de la Breeders' Cup chez Ten Palms 10/30/26 – 10/31/26"
-        },
-        "date": "2026-10-30",
-        "venue": "Gulfstream Park",
-        "address": "901 S Federal Highway, Hallandale Beach, Florida, 33009",
-        "url": "https://www.soulofmiami.org/2026/10/28/gulfstream-park-hosts-breeders-cup-viewing-experience-at-ten-palms-10-30-26-10-31-26/",
-        "free": false,
-        "price": "$85",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/GSP-GEN-PIC2-350x233.jpg",
-        "description": {
-          "en": "per person The racing action continues later this month as Ten Palms",
-          "es": "por persona La acción de carreras continúa a finales de este mes cuando Ten Palms",
-          "pt": "por pessoa A ação de corridas continua no final deste mês quando Ten Palms",
-          "fr": "par personne L'action des courses continue plus tard ce mois-ci lorsque Ten Palms"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.9969757,
-        "lng": -80.1427544,
-        "category": "community"
-      },
-      {
         "id": "rss_1793296629929_wus2",
         "title": {
           "en": "Wine Fest & Jamón at CalaMillor Miami 11/12/26",
@@ -4537,32 +4255,6 @@
         "lat": 25.7338463,
         "lng": -80.2867079,
         "category": "community"
-      },
-      {
-        "id": "tm_1793296630720_spdp",
-        "title": {
-          "en": "¡Dale! Impro - Impro en español",
-          "es": "¡Dale! Impro - Impro en español",
-          "pt": "¡Dale! Impro - Impro em espanhol",
-          "fr": "¡Dale! Impro - Improvisation en espagnol"
-        },
-        "date": "2026-10-30",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdale-impro-impro-just-the-funny-tickets%2F14408524&utm_medium=affiliate",
-        "free": false,
-        "price": "$18",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único... y cualquier cosa puede pasar. Aquí el público tiene la palabra",
-          "es": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único... y cualquier cosa puede pasar. Aquí el público tiene la palabra.",
-          "pt": "Prepare-se para uma noite onde você pode ser parte do show! ¡Dale! Impro é comédia improvisada em espanhol e Spanglish, com toda a energia, sabor e diversidade de Miami. Sem roteiro e sem filtros, um elenco internacional transforma as sugestões do público em cenas interativas, inesperadas e cheias de humor. Cada show é único... e qualquer coisa pode acontecer. Aqui o público tem a palavra.",
-          "fr": "Préparez-vous pour une nuit où vous pouvez faire partie du spectacle! ¡Dale! Impro est une comédie improvisée en espagnol et Spanglish, avec toute l'énergie, la saveur et la diversité de Miami. Sans scénario et sans filtres, une troupe internationale transforme les suggestions du public en scènes interactives, inattendues et pleines d'humour. Chaque spectacle est unique... et n'importe quoi peut arriver. Ici, le public a la parole."
-        },
-        "source": "Ticketmaster",
-        "lat": 25.750417,
-        "lng": -80.244412,
-        "category": "comedy"
       },
       {
         "id": "tm_1793296630720_ylrm",
@@ -4769,32 +4461,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1793381957600_2z6t",
-        "title": {
-          "en": "Ed Sheeran: LOOP Tour",
-          "es": "Ed Sheeran: LOOP Tour",
-          "pt": "Ed Sheeran: LOOP Tour",
-          "fr": "Ed Sheeran: LOOP Tour"
-        },
-        "date": "2026-10-30",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fed-sheeran-loop-tour-hollywood-florida-10-30-2026%2Fevent%2F0D006331F45E4089&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/7ac/222f0ea8-3b7e-4039-b40b-04a68ccde7ac_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:00 · Hard Rock Live",
-          "es": "Música · Pop · Comienza 20:00 · Hard Rock Live",
-          "pt": "Música · Pop · Começa 20:00 · Hard Rock Live",
-          "fr": "Musique · Pop · Commence 20:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
         "id": "tm_1793381957600_6qod",
         "title": {
           "en": "Undertale: Determination Symphony",
@@ -4897,6 +4563,188 @@
         "category": "music",
         "lat": 25.82647681611792,
         "lng": -80.19169187791115
+      },
+      {
+        "id": "tm_1793465023119_0pfo",
+        "title": {
+          "en": "The Rocky Horror Picture Show (18+)",
+          "es": "The Rocky Horror Picture Show (18+)",
+          "pt": "The Rocky Horror Picture Show (18+)",
+          "fr": "The Rocky Horror Picture Show (18+)"
+        },
+        "date": "2026-10-31",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-rocky-horror-picture-show-18-ft-lauderdale-florida-10-31-2026%2Fevent%2F0D006521AD20799D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/879/eb0656ac-c826-4a4a-944e-7ba18cf9f879_816351_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Ultimate Halloween Experience: The Rocky Horror Picture Show: Shadow Cast Performance! THE ROCKY HORROR PICTURE SHOW is a rated R film with adult language and content . 18+ Audience Show Join us for a wild night of music, costumes, and cult classic chaos as we celebrate the legendary 1975 musical tribute to vintage sci-fi - The Rocky Horror Picture Show. Now preserved by the Library of Congres",
+          "es": "La Experiencia Definitiva de Halloween: ¡The Rocky Horror Picture Show: Shadow Cast Performance! THE ROCKY HORROR PICTURE SHOW es una película clasificada R con lenguaje y contenido para adultos. Espectáculo para audiencia 18+ Únete a nosotros para una noche salvaje de música, disfraces y caos de culto clásico mientras celebramos el legendario tributo musical de 1975 al cine de ciencia ficción vintage - The Rocky Horror Picture Show. Ahora preservado por la Biblioteca del Congreso",
+          "pt": "A Experiência Definitiva do Halloween: The Rocky Horror Picture Show: Shadow Cast Performance! THE ROCKY HORROR PICTURE SHOW é um filme classificado R com linguagem e conteúdo adulto. Sessão para audiência 18+ Junte-se a nós para uma noite selvagem de música, fantasias e caos clássico de culto enquanto celebramos a lendária homenagem musical de 1975 para ficção científica vintage - The Rocky Horror Picture Show. Agora preservado pela Biblioteca do Congresso",
+          "fr": "L'Expérience Ultime d'Halloween : The Rocky Horror Picture Show : Shadow Cast Performance ! THE ROCKY HORROR PICTURE SHOW est un film classé R avec un langage et un contenu pour adultes. Spectacle pour public 18+ Rejoignez-nous pour une soirée sauvage de musique, de costumes et du chaos classique de culte alors que nous célébrons l'hommage musical légendaire de 1975 à la science-fiction vintage - The Rocky Horror Picture Show. Désormais préservé par la Bibliothèque du Congrès"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.0884017,
+        "lng": -80.2461624
+      },
+      {
+        "id": "tm_1793465023119_c187",
+        "title": {
+          "en": "The Place To Be prior to Matt McCusker",
+          "es": "The Place To Be antes de Matt McCusker",
+          "pt": "The Place To Be antes de Matt McCusker",
+          "fr": "The Place To Be avant Matt McCusker"
+        },
+        "date": "2026-11-06",
+        "venue": "The Place To Be at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-11-06-2026%2Fevent%2F0D0064D2D041BBD0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
+          "es": "¡Este es The Place To Be! El exclusivo salón de donantes en The Parker ofrece un número limitado de entradas a la venta al público en base de disponibilidad. $75.00 POR PERSONA. Este club privado proporciona una experiencia ultra premium - servicio de comida y bebida complementarios en un refugio privado abajo en The Parker. Disfruta de un bar abierto que sirve licores de primera calidad, una selección de camarones fríos y calientes",
+          "pt": "Este é The Place To Be! O exclusivo lounge de doadores em The Parker está oferecendo um número limitado de ingressos à venda ao público sob disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço de comida e bebida complementar em um refúgio privado no andar de baixo de The Parker. Aproveite um bar aberto servindo bebidas destiladas premium, uma seleção de aperitivos quentes e frios",
+          "fr": "Ceci est The Place To Be! Le lounge exclusif des donateurs à The Parker offre un nombre limité de billets à la vente au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra-premium - service alimentaire et boisson complémentaire dans un refuge privé au sous-sol de The Parker. Profitez d'un bar ouvert servant des spiritueux haut de gamme, une sélection de canapés chauds et froids"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1793465023119_5z0u",
+        "title": {
+          "en": "The Haller Club prior to Matt McCusker",
+          "es": "The Haller Club antes de Matt McCusker",
+          "pt": "The Haller Club antes de Matt McCusker",
+          "fr": "The Haller Club avant Matt McCusker"
+        },
+        "date": "2026-11-06",
+        "venue": "The Haller Club at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-matt-fort-lauderdale-florida-11-06-2026%2Fevent%2F0D0064D2D0E3BD14&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
+          "es": "Añade a tu experiencia en The Parker con The Haller Club. Este nuevo salón premium, con su elegante diseño retro, presenta un bar espacioso y amplio asiento. Por un precio todo incluido, tu admisión a The Haller Club ofrece uso exclusivo comenzando una hora antes de la hora del espectáculo y durante el intermedio (cuando está programado), bebidas suaves complementarias, cerveza premium y vino, café y té (cócteles",
+          "pt": "Adicione à sua experiência em The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um bar espaçoso e amplos assentos. Por um preço único e inclusivo, sua admissão ao The Haller Club oferece uso exclusivo começando uma hora antes da hora do espetáculo e durante o intervalo (quando programado), refrigerantes complementares, cerveja premium e vinho, café e chá (drinques",
+          "fr": "Ajoutez à votre expérience à The Parker avec The Haller Club. Ce nouveau lounge premium, avec son design rétro élégant, dispose d'un bar spacieux et de nombreux sièges. Pour un prix tout compris, votre admission au Haller Club vous offre un usage exclusif commençant une heure avant le spectacle et pendant l'intermission (le cas échéant), des boissons non alcoolisées complémentaires, de la bière premium et du vin, du café et du thé (cocktails"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1793465023119_jblq",
+        "title": {
+          "en": "Matt McCusker: The Healing Frequency Tour",
+          "es": "Matt McCusker: The Healing Frequency Tour",
+          "pt": "Matt McCusker: The Healing Frequency Tour",
+          "fr": "Matt McCusker: The Healing Frequency Tour"
+        },
+        "date": "2026-11-06",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmatt-mccusker-the-healing-frequency-tour-ft-lauderdale-florida-11-06-2026%2Fevent%2F0D0064D0D7FCA1E1&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/020/cc268eaa-6355-4adc-9cb0-4b9bd5d10020_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Matt McCusker is a comedian, novelist, and actor from Philadelphia, Pennsylvania. He co-hosts the hit podcast Matt and Shane's Secret Podcast with Shane Gillis, which dominates the charts on Patreon with an impressive 5.5 million downloads each month. Matt has made notable appearances in the popular Netflix series Tires and the hit web series Gilly & Keeves. Most recently, Matt released his debut ",
+          "es": "Matt McCusker es un comediante, novelista y actor de Filadelfia, Pensilvania. Es copresentador del popular podcast Matt and Shane's Secret Podcast con Shane Gillis, que domina los gráficos en Patreon con impresionantes 5.5 millones de descargas cada mes. Matt ha hecho apariciones notables en la popular serie de Netflix Tires y la exitosa serie web Gilly & Keeves. Recientemente, Matt lanzó su debut",
+          "pt": "Matt McCusker é um comediante, romancista e ator de Filadélfia, Pensilvânia. Ele é co-apresentador do popular podcast Matt and Shane's Secret Podcast com Shane Gillis, que domina os gráficos no Patreon com impressionantes 5.5 milhões de downloads por mês. Matt fez aparições notáveis na série popular da Netflix Tires e na série web de sucesso Gilly & Keeves. Recentemente, Matt lançou seu debut",
+          "fr": "Matt McCusker est un comédien, romancier et acteur de Philadelphie, Pennsylvanie. Il co-anime le populaire podcast Matt and Shane's Secret Podcast avec Shane Gillis, qui domine les classements sur Patreon avec un impressionnant 5,5 millions de téléchargements par mois. Matt a fait des apparitions notables dans la populaire série Netflix Tires et la série Web à succès Gilly & Keeves. Récemment, Matt a lancé ses débuts"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1793465023119_4wvc",
+        "title": {
+          "en": "A Flock of Seagulls",
+          "es": "A Flock of Seagulls",
+          "pt": "A Flock of Seagulls",
+          "fr": "A Flock of Seagulls"
+        },
+        "date": "2026-11-06",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fa-flock-of-seagulls-ft-lauderdale-florida-11-06-2026%2Fevent%2F0D0064AE9AAE8679&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/473/f04d9301-699a-4f6f-a468-6de6217ae473_1808021_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "A Flock Of Seagulls with special guests Astari Nite Doors open 7:30pm · Starts 19:30 · Culture Room",
+          "es": "A Flock Of Seagulls con invitados especiales Astari Nite Las puertas abren a las 7:30pm · Comienza 19:30 · Culture Room",
+          "pt": "A Flock Of Seagulls com convidados especiais Astari Nite Portas abrem 19:30 · Começa 19:30 · Culture Room",
+          "fr": "A Flock Of Seagulls avec des invités spéciaux Astari Nite Les portes ouvrent 19h30 · Commence 19h30 · Culture Room"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1793465023119_rz90",
+        "title": {
+          "en": "Jobim & The Music of Brazil",
+          "es": "Jobim y la Música de Brasil",
+          "pt": "Jobim e a Música do Brasil",
+          "fr": "Jobim et la Musique du Brésil"
+        },
+        "date": "2026-11-06",
+        "venue": "Knight Concert Hall-Adrienne Arsht PAC",
+        "address": "1444 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvFoy&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 20:00 · Knight Concert Hall-Adrienne Arsht PAC",
+          "es": "Comienza 20:00 · Knight Concert Hall-Adrienne Arsht PAC",
+          "pt": "Começa 20:00 · Knight Concert Hall-Adrienne Arsht PAC",
+          "fr": "Commence 20:00 · Knight Concert Hall-Adrienne Arsht PAC"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.784901,
+        "lng": -80.189598,
+        "category": "music"
+      },
+      {
+        "id": "tm_1793465023119_fjjo",
+        "title": {
+          "en": "Jair Oliveira: Balloon Bossa",
+          "es": "Jair Oliveira: Balloon Bossa",
+          "pt": "Jair Oliveira: Balloon Bossa",
+          "fr": "Jair Oliveira: Balloon Bossa"
+        },
+        "date": "2026-11-06",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjair-oliveira-balloon-bossa-ft-lauderdale-florida-11-06-2026%2Fevent%2F0D0064E9A173567F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/51b/ab4bdd9c-0232-42a2-b523-b0955585d51b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Celebrate the soundtrack of a generation with Balloon Bossa, a unique and emotionally rich concert by acclaimed Brazilian artist Jair Oliveira. Reimagining beloved hits from his early career with Balão Mágico and his legendary father Jair Rodrigues, the show blends nostalgia with sophisticated arrangements inspired by bossa nova, jazz, and Brazilian soul music. More than a tribute, Balloon Bossa i",
+          "es": "Celebra la banda sonora de una generación con Balloon Bossa, un concierto único y emocionalmente rico del aclamado artista brasileño Jair Oliveira. Reinterpretando éxitos queridos de su carrera temprana con Balão Mágico y su legendario padre Jair Rodrigues, el show fusiona nostalgia con arreglos sofisticados inspirados en bossa nova, jazz y música soul brasileña. Más que un homenaje, Balloon Bossa es",
+          "pt": "Celebre a trilha sonora de uma geração com Balloon Bossa, um concerto único e emocionalmente rico do aclamado artista brasileiro Jair Oliveira. Reimaginando sucessos queridos de sua carreira inicial com Balão Mágico e seu lendário pai Jair Rodrigues, o show mistura nostalgia com arranjos sofisticados inspirados em bossa nova, jazz e música soul brasileira. Mais do que uma homenagem, Balloon Bossa é",
+          "fr": "Célébrez la bande sonore d'une génération avec Balloon Bossa, un concert unique et riche en émotions de l'artiste brésilien acclamé Jair Oliveira. Réinventant les succès bien-aimés de ses débuts avec Balão Mágico et son père légendaire Jair Rodrigues, le spectacle mêle nostalgie et arrangements sophistiqués inspirés par la bossa-nova, le jazz et la musique soul brésilienne. Plus qu'un hommage, Balloon Bossa est"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.1193,
+        "lng": -80.149426
       }
     ]
   },
@@ -5800,31 +5648,31 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-10-30T17:39:55.584Z",
+    "fetchedAt": "2026-10-31T16:44:13.797Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.5e25c64dad0f01964e3f0a03bce709561e7dd2ff.002.1",
-        "type": "weather",
-        "severity": "minor",
+        "id": "beach_crandon-park-south",
+        "type": "water_quality",
+        "severity": "advisory",
         "title": {
-          "en": "Coastal Flood Advisory",
-          "es": "Aviso de Inundación Costera",
-          "pt": "Aviso de Inundação Costeira",
-          "fr": "Avis d'Inondation Côtière"
+          "en": "CRANDON PARK - SOUTH — Water Quality Advisory",
+          "es": "CRANDON PARK - SOUTH — Aviso de Calidad del Agua",
+          "pt": "CRANDON PARK - SOUTH — Aviso de Qualidade da Água",
+          "fr": "CRANDON PARK - SOUTH — Avis de Qualité de l'Eau"
         },
         "detail": {
-          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 8 PM EDT\nSaturday. For the High Rip Current Risk, from this evening\nthrough Sunday evening.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisola",
-          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundación costera moderada. Para el Riesgo de Corriente de Resaca Alto, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Zona costera del Condado de Broward y Zona costera del Condado de Miami-Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 PM EDT del sábado. Para el Riesgo de Corriente de Resaca Alto, desde esta noche hasta el domingo por la noche.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo isola",
-          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Corrente de Retorno, correntes de retorno perigosas esperadas.\n\n* ONDE...Zona costeira do Condado de Broward e Zona costeira do Condado de Miami-Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 20h EDT de sábado. Para o Risco Alto de Corrente de Retorno, de esta noite até domingo à noite.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas isola",
-          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, inondation côtière modérée. Pour le Risque Élevé de Courant de Retour, des courants de retour dangereux attendus.\n\n* OÙ...Zone côtière du Comté de Broward et Zone côtière du Comté de Miami-Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, jusqu'à 20h EDT samedi. Pour le Risque Élevé de Courant de Retour, de ce soir jusqu'à dimanche soir.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement isola"
+          "en": "Elevated Enterococcus bacteria detected (112 CFU/100mL, sampled 2026-10-28). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (112 UFC/100mL, muestreado el 2026-10-28). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (112 UFC/100mL, amostrado em 2026-10-28). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (112 UFC/100mL, échantillonné le 2026-10-28). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
         },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5e25c64dad0f01964e3f0a03bce709561e7dd2ff.002.1",
-        "effectiveAt": "2026-10-30T10:38:00-04:00",
-        "expiresAt": "2026-10-31T08:00:00.000Z"
+        "source": "Florida Dept. of Health — Healthy Beaches",
+        "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-south",
+        "effectiveAt": "2026-10-28",
+        "expiresAt": "2026-11-01T16:44:13.797Z"
       },
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.5e25c64dad0f01964e3f0a03bce709561e7dd2ff.002.2",
+        "id": "nws_urn-oid-2.49.0.1.840.0.05e2915d61b23cf0af2ac501c14b1c8f6f6f31f4.002.2",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -5834,15 +5682,36 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...For the Coastal Flood Advisory, moderate coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents expected.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 8 PM EDT\nSaturday. For the High Rip Current Risk, from this evening\nthrough Sunday evening.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisola",
-          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundación costera moderada. Para el Riesgo de Corriente de Resaca Alto, se esperan corrientes de resaca peligrosas.\n\n* DÓNDE...Zona costera del Condado de Broward y Zona costera del Condado de Miami-Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 8 PM EDT del sábado. Para el Riesgo de Corriente de Resaca Alto, desde esta noche hasta el domingo por la noche.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo isola",
-          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira moderada. Para o Risco Alto de Corrente de Retorno, correntes de retorno perigosas esperadas.\n\n* ONDE...Zona costeira do Condado de Broward e Zona costeira do Condado de Miami-Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 20h EDT de sábado. Para o Risco Alto de Corrente de Retorno, de esta noite até domingo à noite.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas isola",
-          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, inondation côtière modérée. Pour le Risque Élevé de Courant de Retour, des courants de retour dangereux attendus.\n\n* OÙ...Zone côtière du Comté de Broward et Zone côtière du Comté de Miami-Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, jusqu'à 20h EDT samedi. Pour le Risque Élevé de Courant de Retour, de ce soir jusqu'à dimanche soir.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement isola"
+          "en": "* WHAT...Moderate coastal flooding expected during periods of high\ntide. Dangerous beach conditions with a high rip current risk.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 7 PM EDT Sunday.\nFor the High Rip Current Risk, through Monday morning.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road closures expected. Rip currents can swee",
+          "es": "* QUÉ...Se esperan inundaciones costeras moderadas durante períodos de marea alta. Condiciones peligrosas en las playas con alto riesgo de corrientes de resaca.\n\n* DÓNDE...Zona costera del condado de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 7 PM EDT del domingo. Para el Riesgo Alto de Corrientes de Resaca, hasta el lunes por la mañana.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con únicamente cierres de carreteras aislados esperados. Las corrientes de resaca pueden arrastrar",
+          "pt": "* O QUÊ...Inundações costeiras moderadas esperadas durante períodos de maré alta. Condições perigosas nas praias com alto risco de correntes de ressaca.\n\n* ONDE...Zona costeira do condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 19h EDT de domingo. Para o Risco Alto de Correntes de Ressaca, até segunda-feira de manhã.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados. As correntes de ressaca podem arrastar",
+          "fr": "* QUOI...Inondations côtières modérées attendues lors des périodes de marée haute. Conditions dangereuses sur les plages avec un risque élevé de courants de retour.\n\n* OÙ...Zone côtière du comté de Miami Dade.\n\n* QUAND...Pour l'avis d'inondation côtière, jusqu'à 19h EDT dimanche. Pour le risque élevé de courants de retour, jusqu'à lundi matin.\n\n* IMPACTS...Inondation de terrains, de parcs et de routes avec seulement des fermetures de routes isolées attendues. Les courants de retour peuvent entraîner"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5e25c64dad0f01964e3f0a03bce709561e7dd2ff.002.2",
-        "effectiveAt": "2026-10-30T10:38:00-04:00",
-        "expiresAt": "2026-10-31T08:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.05e2915d61b23cf0af2ac501c14b1c8f6f6f31f4.002.2",
+        "effectiveAt": "2026-10-31T03:35:00-04:00",
+        "expiresAt": "2026-10-31T21:00:00.000Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.05e2915d61b23cf0af2ac501c14b1c8f6f6f31f4.002.1",
+        "type": "weather",
+        "severity": "minor",
+        "title": {
+          "en": "Coastal Flood Advisory",
+          "es": "Aviso de Inundación Costera",
+          "pt": "Aviso de Inundação Costeira",
+          "fr": "Avis d'Inondation Côtière"
+        },
+        "detail": {
+          "en": "* WHAT...Moderate coastal flooding expected during periods of high\ntide. Dangerous beach conditions with a high rip current risk.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Advisory, until 7 PM EDT Sunday.\nFor the High Rip Current Risk, through Monday morning.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road closures expected. Rip currents can swee",
+          "es": "* QUÉ...Se esperan inundaciones costeras moderadas durante períodos de marea alta. Condiciones peligrosas en las playas con alto riesgo de corrientes de resaca.\n\n* DÓNDE...Zona costera del condado de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta las 7 PM EDT del domingo. Para el Riesgo Alto de Corrientes de Resaca, hasta el lunes por la mañana.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con únicamente cierres de carreteras aislados esperados. Las corrientes de resaca pueden arrastrar",
+          "pt": "* O QUÊ...Inundações costeiras moderadas esperadas durante períodos de maré alta. Condições perigosas nas praias com alto risco de correntes de ressaca.\n\n* ONDE...Zona costeira do condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até 19h EDT de domingo. Para o Risco Alto de Correntes de Ressaca, até segunda-feira de manhã.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados. As correntes de ressaca podem arrastar",
+          "fr": "* QUOI...Inondations côtières modérées attendues lors des périodes de marée haute. Conditions dangereuses sur les plages avec un risque élevé de courants de retour.\n\n* OÙ...Zone côtière du comté de Miami Dade.\n\n* QUAND...Pour l'avis d'inondation côtière, jusqu'à 19h EDT dimanche. Pour le risque élevé de courants de retour, jusqu'à lundi matin.\n\n* IMPACTS...Inondation de terrains, de parcs et de routes avec seulement des fermetures de routes isolées attendues. Les courants de retour peuvent entraîner"
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.05e2915d61b23cf0af2ac501c14b1c8f6f6f31f4.002.1",
+        "effectiveAt": "2026-10-31T03:35:00-04:00",
+        "expiresAt": "2026-10-31T21:00:00.000Z"
       }
     ]
   }
