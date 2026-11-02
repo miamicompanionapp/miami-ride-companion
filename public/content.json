@@ -1,71 +1,58 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-01T17:34:18.908Z",
+    "lastUpdated": "2026-11-02T21:20:12.074Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-01T17:34:06.948Z",
+    "fetchedAt": "2026-11-02T21:19:58.459Z",
     "current": {
-      "temp_f": 76,
-      "feels_f": 81,
+      "temp_f": 79,
+      "feels_f": 82,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 85,
-      "wind_mph": 10,
-      "rain_chance": 65,
-      "weathercode": 53
+      "humidity": 77,
+      "wind_mph": 13,
+      "rain_chance": 36,
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-11-01",
-        "high_f": 80,
-        "low_f": 72,
-        "weathercode": 95,
-        "rain_chance": 65,
-        "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
-        }
-      },
-      {
         "date": "2026-11-02",
-        "high_f": 77,
-        "low_f": 72,
-        "weathercode": 81,
-        "rain_chance": 62,
+        "high_f": 82,
+        "low_f": 75,
+        "weathercode": 51,
+        "rain_chance": 36,
         "description": {
-          "en": "Moderate showers",
-          "es": "Chubascos moderados",
-          "pt": "Aguaceiros moderados",
-          "fr": "Averses modérées"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       },
       {
         "date": "2026-11-03",
         "high_f": 83,
-        "low_f": 73,
-        "weathercode": 55,
-        "rain_chance": 62,
+        "low_f": 75,
+        "weathercode": 3,
+        "rain_chance": 30,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-11-04",
         "high_f": 83,
-        "low_f": 79,
-        "weathercode": 80,
-        "rain_chance": 41,
+        "low_f": 75,
+        "weathercode": 82,
+        "rain_chance": 58,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-11-05",
-        "high_f": 84,
-        "low_f": 78,
+        "high_f": 83,
+        "low_f": 79,
         "weathercode": 51,
-        "rain_chance": 22,
+        "rain_chance": 18,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-11-06",
+        "high_f": 81,
+        "low_f": 78,
+        "weathercode": 3,
+        "rain_chance": 6,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
       }
     ],
     "hourly": [
       {
-        "hour": "12:00",
-        "temp_f": 76,
-        "weathercode": 81,
-        "rain_chance": 52
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 77,
-        "weathercode": 55,
-        "rain_chance": 45
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 78,
-        "weathercode": 51,
-        "rain_chance": 39
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 77,
-        "weathercode": 80,
-        "rain_chance": 36
-      },
-      {
         "hour": "16:00",
-        "temp_f": 78,
-        "weathercode": 53,
-        "rain_chance": 41
-      },
-      {
-        "hour": "17:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 43
-      },
-      {
-        "hour": "18:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 40
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 36
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 76,
-        "weathercode": 95,
-        "rain_chance": 38
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 77,
-        "weathercode": 82,
-        "rain_chance": 42
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 54
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 76,
-        "weathercode": 51,
-        "rain_chance": 65
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 76,
-        "weathercode": 51,
-        "rain_chance": 62
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 75,
-        "weathercode": 80,
-        "rain_chance": 59
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 74,
-        "weathercode": 81,
-        "rain_chance": 47
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 74,
-        "weathercode": 81,
-        "rain_chance": 42
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 74,
-        "weathercode": 81,
-        "rain_chance": 38
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 74,
-        "weathercode": 53,
-        "rain_chance": 24
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 26
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 75,
+        "temp_f": 79,
         "weathercode": 3,
         "rain_chance": 27
       },
       {
+        "hour": "17:00",
+        "temp_f": 78,
+        "weathercode": 51,
+        "rain_chance": 31
+      },
+      {
+        "hour": "18:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 31
+      },
+      {
+        "hour": "19:00",
+        "temp_f": 76,
+        "weathercode": 51,
+        "rain_chance": 28
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 28
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 77,
+        "weathercode": 51,
+        "rain_chance": 21
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 22
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 17
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 76,
+        "weathercode": 3,
+        "rain_chance": 15
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 19
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 13
+      },
+      {
         "hour": "08:00",
-        "temp_f": 75,
-        "weathercode": 80,
-        "rain_chance": 47
+        "temp_f": 78,
+        "weathercode": 3,
+        "rain_chance": 9
       },
       {
         "hour": "09:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 43
+        "temp_f": 81,
+        "weathercode": 1,
+        "rain_chance": 8
       },
       {
         "hour": "10:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 38
+        "temp_f": 82,
+        "weathercode": 1,
+        "rain_chance": 11
       },
       {
         "hour": "11:00",
-        "temp_f": 77,
+        "temp_f": 83,
         "weathercode": 3,
-        "rain_chance": 33
+        "rain_chance": 8
+      },
+      {
+        "hour": "12:00",
+        "temp_f": 83,
+        "weathercode": 3,
+        "rain_chance": 10
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 16
+      },
+      {
+        "hour": "14:00",
+        "temp_f": 82,
+        "weathercode": 3,
+        "rain_chance": 18
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 81,
+        "weathercode": 3,
+        "rain_chance": 18
       }
     ]
   },
@@ -2631,30 +2631,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1792772515255_27hk",
-        "title": {
-          "en": "“Seminole Modern: Photographs and Artifacts from a Changing Florida” Exhibit at History Fort Lauderdale 11/1/26 – 11/30/26",
-          "es": "Exposición «Seminole Modern: Fotografías y Artefactos de una Florida en Cambio» en History Fort Lauderdale 11/1/26 – 11/30/26",
-          "pt": "Exposição «Seminole Modern: Fotografias e Artefatos de uma Flórida em Mudança» no History Fort Lauderdale 11/1/26 – 11/30/26",
-          "fr": "Exposition « Seminole Modern : Photographies et Artefacts de la Floride en Évolution » au History Fort Lauderdale 11/1/26 – 11/30/26"
-        },
-        "date": "2026-11-01",
-        "venue": "History Fort Lauderdale",
-        "address": "231 SW Second Avenue, Fort Lauderdale, Florida, 33301",
-        "url": "https://www.soulofmiami.org/2026/10/22/seminole-modern-photographs-and-artifacts-from-a-changing-florida-exhibit-at-history-fort-lauderdale-11-1-26-11-30-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Seminole-Exhibit-2026-Social-2-350x350.jpg",
-        "description": {
-          "en": "exhibit is free; Museum admission is $15",
-          "es": "La exposición es gratuita; la entrada al museo cuesta $15",
-          "pt": "A exposição é gratuita; a admissão do museu custa $15",
-          "fr": "L'exposition est gratuite; l'admission au musée coûte $15"
-        },
-        "source": "Soul of Miami",
-        "category": "arts"
-      },
-      {
         "id": "rss_1792772515255_sedt",
         "title": {
           "en": "Rum Cake and Caribbean Black Cake Festival 11/15/26",
@@ -2755,30 +2731,6 @@
         "lat": 25.9940918,
         "lng": -80.1426914,
         "category": "community"
-      },
-      {
-        "id": "rss_1792855065094_7at4",
-        "title": {
-          "en": "Immersive Symphony Queen and 80s Favorites 11/1/26",
-          "es": "Sinfonía Inmersiva Queen y Éxitos de los 80 11/1/26",
-          "pt": "Sinfonia Imersiva Queen e Sucessos dos Anos 80 11/1/26",
-          "fr": "Symphonie Immersive Queen et Succès des Années 80 11/1/26"
-        },
-        "date": "2026-11-01",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/10/23/immersive-symphony-queen-and-80s-favorites-11-1-26/",
-        "free": false,
-        "price": "$35",
-        "image": "",
-        "description": {
-          "en": "$48, $60 or $80 plus Eventbrite fees Miami Music Festival brings the music of Queen and",
-          "es": "$48, $60 o $80 más tarifas de Eventbrite. El Festival de Música de Miami trae la música de Queen y",
-          "pt": "$48, $60 ou $80 mais taxas do Eventbrite. O Festival de Música de Miami traz a música do Queen e",
-          "fr": "$48, $60 ou $80 plus frais Eventbrite. Le Miami Music Festival vous présente la musique de Queen et"
-        },
-        "source": "Soul of Miami",
-        "category": "music"
       },
       {
         "id": "rss_1792942059644_cv6m",
@@ -2981,136 +2933,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1793038104129_m11l",
-        "title": {
-          "en": "Luxury & Suites: Miami Dolphins v New England Patriots",
-          "es": "Lujo & Suites: Miami Dolphins vs New England Patriots",
-          "pt": "Luxo & Suites: Miami Dolphins vs New England Patriots",
-          "fr": "Luxe & Suites: Miami Dolphins contre New England Patriots"
-        },
-        "date": "2026-11-01",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fluxury-suites-miami-dolphins-v-new-miami-florida-11-01-2026%2Fevent%2F0D00646CE6671583&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season · Starts 16:25 · Hard Rock Stadium",
-          "es": "Horario Flexible: Tenga en cuenta que ciertos juegos están sujetos a cambios de horario y la fecha y hora de esos juegos pueden cambiar respecto a lo que actualmente aparece en el calendario y en el boleto. Para más información sobre los procedimientos de horario flexible de la NFL para la temporada 2026 de la NFL · Comienza 16:25 · Hard Rock Stadium",
-          "pt": "Cronograma Flexível: Esteja ciente de que certos jogos estão sujeitos a programação flexível e a data e hora desses jogos podem ser alteradas em relação ao que atualmente está refletido no cronograma e no ingresso. Para mais informações sobre os procedimentos de programação flexível da NFL para a temporada 2026 da NFL · Começa 16:25 · Hard Rock Stadium",
-          "fr": "Horaire Flexible: Veuillez noter que certains matchs sont sujets à des modifications d'horaire et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement indiqué au calendrier et sur le billet. Pour plus d'informations sur les procédures d'horaire flexible de la NFL pour la saison 2026 de la NFL · Commence 16:25 · Hard Rock Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1793038104129_6jj8",
-        "title": {
-          "en": "Miami Dolphins v New England Patriots",
-          "es": "Miami Dolphins vs New England Patriots",
-          "pt": "Miami Dolphins vs New England Patriots",
-          "fr": "Miami Dolphins contre New England Patriots"
-        },
-        "date": "2026-11-01",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-dolphins-v-new-england-patriots-miami-florida-11-01-2026%2Fevent%2F0D00646CE57C1350&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season please visit: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
-          "es": "Horario Flexible: Tenga en cuenta que ciertos juegos están sujetos a cambios de horario y la fecha y hora de esos juegos pueden cambiar respecto a lo que actualmente aparece en el calendario y en el boleto. Para más información sobre los procedimientos de horario flexible de la NFL para la temporada 2026 de la NFL, visite: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
-          "pt": "Cronograma Flexível: Esteja ciente de que certos jogos estão sujeitos a programação flexível e a data e hora desses jogos podem ser alteradas em relação ao que atualmente está refletido no cronograma e no ingresso. Para mais informações sobre os procedimentos de programação flexível da NFL para a temporada 2026 da NFL, visite: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
-          "fr": "Horaire Flexible: Veuillez noter que certains matchs sont sujets à des modifications d'horaire et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement indiqué au calendrier et sur le billet. Pour plus d'informations sur les procédures d'horaire flexible de la NFL pour la saison 2026 de la NFL, veuillez visiter: https://www.nfl.com/ways-to-watch/flexible-scheduling-p"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1793038104129_luka",
-        "title": {
-          "en": "17th Annual City of Aventura YOUNG STARS SHOWCASE",
-          "es": "17ª Muestra Anual de Jóvenes Talentos de la Ciudad de Aventura",
-          "pt": "17º Showcase Anual de Jovens Talentos da Cidade de Aventura",
-          "fr": "17e Showcase Annuel des Jeunes Talents de la Ville d'Aventura"
-        },
-        "date": "2026-11-01",
-        "venue": "Aventura Arts & Cultural Center",
-        "address": "3385 NE 188th Street, Aventura, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2F17th-annual-city-of-aventura-young-aventura-florida-11-01-2026%2Fevent%2F0D0065059FD64799&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/f9f/ee704065-d151-4fc0-85d8-08718cd33f9f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Aventura Marketing Council's 17th annual showcase of sensational young singers from throughout South Florida. Proceeds benefit AMC Education Foundation. **FREE LAP TICKETS ARE AVAILABLE AT THE BOX OFFICE - FOR CHILDREN 3 YEARS AND UNDER ONLY. · Starts 17:00 · Aventura Arts & Cultural Center",
-          "es": "La 17ª muestra anual del Consejo de Marketing de Aventura de cantantes jóvenes sensacionales de todo el Sur de Florida. Los ingresos benefician la Fundación de Educación del AMC. **ENTRADAS GRATUITAS PARA REGAZO DISPONIBLES EN LA BOLETERÍA - SOLO PARA NIÑOS DE 3 AÑOS O MENORES. · Comienza 17:00 · Centro de Artes y Cultura de Aventura",
-          "pt": "O 17º showcase anual do Conselho de Marketing de Aventura com jovens cantores sensacionais de toda o Sul da Flórida. Os lucros beneficiam a Fundação de Educação da AMC. **INGRESSOS GRATUITOS PARA COLO ESTÃO DISPONÍVEIS NA BILHETERIA - APENAS PARA CRIANÇAS COM 3 ANOS OU MENORES. · Começa 17:00 · Centro de Artes e Cultura de Aventura",
-          "fr": "Le 17e showcase annuel du Conseil de Marketing d'Aventura mettant en vedette de jeunes chanteurs extraordinaires du sud de la Floride. Les bénéfices profitent à la Fondation Éducation AMC. **DES BILLETS GRATUITS POUR LES GENOUX SONT DISPONIBLES AU GUICHET - POUR LES ENFANTS DE 3 ANS ET MOINS UNIQUEMENT. · Commence 17:00 · Centre des Arts et de la Culture d'Aventura"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.94960232,
-        "lng": -80.13458177
-      },
-      {
-        "id": "tm_1793038104129_6ovx",
-        "title": {
-          "en": "The Rocky Horror Picture Show - Ages 18+",
-          "es": "The Rocky Horror Picture Show - Mayores de 18 años",
-          "pt": "The Rocky Horror Picture Show - Maiores de 18 anos",
-          "fr": "The Rocky Horror Picture Show - 18 ans et plus"
-        },
-        "date": "2026-11-01",
-        "venue": "Miami Beach Bandshell",
-        "address": "7275 Collins Avenue, Miami Beach FL 33141, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZzrZ&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/879/eb0656ac-c826-4a4a-944e-7ba18cf9f879_816351_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Theatre · Starts 19:00 · Miami Beach Bandshell",
-          "es": "Artes & Teatro · Teatro · Comienza 19:00 · Miami Beach Bandshell",
-          "pt": "Artes & Teatro · Teatro · Começa 19:00 · Miami Beach Bandshell",
-          "fr": "Arts & Théâtre · Théâtre · Commence 19:00 · Miami Beach Bandshell"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.8619,
-        "lng": -80.1259
-      },
-      {
-        "id": "tm_1793038104129_9g7m",
-        "title": {
-          "en": "BOYNEXTDOOR",
-          "es": "BOYNEXTDOOR",
-          "pt": "BOYNEXTDOOR",
-          "fr": "BOYNEXTDOOR"
-        },
-        "date": "2026-11-01",
-        "venue": "Pompano Beach Amphitheatre",
-        "address": "1806 Northeast 6th St., Pompano Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PIj_&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/341/5d9feaa5-e9a3-4559-a1f0-0d7413c2d341_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Pop · Starts 20:00 · Pompano Beach Amphitheatre",
-          "es": "Música · Pop · Comienza 20:00 · Anfiteatro de Pompano Beach",
-          "pt": "Música · Pop · Começa 20:00 · Anfiteatro de Pompano Beach",
-          "fr": "Musique · Pop · Commence 20:00 · Amphithéâtre de Pompano Beach"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.2349,
-        "lng": -80.120102
-      },
-      {
         "id": "tm_1793038104129_tat3",
         "title": {
           "en": "Crowder LIVE! - Fort Lauderdale, FL",
@@ -3287,32 +3109,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "rss_1793121652395_vo6z",
-        "title": {
-          "en": "Live Jazz at Betsy Sunday Series 11/1/26",
-          "es": "Jazz en Vivo en Betsy Sunday Series 11/1/26",
-          "pt": "Jazz ao Vivo na Betsy Sunday Series 11/1/26",
-          "fr": "Jazz en Direct à la Série Betsy Sunday 11/1/26"
-        },
-        "date": "2026-11-01",
-        "venue": "The Betsy Hotel",
-        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/26/live-jazz-at-betsy-sunday-series-11-1-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Sunday-Series-350x175.png",
-        "description": {
-          "en": "rogram – live jazz, poetry readings, art exhibits, and more – is a mainstay of a",
-          "es": "Programa con jazz en vivo, lecturas de poesía, exhibiciones de arte y más – es un pilar de",
-          "pt": "Programa com jazz ao vivo, leituras de poesia, exposições de arte e muito mais – é um destaque de",
-          "fr": "Programme avec jazz en direct, lectures de poésie, expositions d'art et bien plus – est un élément clé de"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7864648,
-        "lng": -80.129768,
-        "category": "arts"
       },
       {
         "id": "tm_1793121652984_t5fl",
@@ -4501,6 +4297,238 @@
         "category": "music",
         "lat": 25.817805,
         "lng": -80.122143
+      },
+      {
+        "id": "rss_1793654363175_8vx9",
+        "title": {
+          "en": "7th Annual Holiday Cookie Throwdown at The Marker Key West 12/24/26",
+          "es": "7º Competencia Anual de Galletas Navideñas en The Marker Key West 12/24/26",
+          "pt": "7º Concurso Anual de Biscoitos de Férias no The Marker Key West 12/24/26",
+          "fr": "7e Compétition Annuelle de Biscuits de Noël au The Marker Key West 12/24/26"
+        },
+        "date": "2026-12-24",
+        "venue": "The Marker Key West Harbor Resort",
+        "address": "200 William Street,, Key West, Florida, 33040",
+        "url": "https://www.soulofmiami.org/2026/11/02/7th-annual-holiday-cookie-throwdown-at-the-marker-key-west-12-24-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Marker-Hotel_Pool-and-Palms-350x280.jpg",
+        "description": {
+          "en": "Swap cold weather for sunshine and tropical island charm this",
+          "es": "Cambia el clima frío por sol y encanto tropical de isla",
+          "pt": "Troque o tempo frio por sol e charme tropical da ilha",
+          "fr": "Échangez le temps froid contre le soleil et le charme tropical de l'île"
+        },
+        "source": "Soul of Miami",
+        "lat": 24.5604537,
+        "lng": -81.8017143,
+        "category": "community"
+      },
+      {
+        "id": "rss_1793654363175_ulou",
+        "title": {
+          "en": "Thanksgiving Weekend Jazz: Joonas Haavisto with JCHRIS 11/25/26",
+          "es": "Fin de Semana de Acción de Gracias Jazz: Joonas Haavisto con JCHRIS 11/25/26",
+          "pt": "Fim de Semana de Ação de Graças Jazz: Joonas Haavisto com JCHRIS 11/25/26",
+          "fr": "Jazz du Week-end d'Action de Grâces: Joonas Haavisto avec JCHRIS 11/25/26"
+        },
+        "date": "2026-11-25",
+        "venue": "The Betsy Hotel",
+        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/11/02/thanksgiving-weekend-jazz-joonas-haavisto-with-jchris-11-25-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Thanksgiving-350x175.png",
+        "description": {
+          "en": "Begin the holiday on Thanksgiving Eve with an evening of live jazz at The Piano",
+          "es": "Comienza las vacaciones la víspera de Acción de Gracias con una noche de jazz en vivo en The Piano",
+          "pt": "Comece as férias na véspera do Dia de Ação de Graças com uma noite de jazz ao vivo no The Piano",
+          "fr": "Commencez les vacances la veille de l'Action de Grâces avec une soirée de jazz en direct au The Piano"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7864648,
+        "lng": -80.129768,
+        "category": "music"
+      },
+      {
+        "id": "rss_1793654363175_frvj",
+        "title": {
+          "en": "An Evening of Friendship Possibility and Transformation with Author Margie Hunter 11/19/26",
+          "es": "Una Noche de Posibilidad de Amistad y Transformación con la Autora Margie Hunter 11/19/26",
+          "pt": "Uma Noite de Possibilidade de Amizade e Transformação com a Autora Margie Hunter 11/19/26",
+          "fr": "Une Soirée de Possibilité d'Amitié et de Transformation avec l'Auteure Margie Hunter 11/19/26"
+        },
+        "date": "2026-11-19",
+        "venue": "Ami Ami",
+        "address": "318 Miracle Mile, Coral Gables, FL 33134",
+        "url": "https://www.soulofmiami.org/2026/11/02/an-evening-of-friendship-possibility-and-transformation-with-author-margie-hunter-11-19-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Ami_Ami_English_Invitation_Final-1-333x500.png",
+        "description": {
+          "en": "Join author and yoga therapist Margie Hunter for",
+          "es": "Únete a la autora y terapeuta de yoga Margie Hunter para",
+          "pt": "Junte-se à autora e terapeuta de ioga Margie Hunter para",
+          "fr": "Rejoignez l'auteure et thérapeute de yoga Margie Hunter pour"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7491259,
+        "lng": -80.2611241,
+        "category": "community"
+      },
+      {
+        "id": "rss_1793654363175_m6qe",
+        "title": {
+          "en": "Artistic Voices Gala at The Wall Art Gallery 11/14/26",
+          "es": "Gala de Voces Artísticas en The Wall Art Gallery 11/14/26",
+          "pt": "Gala de Vozes Artísticas na The Wall Art Gallery 11/14/26",
+          "fr": "Gala des Voix Artistiques à The Wall Art Gallery 11/14/26"
+        },
+        "date": "2026-11-14",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/11/02/artistic-voices-gala-at-the-wall-art-gallery-11-14-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/AVG-soulofmiami-1200-350x453.jpg",
+        "description": {
+          "en": "On Saturday November 14 the second Saturday of the month Wynwood",
+          "es": "El sábado 14 de noviembre el segundo sábado del mes en Wynwood",
+          "pt": "No sábado 14 de novembro o segundo sábado do mês em Wynwood",
+          "fr": "Le samedi 14 novembre le deuxième samedi du mois à Wynwood"
+        },
+        "source": "Soul of Miami",
+        "category": "arts"
+      },
+      {
+        "id": "tm_1793654363793_k5bh",
+        "title": {
+          "en": "NASCAR Championship Weekend Grandstand Admission",
+          "es": "Admisión a Tribunas del Fin de Semana del Campeonato NASCAR",
+          "pt": "Admissão de Arquibancada do Fim de Semana do Campeonato NASCAR",
+          "fr": "Admission aux Tribunes du Week-end du Championnat NASCAR"
+        },
+        "date": "2026-11-06",
+        "venue": "Homestead Miami Speedway",
+        "address": "1 Speedway Blvd, Homestead, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fam.ticketmaster.com%2Fhms%2Fbuy%2Fquickbuy%3Fid%3DNjM%3D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f89/c7c11c17-4c47-4d1f-82df-a79b9b1a6f89_1262061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Motorsports/Racing · Homestead Miami Speedway",
+          "es": "Deportes · Automovilismo/Carreras · Homestead Miami Speedway",
+          "pt": "Esportes · Automobilismo/Corridas · Homestead Miami Speedway",
+          "fr": "Sports · Automobile/Courses · Homestead Miami Speedway"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.4554984,
+        "lng": -80.4117875
+      },
+      {
+        "id": "tm_1793654363793_y5p0",
+        "title": {
+          "en": "NASCAR Cup Series Weekend Tent Space",
+          "es": "Espacio de Carpa del Fin de Semana de la Serie NASCAR Cup",
+          "pt": "Espaço de Barraca do Fim de Semana da Série NASCAR Cup",
+          "fr": "Espace de Tente du Week-end de la Série NASCAR Cup"
+        },
+        "date": "2026-11-06",
+        "venue": "Homestead Miami Speedway",
+        "address": "1 Speedway Blvd, Homestead, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fam.ticketmaster.com%2Fhms%2Fbuy%2FTent&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f89/c7c11c17-4c47-4d1f-82df-a79b9b1a6f89_1262061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Motorsports/Racing · Homestead Miami Speedway",
+          "es": "Deportes · Automovilismo/Carreras · Homestead Miami Speedway",
+          "pt": "Esportes · Automobilismo/Corridas · Homestead Miami Speedway",
+          "fr": "Sports · Automobile/Course · Homestead Miami Speedway"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.4554984,
+        "lng": -80.4117875
+      },
+      {
+        "id": "tm_1793654363793_l23j",
+        "title": {
+          "en": "NASCAR Cup Series Weekend RV Space",
+          "es": "Espacio RV del Fin de Semana de la Serie NASCAR Cup",
+          "pt": "Espaço RV do Fim de Semana da Série NASCAR Cup",
+          "fr": "Espace VR du Week-end de la Série NASCAR Cup"
+        },
+        "date": "2026-11-06",
+        "venue": "Homestead Miami Speedway",
+        "address": "1 Speedway Blvd, Homestead, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fam.ticketmaster.com%2Fhms%2Fism%2FSDI2QzFPUlY%3D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f89/c7c11c17-4c47-4d1f-82df-a79b9b1a6f89_1262061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Motorsports/Racing · Homestead Miami Speedway",
+          "es": "Deportes · Automovilismo/Carreras · Homestead Miami Speedway",
+          "pt": "Esportes · Automobilismo/Corridas · Homestead Miami Speedway",
+          "fr": "Sports · Automobile/Course · Homestead Miami Speedway"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.4554984,
+        "lng": -80.4117875
+      },
+      {
+        "id": "tm_1793654363793_y1au",
+        "title": {
+          "en": "Inter Miami CF vs Charlotte FC",
+          "es": "Inter Miami CF vs Charlotte FC",
+          "pt": "Inter Miami CF vs Charlotte FC",
+          "fr": "Inter Miami CF vs Charlotte FC"
+        },
+        "date": "2026-11-07",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Finter-miami-cf-vs-charlotte-fc-miami-florida-11-07-2026%2Fevent%2F0D0063739E8A68A6&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "For information about Suites please call 305-428-0611. · Starts 16:00 · Nu Stadium",
+          "es": "Para información sobre Suites llame al 305-428-0611. · Comienza 16:00 · Estadio Nu",
+          "pt": "Para informações sobre Suites, ligue para 305-428-0611. · Começa 16:00 · Estádio Nu",
+          "fr": "Pour des informations sur les Suites, appelez le 305-428-0611. · Commence 16:00 · Stade Nu"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
+      },
+      {
+        "id": "tm_1793654363793_ea4d",
+        "title": {
+          "en": "Florida International Panthers Football vs. Missouri State Bears Football",
+          "es": "Fútbol Americano de los Panthers de la Universidad Internacional de Florida vs Osos de la Universidad Estatal de Missouri",
+          "pt": "Futebol Americano dos Panthers da Universidade Internacional da Flórida vs Ursos da Universidade Estadual de Missouri",
+          "fr": "Football Américain des Panthers de l'Université Internationale de Floride vs Ours de l'Université d'État du Missouri"
+        },
+        "date": "2026-11-07",
+        "venue": "Pitbull Stadium",
+        "address": "11200 SW 8th Street, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-zot&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/db5/5acfb9a3-4315-40c6-824f-e0fd31bd5db5_723691_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 16:00 · Pitbull Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 16:00 · Estadio Pitbull",
+          "pt": "Esportes · Futebol Americano · Começa 16:00 · Estádio Pitbull",
+          "fr": "Sports · Football Américain · Commence 16:00 · Stade Pitbull"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7577,
+        "lng": -80.374802
       }
     ]
   },
@@ -5404,7 +5432,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-01T17:34:06.948Z",
+    "fetchedAt": "2026-11-02T21:19:58.460Z",
     "items": [
       {
         "id": "beach_crandon-park-south",
@@ -5425,31 +5453,10 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-south",
         "effectiveAt": "2026-10-28",
-        "expiresAt": "2026-11-02T17:34:06.948Z"
+        "expiresAt": "2026-11-03T21:19:58.460Z"
       },
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.fa6e4ea64f2f08c8407b8dc34e0a04b285fd21b7.002.1",
-        "type": "weather",
-        "severity": "minor",
-        "title": {
-          "en": "Coastal Flood Advisory",
-          "es": "Aviso de Inundación Costera",
-          "pt": "Aviso de Inundação Costeira",
-          "fr": "Avis d'Inondation Côtière"
-        },
-        "detail": {
-          "en": "* WHAT...Minor to moderate coastal flooding and dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...Through Monday evening.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road closures expected. Rip currents can sweep even\nthe best swimmers away from shore into deeper water.",
-          "es": "* QUÉ...Inundaciones costeras leves a moderadas y corrientes de resaca peligrosas.\n\n* DÓNDE...Costa del condado de Miami Dade.\n\n* CUÁNDO...Hasta el lunes por la noche.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con cierres de carreteras aislados esperados. Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la orilla hacia aguas más profundas.",
-          "pt": "* O QUÊ...Inundações costeiras leves a moderadas e correntes de ressaca perigosas.\n\n* ONDE...Costa do condado de Miami Dade.\n\n* QUANDO...Até segunda-feira à noite.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados. As correntes de ressaca podem arrastar até os melhores nadadores para longe da costa em águas mais profundas.",
-          "fr": "* QUOI...Inondations côtières mineures à modérées et courants de retrait dangereux.\n\n* OÙ...Côte du comté de Miami Dade.\n\n* QUAND...Jusqu'à lundi soir.\n\n* IMPACTS...Inondation de terrains, de parcs et de routes avec seulement des fermetures de routes isolées attendues. Les courants de retrait peuvent emporter même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fa6e4ea64f2f08c8407b8dc34e0a04b285fd21b7.002.1",
-        "effectiveAt": "2026-11-01T00:57:00-05:00",
-        "expiresAt": "2026-11-01T21:00:00.000Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.fa6e4ea64f2f08c8407b8dc34e0a04b285fd21b7.002.2",
+        "id": "nws_urn-oid-2.49.0.1.840.0.092e9b32c7567fcab0abd859eb877ff253b32c72.001.2",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -5459,18 +5466,39 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...Minor to moderate coastal flooding and dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...Through Monday evening.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road closures expected. Rip currents can sweep even\nthe best swimmers away from shore into deeper water.",
-          "es": "* QUÉ...Inundaciones costeras leves a moderadas y corrientes de resaca peligrosas.\n\n* DÓNDE...Costa del condado de Miami Dade.\n\n* CUÁNDO...Hasta el lunes por la noche.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con cierres de carreteras aislados esperados. Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la orilla hacia aguas más profundas.",
-          "pt": "* O QUÊ...Inundações costeiras leves a moderadas e correntes de ressaca perigosas.\n\n* ONDE...Costa do condado de Miami Dade.\n\n* QUANDO...Até segunda-feira à noite.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos isolados de estradas esperados. As correntes de ressaca podem arrastar até os melhores nadadores para longe da costa em águas mais profundas.",
-          "fr": "* QUOI...Inondations côtières mineures à modérées et courants de retrait dangereux.\n\n* OÙ...Côte du comté de Miami Dade.\n\n* QUAND...Jusqu'à lundi soir.\n\n* IMPACTS...Inondation de terrains, de parcs et de routes avec seulement des fermetures de routes isolées attendues. Les courants de retrait peuvent emporter même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
+          "en": "* WHAT...Minor to Moderate coastal flooding, large breaking\nwaves of 6 to 7 feet in the surf zone, and dangerous rip\ncurrents.\n\n* WHERE...Coastal Palm Beach County and Coastal Broward County.\n\n* WHEN...Through Tuesday for the Coastal Flood Advisory and High\nRip Current Risk, and through this morning for the High Surf\nAdvisory.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road",
+          "es": "* QUÉ...Inundaciones costeras de menor a moderada, olas rompientes grandes de 6 a 7 pies en la zona de surf, y corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Palm Beach y Condado costero de Broward.\n\n* CUÁNDO...Hasta el martes para la Advertencia de Inundación Costera y Riesgo Alto de Corrientes de Resaca, y hasta esta mañana para la Advertencia de Oleaje Alto.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados.",
+          "pt": "* O QUÊ...Alagamentos costeiros de menor a moderado, ondas quebrando grandes de 6 a 7 pés na zona de arrebentação, e correntes de retorno perigosas.\n\n* ONDE...Condado costeiro de Palm Beach e Condado costeiro de Broward.\n\n* QUANDO...Até terça-feira para o Aviso de Alagamento Costeiro e Risco Alto de Correntes de Retorno, e até esta manhã para o Aviso de Ondas Altas.\n\n* IMPACTOS...Alagamento de lotes, parques e estradas com apenas fechamentos isolados de estradas.",
+          "fr": "* QUOI...Inondations côtières mineures à modérées, grandes vagues déferlantes de 6 à 7 pieds dans la zone de déferlement, et courants de retour dangereux.\n\n* OÙ...Comté côtier de Palm Beach et Comté côtier de Broward.\n\n* QUAND...Jusqu'à mardi pour l'avis d'inondation côtière et le risque élevé de courants de retour, et jusqu'à ce matin pour l'avis de fortes vagues.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement des fermetures de routes isolées."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fa6e4ea64f2f08c8407b8dc34e0a04b285fd21b7.002.2",
-        "effectiveAt": "2026-11-01T00:57:00-05:00",
-        "expiresAt": "2026-11-01T21:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092e9b32c7567fcab0abd859eb877ff253b32c72.001.2",
+        "effectiveAt": "2026-11-02T15:20:00-05:00",
+        "expiresAt": "2026-11-03T12:00:00.000Z"
       },
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.d8c232d5c25def9626b9b06da8dc57aec8c761ef.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.092e9b32c7567fcab0abd859eb877ff253b32c72.001.1",
+        "type": "weather",
+        "severity": "minor",
+        "title": {
+          "en": "Coastal Flood Advisory",
+          "es": "Aviso de Inundación Costera",
+          "pt": "Aviso de Inundação Costeira",
+          "fr": "Avis d'Inondation Côtière"
+        },
+        "detail": {
+          "en": "* WHAT...Minor to Moderate coastal flooding, large breaking\nwaves of 6 to 7 feet in the surf zone, and dangerous rip\ncurrents.\n\n* WHERE...Coastal Palm Beach County and Coastal Broward County.\n\n* WHEN...Through Tuesday for the Coastal Flood Advisory and High\nRip Current Risk, and through this morning for the High Surf\nAdvisory.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road",
+          "es": "* QUÉ...Inundaciones costeras de menor a moderada, olas rompientes grandes de 6 a 7 pies en la zona de surf, y corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Palm Beach y Condado costero de Broward.\n\n* CUÁNDO...Hasta el martes para la Advertencia de Inundación Costera y Riesgo Alto de Corrientes de Resaca, y hasta esta mañana para la Advertencia de Oleaje Alto.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con solo cierres de carreteras aislados.",
+          "pt": "* O QUÊ...Alagamentos costeiros de menor a moderado, ondas quebrando grandes de 6 a 7 pés na zona de arrebentação, e correntes de retorno perigosas.\n\n* ONDE...Condado costeiro de Palm Beach e Condado costeiro de Broward.\n\n* QUANDO...Até terça-feira para o Aviso de Alagamento Costeiro e Risco Alto de Correntes de Retorno, e até esta manhã para o Aviso de Ondas Altas.\n\n* IMPACTOS...Alagamento de lotes, parques e estradas com apenas fechamentos isolados de estradas.",
+          "fr": "* QUOI...Inondations côtières mineures à modérées, grandes vagues déferlantes de 6 à 7 pieds dans la zone de déferlement, et courants de retour dangereux.\n\n* OÙ...Comté côtier de Palm Beach et Comté côtier de Broward.\n\n* QUAND...Jusqu'à mardi pour l'avis d'inondation côtière et le risque élevé de courants de retour, et jusqu'à ce matin pour l'avis de fortes vagues.\n\n* IMPACTS...Inondation de terrains, parcs et routes avec seulement des fermetures de routes isolées."
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.092e9b32c7567fcab0abd859eb877ff253b32c72.001.1",
+        "effectiveAt": "2026-11-02T15:20:00-05:00",
+        "expiresAt": "2026-11-03T12:00:00.000Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.4f07e60623d00938b46403a238fbab7e9c79145a.002.1",
         "type": "weather",
         "severity": "severe",
         "title": {
@@ -5480,15 +5508,15 @@
           "fr": "Flood Watch"
         },
         "detail": {
-          "en": "An upper-level low will move atop Florida today through Monday. This\nfeature will add more moisture and support for showers and storms\nthan recent days. Strong low-level easterly flow will result in bands\nof repeated rainfall for isolated to scattered locations. Showers and\nstorms are expected to be a bit more widespread with higher rain\nrates than the past few days.\n\n* WHAT...Bands of heavy rain ",
-          "es": "Una baja de nivel superior se moverá sobre Florida hoy hasta el lunes. Esta característica agregará más humedad y apoyo para chubascos y tormentas que en días recientes. El flujo de aire del este de bajo nivel fuerte resultará en bandas de lluvia repetida para ubicaciones aisladas a dispersas. Se esperan chubascos y tormentas un poco más generalizados con tasas de lluvia más altas que en los últimos días.\n\n* QUÉ...Bandas de lluvia fuerte",
-          "pt": "Uma baixa de nível superior se moverá sobre a Flórida hoje até segunda-feira. Esta característica adicionará mais umidade e suporte para pancadas e tempestades do que nos dias recentes. O fluxo de ar leste de baixo nível forte resultará em bandas de chuva repetida para locais isolados a espalhados. Pancadas e tempestades são esperadas para ser um pouco mais generalizadas com taxas de chuva mais altas do que nos últimos dias.\n\n* O QUÊ...Bandas de chuva forte",
-          "fr": "Une dépression d'altitude supérieure se déplacera sur la Floride aujourd'hui jusqu'à lundi. Cette caractéristique ajoutera plus d'humidité et d'instabilité pour les averses et les orages que les jours récents. Un flux d'air d'est de bas niveau fort entraînera des bandes de pluie répétée pour des endroits isolés à épars. Les averses et les orages devraient être un peu plus généralisés avec des taux de pluie plus élevés que les jours passés.\n\n* QUOI...Bandes de fortes pluies"
+          "en": "An upper level low will will continue to influence storms in the\nGulf and Bahamas through Monday. With the lack of a strong synoptic\nsurface forcing mechanism, predictability as to where and when heavy\nrain will fall remains low. However, the environment continues to\nsupport the potential for heavy rainfall and slow moving cells.\n\n* WHAT...Heavy rain may cause, or worsen ongoing urban and street\nf",
+          "es": "Una baja de nivel superior continuará influyendo en tormentas en el Golfo y Bahamas hasta el lunes. Con la falta de un mecanismo de forzamiento sinóptico de superficie fuerte, la predictibilidad sobre dónde y cuándo caerá lluvia pesada sigue siendo baja. Sin embargo, el ambiente continúa apoyando el potencial para lluvia pesada y celdas que se mueven lentamente.\n\n* QUÉ...La lluvia pesada puede causar, o empeorar el alagamiento urbano y de calles en curso.",
+          "pt": "Uma baixa de nível superior continuará influenciando tempestades no Golfo e Bahamas até segunda-feira. Com a falta de um mecanismo forte de forçamento sinóptico de superfície, a previsibilidade de onde e quando a chuva forte cairá permanece baixa. No entanto, o ambiente continua apoiando o potencial para chuva forte e células de movimento lento.\n\n* O QUÊ...Chuva forte pode causar, ou piorar alagamentos urbanos e de ruas em andamento.",
+          "fr": "Une dépression de niveau supérieur continuera à influencer les tempêtes dans le Golfe et les Bahamas jusqu'à lundi. Avec l'absence d'un mécanisme de forçage synoptique de surface fort, la prévisibilité de l'endroit et du moment où les fortes pluies tomberont reste faible. Cependant, l'environnement continue de soutenir le potentiel de fortes pluies et de cellules à mouvement lent.\n\n* QUOI...Les fortes pluies peuvent causer ou aggraver les inondations urbaines et routières en cours."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d8c232d5c25def9626b9b06da8dc57aec8c761ef.001.1",
-        "effectiveAt": "2026-10-31T23:43:00-05:00",
-        "expiresAt": "2026-11-01T21:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f07e60623d00938b46403a238fbab7e9c79145a.002.1",
+        "effectiveAt": "2026-11-01T23:59:00-05:00",
+        "expiresAt": "2026-11-03T00:00:00.000Z"
       }
     ]
   }
