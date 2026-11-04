@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-03T18:59:11.375Z",
+    "lastUpdated": "2026-11-04T19:16:48.286Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-03T18:59:02.112Z",
+    "fetchedAt": "2026-11-04T19:16:43.831Z",
     "current": {
-      "temp_f": 82,
-      "feels_f": 90,
+      "temp_f": 78,
+      "feels_f": 85,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 86,
-      "wind_mph": 12,
-      "rain_chance": 33,
-      "weathercode": 0
+      "humidity": 85,
+      "wind_mph": 8,
+      "rain_chance": 56,
+      "weathercode": 51
     },
     "forecast": [
       {
-        "date": "2026-11-03",
-        "high_f": 83,
-        "low_f": 75,
-        "weathercode": 51,
-        "rain_chance": 33,
-        "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
-        }
-      },
-      {
         "date": "2026-11-04",
         "high_f": 79,
-        "low_f": 74,
-        "weathercode": 82,
-        "rain_chance": 64,
+        "low_f": 73,
+        "weathercode": 80,
+        "rain_chance": 56,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -49,10 +36,10 @@
       },
       {
         "date": "2026-11-05",
-        "high_f": 83,
-        "low_f": 73,
+        "high_f": 80,
+        "low_f": 72,
         "weathercode": 3,
-        "rain_chance": 24,
+        "rain_chance": 29,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -63,9 +50,9 @@
       {
         "date": "2026-11-06",
         "high_f": 83,
-        "low_f": 79,
+        "low_f": 70,
         "weathercode": 51,
-        "rain_chance": 6,
+        "rain_chance": 11,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -78,159 +65,172 @@
         "high_f": 84,
         "low_f": 77,
         "weathercode": 51,
-        "rain_chance": 5,
+        "rain_chance": 6,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-11-08",
+        "high_f": 81,
+        "low_f": 78,
+        "weathercode": 3,
+        "rain_chance": 13,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
       }
     ],
     "hourly": [
       {
-        "hour": "13:00",
-        "temp_f": 83,
-        "weathercode": 0,
-        "rain_chance": 18
-      },
-      {
         "hour": "14:00",
-        "temp_f": 81,
-        "weathercode": 0,
-        "rain_chance": 22
+        "temp_f": 79,
+        "weathercode": 80,
+        "rain_chance": 44
       },
       {
         "hour": "15:00",
-        "temp_f": 81,
-        "weathercode": 2,
-        "rain_chance": 26
+        "temp_f": 79,
+        "weathercode": 51,
+        "rain_chance": 40
       },
       {
         "hour": "16:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 19
+        "temp_f": 79,
+        "weathercode": 51,
+        "rain_chance": 25
       },
       {
         "hour": "17:00",
-        "temp_f": 79,
-        "weathercode": 0,
-        "rain_chance": 20
-      },
-      {
-        "hour": "18:00",
         "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 19
-      },
-      {
-        "hour": "19:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 16
-      },
-      {
-        "hour": "20:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 11
-      },
-      {
-        "hour": "21:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 17
-      },
-      {
-        "hour": "22:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 22
-      },
-      {
-        "hour": "23:00",
-        "temp_f": 77,
         "weathercode": 3,
         "rain_chance": 24
       },
       {
-        "hour": "00:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 23
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 77,
-        "weathercode": 3,
+        "hour": "18:00",
+        "temp_f": 76,
+        "weathercode": 2,
         "rain_chance": 22
       },
       {
-        "hour": "02:00",
+        "hour": "19:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 27
+        "rain_chance": 19
+      },
+      {
+        "hour": "20:00",
+        "temp_f": 75,
+        "weathercode": 2,
+        "rain_chance": 9
+      },
+      {
+        "hour": "21:00",
+        "temp_f": 75,
+        "weathercode": 0,
+        "rain_chance": 8
+      },
+      {
+        "hour": "22:00",
+        "temp_f": 74,
+        "weathercode": 1,
+        "rain_chance": 22
+      },
+      {
+        "hour": "23:00",
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 26
+      },
+      {
+        "hour": "00:00",
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 24
+      },
+      {
+        "hour": "01:00",
+        "temp_f": 73,
+        "weathercode": 2,
+        "rain_chance": 17
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 74,
+        "weathercode": 2,
+        "rain_chance": 19
       },
       {
         "hour": "03:00",
-        "temp_f": 76,
+        "temp_f": 73,
         "weathercode": 1,
-        "rain_chance": 27
+        "rain_chance": 13
       },
       {
         "hour": "04:00",
-        "temp_f": 76,
-        "weathercode": 2,
-        "rain_chance": 27
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 9
       },
       {
         "hour": "05:00",
-        "temp_f": 75,
-        "weathercode": 1,
-        "rain_chance": 29
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 15
       },
       {
         "hour": "06:00",
-        "temp_f": 76,
-        "weathercode": 51,
-        "rain_chance": 37
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 19
       },
       {
         "hour": "07:00",
-        "temp_f": 76,
-        "weathercode": 51,
-        "rain_chance": 38
+        "temp_f": 73,
+        "weathercode": 2,
+        "rain_chance": 13
       },
       {
         "hour": "08:00",
         "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 64
+        "weathercode": 2,
+        "rain_chance": 24
       },
       {
         "hour": "09:00",
-        "temp_f": 79,
-        "weathercode": 3,
-        "rain_chance": 57
+        "temp_f": 77,
+        "weathercode": 1,
+        "rain_chance": 29
       },
       {
         "hour": "10:00",
         "temp_f": 78,
-        "weathercode": 80,
-        "rain_chance": 56
+        "weathercode": 3,
+        "rain_chance": 27
       },
       {
         "hour": "11:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 54
+        "temp_f": 80,
+        "weathercode": 2,
+        "rain_chance": 8
       },
       {
         "hour": "12:00",
-        "temp_f": 76,
-        "weathercode": 51,
-        "rain_chance": 49
+        "temp_f": 80,
+        "weathercode": 1,
+        "rain_chance": 7
+      },
+      {
+        "hour": "13:00",
+        "temp_f": 80,
+        "weathercode": 3,
+        "rain_chance": 6
       }
     ]
   },
@@ -2479,32 +2479,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1792433724984_hu74",
-        "title": {
-          "en": "Antoine Boyer & Yeore Kim – Parisian Skies, Spanish Nights 11/3/26",
-          "es": "Antoine Boyer & Yeore Kim – Cielos Parisinos, Noches Españolas 11/3/26",
-          "pt": "Antoine Boyer & Yeore Kim – Céus Parisienses, Noites Espanholas 11/3/26",
-          "fr": "Antoine Boyer & Yeore Kim – Ciels Parisiens, Nuits Espagnoles 11/3/26"
-        },
-        "date": "2026-11-03",
-        "venue": "Manuel Artime Theater",
-        "address": "900 SW 1st St, Miami, Florida, 33130",
-        "url": "https://www.soulofmiami.org/2026/10/18/antoine-boyer-yeore-kim-parisian-skies-spanish-nights-11-3-26/",
-        "free": false,
-        "price": "$49",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/antoine_boyer_yeore_kim_1200x1200-350x350.jpg",
-        "description": {
-          "en": "– $109 French guitar revelation Antoine Boyer meets award-winning South Korean harmonica",
-          "es": "– $109 Revelación de guitarra francesa Antoine Boyer se encuentra con la armónica galardonada de la ganadora surcoreana",
-          "pt": "– $109 Revelação da guitarra francesa Antoine Boyer encontra a gaita de boca premiada da vencedora sul-coreana",
-          "fr": "– $109 Révélation de guitare française Antoine Boyer rencontre l'harmonica primé de la gagnante sud-coréenne"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7723126,
-        "lng": -80.2095534,
-        "category": "community"
-      },
-      {
         "id": "rss_1792600229760_xois",
         "title": {
           "en": "Christmas Eve Dinner at OCEAN2000 12/24/26",
@@ -3007,58 +2981,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1793121652984_2pub",
-        "title": {
-          "en": "Daniel Sloss: BITTER (Brand New Tour!)",
-          "es": "Daniel Sloss: AMARGO (¡Gira Completamente Nueva!)",
-          "pt": "Daniel Sloss: AMARGO (Nova Turnê!)",
-          "fr": "Daniel Sloss: AMER (Nouvelle Tournée!)"
-        },
-        "date": "2026-11-03",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdaniel-sloss-bitter-brand-new-tour-ft-lauderdale-florida-11-03-2026%2Fevent%2F0D006445A9627BF9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/cfa/e476394e-b2ce-4a11-8230-879e15686cfa_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Don't miss your chance to see one of the biggest global names in stand-up as Scotland's international comedy superstar Daniel Sloss unleashes his brilliant and devastatingly hilarious brand-new show BITTER. Daniel's massive live tours have spanned 55 countries (and counting), including nine sold-out New York off-Broadway theatre seasons. Having performed stand-up for more than half of his life, he",
-          "es": "No pierdas la oportunidad de ver a una de las mayores figuras de la comedia mundial mientras la superestrella internacional de Escocia Daniel Sloss desata su brillante y devastadoramente hilarante espectáculo nuevo AMARGO. Sus enormes giras en vivo han abarcado 55 países (y contando), incluyendo nueve temporadas teatrales agotadas en Nueva York fuera de Broadway.",
-          "pt": "Não perca a chance de ver um dos maiores nomes da comédia global enquanto a superestrela internacional de comédia da Escócia Daniel Sloss desencadeia seu brilhante e devastadoramente hilariante novo show AMARGO. Suas massivas turnês ao vivo abrangeram 55 países (e contando), incluindo nove temporadas de teatro esgotadas no off-Broadway de Nova York.",
-          "fr": "Ne manquez pas l'occasion de voir l'un des plus grands noms de la comédie mondiale alors que la superstar internationale de comédie écossaise Daniel Sloss déchaîne son brillant et terriblement hilarant nouveau spectacle AMER. Ses énormes tournées en direct ont couvert 55 pays (et on ne compte plus), dont neuf saisons de théâtre sold-out au off-Broadway de New York."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
-        "id": "tm_1793121652984_a8bs",
-        "title": {
-          "en": "The Incredible Boris (18+ Event)",
-          "es": "El Increíble Boris (Evento de 18+)",
-          "pt": "O Incrível Boris (Evento 18+)",
-          "fr": "L'Incroyable Boris (Événement 18+)"
-        },
-        "date": "2026-11-03",
-        "venue": "Boca Black Box",
-        "address": "8221 Glades Rd #10, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAeFfO&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 19:30 · Boca Black Box",
-          "es": "Comienza a las 19:30 · Boca Black Box",
-          "pt": "Começa às 19:30 · Boca Black Box",
-          "fr": "Commence à 19h30 · Boca Black Box"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.381201,
-        "lng": -80.1707,
-        "category": "music"
-      },
-      {
         "id": "tm_1793121652984_hcwu",
         "title": {
           "en": "GWAR - Gor Gor Must Die",
@@ -3107,32 +3029,6 @@
         },
         "source": "Opa-locka",
         "category": "community"
-      },
-      {
-        "id": "rss_1793209797262_ms01",
-        "title": {
-          "en": "Piano Masters & New Voices at The Betsy Tuesday Series (November) 11/3/26",
-          "es": "Piano Masters & New Voices at The Betsy Tuesday Series (Noviembre) 11/3/26",
-          "pt": "Piano Masters & New Voices at The Betsy Tuesday Series (Novembro) 11/3/26",
-          "fr": "Piano Masters & New Voices at The Betsy Tuesday Series (Novembre) 11/3/26"
-        },
-        "date": "2026-11-03",
-        "venue": "The Betsy Hotel",
-        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/27/piano-masters-new-voices-at-the-betsy-tuesday-series-november-11-3-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/169588-350x175.jpeg",
-        "description": {
-          "en": "The longest-running live music series on Miami Beach, 7 days a",
-          "es": "La serie de música en vivo más antigua de Miami Beach, 7 días a la semana",
-          "pt": "A série de música ao vivo mais antiga de Miami Beach, 7 dias por semana",
-          "fr": "La plus ancienne série de musique live de Miami Beach, 7 jours par semaine"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7864648,
-        "lng": -80.129768,
-        "category": "music"
       },
       {
         "id": "rss_1793209797262_gfma",
@@ -4501,54 +4397,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1793732285351_tqfs",
-        "title": {
-          "en": "Free LoveisLove Miami Hip Hop Block Party at Normandy Fountain",
-          "es": "Fiesta de Hip Hop Gratuita LoveisLove Miami en la Fuente Normandy",
-          "pt": "Festa de Hip Hop Gratuita LoveisLove Miami na Fonte Normandy",
-          "fr": "Fête de Hip Hop Gratuite LoveisLove Miami à la Fontaine Normandy"
-        },
-        "date": "2026-11-03",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-loveislove-miami-hip-hop-block-party-at-normandy-fountain/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/11/Love-is-Love-Hip-Hop-Fest-2026-flyer-cropped-728x419.jpg",
-        "description": {
-          "en": "South Florida on the Cheap If you love hip hop, we're talking all styles here, all of them will be represented during the LoveisLove Miami Hip Hop Block Party at Normandy Fountain on Saturday, Nov.... Copyright South Florida on the Cheap. The post Free LoveisLove Miami Hip Hop Block Party at Normandy Fountain appeared first on South Florida on the Cheap.",
-          "es": "Si amas el hip hop, hablamos de todos los estilos aquí, todos estarán representados durante la Fiesta de Hip Hop LoveisLove Miami en la Fuente Normandy el sábado, Nov.",
-          "pt": "Se você ama hip hop, estamos falando de todos os estilos aqui, todos serão representados durante a Festa de Hip Hop LoveisLove Miami na Fonte Normandy no sábado, Nov.",
-          "fr": "Si vous aimez le hip hop, nous parlons de tous les styles ici, tous seront représentés lors de la fête de hip hop LoveisLove Miami à la fontaine Normandy samedi, Nov."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "rss_1793732285351_81k0",
-        "title": {
-          "en": "Santa's Arrival Parade at The Gardens Mall, Nov. 13",
-          "es": "Desfile de Llegada de Santa en The Gardens Mall, 13 de noviembre",
-          "pt": "Desfile de Chegada do Papai Noel no The Gardens Mall, 13 de novembro",
-          "fr": "Défilé d'arrivée du Père Noël au The Gardens Mall, 13 novembre"
-        },
-        "date": "2026-11-03",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/santas-arrival-parade-at-the-gardens-mall/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/11/the-gardens-mall-santa-728x485.jpg",
-        "description": {
-          "en": "South Florida on the Cheap and Santa Claus will arrive in style to help ring in the Christmas spirit to kick off the season with Santa’s Arrival Parade. The Palm Beach Gardens High School Marching... Copyright South Florida on the Cheap. The post Santa's Arrival Parade at The Gardens Mall, Nov. 13 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap y Santa Claus llegarán con estilo para ayudar a encender el espíritu navideño e inaugurar la temporada con el Desfile de Llegada de Santa. La Banda de Marcha de la Escuela Secundaria Palm Beach Gardens...",
-          "pt": "South Florida on the Cheap e o Papai Noel chegarão com estilo para ajudar a acender o espírito natalino e inaugurar a temporada com o Desfile de Chegada do Papai Noel. A Banda de Marcha da Escola Secundária Palm Beach Gardens...",
-          "fr": "South Florida on the Cheap et le Père Noël arriveront en grande pompe pour aider à allumer l'esprit de Noël et inaugurer la saison avec le Défilé d'arrivée du Père Noël. La fanfare de la Palm Beach Gardens High School..."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
         "id": "tm_1793732285975_lop7",
         "title": {
           "en": "CONEP",
@@ -4677,6 +4525,132 @@
         "category": "music",
         "lat": 26.1193,
         "lng": -80.149426
+      },
+      {
+        "id": "rss_1793819775811_ekox",
+        "title": {
+          "en": "Club Space teases “GTA VI” transformation into the Vault",
+          "es": "Club Space anuncia transformación estilo \"GTA VI\" en The Vault",
+          "pt": "Club Space anuncia transformação estilo \"GTA VI\" no The Vault",
+          "fr": "Club Space tease une transformation \"GTA VI\" au Vault"
+        },
+        "date": "2026-11-04",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/music/club-space-teases-gta-vi-transformation-into-the-vault-40595749/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/11/The-Vault.jpg",
+        "description": {
+          "en": "The downtown venue hints at a three-night Vice City experience Nov. 20 – 22, with Chris Lorenzo booked and mystery DJs fueling lineup speculation.",
+          "es": "El lugar del centro insinúa una experiencia Vice City de tres noches del 20 al 22 de noviembre, con Chris Lorenzo reservado y DJs misteriosos alimentando la especulación sobre el cartel.",
+          "pt": "O local no centro de Miami sugere uma experiência Vice City de três noites de 20 a 22 de novembro, com Chris Lorenzo confirmado e DJs misteriosos alimentando especulações sobre o line-up.",
+          "fr": "Le lieu du centre-ville laisse entendre une expérience Vice City de trois nuits du 20 au 22 novembre, avec Chris Lorenzo à l'affiche et des DJs mystérieux alimentant les spéculations sur la programmation."
+        },
+        "source": "Miami New Times",
+        "category": "community"
+      },
+      {
+        "id": "rss_1793819775811_485d",
+        "title": {
+          "en": "Gwar’s Blöthar talks metal and mayhem ahead of Fort Lauderdale show",
+          "es": "Blöthar de Gwar habla sobre metal y caos antes del show en Fort Lauderdale",
+          "pt": "Blöthar do Gwar fala sobre metal e caos antes do show em Fort Lauderdale",
+          "fr": "Blöthar de Gwar parle de métal et de chaos avant le spectacle de Fort Lauderdale"
+        },
+        "date": "2026-11-04",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/music/gwars-blothar-talks-metal-and-mayhem-ahead-of-fort-lauderdale-show-40595737/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/11/Blothar_Black_2026_1-Photo-by-Dave-Jackson.jpg",
+        "description": {
+          "en": "The man behind Gwar's monstrous frontman discusses his unlikely musical roots, the band's outrageous stage antics, and what fans can expect at Revolution Live.",
+          "es": "El hombre detrás del frontman monstruoso de Gwar discute sus raíces musicales inesperadas, las actuaciones escancaradas de la banda y qué esperar en Revolution Live.",
+          "pt": "O homem por trás do vocalista monstruoso do Gwar discute suas raízes musicais improváveis, as acrobacias cênicas ultrajantes da banda e o que os fãs podem esperar na Revolution Live.",
+          "fr": "L'homme derrière le chanteur monstrueux de Gwar discute de ses racines musicales improbables, des actes de scène outranciers du groupe et de ce que les fans peuvent attendre à Revolution Live."
+        },
+        "source": "Miami New Times",
+        "category": "music"
+      },
+      {
+        "id": "tm_1793819776359_20e0",
+        "title": {
+          "en": "Christone 'Kingfish' Ingram - The Hard Road Tour",
+          "es": "Christone 'Kingfish' Ingram - The Hard Road Tour",
+          "pt": "Christone 'Kingfish' Ingram - The Hard Road Tour",
+          "fr": "Christone 'Kingfish' Ingram - The Hard Road Tour"
+        },
+        "date": "2026-11-07",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fchristone-kingfish-ingram-the-hard-road-ft-lauderdale-florida-11-07-2026%2Fevent%2F0D0064D68ECC5B86&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/fdc/03ff1f31-3768-449e-9e74-109b2e2acfdc_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Christone 'Kingfish' Ingram - The Hard Road Tour with special guest Mathias Lattin Doors open 7:30pm VIP M&G Experience 6:30pm · Starts 19:30 · Culture Room",
+          "es": "Christone 'Kingfish' Ingram - The Hard Road Tour con invitado especial Mathias Lattin. Puertas abren 19:30. Experiencia VIP M&G 18:30. Culture Room",
+          "pt": "Christone 'Kingfish' Ingram - The Hard Road Tour com convidado especial Mathias Lattin. Portas abrem 19:30. Experiência VIP M&G 18:30. Culture Room",
+          "fr": "Christone 'Kingfish' Ingram - The Hard Road Tour avec invité spécial Mathias Lattin. Portes ouvertes à 19:30. Expérience VIP M&G 18:30. Culture Room"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1793819776359_rroa",
+        "title": {
+          "en": "TIMELESS HARMONIES: Celebrating 40 Years of Making Music",
+          "es": "ARMONÍAS ETERNAS: Celebrando 40 años de hacer música",
+          "pt": "HARMONIAS ATEMPORAIS: Celebrando 40 Anos de Fazer Música",
+          "fr": "HARMONIES INTEMPORELLES: Célébrer 40 ans de création musicale"
+        },
+        "date": "2026-11-07",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftimeless-harmonies-celebrating-40-years-of-aventura-florida-11-07-2026%2Fevent%2F0D0064EF8B414A80&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/664/498099ba-8f67-49ca-8ee1-c3166472c664_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Dranoff 2 Piano Fusion's 40th anniversary season opens with a world premiere by Grammy®-nominated composer Adam Schoenberg, performed by internationally acclaimed pianists Glen Inanga and Rebeca Omordia alongside the Amernet String Quartet and guest bassist Paola Garcia. The program also celebrates the rich legacy of Black classical composers. Four decades. One unforgettable night. Inanga is a is ",
+          "es": "La temporada del 40 aniversario de Dranoff 2 Piano Fusion abre con un estreno mundial del compositor nominado al Grammy Adam Schoenberg, interpretado por los pianistas internacionalmente aclamados Glen Inanga y Rebeca Omordia junto al Amernet String Quartet y la bajista invitada Paola Garcia. El programa también celebra el rico legado de compositores clásicos negros.",
+          "pt": "A temporada de 40 anos de Dranoff 2 Piano Fusion abre com uma estreia mundial do compositor indicado ao Grammy Adam Schoenberg, interpretada pelos pianistas aclamados internacionalmente Glen Inanga e Rebeca Omordia ao lado do Amernet String Quartet e da baixista convidada Paola Garcia. O programa também celebra o rico legado de compositores clássicos negros.",
+          "fr": "La saison du 40e anniversaire de Dranoff 2 Piano Fusion s'ouvre avec une première mondiale du compositeur nommé aux Grammy Awards Adam Schoenberg, interprétée par les pianistes de renommée internationale Glen Inanga et Rebeca Omordia aux côtés du Quatuor à cordes Amernet et de la bassiste invitée Paola Garcia. Le programme célèbre également l'héritage riche des compositeurs classiques noirs."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "tm_1793819776359_iq3l",
+        "title": {
+          "en": "Victoria Monét - Frequency Of Love Tour",
+          "es": "Victoria Monét - Frequency Of Love Tour",
+          "pt": "Victoria Monét - Frequency Of Love Tour",
+          "fr": "Victoria Monét - Frequency Of Love Tour"
+        },
+        "date": "2026-11-07",
+        "venue": "FTL War Memorial Auditorium",
+        "address": "800 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Fvictoria-monet-tickets%2Ffort-lauderdale-florida-ftl-war-memorial-auditorium-2026-11-07-8-pm%2Fconcert%2F18556120&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2c6/c179b975-2dc4-4d7b-bbcd-45c41ac7a2c6_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Pop · Starts 20:00 · FTL War Memorial Auditorium",
+          "es": "Música · Pop · Comienza 20:00 · FTL War Memorial Auditorium",
+          "pt": "Música · Pop · Começa 20:00 · FTL War Memorial Auditorium",
+          "fr": "Musique · Pop · Commence à 20:00 · FTL War Memorial Auditorium"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.133662,
+        "lng": -80.134063
       }
     ]
   },
@@ -5580,7 +5554,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-03T18:59:02.112Z",
+    "fetchedAt": "2026-11-04T19:16:43.832Z",
     "items": [
       {
         "id": "beach_crandon-park-south",
@@ -5601,49 +5575,28 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-south",
         "effectiveAt": "2026-10-28",
-        "expiresAt": "2026-11-04T18:59:02.112Z"
+        "expiresAt": "2026-11-05T19:16:43.832Z"
       },
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.d7188a125f796ac3cf83d1a113054cc908fc602d.002.2",
+        "id": "nws_urn-oid-2.49.0.1.840.0.9b7c06b327724ad6530f97bc5eb4a1c737e36710.002.1",
         "type": "weather",
         "severity": "minor",
         "title": {
-          "en": "Coastal Flood Advisory",
-          "es": "Aviso de Inundación Costera",
-          "pt": "Aviso de Inundação Costeira",
-          "fr": "Avis d'Inondation Côtière"
+          "en": "Coastal Flood Statement",
+          "es": "Coastal Flood Statement",
+          "pt": "Coastal Flood Statement",
+          "fr": "Coastal Flood Statement"
         },
         "detail": {
-          "en": "* WHAT...Minor to Moderate coastal flooding, large breaking waves\nof up to 6 feet in the surf zone, and dangerous rip currents.\n\n* WHERE...Coastal Palm Beach County and Coastal Broward County.\n\n* WHEN...For the High Rip Current Risk, through Wednesday\nmorning. For the Coastal Flood Advisory, until 7 PM EST this\nevening.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road closur",
-          "es": "* QUÉ...Inundaciones costeras de menor a moderada, olas de quiebre grandes de hasta 6 pies en la zona de surf y corrientes de resaca peligrosas.\n\n* DÓNDE...Costas del condado de Palm Beach y condado de Broward.\n\n* CUÁNDO...Para el riesgo alto de corrientes de resaca, hasta el miércoles por la mañana. Para la Advertencia de Inundación Costera, hasta las 7 PM EST esta noche.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con únicamente cierres de carreteras aislados",
-          "pt": "* O QUE...Inundações costeiras de leve a moderada, ondas grandes de até 6 pés na zona de surfe e correntes de retorno perigosas.\n\n* ONDE...Costeira do Condado de Palm Beach e Costeira do Condado de Broward.\n\n* QUANDO...Para o Risco Alto de Correntes de Retorno, até quarta-feira pela manhã. Para o Aviso de Inundação Costeira, até as 19h EST nesta noite.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos de estradas isolados",
-          "fr": "* QUOI...Inondations côtières mineures à modérées, grandes vagues déferlantes pouvant atteindre 6 pieds dans la zone de surf et courants de retour dangereux.\n\n* OÙ...Côtes du comté de Palm Beach et du comté de Broward.\n\n* QUAND...Pour le risque élevé de courants de retour, jusqu'à mercredi matin. Pour l'avertissement d'inondation côtière, jusqu'à 19h EST ce soir.\n\n* IMPACTS...Inondation de terrains, de parcs et de routes avec seulement des fermetures de routes isolées"
+          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Broward County and Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Wednesday\nevening. For the High Rip Current Risk, through Wednesday\nmorning.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncurrents can swe",
+          "es": "* QUÉ...Para la Advertencia de Inundación Costera, inundaciones costeras menores aisladas. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas.\n\n* DÓNDE...Zona Costera del Condado de Broward y Zona Costera del Condado de Miami Dade.\n\n* CUÁNDO...Para la Advertencia de Inundación Costera, hasta el miércoles por la noche. Para el Riesgo Alto de Corrientes de Resaca, hasta el miércoles por la mañana.\n\n* IMPACTOS...Agua en caminos y propiedades bajas. Las corrientes de resaca pueden arrastrar",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundações costeiras menores isoladas. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas.\n\n* ONDE...Zona Costeira do Condado de Broward e Zona Costeira do Condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até quarta-feira à noite. Para o Risco Alto de Correntes de Retorno, até quarta-feira pela manhã.\n\n* IMPACTOS...Água em estradas e propriedades baixas. Correntes de retorno podem arrastar",
+          "fr": "* QUOI...Pour l'Avis d'Inondation Côtière, inondations côtières mineures isolées. Pour le Risque Élevé de Courants de Retour, courants de retour dangereux.\n\n* OÙ...Zones Côtières du Comté de Broward et du Comté de Miami Dade.\n\n* QUAND...Pour l'Avis d'Inondation Côtière, jusqu'à mercredi soir. Pour le Risque Élevé de Courants de Retour, jusqu'à mercredi matin.\n\n* IMPACTS...Eau sur les routes et les propriétés basses. Les courants de retour peuvent entraîner"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d7188a125f796ac3cf83d1a113054cc908fc602d.002.2",
-        "effectiveAt": "2026-11-03T02:20:00-05:00",
-        "expiresAt": "2026-11-04T00:00:00.000Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.d7188a125f796ac3cf83d1a113054cc908fc602d.002.1",
-        "type": "weather",
-        "severity": "moderate",
-        "title": {
-          "en": "Rip Current Statement",
-          "es": "Aviso de Corrientes de Resaca",
-          "pt": "Aviso de Correntes de Retorno",
-          "fr": "Avis de Courants de Baïn"
-        },
-        "detail": {
-          "en": "* WHAT...Minor to Moderate coastal flooding, large breaking waves\nof up to 6 feet in the surf zone, and dangerous rip currents.\n\n* WHERE...Coastal Palm Beach County and Coastal Broward County.\n\n* WHEN...For the High Rip Current Risk, through Wednesday\nmorning. For the Coastal Flood Advisory, until 7 PM EST this\nevening.\n\n* IMPACTS...Flooding of lots, parks, and roads with only\nisolated road closur",
-          "es": "* QUÉ...Inundaciones costeras de menor a moderada, olas de quiebre grandes de hasta 6 pies en la zona de surf y corrientes de resaca peligrosas.\n\n* DÓNDE...Costas del condado de Palm Beach y condado de Broward.\n\n* CUÁNDO...Para el riesgo alto de corrientes de resaca, hasta el miércoles por la mañana. Para la Advertencia de Inundación Costera, hasta las 7 PM EST esta noche.\n\n* IMPACTOS...Inundación de lotes, parques y carreteras con únicamente cierres de carreteras aislados",
-          "pt": "* O QUE...Inundações costeiras de leve a moderada, ondas grandes de até 6 pés na zona de surfe e correntes de retorno perigosas.\n\n* ONDE...Costeira do Condado de Palm Beach e Costeira do Condado de Broward.\n\n* QUANDO...Para o Risco Alto de Correntes de Retorno, até quarta-feira pela manhã. Para o Aviso de Inundação Costeira, até as 19h EST nesta noite.\n\n* IMPACTOS...Inundação de lotes, parques e estradas com apenas fechamentos de estradas isolados",
-          "fr": "* QUOI...Inondations côtières mineures à modérées, grandes vagues déferlantes pouvant atteindre 6 pieds dans la zone de surf et courants de retour dangereux.\n\n* OÙ...Côtes du comté de Palm Beach et du comté de Broward.\n\n* QUAND...Pour le risque élevé de courants de retour, jusqu'à mercredi matin. Pour l'avertissement d'inondation côtière, jusqu'à 19h EST ce soir.\n\n* IMPACTS...Inondation de terrains, de parcs et de routes avec seulement des fermetures de routes isolées"
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d7188a125f796ac3cf83d1a113054cc908fc602d.002.1",
-        "effectiveAt": "2026-11-03T02:20:00-05:00",
-        "expiresAt": "2026-11-04T00:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9b7c06b327724ad6530f97bc5eb4a1c737e36710.002.1",
+        "effectiveAt": "2026-11-04T03:23:00-05:00",
+        "expiresAt": "2026-11-05T00:00:00.000Z"
       }
     ]
   }
