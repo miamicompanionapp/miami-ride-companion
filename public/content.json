@@ -1,32 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-05T19:26:02.173Z",
+    "lastUpdated": "2026-11-06T18:49:34.558Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-05T19:25:57.801Z",
+    "fetchedAt": "2026-11-06T18:49:30.237Z",
     "current": {
-      "temp_f": 80,
-      "feels_f": 86,
+      "temp_f": 82,
+      "feels_f": 90,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 74,
-      "wind_mph": 7,
-      "rain_chance": 10,
-      "weathercode": 2
+      "humidity": 72,
+      "wind_mph": 6,
+      "rain_chance": 1,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-11-05",
-        "high_f": 83,
-        "low_f": 73,
+        "date": "2026-11-06",
+        "high_f": 84,
+        "low_f": 71,
         "weathercode": 3,
-        "rain_chance": 10,
+        "rain_chance": 1,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -35,37 +35,24 @@
         }
       },
       {
-        "date": "2026-11-06",
-        "high_f": 82,
-        "low_f": 71,
-        "weathercode": 2,
-        "rain_chance": 5,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-11-07",
-        "high_f": 83,
-        "low_f": 70,
-        "weathercode": 51,
-        "rain_chance": 19,
+        "high_f": 82,
+        "low_f": 68,
+        "weathercode": 3,
+        "rain_chance": 29,
         "description": {
-          "en": "Light drizzle",
-          "es": "Llovizna ligera",
-          "pt": "Chuvisco leve",
-          "fr": "Bruine légère"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       },
       {
         "date": "2026-11-08",
-        "high_f": 81,
-        "low_f": 77,
+        "high_f": 82,
+        "low_f": 68,
         "weathercode": 51,
-        "rain_chance": 19,
+        "rain_chance": 13,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -75,72 +62,91 @@
       },
       {
         "date": "2026-11-09",
-        "high_f": 80,
+        "high_f": 81,
         "low_f": 78,
         "weathercode": 51,
-        "rain_chance": 10,
+        "rain_chance": 13,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-11-10",
+        "high_f": 80,
+        "low_f": 78,
+        "weathercode": 3,
+        "rain_chance": 6,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
       }
     ],
     "hourly": [
       {
-        "hour": "14:00",
-        "temp_f": 80,
-        "weathercode": 2,
-        "rain_chance": 1
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 81,
+        "hour": "13:00",
+        "temp_f": 82,
         "weathercode": 1,
         "rain_chance": 1
       },
       {
-        "hour": "16:00",
-        "temp_f": 80,
+        "hour": "14:00",
+        "temp_f": 82,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 0
+      },
+      {
+        "hour": "16:00",
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "17:00",
         "temp_f": 78,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "18:00",
-        "temp_f": 76,
+        "temp_f": 75,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "19:00",
-        "temp_f": 75,
+        "temp_f": 74,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "20:00",
         "temp_f": 74,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "21:00",
         "temp_f": 74,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "22:00",
         "temp_f": 73,
         "weathercode": 0,
-        "rain_chance": 1
+        "rain_chance": 0
       },
       {
         "hour": "23:00",
@@ -162,7 +168,7 @@
       },
       {
         "hour": "02:00",
-        "temp_f": 73,
+        "temp_f": 72,
         "weathercode": 0,
         "rain_chance": 0
       },
@@ -170,65 +176,59 @@
         "hour": "03:00",
         "temp_f": 72,
         "weathercode": 0,
-        "rain_chance": 5
+        "rain_chance": 0
       },
       {
         "hour": "04:00",
-        "temp_f": 72,
+        "temp_f": 71,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 0
       },
       {
         "hour": "05:00",
         "temp_f": 71,
-        "weathercode": 1,
-        "rain_chance": 2
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 71,
-        "weathercode": 0,
+        "temp_f": 69,
+        "weathercode": 2,
         "rain_chance": 1
       },
       {
         "hour": "07:00",
-        "temp_f": 72,
-        "weathercode": 1,
-        "rain_chance": 1
-      },
-      {
-        "hour": "08:00",
-        "temp_f": 74,
+        "temp_f": 69,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
+        "hour": "08:00",
+        "temp_f": 73,
+        "weathercode": 1,
+        "rain_chance": 1
+      },
+      {
         "hour": "09:00",
-        "temp_f": 78,
+        "temp_f": 77,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "10:00",
-        "temp_f": 80,
+        "temp_f": 79,
         "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "11:00",
-        "temp_f": 81,
-        "weathercode": 1,
+        "temp_f": 80,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "12:00",
         "temp_f": 81,
-        "weathercode": 1,
-        "rain_chance": 1
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 82,
         "weathercode": 1,
         "rain_chance": 1
       }
@@ -2059,32 +2059,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1790437110319_fxsy",
-        "title": {
-          "en": "FLIFFShorts: Shorts in Paradise (Films & Party) 11/5/26",
-          "es": "FLIFFShorts: Cortometrajes en Paraíso (Películas y Fiesta) 5/11/26",
-          "pt": "FLIFFShorts: Curtas no Paraíso (Filmes e Festa) 05/11/26",
-          "fr": "FLIFFShorts: Courts-métrages au Paradis (Films et fête) 05/11/26"
-        },
-        "date": "2026-11-05",
-        "venue": "Savor Cinema",
-        "address": "503 SE 6th Street, Fort Lauderdale, Florida, 33301",
-        "url": "https://www.soulofmiami.org/2026/09/25/fliffshorts-shorts-in-paradise-films-party-11-5-26/",
-        "free": false,
-        "price": "$40",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/FLIFFShorts-5-x-7-350x490.png",
-        "description": {
-          "en": "Opening Night brings a taste from the far-side of the world to Savor Cinema, a",
-          "es": "La noche de apertura trae un sabor del otro lado del mundo a Savor Cinema, un",
-          "pt": "A noite de abertura traz um gostinho do outro lado do mundo para Savor Cinema, um",
-          "fr": "La soirée d'ouverture apporte une saveur de l'autre côté du monde à Savor Cinema, un"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1151203,
-        "lng": -80.1382475,
-        "category": "community"
-      },
-      {
         "id": "rss_1790877318377_f6py",
         "title": {
           "en": "Speed Dating Beyond Small Talk | Miami (Miami Beach) Speed Dating | Tantra Speed Date® 11/28/26",
@@ -2452,32 +2426,6 @@
         "source": "Soul of Miami",
         "lat": 26.1546539,
         "lng": -80.1010296,
-        "category": "community"
-      },
-      {
-        "id": "rss_1792686686296_xr56",
-        "title": {
-          "en": "Miami New Drama Presents The World Premiere of Gandhi and the Jew 11/5/26",
-          "es": "Miami New Drama Presenta el Estreno Mundial de Gandhi and the Jew 11/5/26",
-          "pt": "Miami New Drama Apresenta a Estreia Mundial de Gandhi and the Jew 11/5/26",
-          "fr": "Miami New Drama Présente la Première Mondiale de Gandhi and the Jew 11/5/26"
-        },
-        "date": "2026-11-05",
-        "venue": "The Colony Theatre",
-        "address": "1040 Lincoln Road, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/21/miami-new-drama-presents-the-world-premiere-of-gandhi-and-the-jew-11-5-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Gandhi-and-the-Jew-Poster-Image-336x500.jpg",
-        "description": {
-          "en": "start at $45 Miami New Drama opens its 10th Anniversary",
-          "es": "a partir de $45 Miami New Drama abre su 10º Aniversario",
-          "pt": "a partir de $45 Miami New Drama abre seu 10º Aniversário",
-          "fr": "à partir de $45 Miami New Drama ouvre son 10e Anniversaire"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7902379,
-        "lng": -80.1397822,
         "category": "community"
       },
       {
@@ -2907,58 +2855,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1793209798038_2uyu",
-        "title": {
-          "en": "STA Players: Alice in Wonderland",
-          "es": "STA Players: Alicia en el País de las Maravillas",
-          "pt": "STA Players: Alice no País das Maravilhas",
-          "fr": "STA Players: Alice au Pays des Merveilles"
-        },
-        "date": "2026-11-05",
-        "venue": "Bienes Center at St. Thomas Aquinas",
-        "address": "2801 SW 12th St., Ft. Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsta-players-alice-in-wonderland-bienes-center-at-st-thomas-tickets%2F14383764&utm_medium=affiliate",
-        "free": false,
-        "price": "$7",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "NOTE: This performance will begin at 6:00 p.m. Venue: Bienes Center for the Arts at St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 for directions and info visit www.bca-sta.org Will Call and Lobby Doors will open at 5:15 p.m. Theater seating will begin at 5:30 p.m. Performance will begin at 6:00 p.m. Refreshments and light snacks available at lobby vending area. TICKET FEES: **Servi",
-          "es": "NOTA: Esta presentación comenzará a las 6:00 p.m. Lugar: Bienes Center for the Arts en St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 para direcciones e información visite www.bca-sta.org La ventanilla de Will Call y las puertas del vestíbulo abrirán a las 5:15 p.m. La entrada al teatro comenzará a las 5:30 p.m. La presentación comenzará a las 6:00 p.m.",
-          "pt": "NOTA: Esta apresentação começará às 18h. Local: Bienes Center for the Arts na St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 para direções e informações visite www.bca-sta.org Porta de Cortesia e portas do saguão abrem às 17h15. A entrada do teatro começará às 17h30. A apresentação começará às 18h.",
-          "fr": "REMARQUE: Cette présentation commencera à 18h. Lieu: Bienes Center for the Arts à St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 pour les directions et informations visitez www.bca-sta.org Will Call et les portes du hall ouvriront à 17h15. L'entrée du théâtre commencera à 17h30. La présentation commencera à 18h."
-        },
-        "source": "Ticketmaster",
-        "lat": 26.108381,
-        "lng": -80.181182,
-        "category": "music"
-      },
-      {
-        "id": "tm_1793209798038_lwwp",
-        "title": {
-          "en": "The Floozies",
-          "es": "The Floozies",
-          "pt": "The Floozies",
-          "fr": "The Floozies"
-        },
-        "date": "2026-11-05",
-        "venue": "ZeyZey Miami",
-        "address": "353 NE 61st St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZIAb&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b6c/9d4a1433-8ef0-4b75-813b-8f8ec88bbb6c_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Dance/Electronic · Starts 19:00 · ZeyZey Miami",
-          "es": "Música · Baile/Electrónica · Comienza 19:00 · ZeyZey Miami",
-          "pt": "Música · Dança/Eletrônica · Começa 19:00 · ZeyZey Miami",
-          "fr": "Musique · Danse/Électronique · Commence 19:00 · ZeyZey Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.8172,
-        "lng": -80.188797
-      },
-      {
         "id": "rss_1793296629929_pua5",
         "title": {
           "en": "Feeding South Florida to Host “Tacos & Tequila” 11/7/26",
@@ -2982,32 +2878,6 @@
         "source": "Soul of Miami",
         "lat": 25.9875695,
         "lng": -80.1741576,
-        "category": "community"
-      },
-      {
-        "id": "rss_1793296629929_l64s",
-        "title": {
-          "en": "Rewind Room with Gio Gutierrez Brings Throwback Cocktails, Games and Nostalgia to The Commodore 11/5/26",
-          "es": "Rewind Room con Gio Gutiérrez trae Cócteles Retro, Juegos y Nostalgia a The Commodore 11/5/26",
-          "pt": "Rewind Room com Gio Gutierrez traz Coquetéis Retrô, Jogos e Nostalgia para The Commodore 11/5/26",
-          "fr": "Rewind Room avec Gio Gutierrez apporte des Cocktails Rétro, des Jeux et de la Nostalgie au Commodore 11/5/26"
-        },
-        "date": "2026-11-05",
-        "venue": "The Commodore",
-        "address": "3300 SW 27th Ave, Miami, Florida, 33133",
-        "url": "https://www.soulofmiami.org/2026/10/28/rewind-room-with-gio-gutierrez-brings-throwback-cocktails-games-and-nostalgia-to-the-commodore-11-5-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Gio_RewindTrio-350x438.jpg",
-        "description": {
-          "en": "The Commodore at The Ritz-Carlton Coconut Grove, Miami invites",
-          "es": "The Commodore en The Ritz-Carlton Coconut Grove, Miami invita a",
-          "pt": "The Commodore no The Ritz-Carlton Coconut Grove, Miami convida",
-          "fr": "The Commodore au The Ritz-Carlton Coconut Grove, Miami vous invite à"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7308221,
-        "lng": -80.2380075,
         "category": "community"
       },
       {
@@ -3061,110 +2931,6 @@
         "lat": 25.7338463,
         "lng": -80.2867079,
         "category": "community"
-      },
-      {
-        "id": "tm_1793296630720_ylrm",
-        "title": {
-          "en": "Miami Hurricanes Women's Basketball vs. Jacksonville Dolphins",
-          "es": "Miami Hurricanes Baloncesto Femenino vs. Jacksonville Dolphins",
-          "pt": "Miami Hurricanes Basquete Feminino vs. Jacksonville Dolphins",
-          "fr": "Miami Hurricanes Basket-ball féminin contre Jacksonville Dolphins"
-        },
-        "date": "2026-11-05",
-        "venue": "Watsco Center at the University of Miami",
-        "address": "1245 Dauer Dr, Coral Gables, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-womens-basketball-vs-jacksonville-coral-gables-florida-11-05-2026%2Fevent%2F0D0065376D3F2A02&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ac1/0b146ca2-088e-4219-b0b4-27e7dc09dac1_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Basketball · Starts 19:00 · Watsco Center at the University of Miami",
-          "es": "Deportes · Baloncesto · Comienza 19:00 · Watsco Center en la Universidad de Miami",
-          "pt": "Esportes · Basquete · Começa 19:00 · Watsco Center na Universidade de Miami",
-          "fr": "Sports · Basket-ball · Commence 19:00 · Watsco Center à l'Université de Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7150805,
-        "lng": -80.2791777
-      },
-      {
-        "id": "tm_1793296630720_6uey",
-        "title": {
-          "en": "RUSH: Fifty Something",
-          "es": "RUSH: Fifty Something",
-          "pt": "RUSH: Fifty Something",
-          "fr": "RUSH: Fifty Something"
-        },
-        "date": "2026-11-05",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frush-fifty-something-hollywood-florida-11-05-2026%2Fevent%2F0D006351A26C4DBC&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/6bd/c02199ad-8d22-4668-8973-f400d85826bd_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:30 · Hard Rock Live",
-          "es": "Música · Rock · Comienza 19:30 · Hard Rock Live",
-          "pt": "Música · Rock · Começa 19:30 · Hard Rock Live",
-          "fr": "Musique · Rock · Commence 19:30 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1793296630720_6s5s",
-        "title": {
-          "en": "Con Man - A True Crime Magic Show",
-          "es": "Con Man - Un Espectáculo de Magia de Crímenes Reales",
-          "pt": "Con Man - Um Show de Mágica de Crimes Reais",
-          "fr": "Con Man - Un Spectacle de Magie de Crime Véritable"
-        },
-        "date": "2026-11-05",
-        "venue": "Abdo New River Room at the Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcon-man-a-true-crime-magic-ft-lauderdale-florida-11-05-2026%2Fevent%2F0D00651BCEAD9D31&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Recommended for ages 12+. CON MAN is a one-man theatrical experience where magic, storytelling, true crime and stand-up comedy collide. Magician Ben Seidman (Netflix, Vanity Fair, Now You See Me) will pick your pockets, read your mind and make you question what is a trick and what is real. From card sharps and confidence men to swindlers and master manipulators, CON MAN brings the art of deception",
-          "es": "Recomendado para mayores de 12 años. CON MAN es una experiencia teatral de un solo hombre donde la magia, la narrativa, el crimen real y la comedia se unen. El mago Ben Seidman (Netflix, Vanity Fair, Now You See Me) te robará, leerá tu mente y te hará cuestionarte qué es un truco y qué es real. Desde timadores de cartas y hombres de confianza hasta estafadores y manipuladores maestros, CON MAN trae el arte del engaño",
-          "pt": "Recomendado para maiores de 12 anos. CON MAN é uma experiência teatral de um só homem onde magia, narrativa, crime real e comédia colidem. O mágico Ben Seidman (Netflix, Vanity Fair, Now You See Me) vai te roubar, ler sua mente e fazer você questionar o que é um truque e o que é real. De enganadores de cartas e homens de confiança a golpistas e manipuladores mestres, CON MAN traz a arte do engano",
-          "fr": "Recommandé pour les âges 12 ans et plus. CON MAN est une expérience théâtrale d'un seul homme où la magie, la narration, le crime véritable et la comédie entrent en collision. Le magicien Ben Seidman (Netflix, Vanity Fair, Now You See Me) va vous voler, lire dans vos pensées et vous faire questionner ce qui est un tour et ce qui est réel. Des tricheurs de cartes et des hommes de confiance aux arnaqueurs et manipulateurs maîtres, CON MAN apporte l'art de la tromperie"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1793296630720_cskj",
-        "title": {
-          "en": "Greensky Bluegrass",
-          "es": "Greensky Bluegrass",
-          "pt": "Greensky Bluegrass",
-          "fr": "Greensky Bluegrass"
-        },
-        "date": "2026-11-05",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgreensky-bluegrass-ft-lauderdale-florida-11-05-2026%2Fevent%2F0D0064CCF0C8AC3D&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/2fb/c34d8807-4bf6-4a72-8c83-e3c2379e82fb_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For two decades now, Greensky Bluegrass have been building an empire, brick by brick. They are widely known for their dazzling live performances and relentless touring schedule, but that is only the tip of the complex tale of the five musicians that make up Greensky Bluegrass: Anders Beck [dobro], Michael Arlen Bont [banjo], Dave Bruzza [guitar], Mike Devol [upright bass], and Paul Hoffman [Mandol",
-          "es": "Durante dos décadas, Greensky Bluegrass ha estado construyendo un imperio, ladrillo a ladrillo. Son ampliamente conocidos por sus deslumbrantes actuaciones en vivo y su implacable calendario de giras, pero eso es solo la punta del iceberg de la compleja historia de los cinco músicos que conforman Greensky Bluegrass: Anders Beck [dobro], Michael Arlen Bont [banjo], Dave Bruzza [guitarra], Mike Devol [bajo acústico] y Paul Hoffman [mandolina]",
-          "pt": "Durante duas décadas, Greensky Bluegrass vem construindo um império, tijolo por tijolo. Eles são amplamente conhecidos por suas performances ao vivo deslumbrantes e agenda implacável de turnês, mas isso é apenas a ponta do iceberg da história complexa dos cinco músicos que formam Greensky Bluegrass: Anders Beck [dobro], Michael Arlen Bont [banjo], Dave Bruzza [guitarra], Mike Devol [contrabaixo] e Paul Hoffman [mandolim]",
-          "fr": "Depuis deux décennies, Greensky Bluegrass construit un empire, brique par brique. Ils sont largement connus pour leurs performances en direct éblouissantes et leur calendrier de tournées implacable, mais ce n'est que la pointe de l'histoire complexe des cinq musiciens qui composent Greensky Bluegrass: Anders Beck [dobro], Michael Arlen Bont [banjo], Dave Bruzza [guitare], Mike Devol [contrebasse] et Paul Hoffman [mandoline]"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.134246,
-        "lng": -80.136172
       },
       {
         "id": "rss_1793381956774_bwmr",
@@ -3265,58 +3031,6 @@
         },
         "source": "Soul of Miami",
         "category": "community"
-      },
-      {
-        "id": "tm_1793381957600_6qod",
-        "title": {
-          "en": "Undertale: Determination Symphony",
-          "es": "Undertale: Sinfonía de Determinación",
-          "pt": "Undertale: Sinfonia da Determinação",
-          "fr": "Undertale: Symphonie de la Détermination"
-        },
-        "date": "2026-11-05",
-        "venue": "Au-Rene Theater at the Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fundertale-determination-symphony-ft-lauderdale-florida-11-05-2026%2Fevent%2F0D0064ACC296B760&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/89f/cfc4e11c-9cb4-4c46-b44c-0140a127189f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "UNDERTALE: The Determination Symphony is an unforgettable concert experience featuring the most memorable themes from the hit indie game, newly arranged and performed live by a 25-piece orchestra. With gameplay footage displayed on a screen above the stage, audiences will be fully immersed in the world of UNDERTALE, experiencing its story and music like never before. Concert-goers can look forward",
-          "es": "UNDERTALE: The Determination Symphony es una experiencia de concierto inolvidable que presenta los temas más memorables del videojuego indie exitoso, recientemente arreglados y ejecutados en vivo por una orquesta de 25 músicos. Con material de gameplay mostrado en una pantalla sobre el escenario, la audiencia estará completamente inmersa en el mundo de UNDERTALE, experimentando su historia y música como nunca antes. Los asistentes al concierto pueden esperar",
-          "pt": "UNDERTALE: The Determination Symphony é uma experiência de concerto inesquecível apresentando os temas mais memoráveis do jogo indie de sucesso, recém-orquestrados e executados ao vivo por uma orquestra de 25 músicos. Com gameplay exibido em uma tela acima do palco, o público estará completamente imerso no mundo de UNDERTALE, experimentando sua história e música como nunca antes. Os frequentadores do concerto podem esperar",
-          "fr": "UNDERTALE: The Determination Symphony est une expérience de concert inoubliable présentant les thèmes les plus mémorables du jeu vidéo indépendant à succès, nouvellement orchestrés et interprétés en direct par un orchestre de 25 musiciens. Avec des séquences de gameplay affichées sur un écran au-dessus de la scène, le public sera complètement immergé dans l'univers d'UNDERTALE, vivant son histoire et sa musique comme jamais auparavant. Les spectateurs peuvent s'attendre"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1793381957600_so4s",
-        "title": {
-          "en": "Florida Atlantic University Owls Football vs. UTSA Roadrunners Football",
-          "es": "Fútbol Americano: Florida Atlantic University Owls vs. UTSA Roadrunners",
-          "pt": "Futebol Americano: Florida Atlantic University Owls vs. UTSA Roadrunners",
-          "fr": "Football Américain: Florida Atlantic University Owls vs. UTSA Roadrunners"
-        },
-        "date": "2026-11-05",
-        "venue": "Flagler Credit Union Stadium",
-        "address": "777 Glades Rd, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fflorida-atlantic-university-owls-football-vs-boca-raton-florida-11-05-2026%2Fevent%2F0D0064C5CEB94509&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/2ca/8aa0e41b-afc1-4098-a44c-bf8a0662d2ca_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 20:00 · Flagler Credit Union Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza 20:00 · Flagler Credit Union Stadium",
-          "pt": "Esportes · Futebol Americano · Começa 20:00 · Flagler Credit Union Stadium",
-          "fr": "Sports · Football Américain · Commence 20:00 · Flagler Credit Union Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.3656459,
-        "lng": -80.104592
       },
       {
         "id": "tm_1793381957600_52z1",
@@ -3550,32 +3264,6 @@
         "source": "Soul of Miami",
         "lat": 26.320153,
         "lng": -80.1130972,
-        "category": "community"
-      },
-      {
-        "id": "rss_1793554399592_29nv",
-        "title": {
-          "en": "Giselle Wine Launch 11/5/26",
-          "es": "Lanzamiento de Vino Giselle 11/5/26",
-          "pt": "Lançamento de Vinho Giselle 11/5/26",
-          "fr": "Lancement du vin Giselle 11/5/26"
-        },
-        "date": "2026-11-05",
-        "venue": "Giselle Miami",
-        "address": "15 NE 11th St,, Miami, Florida, 33132",
-        "url": "https://www.soulofmiami.org/2026/10/31/giselle-wine-launch-11-5-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/giselle_calendar_700x700-350x350.png",
-        "description": {
-          "en": "Join Giselle Miami for an exclusive evening celebrating the debut of its signature Pinot Noir, created in collaboration with Gang Family",
-          "es": "Únete a Giselle Miami para una velada exclusiva celebrando el debut de su Pinot Noir exclusivo, creado en colaboración con Gang Family",
-          "pt": "Junte-se ao Giselle Miami para uma noite exclusiva celebrando o debut de seu Pinot Noir exclusivo, criado em colaboração com Gang Family",
-          "fr": "Rejoignez Giselle Miami pour une soirée exclusive célébrant le lancement de son Pinot Noir exclusif, créé en collaboration avec Gang Family"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7849471,
-        "lng": -80.1934172,
         "category": "community"
       },
       {
@@ -4197,32 +3885,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1793732285975_lop7",
-        "title": {
-          "en": "CONEP",
-          "es": "CONEP",
-          "pt": "CONEP",
-          "fr": "CONEP"
-        },
-        "date": "2026-11-05",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fconep-liv-nightclub-miami-tickets%2F14413834&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/df8/81eadad8-4449-412e-a2b1-3d8bbb78edf8_106181_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
-          "es": "Este evento es solo para mayores de 21 años. Los titulares de entradas que no puedan presentar una identificación válida que indique que tienen al menos 21 años no serán admitidos y no serán elegibles para reembolso. Comienza a las 23:00 en LIV Nightclub Miami",
-          "pt": "Este evento é apenas para maiores de 21 anos. Os portadores de ingressos que não conseguirem apresentar uma identificação válida indicando que têm pelo menos 21 anos não serão admitidos e não serão elegíveis para reembolso. Começa às 23:00 no LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Les détenteurs de billets incapables de présenter une pièce d'identité valide indiquant qu'ils ont au moins 21 ans ne seront pas admis et ne seront pas éligibles à un remboursement. Commence à 23h00 à LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
         "id": "tm_1793732285975_7imu",
         "title": {
           "en": "NASCAR O'Reilly Auto Parts Series Championship",
@@ -4655,6 +4317,470 @@
         },
         "source": "Deerfield Beach",
         "category": "community"
+      },
+      {
+        "id": "rss_1793990896431_os39",
+        "title": {
+          "en": "AfroBasel Day Party Miami Art Week 2026 12/5/26",
+          "es": "Fiesta de Día AfroBasel Miami Art Week 2026 12/5/26",
+          "pt": "Festa do Dia AfroBasel Miami Art Week 2026 12/5/26",
+          "fr": "Fête de Jour AfroBasel Miami Art Week 2026 12/5/26"
+        },
+        "date": "2026-12-05",
+        "venue": "Blackbird Ordinary",
+        "address": "729 SW 1st Avenue, Miami, Florida, 33130",
+        "url": "https://www.soulofmiami.org/2026/11/06/afrobasel-day-party-miami-art-week-2026-12-5-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "RSVP before 4 PM; paid tickets available AfroBasel brings Afrobeats, Amapiano, Afro House, Caribbean rhythms, art,",
+          "es": "RSVP antes de las 4 PM; entradas de pago disponibles AfroBasel trae Afrobeats, Amapiano, Afro House, ritmos caribeños, arte,",
+          "pt": "RSVP antes das 16h; ingressos pagos disponíveis AfroBasel traz Afrobeats, Amapiano, Afro House, ritmos caribenhos, arte,",
+          "fr": "RSVP avant 16h; billets payants disponibles AfroBasel apporte Afrobeats, Amapiano, Afro House, rythmes caribéens, art,"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.766955,
+        "lng": -80.1958447,
+        "category": "community"
+      },
+      {
+        "id": "rss_1793990896431_sr7j",
+        "title": {
+          "en": "Incendia: The Art of Fire 12/3/26 – 12/5/26",
+          "es": "Incendia: El Arte del Fuego 12/3/26 – 12/5/26",
+          "pt": "Incendia: A Arte do Fogo 12/3/26 – 12/5/26",
+          "fr": "Incendia: L'Art du Feu 12/3/26 – 12/5/26"
+        },
+        "date": "2026-12-03",
+        "venue": "Historic Virginia Key Beach Park",
+        "address": "4020 Virginia Beach Dr,, Miami, Florida, 33149",
+        "url": "https://www.soulofmiami.org/2026/11/06/incendia-the-art-of-fire-12-3-26-12-5-26/",
+        "free": false,
+        "price": "$45",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-05-at-00.52.01-350x438.jpeg",
+        "description": {
+          "en": "– $450 Incendia was born in the desert. For more than a decade our Burning",
+          "es": "– $450 Incendia nació en el desierto. Durante más de una década nuestro Burning",
+          "pt": "– $450 Incendia nasceu no deserto. Por mais de uma década nosso Burning",
+          "fr": "– $450 Incendia est né dans le désert. Pendant plus d'une décennie notre Burning"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7363873,
+        "lng": -80.1561823,
+        "category": "community"
+      },
+      {
+        "id": "rss_1793990896431_qvqi",
+        "title": {
+          "en": "Dance Therapy at ZeyZey Little Haiti 11/13/26",
+          "es": "Terapia de Danza en ZeyZey Little Haiti 11/13/26",
+          "pt": "Terapia de Dança em ZeyZey Little Haiti 11/13/26",
+          "fr": "Thérapie par la Danse à ZeyZey Little Haiti 11/13/26"
+        },
+        "date": "2026-11-13",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/11/06/dance-therapy-at-zeyzey-little-haiti-11-13-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/DanceTherapy_SoulOfMiami_1000px-350x438.jpg",
+        "description": {
+          "en": "Rsvp link Your medicine has arrived, Miami. Dance Therapy is a night of deep and melodic",
+          "es": "Enlace Rsvp Tu medicina ha llegado, Miami. Terapia de Danza es una noche de ritmos profundos y melódicos",
+          "pt": "Link Rsvp Sua medicina chegou, Miami. Terapia de Dança é uma noite de ritmos profundos e melódicos",
+          "fr": "Lien Rsvp Votre médecine est arrivée, Miami. Thérapie par la Danse est une nuit de rythmes profonds et mélodiques"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1793990896431_0rhr",
+        "title": {
+          "en": "Lil Pump at the Card Show Card House Society x Rolling Waves Buy 1 Get 1 Free Tickets 11/8/26",
+          "es": "Lil Pump en la Exposición de Tarjetas Card House Society x Rolling Waves Compra 1 Obtén 1 Gratis 11/8/26",
+          "pt": "Lil Pump no Card Show Card House Society x Rolling Waves Compre 1 Ganhe 1 Grátis 11/8/26",
+          "fr": "Lil Pump au Card Show Card House Society x Rolling Waves Achetez 1 Obtenez 1 Gratuit 11/8/26"
+        },
+        "date": "2026-11-08",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/11/06/lil-pump-at-the-card-show-card-house-society-x-rolling-waves-buy-1-get-1-free-tickets-11-8-26/",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Lil Pump at the Card Show Card House Society x Rolling Waves Buy 1 Get 1 Free Tickets Sunday, 11/08/2026-, 12:00 pm-06:00 pm Rolling Waves Brewing & Distillery 10400 NW 33rd St, Ste 150, Doral, Florida, 33172 Buy Tickets Cost:Read More Lil Pump at the Card Show Card House Society x Rolling Waves Buy 1 Get 1 Free Tickets 11/8/26",
+          "es": "Lil Pump en la Exposición de Tarjetas Card House Society x Rolling Waves Compra 1 Obtén 1 Gratis Domingo, 11/08/2026-, 12:00 pm-06:00 pm Rolling Waves Brewing & Distillery 10400 NW 33rd St, Ste 150, Doral, Florida, 33172 Comprar Entradas Costo:Leer Más",
+          "pt": "Lil Pump no Card Show Card House Society x Rolling Waves Compre 1 Ganhe 1 Grátis Domingo, 11/08/2026-, 12:00 pm-06:00 pm Rolling Waves Brewing & Distillery 10400 NW 33rd St, Ste 150, Doral, Florida, 33172 Comprar Ingressos Custo:Ler Mais",
+          "fr": "Lil Pump au Card Show Card House Society x Rolling Waves Achetez 1 Obtenez 1 Gratuit Dimanche, 11/08/2026-, 12:00 pm-06:00 pm Rolling Waves Brewing & Distillery 10400 NW 33rd St, Ste 150, Doral, Florida, 33172 Acheter Billets Coût:Lire Plus"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1793990896431_4zrn",
+        "title": {
+          "en": "Style Series at Atlantic Village: The Holiday Edit 11/14/26",
+          "es": "Serie de Estilo en Atlantic Village: La Edición Navideña 11/14/26",
+          "pt": "Série de Estilo em Atlantic Village: A Edição Holiday 11/14/26",
+          "fr": "Série de Style à Atlantic Village: L'Édition Vacances 11/14/26"
+        },
+        "date": "2026-11-14",
+        "venue": "Atlantic Village",
+        "address": "801 North Federal Highway, Hallandale Beach, Florida, 33009",
+        "url": "https://www.soulofmiami.org/2026/11/06/style-series-at-atlantic-village-the-holiday-edit-11-14-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Nov-Style-Series-350x175.png",
+        "description": {
+          "en": "Get a head start on holiday shopping at The Holiday Edit, the third and",
+          "es": "Adelántate en tus compras navideñas en The Holiday Edit, la tercera y",
+          "pt": "Comece suas compras de férias em The Holiday Edit, a terceira e",
+          "fr": "Commencez vos achats de vacances à The Holiday Edit, le troisième et"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9964102,
+        "lng": -80.142622,
+        "category": "community"
+      },
+      {
+        "id": "rss_1793990896431_p1jc",
+        "title": {
+          "en": "Thanksgiving Oceanside Celebration at Beach House Fort Lauderdale 11/26/26",
+          "es": "Celebración de Acción de Gracias junto al Océano en Beach House Fort Lauderdale 11/26/26",
+          "pt": "Celebração de Ação de Graças à Beira-Mar no Beach House Fort Lauderdale 11/26/26",
+          "fr": "Célébration de Thanksgiving en Bord de Mer au Beach House Fort Lauderdale 11/26/26"
+        },
+        "date": "2026-11-26",
+        "venue": "Beach House Fort Lauderdale",
+        "address": "505 North Fort Lauderdale Beach Boulevard, Fort Lauderdale, Florida, 33304",
+        "url": "https://www.soulofmiami.org/2026/11/06/thanksgiving-oceanside-celebration-at-beach-house-fort-lauderdale-11-26-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Thanksgiving-Eventbrite-Cover-FINAL-350x175.png",
+        "description": {
+          "en": "– $84.01 Celebrate Thanksgiving with a memorable oceanfront gathering at",
+          "es": "– $84.01 Celebra Acción de Gracias con una memorable reunión junto al océano en",
+          "pt": "– $84.01 Celebre Ação de Graças com um memorável encontro à beira-mar em",
+          "fr": "– $84.01 Célébrez Thanksgiving avec un rassemblement mémorable en bord de mer à"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.1294093,
+        "lng": -80.1041258,
+        "category": "community"
+      },
+      {
+        "id": "tm_1793990897050_e4bl",
+        "title": {
+          "en": "STA Players: Alice in Wonderland",
+          "es": "STA Players: Alicia en el País de las Maravillas",
+          "pt": "STA Players: Alice no País das Maravilhas",
+          "fr": "STA Players: Alice au Pays des Merveilles"
+        },
+        "date": "2026-11-06",
+        "venue": "Bienes Center at St. Thomas Aquinas",
+        "address": "2801 SW 12th St., Ft. Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fsta-players-alice-in-wonderland-bienes-center-at-st-thomas-tickets%2F14383894&utm_medium=affiliate",
+        "free": false,
+        "price": "$7",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "NOTE: This performance will begin at 2:30 p.m. Venue: Bienes Center for the Arts at St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312 for directions and info visit www.bca-sta.org Will Call and Lobby Doors will open at 1:45 p.m. Theater seating will begin at 2:00 p.m. Performance will begin at 2:30 p.m. Refreshments and light snacks available at lobby vending area. TICKET FEES: **Servi",
+          "es": "NOTA: Esta función comenzará a las 2:30 p.m. Lugar: Bienes Center for the Arts en St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312. Para indicaciones e información visite www.bca-sta.org. Las puertas de Will Call y el Lobby se abrirán a las 1:45 p.m. El asiento en el teatro comenzará a las 2:00 p.m. La función comenzará a las 2:30 p.m. Refrescos y aperitivos ligeros disponibles en el área de máquinas expendedoras del lobby. TARIFAS DE ENTRADA: **Servi",
+          "pt": "NOTA: Esta apresentação começará às 2:30 p.m. Local: Bienes Center for the Arts em St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312. Para direções e informações visite www.bca-sta.org. As portas do Will Call e do Lobby abrem às 1:45 p.m. O assento no teatro começará às 2:00 p.m. A apresentação começará às 2:30 p.m. Refrescos e lanches leves disponíveis na área de máquinas de venda do lobby. TAXAS DE ENTRADA: **Servi",
+          "fr": "NOTE: Cette performance commencera à 14h30. Lieu: Bienes Center for the Arts à St. Thomas Aquinas 2801 SW 12 Street, Ft Lauderdale, FL 33312. Pour les directions et les informations, visitez www.bca-sta.org. Les portes de Will Call et du Lobby ouvriront à 13h45. L'assise au théâtre commencera à 14h00. La performance commencera à 14h30. Rafraîchissements et collations légères disponibles à la zone distributrice du lobby. TARIFS D'ENTRÉE: **Servi"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.108381,
+        "lng": -80.181182,
+        "category": "music"
+      },
+      {
+        "id": "tm_1793990897050_n1dd",
+        "title": {
+          "en": "Con Man - A True Crime Magic Show",
+          "es": "Con Man - Un Espectáculo de Magia de Crímenes Reales",
+          "pt": "Con Man - Um Espetáculo de Magia de Crime Real",
+          "fr": "Con Man - Un Spectacle de Magie True Crime"
+        },
+        "date": "2026-11-06",
+        "venue": "Abdo New River Room at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcon-man-a-true-crime-magic-ft-lauderdale-florida-11-06-2026%2Fevent%2F0D00651BCEB19D3E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Recommended for ages 12+. CON MAN is a one-man theatrical experience where magic, storytelling, true crime and stand-up comedy collide. Magician Ben Seidman (Netflix, Vanity Fair, Now You See Me) will pick your pockets, read your mind and make you question what is a trick and what is real. From card sharps and confidence men to swindlers and master manipulators, CON MAN brings the art of deception",
+          "es": "Recomendado para mayores de 12 años. CON MAN es una experiencia teatral de un hombre donde la magia, la narración de historias, el crimen real y la comedia en vivo colisionan. El mago Ben Seidman (Netflix, Vanity Fair, Now You See Me) te robará del bolsillo, leerá tu mente y te hará cuestionarte qué es un truco y qué es real. Desde estafadores de naipes y hombres de confianza hasta defraudadores y manipuladores maestros, CON MAN trae el arte del engaño",
+          "pt": "Recomendado para maiores de 12 anos. CON MAN é uma experiência teatral de um único ator onde magia, narrativa, crime real e comédia ao vivo colidem. O mágico Ben Seidman (Netflix, Vanity Fair, Now You See Me) vai roubar seus bolsos, ler sua mente e fazer você questionar o que é um truque e o que é real. De fraudadores de cartas e homens de confiança a estelionatários e manipuladores mestres, CON MAN traz a arte da decepção",
+          "fr": "Recommandé pour les plus de 12 ans. CON MAN est une expérience théâtrale solo où la magie, la narration, le vrai crime et la comédie en direct se heurtent. Le magicien Ben Seidman (Netflix, Vanity Fair, Now You See Me) vous videras vos poches, lira dans vos pensées et vous fera vous demander ce qui est un tour et ce qui est réel. Des tricheurs de cartes et des arnaqueurs aux escrocs et manipulateurs de maîtres, CON MAN apporte l'art de la tromperie"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1793990897050_svxh",
+        "title": {
+          "en": "RUSH: Fifty Something",
+          "es": "RUSH: Cincuenta y Algo",
+          "pt": "RUSH: Cinquenta e Poucos",
+          "fr": "RUSH: Cinquante Quelque Chose"
+        },
+        "date": "2026-11-07",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frush-fifty-something-hollywood-florida-11-07-2026%2Fevent%2F0D006351ABCB5137&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/6bd/c02199ad-8d22-4668-8973-f400d85826bd_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 19:30 · Hard Rock Live",
+          "es": "Música · Rock · Comienza 19:30 · Hard Rock Live",
+          "pt": "Música · Rock · Começa 19:30 · Hard Rock Live",
+          "fr": "Musique · Rock · Commence 19h30 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1793990897050_jtl3",
+        "title": {
+          "en": "Beanstalk: The Adventures of Jack and the Giant",
+          "es": "Beanstalk: Las Aventuras de Jack y el Gigante",
+          "pt": "Beanstalk: As Aventuras de Jack e o Gigante",
+          "fr": "Beanstalk: Les Aventures de Jack et le Géant"
+        },
+        "date": "2026-11-08",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbeanstalk-the-adventures-of-jack-and-ft-lauderdale-florida-11-08-2026%2Fevent%2F0D0064CFCD749CFC&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/2b5/5a0a3487-492b-4072-9d8d-1fcda02bd2b5_781101_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "PLEASE NOTE: THIS IS A SENSORY-INCLUSIVE PERFORMANCE WHICH HAS BEEN MODIFIED. A castle in the clouds, a terrifying giant menacing the land, and a young person facing the greatest adventure of their life with nothing but three magic beans and all the courage they can dig up. The stage is set for a classic adventure! Experience the beloved tale of Jack and the Beanstalk in this thrillingly theatrica",
+          "es": "POR FAVOR TENGA EN CUENTA: ESTA ES UNA FUNCIÓN CON INCLUSIÓN SENSORIAL QUE HA SIDO MODIFICADA. Un castillo en las nubes, un gigante aterrador que amenaza la tierra, y una persona joven enfrentando la mayor aventura de su vida con nada más que tres frijoles mágicos y todo el coraje que puedan reunir. ¡El escenario está listo para una aventura clásica! Experimenta la querida historia de Jack y las Habichuelas Mágicas en este espectáculo teatral emocionante",
+          "pt": "POR FAVOR, NOTE: ESTA É UMA APRESENTAÇÃO INCLUSIVA SENSORIAL QUE FOI MODIFICADA. Um castelo nas nuvens, um gigante aterrador ameaçando a terra, e uma jovem pessoa enfrentando a maior aventura de suas vidas com nada além de três feijões mágicos e toda a coragem que conseguem reunir. O palco está pronto para uma aventura clássica! Experimente a amada história de Jack e o Pé de Feijão neste emocionante espetáculo teatral",
+          "fr": "VEUILLEZ NOTER: CECI EST UNE PERFORMANCE INCLUSIVE SENSORIELLE QUI A ÉTÉ MODIFIÉE. Un château dans les nuages, un géant terrifiant menaçant le pays, et une jeune personne affrontant la plus grande aventure de sa vie avec rien d'autre que trois haricots magiques et tout le courage qu'elle peut rassembler. La scène est prête pour une aventure classique! Vivez l'histoire bien-aimée de Jack et le Haricot Magique dans ce spectacle théâtral palpitant"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1793990897050_ekls",
+        "title": {
+          "en": "Luxury & Suites: Miami Dolphins v Detroit Lions",
+          "es": "Lujo & Suites: Miami Dolphins v Detroit Lions",
+          "pt": "Luxo & Suites: Miami Dolphins v Detroit Lions",
+          "fr": "Luxe & Suites : Miami Dolphins c. Detroit Lions"
+        },
+        "date": "2026-11-08",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fluxury-suites-miami-dolphins-v-detroit-miami-florida-11-08-2026%2Fevent%2F0D00646CE65C156D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season · Starts 13:00 · Hard Rock Stadium",
+          "es": "Horario Flexible: Tenga en cuenta que ciertos juegos están sujetos a programación flexible y la fecha y hora de esos juegos pueden cambiar desde lo que se refleja actualmente en el cronograma y lo que puede aparecer en el boleto. Para más información sobre los procedimientos de programación flexible de la NFL para la temporada 2026 de la NFL · Comienza 13:00 · Hard Rock Stadium",
+          "pt": "Programação Flexível: Esteja ciente de que certos jogos estão sujeitos a programação flexível e a data e hora desses jogos podem ser alteradas em relação ao que está refletido atualmente no cronograma e ao que pode aparecer no ingresso. Para mais informações sobre os procedimentos de programação flexível da NFL para a temporada 2026 da NFL · Começa 13:00 · Hard Rock Stadium",
+          "fr": "Horaire Flexible : Veuillez noter que certains matchs sont sujets à une programmation flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement indiqué au calendrier et ce qui peut apparaître sur le billet. Pour plus d'informations sur les procédures de programmation flexible de la NFL pour la saison 2026 de la NFL · Commence 13:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1793990897050_bx0s",
+        "title": {
+          "en": "Miami Dolphins v Detroit Lions",
+          "es": "Miami Dolphins v Detroit Lions",
+          "pt": "Miami Dolphins v Detroit Lions",
+          "fr": "Miami Dolphins c. Detroit Lions"
+        },
+        "date": "2026-11-08",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-dolphins-v-detroit-lions-miami-florida-11-08-2026%2Fevent%2F0D00646CE5711328&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d39/4b18e97c-4544-448e-8163-8c158d23bd39_1325311_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Flex Schedule: Please be aware that there are certain games that are subject to flexible scheduling and the date and time of those games may be changed from what is currently reflected on the schedule and what may appear on the ticket. For more detailed information about NFL flexible scheduling procedures for the 2026 NFL Season please visit: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
+          "es": "Horario Flexible: Tenga en cuenta que ciertos juegos están sujetos a programación flexible y la fecha y hora de esos juegos pueden cambiar desde lo que se refleja actualmente en el cronograma y lo que puede aparecer en el boleto. Para más información sobre los procedimientos de programación flexible de la NFL para la temporada 2026 de la NFL visite: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
+          "pt": "Programação Flexível: Esteja ciente de que certos jogos estão sujeitos a programação flexível e a data e hora desses jogos podem ser alteradas em relação ao que está refletido atualmente no cronograma e ao que pode aparecer no ingresso. Para mais informações sobre os procedimentos de programação flexível da NFL para a temporada 2026 da NFL, visite: https://www.nfl.com/ways-to-watch/flexible-scheduling-p",
+          "fr": "Horaire Flexible : Veuillez noter que certains matchs sont sujets à une programmation flexible et la date et l'heure de ces matchs peuvent être modifiées par rapport à ce qui est actuellement indiqué au calendrier et ce qui peut apparaître sur le billet. Pour plus d'informations sur les procédures de programmation flexible de la NFL pour la saison 2026 de la NFL, veuillez visiter : https://www.nfl.com/ways-to-watch/flexible-scheduling-p"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1793990897050_p88u",
+        "title": {
+          "en": "Miami Hurricanes Women's Basketball vs. Stetson Hatters",
+          "es": "Baloncesto Femenino Miami Hurricanes vs. Stetson Hatters",
+          "pt": "Basquete Feminino Miami Hurricanes vs. Stetson Hatters",
+          "fr": "Basketball Féminin Miami Hurricanes c. Stetson Hatters"
+        },
+        "date": "2026-11-08",
+        "venue": "Watsco Center at the University of Miami",
+        "address": "1245 Dauer Dr, Coral Gables, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-womens-basketball-vs-stetson-coral-gables-florida-11-08-2026%2Fevent%2F0D0065376D402A05&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ac1/0b146ca2-088e-4219-b0b4-27e7dc09dac1_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Basketball · Starts 14:00 · Watsco Center at the University of Miami",
+          "es": "Deportes · Baloncesto · Comienza 14:00 · Watsco Center de la Universidad de Miami",
+          "pt": "Esportes · Basquete · Começa 14:00 · Watsco Center da Universidade de Miami",
+          "fr": "Sports · Basketball · Commence 14:00 · Watsco Center à l'Université de Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7150805,
+        "lng": -80.2791777
+      },
+      {
+        "id": "tm_1793990897050_fb09",
+        "title": {
+          "en": "NASCAR Cup Series Championship",
+          "es": "Campeonato de la Serie NASCAR Cup",
+          "pt": "Campeonato da Série NASCAR Cup",
+          "fr": "Championnat de la Série NASCAR Cup"
+        },
+        "date": "2026-11-08",
+        "venue": "Homestead Miami Speedway",
+        "address": "1 Speedway Blvd, Homestead, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnascar-cup-series-championship-homestead-florida-11-08-2026%2Fevent%2F0D006316B1AE344C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f89/c7c11c17-4c47-4d1f-82df-a79b9b1a6f89_1262061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "PARKING REQUIRED: Free parking will not be available for NASCAR Championship Weekend. Add a parking pass to your order during check out to secure parking for the event. · Starts 15:00 · Homestead Miami Speedway",
+          "es": "ESTACIONAMIENTO REQUERIDO: El estacionamiento gratuito no estará disponible para el Fin de Semana del Campeonato NASCAR. Agregue un pase de estacionamiento a su pedido durante el pago para asegurar estacionamiento para el evento. · Comienza 15:00 · Homestead Miami Speedway",
+          "pt": "ESTACIONAMENTO OBRIGATÓRIO: O estacionamento gratuito não estará disponível para o Fim de Semana do Campeonato NASCAR. Adicione um passe de estacionamento ao seu pedido durante o checkout para garantir estacionamento para o evento. · Começa 15:00 · Homestead Miami Speedway",
+          "fr": "STATIONNEMENT REQUIS : Le stationnement gratuit ne sera pas disponible pour le Fin de Semaine du Championnat NASCAR. Ajoutez un laissez-passer de stationnement à votre commande lors du paiement pour sécuriser le stationnement pour l'événement. · Commence 15:00 · Homestead Miami Speedway"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.4554984,
+        "lng": -80.4117875
+      },
+      {
+        "id": "tm_1793990897050_aplf",
+        "title": {
+          "en": "Jean Caze",
+          "es": "Jean Caze",
+          "pt": "Jean Caze",
+          "fr": "Jean Caze"
+        },
+        "date": "2026-11-08",
+        "venue": "Thomson Plaza for the Arts",
+        "address": "1300 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAeZ0e&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 18:30 · Thomson Plaza for the Arts",
+          "es": "Comienza 18:30 · Thomson Plaza for the Arts",
+          "pt": "Começa 18:30 · Thomson Plaza for the Arts",
+          "fr": "Commence 18:30 · Thomson Plaza for the Arts"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.784901,
+        "lng": -80.189598,
+        "category": "music"
+      },
+      {
+        "id": "tm_1793990897050_e3n8",
+        "title": {
+          "en": "Alex Edelman: What Are You Going To Do",
+          "es": "Alex Edelman: What Are You Going To Do",
+          "pt": "Alex Edelman: What Are You Going To Do",
+          "fr": "Alex Edelman: What Are You Going To Do"
+        },
+        "date": "2026-11-08",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Falex-edelman-what-are-you-going-ft-lauderdale-florida-11-08-2026%2Fevent%2F0D0064BC9F2BDFDD&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/939/7e5a39ed-9896-46a3-a0a4-779c2f8ec939_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "ALEX EDELMAN - One of the most critically hailed comedians of his generation, Alex Edelman is best known for solo shows that blur the line between his stand-up comedy roots and narrative-driven storytelling. His last offering, JUST FOR US, played more than 500 performances all over the world - including acclaimed runs off- and on-Broadway. It premiered as an HBO original comedy special in April of",
+          "es": "ALEX EDELMAN - Uno de los comediantes más aclamados de su generación, Alex Edelman es mejor conocido por sus espectáculos en solitario que difuminan la línea entre sus raíces de comedia stand-up y la narración impulsada por historias. Su última oferta, JUST FOR US, tuvo más de 500 presentaciones en todo el mundo, incluyendo aclamadas temporadas fuera y en Broadway. Se estrenó como un especial de comedia original de HBO en abril de",
+          "pt": "ALEX EDELMAN - Um dos comediantes mais aclamados de sua geração, Alex Edelman é mais conhecido por seus shows solo que apagam a linha entre suas raízes de comédia stand-up e narrativa impulsionada por histórias. Sua última oferecimento, JUST FOR US, teve mais de 500 apresentações em todo o mundo - incluindo temporadas aclamadas fora e na Broadway. Estreou como um especial de comédia original do HBO em abril de",
+          "fr": "ALEX EDELMAN - L'un des comédiens les plus acclamés de sa génération, Alex Edelman est surtout connu pour ses spectacles en solo qui brouillent la ligne entre ses racines de comédie stand-up et la narration narrative. Sa dernière offre, JUST FOR US, a eu plus de 500 représentations partout dans le monde - y compris des séries acclamées hors-Broadway et à Broadway. Il a été créé en tant que spécial de comédie original HBO en avril de"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1793990897050_2wfy",
+        "title": {
+          "en": "Dany Ome / Kevincito El 13 - Tendencia US Tour 2026",
+          "es": "Dany Ome / Kevincito El 13 - Tendencia US Tour 2026",
+          "pt": "Dany Ome / Kevincito El 13 - Tendencia US Tour 2026",
+          "fr": "Dany Ome / Kevincito El 13 - Tendencia US Tour 2026"
+        },
+        "date": "2026-11-08",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdany-ome-kevincito-el-13-tendencia-hollywood-florida-11-08-2026%2Fevent%2F0D006506A7D25623&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/7a2/a289dd37-d067-46a3-802b-69427ee4a7a2_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Latin · Starts 20:00 · Hard Rock Live",
+          "es": "Música · Latino · Comienza 20:00 · Hard Rock Live",
+          "pt": "Música · Latino · Começa 20:00 · Hard Rock Live",
+          "fr": "Musique · Latin · Commence 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1793990897050_j576",
+        "title": {
+          "en": "Shenseea",
+          "es": "Shenseea",
+          "pt": "Shenseea",
+          "fr": "Shenseea"
+        },
+        "date": "2026-11-08",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fshenseea-liv-nightclub-miami-tickets%2F14413844&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2f7/75a964d4-6444-4c58-9c2d-9179195bb2f7_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:00 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:00 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não possa apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:00 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet qui ne peut pas présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:00 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
       }
     ]
   },
@@ -5558,31 +5684,31 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-05T19:25:57.802Z",
+    "fetchedAt": "2026-11-06T18:49:30.237Z",
     "items": [
       {
-        "id": "beach_crandon-park-south",
+        "id": "beach_cape-florida-park",
         "type": "water_quality",
         "severity": "advisory",
         "title": {
-          "en": "CRANDON PARK - SOUTH — Water Quality Advisory",
-          "es": "CRANDON PARK - SOUTH — Aviso de Calidad del Agua",
-          "pt": "CRANDON PARK - SOUTH — Aviso de Qualidade da Água",
-          "fr": "CRANDON PARK - SOUTH — Avis de Qualité de l'Eau"
+          "en": "CAPE FLORIDA PARK — Water Quality Advisory",
+          "es": "CAPE FLORIDA PARK — Aviso de Calidad del Agua",
+          "pt": "CAPE FLORIDA PARK — Aviso de Qualidade da Água",
+          "fr": "CAPE FLORIDA PARK — Avis de Qualité de l'Eau"
         },
         "detail": {
-          "en": "Elevated Enterococcus bacteria detected (112 CFU/100mL, sampled 2026-10-28). Health officials advise against swimming here until levels return to normal.",
-          "es": "Se detectaron niveles elevados de bacterias Enterococcus (112 UFC/100mL, muestreado el 2026-10-28). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
-          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (112 UFC/100mL, amostrado em 2026-10-28). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
-          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (112 UFC/100mL, échantillonné le 2026-10-28). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
+          "en": "Elevated Enterococcus bacteria detected (2 CFU/100mL, sampled 2026-11-03). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (2 UFC/100mL, muestreado el 2026-11-03). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (2 UFC/100mL, amostrado em 2026-11-03). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (2 UFC/100mL, échantillonné le 2026-11-03). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
         },
         "source": "Florida Dept. of Health — Healthy Beaches",
-        "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/crandon-park-south",
-        "effectiveAt": "2026-10-28",
-        "expiresAt": "2026-11-06T19:25:57.802Z"
+        "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/cape-florida-park",
+        "effectiveAt": "2026-11-03",
+        "expiresAt": "2026-11-07T18:49:30.237Z"
       },
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.cb5e80d09078d6b827da68495470e86de06af6e8.001.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.05518c75107ff7a26efa5a514f07a7c127ae3861.001.1",
         "type": "weather",
         "severity": "minor",
         "title": {
@@ -5592,15 +5718,15 @@
           "fr": "Coastal Flood Statement"
         },
         "detail": {
-          "en": "* WHAT...Isolated minor coastal flooding is possible around\nperiods of high tide.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County, and\nCoastal Miami Dade County.\n\n* WHEN...Through Friday evening.\n\n* IMPACTS...Some water on low lying roads and property.",
-          "es": "* QUÉ...Es posible que se produzcan inundaciones costeras menores aisladas alrededor de los períodos de marea alta.\n\n* DÓNDE...Costas del condado de Palm Beach, costas del condado de Broward y costas del condado de Miami Dade.\n\n* CUÁNDO...Hasta el viernes por la tarde.\n\n* IMPACTOS...Agua en caminos y propiedades bajas.",
-          "pt": "* O QUÊ...É possível ocorrerem inundações costeiras menores isoladas durante períodos de maré alta.\n\n* ONDE...Litoral do Condado de Palm Beach, litoral do Condado de Broward e litoral do Condado de Miami Dade.\n\n* QUANDO...Até sexta-feira à noite.\n\n* IMPACTOS...Água em estradas e propriedades baixas.",
-          "fr": "* QUOI...Des inondations côtières mineures isolées sont possibles autour des périodes de marée haute.\n\n* OÙ...Littoral du comté de Palm Beach, littoral du comté de Broward et littoral du comté de Miami Dade.\n\n* QUAND...Jusqu'à vendredi soir.\n\n* IMPACTS...Eau sur les routes et propriétés basses."
+          "en": "* WHAT...Isolated minor coastal flooding is possible around\nperiods of high tide.\n\n* WHERE...Coastal Palm Beach County, Coastal Broward County, and\nCoastal Miami Dade County.\n\n* WHEN...Through Sunday evening.\n\n* IMPACTS...Some water on low lying roads and property.",
+          "es": "* QUÉ...Es posible que se produzcan inundaciones costeras menores aisladas alrededor de los períodos de pleamar.\n\n* DÓNDE...Condado costero de Palm Beach, Condado costero de Broward y Condado costero de Miami-Dade.\n\n* CUÁNDO...Hasta el domingo por la noche.\n\n* IMPACTOS...Presencia de agua en caminos y propiedades bajas.",
+          "pt": "* O QUÊ...Possível ocorrência de inundações costeiras menores isoladas durante períodos de maré alta.\n\n* ONDE...Condado costeiro de Palm Beach, Condado costeiro de Broward e Condado costeiro de Miami-Dade.\n\n* QUANDO...Até domingo à noite.\n\n* IMPACTOS...Água em estradas e propriedades baixas.",
+          "fr": "* QUOI...Des inondations côtières mineures isolées sont possibles autour des périodes de marée haute.\n\n* OÙ...Comté côtier de Palm Beach, Comté côtier de Broward et Comté côtier de Miami-Dade.\n\n* QUAND...Jusqu'à dimanche en soirée.\n\n* IMPACTS...Accumulation d'eau sur les routes basses et les propriétés."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cb5e80d09078d6b827da68495470e86de06af6e8.001.1",
-        "effectiveAt": "2026-11-05T10:12:00-05:00",
-        "expiresAt": "2026-11-06T08:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.05518c75107ff7a26efa5a514f07a7c127ae3861.001.1",
+        "effectiveAt": "2026-11-06T10:16:00-05:00",
+        "expiresAt": "2026-11-07T08:00:00.000Z"
       }
     ]
   }
