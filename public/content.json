@@ -1,14 +1,14 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-09T21:53:38.421Z",
+    "lastUpdated": "2026-11-10T19:15:31.903Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-09T21:53:37.916Z",
+    "fetchedAt": "2026-11-10T19:15:31.100Z",
     "current": {
-      "temp_f": 79,
-      "feels_f": 84,
+      "temp_f": 82,
+      "feels_f": 88,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
@@ -16,30 +16,17 @@
         "fr": "Conditions actuelles"
       },
       "humidity": 71,
-      "wind_mph": 5,
-      "rain_chance": 13,
-      "weathercode": 1
+      "wind_mph": 7,
+      "rain_chance": 15,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-11-09",
-        "high_f": 83,
-        "low_f": 72,
-        "weathercode": 3,
-        "rain_chance": 13,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-11-10",
-        "high_f": 82,
-        "low_f": 72,
+        "high_f": 83,
+        "low_f": 73,
         "weathercode": 3,
-        "rain_chance": 25,
+        "rain_chance": 15,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -50,22 +37,35 @@
       {
         "date": "2026-11-11",
         "high_f": 82,
-        "low_f": 70,
-        "weathercode": 3,
-        "rain_chance": 17,
+        "low_f": 71,
+        "weathercode": 82,
+        "rain_chance": 28,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-11-12",
-        "high_f": 86,
-        "low_f": 77,
+        "high_f": 84,
+        "low_f": 73,
+        "weathercode": 51,
+        "rain_chance": 38,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-11-13",
+        "high_f": 80,
+        "low_f": 73,
         "weathercode": 3,
-        "rain_chance": 36,
+        "rain_chance": 5,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -74,163 +74,163 @@
         }
       },
       {
-        "date": "2026-11-13",
-        "high_f": 78,
+        "date": "2026-11-14",
+        "high_f": 76,
         "low_f": 68,
-        "weathercode": 53,
-        "rain_chance": 16,
+        "weathercode": 3,
+        "rain_chance": 1,
         "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
         }
       }
     ],
     "hourly": [
       {
+        "hour": "14:00",
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
+        "hour": "15:00",
+        "temp_f": 82,
+        "weathercode": 0,
+        "rain_chance": 3
+      },
+      {
         "hour": "16:00",
         "temp_f": 81,
         "weathercode": 0,
-        "rain_chance": 7
+        "rain_chance": 3
       },
       {
         "hour": "17:00",
-        "temp_f": 78,
-        "weathercode": 1,
-        "rain_chance": 8
+        "temp_f": 79,
+        "weathercode": 3,
+        "rain_chance": 2
       },
       {
         "hour": "18:00",
-        "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 10
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 2
       },
       {
         "hour": "19:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 11
+        "temp_f": 76,
+        "weathercode": 1,
+        "rain_chance": 1
       },
       {
         "hour": "20:00",
-        "temp_f": 74,
+        "temp_f": 75,
         "weathercode": 2,
-        "rain_chance": 11
+        "rain_chance": 4
       },
       {
         "hour": "21:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 13
+        "temp_f": 75,
+        "weathercode": 0,
+        "rain_chance": 11
       },
       {
         "hour": "22:00",
         "temp_f": 75,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 13
       },
       {
         "hour": "23:00",
         "temp_f": 75,
-        "weathercode": 1,
-        "rain_chance": 9
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "00:00",
         "temp_f": 74,
-        "weathercode": 2,
-        "rain_chance": 11
+        "weathercode": 3,
+        "rain_chance": 15
       },
       {
         "hour": "01:00",
-        "temp_f": 74,
-        "weathercode": 2,
-        "rain_chance": 10
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 73,
-        "weathercode": 3,
-        "rain_chance": 10
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 73,
-        "weathercode": 3,
-        "rain_chance": 11
-      },
-      {
-        "hour": "04:00",
         "temp_f": 72,
         "weathercode": 3,
         "rain_chance": 11
       },
       {
-        "hour": "05:00",
-        "temp_f": 73,
+        "hour": "02:00",
+        "temp_f": 72,
         "weathercode": 3,
-        "rain_chance": 5
+        "rain_chance": 14
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 72,
+        "weathercode": 3,
+        "rain_chance": 12
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 72,
+        "weathercode": 3,
+        "rain_chance": 4
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "06:00",
-        "temp_f": 73,
+        "temp_f": 71,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 3
       },
       {
         "hour": "07:00",
-        "temp_f": 74,
-        "weathercode": 2,
-        "rain_chance": 1
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 4
       },
       {
         "hour": "08:00",
-        "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 1
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 3
       },
       {
         "hour": "09:00",
-        "temp_f": 76,
+        "temp_f": 77,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 2
       },
       {
         "hour": "10:00",
         "temp_f": 79,
         "weathercode": 3,
-        "rain_chance": 25
+        "rain_chance": 3
       },
       {
         "hour": "11:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 81,
+        "weathercode": 2,
+        "rain_chance": 4
       },
       {
         "hour": "12:00",
-        "temp_f": 82,
+        "temp_f": 80,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 7
       },
       {
         "hour": "13:00",
         "temp_f": 82,
         "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
-        "hour": "14:00",
-        "temp_f": 82,
-        "weathercode": 3,
-        "rain_chance": 4
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 81,
-        "weathercode": 3,
-        "rain_chance": 8
+        "rain_chance": 6
       }
     ]
   },
@@ -3238,110 +3238,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1794071992452_5j67",
-        "title": {
-          "en": "The Haller Club prior to John Cameron Mitchell",
-          "es": "The Haller Club antes de John Cameron Mitchell",
-          "pt": "The Haller Club antes de John Cameron Mitchell",
-          "fr": "The Haller Club avant John Cameron Mitchell"
-        },
-        "date": "2026-11-09",
-        "venue": "The Haller Club at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-john-fort-lauderdale-florida-11-09-2026%2Fevent%2F0D0064E2DBABA797&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
-          "es": "Añade a tu experiencia en The Parker con The Haller Club. Este nuevo salón premium, con su elegante diseño retro, cuenta con un amplio bar y abundante espacio para sentarse. Por un precio todo incluido, tu entrada a The Haller Club ofrece acceso exclusivo comenzando una hora antes de la función y durante el intermedio (cuando sea programado), bebidas suaves, cerveza y vino premium, café y té (bebidas mezcladas",
-          "pt": "Adicione à sua experiência no The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um bar espaçoso e amplos assentos. Por um preço inclusivo, sua admissão ao The Haller Club oferece uso exclusivo começando uma hora antes do horário do espetáculo e durante o intervalo (quando programado), refrigerantes cortesia, cerveja e vinho premium, café e chá (bebidas mistas",
-          "fr": "Ajoutez à votre expérience au Parker avec The Haller Club. Ce nouveau lounge premium, au design rétro élégant, dispose d'un bar spacieux et de nombreux sièges. Pour un prix tout compris, votre admission au Haller Club offre un accès exclusif à partir d'une heure avant le spectacle et pendant l'entracte (si prévu), boissons non alcoolisées gratuites, bière et vin premium, café et thé (cocktails"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
-        "id": "tm_1794071992452_115a",
-        "title": {
-          "en": "The Place To Be prior to John Cameron Mitchell",
-          "es": "The Place To Be antes de John Cameron Mitchell",
-          "pt": "The Place To Be antes de John Cameron Mitchell",
-          "fr": "The Place To Be avant John Cameron Mitchell"
-        },
-        "date": "2026-11-09",
-        "venue": "The Place To Be at The Parker",
-        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-11-09-2026%2Fevent%2F0D0064E2DC8DA966&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
-          "es": "¡Este es The Place To Be! El salón exclusivo para donantes en The Parker está ofreciendo un número limitado de entradas para la venta al público según disponibilidad. $75.00 POR PERSONA. Este club privado ofrece una experiencia ultra premium - servicio complimentario de alimentos y bebidas en un refugio privado en el piso inferior de The Parker. Disfruta de un bar abierto con licores de primera calidad, una selección de aperitivos fríos y calientes",
-          "pt": "Este é The Place To Be! O lounge exclusivo para doadores no The Parker está oferecendo um número limitado de ingressos à venda ao público conforme disponibilidade. $75.00 POR PESSOA. Este clube privado oferece uma experiência ultra premium - serviço complimentar de comida e bebida em um refúgio privado no piso inferior do The Parker. Desfrute de um bar aberto com destilados de primeira qualidade, uma seleção de aperitivos frios e quentes",
-          "fr": "C'est The Place To Be! Le lounge exclusif des donateurs au Parker propose un nombre limité de billets à la vente au public selon la disponibilité. 75,00 $ PAR PERSONNE. Ce club privé offre une expérience ultra premium - service gratuit de nourriture et de boissons dans un refuge privé au sous-sol du Parker. Profitez d'un bar ouvert servant des alcools haut de gamme, une sélection d'amuse-bouches froids et chauds"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.13364,
-        "lng": -80.135769,
-        "category": "music"
-      },
-      {
-        "id": "tm_1794071992452_99jz",
-        "title": {
-          "en": "John Cameron Mitchell: Hedwig 25th Anniversary Movie Tour",
-          "es": "John Cameron Mitchell: Gira de Película Hedwig 25 Aniversario",
-          "pt": "John Cameron Mitchell: Turnê do Filme Hedwig 25º Aniversário",
-          "fr": "John Cameron Mitchell: Tournée du Film Hedwig 25e Anniversaire"
-        },
-        "date": "2026-11-09",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjohn-cameron-mitchell-hedwig-25th-anniversary-ft-lauderdale-florida-11-09-2026%2Fevent%2F0D0064E2B09E70E2&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/890/ba987058-54c4-443a-b1f3-261c51477890_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Celebrate the 25th anniversary of the critically acclaimed, award-winning rock movie musical Hedwig and the Angry Inch with an unforgettable evening featuring writer, director, and Golden Globe?nominated star John Cameron Mitchell. The event includes a stunning 4K screening of the film, followed by a live Q&A, and a special mini acoustic performance by Mitchell. Arrive early for the pre-show costu",
-          "es": "Celebra el 25 aniversario del aclamado por la crítica y galardonado musical de rock Hedwig and the Angry Inch con una velada memorable que presenta al escritor, director y estrella nominada a Globo de Oro John Cameron Mitchell. El evento incluye una impresionante proyección en 4K de la película, seguida de una sesión de preguntas y respuestas en vivo, y una actuación acústica especial en miniatura de Mitchell. Llega temprano para el pre-show de disfraces",
-          "pt": "Celebre o 25º aniversário do aclamado crítico e premiado musical rock Hedwig and the Angry Inch com uma noite inesquecível apresentando o escritor, diretor e estrela indicada ao Globo de Ouro John Cameron Mitchell. O evento inclui uma deslumbrante projeção em 4K do filme, seguida por uma sessão de perguntas e respostas ao vivo, e uma apresentação acústica especial em miniatura de Mitchell. Chegue cedo para o pré-show de fantasias",
-          "fr": "Célébrez le 25e anniversaire du film musical rock acclamé par la critique et récompensé Hedwig and the Angry Inch avec une soirée inoubliable mettant en vedette l'écrivain, réalisateur et star nominée aux Golden Globes John Cameron Mitchell. L'événement comprend une projection époustouflante en 4K du film, suivie d'une séance de questions-réponses en direct et d'une mini-performance acoustique spéciale de Mitchell. Arrivez tôt pour le pré-spectacle en costume"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
-        "id": "tm_1794071992452_hkfy",
-        "title": {
-          "en": "Miami Hurricanes Men's Basketball vs. North Florida Ospreys",
-          "es": "Miami Hurricanes Baloncesto Masculino vs. North Florida Ospreys",
-          "pt": "Miami Hurricanes Basquete Masculino vs. North Florida Ospreys",
-          "fr": "Miami Hurricanes Basketball Masculin vs. North Florida Ospreys"
-        },
-        "date": "2026-11-09",
-        "venue": "Watsco Center at the University of Miami",
-        "address": "1245 Dauer Dr, Coral Gables, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-mens-basketball-vs-north-coral-gables-florida-11-09-2026%2Fevent%2F0D0065478FB249DD&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/f63/7413cf43-4e17-412d-b3d2-e88a96294f63_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Basketball · Starts 19:00 · Watsco Center at the University of Miami",
-          "es": "Deportes · Baloncesto · Comienza 19:00 · Watsco Center en la Universidad de Miami",
-          "pt": "Esportes · Basquete · Começa 19:00 · Watsco Center na Universidade de Miami",
-          "fr": "Sports · Basket-ball · Commence 19:00 · Watsco Center à l'Université de Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7150805,
-        "lng": -80.2791777
-      },
-      {
         "id": "tm_1794071992452_57wg",
         "title": {
           "en": "Emo Orchestra With The Spill Canvas - An Evening Of Emo",
@@ -4348,6 +4244,290 @@
         },
         "source": "Boynton Beach",
         "category": "community"
+      },
+      {
+        "id": "rss_1794338075269_gvmc",
+        "title": {
+          "en": "Gulfstream Park Hosts Family Day at the Races & Kids Club Fall Fest 11/14/26",
+          "es": "Gulfstream Park Presenta Día Familiar en las Carreras y Festival de Otoño Kids Club 11/14/26",
+          "pt": "Gulfstream Park Apresenta Dia em Família nas Corridas e Festival de Outono Kids Club 11/14/26",
+          "fr": "Gulfstream Park Présente Jour en Famille aux Courses et Festival d'Automne Kids Club 11/14/26"
+        },
+        "date": "2026-11-14",
+        "venue": "gulfstream park",
+        "address": "901 S Federal Highway, Hallandale Beach, Florida, 33009",
+        "url": "https://www.soulofmiami.org/2026/11/10/gulfstream-park-hosts-family-day-at-the-races-kids-club-fall-fest-11-14-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Fall fun meets live racing at Gulfstream Park on",
+          "es": "La diversión de otoño se encuentra con las carreras en vivo en Gulfstream Park el",
+          "pt": "A diversão do outono encontra as corridas ao vivo no Gulfstream Park em",
+          "fr": "Le plaisir d'automne rencontre les courses en direct au Gulfstream Park le"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9969757,
+        "lng": -80.1427544,
+        "category": "community"
+      },
+      {
+        "id": "rss_1794338075269_71y7",
+        "title": {
+          "en": "Gulfstream Park’s Symphony in Lights Holiday Celebration 11/14/26 – 12/31/26",
+          "es": "Celebración Navideña Sinfonía de Luces de Gulfstream Park 11/14/26 – 12/31/26",
+          "pt": "Celebração de Natal Sinfonia de Luzes do Gulfstream Park 11/14/26 – 12/31/26",
+          "fr": "Célébration de Noël Symphonie des Lumières de Gulfstream Park 11/14/26 – 12/31/26"
+        },
+        "date": "2026-11-14",
+        "venue": "Gulfstream Park",
+        "address": "901 S Federal Highway, Hallandale Beach, Florida, 33009",
+        "url": "https://www.soulofmiami.org/2026/11/10/gulfstream-parks-symphony-in-lights-holiday-celebration-11-14-26-12-31-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Gulfstream Park Village will kick off its annual ‘Symphony in Lights’ Holiday Celebration, on Saturday,",
+          "es": "Gulfstream Park Village iniciará su celebración navideña anual 'Sinfonía de Luces' el sábado,",
+          "pt": "Gulfstream Park Village iniciará sua celebração de Natal anual 'Sinfonia de Luzes' no sábado,",
+          "fr": "Gulfstream Park Village lancera sa célébration de Noël annuelle 'Symphonie des Lumières' le samedi,"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.9969757,
+        "lng": -80.1427544,
+        "category": "community"
+      },
+      {
+        "id": "rss_1794338075269_s1bt",
+        "title": {
+          "en": "Free PAD Screening and Education 11/16/26",
+          "es": "Cribado Gratuito de PAD y Educación 11/16/26",
+          "pt": "Rastreamento Gratuito de PAD e Educação 11/16/26",
+          "fr": "Dépistage Gratuit de PAD et Éducation 11/16/26"
+        },
+        "date": "2026-11-16",
+        "venue": "Memorial South Hospital",
+        "address": "3600 Washington St, Hollywood, Florida, 33021",
+        "url": "https://www.soulofmiami.org/2026/11/10/free-pad-screening-and-education-11-16-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Memorial_South_PAD_EAP_Screening_November_16_2026_page-0001-1-11-350x350.jpg",
+        "description": {
+          "en": "PAD screenings and education, sponsored by Memorial Foundation and FloridaHeart.org, will take place Monday, November 16 from 1",
+          "es": "Cribados y educación sobre PAD, patrocinados por Memorial Foundation y FloridaHeart.org, se llevarán a cabo el lunes 16 de noviembre a partir de la 1",
+          "pt": "Rastreamentos e educação sobre PAD, patrocinados pela Memorial Foundation e FloridaHeart.org, serão realizados segunda-feira, 16 de novembro a partir de 1",
+          "fr": "Le dépistage et l'éducation sur le PAD, parrainés par Memorial Foundation et FloridaHeart.org, auront lieu lundi 16 novembre à partir de 13h"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.0021554,
+        "lng": -80.1799907,
+        "category": "arts"
+      },
+      {
+        "id": "rss_1794338075269_5f0u",
+        "title": {
+          "en": "Light Up the Beach 11/19/26",
+          "es": "Ilumina la Playa 11/19/26",
+          "pt": "Ilumine a Praia 11/19/26",
+          "fr": "Illuminez la Plage 11/19/26"
+        },
+        "date": "2026-11-19",
+        "venue": "Las Olas Oceanside Park",
+        "address": "3000 E. Las Olas Boulevard, Fort Lauderdale, Florida, 33316",
+        "url": "https://www.soulofmiami.org/2026/11/10/light-up-the-beach-11-19-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Fort Lauderdale switches on more than 50,000 holiday lights along the beachfront at Las Olas",
+          "es": "Fort Lauderdale enciende más de 50,000 luces navideñas a lo largo de la playa en Las Olas",
+          "pt": "Fort Lauderdale acende mais de 50.000 luzes de feriado ao longo da praia em Las Olas",
+          "fr": "Fort Lauderdale allume plus de 50 000 lumières de vacances le long de la plage à Las Olas"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.119283,
+        "lng": -80.105151,
+        "category": "community"
+      },
+      {
+        "id": "rss_1794338075269_fydg",
+        "title": {
+          "en": "Symphony of the Americas The Sound of Freedom 11/15/26, 11/17/26",
+          "es": "Sinfonía de las Américas El Sonido de la Libertad 11/15/26, 11/17/26",
+          "pt": "Sinfonia das Américas O Som da Liberdade 11/15/26, 11/17/26",
+          "fr": "Symphonie des Amériques Le Son de la Liberté 11/15/26, 11/17/26"
+        },
+        "date": "2026-11-15",
+        "venue": "Soul of Miami",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/11/10/symphony-of-the-americas-the-sound-of-freedom-11-15-26-11-17-26/",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "admission, see ticket link for pricing Soprano",
+          "es": "admisión, ver enlace de entradas para precios Soprano",
+          "pt": "admissão, consulte o link de ingressos para preços Soprano",
+          "fr": "admission, voir le lien des billets pour les tarifs Soprano"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "tm_1794338075785_765t",
+        "title": {
+          "en": "Absolute Journey, the Journey Tribute",
+          "es": "Absolute Journey, el Tributo a Journey",
+          "pt": "Absolute Journey, a Tributação do Journey",
+          "fr": "Absolute Journey, l'Hommage à Journey"
+        },
+        "date": "2026-11-13",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fabsolute-journey-the-journey-tribute-aventura-florida-11-13-2026%2Fevent%2F0D0064F7BC0C7549&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/cf7/740812ff-3143-4a5d-b8f5-ac1e4437ecf7_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Don't Stop Believin'-note for note, emotion for emotion-the most authentic Journey live show you'll ever feel! Absolute Journey is a premier production of Absolute Bands, LLC, committed to crafting world-class concert events with elite musicians and stunning production. Their passion is to ignite crowds with performances they'll never forget, and Absolute Journey delivers that soaring, heartfelt 8",
+          "es": "¡Don't Stop Believin'-nota por nota, emoción por emoción-el show en vivo más auténtico de Journey que jamás sentirás! Absolute Journey es una producción premier de Absolute Bands, LLC, comprometida con la creación de eventos de conciertos de clase mundial con músicos de élite y una producción impresionante. Su pasión es encender multitudes con actuaciones que nunca olvidarán, y Absolute Journey entrega ese soaring, heartfelt 8",
+          "pt": "Don't Stop Believin'-nota por nota, emoção por emoção-o show ao vivo mais autêntico do Journey que você jamais sentirá! Absolute Journey é uma produção de primeira classe da Absolute Bands, LLC, comprometida em criar eventos de concerto de classe mundial com músicos de elite e produção deslumbrante. Sua paixão é inflamar multidões com performances que nunca esquecerão, e Absolute Journey entrega esse soaring, heartfelt 8",
+          "fr": "Don't Stop Believin'-note pour note, émotion pour émotion-le spectacle en direct Journey le plus authentique que vous ressentirez jamais ! Absolute Journey est une production de premier plan d'Absolute Bands, LLC, engagée à créer des événements de concerts de classe mondiale avec des musiciens d'élite et une production époustouflante. Leur passion est d'enflammer les foules avec des performances qu'elles n'oublieront jamais, et Absolute Journey offre ce soaring, heartfelt 8"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "tm_1794338075785_6a5e",
+        "title": {
+          "en": "Miami Heat vs. Cleveland Cavaliers (Emirates NBA Cup Game)",
+          "es": "Miami Heat vs. Cleveland Cavaliers (Juego de la Copa NBA Emirates)",
+          "pt": "Miami Heat vs. Cleveland Cavaliers (Jogo da Copa NBA Emirates)",
+          "fr": "Miami Heat vs. Cleveland Cavaliers (Jeu de la Coupe NBA Emirates)"
+        },
+        "date": "2026-11-13",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-heat-vs-cleveland-cavaliers-emirates-miami-florida-11-13-2026%2Fevent%2F0D00650C8C17375F&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/599/f9331497-7667-4f9d-9d26-d144cb25a599_1339911_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Basketball · Starts 20:00 · Kaseya Center",
+          "es": "Deportes · Baloncesto · Comienza 20:00 · Kaseya Center",
+          "pt": "Esportes · Basquete · Começa 20:00 · Kaseya Center",
+          "fr": "Sports · Basket-ball · Commence 20:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1794338075785_wqj6",
+        "title": {
+          "en": "Work of Heart: The Happening: A Theatrical Mixtape Volume VIII",
+          "es": "Work of Heart: The Happening: A Theatrical Mixtape Volume VIII",
+          "pt": "Work of Heart: The Happening: A Theatrical Mixtape Volume VIII",
+          "fr": "Work of Heart: The Happening: A Theatrical Mixtape Volume VIII"
+        },
+        "date": "2026-11-13",
+        "venue": "Abdo New River Room at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fwork-of-heart-the-happening-a-ft-lauderdale-florida-11-13-2026%2Fevent%2F0D0064FEC1947752&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/63c/65bacfbe-0191-42d0-9275-4c5b248a463c_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "There is an Artist in us all, and Work of HeART takes audiences on a journey of discovery and destiny as we follow four aspiring artists as they navigate fear, grief and self-doubt. A powerful, multidisciplinary performance created through a collaborative process with members of Art Prevails Project, Work of HeArt blends storytelling through music, poetry and dance, while exploring the transformat",
+          "es": "Hay un artista en todos nosotros, y Work of HeART lleva a las audiencias en un viaje de descubrimiento y destino mientras seguimos a cuatro artistas aspirantes que navegan el miedo, el duelo y la duda de sí mismos. Un poderoso espectáculo multidisciplinario creado a través de un proceso colaborativo con miembros de Art Prevails Project, Work of HeArt mezcla narrativa a través de música, poesía y danza, mientras explora la transformación",
+          "pt": "Há um artista em todos nós, e Work of HeART leva as audiências em uma jornada de descoberta e destino enquanto acompanhamos quatro artistas aspirantes navegando medo, luto e auto-dúvida. Um espetáculo poderoso e multidisciplinar criado através de um processo colaborativo com membros do Art Prevails Project, Work of HeArt mistura narrativa através de música, poesia e dança, enquanto explora a transformação",
+          "fr": "Il y a un artiste en nous tous, et Work of HeART emmène le public dans un voyage de découverte et de destinée alors que nous suivons quatre artistes en herbe naviguant la peur, le deuil et l'auto-doute. Un spectacle puissant et multidisciplinaire créé par un processus collaboratif avec les membres du Art Prevails Project, Work of HeArt mélange la narration à travers la musique, la poésie et la danse, tout en explorant la transformation"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1794338075785_ompg",
+        "title": {
+          "en": "Christian Loffler",
+          "es": "Christian Loffler",
+          "pt": "Christian Loffler",
+          "fr": "Christian Loffler"
+        },
+        "date": "2026-11-13",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvZre&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/172/87b921d0-0ba7-4d05-92fa-38795798e172_208381_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Dance/Electronic · Starts 21:00 · ZeyZey Miami",
+          "es": "Música · Dance/Electronic · Comienza 21:00 · ZeyZey Miami",
+          "pt": "Música · Dance/Electronic · Começa 21:00 · ZeyZey Miami",
+          "fr": "Musique · Dance/Electronic · Commence 21:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
+      },
+      {
+        "id": "tm_1794338075785_21jr",
+        "title": {
+          "en": "Friday Night Live - Improv Comedy Miami Show",
+          "es": "Friday Night Live - Espectáculo de Comedia Improvisada de Miami",
+          "pt": "Friday Night Live - Show de Comédia Improvisada de Miami",
+          "fr": "Friday Night Live - Spectacle de Comédie Improvisée de Miami"
+        },
+        "date": "2026-11-13",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14327554&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Friday Night Live! - Improv Comedy in Miami Show It's JTF's special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv that's perfect for your Friday night...LIVE! Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part ",
+          "es": "¡Friday Night Live! - Comedia Improvisada en Miami Show Es la combinación especial de JTF de improvisación shortform y longform! Disfruta mientras nuestro elenco ganador de premios te trae comedia improvisada fantástica que es perfecta para tu noche de viernes... ¡EN VIVO! Nuestros shows a menudo se describen como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway se encuentra con SNL con mucha interacción divertida con la audiencia en el camino. Ven a ser parte",
+          "pt": "Friday Night Live! - Comédia Improvisada no Show de Miami É a combinação especial de JTF de improvisação shortform e longform! Aproveite enquanto nosso elenco premiado traz você fantástica comédia improvisada que é perfeita para sua noite de sexta-feira... AO VIVO! Nossos shows são frequentemente descritos como comédia improvisada acelerada. Pense nisso como Whose Line is It Anyway encontra SNL com muita interação divertida com o público ao longo do caminho. Venha fazer parte",
+          "fr": "Friday Night Live! - Comédie Improvisée au Show de Miami C'est la combinaison spéciale de JTF d'improvisation shortform et longform ! Profitez tandis que notre cast primé vous apporte une comédie improvisée fantastique qui est parfaite pour votre vendredi soir... EN DIRECT ! Nos spectacles sont souvent décrits comme de la comédie improvisée à rythme rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interaction amusante avec le public en chemin. Venez en faire partie"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1794338075785_cwkv",
+        "title": {
+          "en": "UNREAL - Ages 18+",
+          "es": "UNREAL - Mayores de 18+",
+          "pt": "UNREAL - Maiores de 18+",
+          "fr": "UNREAL - 18 ans et plus"
+        },
+        "date": "2026-11-13",
+        "venue": "Factory Town",
+        "address": "4800 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvoe4&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 22:00 · Factory Town",
+          "es": "Inicia 22:00 · Factory Town",
+          "pt": "Começa 22:00 · Factory Town",
+          "fr": "Commence 22:00 · Factory Town"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.811899,
+        "lng": -80.238998,
+        "category": "music"
       }
     ]
   },
@@ -5251,7 +5431,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-09T21:53:37.916Z",
+    "fetchedAt": "2026-11-10T19:15:31.101Z",
     "items": []
   }
 }
