@@ -1,56 +1,43 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-12T19:29:19.977Z",
+    "lastUpdated": "2026-11-13T19:08:23.075Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-12T19:29:19.241Z",
+    "fetchedAt": "2026-11-13T19:08:22.250Z",
     "current": {
-      "temp_f": 82,
-      "feels_f": 88,
+      "temp_f": 73,
+      "feels_f": 79,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 71,
-      "wind_mph": 8,
-      "rain_chance": 30,
-      "weathercode": 2
+      "humidity": 94,
+      "wind_mph": 6,
+      "rain_chance": 34,
+      "weathercode": 65
     },
     "forecast": [
       {
-        "date": "2026-11-12",
-        "high_f": 85,
-        "low_f": 71,
-        "weathercode": 3,
-        "rain_chance": 30,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-11-13",
         "high_f": 79,
-        "low_f": 62,
-        "weathercode": 3,
-        "rain_chance": 19,
+        "low_f": 63,
+        "weathercode": 65,
+        "rain_chance": 34,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Heavy rain",
+          "es": "Lluvia intensa",
+          "pt": "Chuva forte",
+          "fr": "Pluie forte"
         }
       },
       {
         "date": "2026-11-14",
-        "high_f": 74,
-        "low_f": 60,
+        "high_f": 69,
+        "low_f": 55,
         "weathercode": 3,
         "rain_chance": 1,
         "description": {
@@ -63,9 +50,9 @@
       {
         "date": "2026-11-15",
         "high_f": 75,
-        "low_f": 69,
+        "low_f": 55,
         "weathercode": 3,
-        "rain_chance": 3,
+        "rain_chance": 1,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -76,161 +63,174 @@
       {
         "date": "2026-11-16",
         "high_f": 77,
-        "low_f": 74,
+        "low_f": 72,
         "weathercode": 51,
-        "rain_chance": 16,
+        "rain_chance": 15,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-11-17",
+        "high_f": 77,
+        "low_f": 74,
+        "weathercode": 53,
+        "rain_chance": 31,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "14:00",
-        "temp_f": 83,
-        "weathercode": 2,
+        "temp_f": 73,
+        "weathercode": 65,
         "rain_chance": 17
       },
       {
         "hour": "15:00",
-        "temp_f": 83,
-        "weathercode": 3,
-        "rain_chance": 22
-      },
-      {
-        "hour": "16:00",
-        "temp_f": 81,
-        "weathercode": 3,
+        "temp_f": 74,
+        "weathercode": 2,
         "rain_chance": 30
       },
       {
+        "hour": "16:00",
+        "temp_f": 75,
+        "weathercode": 1,
+        "rain_chance": 34
+      },
+      {
         "hour": "17:00",
-        "temp_f": 80,
-        "weathercode": 3,
-        "rain_chance": 18
+        "temp_f": 74,
+        "weathercode": 1,
+        "rain_chance": 21
       },
       {
         "hour": "18:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 7
+        "temp_f": 71,
+        "weathercode": 0,
+        "rain_chance": 6
       },
       {
         "hour": "19:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 69,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "20:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 5
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "21:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 67,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "22:00",
-        "temp_f": 73,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 65,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "23:00",
-        "temp_f": 72,
+        "temp_f": 64,
         "weathercode": 3,
-        "rain_chance": 3
+        "rain_chance": 0
       },
       {
         "hour": "00:00",
-        "temp_f": 72,
+        "temp_f": 63,
         "weathercode": 3,
-        "rain_chance": 2
+        "rain_chance": 0
       },
       {
         "hour": "01:00",
-        "temp_f": 72,
+        "temp_f": 62,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 0
       },
       {
         "hour": "02:00",
-        "temp_f": 71,
+        "temp_f": 61,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 0
       },
       {
         "hour": "03:00",
-        "temp_f": 71,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 60,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "04:00",
-        "temp_f": 69,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 60,
+        "weathercode": 1,
+        "rain_chance": 0
       },
       {
         "hour": "05:00",
-        "temp_f": 69,
-        "weathercode": 3,
-        "rain_chance": 4
+        "temp_f": 59,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "06:00",
-        "temp_f": 68,
-        "weathercode": 1,
-        "rain_chance": 4
+        "temp_f": 57,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "07:00",
-        "temp_f": 68,
-        "weathercode": 3,
-        "rain_chance": 4
+        "temp_f": 57,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "08:00",
-        "temp_f": 72,
-        "weathercode": 1,
-        "rain_chance": 5
+        "temp_f": 60,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 62,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "10:00",
-        "temp_f": 76,
-        "weathercode": 2,
-        "rain_chance": 6
+        "temp_f": 64,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "11:00",
-        "temp_f": 77,
-        "weathercode": 2,
-        "rain_chance": 6
+        "temp_f": 66,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "12:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "13:00",
-        "temp_f": 79,
-        "weathercode": 1,
-        "rain_chance": 8
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 0
       }
     ]
   },
@@ -2032,32 +2032,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1791568432724_skk9",
-        "title": {
-          "en": "Ripley’s Believe It or Not!® Christmas Park Launches the Legacy of Valor Social Studies Challenge 11/12/26",
-          "es": "El Parque Navideño de Ripley's Believe It or Not!® Lanza el Desafío de Estudios Sociales Legacy of Valor 11/12/26",
-          "pt": "O Parque de Natal de Ripley's Believe It or Not!® Lança o Desafio de Estudos Sociais Legacy of Valor 11/12/26",
-          "fr": "Le Parc de Noël de Ripley's Believe It or Not!® Lance le Défi d'Études Sociales Legacy of Valor 11/12/26"
-        },
-        "date": "2026-11-12",
-        "venue": "Amelia Earhart Park",
-        "address": "401 E. 65th St., Hialeah, Florida, 33013",
-        "url": "https://www.soulofmiami.org/2026/10/08/ripleys-believe-it-or-not-christmas-park-launches-the-legacy-of-valor-social-studies-challenge-11-12-26/",
-        "free": false,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Ripleys-Xmas-Park-Image-350x233.jpg",
-        "description": {
-          "en": "Believe It or Not!® Christmas Park is",
-          "es": "El Parque Navideño Believe It or Not!® es",
-          "pt": "O Parque de Natal Believe It or Not!® é",
-          "fr": "Le Parc de Noël Believe It or Not!® est"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.8869127,
-        "lng": -80.2778746,
-        "category": "community"
-      },
-      {
         "id": "rss_1791838174518_d0z0",
         "title": {
           "en": "Chris MacDonald’s Memories of Elvis in Rockin Birthday Bash 1/8/27",
@@ -2560,32 +2534,6 @@
         "category": "food-drink"
       },
       {
-        "id": "rss_1793296629929_wus2",
-        "title": {
-          "en": "Wine Fest & Jamón at CalaMillor Miami 11/12/26",
-          "es": "Wine Fest & Jamón en CalaMillor Miami 11/12/26",
-          "pt": "Wine Fest & Jamón no CalaMillor Miami 11/12/26",
-          "fr": "Wine Fest & Jamón au CalaMillor Miami 11/12/26"
-        },
-        "date": "2026-11-12",
-        "venue": "CalaMillor Miami",
-        "address": "4000 SW 57th Ave, Miami, Florida, 33155",
-        "url": "https://www.soulofmiami.org/2026/10/28/wine-fest-jamon-at-calamillor-miami-11-12-26/",
-        "free": false,
-        "price": "$95",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/visualfifteen002-333x500.jpg",
-        "description": {
-          "en": "Raise a glass and enjoy the spirit of Spain at CalaMillor Miami, the renowned Spanish bakery,",
-          "es": "Levanta una copa y disfruta del espíritu de España en CalaMillor Miami, la reconocida panadería española.",
-          "pt": "Levante uma taça e aproveite o espírito da Espanha no CalaMillor Miami, a renomada padaria espanhola.",
-          "fr": "Levez un verre et savourez l'esprit de l'Espagne au CalaMillor Miami, la célèbre boulangerie espagnole."
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7338463,
-        "lng": -80.2867079,
-        "category": "community"
-      },
-      {
         "id": "rss_1793381956774_3cis",
         "title": {
           "en": "Live Music: Intergenerational Jazz with the Ellis Duo 11/13/26",
@@ -2710,32 +2658,6 @@
         "lat": 25.7864648,
         "lng": -80.129768,
         "category": "arts"
-      },
-      {
-        "id": "rss_1793554399592_5t1e",
-        "title": {
-          "en": "Jazz at The Betsy: Donald Chan 11/12/26",
-          "es": "Jazz en The Betsy: Donald Chan 11/12/26",
-          "pt": "Jazz no The Betsy: Donald Chan 11/12/26",
-          "fr": "Jazz au The Betsy: Donald Chan 11/12/26"
-        },
-        "date": "2026-11-12",
-        "venue": "The Betsy Hotel",
-        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/31/jazz-at-the-betsy-donald-chan-11-12-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/1200x12001-350x350.jpg",
-        "description": {
-          "en": "No Cover. No Minimum. Come at your leisure for drinks in the Lobby or call LT",
-          "es": "Sin portada. Sin mínimo. Ven cuando quieras para beber en el Lobby o llama LT",
-          "pt": "Sem taxa de entrada. Sem mínimo. Venha quando quiser para beber no Lobby ou ligue LT",
-          "fr": "Pas de frais d'entrée. Pas de minimum. Venez à votre guise pour des verres au Lobby ou appelez LT"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7864648,
-        "lng": -80.129768,
-        "category": "music"
       },
       {
         "id": "rss_1793654363175_8vx9",
@@ -3214,58 +3136,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1794071992452_510t",
-        "title": {
-          "en": "A Tribute to our Veterans",
-          "es": "Un Tributo a Nuestros Veteranos",
-          "pt": "Uma Homenagem aos Nossos Veteranos",
-          "fr": "Un Hommage à nos Vétérans"
-        },
-        "date": "2026-11-12",
-        "venue": "Bienes Center at St. Thomas Aquinas",
-        "address": "2801 SW 12th St., Ft. Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fa-tribute-to-our-veterans-bienes-center-at-st-thomas-tickets%2F14383714&utm_medium=affiliate",
-        "free": false,
-        "price": "$7",
-        "image": "https://i.ticketweb.com/i/00/13/09/92/84_Edp.jpg?v=15",
-        "description": {
-          "en": "This event is on THURSDAY, NOVEMBER 12 at 6:00 PM and will feature performances from select members of STA Instrumental Music Program's Raider Winds, STA Chorale and our STA Forensics/Speech & Debate program. Please Note: Veterans will be admitted for FREE, but must make a reservation by emailing stafinearts@aquinas-sta.org with the Subject line: VETERANS COMP TICKET REQUEST. In the body of the em",
-          "es": "Este evento es el JUEVES, 12 DE NOVIEMBRE a las 6:00 PM y contará con actuaciones de miembros seleccionados del Programa de Música Instrumental STA Raider Winds, STA Chorale y nuestro programa de Oratoria y Debate de STA. Nota importante: Los veteranos serán admitidos GRATIS, pero deben hacer una reservación enviando un correo a stafinearts@aquinas-sta.org con la línea de asunto: VETERANS COMP TICKET REQUEST. En el cuerpo del correo",
-          "pt": "Este evento é na QUINTA-FEIRA, 12 DE NOVEMBRO às 18:00 e contará com apresentações de membros selecionados do Programa de Música Instrumental STA Raider Winds, STA Chorale e nosso programa de Oratória e Debate da STA. Observação: Veteranos serão admitidos GRATUITAMENTE, mas devem fazer uma reserva enviando um e-mail para stafinearts@aquinas-sta.org com a linha de assunto: VETERANS COMP TICKET REQUEST. No corpo do e-mail",
-          "fr": "Cet événement se déroulera le JEUDI 12 NOVEMBRE à 18h00 et comprendra des performances de membres sélectionnés du programme de musique instrumentale STA Raider Winds, STA Chorale et notre programme d'art oratoire et débat de STA. Veuillez noter: Les vétérans seront admis GRATUITEMENT, mais doivent faire une réservation en envoyant un e-mail à stafinearts@aquinas-sta.org avec la ligne d'objet: VETERANS COMP TICKET REQUEST. Dans le corps de l'e-mail"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.108381,
-        "lng": -80.181182
-      },
-      {
-        "id": "tm_1794071992452_iape",
-        "title": {
-          "en": "The Neighbourhood: THE WOURLD TOUR",
-          "es": "The Neighbourhood: THE WORLD TOUR",
-          "pt": "The Neighbourhood: THE WORLD TOUR",
-          "fr": "The Neighbourhood: THE WORLD TOUR"
-        },
-        "date": "2026-11-12",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-neighbourhood-the-wourld-tour-miami-florida-11-12-2026%2Fevent%2F0D006449E4C49B80&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/59a/74eacbfc-af64-4e60-b775-5ddfa21b259a_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Rock · Starts 19:00 · Kaseya Center",
-          "es": "Música · Rock · Comienza 19:00 · Kaseya Center",
-          "pt": "Música · Rock · Começa 19:00 · Kaseya Center",
-          "fr": "Musique · Rock · Commence 19:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "rss_1794159118127_8ekd",
         "title": {
           "en": "The Giggle Room Comedy Night 11/13/26",
@@ -3290,162 +3160,6 @@
         "lat": 26.1377642,
         "lng": -80.1136025,
         "category": "comedy"
-      },
-      {
-        "id": "tm_1794159118776_vzhp",
-        "title": {
-          "en": "Miami Hurricanes Women's Basketball vs. Saint Peter's Peacocks",
-          "es": "Baloncesto Femenino Miami Hurricanes vs. Saint Peter's Peacocks",
-          "pt": "Basquete Feminino Miami Hurricanes vs. Saint Peter's Peacocks",
-          "fr": "Basketball Féminin Miami Hurricanes vs. Saint Peter's Peacocks"
-        },
-        "date": "2026-11-12",
-        "venue": "Watsco Center at the University of Miami",
-        "address": "1245 Dauer Dr, Coral Gables, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-womens-basketball-vs-saint-coral-gables-florida-11-12-2026%2Fevent%2F0D0065376D412A07&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ac1/0b146ca2-088e-4219-b0b4-27e7dc09dac1_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Basketball · Starts 19:00 · Watsco Center at the University of Miami",
-          "es": "Deportes · Baloncesto · Comienza 19:00 · Watsco Center en la Universidad de Miami",
-          "pt": "Esportes · Basquete · Começa 19h00 · Watsco Center na Universidade de Miami",
-          "fr": "Sports · Basketball · Commence à 19h00 · Watsco Center à l'Université de Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7150805,
-        "lng": -80.2791777
-      },
-      {
-        "id": "tm_1794159118776_vpy0",
-        "title": {
-          "en": "Florida Panthers vs. Detroit Red Wings",
-          "es": "Florida Panthers vs. Detroit Red Wings",
-          "pt": "Florida Panthers vs. Detroit Red Wings",
-          "fr": "Florida Panthers vs. Detroit Red Wings"
-        },
-        "date": "2026-11-12",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J48A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Hockey · Starts 19:00 · Amerant Bank Arena",
-          "es": "Deportes · Hockey · Comienza 19:00 · Amerant Bank Arena",
-          "pt": "Esportes · Hóquei · Começa 19h00 · Amerant Bank Arena",
-          "fr": "Sports · Hockey · Commence à 19h00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
-        "id": "tm_1794159118776_rg5p",
-        "title": {
-          "en": "Greg Hahn",
-          "es": "Greg Hahn",
-          "pt": "Greg Hahn",
-          "fr": "Greg Hahn"
-        },
-        "date": "2026-11-12",
-        "venue": "Boca Black Box",
-        "address": "8221 Glades Rd #10, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AA7zuI&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Miscellaneous · Starts 19:00 · Boca Black Box",
-          "es": "Artes y Teatro · Misceláneos · Comienza 19:00 · Boca Black Box",
-          "pt": "Artes e Teatro · Diversos · Começa 19:00 · Boca Black Box",
-          "fr": "Arts et Théâtre · Divers · Commence 19:00 · Boca Black Box"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.381201,
-        "lng": -80.1707
-      },
-      {
-        "id": "tm_1794159118776_bvg9",
-        "title": {
-          "en": "The Labyrinth in Concert",
-          "es": "The Labyrinth en Concierto",
-          "pt": "The Labyrinth em Concerto",
-          "fr": "The Labyrinth en Concert"
-        },
-        "date": "2026-11-12",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-labyrinth-in-concert-ft-lauderdale-florida-11-12-2026%2Fevent%2F0D006426B4075905&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/c0e/fba71797-4f68-4f49-afa8-07d5422b4c0e_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Experience Jim Henson's original masterpiece Labyrinth like never before with \"Jim Henson's Labyrinth: In Concert!\" Watch the full movie, as a live band performs in sync with David Bowie's original vocals, playing the songs and score composed by Bowie and Trevor Jones. Feel the power of the music from the cult classic live! Don't miss this exceptional event that brings beloved characters, epic mus",
-          "es": "Experimenta la obra maestra original de Jim Henson, Labyrinth, como nunca antes con \"¡Jim Henson's Labyrinth: In Concert!\" Mira la película completa mientras una banda en vivo toca sincronizada con las voces originales de David Bowie, interpretando las canciones y la partitura compuesta por Bowie y Trevor Jones. ¡Siente el poder de la música del clásico de culto en vivo! No te pierdas este evento excepcional que trae personajes queridos y música épica.",
-          "pt": "Experimente a obra-prima original de Jim Henson, Labyrinth, como nunca antes com \"Jim Henson's Labyrinth: In Concert!\" Assista ao filme completo enquanto uma banda ao vivo toca sincronizada com as vozes originais de David Bowie, interpretando as canções e trilha sonora compostas por Bowie e Trevor Jones. Sinta o poder da música deste clássico cult ao vivo! Não perca este evento excepcional que traz personagens queridos e música épica.",
-          "fr": "Découvrez le chef-d'œuvre original de Jim Henson, Labyrinth, comme jamais auparavant avec « Jim Henson's Labyrinth: In Concert! » Regardez le film complet tandis qu'un groupe jouant en direct se synchronise avec les voix originales de David Bowie, interprétant les chansons et la bande sonore composées par Bowie et Trevor Jones. Ressentez la puissance de la musique de ce classique culte en direct ! Ne manquez pas cet événement exceptionnel qui met en avant les personnages bien-aimés et la musique épique."
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
-        "id": "tm_1794159118776_glww",
-        "title": {
-          "en": "New World Dance Ensemble @ Aventura",
-          "es": "New World Dance Ensemble @ Aventura",
-          "pt": "New World Dance Ensemble @ Aventura",
-          "fr": "New World Dance Ensemble @ Aventura"
-        },
-        "date": "2026-11-12",
-        "venue": "Aventura Arts & Cultural Center",
-        "address": "3385 NE 188th Street, Aventura, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnew-world-dance-ensemble-aventura-aventura-florida-11-12-2026%2Fevent%2F0D006542D17E7738&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/c91/ca7b7baa-3133-48b6-84f2-aaa175ed5c91_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "The NWSA Dance Ensemble will perform an exciting and varied program with dance works by renowned choreographers Jennifer Archibald, Robert Battle, Darshan Singh Bhuller, and Paul Taylor. The program is danced by the talented young New World Dance Ensemble and will feature an exciting guest soloist from the professional dance world. · Starts 20:00 · Aventura Arts & Cultural Center",
-          "es": "El conjunto de danza de NWSA presentará un programa emocionante y variado con obras de coreógrafos reconocidos Jennifer Archibald, Robert Battle, Darshan Singh Bhuller y Paul Taylor. El programa será ejecutado por el talentoso y joven New World Dance Ensemble y contará con un emocionante solista invitado del mundo de la danza profesional. · Comienza 20:00 · Centro de Artes y Cultura de Aventura",
-          "pt": "O New World Dance Ensemble apresentará um programa emocionante e variado com obras de coreógrafos renomados Jennifer Archibald, Robert Battle, Darshan Singh Bhuller e Paul Taylor. O programa será executado pelo talentoso New World Dance Ensemble e contará com um emocionante solista convidado do mundo da dança profissional. · Começa 20:00 · Centro de Artes e Cultura de Aventura",
-          "fr": "L'ensemble de danse NWSA présentera un programme passionnant et varié avec des œuvres des chorégraphes renommés Jennifer Archibald, Robert Battle, Darshan Singh Bhuller et Paul Taylor. Le programme sera exécuté par le talentueux New World Dance Ensemble et comptera un soliste invité excitant du monde de la danse professionnelle. · Commence 20:00 · Centre des Arts et de la Culture d'Aventura"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.94960232,
-        "lng": -80.13458177
-      },
-      {
-        "id": "tm_1794159118776_r432",
-        "title": {
-          "en": "Davide De Pierro",
-          "es": "Davide De Pierro",
-          "pt": "Davide De Pierro",
-          "fr": "Davide De Pierro"
-        },
-        "date": "2026-11-12",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdavide-de-pierro-ft-lauderdale-florida-11-12-2026%2Fevent%2F0D0064BCBB586893&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/119/6be0af86-1e4c-42a4-8273-a17aea993119_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Inspired by Davide De Pierro's newly released novel The Letters I Never Sent, his live show blends personal storytelling, humor, and audience conversation. Throughout the night, De Pierro will deliver a monologue and read selections from the book, followed by an open Q&A with the audience. Limited meet-and-greet opportunities will also be available for those who purchase in advance. Davide is a Ne",
-          "es": "Inspirado por la novela recién lanzada de Davide De Pierro, Las Cartas Que Nunca Envié, su espectáculo en vivo mezcla narrativa personal, humor y conversación con la audiencia. Durante toda la noche, De Pierro ofrecerá un monólogo y leerá fragmentos del libro, seguido de una sesión abierta de preguntas y respuestas con la audiencia. También habrá oportunidades limitadas para conocer al autor para quienes compren boletos con anticipación.",
-          "pt": "Inspirado pelo romance recém-lançado de Davide De Pierro, As Cartas Que Nunca Enviei, seu show ao vivo mistura narrativa pessoal, humor e conversa com a audiência. Durante toda a noite, De Pierro fará um monólogo e lerá trechos do livro, seguido de uma sessão aberta de perguntas e respostas com a audiência. Também haverá oportunidades limitadas para conhecer o autor para quem comprar ingressos antecipadamente.",
-          "fr": "Inspiré par le roman récemment publié de Davide De Pierro, Les Lettres Que Je N'ai Jamais Envoyées, son spectacle en direct mélange la narration personnelle, l'humour et la conversation avec le public. Tout au long de la soirée, De Pierro livrera un monologue et lira des extraits du livre, suivi d'une séance de questions-réponses ouverte avec le public. Des opportunités limitées de rencontre seront également disponibles pour ceux qui achètent les billets à l'avance."
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.1193,
-        "lng": -80.149426
       },
       {
         "id": "tm_1794159118776_6vbj",
@@ -4500,56 +4214,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1794511691167_q7s3",
-        "title": {
-          "en": "Santa's Arrival Parade at The Gardens Mall, Nov. 13",
-          "es": "Desfile de Llegada de Santa en The Gardens Mall, 13 de nov.",
-          "pt": "Desfile de Chegada do Papai Noel no The Gardens Mall, 13 de nov.",
-          "fr": "Défilé d'Arrivée du Père Noël au The Gardens Mall, 13 nov."
-        },
-        "date": "2026-11-12",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/santas-arrival-parade-at-the-gardens-mall/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/11/the-gardens-mall-santa-728x485.jpg",
-        "description": {
-          "en": "South Florida on the Cheap and Santa Claus will arrive in style to help ring in the Christmas spirit to kick off the season with Santa’s Arrival Parade. The Palm Beach Gardens High School Marching... Copyright South Florida on the Cheap. The post Santa's Arrival Parade at The Gardens Mall, Nov. 13 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap y Santa Claus llegarán con estilo para ayudar a animar el espíritu navideño e inaugurar la temporada con el Desfile de Llegada de Santa. La Banda de Marcha de la Escuela Secundaria Palm Beach Gardens...",
-          "pt": "South Florida on the Cheap e Papai Noel chegarão com estilo para ajudar a animar o espírito natalino e inaugurar a temporada com o Desfile de Chegada do Papai Noel. A Banda de Marcha da Escola Secundária Palm Beach Gardens...",
-          "fr": "South Florida on the Cheap et le Père Noël arriveront en grande pompe pour aider à insuffler l'esprit de Noël et inaugurer la saison avec le Défilé d'Arrivée du Père Noël. La Fanfare de la Haute École Palm Beach Gardens..."
-        },
-        "source": "Miami on the Cheap",
-        "category": "community"
-      },
-      {
-        "id": "tm_1794511691791_m0k0",
-        "title": {
-          "en": "Hamilton (Touring)",
-          "es": "Hamilton (Gira)",
-          "pt": "Hamilton (Turnê)",
-          "fr": "Hamilton (Tournée)"
-        },
-        "date": "2026-11-12",
-        "venue": "Au-Rene Theater at the Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhamilton-touring-ft-lauderdale-florida-11-12-2026%2Fevent%2F0D0064FBDE3A850F&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d7a/6ffed4d3-61d3-44c3-8e63-cc776582fd7a_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "A revolutionary story of passion, unstoppable ambition, and the dawn of a new nation. Hamilton is the epic saga that follows the rise of Founding Father Alexander Hamilton as he fights for honor, love, and a legacy that would shape the course of a nation. Based on Ron Chernow's acclaimed biography and set to a score that blends hip-hop, jazz, R&B, and Broadway, Hamilton has had a profound impact o",
-          "es": "Una historia revolucionaria de pasión, ambición imparable y el amanecer de una nueva nación. Hamilton es la épica que sigue el ascenso del Padre Fundador Alexander Hamilton mientras lucha por el honor, el amor y un legado que daría forma al curso de una nación. Basado en la biografía aclamada de Ron Chernow y con una partitura que combina hip-hop, jazz, R&B y Broadway, Hamilton ha tenido un profundo impacto",
-          "pt": "Uma história revolucionária de paixão, ambição imparável e o amanhecer de uma nova nação. Hamilton é a épica que segue a ascensão do Pai Fundador Alexander Hamilton enquanto ele luta por honra, amor e um legado que moldaria o curso de uma nação. Baseado na biografia aclamada de Ron Chernow e com uma trilha sonora que combina hip-hop, jazz, R&B e Broadway, Hamilton teve um profundo impacto",
-          "fr": "Une histoire révolutionnaire de passion, d'ambition irrépressible et de l'aube d'une nouvelle nation. Hamilton est l'épopée qui suit l'ascension du Père fondateur Alexander Hamilton alors qu'il se bat pour l'honneur, l'amour et un héritage qui façonnerait le cours d'une nation. Basé sur la biographie acclamée de Ron Chernow et sur une partition qui mélange le hip-hop, le jazz, le R&B et Broadway, Hamilton a eu un profond impact"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
         "id": "tm_1794511691791_p47o",
         "title": {
           "en": "Florida Atlantic University vs. Coastal GA",
@@ -4806,6 +4470,544 @@
         },
         "source": "Boynton Beach",
         "category": "music"
+      },
+      {
+        "id": "rss_1794596825513_y02l",
+        "title": {
+          "en": "Riverwalk International Food Festival offers free entry and a world of flavors",
+          "es": "Festival Internacional de Comida Riverwalk ofrece entrada gratuita y un mundo de sabores",
+          "pt": "Festival Internacional de Comida Riverwalk oferece entrada gratuita e um mundo de sabores",
+          "fr": "Le Festival International de Gastronomie de Riverwalk offre l'entrée gratuite et une variété de saveurs"
+        },
+        "date": "2026-11-13",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/riverwalk-international-food-festival-offers-free-entry-entertainment/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2022/02/Riverwalk-New-River--728x410.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Taste foods from different regions of the world at Riverwalk International Food Festival in Fort Lauderdale. The Riverwalk International Food Festival in 2026 is 12 to 4 p.m. Saturday, November... Copyright South Florida on the Cheap. The post Riverwalk International Food Festival offers free entry and a world of flavors appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap Prueba comidas de diferentes regiones del mundo en el Festival Internacional de Comida Riverwalk en Fort Lauderdale. El Festival Internacional de Comida Riverwalk en 2026 es de 12 a 4 p.m. el sábado, noviembre...",
+          "pt": "South Florida on the Cheap Prove comidas de diferentes regiões do mundo no Festival Internacional de Comida Riverwalk em Fort Lauderdale. O Festival Internacional de Comida Riverwalk em 2026 é de 12 a 4 da tarde, sábado, novembro...",
+          "fr": "South Florida on the Cheap Goûtez des mets de différentes régions du monde au Festival International de Gastronomie de Riverwalk à Fort Lauderdale. Le Festival International de Gastronomie de Riverwalk en 2026 se déroule de 12h à 16h samedi, novembre..."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1794596825513_mt0a",
+        "title": {
+          "en": "Free Frost Symphonic Winds concert at University of Miami",
+          "es": "Concierto gratuito de Frost Symphonic Winds en la Universidad de Miami",
+          "pt": "Concerto gratuito de Frost Symphonic Winds na Universidade de Miami",
+          "fr": "Concert gratuit du Frost Symphonic Winds à l'Université de Miami"
+        },
+        "date": "2026-11-13",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-frost-symphonic-winds-concert-at-university-of-miami/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/11/UM-Frost-Symphonic-Winds.jpg",
+        "description": {
+          "en": "South Florida on the Cheap The University of Miami Frost School of Music regularly hosts free public concerts and their next one is on Sunday, Nov. 15 at 4 p.m. at the Gusman Concert Hall.... Copyright South Florida on the Cheap. The post Free Frost Symphonic Winds concert at University of Miami appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap La Escuela de Música Frost de la Universidad de Miami organiza regularmente conciertos públicos gratuitos y el próximo es el domingo, 15 de noviembre a las 4 p.m. en Gusman Concert Hall...",
+          "pt": "South Florida on the Cheap A Escola de Música Frost da Universidade de Miami regularmente apresenta concertos públicos gratuitos e o próximo é domingo, 15 de novembro às 4 da tarde no Gusman Concert Hall...",
+          "fr": "South Florida on the Cheap L'École de Musique Frost de l'Université de Miami accueille régulièrement des concerts publics gratuits et le prochain aura lieu dimanche, 15 novembre à 16h au Gusman Concert Hall..."
+        },
+        "source": "Miami on the Cheap",
+        "category": "music"
+      },
+      {
+        "id": "rss_1794596825513_j0q9",
+        "title": {
+          "en": "Free family day at the African Heritage Cultural Arts Center",
+          "es": "Día familiar gratuito en el Centro de Artes Culturales Herencia Africana",
+          "pt": "Dia da família gratuito no Centro de Artes Culturais Herança Africana",
+          "fr": "Journée famille gratuite au Centre des Arts Culturels du Patrimoine Africain"
+        },
+        "date": "2026-11-13",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-family-day-at-the-african-heritage-cultural-arts-center/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/11/Junkanoo-at-the-African-Heritage-Cultural-Arts-Center-728x364.jpg",
+        "description": {
+          "en": "South Florida on the Cheap The Marshall L. Davis African Heritage Cultural Arts Center will come alive on Saturday, Nov. 14 from 1-5 p.m. during the Jazz to Junkanoo Closing Showcase and Culture Fair. Admission... Copyright South Florida on the Cheap. The post Free family day at the African Heritage Cultural Arts Center appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap El Centro de Artes Culturales Herencia Africana Marshall L. Davis cobrará vida el sábado, 14 de noviembre de 1 a 5 p.m. durante el Jazz to Junkanoo Closing Showcase and Culture Fair. Admisión...",
+          "pt": "South Florida on the Cheap O Centro de Artes Culturais Herança Africana Marshall L. Davis estará animado no sábado, 14 de novembro de 1 a 17h durante o Jazz to Junkanoo Closing Showcase and Culture Fair. Admissão...",
+          "fr": "South Florida on the Cheap Le Centre des Arts Culturels du Patrimoine Africain Marshall L. Davis s'animera samedi, 14 novembre de 13h à 17h lors du Jazz to Junkanoo Closing Showcase and Culture Fair. Admission..."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1794596825513_rq01",
+        "title": {
+          "en": "Free book fair 'Picnic de Libros' in Miami",
+          "es": "Feria de libros gratuita 'Picnic de Libros' en Miami",
+          "pt": "Feira de livros gratuita 'Picnic de Libros' em Miami",
+          "fr": "Foire aux livres gratuite 'Picnic de Libros' à Miami"
+        },
+        "date": "2026-11-13",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/free-picnic-de-libros-at-koubek-center-in-miami/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2023/04/Picnic-de-Libros-Iris-Fundora-2023-499x728.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Picnic de Libros is a bilingual, family day program featuring storytelling, theatre, music, arts and crafts, dance, and picnic baskets full of books for families to enjoy together. The free... Copyright South Florida on the Cheap. The post Free book fair 'Picnic de Libros' in Miami appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap Picnic de Libros es un programa familiar bilingüe que presenta narración de cuentos, teatro, música, artes y manualidades, danza y cestas de picnic llenas de libros para que las familias disfruten juntas. Gratis...",
+          "pt": "South Florida on the Cheap Picnic de Libros é um programa familiar bilíngue apresentando contação de histórias, teatro, música, artes e ofícios, dança e cestas de piquenique cheias de livros para as famílias aproveitarem juntas. Gratuito...",
+          "fr": "South Florida on the Cheap Picnic de Libros est un programme familial bilingue présentant la narration d'histoires, le théâtre, la musique, les arts et artisanats, la danse et des paniers de pique-nique remplis de livres pour que les familles en jouissent ensemble. Gratuit..."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "tm_1794596826128_dcmr",
+        "title": {
+          "en": "Hamilton (Touring)",
+          "es": "Hamilton (Gira)",
+          "pt": "Hamilton (Turnê)",
+          "fr": "Hamilton (Tournée)"
+        },
+        "date": "2026-11-13",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhamilton-touring-ft-lauderdale-florida-11-13-2026%2Fevent%2F0D0064FBDE3E8514&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d7a/6ffed4d3-61d3-44c3-8e63-cc776582fd7a_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "A revolutionary story of passion, unstoppable ambition, and the dawn of a new nation. Hamilton is the epic saga that follows the rise of Founding Father Alexander Hamilton as he fights for honor, love, and a legacy that would shape the course of a nation. Based on Ron Chernow's acclaimed biography and set to a score that blends hip-hop, jazz, R&B, and Broadway, Hamilton has had a profound impact o",
+          "es": "Una historia revolucionaria de pasión, ambición imparable y el amanecer de una nueva nación. Hamilton es la epopeya que sigue el ascenso del Padre Fundador Alexander Hamilton mientras lucha por el honor, el amor y un legado que moldeaería el curso de una nación. Basado en la aclamada biografía de Ron Chernow y ambientado en una partitura que combina hip-hop, jazz, R&B y Broadway, Hamilton ha tenido un profundo impacto...",
+          "pt": "Uma história revolucionária de paixão, ambição imparável e o amanhecer de uma nova nação. Hamilton é a epopeia que segue a ascensão do Pai Fundador Alexander Hamilton enquanto ele luta por honra, amor e um legado que moldaria o curso de uma nação. Baseado na aclamada biografia de Ron Chernow e ambientado em uma trilha sonora que mistura hip-hop, jazz, R&B e Broadway, Hamilton teve um profundo impacto...",
+          "fr": "Une histoire révolutionnaire de passion, d'ambition implacable et de l'aube d'une nouvelle nation. Hamilton est l'épopée qui suit l'ascension du Père Fondateur Alexander Hamilton alors qu'il lutte pour l'honneur, l'amour et un héritage qui façonnerait le cours d'une nation. Basé sur la biographie acclamée de Ron Chernow et sur une bande sonore qui mélange le hip-hop, le jazz, le R&B et Broadway, Hamilton a eu un impact profond..."
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1794596826128_9662",
+        "title": {
+          "en": "Davide De Pierro",
+          "es": "Davide De Pierro",
+          "pt": "Davide De Pierro",
+          "fr": "Davide De Pierro"
+        },
+        "date": "2026-11-13",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdavide-de-pierro-ft-lauderdale-florida-11-13-2026%2Fevent%2F0D00646ABFF5AFDF&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/119/6be0af86-1e4c-42a4-8273-a17aea993119_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Inspired by Davide De Pierro's newly released novel The Letters I Never Sent, his live show blends personal storytelling, humor, and audience conversation. Throughout the night, De Pierro will deliver a monologue and read selections from the book, followed by an open Q&A with the audience. Limited meet-and-greet opportunities will also be available for those who purchase in advance. Davide is a Ne",
+          "es": "Inspirado en la novela recientemente lanzada de Davide De Pierro 'Las Cartas Que Nunca Envié', su show en vivo combina narrativa personal, humor y conversación con la audiencia. Durante la noche, De Pierro ofrecerá un monólogo y leerá selecciones del libro, seguido de una sesión de preguntas y respuestas abierta con la audiencia. También habrá oportunidades limitadas de encuentro y saludo para aquellos que compren con anticipación.",
+          "pt": "Inspirado no romance recém-lançado de Davide De Pierro 'As Cartas Que Nunca Enviei', seu show ao vivo combina narrativa pessoal, humor e conversa com a audiência. Durante a noite, De Pierro fará um monólogo e lerá trechos do livro, seguido de uma sessão aberta de perguntas e respostas com o público. Também haverá oportunidades limitadas de encontro e saudação para aqueles que comprarem com antecedência.",
+          "fr": "Inspiré par le roman récemment publié de Davide De Pierro 'Les Lettres Que Je N'ai Jamais Envoyées', son spectacle en direct combine la narration personnelle, l'humour et la conversation avec le public. Tout au long de la soirée, De Pierro livrera un monologue et lira des extraits du livre, suivi d'une séance de questions-réponses ouverte avec le public. Des opportunités limitées de rencontre seront également disponibles pour ceux qui achètent à l'avance."
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1794596826128_hy6o",
+        "title": {
+          "en": "The Haller Club prior to Sixtiesmania",
+          "es": "The Haller Club previo a Sixtiesmania",
+          "pt": "The Haller Club antes de Sixtiesmania",
+          "fr": "The Haller Club avant Sixtiesmania"
+        },
+        "date": "2026-11-14",
+        "venue": "The Haller Club at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-haller-club-prior-to-sixtiesmania-fort-lauderdale-florida-11-14-2026%2Fevent%2F0D006458A15BDC1C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/38d/17de9482-0436-4d70-9a53-c48b8ced538d_1454431_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Add to your experience at The Parker with The Haller Club. This all-new premium lounge, with its stylish retro design, features a spacious bar and ample seating. For one inclusive price, your admission to The Haller Club offers exclusive use starting one hour prior to show time and during intermission (when scheduled), complimentary soft drinks, premium beer and wine, coffee and tea (mixed drinks ",
+          "es": "Enriquece tu experiencia en The Parker con The Haller Club. Este nuevo salón premium con su elegante diseño retro, cuenta con un bar espacioso y amplio asiento. Por un precio todo incluido, tu admisión a The Haller Club ofrece uso exclusivo comenzando una hora antes de la hora del espectáculo y durante el intermedio (cuando está programado), bebidas suaves gratuitas, cerveza premium y vino, café y té.",
+          "pt": "Enriqueça sua experiência em The Parker com The Haller Club. Este novo lounge premium, com seu elegante design retrô, apresenta um bar espaçoso e assentos amplos. Por um preço tudo incluído, sua admissão ao The Haller Club oferece uso exclusivo começando uma hora antes do horário do show e durante o intervalo (quando programado), refrigerantes gratuitos, cerveja premium e vinho, café e chá.",
+          "fr": "Enrichissez votre expérience au Parker avec The Haller Club. Ce nouveau lounge premium, avec son élégant design rétro, dispose d'un bar spacieux et de nombreux sièges. Pour un prix tout compris, votre admission au The Haller Club offre un usage exclusif commençant une heure avant l'heure du spectacle et pendant l'intermission (si programmée), boissons non alcoolisées gratuites, bière premium et vin, café et thé."
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1794596826128_8jmg",
+        "title": {
+          "en": "The Place To Be prior to Sixtiesmania",
+          "es": "The Place To Be previo a Sixtiesmania",
+          "pt": "The Place To Be antes de Sixtiesmania",
+          "fr": "The Place To Be avant Sixtiesmania"
+        },
+        "date": "2026-11-14",
+        "venue": "The Place To Be at The Parker",
+        "address": "707 Northeast 8th Street, Fort Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fthe-place-to-be-prior-to-fort-lauderdale-florida-11-14-2026%2Fevent%2F0D006458A21BE083&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/707/13e833c8-d3b1-46c3-88ad-2115872c5707_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This is The Place To Be! The exclusive donor lounge at The Parker is offering a limited number of tickets for sale to the public on a space-available basis. $75.00 PER PERSON. This private club provides an ultra-premium experience - complimentary food and beverage service in a private hideaway downstairs at The Parker. Enjoy an open bar serving top-shelf spirits, a selection of hot and cold hors d",
+          "es": "¡Este es The Place To Be! El salón exclusivo de donantes en The Parker está ofreciendo un número limitado de entradas para la venta al público según disponibilidad. $75.00 POR PERSONA. Este club privado proporciona una experiencia ultra-premium - servicio gratuito de comida y bebidas en un refugio privado en el piso inferior de The Parker. Disfruta de un bar abierto sirviendo espíritus de primera calidad, una selección de aperitivos fríos y calientes.",
+          "pt": "Este é The Place To Be! O lounge exclusivo de doadores em The Parker está oferecendo um número limitado de ingressos para venda ao público conforme disponibilidade. $75.00 POR PESSOA. Este clube privado fornece uma experiência ultra-premium - serviço gratuito de comida e bebida em um refúgio privado no piso inferior de The Parker. Aproveite um bar aberto servindo destilados premium, uma seleção de aperitivos frios e quentes.",
+          "fr": "C'est The Place To Be! Le lounge exclusif des donateurs au Parker offre un nombre limité de billets à la vente au public selon la disponibilité. $75.00 PAR PERSONNE. Ce club privé offre une expérience ultra-premium - service gratuit de nourriture et boissons dans un refuge privé au sous-sol du Parker. Profitez d'un bar ouvert servant les meilleurs alcools, une sélection de hors-d'œuvres chauds et froids."
+        },
+        "source": "Ticketmaster",
+        "lat": 26.13364,
+        "lng": -80.135769,
+        "category": "music"
+      },
+      {
+        "id": "tm_1794596826128_3s4z",
+        "title": {
+          "en": "Sixtiesmania: A Journey through the Sixties",
+          "es": "Sixtiesmania: Un Viaje a través de los Sesenta",
+          "pt": "Sixtiesmania: Uma Jornada através dos Anos 60",
+          "fr": "Sixtiesmania: Un Voyage à travers les Années 60"
+        },
+        "date": "2026-11-14",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsixtiesmania-a-journey-through-the-sixties-ft-lauderdale-florida-11-14-2026%2Fevent%2F0D006457A295948E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/c8b/6271d897-a4e3-4e0a-9ced-026e6ae98c8b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "From Las Vegas to Fort Lauderdale ? Sixtiesmania performs A Journey Through the Sixties, an all-encompassing celebration of the iconic musical sixties. Sixtiesmania takes audiences on a thrilling musical roller coaster from the Beach Boys to the British invasion, and everything in between including the California sound, Carnaby Street, the Vietnam tour-of-duty, Flower Power, Woodstock, and so much",
+          "es": "De Las Vegas a Fort Lauderdale, Sixtiesmania presenta Un Viaje a través de los Sesenta, una celebración completa de los icónicos sesenta musicales. Sixtiesmania lleva a la audiencia en una emocionante montaña rusa musical desde The Beach Boys a la invasión británica, y todo lo demás incluyendo el sonido de California, Carnaby Street, la gira de servicio en Vietnam, Flower Power, Woodstock, y mucho más.",
+          "pt": "De Las Vegas a Fort Lauderdale, Sixtiesmania apresenta Uma Jornada através dos Anos 60, uma celebração abrangente dos icônicos anos 60 musicais. Sixtiesmania leva a audiência em um emocionante carrossel musical desde The Beach Boys até a invasão britânica, e tudo mais, incluindo o som californiano, Carnaby Street, o serviço militar no Vietnã, Flower Power, Woodstock, e muito mais.",
+          "fr": "De Las Vegas à Fort Lauderdale, Sixtiesmania présente Un Voyage à travers les Années 60, une célébration complète des années 60 musicales emblématiques. Sixtiesmania emmène le public dans un passionnant carrousel musical des Beach Boys à l'invasion britannique, et tout le reste, y compris le son californien, Carnaby Street, le service militaire au Vietnam, Flower Power, Woodstock, et bien plus encore."
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1794596826128_pkzz",
+        "title": {
+          "en": "Sabbath \"Long Live Ozzy\"",
+          "es": "Sabbath \"Long Live Ozzy\"",
+          "pt": "Sabbath \"Long Live Ozzy\"",
+          "fr": "Sabbath \"Long Live Ozzy\""
+        },
+        "date": "2026-11-14",
+        "venue": "Culture Room",
+        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsabbath-long-live-ozzy-ft-lauderdale-florida-11-14-2026%2Fevent%2F0D006519276427FB&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/cbe/17751bc8-0937-4c1d-8168-4a0f6a9efcbe_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sabbath \"Long Live Ozzy\" Doors open 7:30pm · Starts 19:30 · Culture Room",
+          "es": "Sabbath \"Long Live Ozzy\" Las puertas abren a las 7:30pm · Comienza a las 19:30 · Culture Room",
+          "pt": "Sabbath \"Long Live Ozzy\" As portas abrem às 19h30 · Começa às 19h30 · Culture Room",
+          "fr": "Sabbath \"Long Live Ozzy\" Les portes ouvrent à 19h30 · Commence à 19h30 · Culture Room"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.166888,
+        "lng": -80.117058
+      },
+      {
+        "id": "tm_1794596826128_omeo",
+        "title": {
+          "en": "El Cuarteto De Nos",
+          "es": "El Cuarteto De Nos",
+          "pt": "El Cuarteto De Nos",
+          "fr": "El Cuarteto De Nos"
+        },
+        "date": "2026-11-14",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fel-cuarteto-de-nos-miami-beach-florida-11-14-2026%2Fevent%2F0D006388F67DA731&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/7b5/fafe22eb-43a5-4652-970d-9a58cb1fe7b5_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Las entradas GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas son de pie y asientos y se asignan por orden de llegada. Tenga en cuenta que una vez que se haya alcanzado la capacidad de un área, se limitará a otras áreas disponibles. · Comienza 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "pt": "Ingressos GA significam Admissão Geral. Isso significa que não há assentos reservados. Essas áreas são em pé e sentadas e são por ordem de chegada. Esteja ciente de que uma vez que a capacidade de uma área for atingida, você será limitado a outras áreas disponíveis. · Começa 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de places assignées. Ces zones sont debout et assises et se font en fonction de l'ordre d'arrivée. Veuillez noter qu'une fois la capacité d'une zone atteinte, vous serez limité à d'autres zones disponibles. · Commence 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1794596826128_zym6",
+        "title": {
+          "en": "Miami Heat vs. Detroit Pistons",
+          "es": "Miami Heat vs. Detroit Pistons",
+          "pt": "Miami Heat vs. Detroit Pistons",
+          "fr": "Miami Heat vs. Detroit Pistons"
+        },
+        "date": "2026-11-14",
+        "venue": "Kaseya Center",
+        "address": "601 Biscayne Blvd, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-heat-vs-detroit-pistons-miami-florida-11-14-2026%2Fevent%2F0D00650C8C1C376C&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/599/f9331497-7667-4f9d-9d26-d144cb25a599_1339911_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Basketball · Starts 20:00 · Kaseya Center",
+          "es": "Deportes · Baloncesto · Comienza 20:00 · Kaseya Center",
+          "pt": "Esportes · Basquete · Começa 20:00 · Kaseya Center",
+          "fr": "Sports · Basket-ball · Commence 20:00 · Kaseya Center"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.781232,
+        "lng": -80.187805
+      },
+      {
+        "id": "tm_1794596826128_ezhi",
+        "title": {
+          "en": "Carnavalfest",
+          "es": "Carnavalfest",
+          "pt": "Carnavalfest",
+          "fr": "Carnavalfest"
+        },
+        "date": "2026-11-14",
+        "venue": "James L. Knight Center - Ashe Auditorium",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcarnavalfest-miami-florida-11-14-2026%2Fevent%2F0D00656265E0178D&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/93e/e6c44411-797b-4a90-9d81-938db88c293e_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Carnaval Fest - Gran Coronación 2026: Una noche de música, danza, color y tradición. ¡Ven a celebrar el carnaval y vivir una experiencia inolvidable! · Starts 20:00 · James L. Knight Center - Ashe Auditorium",
+          "es": "Carnaval Fest - Gran Coronación 2026: Una noche de música, danza, color y tradición. ¡Ven a celebrar el carnaval y vivir una experiencia inolvidable! · Comienza 20:00 · James L. Knight Center - Ashe Auditorium",
+          "pt": "Carnaval Fest - Gran Coronación 2026: Uma noite de música, dança, cor e tradição. Venha celebrar o carnaval e viver uma experiência inesquecível! · Começa 20:00 · James L. Knight Center - Ashe Auditorium",
+          "fr": "Carnaval Fest - Gran Coronación 2026: Une nuit de musique, de danse, de couleur et de tradition. Venez célébrer le carnaval et vivre une expérience inoubliable! · Commence 20:00 · James L. Knight Center - Ashe Auditorium"
+        },
+        "source": "Ticketmaster",
+        "lat": 25.7707756,
+        "lng": -80.1901174,
+        "category": "music"
+      },
+      {
+        "id": "tm_1794596826128_z1a0",
+        "title": {
+          "en": "Cubatonazo - 10 Year Anniversario",
+          "es": "Cubatonazo - 10 Año Aniversario",
+          "pt": "Cubatonazo - 10 Anos de Aniversário",
+          "fr": "Cubatonazo - 10e Anniversaire"
+        },
+        "date": "2026-11-14",
+        "venue": "Watsco Center at the University of Miami",
+        "address": "1245 Dauer Dr, Coral Gables, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fcubatonazo-10-year-anniversario-coral-gables-florida-11-14-2026%2Fevent%2F0D006518E6A4D131&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/531/0008e5f6-a6fc-4f3f-ae7d-49ab0e33a531_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Latin · Starts 20:00 · Watsco Center at the University of Miami",
+          "es": "Música · Latino · Comienza 20:00 · Watsco Center at the University of Miami",
+          "pt": "Música · Latino · Começa 20:00 · Watsco Center at the University of Miami",
+          "fr": "Musique · Latino · Commence 20:00 · Watsco Center at the University of Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7150805,
+        "lng": -80.2791777
+      },
+      {
+        "id": "tm_1794596826128_1ykd",
+        "title": {
+          "en": "Rod Wave: Don't Look Down Tour",
+          "es": "Rod Wave: Don't Look Down Tour",
+          "pt": "Rod Wave: Don't Look Down Tour",
+          "fr": "Rod Wave: Don't Look Down Tour"
+        },
+        "date": "2026-11-14",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fseatgeek.com%2Frod-wave-tickets%2Fsunrise-florida-amerant-bank-arena-2026-11-14-8-30-pm%2Fconcert%2F18312360&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f72/4c583e8a-6739-4fb2-9861-e73978841f72_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Hip-Hop/Rap · Starts 20:30 · Amerant Bank Arena ",
+          "es": "Música · Hip-Hop/Rap · Comienza 20:30 · Amerant Bank Arena",
+          "pt": "Música · Hip-Hop/Rap · Começa 20:30 · Amerant Bank Arena",
+          "fr": "Musique · Hip-Hop/Rap · Commence 20:30 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.155362,
+        "lng": -80.33023
+      },
+      {
+        "id": "tm_1794596826128_y7fc",
+        "title": {
+          "en": "The BIG Show Improv Comedy Miami",
+          "es": "The BIG Show Comedia Improvisada Miami",
+          "pt": "The BIG Show Comédia de Improvisação Miami",
+          "fr": "The BIG Show Comédie d'Improvisation Miami"
+        },
+        "date": "2026-11-14",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14327624&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Big Show - Improv Comedy in Miami It's our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun! Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as",
+          "es": "The Big Show - Comedia Improvisada en Miami Es nuestro espectáculo insignia: comedia improvisada en vivo, rápida y de primera categoría. ¡Piénsalo como Whose Line is It Anyway se encuentra con SNL! The Big Show es comedia improvisada interactiva, presentando nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos grupos juntos en mesas. Haremos nuestro mejor esfuerzo para sentar grupos más grandes como",
+          "pt": "The Big Show - Comédia de Improvisação em Miami É o nosso espetáculo assinatura: comédia improvisada ao vivo, rápida e de primeira qualidade. Pense nisso como Whose Line is It Anyway encontra SNL! The Big Show é comédia improvisada interativa, apresentando nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas. Faremos o nosso melhor para acomodar grupos maiores como",
+          "fr": "The Big Show - Comédie d'Improvisation à Miami C'est notre spectacle signature : comédie improvisée en direct, rapide et de première qualité. Pensez-y comme Whose Line is It Anyway rencontre SNL ! The Big Show est une comédie improvisée interactive, mettant en vedette notre casting talentueux et primé. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous placerons les groupes ensemble aux tables. Nous ferons de notre mieux pour accueillir les plus grands groupes comme"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1794596826128_am4g",
+        "title": {
+          "en": "Odesza - Ages 18+",
+          "es": "Odesza - Mayores de 18 años",
+          "pt": "Odesza - Maiores de 18 anos",
+          "fr": "Odesza - 18 ans et plus"
+        },
+        "date": "2026-11-14",
+        "venue": "Factory Town",
+        "address": "4800 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAvovK&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/06f/97360f97-98c5-47d1-8a62-7a98cb59906f_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Dance/Electronic · Starts 22:00 · Factory Town",
+          "es": "Música · Danza/Electrónica · Comienza 22:00 · Factory Town",
+          "pt": "Música · Dança/Eletrônica · Começa 22:00 · Factory Town",
+          "fr": "Musique · Danse/Électronique · Commence 22:00 · Factory Town"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.811899,
+        "lng": -80.238998
+      },
+      {
+        "id": "tm_1794596826128_pexr",
+        "title": {
+          "en": "Ian Asher",
+          "es": "Ian Asher",
+          "pt": "Ian Asher",
+          "fr": "Ian Asher"
+        },
+        "date": "2026-11-14",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fian-asher-liv-nightclub-miami-tickets%2F14351964&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/20a/f7da40f2-f6bb-40bb-828f-0c6ab0a6620a_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso incapaz de apresentar identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux personnes de 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1794596826128_id4k",
+        "title": {
+          "en": "Glocal Piano Festival: Road to the Busoni 66th Piano Competition",
+          "es": "Festival Piano Glocal: Camino a la Competencia de Piano Busoni 66",
+          "pt": "Festival Piano Glocal: O Caminho para a 66ª Competição Internacional de Piano Busoni",
+          "fr": "Festival Piano Glocal : La Route vers la 66e Compétition Internationale de Piano Busoni"
+        },
+        "date": "2026-11-15",
+        "venue": "Aventura Arts & Cultural Center",
+        "address": "3385 NE 188th Street, Aventura, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fglocal-piano-festival-road-to-the-aventura-florida-11-15-2026%2Fevent%2F0D0064FFF135D3A4&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/827/fe005372-7f1a-482d-ad26-3c8a10e35827_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Glocal Piano Festival: The Road to the Busoni 66th International Piano Competition: 15 Pianists - One Audience Choice. GLOCAL PIANO FESTIVAL is an official preliminary selection event for the Ferruccio Busoni International Piano Competition, reimagining how young pianists are discovered by connecting global talent with local audiences. Fifteen exceptional pianists from around the world will perfor",
+          "es": "Festival Piano Glocal: El Camino a la 66ª Competencia Internacional de Piano Ferruccio Busoni: 15 Pianistas - Una Elección de la Audiencia. FESTIVAL PIANO GLOCAL es un evento oficial de selección preliminar para la Competencia Internacional de Piano Ferruccio Busoni, reimaginando cómo se descubren jóvenes pianistas conectando talento global con audiencias locales. Quince pianistas excepcionales de todo el mundo actuarán",
+          "pt": "Festival Piano Glocal: O Caminho para a 66ª Competição Internacional de Piano Ferruccio Busoni: 15 Pianistas - Uma Escolha do Público. O FESTIVAL PIANO GLOCAL é um evento oficial de seleção preliminar para a Competição Internacional de Piano Ferruccio Busoni, reimaginando como jovens pianistas são descobertos conectando talento global com públicos locais. Quinze pianistas excepcionais de todo o mundo se apresentarão",
+          "fr": "Festival Piano Glocal : La Route vers la 66e Compétition Internationale de Piano Ferruccio Busoni : 15 Pianistes - Un Choix du Public. Le FESTIVAL PIANO GLOCAL est un événement officiel de présélection pour la Compétition Internationale de Piano Ferruccio Busoni, réimaginent comment les jeunes pianistes sont découverts en connectant les talents mondiaux avec les publics locaux. Quinze pianistes exceptionnels du monde entier se produiront"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.94960232,
+        "lng": -80.13458177
+      },
+      {
+        "id": "tm_1794596826128_y5ib",
+        "title": {
+          "en": "Symphony of the Americas: The Sound of Freedom",
+          "es": "Sinfonía de las Américas: El Sonido de la Libertad",
+          "pt": "Sinfonia das Américas: O Som da Liberdade",
+          "fr": "Symphonie des Amériques : Le Son de la Liberté"
+        },
+        "date": "2026-11-15",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsymphony-of-the-americas-the-sound-ft-lauderdale-florida-11-15-2026%2Fevent%2F0D0064FBAB025540&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/e27/4cd3d93a-1efc-48ef-bf5b-b5e34e7a0e27_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Throughout the history of the United States, music and musicians have played a pivotal role in spreading American ideals abroad while also bringing people together at home-all through the power of music. From Van Cliburn winning the Tchaikovsky Competition at the height of the Cold War to Marian Anderson singing from the steps of the Lincoln Memorial, American music and musicians have changed the ",
+          "es": "A lo largo de la historia de los Estados Unidos, la música y los músicos han jugado un papel fundamental en la difusión de ideales estadounidenses en el extranjero mientras traen a la gente junta en el hogar, todo a través del poder de la música. Desde Van Cliburn ganando la Competencia Tchaikovsky en el apogeo de la Guerra Fría hasta Marian Anderson cantando desde los escalones del Lincoln Memorial, la música y los músicos estadounidenses han cambiado",
+          "pt": "Ao longo da história dos Estados Unidos, a música e os músicos desempenharam um papel fundamental na disseminação de ideais americanos no exterior, enquanto também reúnem as pessoas em casa, tudo através do poder da música. De Van Cliburn vencendo a Competição Tchaikovsky no auge da Guerra Fria até Marian Anderson cantando nos degraus do Lincoln Memorial, a música e os músicos americanos mudaram",
+          "fr": "Tout au long de l'histoire des États-Unis, la musique et les musiciens ont joué un rôle essentiel dans la diffusion des idéaux américains à l'étranger tout en rapprochant les gens à la maison, tout cela par la puissance de la musique. De Van Cliburn remportant la Compétition Tchaïkovski à l'apogée de la Guerre froide à Marian Anderson chantant depuis les marches du Lincoln Memorial, la musique et les musiciens américains ont changé"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1794596826128_exts",
+        "title": {
+          "en": "Reggae Rise Up presents Holidaze Fest (All Ages Welcome - Children 12 and younger FREE with a paid guardian) - Sunday",
+          "es": "Reggae Rise Up presenta Holidaze Fest (Todas las Edades Bienvenidas - Niños menores de 12 años GRATIS con un tutor pagado) - Domingo",
+          "pt": "Reggae Rise Up apresenta Holidaze Fest (Todas as Idades Bem-vindas - Crianças menores de 12 anos GRÁTIS com responsável pagante) - Domingo",
+          "fr": "Reggae Rise Up présente Holidaze Fest (Tous Âges Acceptés - Enfants de moins de 12 ans GRATUIT avec un tuteur payant) - Dimanche"
+        },
+        "date": "2026-11-15",
+        "venue": "Sunset Cove Amphitheater",
+        "address": "12551 Glades Road, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AA7p73&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 15:00 · Sunset Cove Amphitheater",
+          "es": "Música · Otros · Comienza a las 15:00 · Anfiteatro Sunset Cove",
+          "pt": "Música · Outros · Começa às 15:00 · Anfiteatro Sunset Cove",
+          "fr": "Musique · Autres · Commence à 15:00 · Amphithéâtre Sunset Cove"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.3951,
+        "lng": -80.220596
       }
     ]
   },
@@ -5709,7 +5911,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-12T19:29:19.242Z",
+    "fetchedAt": "2026-11-13T19:08:22.251Z",
     "items": []
   }
 }
