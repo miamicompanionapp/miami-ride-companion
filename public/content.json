@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-16T21:34:56.245Z",
+    "lastUpdated": "2026-11-17T20:25:21.943Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-16T21:34:52.406Z",
+    "fetchedAt": "2026-11-17T20:25:14.480Z",
     "current": {
-      "temp_f": 75,
-      "feels_f": 75,
+      "temp_f": 76,
+      "feels_f": 76,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 67,
-      "wind_mph": 12,
-      "rain_chance": 7,
-      "weathercode": 1
+      "humidity": 77,
+      "wind_mph": 18,
+      "rain_chance": 40,
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-11-16",
-        "high_f": 80,
-        "low_f": 66,
-        "weathercode": 3,
-        "rain_chance": 7,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-11-17",
-        "high_f": 77,
+        "high_f": 79,
         "low_f": 71,
         "weathercode": 51,
-        "rain_chance": 41,
+        "rain_chance": 40,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
@@ -49,23 +36,23 @@
       },
       {
         "date": "2026-11-18",
-        "high_f": 78,
-        "low_f": 71,
-        "weathercode": 95,
-        "rain_chance": 56,
+        "high_f": 77,
+        "low_f": 72,
+        "weathercode": 82,
+        "rain_chance": 81,
         "description": {
-          "en": "Thunderstorm",
-          "es": "Tormenta eléctrica",
-          "pt": "Trovoada",
-          "fr": "Orage"
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
         }
       },
       {
         "date": "2026-11-19",
-        "high_f": 78,
-        "low_f": 73,
+        "high_f": 80,
+        "low_f": 70,
         "weathercode": 80,
-        "rain_chance": 48,
+        "rain_chance": 58,
         "description": {
           "en": "Rain showers",
           "es": "Chubascos",
@@ -75,84 +62,103 @@
       },
       {
         "date": "2026-11-20",
-        "high_f": 81,
+        "high_f": 80,
         "low_f": 74,
-        "weathercode": 3,
-        "rain_chance": 44,
+        "weathercode": 51,
+        "rain_chance": 43,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
+      },
+      {
+        "date": "2026-11-21",
+        "high_f": 85,
+        "low_f": 73,
+        "weathercode": 2,
+        "rain_chance": 21,
+        "description": {
+          "en": "Partly cloudy",
+          "es": "Parcialmente nublado",
+          "pt": "Parcialmente nublado",
+          "fr": "Partiellement nuageux"
         }
       }
     ],
     "hourly": [
       {
+        "hour": "15:00",
+        "temp_f": 77,
+        "weathercode": 3,
+        "rain_chance": 40
+      },
+      {
         "hour": "16:00",
         "temp_f": 76,
-        "weathercode": 1,
-        "rain_chance": 2
+        "weathercode": 3,
+        "rain_chance": 31
       },
       {
         "hour": "17:00",
         "temp_f": 74,
-        "weathercode": 0,
-        "rain_chance": 3
+        "weathercode": 3,
+        "rain_chance": 34
       },
       {
         "hour": "18:00",
-        "temp_f": 72,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 36
       },
       {
         "hour": "19:00",
-        "temp_f": 72,
-        "weathercode": 1,
-        "rain_chance": 2
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 35
       },
       {
         "hour": "20:00",
-        "temp_f": 72,
-        "weathercode": 0,
-        "rain_chance": 7
+        "temp_f": 74,
+        "weathercode": 3,
+        "rain_chance": 31
       },
       {
         "hour": "21:00",
-        "temp_f": 72,
-        "weathercode": 1,
-        "rain_chance": 4
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 33
       },
       {
         "hour": "22:00",
-        "temp_f": 72,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 4
+        "rain_chance": 25
       },
       {
         "hour": "23:00",
-        "temp_f": 72,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 18
       },
       {
         "hour": "00:00",
-        "temp_f": 72,
+        "temp_f": 73,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 18
       },
       {
         "hour": "01:00",
-        "temp_f": 73,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 11
+        "rain_chance": 21
       },
       {
         "hour": "02:00",
-        "temp_f": 72,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 12
+        "rain_chance": 14
       },
       {
         "hour": "03:00",
@@ -162,75 +168,69 @@
       },
       {
         "hour": "04:00",
-        "temp_f": 72,
-        "weathercode": 3,
-        "rain_chance": 15
-      },
-      {
-        "hour": "05:00",
         "temp_f": 73,
         "weathercode": 3,
         "rain_chance": 13
       },
       {
-        "hour": "06:00",
-        "temp_f": 72,
+        "hour": "05:00",
+        "temp_f": 73,
         "weathercode": 3,
-        "rain_chance": 16
+        "rain_chance": 20
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 73,
+        "weathercode": 3,
+        "rain_chance": 26
       },
       {
         "hour": "07:00",
-        "temp_f": 72,
-        "weathercode": 2,
-        "rain_chance": 18
+        "temp_f": 73,
+        "weathercode": 3,
+        "rain_chance": 27
       },
       {
         "hour": "08:00",
         "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 13
+        "rain_chance": 30
       },
       {
         "hour": "09:00",
         "temp_f": 76,
         "weathercode": 3,
-        "rain_chance": 20
+        "rain_chance": 39
       },
       {
         "hour": "10:00",
         "temp_f": 77,
-        "weathercode": 1,
-        "rain_chance": 22
+        "weathercode": 3,
+        "rain_chance": 58
       },
       {
         "hour": "11:00",
-        "temp_f": 76,
-        "weathercode": 3,
-        "rain_chance": 27
+        "temp_f": 72,
+        "weathercode": 82,
+        "rain_chance": 63
       },
       {
         "hour": "12:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 41
+        "temp_f": 75,
+        "weathercode": 55,
+        "rain_chance": 68
       },
       {
         "hour": "13:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 36
+        "temp_f": 75,
+        "weathercode": 51,
+        "rain_chance": 80
       },
       {
         "hour": "14:00",
-        "temp_f": 76,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 26
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 31
+        "rain_chance": 81
       }
     ]
   },
@@ -2638,32 +2638,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1794338075269_s1bt",
-        "title": {
-          "en": "Free PAD Screening and Education 11/16/26",
-          "es": "Cribado Gratuito de PAD y Educación 11/16/26",
-          "pt": "Rastreamento Gratuito de PAD e Educação 11/16/26",
-          "fr": "Dépistage Gratuit de PAD et Éducation 11/16/26"
-        },
-        "date": "2026-11-16",
-        "venue": "Memorial South Hospital",
-        "address": "3600 Washington St, Hollywood, Florida, 33021",
-        "url": "https://www.soulofmiami.org/2026/11/10/free-pad-screening-and-education-11-16-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Memorial_South_PAD_EAP_Screening_November_16_2026_page-0001-1-11-350x350.jpg",
-        "description": {
-          "en": "PAD screenings and education, sponsored by Memorial Foundation and FloridaHeart.org, will take place Monday, November 16 from 1",
-          "es": "Cribados y educación sobre PAD, patrocinados por Memorial Foundation y FloridaHeart.org, se llevarán a cabo el lunes 16 de noviembre a partir de la 1",
-          "pt": "Rastreamentos e educação sobre PAD, patrocinados pela Memorial Foundation e FloridaHeart.org, serão realizados segunda-feira, 16 de novembro a partir de 1",
-          "fr": "Le dépistage et l'éducation sur le PAD, parrainés par Memorial Foundation et FloridaHeart.org, auront lieu lundi 16 novembre à partir de 13h"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.0021554,
-        "lng": -80.1799907,
-        "category": "arts"
-      },
-      {
         "id": "rss_1794338075269_5f0u",
         "title": {
           "en": "Light Up the Beach 11/19/26",
@@ -3040,84 +3014,6 @@
         "lat": 25.735179,
         "lng": -80.2204249,
         "category": "community"
-      },
-      {
-        "id": "tm_1794677777152_c4di",
-        "title": {
-          "en": "Miami Hurricanes Women's Basketball vs. Le Moyne Dolphins",
-          "es": "Baloncesto Femenino Miami Hurricanes vs. Le Moyne Dolphins",
-          "pt": "Basquete Feminino Miami Hurricanes vs. Le Moyne Dolphins",
-          "fr": "Basket-ball Féminin Miami Hurricanes vs. Le Moyne Dolphins"
-        },
-        "date": "2026-11-16",
-        "venue": "Watsco Center at the University of Miami",
-        "address": "1245 Dauer Dr, Coral Gables, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-womens-basketball-vs-le-coral-gables-florida-11-16-2026%2Fevent%2F0D0065376D432A0B&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ac1/0b146ca2-088e-4219-b0b4-27e7dc09dac1_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Basketball · Starts 11:00 · Watsco Center at the University of Miami",
-          "es": "Deportes · Baloncesto · Comienza 11:00 · Watsco Center en la Universidad de Miami",
-          "pt": "Esportes · Basquete · Começa 11:00 · Watsco Center na Universidade de Miami",
-          "fr": "Sports · Basket-ball · Commence 11:00 · Watsco Center à l'Université de Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.7150805,
-        "lng": -80.2791777
-      },
-      {
-        "id": "tm_1794677777152_eoel",
-        "title": {
-          "en": "Miami Heat vs. Houston Rockets",
-          "es": "Miami Heat vs. Houston Rockets",
-          "pt": "Miami Heat vs. Houston Rockets",
-          "fr": "Miami Heat vs. Houston Rockets"
-        },
-        "date": "2026-11-16",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-heat-vs-houston-rockets-miami-florida-11-16-2026%2Fevent%2F0D00650C8E933B3A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/599/f9331497-7667-4f9d-9d26-d144cb25a599_1339911_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Basketball · Starts 19:30 · Kaseya Center",
-          "es": "Deportes · Baloncesto · Comienza 19:30 · Kaseya Center",
-          "pt": "Esportes · Basquete · Começa 19:30 · Kaseya Center",
-          "fr": "Sports · Basket-ball · Commence 19:30 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
-        "id": "tm_1794677777152_6n09",
-        "title": {
-          "en": "Yebba",
-          "es": "Yebba",
-          "pt": "Yebba",
-          "fr": "Yebba"
-        },
-        "date": "2026-11-16",
-        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
-        "address": "1700 Washington Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fyebba-miami-beach-florida-11-16-2026%2Fevent%2F0D006513A82184C9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/265/7f0e0311-ea9d-435f-9696-2d030a041265_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
-          "es": "Las entradas GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas son de pie y asiento y tienen disponibilidad por orden de llegada. Tenga en cuenta que una vez que la capacidad de un área se haya alcanzado, se le limitará a otras áreas abiertas. · Comienza 20:00 · The Fillmore Miami Beach en Jackie Gleason Theater",
-          "pt": "Ingressos GA significam Admissão Geral. Isso significa que não há assentos atribuídos. Essas áreas são em pé e assentadas e funcionam por ordem de chegada. Observe que uma vez que a capacidade de uma área for atingida, você será limitado a outras áreas abertas. · Começa 20:00 · The Fillmore Miami Beach no Jackie Gleason Theater",
-          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de sièges assignés. Ces zones sont debout et assis et fonctionnent selon le principe du premier arrivé, premier servi. Veuillez noter qu'une fois la capacité d'une zone atteinte, vous serez limité aux autres zones ouvertes. · Commence 20:00 · The Fillmore Miami Beach au Jackie Gleason Theater"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.792917,
-        "lng": -80.13314
       },
       {
         "id": "tm_1794677777152_ochd",
@@ -3640,30 +3536,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1794864841678_eym5",
-        "title": {
-          "en": "FREE: FAU Band-o-Rama, Mizner Park, Nov. 22",
-          "es": "GRATIS: FAU Band-o-Rama, Mizner Park, 22 de nov.",
-          "pt": "GRÁTIS: FAU Band-o-Rama, Mizner Park, 22 de nov.",
-          "fr": "GRATUIT: FAU Band-o-Rama, Mizner Park, 22 nov."
-        },
-        "date": "2026-11-16",
-        "venue": "Miami on the Cheap",
-        "address": "",
-        "url": "https://miamionthecheap.com/free-fau-band-o-rama-mizner-park-nov-22/",
-        "free": false,
-        "price": "",
-        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/11/fau-banorama-728x728.jpg",
-        "description": {
-          "en": "South Florida on the Cheap Here's a music extravaganza so big that only the Mizner Park Amphitheater can contain it. The City of Boca Raton hosts the FAU Bands, including the FAU Wind Ensemble, Marching... Copyright South Florida on the Cheap. The post FREE: FAU Band-o-Rama, Mizner Park, Nov. 22 appeared first on South Florida on the Cheap.",
-          "es": "South Florida on the Cheap Aquí hay un espectáculo de música tan grande que solo el Anfiteatro de Mizner Park puede contenerlo. La Ciudad de Boca Ratón presenta las Bandas FAU, incluyendo la Banda de Vientos FAU, Marchas...",
-          "pt": "South Florida on the Cheap Aqui há um espetáculo de música tão grande que apenas o Anfiteatro de Mizner Park pode contê-lo. A Cidade de Boca Ratão apresenta as Bandas FAU, incluindo a Banda de Sopros FAU, Marchas...",
-          "fr": "South Florida on the Cheap Voici un spectacle musical si grand que seul l'Amphithéâtre Mizner Park peut le contenir. La Ville de Boca Raton accueille les Orchestres FAU, dont l'Ensemble de Cuivres FAU, les Fanfares..."
-        },
-        "source": "Miami on the Cheap",
-        "category": "music"
-      },
-      {
         "id": "tm_1794864842368_pzmm",
         "title": {
           "en": "Hamilton (Touring)",
@@ -4000,6 +3872,336 @@
         "category": "sports",
         "lat": 26.3656459,
         "lng": -80.104592
+      },
+      {
+        "id": "rss_1794947029350_o1ah",
+        "title": {
+          "en": "Operated by MOAD, Freedom Tower taps into Miami’s history and the people who shaped it",
+          "es": "Operado por MOAD, Freedom Tower explora la historia de Miami y las personas que la moldearon",
+          "pt": "Operado por MOAD, Freedom Tower explora a história de Miami e as pessoas que a moldaram",
+          "fr": "Exploité par le MOAD, le Freedom Tower explore l'histoire de Miami et les personnes qui l'ont façonnée"
+        },
+        "date": "2026-11-17",
+        "venue": "Miami New Times",
+        "address": "",
+        "url": "https://www.miaminewtimes.com/sponsored/freedom-tower-taps-into-miami-history-40597007/",
+        "free": false,
+        "price": "",
+        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/11/Freedom-Tower-September-30-2025.-Photo-by-Giorgio-Viera.-sm.jpg",
+        "description": {
+          "en": "The Museum of Art and Design's vibrant new exhibition will be on view during Miami Art Week.",
+          "es": "La nueva y vibrante exposición del Museo de Arte y Diseño estará visible durante la Semana de Arte de Miami.",
+          "pt": "A nova e vibrante exposição do Museu de Arte e Design estará em exibição durante a Semana de Arte de Miami.",
+          "fr": "La nouvelle exposition dynamique du Musée d'Art et de Design sera visible pendant la Semaine de l'Art de Miami."
+        },
+        "source": "Miami New Times",
+        "category": "arts"
+      },
+      {
+        "id": "rss_1794947029350_toap",
+        "title": {
+          "en": "“GARTEL: The Digital Art Revolution – 50 Years of Vision, Technology & Innovation” Exhibition at History Fort Lauderdale 12/3/26 – 1/24/27",
+          "es": "Exposición \"GARTEL: La Revolución del Arte Digital – 50 Años de Visión, Tecnología e Innovación\" en History Fort Lauderdale 12/3/26 – 1/24/27",
+          "pt": "Exposição \"GARTEL: A Revolução da Arte Digital – 50 Anos de Visão, Tecnologia e Inovação\" em History Fort Lauderdale 12/3/26 – 1/24/27",
+          "fr": "Exposition \"GARTEL : La Révolution de l'Art Numérique – 50 Ans de Vision, Technologie et Innovation\" au History Fort Lauderdale 12/3/26 – 1/24/27"
+        },
+        "date": "2026-12-03",
+        "venue": "History Fort Lauderdale",
+        "address": "231 SW Second Avenue, Fort Lauderdale, Florida, 33301",
+        "url": "https://www.soulofmiami.org/2026/11/17/gartel-the-digital-art-revolution-50-years-of-vision-technology-innovation-exhibition-at-history-fort-lauderdale-12-3-26-12-4-26-12-5-26-12-6-26-12-7-26-12-8-26-12-9/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Full-Exhibit-Run-No-Logos-for-Calendar-350x365.jpg",
+        "description": {
+          "en": "“GARTEL: The Digital Art Revolution – 50 Years of Vision, Technology & Innovation” Exhibition at History Fort Lauderdale Thursday, 12/03/2026-01/24/2027, 10:00 am-04:00 pm History Fort Lauderdale 231 SW Second Avenue, Fort Lauderdale, Florida, 33301 Website Cost: Art exhibit is FREE;Read More “GARTEL: The Digital Art Revolution – 50 Years of Vision, Technology & Innovation” Exhibition at History F",
+          "es": "Exposición \"GARTEL: La Revolución del Arte Digital – 50 Años de Visión, Tecnología e Innovación\" en History Fort Lauderdale jueves, 03/12/2026-24/01/2027, 10:00 am-04:00 pm History Fort Lauderdale 231 SW Second Avenue, Fort Lauderdale, Florida, 33301 Sitio web Costo: La exposición de arte es GRATIS.",
+          "pt": "Exposição \"GARTEL: A Revolução da Arte Digital – 50 Anos de Visão, Tecnologia e Inovação\" em History Fort Lauderdale quinta-feira, 03/12/2026-24/01/2027, 10:00 am-04:00 pm History Fort Lauderdale 231 SW Second Avenue, Fort Lauderdale, Florida, 33301 Site Custo: A exposição de arte é GRATUITA.",
+          "fr": "Exposition \"GARTEL : La Révolution de l'Art Numérique – 50 Ans de Vision, Technologie et Innovation\" au History Fort Lauderdale jeudi, 03/12/2026-24/01/2027, 10:00 am-04:00 pm History Fort Lauderdale 231 SW Second Avenue, Fort Lauderdale, Florida, 33301 Site web Coût : L'exposition d'art est GRATUITE."
+        },
+        "source": "Soul of Miami",
+        "category": "arts"
+      },
+      {
+        "id": "rss_1794947029350_mfto",
+        "title": {
+          "en": "Ladies Who Lunch: Tuesday Afternoon Drag Show 11/17/26",
+          "es": "Señoras que Almuerzan: Show de Drag Martes por la Tarde 11/17/26",
+          "pt": "Senhoras que Almoçam: Show de Drag Terça à Tarde 11/17/26",
+          "fr": "Dames qui Déjeunent : Show de Drag Mardi Après-midi 11/17/26"
+        },
+        "date": "2026-11-17",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/11/17/ladies-who-lunch-tuesday-afternoon-drag-show-11-17-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Tuesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los martes son para los chicos que desayunan bellamente en Palace South Beach. Únete a nosotros",
+          "pt": "Terças-feiras são para os rapazes que brunch lindamente em Palace South Beach. Junte-se a nós",
+          "fr": "Les mardis sont pour les garçons qui brunchent magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1794947029350_p38d",
+        "title": {
+          "en": "Ladies Who Lunch: Wednesday Afternoon Drag Show 11/18/26",
+          "es": "Señoras que Almuerzan: Show de Drag Miércoles por la Tarde 11/18/26",
+          "pt": "Senhoras que Almoçam: Show de Drag Quarta à Tarde 11/18/26",
+          "fr": "Dames qui Déjeunent : Show de Drag Mercredi Après-midi 11/18/26"
+        },
+        "date": "2026-11-18",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/11/17/ladies-who-lunch-wednesday-afternoon-drag-show-11-18-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Wednesdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los miércoles son para los chicos que desayunan bellamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quartas-feiras são para os rapazes que brunch lindamente em Palace South Beach. Junte-se a nós",
+          "fr": "Les mercredis sont pour les garçons qui brunchent magnifiquement au Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1794947029350_utv2",
+        "title": {
+          "en": "Christmas on Las Olas 12/1/26",
+          "es": "Navidad en Las Olas 12/1/26",
+          "pt": "Natal em Las Olas 12/1/26",
+          "fr": "Noël à Las Olas 12/1/26"
+        },
+        "date": "2026-12-01",
+        "venue": "Las Olas Boulevard Las Olas Boulevard between SE 6th Avenue and SE 11th Avenue, Fort Lauderdale, Florida, 33301",
+        "address": "",
+        "url": "https://www.soulofmiami.org/2026/11/17/christmas-on-las-olas-12-1-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "The 64th Annual Christmas on Las Olas shuts down Las",
+          "es": "El 64º anual Navidad en Las Olas cierra Las",
+          "pt": "O 64º anual Natal em Las Olas fecha Las",
+          "fr": "Le 64e Noël annuel à Las Olas ferme Las"
+        },
+        "source": "Soul of Miami",
+        "category": "community"
+      },
+      {
+        "id": "rss_1794947029350_d0p4",
+        "title": {
+          "en": "Ladies Who Lunch: Thursday Afternoon Drag Show 11/19/26",
+          "es": "Ladies Who Lunch: Espectáculo de Drag Show Jueves por la Tarde 11/19/26",
+          "pt": "Ladies Who Lunch: Show de Drag na Tarde de Quinta-feira 11/19/26",
+          "fr": "Ladies Who Lunch: Spectacle de Drag Show Jeudi Après-midi 11/19/26"
+        },
+        "date": "2026-11-19",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/11/17/ladies-who-lunch-thursday-afternoon-drag-show-11-19-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Thursdays are for the boys who brunch beautifully at Palace South Beach. Join us",
+          "es": "Los jueves son para los chicos que desayunan bellamente en Palace South Beach. Únete a nosotros",
+          "pt": "Quintas-feiras são para os rapazes que brunch lindamente na Palace South Beach. Junte-se a nós",
+          "fr": "Les jeudis sont pour les garçons qui brunchen magnifiquement à Palace South Beach. Rejoignez-nous"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "food-drink"
+      },
+      {
+        "id": "rss_1794947029350_5kqw",
+        "title": {
+          "en": "Cafe Con Leche: Thursday Night Latin Drag Revue 11/19/26",
+          "es": "Café Con Leche: Revista de Drag Latino Jueves por la Noche 11/19/26",
+          "pt": "Café Com Leite: Revista de Drag Latino Quinta-feira à Noite 11/19/26",
+          "fr": "Café Con Leche: Revue de Drag Latin Jeudi Soir 11/19/26"
+        },
+        "date": "2026-11-19",
+        "venue": "Palace Bar & Restaurant",
+        "address": "1052 Ocean Drive, Miami Beach, Florida, 33139",
+        "url": "https://www.soulofmiami.org/2026/11/17/cafe-con-leche-thursday-night-latin-drag-revue-11-19-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "Turn up the flavor and the fantasy at Palace South Beach for Café",
+          "es": "Sube el sabor y la fantasía en Palace South Beach para Café",
+          "pt": "Aumente o sabor e a fantasia na Palace South Beach para Café",
+          "fr": "Augmentez la saveur et la fantaisie à Palace South Beach pour Café"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7812488,
+        "lng": -80.130772,
+        "category": "community"
+      },
+      {
+        "id": "tm_1794947030037_0xpj",
+        "title": {
+          "en": "Earlybirds Club - 80s Night",
+          "es": "Club Earlybirds - Noche de los 80",
+          "pt": "Earlybirds Club - Noite dos Anos 80",
+          "fr": "Earlybirds Club - Soirée des Années 80"
+        },
+        "date": "2026-11-21",
+        "venue": "Revolution Live",
+        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fearlybirds-club-80s-night-ft-lauderdale-florida-11-21-2026%2Fevent%2F0D006539391F50D0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/2bb/8bc3e5bc-c95a-4f9c-a2dc-b95d347992bb_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Earlybirds Club - 80s Night will be performing at Revolution Live on Saturday, November 21st. This event is 21+. Doors open at 6pm. Show starts at 6pm. All support acts are subject to change without notice. Earlybirds Club is a dance party for women and gender-expansive folks who have shit to do in the morning! For 80s Night, we?re going big: big hair, big feelings, bigger choruses, and songs that",
+          "es": "Earlybirds Club - Noche de los 80 se presentará en Revolution Live el sábado 21 de noviembre. Este evento es para mayores de 21 años. Las puertas abren a las 6pm. El show comienza a las 6pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. Earlybirds Club es una fiesta de baile para mujeres y personas con género expansivo que tienen cosas que hacer por la mañana. Para la Noche de los 80, vamos en grande: cabello grande, sentimientos grandes, coros más grandes y canciones que",
+          "pt": "Earlybirds Club - Noite dos Anos 80 apresentará em Revolution Live no sábado, 21 de novembro. Este evento é 21+. As portas abrem às 18h. O show começa às 18h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. Earlybirds Club é uma festa de dança para mulheres e pessoas com gênero expansivo que têm coisas para fazer de manhã! Para a Noite dos Anos 80, estamos indo grande: cabelo grande, sentimentos grandes, refrões maiores e músicas que",
+          "fr": "Earlybirds Club - Soirée des Années 80 se produira à Revolution Live le samedi 21 novembre. Cet événement est réservé aux 21 ans et plus. Les portes ouvrent à 18h. Le spectacle commence à 18h. Tous les actes de soutien peuvent être modifiés sans préavis. Earlybirds Club est une fête dansante pour les femmes et les personnes non-binaires qui ont des choses à faire le matin ! Pour la Soirée des Années 80, on voit grand : cheveux volumineux, sentiments grands, refrains plus grands et chansons qui"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.121094,
+        "lng": -80.146162
+      },
+      {
+        "id": "tm_1794947030037_fqm1",
+        "title": {
+          "en": "Florida Panthers vs. Buffalo Sabres",
+          "es": "Florida Panthers vs. Buffalo Sabres",
+          "pt": "Florida Panthers vs. Buffalo Sabres",
+          "fr": "Florida Panthers vs. Buffalo Sabres"
+        },
+        "date": "2026-11-21",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J486&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Hockey · Starts 18:00 · Amerant Bank Arena",
+          "es": "Deportes · Hockey · Comienza a las 18:00 · Amerant Bank Arena",
+          "pt": "Esportes · Hóquei · Começa às 18:00 · Amerant Bank Arena",
+          "fr": "Sports · Hockey · Commence à 18:00 · Amerant Bank Arena"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1794947030037_6fw3",
+        "title": {
+          "en": "Miami Hurricanes vs Virginia Tech Hokies",
+          "es": "Miami Hurricanes vs Virginia Tech Hokies",
+          "pt": "Miami Hurricanes vs Virginia Tech Hokies",
+          "fr": "Miami Hurricanes vs Virginia Tech Hokies"
+        },
+        "date": "2026-11-21",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-vs-virginia-tech-hokies-miami-florida-11-21-2026%2Fevent%2F0D0064FCBFBA6F2A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/022/a96b1453-309b-48e2-a776-f2dd19d83022_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 19:00 · Hard Rock Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza a las 19:00 · Hard Rock Stadium",
+          "pt": "Esportes · Futebol Americano · Começa às 19:00 · Hard Rock Stadium",
+          "fr": "Sports · Football Américain · Commence à 19:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1794947030037_6cbg",
+        "title": {
+          "en": "MLS Cup Playoffs Game 1 - Inter Miami CF vs Columbus Crew",
+          "es": "Playoffs de la MLS Juego 1 - Inter Miami CF vs Columbus Crew",
+          "pt": "Playoffs da MLS Jogo 1 - Inter Miami CF vs Columbus Crew",
+          "fr": "Éliminatoires de la MLS Match 1 - Inter Miami CF vs Columbus Crew"
+        },
+        "date": "2026-11-21",
+        "venue": "Nu Stadium",
+        "address": "1900 NW 37th Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmls-cup-playoffs-game-1-inter-miami-florida-11-21-2026%2Fevent%2F0D00654FEC0EE15A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "For information about Suites please call 305-428-0611. · Starts 19:00 · Nu Stadium",
+          "es": "Para información sobre Suite llamar al 305-428-0611. · Comienza 19:00 · Nu Stadium",
+          "pt": "Para informações sobre Suítes, ligue para 305-428-0611. · Começa 19:00 · Nu Stadium",
+          "fr": "Pour des informations sur les Suites, appelez le 305-428-0611. · Commence 19:00 · Nu Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.792676,
+        "lng": -80.259406
+      },
+      {
+        "id": "tm_1794947030037_56gy",
+        "title": {
+          "en": "Natalie Cuomo",
+          "es": "Natalie Cuomo",
+          "pt": "Natalie Cuomo",
+          "fr": "Natalie Cuomo"
+        },
+        "date": "2026-11-21",
+        "venue": "The Studio at Mizner Park",
+        "address": "201 W Plaza Real, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnatalie-cuomo-boca-raton-florida-11-21-2026%2Fevent%2F0D006457A9D8A830&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/511/f36365c4-92f9-4064-a370-9fbf1f755511_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Based in New York, where she started comedy, Natalie Cuomo is an international touring stand-up comedian whose debut album Shut Up You Loved It released at #1 on the iTunes Comedy Charts. In 2023, Natalie was named one of New York Comedy Festivals Comics to Watch, and was named a finalist in the festivals New Yorks Funniest Competition the following year in 2024. She has been featured in New York ",
+          "es": "Basada en Nueva York, donde comenzó su carrera en comedia, Natalie Cuomo es una comediante stand-up internacional de gira cuyo álbum debut Shut Up You Loved It se lanzó en el #1 en las Listas de Comedia de iTunes. En 2023, Natalie fue nombrada una de los Cómicos a Seguir del New York Comedy Festival, y fue nombrada finalista en la competencia New Yorks Funniest del festival al año siguiente en 2024. Ha sido presentada en Nueva York",
+          "pt": "Com base em Nova York, onde começou sua carreira em comédia, Natalie Cuomo é uma comediante stand-up internacional em turnê cujo álbum de estreia Shut Up You Loved It foi lançado no #1 nas Listas de Comédia do iTunes. Em 2023, Natalie foi nomeada uma das Comics para Assistir do New York Comedy Festival, e foi nomeada finalista na competição New Yorks Funniest do festival no ano seguinte em 2024. Ela foi destaque em Nova York",
+          "fr": "Basée à New York, où elle a commencé sa carrière comique, Natalie Cuomo est une comédienne stand-up internationale en tournée dont l'album de débuts Shut Up You Loved It a été lancé au #1 des Charts de Comédie iTunes. En 2023, Natalie a été nommée l'une des Comics à Suivre du New York Comedy Festival, et a été nommée finaliste à la compétition New Yorks Funniest du festival l'année suivante en 2024. Elle a été présentée à New York"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.35289,
+        "lng": -80.08569
+      },
+      {
+        "id": "cp_1794947033328_9pbc",
+        "title": {
+          "en": "Movies in the Park: Zootopia 2",
+          "es": "Películas en el Parque: Zootopia 2",
+          "pt": "Filmes no Parque: Zootopia 2",
+          "fr": "Films au Parc: Zootopia 2"
+        },
+        "date": "2027-01-22",
+        "venue": "-   Deerfield Beach FL 33441",
+        "address": "",
+        "url": "/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=24",
+        "free": false,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "https://deerfield-beach.com/calendar.aspx?EID=5784",
+          "es": "https://deerfield-beach.com/calendar.aspx?EID=5784",
+          "pt": "https://deerfield-beach.com/calendar.aspx?EID=5784",
+          "fr": "https://deerfield-beach.com/calendar.aspx?EID=5784"
+        },
+        "source": "Deerfield Beach",
+        "category": "community"
       }
     ]
   },
@@ -4903,10 +5105,10 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-16T21:34:52.406Z",
+    "fetchedAt": "2026-11-17T20:25:14.480Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.c04ffec25a74691aef1d1045a51ea1ed34c8cde7.002.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.465d2a618eba3d32bc39d27eafaea5f186700dcf.002.1",
         "type": "weather",
         "severity": "moderate",
         "title": {
@@ -4916,15 +5118,36 @@
           "fr": "Avis de Courants de Baïn"
         },
         "detail": {
-          "en": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...Through Wednesday evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
-          "es": "* QUÉ...Corrientes de resaca peligrosas.\n\n* DÓNDE...Costas del condado de Miami Dade.\n\n* CUÁNDO...Hasta el miércoles por la noche.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la orilla hacia aguas más profundas.",
-          "pt": "* O QUÊ...Correntes de ressaca perigosas.\n\n* ONDE...Litoral do Condado de Miami Dade.\n\n* QUANDO...Até quarta-feira à noite.\n\n* IMPACTOS...Correntes de ressaca podem arrastar até mesmo os melhores nadadores para longe da costa em águas mais profundas.",
-          "fr": "* QUOI...Courants de retour dangereux.\n\n* OÙ...Côte du comté de Miami Dade.\n\n* QUAND...Jusqu'à mercredi soir.\n\n* IMPACTS...Les courants de retour peuvent entraîner même les meilleurs nageurs loin du rivage vers des eaux plus profondes."
+          "en": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...Through Thursday evening.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water.",
+          "es": "* QUÉ...Corrientes de resaca peligrosas.\n\n* DÓNDE...Condado costero de Miami Dade.\n\n* CUÁNDO...Hasta el jueves por la noche.\n\n* IMPACTOS...Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores lejos de la costa hacia aguas más profundas.",
+          "pt": "* O QUÊ...Correntes de retorno perigosas.\n\n* ONDE...Condado costeiro de Miami Dade.\n\n* QUANDO...Até quinta-feira à noite.\n\n* IMPACTOS...Correntes de retorno podem arrastar até mesmo os melhores nadadores para longe da costa em águas mais profundas.",
+          "fr": "* QUOI...Courants de retour dangereux.\n\n* OÙ...Comté côtier de Miami-Dade.\n\n* QUAND...Jusqu'à jeudi soir.\n\n* IMPACTS...Les courants de retour peuvent entraîner même les meilleurs nageurs loin du rivage dans des eaux plus profondes."
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c04ffec25a74691aef1d1045a51ea1ed34c8cde7.002.1",
-        "effectiveAt": "2026-11-16T15:38:00-05:00",
-        "expiresAt": "2026-11-17T09:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.465d2a618eba3d32bc39d27eafaea5f186700dcf.002.1",
+        "effectiveAt": "2026-11-17T08:09:00-05:00",
+        "expiresAt": "2026-11-17T22:00:00.000Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.34e1233ec6bc79e30c9bc98038a2433a03feb520.001.1",
+        "type": "weather",
+        "severity": "severe",
+        "title": {
+          "en": "Flood Watch",
+          "es": "Flood Watch",
+          "pt": "Flood Watch",
+          "fr": "Flood Watch"
+        },
+        "detail": {
+          "en": "* WHAT...Flash flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...A portion of southeast Florida, including the following\nareas, Coastal Broward County, Coastal Miami Dade County, Coastal\nPalm Beach County, Far South Miami-Dade County, Inland Broward\nCounty, Inland Miami-Dade County, Inland Palm Beach County, Metro\nBroward County, Metro Palm Beach County and Metropolitan Mi",
+          "es": "* QUÉ...Las inundaciones repentinas causadas por lluvia excesiva continúan siendo posibles.\n\n* DÓNDE...Una porción del sureste de Florida, incluyendo las siguientes áreas, Condado de Broward costero, Condado de Miami Dade costero, Condado de Palm Beach costero, Condado de Miami-Dade Far South, Condado de Broward interior, Condado de Miami-Dade interior, Condado de Palm Beach interior, Condado de Broward metropolitano, Condado de Palm Beach metropolitano y Miami metropolitano.",
+          "pt": "* O QUÊ...Inundações súbitas causadas por chuva excessiva continuam sendo possíveis.\n\n* ONDE...Uma porção do sudeste da Flórida, incluindo as seguintes áreas, Condado de Broward costeiro, Condado de Miami-Dade costeiro, Condado de Palm Beach costeiro, Condado de Miami-Dade distante do sul, Condado de Broward interior, Condado de Miami-Dade interior, Condado de Palm Beach interior, Condado de Broward metropolitano, Condado de Palm Beach metropolitano e Miami metropolitano.",
+          "fr": "* QUOI...Les inondations soudaines causées par des pluies excessives restent possibles.\n\n* OÙ...Une partie du sud-est de la Floride, y compris les zones suivantes, Comté côtier de Broward, Comté côtier de Miami-Dade, Comté côtier de Palm Beach, Comté de Miami-Dade Far South, Comté intérieur de Broward, Comté intérieur de Miami-Dade, Comté intérieur de Palm Beach, Comté métropolitain de Broward, Comté métropolitain de Palm Beach et Miami métropolitain."
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.34e1233ec6bc79e30c9bc98038a2433a03feb520.001.1",
+        "effectiveAt": "2026-11-17T08:07:00-05:00",
+        "expiresAt": "2026-11-17T22:00:00.000Z"
       }
     ]
   }
