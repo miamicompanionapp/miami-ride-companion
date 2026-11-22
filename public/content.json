@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-21T18:39:09.489Z",
+    "lastUpdated": "2026-11-22T18:59:25.183Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-20T19:33:52.469Z",
+    "fetchedAt": "2026-11-22T18:59:24.610Z",
     "current": {
-      "temp_f": 78,
-      "feels_f": 84,
+      "temp_f": 82,
+      "feels_f": 88,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 80,
-      "wind_mph": 5,
-      "rain_chance": 2,
-      "weathercode": 3
+      "humidity": 69,
+      "wind_mph": 6,
+      "rain_chance": 26,
+      "weathercode": 0
     },
     "forecast": [
       {
-        "date": "2026-11-20",
-        "high_f": 78,
+        "date": "2026-11-22",
+        "high_f": 82,
         "low_f": 70,
-        "weathercode": 45,
-        "rain_chance": 2,
-        "description": {
-          "en": "Foggy",
-          "es": "Neblina",
-          "pt": "Nevoeiro",
-          "fr": "Brumeux"
-        }
-      },
-      {
-        "date": "2026-11-21",
-        "high_f": 79,
-        "low_f": 69,
         "weathercode": 3,
-        "rain_chance": 31,
+        "rain_chance": 26,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -48,24 +35,11 @@
         }
       },
       {
-        "date": "2026-11-22",
-        "high_f": 84,
-        "low_f": 71,
-        "weathercode": 53,
-        "rain_chance": 29,
-        "description": {
-          "en": "Partly cloudy",
-          "es": "Parcialmente nublado",
-          "pt": "Parcialmente nublado",
-          "fr": "Partiellement nuageux"
-        }
-      },
-      {
         "date": "2026-11-23",
-        "high_f": 79,
-        "low_f": 73,
+        "high_f": 75,
+        "low_f": 63,
         "weathercode": 3,
-        "rain_chance": 16,
+        "rain_chance": 1,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -75,162 +49,188 @@
       },
       {
         "date": "2026-11-24",
-        "high_f": 79,
-        "low_f": 76,
-        "weathercode": 80,
-        "rain_chance": 41,
+        "high_f": 77,
+        "low_f": 63,
+        "weathercode": 81,
+        "rain_chance": 35,
         "description": {
-          "en": "Rain showers",
-          "es": "Chubascos",
-          "pt": "Aguaceiros",
-          "fr": "Averses"
+          "en": "Moderate showers",
+          "es": "Chubascos moderados",
+          "pt": "Aguaceiros moderados",
+          "fr": "Averses modérées"
+        }
+      },
+      {
+        "date": "2026-11-25",
+        "high_f": 79,
+        "low_f": 72,
+        "weathercode": 95,
+        "rain_chance": 78,
+        "description": {
+          "en": "Thunderstorm",
+          "es": "Tormenta eléctrica",
+          "pt": "Trovoada",
+          "fr": "Orage"
+        }
+      },
+      {
+        "date": "2026-11-26",
+        "high_f": 80,
+        "low_f": 71,
+        "weathercode": 51,
+        "rain_chance": 26,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       }
     ],
     "hourly": [
       {
+        "hour": "13:00",
+        "temp_f": 82,
+        "weathercode": 1,
+        "rain_chance": 0
+      },
+      {
         "hour": "14:00",
-        "temp_f": 78,
-        "weathercode": 3,
+        "temp_f": 82,
+        "weathercode": 0,
         "rain_chance": 1
       },
       {
         "hour": "15:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 81,
+        "weathercode": 0,
+        "rain_chance": 3
       },
       {
         "hour": "16:00",
-        "temp_f": 78,
-        "weathercode": 3,
-        "rain_chance": 1
+        "temp_f": 80,
+        "weathercode": 0,
+        "rain_chance": 6
       },
       {
         "hour": "17:00",
+        "temp_f": 78,
+        "weathercode": 0,
+        "rain_chance": 1
+      },
+      {
+        "hour": "18:00",
         "temp_f": 76,
         "weathercode": 3,
         "rain_chance": 1
       },
       {
-        "hour": "18:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 2
-      },
-      {
         "hour": "19:00",
-        "temp_f": 74,
+        "temp_f": 76,
         "weathercode": 2,
-        "rain_chance": 2
+        "rain_chance": 0
       },
       {
         "hour": "20:00",
-        "temp_f": 73,
-        "weathercode": 2,
-        "rain_chance": 2
+        "temp_f": 75,
+        "weathercode": 1,
+        "rain_chance": 0
       },
       {
         "hour": "21:00",
         "temp_f": 73,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 0
       },
       {
         "hour": "22:00",
         "temp_f": 72,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 0
       },
       {
         "hour": "23:00",
         "temp_f": 71,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 0
       },
       {
         "hour": "00:00",
-        "temp_f": 71,
+        "temp_f": 70,
         "weathercode": 0,
-        "rain_chance": 2
+        "rain_chance": 0
       },
       {
         "hour": "01:00",
-        "temp_f": 72,
+        "temp_f": 69,
         "weathercode": 0,
-        "rain_chance": 3
+        "rain_chance": 0
       },
       {
         "hour": "02:00",
-        "temp_f": 71,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "03:00",
-        "temp_f": 71,
-        "weathercode": 3,
-        "rain_chance": 3
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "04:00",
-        "temp_f": 71,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "05:00",
-        "temp_f": 71,
-        "weathercode": 2,
-        "rain_chance": 4
+        "temp_f": 67,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "06:00",
-        "temp_f": 69,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 67,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "07:00",
-        "temp_f": 69,
-        "weathercode": 0,
-        "rain_chance": 4
+        "temp_f": 66,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "08:00",
-        "temp_f": 72,
-        "weathercode": 2,
-        "rain_chance": 5
+        "temp_f": 68,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 74,
+        "temp_f": 70,
         "weathercode": 3,
-        "rain_chance": 6
+        "rain_chance": 0
       },
       {
         "hour": "10:00",
-        "temp_f": 75,
+        "temp_f": 71,
         "weathercode": 3,
-        "rain_chance": 7
+        "rain_chance": 0
       },
       {
         "hour": "11:00",
-        "temp_f": 78,
-        "weathercode": 0,
-        "rain_chance": 12
+        "temp_f": 73,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "12:00",
-        "temp_f": 78,
-        "weathercode": 1,
-        "rain_chance": 16
-      },
-      {
-        "hour": "13:00",
-        "temp_f": 78,
+        "temp_f": 74,
         "weathercode": 3,
-        "rain_chance": 20
+        "rain_chance": 0
       }
     ]
   },
@@ -1702,32 +1702,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1789917582376_wzlr",
-        "title": {
-          "en": "Hollywood Real Jazz Festival Saturday 11/21/26",
-          "es": "Festival de Jazz Real de Hollywood Sábado 11/21/26",
-          "pt": "Festival de Jazz Real de Hollywood Sábado 11/21/26",
-          "fr": "Festival de Jazz Réel de Hollywood Samedi 11/21/26"
-        },
-        "date": "2026-11-21",
-        "venue": "ArtsPark at Young Circle",
-        "address": "1 Young Circle, Hollywood, Florida, 33020",
-        "url": "https://www.soulofmiami.org/2026/09/19/hollywood-real-jazz-festival-saturday-11-21-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/09/MW.FB-Event.1920x1080.HRJF@300x-8-350x197.png",
-        "description": {
-          "en": "The Hollywood Real Jazz Festival takes over Hollywood for two days of live jazz on Friday, November 20",
-          "es": "El Festival de Jazz Real de Hollywood se apodera de Hollywood durante dos días de jazz en vivo el viernes, 20 de noviembre",
-          "pt": "O Festival de Jazz Real de Hollywood toma conta de Hollywood durante dois dias de jazz ao vivo na sexta-feira, 20 de novembro",
-          "fr": "Le Festival de Jazz Réel de Hollywood prend le contrôle de Hollywood pendant deux jours de jazz en direct le vendredi 20 novembre"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.012267,
-        "lng": -80.1439444,
-        "category": "community"
-      },
-      {
         "id": "rss_1790179156218_b9e3",
         "title": {
           "en": "The Glendronach Single Malt Scotch Dinner 12/17/26",
@@ -1797,30 +1771,6 @@
           "es": "Prueba el evento de citas rápidas",
           "pt": "Experimente o evento de speed dating",
           "fr": "Essayez l'événement de rendez-vous rapides"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
-        "id": "rss_1790961630257_8sr5",
-        "title": {
-          "en": "SinEditar Comedia Stand Up en Espanol con Wilson Escobar 11/21/26",
-          "es": "SinEditar Comedia Stand Up en Español con Wilson Escobar 11/21/26",
-          "pt": "SinEditar Comédia Stand Up em Espanhol com Wilson Escobar 11/21/26",
-          "fr": "SinEditar Comédie Stand Up en Espagnol avec Wilson Escobar 11/21/26"
-        },
-        "date": "2026-11-21",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/10/01/sineditar-comedia-stand-up-en-espanol-con-wilson-escobar-11-21-26/",
-        "free": false,
-        "price": "$15",
-        "image": "",
-        "description": {
-          "en": "preventa 20 en puerta SinEditar es el show de stand up en",
-          "es": "preventa 20 en puerta SinEditar es el show de stand up en",
-          "pt": "pré-venda 20 na porta SinEditar é o show de stand up em",
-          "fr": "prévente 20 à la porte SinEditar est le spectacle de stand up en"
         },
         "source": "Soul of Miami",
         "category": "community"
@@ -2078,58 +2028,6 @@
         "category": "arts"
       },
       {
-        "id": "rss_1793121652395_gb45",
-        "title": {
-          "en": "Overtown Legacy Series at The Betsy: Carole Ann Taylor & Angel Perez Trio 11/21/26",
-          "es": "Serie Legado de Overtown en The Betsy: Carole Ann Taylor & Angel Perez Trio 21/11/26",
-          "pt": "Série Legado de Overtown no The Betsy: Carole Ann Taylor & Angel Perez Trio 21/11/26",
-          "fr": "Série Héritage d'Overtown au The Betsy : Carole Ann Taylor & Angel Perez Trio 21/11/26"
-        },
-        "date": "2026-11-21",
-        "venue": "The Piano Bar",
-        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/26/overtown-legacy-series-at-the-betsy-carole-ann-taylor-angel-perez-trio-11-21-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/Overtown-Legacy-350x175.png",
-        "description": {
-          "en": "The longest-running live music series on Miami Beach –",
-          "es": "La serie de música en vivo más larga de Miami Beach –",
-          "pt": "A série de música ao vivo mais longa de Miami Beach –",
-          "fr": "La plus longue série de musique live de Miami Beach –"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7864648,
-        "lng": -80.129768,
-        "category": "music"
-      },
-      {
-        "id": "rss_1793554399592_qeno",
-        "title": {
-          "en": "Opera on the Terrace Gerard Ortega and Friends 11/21/26",
-          "es": "Ópera en la Terraza Gerard Ortega y Amigos 11/21/26",
-          "pt": "Ópera no Terraço Gerard Ortega e Amigos 11/21/26",
-          "fr": "Opéra sur la Terrasse Gerard Ortega et Amis 11/21/26"
-        },
-        "date": "2026-11-21",
-        "venue": "The Betsy Hotel",
-        "address": "1440 Ocean Drive, Miami Beach, Florida, 33139",
-        "url": "https://www.soulofmiami.org/2026/10/31/opera-on-the-terrace-gerard-ortega-and-friends-11-21-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/1200x1200-350x350.jpg",
-        "description": {
-          "en": "Join us for our beloved and highly respected ‘Opera on the Terrace’ program –",
-          "es": "Acompáñanos a nuestro amado y muy respetado programa 'Ópera en la Terraza' –",
-          "pt": "Junte-se a nós em nosso estimado e altamente respeitado programa 'Ópera no Terraço' –",
-          "fr": "Rejoignez-nous pour notre bien-aimé et très respecté programme 'Opéra sur la Terrasse' –"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7864648,
-        "lng": -80.129768,
-        "category": "arts"
-      },
-      {
         "id": "rss_1793654363175_8vx9",
         "title": {
           "en": "7th Annual Holiday Cookie Throwdown at The Marker Key West 12/24/26",
@@ -2312,30 +2210,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1794071991822_t476",
-        "title": {
-          "en": "Seven Gates Chakra Cleansing Guided Meditation 11/21/26",
-          "es": "Meditación Guiada de Limpieza de Chakras de Siete Puertas 11/21/26",
-          "pt": "Meditação Guiada de Limpeza dos Sete Chakras 11/21/26",
-          "fr": "Méditation Guidée de Nettoyage des Sept Chakras 11/21/26"
-        },
-        "date": "2026-11-21",
-        "venue": "Soul of Miami",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/11/07/seven-gates-chakra-cleansing-guided-meditation-11-21-26/",
-        "free": false,
-        "price": "$33",
-        "image": "",
-        "description": {
-          "en": "for one; $44 for two Join Aileen Rodriguez of Roselight Wellness for a",
-          "es": "por una; $44 por dos Únete a Aileen Rodriguez de Roselight Wellness para",
-          "pt": "por um; $44 por dois Junte-se a Aileen Rodriguez de Roselight Wellness para",
-          "fr": "pour un ; $44 pour deux Rejoignez Aileen Rodriguez de Roselight Wellness pour"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1794071991822_wfk1",
         "title": {
           "en": "Group Past Life Regression with Aileen and Alain 11/29/26",
@@ -2458,32 +2332,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1794424250102_1t65",
-        "title": {
-          "en": "Holiday Fantasy of Lights 11/21/26",
-          "es": "Fantasía Holiday de Luces 11/21/26",
-          "pt": "Fantasia Natalina de Luzes 11/21/26",
-          "fr": "Fantaisie Lumineuse des Fêtes 11/21/26"
-        },
-        "date": "2026-11-21",
-        "venue": "Tradewinds Park (North Entrance)",
-        "address": "3600 W Sample Road, Coconut Creek, Florida, 33073",
-        "url": "https://www.soulofmiami.org/2026/11/11/holiday-fantasy-of-lights-11-21-26/",
-        "free": false,
-        "price": "$34",
-        "image": "",
-        "description": {
-          "en": "per car South Florida’s original holiday lights drive-thru opens its 32nd year at Tradewinds Park. Drive",
-          "es": "por automóvil El original recorrido en automóvil de luces navideñas del Sur de Florida abre su año 32 en Tradewinds Park. Manejo",
-          "pt": "por carro O original drive-thru de luzes natalinas do Sul da Flórida abre seu 32º ano no Tradewinds Park. Dirigir",
-          "fr": "par voiture Le parcours automobile original des lumières de vacances du sud de la Floride ouvre sa 32e année à Tradewinds Park. Conduire"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.2686518,
-        "lng": -80.1715896,
-        "category": "community"
-      },
-      {
         "id": "rss_1794424250102_l2in",
         "title": {
           "en": "CultureFest 305 1/23/27",
@@ -2534,32 +2382,6 @@
         "lat": 26.119283,
         "lng": -80.105151,
         "category": "music"
-      },
-      {
-        "id": "rss_1794511691167_8vgq",
-        "title": {
-          "en": "Hoffmans Chocolates Winter Wonderland at Flamingo Gardens 11/21/26 – 12/30/26",
-          "es": "País de las Maravillas Invernal de Hoffmans Chocolates en Flamingo Gardens 11/21/26 – 12/30/26",
-          "pt": "País das Maravilhas Invernal de Hoffmans Chocolates em Flamingo Gardens 11/21/26 – 12/30/26",
-          "fr": "Pays des Merveilles Hivernal de Hoffmans Chocolates à Flamingo Gardens 11/21/26 – 12/30/26"
-        },
-        "date": "2026-11-21",
-        "venue": "Flamingo Gardens",
-        "address": "3750 S Flamingo Road, Davie, Florida, 33330",
-        "url": "https://www.soulofmiami.org/2026/11/12/hoffmans-chocolates-winter-wonderland-at-flamingo-gardens-11-21-26-12-30-26/",
-        "free": false,
-        "price": "$24",
-        "image": "",
-        "description": {
-          "en": "ages 12 and up, $17 ages 3 to 11, under 3 free Second year at Flamingo",
-          "es": "mayores de 12 años $17 edades 3 a 11, menores de 3 gratis Segundo año en Flamingo",
-          "pt": "maiores de 12 anos $17 idades 3 a 11, menores de 3 grátis Segundo ano em Flamingo",
-          "fr": "12 ans et plus $17 âges 3 à 11, moins de 3 gratuit Deuxième année à Flamingo"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.0695478,
-        "lng": -80.3136196,
-        "category": "community"
       },
       {
         "id": "cp_1794511692831_5ac9",
@@ -2662,110 +2484,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1794767084611_yvq3",
-        "title": {
-          "en": "Boca Raton Wine and Food Festival 11/21/26",
-          "es": "Festival de Vino y Gastronomía de Boca Raton 21/11/26",
-          "pt": "Festival de Vinho e Gastronomia de Boca Raton 21/11/26",
-          "fr": "Festival du Vin et de la Gastronomie de Boca Raton 21/11/26"
-        },
-        "date": "2026-11-21",
-        "venue": "Sanborn Square Park",
-        "address": "72 N Federal Hwy, Boca Raton, Florida, 33432",
-        "url": "https://www.soulofmiami.org/2026/11/15/boca-raton-wine-and-food-festival-11-21-26/",
-        "free": false,
-        "price": "",
-        "image": "",
-        "description": {
-          "en": "$65, 21 and up An evening of wine and food tastings at Sanborn Square Park",
-          "es": "$65, mayores de 21 años. Una noche de degustaciones de vino y comida en Sanborn Square Park",
-          "pt": "$65, maiores de 21 anos. Uma noite de degustações de vinho e comida no Sanborn Square Park",
-          "fr": "$65, 21 ans et plus. Une soirée de dégustations de vin et de nourriture au Sanborn Square Park"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.3511092,
-        "lng": -80.0863267,
-        "category": "community"
-      },
-      {
-        "id": "tm_1794864842369_pj95",
-        "title": {
-          "en": "Fort Lauderdale Children's Ballet Theatre: Cinderella",
-          "es": "Ballet Infantil de Fort Lauderdale: Cenicienta",
-          "pt": "Teatro Infantil de Fort Lauderdale: Cinderela",
-          "fr": "Ballet Enfant de Fort Lauderdale: Cendrillon"
-        },
-        "date": "2026-11-21",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ffort-lauderdale-childrens-ballet-theatre-cinderella-ft-lauderdale-florida-11-21-2026%2Fevent%2F0D00652BA3639A59&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/7d7/d9c18de4-8d23-4859-9622-76442cd3e7d7_1517891_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Horvitz Lobby or Amaturo Theater. Find all the information ",
-          "es": "Para convertirse en miembro del Broward Center y recibir acceso a asientos excelentes y preventas, visite BrowardCenter.org/Entourage hoy. Planifique su visita antes de ir al espectáculo para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluyendo la Sala Intermezzo del Sistema de Salud Infantil Nicklaus y nuestras opciones de comida y bebida en el Vestíbulo Horvitz o Teatro Amaturo.",
-          "pt": "Para se tornar membro do Broward Center e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Planeje sua visita antes de ir ao show para informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Intermezzo Lounge do Sistema de Saúde Infantil Nicklaus e nossas opções de comida e bebida no Saguão Horvitz ou Teatro Amaturo.",
-          "fr": "Pour devenir membre du Broward Center et accéder à d'excellents sièges et préventes, visitez BrowardCenter.org/Entourage aujourd'hui. Planifiez votre visite avant le spectacle pour des informations sur le stationnement en utilisant l'application ParkMobile, les expériences culinaires incluant le Salon Intermezzo du Système de Santé Enfants Nicklaus et nos options de nourriture et boissons dans le Foyer Horvitz ou le Théâtre Amaturo."
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1794864842369_xb8a",
-        "title": {
-          "en": "Billie Jean King Cup by Gainbridge - Saturday",
-          "es": "Copa Billie Jean King por Gainbridge - Sábado",
-          "pt": "Copa Billie Jean King by Gainbridge - Sábado",
-          "fr": "Coupe Billie Jean King by Gainbridge - Samedi"
-        },
-        "date": "2026-11-21",
-        "venue": "Delray Beach Tennis Center",
-        "address": "201 W. Atlantic Ave, Delray Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbillie-jean-king-cup-by-gainbridge-delray-beach-florida-11-21-2026%2Fevent%2F0D006542004B6BB2&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/2b0/8664403c-942f-4d9d-8682-93cb84dce2b0_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "USA vs Hungary. Matches will begin at 1:30pm. This ticket is valid for Saturday admission only. Ages 2 and above require a ticket. · Starts 13:30 · Delray Beach Tennis Center",
-          "es": "USA vs Hungría. Los partidos comenzarán a las 13:30. Esta entrada es válida solo para la admisión del sábado. Mayores de 2 años requieren entrada. · Comienza 13:30 · Centro de Tenis de Delray Beach",
-          "pt": "EUA vs Hungria. As partidas começarão às 13:30. Este ingresso é válido apenas para entrada de sábado. Maiores de 2 anos requerem ingresso. · Começa 13:30 · Centro de Tênis de Delray Beach",
-          "fr": "USA vs Hongrie. Les matchs commenceront à 13h30. Ce billet n'est valide que pour l'admission du samedi. Les enfants de 2 ans et plus nécessitent un billet. · Commence 13:30 · Centre de Tennis de Delray Beach"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.46249,
-        "lng": -80.075479
-      },
-      {
-        "id": "tm_1794864842369_1fzd",
-        "title": {
-          "en": "Florida Atlantic University Owls Football vs. South Florida Bulls Football",
-          "es": "Fútbol Americano: Florida Atlantic University Owls vs. South Florida Bulls",
-          "pt": "Futebol Americano: Florida Atlantic University Owls vs. South Florida Bulls",
-          "fr": "Football Américain: Florida Atlantic University Owls vs. South Florida Bulls"
-        },
-        "date": "2026-11-21",
-        "venue": "Flagler Credit Union Stadium",
-        "address": "777 Glades Rd, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fflorida-atlantic-university-owls-football-vs-boca-raton-florida-11-21-2026%2Fevent%2F0D0064C5CEBB4511&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/2ca/8aa0e41b-afc1-4098-a44c-bf8a0662d2ca_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 14:30 · Flagler Credit Union Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza 14:30 · Estadio Flagler Credit Union",
-          "pt": "Esportes · Futebol Americano · Começa 14:30 · Estádio Flagler Credit Union",
-          "fr": "Sports · Football Américain · Commence 14:30 · Stade Flagler Credit Union"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.3656459,
-        "lng": -80.104592
-      },
-      {
         "id": "rss_1794947029350_toap",
         "title": {
           "en": "“GARTEL: The Digital Art Revolution – 50 Years of Vision, Technology & Innovation” Exhibition at History Fort Lauderdale 12/3/26 – 1/24/27",
@@ -2814,136 +2532,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1794947030037_0xpj",
-        "title": {
-          "en": "Earlybirds Club - 80s Night",
-          "es": "Club Earlybirds - Noche de los 80",
-          "pt": "Earlybirds Club - Noite dos Anos 80",
-          "fr": "Earlybirds Club - Soirée des Années 80"
-        },
-        "date": "2026-11-21",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fearlybirds-club-80s-night-ft-lauderdale-florida-11-21-2026%2Fevent%2F0D006539391F50D0&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/2bb/8bc3e5bc-c95a-4f9c-a2dc-b95d347992bb_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Earlybirds Club - 80s Night will be performing at Revolution Live on Saturday, November 21st. This event is 21+. Doors open at 6pm. Show starts at 6pm. All support acts are subject to change without notice. Earlybirds Club is a dance party for women and gender-expansive folks who have shit to do in the morning! For 80s Night, we?re going big: big hair, big feelings, bigger choruses, and songs that",
-          "es": "Earlybirds Club - Noche de los 80 se presentará en Revolution Live el sábado 21 de noviembre. Este evento es para mayores de 21 años. Las puertas abren a las 6pm. El show comienza a las 6pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. Earlybirds Club es una fiesta de baile para mujeres y personas con género expansivo que tienen cosas que hacer por la mañana. Para la Noche de los 80, vamos en grande: cabello grande, sentimientos grandes, coros más grandes y canciones que",
-          "pt": "Earlybirds Club - Noite dos Anos 80 apresentará em Revolution Live no sábado, 21 de novembro. Este evento é 21+. As portas abrem às 18h. O show começa às 18h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. Earlybirds Club é uma festa de dança para mulheres e pessoas com gênero expansivo que têm coisas para fazer de manhã! Para a Noite dos Anos 80, estamos indo grande: cabelo grande, sentimentos grandes, refrões maiores e músicas que",
-          "fr": "Earlybirds Club - Soirée des Années 80 se produira à Revolution Live le samedi 21 novembre. Cet événement est réservé aux 21 ans et plus. Les portes ouvrent à 18h. Le spectacle commence à 18h. Tous les actes de soutien peuvent être modifiés sans préavis. Earlybirds Club est une fête dansante pour les femmes et les personnes non-binaires qui ont des choses à faire le matin ! Pour la Soirée des Années 80, on voit grand : cheveux volumineux, sentiments grands, refrains plus grands et chansons qui"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1794947030037_fqm1",
-        "title": {
-          "en": "Florida Panthers vs. Buffalo Sabres",
-          "es": "Florida Panthers vs. Buffalo Sabres",
-          "pt": "Florida Panthers vs. Buffalo Sabres",
-          "fr": "Florida Panthers vs. Buffalo Sabres"
-        },
-        "date": "2026-11-21",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J486&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Hockey · Starts 18:00 · Amerant Bank Arena",
-          "es": "Deportes · Hockey · Comienza a las 18:00 · Amerant Bank Arena",
-          "pt": "Esportes · Hóquei · Começa às 18:00 · Amerant Bank Arena",
-          "fr": "Sports · Hockey · Commence à 18:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
-        "id": "tm_1794947030037_6fw3",
-        "title": {
-          "en": "Miami Hurricanes vs Virginia Tech Hokies",
-          "es": "Miami Hurricanes vs Virginia Tech Hokies",
-          "pt": "Miami Hurricanes vs Virginia Tech Hokies",
-          "fr": "Miami Hurricanes vs Virginia Tech Hokies"
-        },
-        "date": "2026-11-21",
-        "venue": "Hard Rock Stadium",
-        "address": "347 Don Shula Drive, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-vs-virginia-tech-hokies-miami-florida-11-21-2026%2Fevent%2F0D0064FCBFBA6F2A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/022/a96b1453-309b-48e2-a776-f2dd19d83022_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Football · Starts 19:00 · Hard Rock Stadium",
-          "es": "Deportes · Fútbol Americano · Comienza a las 19:00 · Hard Rock Stadium",
-          "pt": "Esportes · Futebol Americano · Começa às 19:00 · Hard Rock Stadium",
-          "fr": "Sports · Football Américain · Commence à 19:00 · Hard Rock Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.957928,
-        "lng": -80.238866
-      },
-      {
-        "id": "tm_1794947030037_6cbg",
-        "title": {
-          "en": "MLS Cup Playoffs Game 1 - Inter Miami CF vs Columbus Crew",
-          "es": "Playoffs de la MLS Juego 1 - Inter Miami CF vs Columbus Crew",
-          "pt": "Playoffs da MLS Jogo 1 - Inter Miami CF vs Columbus Crew",
-          "fr": "Éliminatoires de la MLS Match 1 - Inter Miami CF vs Columbus Crew"
-        },
-        "date": "2026-11-21",
-        "venue": "Nu Stadium",
-        "address": "1900 NW 37th Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmls-cup-playoffs-game-1-inter-miami-florida-11-21-2026%2Fevent%2F0D00654FEC0EE15A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ab9/d6dc607c-5a78-43fe-a27b-8e302e319ab9_1628521_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "For information about Suites please call 305-428-0611. · Starts 19:00 · Nu Stadium",
-          "es": "Para información sobre Suite llamar al 305-428-0611. · Comienza 19:00 · Nu Stadium",
-          "pt": "Para informações sobre Suítes, ligue para 305-428-0611. · Começa 19:00 · Nu Stadium",
-          "fr": "Pour des informations sur les Suites, appelez le 305-428-0611. · Commence 19:00 · Nu Stadium"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 25.792676,
-        "lng": -80.259406
-      },
-      {
-        "id": "tm_1794947030037_56gy",
-        "title": {
-          "en": "Natalie Cuomo",
-          "es": "Natalie Cuomo",
-          "pt": "Natalie Cuomo",
-          "fr": "Natalie Cuomo"
-        },
-        "date": "2026-11-21",
-        "venue": "The Studio at Mizner Park",
-        "address": "201 W Plaza Real, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fnatalie-cuomo-boca-raton-florida-11-21-2026%2Fevent%2F0D006457A9D8A830&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/511/f36365c4-92f9-4064-a370-9fbf1f755511_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Based in New York, where she started comedy, Natalie Cuomo is an international touring stand-up comedian whose debut album Shut Up You Loved It released at #1 on the iTunes Comedy Charts. In 2023, Natalie was named one of New York Comedy Festivals Comics to Watch, and was named a finalist in the festivals New Yorks Funniest Competition the following year in 2024. She has been featured in New York ",
-          "es": "Basada en Nueva York, donde comenzó su carrera en comedia, Natalie Cuomo es una comediante stand-up internacional de gira cuyo álbum debut Shut Up You Loved It se lanzó en el #1 en las Listas de Comedia de iTunes. En 2023, Natalie fue nombrada una de los Cómicos a Seguir del New York Comedy Festival, y fue nombrada finalista en la competencia New Yorks Funniest del festival al año siguiente en 2024. Ha sido presentada en Nueva York",
-          "pt": "Com base em Nova York, onde começou sua carreira em comédia, Natalie Cuomo é uma comediante stand-up internacional em turnê cujo álbum de estreia Shut Up You Loved It foi lançado no #1 nas Listas de Comédia do iTunes. Em 2023, Natalie foi nomeada uma das Comics para Assistir do New York Comedy Festival, e foi nomeada finalista na competição New Yorks Funniest do festival no ano seguinte em 2024. Ela foi destaque em Nova York",
-          "fr": "Basée à New York, où elle a commencé sa carrière comique, Natalie Cuomo est une comédienne stand-up internationale en tournée dont l'album de débuts Shut Up You Loved It a été lancé au #1 des Charts de Comédie iTunes. En 2023, Natalie a été nommée l'une des Comics à Suivre du New York Comedy Festival, et a été nommée finaliste à la compétition New Yorks Funniest du festival l'année suivante en 2024. Elle a été présentée à New York"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.35289,
-        "lng": -80.08569
-      },
-      {
         "id": "cp_1794947033328_9pbc",
         "title": {
           "en": "Movies in the Park: Zootopia 2",
@@ -2966,110 +2554,6 @@
         },
         "source": "Deerfield Beach",
         "category": "community"
-      },
-      {
-        "id": "tm_1795031611515_frnz",
-        "title": {
-          "en": "Magic In Mizner - Remy Connor",
-          "es": "Magia en Mizner - Remy Connor",
-          "pt": "Magia em Mizner - Remy Connor",
-          "fr": "La Magie à Mizner - Remy Connor"
-        },
-        "date": "2026-11-21",
-        "venue": "The Studio at Mizner Park",
-        "address": "201 W Plaza Real, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmagic-in-mizner-remy-connor-boca-raton-florida-11-21-2026%2Fevent%2F0D00654846D65FAF&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/902/a66def2d-9f56-452f-ab22-58d50d4bf902_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Magic In Mizner Presents: Fall of Magic featuring World-Class Magician and Modern Mentalist, Remy Conner. · Starts 19:00 · The Studio at Mizner Park",
-          "es": "Magic In Mizner Presenta: Fall of Magic con el mago de clase mundial y mentalista moderno, Remy Conner. · Comienza 19:00 · The Studio at Mizner Park",
-          "pt": "Magic In Mizner Apresenta: Fall of Magic com o mago de classe mundial e mentalista moderno, Remy Conner. · Começa 19:00 · The Studio at Mizner Park",
-          "fr": "Magic In Mizner Présente : Fall of Magic avec le magicien de classe mondiale et mentaliste moderne, Remy Conner. · Commence 19:00 · The Studio at Mizner Park"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.35289,
-        "lng": -80.08569
-      },
-      {
-        "id": "tm_1795031611515_s2al",
-        "title": {
-          "en": "Donny Benet",
-          "es": "Donny Benet",
-          "pt": "Donny Benet",
-          "fr": "Donny Benet"
-        },
-        "date": "2026-11-21",
-        "venue": "ZeyZey Miami",
-        "address": "353 NE 61st St, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A708F9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/001/fbd3d402-1ad0-423f-95f0-1f5b6b485001_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Music · Other · Starts 19:30 · ZeyZey Miami",
-          "es": "Música · Otro · Comienza 19:30 · ZeyZey Miami",
-          "pt": "Música · Outro · Começa 19:30 · ZeyZey Miami",
-          "fr": "Musique · Autre · Commence 19:30 · ZeyZey Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.8172,
-        "lng": -80.188797
-      },
-      {
-        "id": "tm_1795031611515_h6nw",
-        "title": {
-          "en": "Ripe",
-          "es": "Ripe",
-          "pt": "Ripe",
-          "fr": "Ripe"
-        },
-        "date": "2026-11-21",
-        "venue": "Culture Room",
-        "address": "3045 N Federal Hwy, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fripe-ft-lauderdale-florida-11-21-2026%2Fevent%2F0D006518C43296C3&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/7aa/2f21c5af-711a-41da-bb63-62c55e6e37aa_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Ripe with special guests Soulpax Doors open 7:30pm · Starts 19:30 · Culture Room",
-          "es": "Ripe con invitados especiales Soulpax. Las puertas abren a las 7:30pm · Comienza 19:30 · Culture Room",
-          "pt": "Ripe com convidados especiais Soulpax. As portas abrem às 19:30 · Começa 19:30 · Culture Room",
-          "fr": "Ripe avec invités spéciaux Soulpax. Les portes ouvrent à 19:30 · Commence 19:30 · Culture Room"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.166888,
-        "lng": -80.117058
-      },
-      {
-        "id": "tm_1795031611515_wakb",
-        "title": {
-          "en": "Top of the World -  A Tribute to the Carpenters",
-          "es": "Top of the World - Un Tributo a The Carpenters",
-          "pt": "Top of the World - Uma Homenagem aos The Carpenters",
-          "fr": "Top of the World - Un Hommage aux Carpenters"
-        },
-        "date": "2026-11-21",
-        "venue": "Aventura Arts & Cultural Center",
-        "address": "3385 NE 188th Street, Aventura, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftop-of-the-world-a-tribute-aventura-florida-11-21-2026%2Fevent%2F0D0064CAC866CC56&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/3ba/e896e537-6d47-47c3-b40e-13dd7b6a23ba_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "By popular demand...It's \"Yesterday Once More\" when Debbie Taylor and her 7 piece band bring the unforgettable, exquisite music of The Carpenters in this return engagement! The warmth and tone of Debbie's vocals are so reminiscent of Karen Carpenter, at times you'll think you're listening to Karen herself! This very talented and accomplished group of musicians, brings to life the most authentic ve",
-          "es": "¡Por popular demanda...Es \"Yesterday Once More\" cuando Debbie Taylor y su banda de 7 músicos traen la música inolvidable y exquisita de The Carpenters en este regreso! La calidez y tono de la voz de Debbie son tan reminiscentes de Karen Carpenter, que a veces parecerá que estás escuchando a Karen misma. Este grupo muy talentoso y logrado de músicos, da vida a la versión más auténtica",
-          "pt": "Por demanda popular...É \"Yesterday Once More\" quando Debbie Taylor e sua banda de 7 músicos trazem a música inesquecível e exquisita dos The Carpenters neste retorno! O calor e tom da voz de Debbie são tão reminiscentes de Karen Carpenter, que às vezes você pensará que está ouvindo a própria Karen! Este grupo muito talentoso e realizado de músicos, traz à vida a versão mais autêntica",
-          "fr": "Par demande populaire...C'est \"Yesterday Once More\" quand Debbie Taylor et son groupe de 7 musiciens apportent la musique inoubliable et exquise des Carpenters dans ce retour! La chaleur et le ton de la voix de Debbie sont si évocateurs de Karen Carpenter, qu'à certains moments vous croirez écouter Karen elle-même! Ce groupe très talentueux et accompli de musiciens, donne vie à la version la plus authentique"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.94960232,
-        "lng": -80.13458177
       },
       {
         "id": "rss_1795118016133_uf8e",
@@ -3146,188 +2630,6 @@
         "lat": 25.7918005,
         "lng": -80.1293104,
         "category": "music"
-      },
-      {
-        "id": "rss_1795118016134_sdp7",
-        "title": {
-          "en": "Miami Children’s Museum’s Winter Wonderland Exhibit: Opening Weekend 11/21/26, 11/22/26",
-          "es": "Exhibición Winter Wonderland del Museo de Niños de Miami: Fin de Semana de Apertura 11/21/26, 11/22/26",
-          "pt": "Exposição Winter Wonderland do Museu de Crianças de Miami: Fim de Semana de Abertura 11/21/26, 11/22/26",
-          "fr": "Exposition Winter Wonderland du Musée des Enfants de Miami: Fin de Semaine d'Ouverture 11/21/26, 11/22/26"
-        },
-        "date": "2026-11-21",
-        "venue": "Miami Children’s Museum",
-        "address": "980 MacArthur Causeway, Miami, Florida, 33132",
-        "url": "https://www.soulofmiami.org/2026/11/19/miami-childrens-museums-winter-wonderland-exhibit-opening-weekend-11-21-26-11-22-26/",
-        "free": false,
-        "price": "$26",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/winter-wonderland-350x234.jpg",
-        "description": {
-          "en": "Celebrate the magic of the season as Winter Wonderland: Sock Skating opens to the public!",
-          "es": "¡Celebra la magia de la temporada mientras Winter Wonderland: Sock Skating abre al público!",
-          "pt": "Celebre a magia da estação enquanto Winter Wonderland: Sock Skating abre ao público!",
-          "fr": "Célébrez la magie de la saison alors que Winter Wonderland: Sock Skating ouvre au public!"
-        },
-        "source": "Soul of Miami",
-        "lat": 25.7847781,
-        "lng": -80.1764864,
-        "category": "arts"
-      },
-      {
-        "id": "tm_1795118016688_nq2c",
-        "title": {
-          "en": "LA MAFIA - EPIC TOUR 46",
-          "es": "LA MAFIA - EPIC TOUR 46",
-          "pt": "LA MAFIA - EPIC TOUR 46",
-          "fr": "LA MAFIA - EPIC TOUR 46"
-        },
-        "date": "2026-11-21",
-        "venue": "James L Knight Center",
-        "address": "400 SE 2nd Ave, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fla-mafia-epic-tour-46-miami-florida-11-21-2026%2Fevent%2F0D0064C989B34CC2&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/ef9/abcc6eb7-6884-4727-a906-aae101f43ef9_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Epic Tour 46 is the highly anticipated 2026 concert tour by the four-time Grammy award-winning Tejano music group La Mafia. The tour celebrates the band's historic 46-year career and features a live setlist packed with their biggest career hits, such as \"Un millón de rosas\" and \"Me estoy enamorando\". · Starts 20:00 · James L Knight Center",
-          "es": "Epic Tour 46 es la gira de conciertos muy esperada de 2026 del grupo de música Tejana ganador de cuatro premios Grammy La Mafia. La gira celebra la histórica carrera de 46 años de la banda y presenta una lista en vivo repleta de sus mayores éxitos de carrera, como \"Un millón de rosas\" y \"Me estoy enamorando\". · Comienza 20:00 · James L Knight Center",
-          "pt": "Epic Tour 46 é a aguardada turnê de concertos de 2026 do grupo de música Tejana vencedor de quatro prêmios Grammy La Mafia. A turnê celebra a histórica carreira de 46 anos da banda e apresenta uma setlist ao vivo repleta de seus maiores sucessos de carreira, como \"Um milhão de rosas\" e \"Me estoy enamorando\". · Começa 20:00 · James L Knight Center",
-          "fr": "Epic Tour 46 est la très attendue tournée de concerts 2026 du groupe de musique Tejana lauréat de quatre Grammy Awards La Mafia. La tournée célèbre la carrière historique de 46 ans du groupe et présente une setlist en direct remplie de leurs plus grands succès, comme \"Un millón de rosas\" et \"Me estoy enamorando\". · Commence 20:00 · James L Knight Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.7707756,
-        "lng": -80.1901174
-      },
-      {
-        "id": "tm_1795118016688_zr5i",
-        "title": {
-          "en": "Leslie Jones: I'm Hot Tour",
-          "es": "Leslie Jones: I'm Hot Tour",
-          "pt": "Leslie Jones: I'm Hot Tour",
-          "fr": "Leslie Jones: I'm Hot Tour"
-        },
-        "date": "2026-11-21",
-        "venue": "Wells Hall at The Parker",
-        "address": "707 NE 8th Street, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fleslie-jones-im-hot-tour-ft-lauderdale-florida-11-21-2026%2Fevent%2F0D006486E60DF0E9&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/577/19224d47-9213-4fbf-97c3-2472ac96b577_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Leslie Jones is an American comedian, actress, and writer. Jones was a cast member and writer for the NBC sketch comedy series Saturday Night Live from 2014 to 2019, and is currently the host of Supermarket Sweep. She has also been a featured performer at the Just for Laughs festival in Montreal and the Aspen Comedy Festival. In 2010, her one-hour comedy special, Problem Child, was broadcast on Sh",
-          "es": "Leslie Jones es una comediante, actriz y escritora estadounidense. Jones fue miembro del elenco y escritora de la serie de comedia de sketch de NBC Saturday Night Live de 2014 a 2019, y actualmente es la anfitriona de Supermarket Sweep. También ha sido una artista destacada en el festival Just for Laughs en Montreal y el Festival de Comedia de Aspen. En 2010, su especial de comedia de una hora, Problem Child, fue transmitido en Sh",
-          "pt": "Leslie Jones é uma comediante, atriz e escritora americana. Jones foi membro do elenco e escritora da série de comédia de sketch da NBC Saturday Night Live de 2014 a 2019, e atualmente é apresentadora de Supermarket Sweep. Também foi artista destaque no festival Just for Laughs em Montreal e no Festival de Comédia de Aspen. Em 2010, seu especial de comédia de uma hora, Problem Child, foi exibido em Sh",
-          "fr": "Leslie Jones est une comédienne, actrice et scénariste américaine. Jones a été membre de la distribution et scénariste de la série de comédie de sketch de NBC Saturday Night Live de 2014 à 2019, et est actuellement l'hôtesse de Supermarket Sweep. Elle a également été artiste vedette au festival Just for Laughs à Montréal et au Festival de comédie d'Aspen. En 2010, son spécial de comédie d'une heure, Problem Child, a été diffusé sur Sh"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.134246,
-        "lng": -80.136172
-      },
-      {
-        "id": "tm_1795118016688_tb6a",
-        "title": {
-          "en": "Cheap Trills Musical Improv",
-          "es": "Cheap Trills Musical Improv",
-          "pt": "Cheap Trills Musical Improv",
-          "fr": "Cheap Trills Musical Improv"
-        },
-        "date": "2026-11-21",
-        "venue": "Just the Funny",
-        "address": "3119 Coral Way, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fcheap-trills-musical-improv-just-the-funny-tickets%2F14395114&utm_medium=affiliate",
-        "free": false,
-        "price": "$29",
-        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Cheap Trills Musical Improv Nothing beats a Cheap Trills show! It's a musical. It's a variety show. It's improv comedy. It's all of that and much more! Join the talented cast of Just The Funny and be prepared for a wild, hilarious ride. Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as close as possible, but may have to split",
-          "es": "¡Nada supera un show de Cheap Trills! Es un musical. Es un show de variedades. Es comedia de improvisación. ¡Es todo eso y mucho más! Únase al elenco talentoso de Just The Funny y prepárese para un viaje salvaje e hilariante. Los boletos son POR PERSONA para este show. Sentaremos a los grupos juntos en mesas. Haremos todo lo posible para sentar a grupos más grandes lo más cerca posible, pero podemos tener que dividir",
-          "pt": "Nada supera um show de Cheap Trills! É um musical. É um show de variedades. É comédia de improvisação. É tudo isso e muito mais! Junte-se ao talentoso elenco de Just The Funny e prepare-se para uma jornada selvagem e hilariante. Os ingressos são POR PESSOA para este show. Sentaremos os grupos juntos em mesas. Faremos o possível para sentar grupos maiores o mais próximo possível, mas podemos ter que dividir",
-          "fr": "Rien ne vaut un spectacle Cheap Trills! C'est une comédie musicale. C'est un spectacle de variétés. C'est de la comédie improvisée. C'est tout cela et bien plus! Rejoignez le casting talentueux de Just The Funny et préparez-vous pour un voyage sauvage et hilarant. Les billets sont PAR PERSONNE pour ce spectacle. Nous assiérons les groupes ensemble à des tables. Nous ferons de notre mieux pour asseoir les grands groupes aussi près que possible, mais nous devrons peut-être diviser"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 25.750417,
-        "lng": -80.244412
-      },
-      {
-        "id": "tm_1795118016688_xp2v",
-        "title": {
-          "en": "GO NOW! Music of The Moody Blues (18+ Event)",
-          "es": "GO NOW! La Música de The Moody Blues (Evento 18+)",
-          "pt": "GO NOW! Música de The Moody Blues (Evento 18+)",
-          "fr": "GO NOW! La Musique de The Moody Blues (Événement 18+)"
-        },
-        "date": "2026-11-21",
-        "venue": "Boca Black Box",
-        "address": "8221 Glades Rd #10, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAeFfP&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Starts 21:00 · Boca Black Box",
-          "es": "Comienza 21:00 · Boca Black Box",
-          "pt": "Começa 21:00 · Boca Black Box",
-          "fr": "Commence 21:00 · Boca Black Box"
-        },
-        "source": "Ticketmaster",
-        "lat": 26.381201,
-        "lng": -80.1707,
-        "category": "music"
-      },
-      {
-        "id": "tm_1795118016688_5vzh",
-        "title": {
-          "en": "D.O.D",
-          "es": "D.O.D",
-          "pt": "D.O.D",
-          "fr": "D.O.D"
-        },
-        "date": "2026-11-21",
-        "venue": "LIV Nightclub Miami",
-        "address": "4441 Collins Ave, Miami Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdod-liv-nightclub-miami-tickets%2F14363794&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/28c/21424130-f7a3-41c4-bad2-cefd7ae0428c_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
-          "es": "Este evento es mayor de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
-          "pt": "Este evento é maiores de 21 anos. Qualquer titular de ingresso que não pueda apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
-          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.817805,
-        "lng": -80.122143
-      },
-      {
-        "id": "tm_1795118016688_krpg",
-        "title": {
-          "en": "Billie Jean King Cup by Gainbridge - 2 Day Ticket",
-          "es": "Copa Billie Jean King by Gainbridge - Entrada de 2 Días",
-          "pt": "Copa Billie Jean King by Gainbridge - Ingresso de 2 Dias",
-          "fr": "Coupe Billie Jean King by Gainbridge - Billet 2 Jours"
-        },
-        "date": "2026-11-21",
-        "venue": "Delray Beach Tennis Center",
-        "address": "201 W. Atlantic Ave, Delray Beach, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fbillie-jean-king-cup-by-gainbridge-delray-beach-florida-11-21-2026%2Fevent%2F0D00650CF0BAE760&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/be5/e86d125e-267b-48b4-b1ed-c0872fbf0be5_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "USA vs Hungary. Matches will begin at 1:30pm on both days. This ticket is valid for both Saturday and Sunday. Ticket cannot be split by day. Ages 2 and above require a ticket. · Delray Beach Tennis Center",
-          "es": "USA vs Hungría. Los partidos comenzarán a las 13:30 en ambos días. Esta entrada es válida para sábado y domingo. La entrada no se puede dividir por día. Las edades 2 en adelante requieren entrada. · Delray Beach Tennis Center",
-          "pt": "EUA vs Hungria. As partidas começarão às 13:30 em ambos os dias. Este ingresso é válido para sábado e domingo. O ingresso não pode ser dividido por dia. Idades 2 em diante requerem ingresso. · Delray Beach Tennis Center",
-          "fr": "USA vs Hongrie. Les matchs commenceront à 13:30 les deux jours. Ce billet est valide pour samedi et dimanche. Le billet ne peut pas être divisé par jour. Les âges 2 et plus nécessitent un billet. · Delray Beach Tennis Center"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.46249,
-        "lng": -80.075479
       },
       {
         "id": "tm_1795118016688_7k7y",
@@ -3688,136 +2990,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1795286275766_dp98",
-        "title": {
-          "en": "Eric Andre",
-          "es": "Eric Andre",
-          "pt": "Eric Andre",
-          "fr": "Eric Andre"
-        },
-        "date": "2026-11-21",
-        "venue": "Miami Improv",
-        "address": "3450 Northwest 83rd Ave, #224, Doral, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PSr3&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/220/c71cc7a8-1cc2-43f5-8f31-3e8496eba220_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Miscellaneous · Starts 19:00 · Miami Improv",
-          "es": "Artes y Teatro · Misceláneos · Comienza 19:00 · Miami Improv",
-          "pt": "Artes e Teatro · Diversos · Começa 19:00 · Miami Improv",
-          "fr": "Arts et Théâtre · Divers · Commence 19:00 · Miami Improv"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 25.797899,
-        "lng": -80.307098
-      },
-      {
-        "id": "tm_1795286275766_icc2",
-        "title": {
-          "en": "DanceWorks",
-          "es": "DanceWorks",
-          "pt": "DanceWorks",
-          "fr": "DanceWorks"
-        },
-        "date": "2026-11-21",
-        "venue": "Rose & Alfred Miniaci Performing Arts Center",
-        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fdanceworks-ft-lauderdale-florida-11-21-2026%2Fevent%2F0D00650694F63ED0&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/e/3b7/f82e3533-80fa-4e93-9312-94aea1f193b7_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Parking is available in the Alvin Sherman Library parking garage using PayByPhone app or pay at booth. · Starts 19:30 · Rose & Alfred Miniaci Performing Arts Center",
-          "es": "El estacionamiento está disponible en el garaje de estacionamiento de la Biblioteca Alvin Sherman usando la aplicación PayByPhone o pagando en la cabina. · Comienza 19:30 · Centro de Artes Escénicas Rose & Alfred Miniaci",
-          "pt": "Estacionamento disponível na garagem de estacionamento da Biblioteca Alvin Sherman usando o aplicativo PayByPhone ou pagando no guichê. · Começa 19:30 · Centro de Artes Cênicas Rose & Alfred Miniaci",
-          "fr": "Le stationnement est disponible au garage de stationnement de la Bibliothèque Alvin Sherman en utilisant l'application PayByPhone ou en payant au guichet. · Commence 19:30 · Centre des Arts de la Scène Rose & Alfred Miniaci"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.0884017,
-        "lng": -80.2461624
-      },
-      {
-        "id": "tm_1795286275767_nz1y",
-        "title": {
-          "en": "Hamilton (Touring)",
-          "es": "Hamilton (Gira)",
-          "pt": "Hamilton (Turnê)",
-          "fr": "Hamilton (Tournée)"
-        },
-        "date": "2026-11-21",
-        "venue": "Au-Rene Theater at the Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhamilton-touring-ft-lauderdale-florida-11-21-2026%2Fevent%2F0D0064FBDE6B8574&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d7a/6ffed4d3-61d3-44c3-8e63-cc776582fd7a_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "A revolutionary story of passion, unstoppable ambition, and the dawn of a new nation. Hamilton is the epic saga that follows the rise of Founding Father Alexander Hamilton as he fights for honor, love, and a legacy that would shape the course of a nation. Based on Ron Chernow's acclaimed biography and set to a score that blends hip-hop, jazz, R&B, and Broadway, Hamilton has had a profound impact o",
-          "es": "Una historia revolucionaria de pasión, ambición imparable y el amanecer de una nueva nación. Hamilton es la epopeya que sigue el ascenso del Padre Fundador Alexander Hamilton mientras lucha por el honor, el amor y un legado que moldearía el curso de una nación. Basado en la aclamada biografía de Ron Chernow y con una partitura que mezcla hip-hop, jazz, R&B y Broadway, Hamilton ha tenido un profundo impacto",
-          "pt": "Uma história revolucionária de paixão, ambição imparável e o amanhecer de uma nova nação. Hamilton é a epopeia que segue o ascenso do Pai Fundador Alexander Hamilton enquanto ele luta por honra, amor e um legado que moldaria o curso de uma nação. Baseado na aclamada biografia de Ron Chernow e definido para uma pontuação que mistura hip-hop, jazz, R&B e Broadway, Hamilton teve um profundo impacto",
-          "fr": "Une histoire révolutionnaire de passion, d'ambition irrépressible et de l'aube d'une nouvelle nation. Hamilton est l'épopée qui suit l'ascension du Père fondateur Alexander Hamilton alors qu'il se bat pour l'honneur, l'amour et un héritage qui façonnerait le cours d'une nation. Basé sur la biographie acclamée de Ron Chernow et sur une partition qui mélange le hip-hop, le jazz, le R&B et Broadway, Hamilton a eu un impact profond"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1795286275767_ffkv",
-        "title": {
-          "en": "Sebastian Maniscalco Live",
-          "es": "Sebastian Maniscalco En Vivo",
-          "pt": "Sebastian Maniscalco Live",
-          "fr": "Sebastian Maniscalco En Direct"
-        },
-        "date": "2026-11-21",
-        "venue": "Hard Rock Live",
-        "address": "1 Seminole Way, Hollywood, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsebastian-maniscalco-live-hollywood-florida-11-21-2026%2Fevent%2F0D006466B061B100&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/29b/8c605a75-a663-42a6-9e7f-4ce814d6c29b_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Comedy · Starts 20:00 · Hard Rock Live",
-          "es": "Artes y Teatro · Comedia · Comienza a las 20:00 · Hard Rock Live",
-          "pt": "Artes e Teatro · Comédia · Começa às 20:00 · Hard Rock Live",
-          "fr": "Arts et Théâtre · Comédie · Commence à 20:00 · Hard Rock Live"
-        },
-        "source": "Ticketmaster",
-        "category": "comedy",
-        "lat": 26.0503384,
-        "lng": -80.2109577
-      },
-      {
-        "id": "tm_1795286275767_221f",
-        "title": {
-          "en": "JOHN SUMMIT - CTRL ESCAPE ARENA TOUR",
-          "es": "JOHN SUMMIT - GIRA CTRL ESCAPE ARENA",
-          "pt": "JOHN SUMMIT - CTRL ESCAPE ARENA TOUR",
-          "fr": "JOHN SUMMIT - CTRL ESCAPE ARENA TOUR"
-        },
-        "date": "2026-11-21",
-        "venue": "Kaseya Center",
-        "address": "601 Biscayne Blvd, Miami, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fjohn-summit-ctrl-escape-arena-tour-miami-florida-11-21-2026%2Fevent%2F0D0064B3A9E1800A&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/b99/44736a1a-46cb-41c3-8c65-d735b5a45b99_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "18+ is recommended but all ages welcome · Starts 20:00 · Kaseya Center",
-          "es": "Se recomienda 18+ pero todas las edades bienvenidas · Comienza a las 20:00 · Kaseya Center",
-          "pt": "Maiores de 18+ recomendado mas todas as idades bem-vindas · Começa às 20:00 · Kaseya Center",
-          "fr": "18+ recommandé mais tous les âges sont bienvenus · Commence à 20:00 · Kaseya Center"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 25.781232,
-        "lng": -80.187805
-      },
-      {
         "id": "tm_1795286275767_07sr",
         "title": {
           "en": "A Tribute to John Denver with Chris Collins and Boulder Canyon (18+ Event)",
@@ -4154,6 +3326,526 @@
         "lat": 25.98589,
         "lng": -80.37224,
         "category": "music"
+      },
+      {
+        "id": "tm_1795373891751_q0p4",
+        "title": {
+          "en": "Fort Lauderdale Children's Ballet Theatre: Cinderella",
+          "es": "Fort Lauderdale Children's Ballet Theatre: Cenicienta",
+          "pt": "Fort Lauderdale Children's Ballet Theatre: Cinderela",
+          "fr": "Fort Lauderdale Children's Ballet Theatre: Cendrillon"
+        },
+        "date": "2026-11-22",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ffort-lauderdale-childrens-ballet-theatre-cinderella-ft-lauderdale-florida-11-22-2026%2Fevent%2F0D00652BA3709A84&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/7d7/d9c18de4-8d23-4859-9622-76442cd3e7d7_1517891_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "To become a member of the Broward Center and receive access to great seats and presales, visit BrowardCenter.org/Entourage today. Plan your visit before you go to the show for info on parking using the ParkMobile app, dining experiences including the Nicklaus Children's Health System Intermezzo Lounge and our food and drink options in the Horvitz Lobby or Amaturo Theater. Find all the information ",
+          "es": "Para convertirse en miembro del Broward Center y recibir acceso a excelentes asientos y preventas, visite BrowardCenter.org/Entourage hoy. Planifique su visita antes de ir al espectáculo para obtener información sobre estacionamiento usando la aplicación ParkMobile, experiencias gastronómicas incluyendo la Sala Intermezzo del Sistema de Salud Infantil Nicklaus y nuestras opciones de comida y bebida en el Lobby Horvitz o Teatro Amaturo. Encuentre toda la información",
+          "pt": "Para se tornar membro do Broward Center e receber acesso a ótimos assentos e pré-vendas, visite BrowardCenter.org/Entourage hoje. Planeje sua visita antes de ir ao show para informações sobre estacionamento usando o aplicativo ParkMobile, experiências gastronômicas incluindo o Lounge Intermezzo do Nicklaus Children's Health System e nossas opções de comida e bebida no Lobby Horvitz ou Teatro Amaturo. Encontre todas as informações",
+          "fr": "Pour devenir membre du Broward Center et accéder à d'excellentes places et aux préventes, visitez BrowardCenter.org/Entourage dès aujourd'hui. Planifiez votre visite avant d'aller au spectacle pour obtenir des informations sur le stationnement via l'application ParkMobile, des expériences culinaires incluant le Lounge Intermezzo du Nicklaus Children's Health System et nos options de nourriture et de boisson au Lobby Horvitz ou au Théâtre Amaturo. Trouvez toutes les informations"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1795373891751_kcwi",
+        "title": {
+          "en": "Hamilton (Touring)",
+          "es": "Hamilton (Gira)",
+          "pt": "Hamilton (Turnê)",
+          "fr": "Hamilton (Tournée)"
+        },
+        "date": "2026-11-22",
+        "venue": "Au-Rene Theater at the Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fhamilton-touring-ft-lauderdale-florida-11-22-2026%2Fevent%2F0D0064FBDE74857B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d7a/6ffed4d3-61d3-44c3-8e63-cc776582fd7a_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "A revolutionary story of passion, unstoppable ambition, and the dawn of a new nation. Hamilton is the epic saga that follows the rise of Founding Father Alexander Hamilton as he fights for honor, love, and a legacy that would shape the course of a nation. Based on Ron Chernow's acclaimed biography and set to a score that blends hip-hop, jazz, R&B, and Broadway, Hamilton has had a profound impact o",
+          "es": "Una historia revolucionaria de pasión, ambición imparable y el comienzo de una nueva nación. Hamilton es la epopeya que sigue el ascenso del Padre Fundador Alexander Hamilton mientras lucha por el honor, el amor y un legado que moldearía el curso de una nación. Basada en la aclamada biografía de Ron Chernow y con una partitura que mezcla hip-hop, jazz, R&B y Broadway, Hamilton ha tenido un impacto profundo",
+          "pt": "Uma história revolucionária de paixão, ambição imparável e o alvorecer de uma nova nação. Hamilton é a epopeia que segue o ascenso do Pai Fundador Alexander Hamilton enquanto ele luta por honra, amor e um legado que moldaria o curso de uma nação. Baseado na aclamada biografia de Ron Chernow e definido em uma partitura que combina hip-hop, jazz, R&B e Broadway, Hamilton teve um impacto profundo",
+          "fr": "Une histoire révolutionnaire de passion, d'ambition irrésistible et l'aube d'une nouvelle nation. Hamilton est l'épopée qui suit l'ascension du Père Fondateur Alexander Hamilton alors qu'il se bat pour l'honneur, l'amour et un héritage qui façonnerait le cours d'une nation. Basé sur la biographie acclamée de Ron Chernow et sur une partition qui mélange le hip-hop, le jazz, le R&B et Broadway, Hamilton a eu un impact profond"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1795373891751_pftv",
+        "title": {
+          "en": "Eric Andre",
+          "es": "Eric Andre",
+          "pt": "Eric Andre",
+          "fr": "Eric Andre"
+        },
+        "date": "2026-11-22",
+        "venue": "Miami Improv",
+        "address": "3450 Northwest 83rd Ave, #224, Doral, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7PSr8&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/220/c71cc7a8-1cc2-43f5-8f31-3e8496eba220_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Miscellaneous · Starts 19:00 · Miami Improv",
+          "es": "Artes y Teatro · Miscelánea · Comienza 19:00 · Miami Improv",
+          "pt": "Artes e Teatro · Diversos · Começa 19:00 · Miami Improv",
+          "fr": "Arts et Théâtre · Divers · Commence 19:00 · Miami Improv"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 25.797899,
+        "lng": -80.307098
+      },
+      {
+        "id": "tm_1795373891751_0wgb",
+        "title": {
+          "en": "Sebastian Maniscalco Live",
+          "es": "Sebastian Maniscalco En Vivo",
+          "pt": "Sebastian Maniscalco Ao Vivo",
+          "fr": "Sebastian Maniscalco En Direct"
+        },
+        "date": "2026-11-22",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fsebastian-maniscalco-live-hollywood-florida-11-22-2026%2Fevent%2F0D006466B06FB118&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/29b/8c605a75-a663-42a6-9e7f-4ce814d6c29b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Arts & Theatre · Comedy · Starts 20:00 · Hard Rock Live",
+          "es": "Artes y Teatro · Comedia · Comienza 20:00 · Hard Rock Live",
+          "pt": "Artes e Teatro · Comédia · Começa 20:00 · Hard Rock Live",
+          "fr": "Arts et Théâtre · Comédie · Commence 20:00 · Hard Rock Live"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1795373891751_0ywb",
+        "title": {
+          "en": "Forrest Shaw",
+          "es": "Forrest Shaw",
+          "pt": "Forrest Shaw",
+          "fr": "Forrest Shaw"
+        },
+        "date": "2026-11-27",
+        "venue": "Boca Black Box",
+        "address": "8221 Glades Rd #10, Boca Raton, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AA7z86&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Starts 19:00 · Boca Black Box",
+          "es": "Comienza 19:00 · Boca Black Box",
+          "pt": "Começa 19:00 · Boca Black Box",
+          "fr": "Commence 19:00 · Boca Black Box"
+        },
+        "source": "Ticketmaster",
+        "lat": 26.381201,
+        "lng": -80.1707,
+        "category": "music"
+      },
+      {
+        "id": "tm_1795373891751_6fqk",
+        "title": {
+          "en": "Slaughter To Prevail: North America 2026 Leg 2",
+          "es": "Slaughter To Prevail: North America 2026 Leg 2",
+          "pt": "Slaughter To Prevail: North America 2026 Leg 2",
+          "fr": "Slaughter To Prevail: North America 2026 Leg 2"
+        },
+        "date": "2026-11-27",
+        "venue": "Revolution Live at the Backyard",
+        "address": "100 SW 3rd Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fslaughter-to-prevail-north-america-2026-ft-lauderdale-florida-11-27-2026%2Fevent%2F0D006522D25DD916&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/33b/84a91251-6cd7-450c-9499-c987189ec33b_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Slaughter To Prevail: North America 2026 Leg 2 will be coming to Revolution Live at the Backyard on Friday, November 27th with special guests Rev3rent. This event is All Ages. Doors open at 7:30pm. Show starts at 8:30pm. All support acts are subject to change without notice. This event is Rain or Shine. · Starts 19:30 · Revolution Live at the Backyard",
+          "es": "Slaughter To Prevail: North America 2026 Leg 2 llegará a Revolution Live at the Backyard el viernes 27 de noviembre con invitados especiales Rev3rent. Este evento es para todas las edades. Las puertas abren a las 7:30pm. El show comienza a las 8:30pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. Este evento es lluvia o brilla. · Comienza 19:30 · Revolution Live at the Backyard",
+          "pt": "Slaughter To Prevail: North America 2026 Leg 2 virá para Revolution Live at the Backyard na sexta-feira, 27 de novembro com convidados especiais Rev3rent. Este evento é para todas as idades. As portas abrem às 19h30. O show começa às 20h30. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. Este evento é com chuva ou sol. · Começa 19:30 · Revolution Live at the Backyard",
+          "fr": "Slaughter To Prevail: North America 2026 Leg 2 viendra à Revolution Live at the Backyard vendredi 27 novembre avec les invités spéciaux Rev3rent. Cet événement est pour tous les âges. Les portes ouvrent à 19h30. Le spectacle commence à 20h30. Tous les actes de soutien sont sujets à changement sans préavis. Cet événement se déroule sous la pluie ou le soleil. · Commence 19:30 · Revolution Live at the Backyard"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.12123121,
+        "lng": -80.14625645
+      },
+      {
+        "id": "tm_1795373891751_sxz6",
+        "title": {
+          "en": "Rocky Mountain High Experience: A John Denver Christmas",
+          "es": "Rocky Mountain High Experience: Una Navidad de John Denver",
+          "pt": "Rocky Mountain High Experience: Um Natal de John Denver",
+          "fr": "Rocky Mountain High Experience: Un Noël de John Denver"
+        },
+        "date": "2026-11-27",
+        "venue": "Wells Hall at The Parker",
+        "address": "707 NE 8th Street, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Frocky-mountain-high-experience-a-john-ft-lauderdale-florida-11-27-2026%2Fevent%2F0D0064E7A60C6BF0&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/562/96dcfdad-6b22-4aa3-916c-b68552977562_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Get ready to fall in love with the holidays all over again! Rocky Mountain High Experience®: A John Denver Christmas takes you back to the 1970s, a golden era when John Denver's music lit up the airwaves and warmed hearts across America. Acclaimed performer Rick Schuler brings it all back to life in a holiday concert you'll be talking about long after the season ends. Sing along to the Denver clas",
+          "es": "¡Prepárate para enamorarte de las vacaciones de nuevo! Rocky Mountain High Experience®: Una Navidad de John Denver te lleva de regreso a los años 70, una era dorada cuando la música de John Denver iluminaba las ondas de radio y calentaba los corazones en toda América. El aclamado intérprete Rick Schuler revive todo en un concierto navideño del que hablarás mucho después de que termine la temporada. Canta los clásicos de Denver",
+          "pt": "Prepare-se para se apaixonar pelas férias novamente! Rocky Mountain High Experience®: Um Natal de John Denver o leva de volta aos anos 70, uma era de ouro quando a música de John Denver iluminava as ondas de rádio e aquecia corações em toda a América. O aclamado intérprete Rick Schuler traz tudo de volta à vida em um show de Natal do qual você estará falando muito depois que a temporada terminar. Cante os clássicos de Denver",
+          "fr": "Préparez-vous à retomber amoureux des vacances! Rocky Mountain High Experience®: Un Noël de John Denver vous ramène aux années 70, une ère dorée où la musique de John Denver illuminait les ondes et réchauffait les cœurs à travers l'Amérique. L'interprète acclamé Rick Schuler redonne vie à tout cela lors d'un concert de Noël dont vous parlerez longtemps après la fin de la saison. Chantez les classiques de Denver"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.134246,
+        "lng": -80.136172
+      },
+      {
+        "id": "tm_1795373891751_bp5e",
+        "title": {
+          "en": "Marcello Hernández",
+          "es": "Marcello Hernández",
+          "pt": "Marcello Hernández",
+          "fr": "Marcello Hernández"
+        },
+        "date": "2026-11-27",
+        "venue": "Hard Rock Live",
+        "address": "1 Seminole Way, Hollywood, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmarcello-hernandez-hollywood-florida-11-27-2026%2Fevent%2F0D0064E8EAB319BB&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/ff8/3b8db203-0ac6-4160-ba83-994a87729ff8_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Este evento se llevará a cabo en español Este evento será una experiencia libre de teléfonos. No se permitirá el uso de teléfonos móviles, relojes inteligentes ni accesorios dentro del espacio de la presentación. Al llegar al recinto, todos los teléfonos móviles, relojes inteligentes y accesorios se guardarán en fundas individuales Yondr, que se abrirán al finalizar el evento. Los asistentes mante",
+          "es": "Este evento se llevará a cabo en español. Este evento será una experiencia libre de teléfonos. No se permitirá el uso de teléfonos móviles, relojes inteligentes ni accesorios dentro del espacio de la presentación. Al llegar al recinto, todos los teléfonos móviles, relojes inteligentes y accesorios se guardarán en fundas individuales Yondr, que se abrirán al finalizar el evento. Los asistentes mantendrán",
+          "pt": "Este evento será realizado em espanhol. Este evento será uma experiência sem telefone. Não será permitido o uso de telefones celulares, relógios inteligentes ou acessórios dentro do espaço de apresentação. Ao chegar ao local, todos os telefones celulares, relógios inteligentes e acessórios serão armazenados em estojos individuais Yondr, que serão abertos ao final do evento. Os participantes manterão",
+          "fr": "Cet événement se déroulera en espagnol. Cet événement sera une expérience sans téléphone. L'utilisation de téléphones cellulaires, montres intelligentes ou accessoires ne sera pas autorisée dans l'espace de présentation. À votre arrivée au lieu, tous les téléphones cellulaires, montres intelligentes et accessoires seront rangés dans des étuis individuels Yondr, qui seront ouverts à la fin de l'événement. Les participants maintiendront"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 26.0503384,
+        "lng": -80.2109577
+      },
+      {
+        "id": "tm_1795373891751_x7mp",
+        "title": {
+          "en": "Trippie Redd - The Non-disclosure Agreement Tour",
+          "es": "Trippie Redd - The Non-disclosure Agreement Tour",
+          "pt": "Trippie Redd - The Non-disclosure Agreement Tour",
+          "fr": "Trippie Redd - The Non-disclosure Agreement Tour"
+        },
+        "date": "2026-11-27",
+        "venue": "The Fillmore Miami Beach at Jackie Gleason Theater",
+        "address": "1700 Washington Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Ftrippie-redd-the-nondisclosure-agreement-tour-miami-beach-florida-11-27-2026%2Fevent%2F0D006532A2778E49&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f79/c44c3f4b-390c-47c3-901c-525346cb5f79_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "GA Tickets stand for General Admission. This means there is no assigned seating. These areas are standing and seated and are a first come, first served basis. Please know that once an area's capacity has been reached you will be limited to other open areas. · Starts 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "es": "Las entradas GA significan Admisión General. Esto significa que no hay asientos asignados. Estas áreas están de pie y sentadas y se basan en orden de llegada. Tenga en cuenta que una vez que se alcance la capacidad de un área, estará limitado a otras áreas abiertas. · Comienza 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "pt": "Ingressos GA significam Admissão Geral. Isso significa que não há assentos atribuídos. Essas áreas são em pé e sentadas e são por ordem de chegada. Esteja ciente de que uma vez que a capacidade de uma área for atingida, você estará limitado a outras áreas abertas. · Começa 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater",
+          "fr": "Les billets GA signifient Admission Générale. Cela signifie qu'il n'y a pas de sièges assignés. Ces zones sont debout et assises et se font selon le principe du premier arrivé, premier servi. Veuillez noter qu'une fois la capacité d'une zone atteinte, vous serez limité aux autres zones ouvertes. · Commence 20:00 · The Fillmore Miami Beach at Jackie Gleason Theater"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.792917,
+        "lng": -80.13314
+      },
+      {
+        "id": "tm_1795373891751_e36p",
+        "title": {
+          "en": "Emo Night Brooklyn in Miami",
+          "es": "Emo Night Brooklyn en Miami",
+          "pt": "Emo Night Brooklyn em Miami",
+          "fr": "Emo Night Brooklyn à Miami"
+        },
+        "date": "2026-11-27",
+        "venue": "Lincoln's Beard",
+        "address": "7360 SW 41st St. , Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Femo-night-brooklyn-in-miami-lincolns-beard-tickets%2F14322254&utm_medium=affiliate",
+        "free": true,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/bda/204a558e-2376-42c5-a169-37195950ebda_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 20:00 · Lincoln's Beard",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años de edad no será admitido en este evento y no será elegible para un reembolso. · Comienza 20:00 · Lincoln's Beard",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não puder apresentar uma identificação válida indicando que tem pelo menos 21 anos de idade não será admitido neste evento e não será elegível para reembolso. · Começa 20:00 · Lincoln's Beard",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 20:00 · Lincoln's Beard"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7321134,
+        "lng": -80.3143626
+      },
+      {
+        "id": "tm_1795373891751_64cb",
+        "title": {
+          "en": "El Gran Combo",
+          "es": "El Gran Combo",
+          "pt": "El Gran Combo",
+          "fr": "El Gran Combo"
+        },
+        "date": "2026-11-27",
+        "venue": "Watsco Center at the University of Miami",
+        "address": "1245 Dauer Dr, Coral Gables, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fel-gran-combo-coral-gables-florida-11-27-2026%2Fevent%2F0D0064FE04A2C17A&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/aad/f503ade7-ceb8-4ae4-8af5-0f0fd0a2aaad_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "VENTA FINAL. NO SE ADMITEN CAMBIOS. NO DEVOLUCIONES. Vive una noche inolvidable junto a El Gran Combo de Puerto Rico, la legendaria Universidad de la Salsa, interpretando todos sus grandes éxitos en vivo este 27 de Noviembre. ¡Reserva tus boletos hoy! Información: (786) 835-4170 ALL SALES ARE FINAL. NO REFUNDS OR EXCHANGES ALLOWED. Experience an unforgettable night with El Gran Combo de Puerto Ric",
+          "es": "VENTA FINAL. NO SE ADMITEN CAMBIOS. NO DEVOLUCIONES. Vive una noche inolvidable junto a El Gran Combo de Puerto Rico, la legendaria Universidad de la Salsa, interpretando todos sus grandes éxitos en vivo este 27 de Noviembre. ¡Reserva tus boletos hoy! Información: (786) 835-4170",
+          "pt": "VENDA FINAL. NÃO SÃO PERMITIDAS TROCAS. SEM REEMBOLSOS. Viva uma noite inesquecível com El Gran Combo de Puerto Rico, a lendária Universidade da Salsa, interpretando todos os seus maiores sucessos ao vivo em 27 de novembro. Reserve seus ingressos hoje! Informações: (786) 835-4170",
+          "fr": "VENTE FINALE. AUCUN ÉCHANGE AUTORISÉ. AUCUN REMBOURSEMENT. Vivez une nuit inoubliable avec El Gran Combo de Puerto Rico, la légendaire Université de la Salsa, interprétant tous ses plus grands succès en direct le 27 novembre. Réservez vos billets dès aujourd'hui! Information: (786) 835-4170"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.7150805,
+        "lng": -80.2791777
+      },
+      {
+        "id": "tm_1795373891751_nnu8",
+        "title": {
+          "en": "Friday Night Live - Improv Comedy Miami Show",
+          "es": "Viernes Noche en Vivo - Show de Comedia Improvisada Miami",
+          "pt": "Sexta-Feira à Noite ao Vivo - Show de Comédia de Improvisação Miami",
+          "fr": "Vendredi Soir en Direct - Show de Comédie d'Improvisation Miami"
+        },
+        "date": "2026-11-27",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Ffriday-night-live-just-the-funny-tickets%2F14327544&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Friday Night Live! - Improv Comedy in Miami Show It's JTF's special combination of shortform and longform improv! Enjoy as our award winning cast brings you fantastic improv that's perfect for your Friday night...LIVE! Our shows are often described as fast-paced improvised comedy. Think of it as Whose Line is It Anyway meets SNL with a lot of fun audience interaction along the way. Come be a part ",
+          "es": "¡Viernes Noche en Vivo! - Comedia Improvisada en Miami Es la combinación especial de JTF de improvisación corta y larga. ¡Disfruta mientras nuestro elenco galardonado te trae una improvisación fantástica perfecta para tu noche de viernes... EN VIVO! Nuestros shows a menudo se describen como comedia improvisada de ritmo rápido. Piénsalo como Whose Line is It Anyway conoce SNL con mucha interacción divertida con el público.",
+          "pt": "Sexta-Feira à Noite ao Vivo! - Comédia de Improvisação em Miami É a combinação especial do JTF de improvisação de curta e longa forma. Aproveite enquanto nosso elenco premiado traz a você improvisação fantástica perfeita para sua noite de sexta... AO VIVO! Nossos shows são frequentemente descritos como comédia improvisada de ritmo acelerado. Pense nisso como Whose Line is It Anyway encontra SNL com muita interação divertida com o público.",
+          "fr": "Vendredi Soir en Direct! - Comédie d'Improvisation à Miami C'est la combinaison spéciale du JTF de l'improvisation courte et longue. Profitez pendant que notre troupe primée vous apporte une improvisation fantastique parfaite pour votre vendredi soir... EN DIRECT! Nos spectacles sont souvent décrits comme une comédie improvisée au rythme rapide. Pensez-y comme Whose Line is It Anyway rencontre SNL avec beaucoup d'interactions amusantes avec le public."
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
+      },
+      {
+        "id": "tm_1795373891751_ald2",
+        "title": {
+          "en": "¡Dale! Impro - Impro en español",
+          "es": "¡Dale! Impro - Impro en español",
+          "pt": "¡Dale! Impro - Impro em espanhol",
+          "fr": "¡Dale! Impro - Impro en español"
+        },
+        "date": "2026-11-27",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fdale-impro-impro-just-the-funny-tickets%2F14412014&utm_medium=affiliate",
+        "free": false,
+        "price": "$18",
+        "image": "https://s1.ticketm.net/dam/c/f51/ee785ed6-f806-4195-98f4-69f67e09df51_106201_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único... y cualquier cosa puede pasar. Aquí el público tiene la palabra",
+          "es": "¡Prepárate para una noche donde tú puedes ser parte del show! ¡Dale! Impro es comedia improvisada en español y Spanglish, con toda la energía, sabor y diversidad de Miami. Sin guion y sin filtros, un elenco internacional transforma las sugerencias del público en escenas interactivas, inesperadas y llenas de humor. Cada show es único... y cualquier cosa puede pasar. Aquí el público tiene la palabra.",
+          "pt": "Prepare-se para uma noite onde você pode fazer parte do show! ¡Dale! Impro é comédia improvisada em espanhol e Spanglish, com toda a energia, sabor e diversidade de Miami. Sem script e sem filtros, um elenco internacional transforma as sugestões do público em cenas interativas, inesperadas e cheias de humor. Cada show é único... e qualquer coisa pode acontecer. Aqui o público tem a palavra.",
+          "fr": "Préparez-vous pour une nuit où vous pouvez faire partie du spectacle! ¡Dale! Impro est une comédie improvisée en espagnol et Spanglish, avec toute l'énergie, la saveur et la diversité de Miami. Sans script et sans filtres, une distribution internationale transforme les suggestions du public en scènes interactives, inattendues et pleines d'humour. Chaque spectacle est unique... et n'importe quoi peut se produire. Ici, le public a la parole."
+        },
+        "source": "Ticketmaster",
+        "lat": 25.750417,
+        "lng": -80.244412,
+        "category": "comedy"
+      },
+      {
+        "id": "tm_1795373891751_gkyu",
+        "title": {
+          "en": "Reggaeton Rave - Ages 18+",
+          "es": "Reggaeton Rave - Mayores de 18 años",
+          "pt": "Reggaeton Rave - Maiores de 18 anos",
+          "fr": "Reggaeton Rave - 18 ans et plus"
+        },
+        "date": "2026-11-27",
+        "venue": "ZeyZey Miami",
+        "address": "353 NE 61st St, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AA707w&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Other · Starts 22:00 · ZeyZey Miami",
+          "es": "Música · Otro · Comienza a las 22:00 · ZeyZey Miami",
+          "pt": "Música · Outro · Começa às 22:00 · ZeyZey Miami",
+          "fr": "Musique · Autre · Début à 22:00 · ZeyZey Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8172,
+        "lng": -80.188797
+      },
+      {
+        "id": "tm_1795373891751_0101",
+        "title": {
+          "en": "Miami Hurricanes vs Boston College Eagles",
+          "es": "Miami Hurricanes vs Boston College Eagles",
+          "pt": "Miami Hurricanes vs Boston College Eagles",
+          "fr": "Miami Hurricanes vs Boston College Eagles"
+        },
+        "date": "2026-11-28",
+        "venue": "Hard Rock Stadium",
+        "address": "347 Don Shula Drive, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-vs-boston-college-eagles-miami-florida-11-28-2026%2Fevent%2F0D0064FCBFBC6F2E&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/022/a96b1453-309b-48e2-a776-f2dd19d83022_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 12:00 · Hard Rock Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza a las 12:00 · Hard Rock Stadium",
+          "pt": "Esportes · Futebol Americano · Começa às 12:00 · Hard Rock Stadium",
+          "fr": "Sports · Football Américain · Début à 12:00 · Hard Rock Stadium"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.957928,
+        "lng": -80.238866
+      },
+      {
+        "id": "tm_1795373891751_z33s",
+        "title": {
+          "en": "Florida International Panthers Football vs. Sam Houston State Bearkats Football",
+          "es": "Fútbol Americano Panthers de Florida Internacional vs. Bearkats de Sam Houston State",
+          "pt": "Futebol Americano Panthers da Florida International vs. Bearkats da Sam Houston State",
+          "fr": "Football Panthers de Florida International vs. Bearkats de Sam Houston State"
+        },
+        "date": "2026-11-28",
+        "venue": "Pitbull Stadium",
+        "address": "11200 SW 8th Street, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-zoI&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/c/db5/5acfb9a3-4315-40c6-824f-e0fd31bd5db5_723691_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Football · Starts 14:00 · Pitbull Stadium",
+          "es": "Deportes · Fútbol Americano · Comienza 14:00 · Estadio Pitbull",
+          "pt": "Esportes · Futebol Americano · Começa 14:00 · Estádio Pitbull",
+          "fr": "Sports · Football Américain · Commence 14:00 · Stade Pitbull"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7577,
+        "lng": -80.374802
+      },
+      {
+        "id": "tm_1795373891751_7u5h",
+        "title": {
+          "en": "Florida Panthers vs. Tampa Bay Lightning",
+          "es": "Florida Panthers vs. Tampa Bay Lightning",
+          "pt": "Florida Panthers vs. Tampa Bay Lightning",
+          "fr": "Florida Panthers vs. Tampa Bay Lightning"
+        },
+        "date": "2026-11-28",
+        "venue": "Amerant Bank Arena",
+        "address": "1 Panther Parkway, Sunrise, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7J48a&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/abe/d0744d86-45bf-4bb5-b1c2-9b3d73d66abe_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Hockey · Starts 18:00 · Amerant Bank Arena",
+          "es": "Deportes · Hockey · Comienza 18:00 · Arena Amerant Bank",
+          "pt": "Esportes · Hóquei · Começa 18:00 · Arena Amerant Bank",
+          "fr": "Sports · Hockey · Commence 18:00 · Arena Amerant Bank"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 26.238701,
+        "lng": -80.370499
+      },
+      {
+        "id": "tm_1795373891751_iw34",
+        "title": {
+          "en": "Swan Lake - Symphony of Lights",
+          "es": "Lago de los Cisnes - Sinfonía de Luces",
+          "pt": "Lago dos Cisnes - Sinfonia de Luzes",
+          "fr": "Le Lac des Cygnes - Symphonie de Lumières"
+        },
+        "date": "2026-11-28",
+        "venue": "Rose & Alfred Miniaci Performing Arts Center",
+        "address": "3100 Ray Ferrero Jr. Blvd., Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fswan-lake-symphony-of-lights-ft-lauderdale-florida-11-28-2026%2Fevent%2F0D0064829FE6B897&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/396/c77e266a-7edb-4701-91a4-3be20858d396_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "THIS EVENT IS AT THE ROSE AND ALFRED MINIACI PERFORMING ARTS CENTER ON THE NOVA SOUTHEASTERN UNIVERSITY CAMPUS. Tchaikovsky's classic ballet is reimagined with stunning light design, illuminated costumes, and world-class dancers from around the globe. The result is a powerful blend of music, movement, and visual artistry. · Starts 19:00 · Rose & Alfred Miniaci Performing Arts Center",
+          "es": "ESTE EVENTO ESTÁ EN EL CENTRO DE ARTES ESCÉNICAS ROSE Y ALFRED MINIACI EN EL CAMPUS DE LA UNIVERSIDAD NOVA SOUTHEASTERN. El ballet clásico de Chaikovski es reimaginado con un deslumbrante diseño de iluminación, trajes iluminados y bailarines de clase mundial de todo el mundo. El resultado es una poderosa mezcla de música, movimiento y arte visual. · Comienza 19:00 · Centro de Artes Escénicas Rose & Alfred Miniaci",
+          "pt": "ESTE EVENTO ESTÁ NO CENTRO DE ARTES CÊNICAS ROSE E ALFRED MINIACI NO CAMPUS DA UNIVERSIDADE NOVA SOUTHEASTERN. O ballet clássico de Tchaikovsky é reimaginado com um design de iluminação deslumbrante, trajes iluminados e bailarinos de classe mundial de todo o mundo. O resultado é uma mistura poderosa de música, movimento e arte visual. · Começa 19:00 · Centro de Artes Cênicas Rose & Alfred Miniaci",
+          "fr": "CET ÉVÉNEMENT SE DÉROULE AU CENTRE DES ARTS DE LA SCÈNE ROSE ET ALFRED MINIACI SUR LE CAMPUS DE L'UNIVERSITÉ NOVA SOUTHEASTERN. Le ballet classique de Tchaïkovski est réimaginé avec un design d'éclairage époustouflant, des costumes illuminés et des danseurs de classe mondiale du monde entier. Le résultat est un mélange puissant de musique, de mouvement et d'art visuel. · Commence 19:00 · Centre des Arts de la Scène Rose & Alfred Miniaci"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.0884017,
+        "lng": -80.2461624
+      },
+      {
+        "id": "tm_1795373891751_b7av",
+        "title": {
+          "en": "Grupo Duelo",
+          "es": "Grupo Duelo",
+          "pt": "Grupo Duelo",
+          "fr": "Grupo Duelo"
+        },
+        "date": "2026-11-28",
+        "venue": "Miami Beach Bandshell",
+        "address": "7275 Collins Avenue, Miami Beach FL 33141, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAeK_v&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/ec7/5f9360ee-d0d4-4440-974e-ae819a262ec7_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · World · Starts 20:00 · Miami Beach Bandshell",
+          "es": "Música · Música del Mundo · Comienza 20:00 · Concha Acústica de Miami Beach",
+          "pt": "Música · Música do Mundo · Começa 20:00 · Concha Acústica de Miami Beach",
+          "fr": "Musique · Musique du Monde · Commence 20:00 · Bandshell de Miami Beach"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.8619,
+        "lng": -80.1259
+      },
+      {
+        "id": "tm_1795373891751_kcat",
+        "title": {
+          "en": "The BIG Show Improv Comedy Miami",
+          "es": "The BIG Show Comedia Improvisada Miami",
+          "pt": "The BIG Show Comédia Improvisada Miami",
+          "fr": "The BIG Show Comédie d'Improvisation Miami"
+        },
+        "date": "2026-11-28",
+        "venue": "Just the Funny",
+        "address": "3119 Coral Way, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fthe-big-show-improv-comedy-just-the-funny-tickets%2F14327634&utm_medium=affiliate",
+        "free": false,
+        "price": "$29",
+        "image": "https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Big Show - Improv Comedy in Miami It's our signature show: Live, fast-paced improvised comedy at its best. Think of it as Whose Line is It Anyway meets SNL! The Big Show is interactive improv comedy, featuring our talented and award-winning cast. Come be a part of the fun! Tickets are PER PERSON for this show. We will seat parties together in tables. We will do our best to sit larger groups as",
+          "es": "The Big Show - Comedia Improvisada en Miami Es nuestro espectáculo de firma: comedia improvisada en vivo, rápida y de primer nivel. ¡Piénsalo como Whose Line is It Anyway conoce SNL! The Big Show es comedia improvisada interactiva, con nuestro talentoso y galardonado elenco. ¡Ven y sé parte de la diversión! Los boletos son POR PERSONA para este espectáculo. Sentaremos a los grupos juntos en mesas. Haremos nuestro mejor esfuerzo para sentar a grupos más grandes como",
+          "pt": "The Big Show - Comédia Improvisada em Miami É nosso show de assinatura: comédia improvisada ao vivo, rápida e de primeira classe. Pense nisso como Whose Line is It Anyway encontra SNL! The Big Show é comédia improvisada interativa, com nosso elenco talentoso e premiado. Venha fazer parte da diversão! Os ingressos são POR PESSOA para este show. Vamos sentar os grupos juntos em mesas. Faremos o nosso melhor para sentar grupos maiores como",
+          "fr": "The Big Show - Comédie d'Improvisation à Miami C'est notre spectacle signature : la comédie improvisée en direct, rapide et de haut niveau. Pensez-y comme Whose Line is It Anyway rencontre SNL ! The Big Show est une comédie improvisée interactive, avec notre cast talentueux et primé. Venez faire partie du plaisir ! Les billets sont PAR PERSONNE pour ce spectacle. Nous assoirons les groupes ensemble à des tables. Nous ferons de notre mieux pour asseoir les plus grands groupes comme"
+        },
+        "source": "Ticketmaster",
+        "category": "comedy",
+        "lat": 25.750417,
+        "lng": -80.244412
       }
     ]
   },
@@ -5057,7 +4749,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-21T18:39:08.589Z",
+    "fetchedAt": "2026-11-22T18:59:24.611Z",
     "items": []
   }
 }
