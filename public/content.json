@@ -1,45 +1,32 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-24T21:52:36.696Z",
+    "lastUpdated": "2026-11-25T21:00:01.119Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-24T21:52:28.809Z",
+    "fetchedAt": "2026-11-25T20:59:52.508Z",
     "current": {
-      "temp_f": 76,
-      "feels_f": 82,
+      "temp_f": 71,
+      "feels_f": 77,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 81,
-      "wind_mph": 3,
-      "rain_chance": 17,
-      "weathercode": 3
+      "humidity": 95,
+      "wind_mph": 6,
+      "rain_chance": 100,
+      "weathercode": 63
     },
     "forecast": [
       {
-        "date": "2026-11-24",
-        "high_f": 78,
-        "low_f": 65,
-        "weathercode": 3,
-        "rain_chance": 17,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-11-25",
         "high_f": 74,
-        "low_f": 71,
+        "low_f": 70,
         "weathercode": 65,
-        "rain_chance": 91,
+        "rain_chance": 100,
         "description": {
           "en": "Heavy rain",
           "es": "Lluvia intensa",
@@ -49,21 +36,21 @@
       },
       {
         "date": "2026-11-26",
-        "high_f": 79,
-        "low_f": 66,
-        "weathercode": 3,
-        "rain_chance": 5,
+        "high_f": 74,
+        "low_f": 63,
+        "weathercode": 51,
+        "rain_chance": 2,
         "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
         }
       },
       {
         "date": "2026-11-27",
-        "high_f": 73,
-        "low_f": 67,
+        "high_f": 74,
+        "low_f": 60,
         "weathercode": 3,
         "rain_chance": 0,
         "description": {
@@ -75,162 +62,175 @@
       },
       {
         "date": "2026-11-28",
-        "high_f": 74,
-        "low_f": 66,
+        "high_f": 73,
+        "low_f": 67,
         "weathercode": 3,
-        "rain_chance": 8,
+        "rain_chance": 1,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
           "pt": "Encoberto",
           "fr": "Couvert"
         }
+      },
+      {
+        "date": "2026-11-29",
+        "high_f": 78,
+        "low_f": 73,
+        "weathercode": 51,
+        "rain_chance": 20,
+        "description": {
+          "en": "Light drizzle",
+          "es": "Llovizna ligera",
+          "pt": "Chuvisco leve",
+          "fr": "Bruine légère"
+        }
       }
     ],
     "hourly": [
       {
+        "hour": "15:00",
+        "temp_f": 71,
+        "weathercode": 65,
+        "rain_chance": 97
+      },
+      {
         "hour": "16:00",
-        "temp_f": 77,
-        "weathercode": 3,
-        "rain_chance": 9
+        "temp_f": 71,
+        "weathercode": 65,
+        "rain_chance": 89
       },
       {
         "hour": "17:00",
-        "temp_f": 75,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 71,
+        "weathercode": 53,
+        "rain_chance": 70
       },
       {
         "hour": "18:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 12
+        "temp_f": 71,
+        "weathercode": 63,
+        "rain_chance": 77
       },
       {
         "hour": "19:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 13
+        "temp_f": 71,
+        "weathercode": 51,
+        "rain_chance": 56
       },
       {
         "hour": "20:00",
-        "temp_f": 74,
+        "temp_f": 71,
         "weathercode": 3,
-        "rain_chance": 9
+        "rain_chance": 23
       },
       {
         "hour": "21:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 7
+        "temp_f": 71,
+        "weathercode": 63,
+        "rain_chance": 20
       },
       {
         "hour": "22:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 6
+        "temp_f": 71,
+        "weathercode": 2,
+        "rain_chance": 13
       },
       {
         "hour": "23:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 8
+        "temp_f": 70,
+        "weathercode": 0,
+        "rain_chance": 5
       },
       {
         "hour": "00:00",
-        "temp_f": 74,
+        "temp_f": 70,
         "weathercode": 3,
-        "rain_chance": 12
+        "rain_chance": 1
       },
       {
         "hour": "01:00",
-        "temp_f": 73,
-        "weathercode": 3,
-        "rain_chance": 16
+        "temp_f": 69,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "02:00",
-        "temp_f": 73,
-        "weathercode": 3,
-        "rain_chance": 29
+        "temp_f": 70,
+        "weathercode": 51,
+        "rain_chance": 2
       },
       {
         "hour": "03:00",
-        "temp_f": 73,
-        "weathercode": 3,
-        "rain_chance": 41
+        "temp_f": 69,
+        "weathercode": 0,
+        "rain_chance": 2
       },
       {
         "hour": "04:00",
-        "temp_f": 72,
-        "weathercode": 55,
-        "rain_chance": 58
+        "temp_f": 69,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "05:00",
-        "temp_f": 72,
-        "weathercode": 65,
-        "rain_chance": 83
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "06:00",
-        "temp_f": 72,
-        "weathercode": 65,
-        "rain_chance": 87
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "07:00",
-        "temp_f": 73,
-        "weathercode": 63,
-        "rain_chance": 88
+        "temp_f": 67,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "08:00",
-        "temp_f": 74,
-        "weathercode": 53,
-        "rain_chance": 78
+        "temp_f": 68,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "09:00",
-        "temp_f": 74,
-        "weathercode": 53,
-        "rain_chance": 91
+        "temp_f": 71,
+        "weathercode": 0,
+        "rain_chance": 1
       },
       {
         "hour": "10:00",
-        "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 85
+        "temp_f": 73,
+        "weathercode": 0,
+        "rain_chance": 0
       },
       {
         "hour": "11:00",
         "temp_f": 74,
-        "weathercode": 3,
-        "rain_chance": 79
+        "weathercode": 1,
+        "rain_chance": 0
       },
       {
         "hour": "12:00",
-        "temp_f": 73,
-        "weathercode": 65,
-        "rain_chance": 78
+        "temp_f": 72,
+        "weathercode": 2,
+        "rain_chance": 0
       },
       {
         "hour": "13:00",
-        "temp_f": 73,
-        "weathercode": 65,
-        "rain_chance": 71
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "14:00",
-        "temp_f": 73,
-        "weathercode": 65,
-        "rain_chance": 58
-      },
-      {
-        "hour": "15:00",
-        "temp_f": 73,
-        "weathercode": 65,
-        "rain_chance": 72
+        "temp_f": 70,
+        "weathercode": 0,
+        "rain_chance": 0
       }
     ]
   },
@@ -2682,136 +2682,6 @@
         "category": "community"
       },
       {
-        "id": "tm_1795286275767_58ss",
-        "title": {
-          "en": "Youth Fall Musical: The Spongebob Musical - Youth Edition",
-          "es": "Musical de Otoño Juvenil: The Spongebob Musical - Edición Juvenil",
-          "pt": "Musical de Outono Juvenil: The Spongebob Musical - Edição Juvenil",
-          "fr": "Comédie Musicale d'Automne Jeunesse : The Spongebob Musical - Édition Jeunesse"
-        },
-        "date": "2026-11-24",
-        "venue": "Amaturo Theater at Broward Center",
-        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fyouth-fall-musical-the-spongebob-musical-ft-lauderdale-florida-11-24-2026%2Fevent%2F0D006535B0466683&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d81/daf87c08-d8c3-45d4-80ff-4eee537e0d81_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "A variety of close options including valet. Just Park & Pay with the Park Mobile in the A&E District Garage. · Starts 18:00 · Amaturo Theater at Broward Center",
-          "es": "Una variedad de opciones cercanas incluyendo valet. Solo estaciona y paga con Park Mobile en el Garaje del Distrito A&E · Comienza a las 18:00 · Teatro Amaturo en Broward Center",
-          "pt": "Uma variedade de opções próximas incluindo manobrista. Apenas estacione e pague com Park Mobile na Garagem do Distrito A&E · Começa às 18:00 · Teatro Amaturo no Broward Center",
-          "fr": "Une variété d'options de stationnement proche incluant le voiturier. Garez-vous simplement et payez avec Park Mobile au Garage du District A&E · Commence à 18:00 · Théâtre Amaturo au Broward Center"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.1193,
-        "lng": -80.149426
-      },
-      {
-        "id": "tm_1795286275767_d7ho",
-        "title": {
-          "en": "Florida Atlantic University vs. Mercer",
-          "es": "Universidad Atlántica de Florida vs. Mercer",
-          "pt": "Universidade Atlântica da Flórida vs. Mercer",
-          "fr": "Université Atlantique de Floride vs. Mercer"
-        },
-        "date": "2026-11-24",
-        "venue": "Abessinio Court at Eleanor R. Baldwin Arena",
-        "address": "777 Glades Road, Boca Raton, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fflorida-atlantic-university-vs-mercer-boca-raton-florida-11-24-2026%2Fevent%2F0D00655B9ADA40E1&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/f3f/791b563d-7658-4267-b6c3-f66a90638f3f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Sports · Basketball · Starts 18:00 · Abessinio Court at Eleanor R. Baldwin Arena",
-          "es": "Deportes · Baloncesto · Comienza a las 18:00 · Cancha Abessinio en Arena Eleanor R. Baldwin",
-          "pt": "Esportes · Basquete · Começa às 18:00 · Quadra Abessinio na Arena Eleanor R. Baldwin",
-          "fr": "Sports · Basketball · Commence à 18:00 · Terrain Abessinio à l'Arène Eleanor R. Baldwin"
-        },
-        "source": "Ticketmaster",
-        "category": "sports",
-        "lat": 26.365668,
-        "lng": -80.106093
-      },
-      {
-        "id": "tm_1795286275767_ofr2",
-        "title": {
-          "en": "AJ McLean presents Alexander James: The Better Man Tour",
-          "es": "AJ McLean presenta Alexander James: The Better Man Tour",
-          "pt": "AJ McLean apresenta Alexander James: The Better Man Tour",
-          "fr": "AJ McLean présente Alexander James: The Better Man Tour"
-        },
-        "date": "2026-11-24",
-        "venue": "Revolution Live",
-        "address": "100 SW 3rd Ave, Ft Lauderdale, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Faj-mclean-presents-alexander-james-the-ft-lauderdale-florida-11-24-2026%2Fevent%2F0D0064D4E738B551&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/6b5/840992b1-69c9-4339-9643-227101ea36b5_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "AJ McLean presents Alexander James: The Better Man Tour will be coming to Revolution Live on November 24th with special guests Matt Bloyd & DJ Gab Wright. This event is All Ages. Doors open at 7pm. Show starts at 8pm. All support acts are subject to change without notice. · Starts 19:00 · Revolution Live",
-          "es": "AJ McLean presenta Alexander James: The Better Man Tour llegará a Revolution Live el 24 de noviembre con artistas especiales Matt Bloyd y DJ Gab Wright. Este evento es para todas las edades. Las puertas abren a las 7pm. El show comienza a las 8pm. Todos los actos de apoyo están sujetos a cambios sin previo aviso. · Comienza 19:00 · Revolution Live",
-          "pt": "AJ McLean apresenta Alexander James: The Better Man Tour virá para Revolution Live em 24 de novembro com convidados especiais Matt Bloyd e DJ Gab Wright. Este evento é para todas as idades. As portas abrem às 19h. O show começa às 20h. Todos os atos de apoio estão sujeitos a alterações sem aviso prévio. · Começa 19:00 · Revolution Live",
-          "fr": "AJ McLean présente Alexander James: The Better Man Tour arrivera au Revolution Live le 24 novembre avec les invités spéciaux Matt Bloyd et DJ Gab Wright. Cet événement est pour tous les âges. Les portes ouvrent à 19h. Le spectacle commence à 20h. Tous les actes de soutien sont sujets à modification sans préavis. · Commence 19:00 · Revolution Live"
-        },
-        "source": "Ticketmaster",
-        "category": "music",
-        "lat": 26.121094,
-        "lng": -80.146162
-      },
-      {
-        "id": "tm_1795286275767_7y3b",
-        "title": {
-          "en": "Disney Worlds Collide Concert Tour",
-          "es": "Gira de Conciertos Disney Worlds Collide",
-          "pt": "Turnê de Concertos Disney Worlds Collide",
-          "fr": "Tournée de Concerts Disney Worlds Collide"
-        },
-        "date": "2026-11-24",
-        "venue": "Amerant Bank Arena",
-        "address": "1 Panther Parkway, Sunrise, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7-SfF&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/d49/63d21920-3adb-4160-a213-72eb06965d49_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Miscellaneous · Starts 19:00 · Amerant Bank Arena",
-          "es": "Artes y Teatro · Miscelánea · Comienza 19:00 · Amerant Bank Arena",
-          "pt": "Artes e Teatro · Diversos · Começa 19:00 · Amerant Bank Arena",
-          "fr": "Arts et Théâtre · Divers · Commence 19:00 · Amerant Bank Arena"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.238701,
-        "lng": -80.370499
-      },
-      {
-        "id": "tm_1795286275767_s8fj",
-        "title": {
-          "en": "The Unauthorized Hallmark(ish) Parody Musical",
-          "es": "El Musical de Parodia Hallmark(ish) No Autorizado",
-          "pt": "O Musical de Paródia Hallmark(ish) Não Autorizado",
-          "fr": "Le Musical de Parodie Hallmark(ish) Non Autorisé"
-        },
-        "date": "2026-11-24",
-        "venue": "Coral Springs Center",
-        "address": "2855 Coral Springs Dr., Coral Springs, FL",
-        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1AAZJas&utm_medium=affiliate",
-        "free": false,
-        "price": "",
-        "image": "https://s1.ticketm.net/dam/a/51f/ab79b0bf-e346-44e0-8a06-7af7eb8e551f_RETINA_PORTRAIT_16_9.jpg",
-        "description": {
-          "en": "Arts & Theatre · Theatre · Starts 19:00 · Coral Springs Center",
-          "es": "Artes y Teatro · Teatro · Comienza 19:00 · Coral Springs Center",
-          "pt": "Artes e Teatro · Teatro · Começa 19:00 · Coral Springs Center",
-          "fr": "Arts et Théâtre · Théâtre · Commence 19:00 · Coral Springs Center"
-        },
-        "source": "Ticketmaster",
-        "category": "arts",
-        "lat": 26.2738,
-        "lng": -80.256897
-      },
-      {
         "id": "tm_1795286275767_qoim",
         "title": {
           "en": "Static Dress \"Injury Episode USA Tour\" in Miami",
@@ -3772,54 +3642,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1795557115334_znml",
-        "title": {
-          "en": "Exclusive: Popular Miami sushi pop-up makes a comeback in South Beach",
-          "es": "Exclusiva: El popular pop-up de sushi de Miami regresa a South Beach",
-          "pt": "Exclusivo: O popular pop-up de sushi de Miami retorna a South Beach",
-          "fr": "Exclusivité : Le populaire pop-up de sushi de Miami fait son grand retour à South Beach"
-        },
-        "date": "2026-11-24",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/food-drink/popular-miami-sushi-pop-up-makes-a-comeback-in-south-beach-40599897/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/11/Gold-standerd-68-e1795554383846.jpg",
-        "description": {
-          "en": "A cult-favorite Miami sushi omakase pop-up returns to South Beach on Dec. 2 featuring fresh seafood from Japan and A5 Wagyu.",
-          "es": "Un pop-up de omakase de sushi de culto en Miami regresa a South Beach el 2 de diciembre con mariscos frescos de Japón y Wagyu A5.",
-          "pt": "Um pop-up de omakase de sushi cult de Miami retorna a South Beach em 2 de dezembro com frutos do mar frescos do Japão e Wagyu A5.",
-          "fr": "Un pop-up d'omakase de sushi culte de Miami revient à South Beach le 2 décembre avec des fruits de mer frais du Japon et du Wagyu A5."
-        },
-        "source": "Miami New Times",
-        "category": "community"
-      },
-      {
-        "id": "rss_1795557115334_fbly",
-        "title": {
-          "en": "WonkyWilla wants Miami to get weird and give back",
-          "es": "WonkyWilla quiere que Miami se vuelva rara y done",
-          "pt": "WonkyWilla quer que Miami fique estranha e doe",
-          "fr": "WonkyWilla veut que Miami devienne étrange et fasse don"
-        },
-        "date": "2026-11-24",
-        "venue": "Miami New Times",
-        "address": "",
-        "url": "https://www.miaminewtimes.com/music/wonkywilla-wants-miami-to-get-weird-and-give-back-40599877/",
-        "free": false,
-        "price": "",
-        "image": "https://www.miaminewtimes.com/wp-content/uploads/sites/4/2026/11/WonkyWilla.jpg",
-        "description": {
-          "en": "The dubstep DJ will turn Wynwood’s Midline into a celebration of music and community on Nov. 28, raising funds to fight local food insecurity.",
-          "es": "El DJ de dubstep convertirá Midline en Wynwood en una celebración de música y comunidad el 28 de noviembre, recaudando fondos para combatir la inseguridad alimentaria local.",
-          "pt": "O DJ de dubstep transformará a Midline em Wynwood em uma celebração de música e comunidade em 28 de novembro, arrecadando fundos para combater a insegurança alimentar local.",
-          "fr": "Le DJ de dubstep transformera la Midline à Wynwood en une célébration de musique et de communauté le 28 novembre, levant des fonds pour lutter contre l'insécurité alimentaire locale."
-        },
-        "source": "Miami New Times",
-        "category": "music"
-      },
-      {
         "id": "rss_1795557115334_9pv0",
         "title": {
           "en": "Nothing Is Linear Relations Across Latin America and Its Diasporas 11/26/26 – 8/14/27",
@@ -3942,6 +3764,342 @@
         "category": "sports",
         "lat": 25.792676,
         "lng": -80.259406
+      },
+      {
+        "id": "rss_1795640329886_64db",
+        "title": {
+          "en": "Nights in Northwood Village, West Palm Beach, Nov. 27",
+          "es": "Noches en Northwood Village, West Palm Beach, 27 de noviembre",
+          "pt": "Noites em Northwood Village, West Palm Beach, 27 de novembro",
+          "fr": "Soirées à Northwood Village, West Palm Beach, 27 novembre"
+        },
+        "date": "2026-11-25",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/nights-in-northwood-village-west-palm-beach/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/11/nights-in-northwood-holiday-728x728.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Northwood Village in West Palm Beach is hosting a free night of fun, food and family festivities, plus shopping opportunities, with holiday lights, one-of-a-kind holiday gifts from local artisans, and... Copyright South Florida on the Cheap. The post Nights in Northwood Village, West Palm Beach, Nov. 27 appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap Northwood Village en West Palm Beach ofrece una noche gratuita de diversión, comida y festividades familiares, además de oportunidades de compras, con luces navideñas, regalos navideños únicos de artesanos locales, y... Copyright South Florida on the Cheap. El artículo Noches en Northwood Village, West Palm Beach, 27 de noviembre apareció primero en South Florida on the Cheap.",
+          "pt": "South Florida on the Cheap Northwood Village em West Palm Beach oferece uma noite gratuita de diversão, comida e festividades familiares, além de oportunidades de compras, com luzes de Natal, presentes de Natal únicos de artesãos locais, e... Copyright South Florida on the Cheap. O artigo Noites em Northwood Village, West Palm Beach, 27 de novembro apareceu primeiro em South Florida on the Cheap.",
+          "fr": "South Florida on the Cheap Northwood Village à West Palm Beach propose une soirée gratuite de plaisir, de nourriture et de festivités familiales, plus des opportunités de shopping, avec des lumières de Noël, des cadeaux de Noël uniques d'artisans locaux, et... Copyright South Florida on the Cheap. L'article Soirées à Northwood Village, West Palm Beach, 27 novembre est apparu en premier sur South Florida on the Cheap."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "rss_1795640329886_g46l",
+        "title": {
+          "en": "ICON Live Performance by Rubixx 12/17/26",
+          "es": "Presentación en vivo de ICON por Rubixx 12/17/26",
+          "pt": "Apresentação ao vivo do ICON por Rubixx 12/17/26",
+          "fr": "Spectacle en direct ICON par Rubixx 12/17/26"
+        },
+        "date": "2026-12-17",
+        "venue": "InterContinental Miami",
+        "address": "100 Chopin Plaza, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/11/25/icon-live-performance-by-rubixx-12-17-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/ICM-LIVE-350x233.jpg",
+        "description": {
+          "en": "ICON Live is back this December to spread holiday cheer with Miami’s favorite ’80s cover band, RUBIXX. Experience an",
+          "es": "ICON Live regresa este diciembre para difundir alegría navideña con la banda de covers de los 80 favorita de Miami, RUBIXX. Experimenta un",
+          "pt": "ICON Live retorna este dezembro para espalhar alegria de Natal com a banda de covers dos anos 80 favorita de Miami, RUBIXX. Experimente um",
+          "fr": "ICON Live revient ce décembre pour répandre la joie des fêtes avec le groupe de reprises des années 80 préféré de Miami, RUBIXX. Découvrez un"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.772449,
+        "lng": -80.1854687,
+        "category": "music"
+      },
+      {
+        "id": "rss_1795640329886_yysf",
+        "title": {
+          "en": "No Vacancy, Miami Beach: Alex Nuñez’s You Cannot Step into the Same Ocean Twice at Kimpton Surfcomber Hotel 11/12/26 – 12/19/26",
+          "es": "Sin Vacantes, Miami Beach: You Cannot Step into the Same Ocean Twice de Alex Nuñez en Kimpton Surfcomber Hotel 12/11/26 – 19/12/26",
+          "pt": "Sem Vagas, Miami Beach: You Cannot Step into the Same Ocean Twice de Alex Nuñez no Kimpton Surfcomber Hotel 12/11/26 – 19/12/26",
+          "fr": "Pas de Vacances, Miami Beach: You Cannot Step into the Same Ocean Twice d'Alex Nuñez au Kimpton Surfcomber Hotel 12/11/26 – 19/12/26"
+        },
+        "date": "2026-12-04",
+        "venue": "Kimpton Surfcomber Hotel",
+        "address": "1717 Collins Ave, Miami Beach, FL 33139",
+        "url": "https://www.soulofmiami.org/2026/11/25/no-vacancy-miami-beach-alex-nunezs-you-cannot-step-into-the-same-ocean-twice-at-kimpton-surfcomber-hotel-11-12-26-12-19-26/",
+        "free": false,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Screenshot-2026-11-24-at-3.31.52-PM-350x213.png",
+        "description": {
+          "en": "More No Vacancy, Miami Beach: Alex Nuñez’s You Cannot Step into the Same Ocean Twice at Kimpton Surfcomber Hotel 11/12/26 – 12",
+          "es": "Más Sin Vacantes, Miami Beach: You Cannot Step into the Same Ocean Twice de Alex Nuñez en Kimpton Surfcomber Hotel 12/11/26 – 19/12",
+          "pt": "Mais Sem Vagas, Miami Beach: You Cannot Step into the Same Ocean Twice de Alex Nuñez no Kimpton Surfcomber Hotel 12/11/26 – 19/12",
+          "fr": "Plus Pas de Vacances, Miami Beach: You Cannot Step into the Same Ocean Twice d'Alex Nuñez au Kimpton Surfcomber Hotel 12/11/26 – 19/12"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7929111,
+        "lng": -80.1286393,
+        "category": "community"
+      },
+      {
+        "id": "rss_1795640329886_bico",
+        "title": {
+          "en": "Your Mark of Art: An Interactive Collage Experience at Kimpton Surfcomber Hotel 11/29/26 – 12/5/26",
+          "es": "Tu Marca de Arte: Una Experiencia de Collage Interactivo en Kimpton Surfcomber Hotel 29/11/26 – 5/12/26",
+          "pt": "Sua Marca de Arte: Uma Experiência de Colagem Interativa no Kimpton Surfcomber Hotel 29/11/26 – 5/12/26",
+          "fr": "Votre Marque d'Art: Une Expérience de Collage Interactif au Kimpton Surfcomber Hotel 29/11/26 – 5/12/26"
+        },
+        "date": "2026-11-29",
+        "venue": "Kimpton Surfcomber Hotel",
+        "address": "1717 Collins Ave, Miami Beach, FL 33139",
+        "url": "https://www.soulofmiami.org/2026/11/25/your-mark-of-art-an-interactive-collage-experience-at-kimpton-surfcomber-hotel-11-29-26-12-5-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Screenshot-2026-11-24-at-7.09.12-PM-350x217.png",
+        "description": {
+          "en": "Leave your artistic mark while dining",
+          "es": "Deja tu marca artística mientras cenas",
+          "pt": "Deixe sua marca artística enquanto jantar",
+          "fr": "Laissez votre marque artistique en dînant"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7929111,
+        "lng": -80.1286393,
+        "category": "community"
+      },
+      {
+        "id": "rss_1795640329886_pmt1",
+        "title": {
+          "en": "Delray Beach 100 Foot Christmas Tree Lighting 12/1/26",
+          "es": "Encendido del Árbol de Navidad de 100 Pies de Delray Beach 1/12/26",
+          "pt": "Acendimento da Árvore de Natal de 100 Pés de Delray Beach 1/12/26",
+          "fr": "Allumage du Sapin de Noël de 100 Pieds de Delray Beach 1/12/26"
+        },
+        "date": "2026-12-01",
+        "venue": "Old School Square",
+        "address": "51 N Swinton Avenue, Delray Beach, Florida, 33444",
+        "url": "https://www.soulofmiami.org/2026/11/25/delray-beach-100-foot-christmas-tree-lighting-12-1-26/",
+        "free": true,
+        "price": "",
+        "image": "",
+        "description": {
+          "en": "The City of Delray Beach lights its famous 100-foot Christmas tree for the 33rd",
+          "es": "La Ciudad de Delray Beach enciende su famoso árbol de Navidad de 100 pies por la 33ª",
+          "pt": "A Cidade de Delray Beach acende sua famosa árvore de Natal de 100 pés pela 33ª",
+          "fr": "La Ville de Delray Beach allume son célèbre sapin de Noël de 100 pieds pour la 33ème"
+        },
+        "source": "Soul of Miami",
+        "lat": 26.4629574,
+        "lng": -80.072722,
+        "category": "community"
+      },
+      {
+        "id": "rss_1795640329886_gpyh",
+        "title": {
+          "en": "Salsa Night Hosted by Salsa Lovers 12/4/26",
+          "es": "Noche de Salsa Organizada por Salsa Lovers 12/4/26",
+          "pt": "Noite de Salsa Hospedada por Salsa Lovers 12/4/26",
+          "fr": "Soirée Salsa Organisée par Salsa Lovers 12/4/26"
+        },
+        "date": "2026-12-04",
+        "venue": "InterContinental Miami",
+        "address": "100 Chopin Plaza, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/11/25/salsa-night-hosted-by-salsa-lovers-12-4-26/",
+        "free": false,
+        "price": "$15",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Salsa-Night-350x365.jpg",
+        "description": {
+          "en": "Dress to impress, grab your dancing shoes and get ready for an unforgettable night with non-stop salsa dancing",
+          "es": "Vístete para impresionar, toma tus zapatos de baile y prepárate para una noche inolvidable con salsa sin parar",
+          "pt": "Vista-se para impressionar, pegue seus sapatos de dança e prepare-se para uma noite inesquecível com salsa ininterrupta",
+          "fr": "Habille-toi pour impressionner, prends tes chaussures de danse et prépare-toi pour une nuit inoubliable avec de la salsa non-stop"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.772449,
+        "lng": -80.1854687,
+        "category": "community"
+      },
+      {
+        "id": "rss_1795640329886_4wqz",
+        "title": {
+          "en": "Paws Patio™ – Ugly Sweater Pawwty at InterContinental Miami 12/9/26",
+          "es": "Paws Patio™ – Fiesta de Suéter Feo en InterContinental Miami 12/9/26",
+          "pt": "Paws Patio™ – Festa de Suéter Feio no InterContinental Miami 12/9/26",
+          "fr": "Paws Patio™ – Fête du Vilain Pull à l'InterContinental Miami 12/9/26"
+        },
+        "date": "2026-12-09",
+        "venue": "InterContinental Miami",
+        "address": "100 Chopin Plaza, Miami, Florida, 33131",
+        "url": "https://www.soulofmiami.org/2026/11/25/paws-patio-ugly-sweater-pawwty-at-intercontinental-miami-12-9-26/",
+        "free": false,
+        "price": "$15",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Santa--350x467.jpg",
+        "description": {
+          "en": "On Wednesday, December 9, InterContinental Miami hosts a festive edition of Paws Patio™ – Ugly",
+          "es": "El miércoles 9 de diciembre, InterContinental Miami presenta una edición festiva de Paws Patio™ – Suéter Feo",
+          "pt": "Na quarta-feira, 9 de dezembro, o InterContinental Miami apresenta uma edição festiva de Paws Patio™ – Suéter Feio",
+          "fr": "Le mercredi 9 décembre, l'InterContinental Miami accueille une édition festive de Paws Patio™ – Vilain Pull"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.772449,
+        "lng": -80.1854687,
+        "category": "community"
+      },
+      {
+        "id": "tm_1795640330559_aw6f",
+        "title": {
+          "en": "Static Dress \"Injury Episode USA Tour\" in Miami",
+          "es": "Static Dress \"Injury Episode USA Tour\" en Miami",
+          "pt": "Static Dress \"Injury Episode USA Tour\" em Miami",
+          "fr": "Static Dress \"Injury Episode USA Tour\" à Miami"
+        },
+        "date": "2026-11-25",
+        "venue": "Churchill's Pub",
+        "address": "5501 NE 2nd Ave Miami, FL 33137,  Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fstatic-dress-injury-episode-usa-churchills-pub-tickets%2F15017433&utm_medium=affiliate",
+        "free": true,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/18a/bc29f9de-d5c4-4c88-aa71-89c39b58318a_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Music · Rock · Starts 18:00 · Churchill's Pub",
+          "es": "Música · Rock · Comienza a las 18:00 · Churchill's Pub",
+          "pt": "Música · Rock · Começa às 18:00 · Churchill's Pub",
+          "fr": "Musique · Rock · Commence à 18:00 · Churchill's Pub"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.82647681611792,
+        "lng": -80.19169187791115
+      },
+      {
+        "id": "tm_1795640330559_qm0h",
+        "title": {
+          "en": "Youth Fall Musical: The Spongebob Musical - Youth Edition",
+          "es": "Musical de Otoño Juvenil: The Spongebob Musical - Edición Juvenil",
+          "pt": "Musical de Outono Juvenil: The Spongebob Musical - Edição Juvenil",
+          "fr": "Musical d'Automne pour Jeunes: The Spongebob Musical - Édition Jeunesse"
+        },
+        "date": "2026-11-25",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fyouth-fall-musical-the-spongebob-musical-ft-lauderdale-florida-11-25-2026%2Fevent%2F0D006535B04E669B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d81/daf87c08-d8c3-45d4-80ff-4eee537e0d81_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "A variety of close options including valet. Just Park & Pay with the Park Mobile in the A&E District Garage. · Starts 20:00 · Amaturo Theater at Broward Center",
+          "es": "Variedad de opciones cercanas incluyendo valet. Solo Estaciona y Paga con Park Mobile en el Garaje del Distrito A&E. · Comienza a las 20:00 · Amaturo Theater en Broward Center",
+          "pt": "Variedade de opções próximas incluindo manobrista. Apenas Estacione e Pague com Park Mobile no Garagem do Distrito A&E. · Começa às 20:00 · Amaturo Theater no Broward Center",
+          "fr": "Variété d'options proches incluant le voiturier. Stationnez simplement et payez avec Park Mobile au Parking du District A&E. · Commence à 20:00 · Amaturo Theater au Broward Center"
+        },
+        "source": "Ticketmaster",
+        "category": "arts",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1795640330559_wiuu",
+        "title": {
+          "en": "Gold Coast Jazz: The Hot Sardines",
+          "es": "Gold Coast Jazz: The Hot Sardines",
+          "pt": "Gold Coast Jazz: The Hot Sardines",
+          "fr": "Gold Coast Jazz: The Hot Sardines"
+        },
+        "date": "2026-12-02",
+        "venue": "Amaturo Theater at Broward Center",
+        "address": "201 SW 5th Avenue, Ft Lauderdale, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fgold-coast-jazz-the-hot-sardines-ft-lauderdale-florida-12-02-2026%2Fevent%2F0D0064E2A49F6057&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/792/a014a559-a667-4544-9e97-fded7b5d7792_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "The Hot Sardines jazz band, formed by Elizabeth Bougerol and Evan Palazzo in 2007, emerged from underground Brooklyn parties to touring worldwide. Their string of albums racked up more than 60 million streams. The Hot Sardines are \"potent and assured\" (The New York Times) and \"simply phenomenal\" (The Times, London). \"Holiday Stomp\" infuses yuletide classics with their unique and swinging sound wit",
+          "es": "La banda de jazz The Hot Sardines, formada por Elizabeth Bougerol y Evan Palazzo en 2007, emergió de fiestas clandestinas de Brooklyn para girar mundialmente. Su serie de álbumes acumuló más de 60 millones de reproducciones. The Hot Sardines son \"potentes y seguros\" (The New York Times) y \"simplemente fenomenales\" (The Times, Londres). \"Holiday Stomp\" infunde clásicos navideños con su sonido único y balanceado",
+          "pt": "A banda de jazz The Hot Sardines, formada por Elizabeth Bougerol e Evan Palazzo em 2007, emergiu de festas clandestinas do Brooklyn para fazer turnês mundialmente. Sua série de álbuns acumulou mais de 60 milhões de streams. The Hot Sardines são \"potentes e seguros\" (The New York Times) e \"simplesmente fenomenais\" (The Times, Londres). \"Holiday Stomp\" infunde clássicos de férias com seu som único e oscilante",
+          "fr": "Le groupe de jazz The Hot Sardines, formé par Elizabeth Bougerol et Evan Palazzo en 2007, a émergé de fêtes clandestines à Brooklyn pour tourner dans le monde. Leur série d'albums a accumulé plus de 60 millions de streams. The Hot Sardines sont \"puissants et assurés\" (The New York Times) et \"simplement phénoménaux\" (The Times, Londres). \"Holiday Stomp\" imprègne les classiques des fêtes de leur son unique et entraînant"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 26.1193,
+        "lng": -80.149426
+      },
+      {
+        "id": "tm_1795640330559_nbse",
+        "title": {
+          "en": "Miami Hurricanes Men's Basketball vs. Alabama Crimson Tide",
+          "es": "Baloncesto Masculino de Miami Hurricanes vs. Alabama Crimson Tide",
+          "pt": "Basquete Masculino do Miami Hurricanes vs. Alabama Crimson Tide",
+          "fr": "Basket-ball Masculin des Miami Hurricanes contre Alabama Crimson Tide"
+        },
+        "date": "2026-12-02",
+        "venue": "Watsco Center at the University of Miami",
+        "address": "1245 Dauer Dr, Coral Gables, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fmiami-hurricanes-mens-basketball-vs-alabama-coral-gables-florida-12-02-2026%2Fevent%2F0D0065478FB84A0B&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/f63/7413cf43-4e17-412d-b3d2-e88a96294f63_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "Sports · Basketball · Starts 21:15 · Watsco Center at the University of Miami",
+          "es": "Deportes · Baloncesto · Comienza 21:15 · Watsco Center en la Universidad de Miami",
+          "pt": "Esportes · Basquete · Começa 21:15 · Watsco Center na Universidade de Miami",
+          "fr": "Sports · Basket-ball · Débute 21:15 · Watsco Center à l'Université de Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7150805,
+        "lng": -80.2791777
+      },
+      {
+        "id": "tm_1795640330559_uff1",
+        "title": {
+          "en": "John Summit",
+          "es": "John Summit",
+          "pt": "John Summit",
+          "fr": "John Summit"
+        },
+        "date": "2026-12-02",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fjohn-summit-liv-nightclub-miami-tickets%2F15066323&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/b99/44736a1a-46cb-41c3-8c65-d735b5a45b99_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não puder apresentar uma identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et n'aura pas droit à un remboursement. · Débute 23:30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
+      },
+      {
+        "id": "tm_1795640330559_3nzu",
+        "title": {
+          "en": "PPL Miami - The Finals - Preliminary Round",
+          "es": "PPL Miami - Las Finales - Ronda Preliminar",
+          "pt": "PPL Miami - As Finais - Rodada Preliminar",
+          "fr": "PPL Miami - Les Finales - Tour Préliminaire"
+        },
+        "date": "2026-12-03",
+        "venue": "James L Knight Center",
+        "address": "400 SE 2nd Ave, Miami, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fppl-miami-the-finals-preliminary-round-miami-florida-12-03-2026%2Fevent%2F0D006547E4B6F9F5&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/e/c70/28cbc0cd-596f-4e45-98a9-fd5424fa8c70_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "How The Finals Work: The top six franchises in the PPL Overall Standings qualify directly. During Thursday's Preliminary Round, the No. 7 and No. 8 PPL franchises compete alongside the top two PPL II teams for the final two places in the eight-team field. The competition then moves to a single-elimination bracket, with quarterfinals on Friday, semifinals on Saturday and championship matches on Sun",
+          "es": "Cómo funcionan las finales: Las seis mejores franquicias en la clasificación general de PPL califican directamente. Durante la Ronda Preliminar del jueves, las franquicias PPL número 7 y 8 compiten junto con los dos mejores equipos de PPL II por los dos últimos lugares en el campo de ocho equipos. La competencia luego pasa a un formato de eliminación directa, con cuartos de final el viernes, semifinales el sábado y partidos de campeonato el domingo",
+          "pt": "Como as Finais Funcionam: As seis principais franquias no Ranking Geral da PPL se qualificam diretamente. Durante a Rodada Preliminar de quinta-feira, as franquias PPL número 7 e 8 competem ao lado dos dois melhores times da PPL II pelas duas últimas vagas no campo de oito times. A competição então passa para um formato de eliminação simples, com quartas de final na sexta-feira, semifinais no sábado e partidas de campeonato no domingo",
+          "fr": "Comment fonctionnent les finales : Les six meilleures franchises du classement général PPL se qualifient directement. Lors du tour préliminaire de jeudi, les franchises PPL n° 7 et 8 s'affrontent aux côtés des deux meilleures équipes PPL II pour les deux dernières places du tableau à huit équipes. La compétition passe ensuite à un format à élimination directe, avec des quarts de finale vendredi, des demi-finales samedi et des matchs de championnat dimanche"
+        },
+        "source": "Ticketmaster",
+        "category": "sports",
+        "lat": 25.7707756,
+        "lng": -80.1901174
       }
     ]
   },
@@ -4845,10 +5003,31 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-24T21:52:28.809Z",
+    "fetchedAt": "2026-11-25T20:59:52.509Z",
     "items": [
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.4c134a148fde7fa3e21c1a52e04d19da8f1fdac3.001.1",
+        "id": "beach_golden-beach",
+        "type": "water_quality",
+        "severity": "advisory",
+        "title": {
+          "en": "GOLDEN BEACH — Water Quality Advisory",
+          "es": "GOLDEN BEACH — Aviso de Calidad del Agua",
+          "pt": "GOLDEN BEACH — Aviso de Qualidade da Água",
+          "fr": "GOLDEN BEACH — Avis de Qualité de l'Eau"
+        },
+        "detail": {
+          "en": "Elevated Enterococcus bacteria detected (268 CFU/100mL, sampled 2026-11-23). Health officials advise against swimming here until levels return to normal.",
+          "es": "Se detectaron niveles elevados de bacterias Enterococcus (268 UFC/100mL, muestreado el 2026-11-23). Las autoridades de salud recomiendan no nadar aquí hasta que los niveles vuelvan a la normalidad.",
+          "pt": "Foram detectados níveis elevados de bactérias Enterococcus (268 UFC/100mL, amostrado em 2026-11-23). As autoridades de saúde recomendam não nadar aqui até que os níveis voltem ao normal.",
+          "fr": "Des niveaux élevés de bactéries Enterococcus ont été détectés (268 UFC/100mL, échantillonné le 2026-11-23). Les autorités sanitaires déconseillent de se baigner ici tant que les niveaux ne reviennent pas à la normale."
+        },
+        "source": "Florida Dept. of Health — Healthy Beaches",
+        "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/golden-beach",
+        "effectiveAt": "2026-11-23",
+        "expiresAt": "2026-11-26T20:59:52.509Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.c673a9907be498dacf95faec2d917a8c2fc1beb4.001.1",
         "type": "weather",
         "severity": "severe",
         "title": {
@@ -4858,18 +5037,18 @@
           "fr": "Flood Watch"
         },
         "detail": {
-          "en": "* WHAT...Flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...A portion of southeast Florida, including the following\nareas, Coastal Broward County, Coastal Miami Dade County, Coastal\nPalm Beach County, Metro Broward County, Metro Palm Beach County\nand Metropolitan Miami Dade.\n\n* WHEN...From 7 PM EST this evening through late Wednesday night.\n\n* IMPACTS...Excessive runoff may",
-          "es": "* QUÉ...Las inundaciones causadas por lluvia excesiva continúan siendo posibles.\n\n* DÓNDE...Una porción del sureste de Florida, incluyendo las siguientes áreas: Condado de Broward Costero, Condado de Miami Dade Costero, Condado de Palm Beach Costero, Área Metropolitana de Broward, Área Metropolitana de Palm Beach y Área Metropolitana de Miami Dade.\n\n* CUÁNDO...Desde las 7 PM EST esta noche hasta tarde el miércoles por la noche.\n\n* IMPACTOS...La escorrentía excesiva puede",
-          "pt": "* O QUÊ...Inundações causadas por chuva excessiva continuam sendo possíveis.\n\n* ONDE...Uma porção do sudeste da Flórida, incluindo as seguintes áreas: Condado de Broward Costeiro, Condado de Miami Dade Costeiro, Condado de Palm Beach Costeiro, Área Metropolitana de Broward, Área Metropolitana de Palm Beach e Área Metropolitana de Miami Dade.\n\n* QUANDO...Das 19h EST esta noite até o final da noite de quarta-feira.\n\n* IMPACTOS...O escoamento excessivo pode",
-          "fr": "* QUOI...Les inondations causées par des pluies excessives restent possibles.\n\n* OÙ...Une portion du sud-est de la Floride, comprenant les zones suivantes : Comté de Broward côtier, Comté de Miami Dade côtier, Comté de Palm Beach côtier, Broward métropolitain, Palm Beach métropolitain et Miami Dade métropolitain.\n\n* QUAND...À partir de 19h EST ce soir jusqu'à tard mercredi soir.\n\n* IMPACTS...Le ruissellement excessif peut"
+          "en": "* WHAT...Flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...A portion of southeast Florida, including the following\nareas, Coastal Broward County, Coastal Miami Dade County, Coastal\nPalm Beach County, Metro Broward County, Metro Palm Beach County\nand Metropolitan Miami Dade.\n\n* WHEN...Until 1 AM EST Thursday.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\nc",
+          "es": "* QUÉ...Las inundaciones causadas por lluvia excesiva continúan siendo posibles.\n\n* DÓNDE...Una porción del sureste de Florida, incluyendo las siguientes áreas: Condado de Broward Costero, Condado de Miami Dade Costero, Condado de Palm Beach Costero, Área Metropolitana de Broward, Área Metropolitana de Palm Beach y Área Metropolitana de Miami Dade.\n\n* CUÁNDO...Hasta la 1 AM EST el jueves.\n\n* IMPACTOS...El escurrimiento excesivo puede resultar en inundación de ríos,",
+          "pt": "* O QUÊ...Inundações causadas por chuva excessiva continuam sendo possíveis.\n\n* ONDE...Uma porção do sudeste da Flórida, incluindo as seguintes áreas: Condado de Broward Costeiro, Condado de Miami Dade Costeiro, Condado de Palm Beach Costeiro, Área Metropolitana de Broward, Área Metropolitana de Palm Beach e Área Metropolitana de Miami Dade.\n\n* QUANDO...Até 1 AM EST quinta-feira.\n\n* IMPACTOS...Escoamento excessivo pode resultar em inundação de rios,",
+          "fr": "* QUOI...Les inondations causées par des pluies excessives restent possibles.\n\n* OÙ...Une partie du sud-est de la Floride, y compris les zones suivantes : Comté de Broward côtier, Comté de Miami Dade côtier, Comté de Palm Beach côtier, Région métropolitaine de Broward, Région métropolitaine de Palm Beach et Région métropolitaine de Miami Dade.\n\n* QUAND...Jusqu'à 1 h EST jeudi.\n\n* IMPACTS...L'écoulement excessif peut entraîner des inondations de rivières,"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4c134a148fde7fa3e21c1a52e04d19da8f1fdac3.001.1",
-        "effectiveAt": "2026-11-24T14:01:00-05:00",
-        "expiresAt": "2026-11-25T06:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c673a9907be498dacf95faec2d917a8c2fc1beb4.001.1",
+        "effectiveAt": "2026-11-25T14:49:00-05:00",
+        "expiresAt": "2026-11-26T06:00:00.000Z"
       },
       {
-        "id": "nws_urn-oid-2.49.0.1.840.0.36c78a94ae7f8c2cdfedbef80d2c6eadcaf5d9db.002.1",
+        "id": "nws_urn-oid-2.49.0.1.840.0.96fdce7234f2a2c25c387630a781922efbd77d03.002.1",
         "type": "weather",
         "severity": "minor",
         "title": {
@@ -4879,15 +5058,36 @@
           "fr": "Coastal Flood Statement"
         },
         "detail": {
-          "en": "* WHAT...Isolated minor coastal flooding.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...Through Thursday morning.\n\n* IMPACTS...Some water on low lying roads and property.",
-          "es": "* QUÉ...Inundación costera menor aislada.\n\n* DÓNDE...Condado de Miami Dade Costero.\n\n* CUÁNDO...Hasta el jueves por la mañana.\n\n* IMPACTOS...Algo de agua en caminos y propiedades bajas.",
-          "pt": "* O QUÊ...Inundação costeira menor isolada.\n\n* ONDE...Condado de Miami Dade Costeiro.\n\n* QUANDO...Até quinta-feira pela manhã.\n\n* IMPACTOS...Alguma água em estradas e propriedades baixas.",
-          "fr": "* QUOI...Inondations côtières mineures isolées.\n\n* OÙ...Comté de Miami Dade côtier.\n\n* QUAND...Jusqu'à jeudi matin.\n\n* IMPACTS...Eau sur certaines routes et propriétés basses."
+          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Thursday\nmorning. For the High Rip Current Risk, through Thursday\nevening.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncurrents can sweep even the best swimmers awa",
+          "es": "* QUÉ...Para la Declaración de Inundación Costera, inundación costera menor aislada. Para la Advertencia de Corrientes de Resaca Peligrosas, corrientes de resaca peligrosas.\n\n* DÓNDE...Condado de Miami Dade Costero.\n\n* CUÁNDO...Para la Declaración de Inundación Costera, hasta la mañana del jueves. Para la Advertencia de Corrientes de Resaca Peligrosas, hasta la tarde del jueves.\n\n* IMPACTOS...Agua en carreteras y propiedades bajas. Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira menor isolada. Para o Aviso de Correntes de Retorno Perigosas, correntes de retorno perigosas.\n\n* ONDE...Condado de Miami Dade Costeiro.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até a manhã de quinta-feira. Para o Aviso de Correntes de Retorno Perigosas, até a tarde de quinta-feira.\n\n* IMPACTOS...Água em estradas e propriedades baixas. Correntes de retorno podem arrastar até os melhores nadadores",
+          "fr": "* QUOI...Pour l'Avis d'inondation côtière, inondation côtière mineure isolée. Pour l'Avis de courants de retour dangereux, courants de retour dangereux.\n\n* OÙ...Comté de Miami Dade côtier.\n\n* QUAND...Pour l'Avis d'inondation côtière, jusqu'à jeudi matin. Pour l'Avis de courants de retour dangereux, jusqu'à jeudi soir.\n\n* IMPACTS...Eau sur les routes et propriétés basses. Les courants de retour peuvent emporter même les meilleurs nageurs"
         },
         "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36c78a94ae7f8c2cdfedbef80d2c6eadcaf5d9db.002.1",
-        "effectiveAt": "2026-11-24T12:44:00-05:00",
-        "expiresAt": "2026-11-25T05:00:00.000Z"
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.96fdce7234f2a2c25c387630a781922efbd77d03.002.1",
+        "effectiveAt": "2026-11-25T12:23:00-05:00",
+        "expiresAt": "2026-11-26T15:00:00.000Z"
+      },
+      {
+        "id": "nws_urn-oid-2.49.0.1.840.0.96fdce7234f2a2c25c387630a781922efbd77d03.002.2",
+        "type": "weather",
+        "severity": "moderate",
+        "title": {
+          "en": "Rip Current Statement",
+          "es": "Aviso de Corrientes de Resaca",
+          "pt": "Aviso de Correntes de Retorno",
+          "fr": "Avis de Courants de Baïn"
+        },
+        "detail": {
+          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Thursday\nmorning. For the High Rip Current Risk, through Thursday\nevening.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncurrents can sweep even the best swimmers awa",
+          "es": "* QUÉ...Para la Declaración de Inundación Costera, inundación costera menor aislada. Para la Advertencia de Corrientes de Resaca Peligrosas, corrientes de resaca peligrosas.\n\n* DÓNDE...Condado de Miami Dade Costero.\n\n* CUÁNDO...Para la Declaración de Inundación Costera, hasta la mañana del jueves. Para la Advertencia de Corrientes de Resaca Peligrosas, hasta la tarde del jueves.\n\n* IMPACTOS...Agua en carreteras y propiedades bajas. Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores",
+          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundação costeira menor isolada. Para o Aviso de Correntes de Retorno Perigosas, correntes de retorno perigosas.\n\n* ONDE...Condado de Miami Dade Costeiro.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até a manhã de quinta-feira. Para o Aviso de Correntes de Retorno Perigosas, até a tarde de quinta-feira.\n\n* IMPACTOS...Água em estradas e propriedades baixas. Correntes de retorno podem arrastar até os melhores nadadores",
+          "fr": "* QUOI...Pour l'Avis d'inondation côtière, inondation côtière mineure isolée. Pour l'Avis de courants de retour dangereux, courants de retour dangereux.\n\n* OÙ...Comté de Miami Dade côtier.\n\n* QUAND...Pour l'Avis d'inondation côtière, jusqu'à jeudi matin. Pour l'Avis de courants de retour dangereux, jusqu'à jeudi soir.\n\n* IMPACTS...Eau sur les routes et propriétés basses. Les courants de retour peuvent emporter même les meilleurs nageurs"
+        },
+        "source": "National Weather Service",
+        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.96fdce7234f2a2c25c387630a781922efbd77d03.002.2",
+        "effectiveAt": "2026-11-25T12:23:00-05:00",
+        "expiresAt": "2026-11-26T15:00:00.000Z"
       }
     ]
   }
