@@ -1,43 +1,30 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-26T20:52:51.632Z",
+    "lastUpdated": "2026-11-27T20:37:12.435Z",
     "publishedBy": "daily-refresh[bot]",
     "version": "1.0.0"
   },
   "weather": {
-    "fetchedAt": "2026-11-26T20:52:42.528Z",
+    "fetchedAt": "2026-11-27T20:37:11.799Z",
     "current": {
-      "temp_f": 74,
-      "feels_f": 75,
+      "temp_f": 71,
+      "feels_f": 72,
       "description": {
         "en": "Current conditions",
         "es": "Condiciones actuales",
         "pt": "Condições atuais",
         "fr": "Conditions actuelles"
       },
-      "humidity": 77,
-      "wind_mph": 11,
-      "rain_chance": 13,
-      "weathercode": 0
+      "humidity": 66,
+      "wind_mph": 3,
+      "rain_chance": 0,
+      "weathercode": 3
     },
     "forecast": [
       {
-        "date": "2026-11-26",
-        "high_f": 77,
-        "low_f": 65,
-        "weathercode": 3,
-        "rain_chance": 13,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
         "date": "2026-11-27",
-        "high_f": 69,
-        "low_f": 61,
+        "high_f": 73,
+        "low_f": 60,
         "weathercode": 3,
         "rain_chance": 0,
         "description": {
@@ -49,10 +36,10 @@
       },
       {
         "date": "2026-11-28",
-        "high_f": 72,
-        "low_f": 58,
+        "high_f": 70,
+        "low_f": 60,
         "weathercode": 3,
-        "rain_chance": 0,
+        "rain_chance": 1,
         "description": {
           "en": "Overcast",
           "es": "Nublado",
@@ -62,173 +49,186 @@
       },
       {
         "date": "2026-11-29",
-        "high_f": 77,
-        "low_f": 72,
-        "weathercode": 3,
-        "rain_chance": 17,
-        "description": {
-          "en": "Overcast",
-          "es": "Nublado",
-          "pt": "Encoberto",
-          "fr": "Couvert"
-        }
-      },
-      {
-        "date": "2026-11-30",
-        "high_f": 82,
-        "low_f": 76,
+        "high_f": 78,
+        "low_f": 60,
         "weathercode": 51,
-        "rain_chance": 30,
+        "rain_chance": 6,
         "description": {
           "en": "Light drizzle",
           "es": "Llovizna ligera",
           "pt": "Chuvisco leve",
           "fr": "Bruine légère"
         }
+      },
+      {
+        "date": "2026-11-30",
+        "high_f": 82,
+        "low_f": 75,
+        "weathercode": 80,
+        "rain_chance": 19,
+        "description": {
+          "en": "Rain showers",
+          "es": "Chubascos",
+          "pt": "Aguaceiros",
+          "fr": "Averses"
+        }
+      },
+      {
+        "date": "2026-12-01",
+        "high_f": 82,
+        "low_f": 77,
+        "weathercode": 3,
+        "rain_chance": 39,
+        "description": {
+          "en": "Overcast",
+          "es": "Nublado",
+          "pt": "Encoberto",
+          "fr": "Couvert"
+        }
       }
     ],
     "hourly": [
       {
         "hour": "15:00",
-        "temp_f": 75,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "16:00",
-        "temp_f": 73,
-        "weathercode": 0,
-        "rain_chance": 1
+        "temp_f": 71,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "17:00",
-        "temp_f": 71,
-        "weathercode": 1,
-        "rain_chance": 3
+        "temp_f": 70,
+        "weathercode": 3,
+        "rain_chance": 0
       },
       {
         "hour": "18:00",
-        "temp_f": 69,
-        "weathercode": 0,
+        "temp_f": 67,
+        "weathercode": 3,
         "rain_chance": 0
       },
       {
         "hour": "19:00",
-        "temp_f": 67,
+        "temp_f": 66,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
         "hour": "20:00",
-        "temp_f": 67,
-        "weathercode": 0,
+        "temp_f": 65,
+        "weathercode": 3,
         "rain_chance": 0
       },
       {
         "hour": "21:00",
-        "temp_f": 66,
+        "temp_f": 64,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
         "hour": "22:00",
-        "temp_f": 66,
+        "temp_f": 64,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
         "hour": "23:00",
-        "temp_f": 66,
-        "weathercode": 3,
-        "rain_chance": 0
-      },
-      {
-        "hour": "00:00",
-        "temp_f": 65,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "01:00",
-        "temp_f": 64,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "02:00",
-        "temp_f": 65,
-        "weathercode": 3,
-        "rain_chance": 0
-      },
-      {
-        "hour": "03:00",
-        "temp_f": 66,
-        "weathercode": 3,
-        "rain_chance": 0
-      },
-      {
-        "hour": "04:00",
-        "temp_f": 65,
-        "weathercode": 2,
-        "rain_chance": 0
-      },
-      {
-        "hour": "05:00",
-        "temp_f": 64,
-        "weathercode": 1,
-        "rain_chance": 0
-      },
-      {
-        "hour": "06:00",
-        "temp_f": 62,
-        "weathercode": 0,
-        "rain_chance": 0
-      },
-      {
-        "hour": "07:00",
-        "temp_f": 61,
-        "weathercode": 2,
-        "rain_chance": 0
-      },
-      {
-        "hour": "08:00",
         "temp_f": 63,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
-        "hour": "09:00",
-        "temp_f": 65,
+        "hour": "00:00",
+        "temp_f": 62,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
-        "hour": "10:00",
+        "hour": "01:00",
+        "temp_f": 62,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "02:00",
+        "temp_f": 61,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "03:00",
+        "temp_f": 61,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "04:00",
+        "temp_f": 60,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "05:00",
+        "temp_f": 60,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "06:00",
+        "temp_f": 60,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "07:00",
+        "temp_f": 60,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "08:00",
+        "temp_f": 62,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
+        "hour": "09:00",
         "temp_f": 66,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
+        "hour": "10:00",
+        "temp_f": 68,
+        "weathercode": 3,
+        "rain_chance": 0
+      },
+      {
         "hour": "11:00",
-        "temp_f": 67,
+        "temp_f": 70,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
         "hour": "12:00",
-        "temp_f": 69,
+        "temp_f": 70,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
         "hour": "13:00",
-        "temp_f": 69,
+        "temp_f": 70,
         "weathercode": 3,
         "rain_chance": 0
       },
       {
         "hour": "14:00",
-        "temp_f": 69,
+        "temp_f": 70,
         "weathercode": 3,
         "rain_chance": 0
       }
@@ -1902,30 +1902,6 @@
         "category": "community"
       },
       {
-        "id": "rss_1792772515255_14zc",
-        "title": {
-          "en": "51st WinterNational Thanksgiving Day Parade 11/26/26",
-          "es": "51º Desfile Nacional de Acción de Gracias de Invierno 11/26/26",
-          "pt": "51º Desfile Nacional de Ação de Graças de Inverno 11/26/26",
-          "fr": "51e Défilé National Thanksgiving d'Hiver 11/26/26"
-        },
-        "date": "2026-11-26",
-        "venue": "City of North Miami City Hall NE 125th Street, from NE 6th Avenue to NE 12th Avenue, North Miami, Florida, 33161",
-        "address": "",
-        "url": "https://www.soulofmiami.org/2026/10/22/51st-winternational-thanksgiving-day-parade-11-26-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/10/51st-Annual-WinterNational-Thanksgiving-Parade-Participation-3-1-350x438.png",
-        "description": {
-          "en": "🥁🎉 Thanksgiving Day is coming to",
-          "es": "El Día de Acción de Gracias llega a",
-          "pt": "O Dia de Ação de Graças está chegando a",
-          "fr": "Le Jour de l'Action de Grâce arrive à"
-        },
-        "source": "Soul of Miami",
-        "category": "community"
-      },
-      {
         "id": "rss_1792855065094_9vo1",
         "title": {
           "en": "Cirque du Soleil’s ECHO 1/26/27 – 3/14/27",
@@ -2103,32 +2079,6 @@
         "source": "Soul of Miami",
         "lat": 25.7363873,
         "lng": -80.1561823,
-        "category": "community"
-      },
-      {
-        "id": "rss_1793990896431_p1jc",
-        "title": {
-          "en": "Thanksgiving Oceanside Celebration at Beach House Fort Lauderdale 11/26/26",
-          "es": "Celebración de Acción de Gracias junto al Océano en Beach House Fort Lauderdale 11/26/26",
-          "pt": "Celebração de Ação de Graças à Beira-Mar no Beach House Fort Lauderdale 11/26/26",
-          "fr": "Célébration de Thanksgiving en Bord de Mer au Beach House Fort Lauderdale 11/26/26"
-        },
-        "date": "2026-11-26",
-        "venue": "Beach House Fort Lauderdale",
-        "address": "505 North Fort Lauderdale Beach Boulevard, Fort Lauderdale, Florida, 33304",
-        "url": "https://www.soulofmiami.org/2026/11/06/thanksgiving-oceanside-celebration-at-beach-house-fort-lauderdale-11-26-26/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/Thanksgiving-Eventbrite-Cover-FINAL-350x175.png",
-        "description": {
-          "en": "– $84.01 Celebrate Thanksgiving with a memorable oceanfront gathering at",
-          "es": "– $84.01 Celebra Acción de Gracias con una memorable reunión junto al océano en",
-          "pt": "– $84.01 Celebre Ação de Graças com um memorável encontro à beira-mar em",
-          "fr": "– $84.01 Célébrez Thanksgiving avec un rassemblement mémorable en bord de mer à"
-        },
-        "source": "Soul of Miami",
-        "lat": 26.1294093,
-        "lng": -80.1041258,
         "category": "community"
       },
       {
@@ -3486,30 +3436,6 @@
         "category": "music"
       },
       {
-        "id": "rss_1795557115334_9pv0",
-        "title": {
-          "en": "Nothing Is Linear Relations Across Latin America and Its Diasporas 11/26/26 – 8/14/27",
-          "es": "Nada es lineal: Relaciones a través de América Latina y sus diásporas 11/26/26 – 8/14/27",
-          "pt": "Nada é linear: Relações através da América Latina e suas diásporas 11/26/26 – 8/14/27",
-          "fr": "Rien n'est linéaire : Relations à travers l'Amérique latine et ses diasporas 11/26/26 – 8/14/27"
-        },
-        "date": "2026-11-26",
-        "venue": "El Espacio",
-        "address": "23 2270 NW 23rd Street, Miami, Florida, 33142",
-        "url": "https://www.soulofmiami.org/2026/11/24/nothing-is-linear-relations-across-latin-america-and-its-diasporas-11-26-26-8-14-27/",
-        "free": true,
-        "price": "",
-        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/sphere_rouge_230x180.jpg",
-        "description": {
-          "en": "El Espacio 23 presents its seventh exhibition, Nothing Is Linear: Relations Across",
-          "es": "El Espacio 23 presenta su séptima exposición, Nada es lineal: Relaciones a través",
-          "pt": "El Espacio 23 apresenta sua sétima exposição, Nada é linear: Relações através",
-          "fr": "El Espacio 23 présente sa septième exposition, Rien n'est linéaire : Relations à travers"
-        },
-        "source": "Soul of Miami",
-        "category": "arts"
-      },
-      {
         "id": "rss_1795557115334_icfj",
         "title": {
           "en": "Nights in Northwood Holiday Edition 11/27/26",
@@ -4174,6 +4100,82 @@
         "category": "music",
         "lat": 26.166888,
         "lng": -80.117058
+      },
+      {
+        "id": "rss_1795811804448_m4vn",
+        "title": {
+          "en": "Edge Saturdays ft santelises, marie posa and more 11/28/26",
+          "es": "Edge Saturdays ft santelises, marie posa y más 11/28/26",
+          "pt": "Edge Saturdays ft santelises, marie posa e mais 11/28/26",
+          "fr": "Edge Saturdays ft santelises, marie posa et plus 11/28/26"
+        },
+        "date": "2026-11-28",
+        "venue": "edge miami",
+        "address": "114 NE 20th Terrace, miami, Florida, 33137",
+        "url": "https://www.soulofmiami.org/2026/11/27/edge-saturdays-ft-santelises-marie-posa-and-more-11-28-26/",
+        "free": true,
+        "price": "",
+        "image": "https://www.soulofmiami.org/wp-content/uploads/2026/11/POST-350x467.jpg",
+        "description": {
+          "en": "with rsvp EDGE brings together some of Miami’s local heavy hitters this Saturday. It’s a",
+          "es": "con RSVP EDGE reúne a algunos de los artistas locales más destacados de Miami este sábado. Es un",
+          "pt": "com RSVP EDGE reúne alguns dos grandes nomes locais de Miami neste sábado. É um",
+          "fr": "avec RSVP EDGE rassemble certains des plus grands artistes locaux de Miami ce samedi. C'est un"
+        },
+        "source": "Soul of Miami",
+        "lat": 25.7959725,
+        "lng": -80.1924601,
+        "category": "community"
+      },
+      {
+        "id": "rss_1795811804448_3wvp",
+        "title": {
+          "en": "Holiday Hootenanny at Busch Wildlife Sanctuary, Dec. 19, Jupiter",
+          "es": "Holiday Hootenanny en Busch Wildlife Sanctuary, 19 de diciembre, Jupiter",
+          "pt": "Holiday Hootenanny no Busch Wildlife Sanctuary, 19 de dezembro, Jupiter",
+          "fr": "Holiday Hootenanny au Busch Wildlife Sanctuary, 19 décembre, Jupiter"
+        },
+        "date": "2026-11-27",
+        "venue": "Miami on the Cheap",
+        "address": "",
+        "url": "https://miamionthecheap.com/busch-wildlife-sanctuary-event/",
+        "free": false,
+        "price": "",
+        "image": "https://miamionthecheap.com/lotc-cms/wp-content/uploads/2026/10/lion-at-busch-728x588.jpg",
+        "description": {
+          "en": "South Florida on the Cheap Celebrate the holidays with the animals – a festive evening at the Sanctuary featuring a visit from Santa, hot chocolate, bounce house, and more activities! Holiday Hootenanny at Busch Wildlife When:... Copyright South Florida on the Cheap. The post Holiday Hootenanny at Busch Wildlife Sanctuary, Dec. 19, Jupiter appeared first on South Florida on the Cheap.",
+          "es": "South Florida on the Cheap Celebra las vacaciones con los animales – una velada festiva en el Santuario con una visita de Papá Noel, chocolate caliente, castillo inflable, ¡y más actividades! Holiday Hootenanny en Busch Wildlife Cuándo:... Copyright South Florida on the Cheap. El artículo Holiday Hootenanny en Busch Wildlife Sanctuary, 19 de diciembre, Jupiter apareció primero en South Florida on the Cheap.",
+          "pt": "South Florida on the Cheap Celebre o feriado com os animais – uma noite festiva no Santuário com uma visita do Papai Noel, chocolate quente, casa inflável e mais atividades! Holiday Hootenanny no Busch Wildlife Quando:... Copyright South Florida on the Cheap. O artigo Holiday Hootenanny no Busch Wildlife Sanctuary, 19 de dezembro, Jupiter apareceu primeiro em South Florida on the Cheap.",
+          "fr": "South Florida on the Cheap Célébrez les vacances avec les animaux – une soirée festive au Sanctuaire avec une visite du Père Noël, du chocolat chaud, un château gonflable et d'autres activités! Holiday Hootenanny au Busch Wildlife Quand:... Copyright South Florida on the Cheap. L'article Holiday Hootenanny au Busch Wildlife Sanctuary, 19 décembre, Jupiter est apparu en premier sur South Florida on the Cheap."
+        },
+        "source": "Miami on the Cheap",
+        "category": "community"
+      },
+      {
+        "id": "tm_1795811804952_fepw",
+        "title": {
+          "en": "Anuel",
+          "es": "Anuel",
+          "pt": "Anuel",
+          "fr": "Anuel"
+        },
+        "date": "2026-11-27",
+        "venue": "LIV Nightclub Miami",
+        "address": "4441 Collins Ave, Miami Beach, FL",
+        "url": "https://ticketmaster.evyy.net/c/None/264167/4272?u=https%3A%2F%2Fwww.ticketweb.com%2Fevent%2Fanuel-liv-nightclub-miami-tickets%2F15074323&utm_medium=affiliate",
+        "free": false,
+        "price": "",
+        "image": "https://s1.ticketm.net/dam/a/d45/bdc1ee35-a88d-49e6-ab4c-947be1fd1d45_RETINA_PORTRAIT_16_9.jpg",
+        "description": {
+          "en": "This event is 21 and over. Any ticket holder unable to present valid identification indicating that they are at least 21 years of age will not be admitted to this event, and will not be eligible for a refund. · Starts 23:30 · LIV Nightclub Miami",
+          "es": "Este evento es solo para mayores de 21 años. Cualquier titular de entrada que no pueda presentar una identificación válida que indique que tiene al menos 21 años no será admitido en este evento y no será elegible para un reembolso. · Comienza 23:30 · LIV Nightclub Miami",
+          "pt": "Este evento é apenas para maiores de 21 anos. Qualquer titular de ingresso que não puder apresentar uma identificação válida indicando que tem pelo menos 21 anos não será admitido neste evento e não será elegível para reembolso. · Começa 23:30 · LIV Nightclub Miami",
+          "fr": "Cet événement est réservé aux 21 ans et plus. Tout titulaire de billet incapable de présenter une pièce d'identité valide indiquant qu'il a au moins 21 ans ne sera pas admis à cet événement et ne sera pas admissible à un remboursement. · Commence 23:30 · LIV Nightclub Miami"
+        },
+        "source": "Ticketmaster",
+        "category": "music",
+        "lat": 25.817805,
+        "lng": -80.122143
       }
     ]
   },
@@ -5077,7 +5079,7 @@
     ]
   },
   "advisories": {
-    "fetchedAt": "2026-11-26T20:52:42.529Z",
+    "fetchedAt": "2026-11-27T20:37:11.800Z",
     "items": [
       {
         "id": "beach_golden-beach",
@@ -5098,49 +5100,7 @@
         "source": "Florida Dept. of Health — Healthy Beaches",
         "sourceUrl": "https://www.floridahealthybeaches.com/county/dade/beach/golden-beach",
         "effectiveAt": "2026-11-23",
-        "expiresAt": "2026-11-27T20:52:42.529Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.98904e452867c3c97c238a5ab87a8419047b411f.002.1",
-        "type": "weather",
-        "severity": "minor",
-        "title": {
-          "en": "Coastal Flood Statement",
-          "es": "Coastal Flood Statement",
-          "pt": "Coastal Flood Statement",
-          "fr": "Coastal Flood Statement"
-        },
-        "detail": {
-          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Friday\nmorning. For the High Rip Current Risk, until 7 PM EST this\nevening.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncurrents can sweep even the best swimmers aw",
-          "es": "* QUÉ...Para la Declaración de Inundación Costera, inundaciones costeras menores aisladas. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas.\n\n* DÓNDE...Costas del Condado de Miami Dade.\n\n* CUÁNDO...Para la Declaración de Inundación Costera, hasta el viernes por la mañana. Para el Riesgo Alto de Corrientes de Resaca, hasta las 7 PM EST esta noche.\n\n* IMPACTOS...Agua en carreteras y propiedades bajas. Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores.",
-          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundações costeiras menores isoladas. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas.\n\n* ONDE...Costa do Condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até a manhã de sexta-feira. Para o Risco Alto de Correntes de Retorno, até 19h EST desta noite.\n\n* IMPACTOS...Água em estradas e propriedades baixas. Correntes de retorno podem arrastar até mesmo os melhores nadadores.",
-          "fr": "* QUOI...Pour le Bulletin d'Inondation Côtière, inondations côtières mineures isolées. Pour le Risque Élevé de Courants de Retour, courants de retour dangereux.\n\n* OÙ...Côte du Comté de Miami Dade.\n\n* QUAND...Pour le Bulletin d'Inondation Côtière, jusqu'à vendredi matin. Pour le Risque Élevé de Courants de Retour, jusqu'à 19h EST ce soir.\n\n* IMPACTS...Eau sur les routes et propriétés basses. Les courants de retour peuvent emporter même les meilleurs nageurs."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.98904e452867c3c97c238a5ab87a8419047b411f.002.1",
-        "effectiveAt": "2026-11-26T09:56:00-05:00",
-        "expiresAt": "2026-11-27T07:00:00.000Z"
-      },
-      {
-        "id": "nws_urn-oid-2.49.0.1.840.0.98904e452867c3c97c238a5ab87a8419047b411f.002.2",
-        "type": "weather",
-        "severity": "moderate",
-        "title": {
-          "en": "Rip Current Statement",
-          "es": "Aviso de Corrientes de Resaca",
-          "pt": "Aviso de Correntes de Retorno",
-          "fr": "Avis de Courants de Baïn"
-        },
-        "detail": {
-          "en": "* WHAT...For the Coastal Flood Statement, isolated minor coastal\nflooding. For the High Rip Current Risk, dangerous rip\ncurrents.\n\n* WHERE...Coastal Miami Dade County.\n\n* WHEN...For the Coastal Flood Statement, through Friday\nmorning. For the High Rip Current Risk, until 7 PM EST this\nevening.\n\n* IMPACTS...Some water on low lying roads and property. Rip\ncurrents can sweep even the best swimmers aw",
-          "es": "* QUÉ...Para la Declaración de Inundación Costera, inundaciones costeras menores aisladas. Para el Riesgo Alto de Corrientes de Resaca, corrientes de resaca peligrosas.\n\n* DÓNDE...Costas del Condado de Miami Dade.\n\n* CUÁNDO...Para la Declaración de Inundación Costera, hasta el viernes por la mañana. Para el Riesgo Alto de Corrientes de Resaca, hasta las 7 PM EST esta noche.\n\n* IMPACTOS...Agua en carreteras y propiedades bajas. Las corrientes de resaca pueden arrastrar incluso a los mejores nadadores.",
-          "pt": "* O QUÊ...Para o Aviso de Inundação Costeira, inundações costeiras menores isoladas. Para o Risco Alto de Correntes de Retorno, correntes de retorno perigosas.\n\n* ONDE...Costa do Condado de Miami Dade.\n\n* QUANDO...Para o Aviso de Inundação Costeira, até a manhã de sexta-feira. Para o Risco Alto de Correntes de Retorno, até 19h EST desta noite.\n\n* IMPACTOS...Água em estradas e propriedades baixas. Correntes de retorno podem arrastar até mesmo os melhores nadadores.",
-          "fr": "* QUOI...Pour le Bulletin d'Inondation Côtière, inondations côtières mineures isolées. Pour le Risque Élevé de Courants de Retour, courants de retour dangereux.\n\n* OÙ...Côte du Comté de Miami Dade.\n\n* QUAND...Pour le Bulletin d'Inondation Côtière, jusqu'à vendredi matin. Pour le Risque Élevé de Courants de Retour, jusqu'à 19h EST ce soir.\n\n* IMPACTS...Eau sur les routes et propriétés basses. Les courants de retour peuvent emporter même les meilleurs nageurs."
-        },
-        "source": "National Weather Service",
-        "sourceUrl": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.98904e452867c3c97c238a5ab87a8419047b411f.002.2",
-        "effectiveAt": "2026-11-26T09:56:00-05:00",
-        "expiresAt": "2026-11-27T07:00:00.000Z"
+        "expiresAt": "2026-11-28T20:37:11.800Z"
       }
     ]
   }
